@@ -32,3 +32,18 @@ model Message {
   @@index([conversationId, createdAt])
   @@map("messages")
 }
+
+model PenalCodeChunk {
+  chunkId        String                      @id @map("chunk_id")
+  articleNumber  String                      @map("article_number")
+  content        String                      @db.Text
+  charCount      Int                         @map("char_count")
+  metadata       Json
+  embedding      Unsupported("vector(3072)")
+  embeddingModel String                      @map("embedding_model")
+  embeddedAt     DateTime                    @map("embedded_at")
+  importedAt     DateTime                    @default(now()) @updatedAt @map("imported_at")
+
+  @@index([articleNumber])
+  @@map("penal_code_chunks")
+}

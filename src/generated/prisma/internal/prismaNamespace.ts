@@ -398,7 +398,8 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 export const ModelName = {
   Conversation: 'Conversation',
-  Message: 'Message'
+  Message: 'Message',
+  PenalCodeChunk: 'PenalCodeChunk'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -414,7 +415,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "conversation" | "message"
+    modelProps: "conversation" | "message" | "penalCodeChunk"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -566,6 +567,64 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    PenalCodeChunk: {
+      payload: Prisma.$PenalCodeChunkPayload<ExtArgs>
+      fields: Prisma.PenalCodeChunkFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.PenalCodeChunkFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.PenalCodeChunkFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+        }
+        findFirst: {
+          args: Prisma.PenalCodeChunkFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.PenalCodeChunkFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+        }
+        findMany: {
+          args: Prisma.PenalCodeChunkFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>[]
+        }
+        delete: {
+          args: Prisma.PenalCodeChunkDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+        }
+        update: {
+          args: Prisma.PenalCodeChunkUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+        }
+        deleteMany: {
+          args: Prisma.PenalCodeChunkDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.PenalCodeChunkUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.PenalCodeChunkUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>[]
+        }
+        aggregate: {
+          args: Prisma.PenalCodeChunkAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregatePenalCodeChunk>
+        }
+        groupBy: {
+          args: Prisma.PenalCodeChunkGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.PenalCodeChunkGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.PenalCodeChunkCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.PenalCodeChunkCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -625,6 +684,20 @@ export const MessageScalarFieldEnum = {
 export type MessageScalarFieldEnum = (typeof MessageScalarFieldEnum)[keyof typeof MessageScalarFieldEnum]
 
 
+export const PenalCodeChunkScalarFieldEnum = {
+  chunkId: 'chunkId',
+  articleNumber: 'articleNumber',
+  content: 'content',
+  charCount: 'charCount',
+  metadata: 'metadata',
+  embeddingModel: 'embeddingModel',
+  embeddedAt: 'embeddedAt',
+  importedAt: 'importedAt'
+} as const
+
+export type PenalCodeChunkScalarFieldEnum = (typeof PenalCodeChunkScalarFieldEnum)[keyof typeof PenalCodeChunkScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -633,12 +706,28 @@ export const SortOrder = {
 export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
+export const JsonNullValueInput = {
+  JsonNull: JsonNull
+} as const
+
+export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
+
+
 export const QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 } as const
 
 export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const JsonNullValueFilter = {
+  DbNull: DbNull,
+  JsonNull: JsonNull,
+  AnyNull: AnyNull
+} as const
+
+export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
 
 
 
@@ -700,6 +789,34 @@ export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'In
  * Reference to a field of type 'Int[]'
  */
 export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+    
+
+
+/**
+ * Reference to a field of type 'Json'
+ */
+export type JsonFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Json'>
+    
+
+
+/**
+ * Reference to a field of type 'QueryMode'
+ */
+export type EnumQueryModeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QueryMode'>
+    
+
+
+/**
+ * Reference to a field of type 'Float'
+ */
+export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
+    
+
+
+/**
+ * Reference to a field of type 'Float[]'
+ */
+export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
     
 
 /**
@@ -855,6 +972,7 @@ export type PrismaClientOptions = PrismaClientOptionsWithAccelerateUrl | PrismaC
 export type GlobalOmitConfig = {
   conversation?: Prisma.ConversationOmit
   message?: Prisma.MessageOmit
+  penalCodeChunk?: Prisma.PenalCodeChunkOmit
 }
 
 /* Types for Logging */
