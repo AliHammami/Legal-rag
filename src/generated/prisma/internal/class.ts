@@ -20,7 +20,7 @@ const config: runtime.GetPrismaClientConfig = {
   "clientVersion": "7.10.0",
   "engineVersion": "0edf323efd1d98336f3f0a68684b56f689b900d3",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nenum MessageRole {\n  user\n  assistant\n}\n\nmodel Conversation {\n  id        String    @id @default(uuid()) @db.Uuid\n  createdAt DateTime  @default(now())\n  updatedAt DateTime  @updatedAt\n  messages  Message[]\n\n  @@map(\"conversations\")\n}\n\nmodel Message {\n  id             String       @id @default(uuid()) @db.Uuid\n  conversationId String       @db.Uuid\n  role           MessageRole\n  content        String\n  createdAt      DateTime     @default(now())\n  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)\n\n  @@index([conversationId, createdAt])\n  @@map(\"messages\")\n}\n",
   "runtimeDataModel": {
     "models": {},
     "enums": {},
@@ -32,10 +32,10 @@ const config: runtime.GetPrismaClientConfig = {
   }
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"Conversation\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"messages\",\"kind\":\"object\",\"type\":\"Message\",\"relationName\":\"ConversationToMessage\"}],\"dbName\":\"conversations\",\"schema\":null},\"Message\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"conversationId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"role\",\"kind\":\"enum\",\"type\":\"MessageRole\"},{\"name\":\"content\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"conversation\",\"kind\":\"object\",\"type\":\"Conversation\",\"relationName\":\"ConversationToMessage\"}],\"dbName\":\"messages\",\"schema\":null}},\"enums\":{},\"types\":{}}")
 config.parameterizationSchema = {
-  strings: JSON.parse("[]"),
-  graph: "AAAA"
+  strings: JSON.parse("[\"where\",\"orderBy\",\"cursor\",\"conversation\",\"messages\",\"_count\",\"Conversation.findUnique\",\"Conversation.findUniqueOrThrow\",\"Conversation.findFirst\",\"Conversation.findFirstOrThrow\",\"Conversation.findMany\",\"data\",\"Conversation.createOne\",\"Conversation.createMany\",\"Conversation.createManyAndReturn\",\"Conversation.updateOne\",\"Conversation.updateMany\",\"Conversation.updateManyAndReturn\",\"create\",\"update\",\"Conversation.upsertOne\",\"Conversation.deleteOne\",\"Conversation.deleteMany\",\"having\",\"_min\",\"_max\",\"Conversation.groupBy\",\"Conversation.aggregate\",\"Message.findUnique\",\"Message.findUniqueOrThrow\",\"Message.findFirst\",\"Message.findFirstOrThrow\",\"Message.findMany\",\"Message.createOne\",\"Message.createMany\",\"Message.createManyAndReturn\",\"Message.updateOne\",\"Message.updateMany\",\"Message.updateManyAndReturn\",\"Message.upsertOne\",\"Message.deleteOne\",\"Message.deleteMany\",\"Message.groupBy\",\"Message.aggregate\",\"AND\",\"OR\",\"NOT\",\"id\",\"conversationId\",\"MessageRole\",\"role\",\"content\",\"createdAt\",\"equals\",\"in\",\"notIn\",\"lt\",\"lte\",\"gt\",\"gte\",\"not\",\"contains\",\"startsWith\",\"endsWith\",\"updatedAt\",\"every\",\"some\",\"none\",\"is\",\"isNot\",\"connectOrCreate\",\"upsert\",\"createMany\",\"set\",\"disconnect\",\"delete\",\"connect\",\"updateMany\",\"deleteMany\"]"),
+  graph: "bBIgBwQAAEYAICwAAEMAMC0AAAkAEC4AAEMAMC8BAAAAATRAAEUAIUBAAEUAIQEAAAABACAJAwAASwAgLAAASAAwLQAAAwAQLgAASAAwLwEARAAhMAEARAAhMgAASTIiMwEASgAhNEAARQAhAQMAAGYAIAkDAABLACAsAABIADAtAAADABAuAABIADAvAQAAAAEwAQBEACEyAABJMiIzAQBKACE0QABFACEDAAAAAwAgAQAABAAwAgAABQAgAQAAAAMAIAEAAAABACAHBAAARgAgLAAAQwAwLQAACQAQLgAAQwAwLwEARAAhNEAARQAhQEAARQAhAQQAAGUAIAMAAAAJACABAAAKADACAAABACADAAAACQAgAQAACgAwAgAAAQAgAwAAAAkAIAEAAAoAMAIAAAEAIAQEAABkACAvAQAAAAE0QAAAAAFAQAAAAAEBCwAADgAgAy8BAAAAATRAAAAAAUBAAAAAAQELAAAQADABCwAAEAAwBAQAAFcAIC8BAE8AITRAAFEAIUBAAFEAIQIAAAABACALAAATACADLwEATwAhNEAAUQAhQEAAUQAhAgAAAAkAIAsAABUAIAIAAAAJACALAAAVACADAAAAAQAgEgAADgAgEwAAEwAgAQAAAAEAIAEAAAAJACADBQAAVAAgGAAAVgAgGQAAVQAgBiwAAEIAMC0AABwAEC4AAEIAMC8BADYAITRAADkAIUBAADkAIQMAAAAJACABAAAbADAXAAAcACADAAAACQAgAQAACgAwAgAAAQAgAQAAAAUAIAEAAAAFACADAAAAAwAgAQAABAAwAgAABQAgAwAAAAMAIAEAAAQAMAIAAAUAIAMAAAADACABAAAEADACAAAFACAGAwAAUwAgLwEAAAABMAEAAAABMgAAADICMwEAAAABNEAAAAABAQsAACQAIAUvAQAAAAEwAQAAAAEyAAAAMgIzAQAAAAE0QAAAAAEBCwAAJgAwAQsAACYAMAYDAABSACAvAQBPACEwAQBPACEyAABQMiIzAQBPACE0QABRACECAAAABQAgCwAAKQAgBS8BAE8AITABAE8AITIAAFAyIjMBAE8AITRAAFEAIQIAAAADACALAAArACACAAAAAwAgCwAAKwAgAwAAAAUAIBIAACQAIBMAACkAIAEAAAAFACABAAAAAwAgAwUAAEwAIBgAAE4AIBkAAE0AIAgsAAA1ADAtAAAyABAuAAA1ADAvAQA2ACEwAQA2ACEyAAA3MiIzAQA4ACE0QAA5ACEDAAAAAwAgAQAAMQAwFwAAMgAgAwAAAAMAIAEAAAQAMAIAAAUAIAgsAAA1ADAtAAAyABAuAAA1ADAvAQA2ACEwAQA2ACEyAAA3MiIzAQA4ACE0QAA5ACELBQAAOwAgGAAAPgAgGQAAPgAgNQEAAAABNgEAAAAENwEAAAAEOAEAAAABOQEAAAABOgEAAAABOwEAAAABPAEAQQAhBwUAADsAIBgAAEAAIBkAAEAAIDUAAAAyAjYAAAAyCDcAAAAyCDwAAD8yIg4FAAA7ACAYAAA-ACAZAAA-ACA1AQAAAAE2AQAAAAQ3AQAAAAQ4AQAAAAE5AQAAAAE6AQAAAAE7AQAAAAE8AQA9ACE9AQAAAAE-AQAAAAE_AQAAAAELBQAAOwAgGAAAPAAgGQAAPAAgNUAAAAABNkAAAAAEN0AAAAAEOEAAAAABOUAAAAABOkAAAAABO0AAAAABPEAAOgAhCwUAADsAIBgAADwAIBkAADwAIDVAAAAAATZAAAAABDdAAAAABDhAAAAAATlAAAAAATpAAAAAATtAAAAAATxAADoAIQg1AgAAAAE2AgAAAAQ3AgAAAAQ4AgAAAAE5AgAAAAE6AgAAAAE7AgAAAAE8AgA7ACEINUAAAAABNkAAAAAEN0AAAAAEOEAAAAABOUAAAAABOkAAAAABO0AAAAABPEAAPAAhDgUAADsAIBgAAD4AIBkAAD4AIDUBAAAAATYBAAAABDcBAAAABDgBAAAAATkBAAAAAToBAAAAATsBAAAAATwBAD0AIT0BAAAAAT4BAAAAAT8BAAAAAQs1AQAAAAE2AQAAAAQ3AQAAAAQ4AQAAAAE5AQAAAAE6AQAAAAE7AQAAAAE8AQA-ACE9AQAAAAE-AQAAAAE_AQAAAAEHBQAAOwAgGAAAQAAgGQAAQAAgNQAAADICNgAAADIINwAAADIIPAAAPzIiBDUAAAAyAjYAAAAyCDcAAAAyCDwAAEAyIgsFAAA7ACAYAAA-ACAZAAA-ACA1AQAAAAE2AQAAAAQ3AQAAAAQ4AQAAAAE5AQAAAAE6AQAAAAE7AQAAAAE8AQBBACEGLAAAQgAwLQAAHAAQLgAAQgAwLwEANgAhNEAAOQAhQEAAOQAhBwQAAEYAICwAAEMAMC0AAAkAEC4AAEMAMC8BAEQAITRAAEUAIUBAAEUAIQg1AQAAAAE2AQAAAAQ3AQAAAAQ4AQAAAAE5AQAAAAE6AQAAAAE7AQAAAAE8AQBHACEINUAAAAABNkAAAAAEN0AAAAAEOEAAAAABOUAAAAABOkAAAAABO0AAAAABPEAAPAAhA0EAAAMAIEIAAAMAIEMAAAMAIAg1AQAAAAE2AQAAAAQ3AQAAAAQ4AQAAAAE5AQAAAAE6AQAAAAE7AQAAAAE8AQBHACEJAwAASwAgLAAASAAwLQAAAwAQLgAASAAwLwEARAAhMAEARAAhMgAASTIiMwEASgAhNEAARQAhBDUAAAAyAjYAAAAyCDcAAAAyCDwAAEAyIgs1AQAAAAE2AQAAAAQ3AQAAAAQ4AQAAAAE5AQAAAAE6AQAAAAE7AQAAAAE8AQA-ACE9AQAAAAE-AQAAAAE_AQAAAAEJBAAARgAgLAAAQwAwLQAACQAQLgAAQwAwLwEARAAhNEAARQAhQEAARQAhRAAACQAgRQAACQAgAAAAAUkBAAAAAQFJAAAAMgIBSUAAAAABBRIAAGgAIBMAAGsAIEYAAGkAIEcAAGoAIEwAAAEAIAMSAABoACBGAABpACBMAAABACAAAAALEgAAWAAwEwAAXQAwRgAAWQAwRwAAWgAwSAAAWwAgSQAAXAAwSgAAXAAwSwAAXAAwTAAAXAAwTQAAXgAwTgAAXwAwBC8BAAAAATIAAAAyAjMBAAAAATRAAAAAAQIAAAAFACASAABjACADAAAABQAgEgAAYwAgEwAAYgAgAQsAAGcAMAkDAABLACAsAABIADAtAAADABAuAABIADAvAQAAAAEwAQBEACEyAABJMiIzAQBKACE0QABFACECAAAABQAgCwAAYgAgAgAAAGAAIAsAAGEAIAgsAABfADAtAABgABAuAABfADAvAQBEACEwAQBEACEyAABJMiIzAQBKACE0QABFACEILAAAXwAwLQAAYAAQLgAAXwAwLwEARAAhMAEARAAhMgAASTIiMwEASgAhNEAARQAhBC8BAE8AITIAAFAyIjMBAE8AITRAAFEAIQQvAQBPACEyAABQMiIzAQBPACE0QABRACEELwEAAAABMgAAADICMwEAAAABNEAAAAABBBIAAFgAMEYAAFkAMEgAAFsAIEwAAFwAMAABBAAAZQAgBC8BAAAAATIAAAAyAjMBAAAAATRAAAAAAQMvAQAAAAE0QAAAAAFAQAAAAAECAAAAAQAgEgAAaAAgAwAAAAkAIBIAAGgAIBMAAGwAIAUAAAAJACALAABsACAvAQBPACE0QABRACFAQABRACEDLwEATwAhNEAAUQAhQEAAUQAhAgQGAgUAAwEDAAEBBAcAAAAAAwUACBgACRkACgAAAAMFAAgYAAkZAAoBAwABAQMAAQMFAA8YABAZABEAAAADBQAPGAAQGQARBgIBBwgBCAsBCQwBCg0BDA8BDREEDhIFDxQBEBYEERcGFBgBFRkBFhoEGh0HGx4LHB8CHSACHiECHyICICMCISUCIicEIygMJCoCJSwEJi0NJy4CKC8CKTAEKjMOKzQS"
 }
 
 async function decodeBase64AsWasm(wasmBase64: string): Promise<WebAssembly.Module> {
@@ -70,8 +70,8 @@ export interface PrismaClientConstructor {
    * const prisma = new PrismaClient({
    *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
    * })
-   * // Fetch zero or more Users
-   * const users = await prisma.user.findMany()
+   * // Fetch zero or more Conversations
+   * const conversations = await prisma.conversation.findMany()
    * ```
    * 
    * Read more in our [docs](https://pris.ly/d/client).
@@ -94,8 +94,8 @@ export interface PrismaClientConstructor {
  * const prisma = new PrismaClient({
  *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
  * })
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more Conversations
+ * const conversations = await prisma.conversation.findMany()
  * ```
  * 
  * Read more in our [docs](https://pris.ly/d/client).
@@ -188,7 +188,25 @@ export interface PrismaClient<
     extArgs: ExtArgs
   }>>
 
-    
+      /**
+   * `prisma.conversation`: Exposes CRUD operations for the **Conversation** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Conversations
+    * const conversations = await prisma.conversation.findMany()
+    * ```
+    */
+  get conversation(): Prisma.ConversationDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.message`: Exposes CRUD operations for the **Message** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Messages
+    * const messages = await prisma.message.findMany()
+    * ```
+    */
+  get message(): Prisma.MessageDelegate<ExtArgs, { omit: OmitOpts }>;
 }
 
 export function getPrismaClientClass(): PrismaClientConstructor {
