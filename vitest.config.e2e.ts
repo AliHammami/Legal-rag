@@ -7,5 +7,8 @@ export default defineConfig({
     globals: true,
     root: './',
     include: ['**/*.e2e-spec.ts'],
+    env: {
+      OPENAI_API_KEY: 'test-key-for-e2e',
+    },
   },
 });
