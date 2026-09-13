@@ -12,6 +12,8 @@ export interface SearchSimilarChunksOptions {
   expectedDimensions?: number;
 }
 
+export type SearchQuestionOptions = SearchSimilarChunksOptions;
+
 export interface SimilarChunkRow {
   chunk_id: string;
   article_number: string;

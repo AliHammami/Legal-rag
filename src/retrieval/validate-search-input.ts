@@ -4,6 +4,25 @@ import { validateEmbeddingVector } from '../embeddings/validate-embeddings.js';
 import { MAX_TOP_K } from './constants.js';
 import { RetrievalError } from './retrieval.error.js';
 
+export function validateQuestion(question: unknown): string {
+  if (typeof question !== 'string') {
+    throw new RetrievalError(
+      'Question must be a string',
+      'QUESTION_INVALID',
+    );
+  }
+
+  const normalizedQuestion = question.trim();
+  if (normalizedQuestion.length === 0) {
+    throw new RetrievalError(
+      'Question must not be empty',
+      'QUESTION_EMPTY',
+    );
+  }
+
+  return normalizedQuestion;
+}
+
 export function validateTopK(topK: number, maxTopK: number = MAX_TOP_K): void {
   if (!Number.isInteger(topK) || topK < 1) {
     throw new RetrievalError(
