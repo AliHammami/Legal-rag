@@ -12,6 +12,14 @@ export interface CreateEmbeddingsResult {
   embedding: number[];
 }
 
+export interface CreateStructuredChatCompletionOptions {
+  model: string;
+  messages: ChatCompletionMessageParam[];
+  schemaName: string;
+  schema: Record<string, unknown>;
+  signal?: AbortSignal;
+}
+
 @Injectable()
 export class OpenAIService {
   private readonly client: OpenAI;
@@ -48,6 +56,33 @@ export class OpenAIService {
       index: item.index,
       embedding: item.embedding,
     }));
+  }
+
+  async createStructuredChatCompletion<T>(
+    options: CreateStructuredChatCompletionOptions,
+  ): Promise<T> {
+    const response = await this.client.chat.completions.create(
+      {
+        model: options.model,
+        messages: options.messages,
+        response_format: {
+          type: 'json_schema',
+          json_schema: {
+            name: options.schemaName,
+            strict: true,
+            schema: options.schema,
+          },
+        },
+      },
+      { signal: options.signal },
+    );
+
+    const content = response.choices[0]?.message?.content;
+    if (!content) {
+      throw new Error('OpenAI returned empty structured response');
+    }
+
+    return JSON.parse(content) as T;
   }
 
   async *streamChatCompletion(
