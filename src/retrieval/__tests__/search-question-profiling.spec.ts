@@ -69,7 +69,7 @@ describe('searchQuestion profiling', () => {
     expect(profiling.vectorSearchMs).toBeGreaterThanOrEqual(0);
     expect(profiling.embeddingCalls).toBe(1);
     expect(profiling.rerankingCalls).toBe(0);
-    expect(profiling.rerankAttempts).toBe(0);
+    expect(profiling.rerankStatus).toBe('pending');
   });
 
   it('does not record metrics when profiling is omitted', async () => {

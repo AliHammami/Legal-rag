@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { createPipelineProfiling } from '../../profiling/pipeline-timings.js';
 import type { OpenAIService } from '../../openai/openai.service.js';
 import type { PrismaService } from '../../prisma/prisma.service.js';
 import type { SimilarChunk } from '../../retrieval/types.js';
+import { RerankingError } from '../reranking.error.js';
 import { searchAndRerankQuestion } from '../search-and-rerank-question.js';
 import type { RerankerService } from '../reranker.service.js';
 
@@ -19,9 +19,7 @@ vi.mock('../rerank-chunks.js', () => ({
   rerankChunks: rerankChunksMock,
 }));
 
-const QUESTION = 'Quelles sont les conditions de la légitime défense ?';
-
-function makeChunk(chunkId: string): SimilarChunk {
+function makeChunk(chunkId: string, distance: number): SimilarChunk {
   return {
     chunkId,
     articleNumber: chunkId.split('#')[0] ?? chunkId,
@@ -38,49 +36,53 @@ function makeChunk(chunkId: string): SimilarChunk {
       unitEnd: 0,
       unitCount: 1,
     },
-    distance: 0.2,
+    distance,
   };
 }
 
-describe('searchAndRerankQuestion', () => {
+describe('searchAndRerankQuestion fallback', () => {
   const prisma = {} as PrismaService;
   const openAIService = {} as OpenAIService;
   const rerankerService = {} as RerankerService;
   const candidates = Array.from({ length: 20 }, (_, index) =>
-    makeChunk(`${100 + index}-1#0`),
+    makeChunk(`${100 + index}-1#0`, index * 0.01),
   );
-  const reranked = [{ ...makeChunk('122-6#0'), rerankScore: 0.98 }];
 
   beforeEach(() => {
     searchQuestionMock.mockReset();
     rerankChunksMock.mockReset();
     searchQuestionMock.mockResolvedValue(candidates);
-    rerankChunksMock.mockResolvedValue(reranked);
   });
 
-  it('retrieves 20 candidates and reranks all of them', async () => {
-    const profiling = createPipelineProfiling();
+  it('falls back to vector Top 5 when Jina reranking fails', async () => {
+    rerankChunksMock.mockRejectedValue(
+      new RerankingError('Jina reranker API returned HTTP 503', 'API_ERROR'),
+    );
 
     const result = await searchAndRerankQuestion(
       prisma,
       openAIService,
       rerankerService,
-      QUESTION,
-      { profiling },
+      'Question ?',
     );
 
-    expect(result.candidates).toHaveLength(20);
-    expect(result.reranked).toEqual(reranked);
-    expect(result.rerankStatus).toBe('success');
-    expect(rerankChunksMock).toHaveBeenCalledWith(
-      rerankerService,
-      QUESTION,
-      candidates,
-      5,
-      { profiling },
+    expect(result.rerankStatus).toBe('fallback');
+    expect(result.reranked).toHaveLength(5);
+    expect(result.reranked.map((chunk) => chunk.chunkId)).toEqual(
+      candidates.slice(0, 5).map((chunk) => chunk.chunkId),
     );
-    expect(profiling.retrievedCandidates).toBe(20);
-    expect(profiling.rerankStatus).toBe('success');
-    expect(profiling.totalMs).toBeGreaterThanOrEqual(0);
+    expect(result.reranked.every((chunk) => chunk.rerankScore === undefined)).toBe(
+      true,
+    );
+  });
+
+  it('propagates missing API key configuration errors', async () => {
+    rerankChunksMock.mockRejectedValue(
+      new RerankingError('JINA_API_KEY is not configured', 'CONFIG_MISSING'),
+    );
+
+    await expect(
+      searchAndRerankQuestion(prisma, openAIService, rerankerService, 'Question ?'),
+    ).rejects.toMatchObject({ code: 'CONFIG_MISSING' });
   });
 });

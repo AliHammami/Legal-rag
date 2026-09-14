@@ -1,11 +1,3 @@
-const RETRYABLE_RERANKING_ERROR_CODES = new Set([
-  'RESPONSE_INVALID',
-  'RESPONSE_INCOMPLETE',
-  'CHUNK_UNKNOWN',
-  'CHUNK_DUPLICATE',
-  'CHUNK_MISSING',
-]);
-
 export class RerankingError extends Error {
   constructor(
     message: string,
@@ -17,11 +9,12 @@ export class RerankingError extends Error {
   }
 }
 
-export function isRetryableRerankingError(
+export function isFallbackEligibleRerankingError(
   error: unknown,
 ): error is RerankingError {
   return (
     error instanceof RerankingError &&
-    RETRYABLE_RERANKING_ERROR_CODES.has(error.code)
+    error.code !== 'CONFIG_MISSING' &&
+    error.code !== 'DOCUMENTS_EMPTY'
   );
 }

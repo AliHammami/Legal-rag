@@ -11,34 +11,49 @@ describe('pipeline timings', () => {
     expect(profiling).toEqual({
       embeddingMs: 0,
       vectorSearchMs: 0,
-      rerankingOpenAiMs: 0,
-      parsingValidationMs: 0,
+      jinaRerankingMs: 0,
+      mappingMs: 0,
       totalMs: 0,
       embeddingCalls: 0,
       rerankingCalls: 0,
-      rerankAttempts: 0,
+      retrievedCandidates: 0,
+      rerankStatus: 'pending',
     });
   });
 
-  it('formats a performance report', () => {
+  it('formats a Jina performance report', () => {
     const report = formatPerformanceReport({
-      embeddingMs: 1234.6,
-      vectorSearchMs: 56.2,
-      rerankingOpenAiMs: 42000.4,
-      parsingValidationMs: 3.1,
-      totalMs: 43294.3,
+      embeddingMs: 1050,
+      vectorSearchMs: 210,
+      jinaRerankingMs: 450,
+      mappingMs: 1,
+      totalMs: 1711,
       embeddingCalls: 1,
-      rerankingCalls: 2,
-      rerankAttempts: 2,
+      rerankingCalls: 1,
+      retrievedCandidates: 20,
+      rerankStatus: 'success',
     });
 
-    expect(report).toContain('Embedding           :  1235 ms');
-    expect(report).toContain('Vector search       :  56 ms');
-    expect(report).toContain('Reranking OpenAI    :  42000 ms');
-    expect(report).toContain('Parsing/validation  :  3 ms');
-    expect(report).toContain('Total               :  43294 ms');
-    expect(report).toContain('Embedding calls     :  1');
-    expect(report).toContain('Reranking calls     :  2');
-    expect(report).toContain('Rerank attempts     :  2');
+    expect(report).toContain('Retrieved candidates :  20');
+    expect(report).toContain('Jina reranking       :  450 ms');
+    expect(report).toContain('Mapping              :  1 ms');
+    expect(report).toContain('Fallback             :  no');
+    expect(report).toContain('Reranking calls      :  1');
+  });
+
+  it('labels fallback status in the report', () => {
+    const report = formatPerformanceReport({
+      embeddingMs: 0,
+      vectorSearchMs: 0,
+      jinaRerankingMs: 0,
+      mappingMs: 0,
+      totalMs: 0,
+      embeddingCalls: 1,
+      rerankingCalls: 1,
+      retrievedCandidates: 20,
+      rerankStatus: 'fallback',
+    });
+
+    expect(report).toContain('Fallback             :  vector retrieval');
   });
 });

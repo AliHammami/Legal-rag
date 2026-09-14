@@ -9,7 +9,9 @@ import {
   DEFAULT_RETRIEVAL_TOP_K,
 } from './constants.js';
 import { rerankChunks } from './rerank-chunks.js';
-import type { RerankedChunk } from './types.js';
+import type { RerankerService } from './reranker.service.js';
+import { isFallbackEligibleRerankingError } from './reranking.error.js';
+import type { RerankStatus, RerankedChunk } from './types.js';
 
 export interface SearchAndRerankQuestionOptions {
   retrievalTopK?: number;
@@ -20,11 +22,13 @@ export interface SearchAndRerankQuestionOptions {
 export interface SearchAndRerankQuestionResult {
   candidates: Awaited<ReturnType<typeof searchQuestion>>;
   reranked: RerankedChunk[];
+  rerankStatus: RerankStatus;
 }
 
 export async function searchAndRerankQuestion(
   prisma: PrismaService,
   openAIService: OpenAIService,
+  rerankerService: RerankerService,
   question: string,
   options: SearchAndRerankQuestionOptions = {},
 ): Promise<SearchAndRerankQuestionResult> {
@@ -41,17 +45,36 @@ export async function searchAndRerankQuestion(
     { profiling },
   );
 
-  const reranked = await rerankChunks(
-    openAIService,
-    question,
-    candidates,
-    rerankTopK,
-    { profiling },
-  );
+  if (profiling) {
+    profiling.retrievedCandidates = candidates.length;
+  }
+
+  let reranked: RerankedChunk[];
+  let rerankStatus: RerankStatus;
+
+  try {
+    reranked = await rerankChunks(
+      rerankerService,
+      question,
+      candidates,
+      rerankTopK,
+      { profiling },
+    );
+    rerankStatus = 'success';
+  } catch (error) {
+    if (!isFallbackEligibleRerankingError(error)) {
+      throw error;
+    }
+
+    console.warn('Jina reranking failed, using vector search fallback.');
+    reranked = candidates.slice(0, rerankTopK);
+    rerankStatus = 'fallback';
+  }
 
   if (profiling) {
+    profiling.rerankStatus = rerankStatus;
     profiling.totalMs = performance.now() - totalStart;
   }
 
-  return { candidates, reranked };
+  return { candidates, reranked, rerankStatus };
 }

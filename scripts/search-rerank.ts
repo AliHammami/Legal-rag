@@ -8,6 +8,7 @@ import {
   DEFAULT_RERANK_TOP_K,
   DEFAULT_RETRIEVAL_TOP_K,
 } from '../src/reranking/constants.js';
+import { JinaRerankerService } from '../src/reranking/jina-reranker.service.js';
 import { RerankingPipelineModule } from '../src/reranking/reranking-pipeline.module.js';
 import { searchAndRerankQuestion } from '../src/reranking/search-and-rerank-question.js';
 import { OpenAIService } from '../src/openai/openai.service.js';
@@ -56,9 +57,11 @@ async function main(): Promise<void> {
   try {
     const prisma = app.get(PrismaService);
     const openAIService = app.get(OpenAIService);
-    const { candidates, reranked } = await searchAndRerankQuestion(
+    const rerankerService = app.get(JinaRerankerService);
+    const { candidates, reranked, rerankStatus } = await searchAndRerankQuestion(
       prisma,
       openAIService,
+      rerankerService,
       question,
       { retrievalTopK, rerankTopK, profiling },
     );
@@ -66,6 +69,7 @@ async function main(): Promise<void> {
     console.log(`Question : ${question}`);
     console.log(`Candidats récupérés : ${candidates.length}`);
     console.log(`Après reranking      : ${reranked.length}`);
+    console.log(`Statut reranking     : ${rerankStatus}`);
     console.log('');
 
     for (const [index, result] of reranked.entries()) {
@@ -76,6 +80,9 @@ async function main(): Promise<void> {
 
       console.log(`#${index + 1} article ${result.articleNumber}`);
       console.log(`   distance vectorielle : ${result.distance.toFixed(4)}`);
+      if (result.rerankScore !== undefined) {
+        console.log(`   score Jina           : ${result.rerankScore.toFixed(4)}`);
+      }
       console.log(`   ${preview}`);
     }
 

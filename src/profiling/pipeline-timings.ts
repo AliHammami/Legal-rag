@@ -1,39 +1,54 @@
+import type { RerankStatus } from '../reranking/types.js';
+
 export interface PipelineProfilingTimings {
   embeddingMs: number;
   vectorSearchMs: number;
-  rerankingOpenAiMs: number;
-  parsingValidationMs: number;
+  jinaRerankingMs: number;
+  mappingMs: number;
   totalMs: number;
   embeddingCalls: number;
   rerankingCalls: number;
-  rerankAttempts: number;
+  retrievedCandidates: number;
+  rerankStatus: RerankStatus | 'pending';
 }
 
 export function createPipelineProfiling(): PipelineProfilingTimings {
   return {
     embeddingMs: 0,
     vectorSearchMs: 0,
-    rerankingOpenAiMs: 0,
-    parsingValidationMs: 0,
+    jinaRerankingMs: 0,
+    mappingMs: 0,
     totalMs: 0,
     embeddingCalls: 0,
     rerankingCalls: 0,
-    rerankAttempts: 0,
+    retrievedCandidates: 0,
+    rerankStatus: 'pending',
   };
 }
 
 export function formatPerformanceReport(
   timings: PipelineProfilingTimings,
 ): string {
+  const fallbackLabel =
+    timings.rerankStatus === 'fallback' ? 'vector retrieval' : 'no';
+  const statusLabel =
+    timings.rerankStatus === 'success'
+      ? 'Jina'
+      : timings.rerankStatus === 'fallback'
+        ? 'Jina (failed → fallback)'
+        : timings.rerankStatus;
+
   return [
     '--- Performance ---',
-    `Embedding           :  ${Math.round(timings.embeddingMs)} ms`,
-    `Vector search       :  ${Math.round(timings.vectorSearchMs)} ms`,
-    `Reranking OpenAI    :  ${Math.round(timings.rerankingOpenAiMs)} ms`,
-    `Parsing/validation  :  ${Math.round(timings.parsingValidationMs)} ms`,
-    `Total               :  ${Math.round(timings.totalMs)} ms`,
-    `Embedding calls     :  ${timings.embeddingCalls}`,
-    `Reranking calls     :  ${timings.rerankingCalls}`,
-    `Rerank attempts     :  ${timings.rerankAttempts}`,
+    `Retrieved candidates :  ${timings.retrievedCandidates}`,
+    `Reranking            :  ${statusLabel}`,
+    `Fallback             :  ${fallbackLabel}`,
+    `Embedding            :  ${Math.round(timings.embeddingMs)} ms`,
+    `Vector search        :  ${Math.round(timings.vectorSearchMs)} ms`,
+    `Jina reranking       :  ${Math.round(timings.jinaRerankingMs)} ms`,
+    `Mapping              :  ${Math.round(timings.mappingMs)} ms`,
+    `Total                :  ${Math.round(timings.totalMs)} ms`,
+    `Embedding calls      :  ${timings.embeddingCalls}`,
+    `Reranking calls      :  ${timings.rerankingCalls}`,
   ].join('\n');
 }

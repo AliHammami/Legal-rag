@@ -1,11 +1,17 @@
 import type { SimilarChunk } from '../retrieval/types.js';
 
-export interface RankedChunkItem {
+export type RerankDocument = {
   chunkId: string;
-}
+  content: string;
+};
 
-export interface RerankModelResponse {
-  rankedChunks: RankedChunkItem[];
-}
+export type RerankResult = {
+  chunkId: string;
+  score: number;
+};
 
-export type RerankedChunk = SimilarChunk;
+export type RerankedChunk = SimilarChunk & {
+  rerankScore?: number;
+};
+
+export type RerankStatus = 'success' | 'fallback';
