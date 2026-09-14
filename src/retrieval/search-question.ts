@@ -1,3 +1,5 @@
+import { performance } from 'node:perf_hooks';
+
 import type { OpenAIService } from '../openai/openai.service.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import { RetrievalError } from './retrieval.error.js';
@@ -13,10 +15,16 @@ export async function searchQuestion(
   options: SearchQuestionOptions = {},
 ): Promise<SimilarChunk[]> {
   const normalizedQuestion = validateQuestion(question);
+  const { profiling, ...searchOptions } = options;
 
+  const embeddingStart = performance.now();
   const embeddingResults = await openAIService.createEmbeddings([
     normalizedQuestion,
   ]);
+  if (profiling) {
+    profiling.embeddingMs = performance.now() - embeddingStart;
+    profiling.embeddingCalls += 1;
+  }
 
   const queryEmbedding = embeddingResults[0]?.embedding;
   if (!queryEmbedding) {
@@ -26,5 +34,16 @@ export async function searchQuestion(
     );
   }
 
-  return searchSimilarChunks(prisma, queryEmbedding, topK, options);
+  const searchStart = performance.now();
+  const results = await searchSimilarChunks(
+    prisma,
+    queryEmbedding,
+    topK,
+    searchOptions,
+  );
+  if (profiling) {
+    profiling.vectorSearchMs = performance.now() - searchStart;
+  }
+
+  return results;
 }

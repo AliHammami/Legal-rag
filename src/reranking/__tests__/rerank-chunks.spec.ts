@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { OpenAIService } from '../../openai/openai.service.js';
 import type { SimilarChunk } from '../../retrieval/types.js';
+import { createPipelineProfiling } from '../../profiling/pipeline-timings.js';
 import { MAX_RERANK_ATTEMPTS, RERANKING_MODEL } from '../constants.js';
 import { RerankingError } from '../reranking.error.js';
 import { rerankChunks } from '../rerank-chunks.js';
@@ -192,6 +193,41 @@ describe('rerankChunks', () => {
     const results = await rerankChunks(openAIService, QUESTION, chunks, 1);
     expect(createStructuredChatCompletion).toHaveBeenCalledTimes(2);
     expect(results[0]?.chunkId).toBe('122-6#0');
+  });
+
+  it('records reranking metrics without changing results', async () => {
+    const profiling = createPipelineProfiling();
+    const openAIService = {
+      createStructuredChatCompletion,
+    } as unknown as OpenAIService;
+
+    const results = await rerankChunks(openAIService, QUESTION, chunks, 1, {
+      profiling,
+    });
+
+    expect(results[0]?.chunkId).toBe('122-6#0');
+    expect(profiling.rerankingOpenAiMs).toBeGreaterThanOrEqual(0);
+    expect(profiling.parsingValidationMs).toBeGreaterThanOrEqual(0);
+    expect(profiling.rerankingCalls).toBe(1);
+    expect(profiling.rerankAttempts).toBe(1);
+  });
+
+  it('accumulates reranking metrics across retries', async () => {
+    createStructuredChatCompletion
+      .mockResolvedValueOnce(makeValidResponse(['122-5#0', '122-5#0']))
+      .mockResolvedValueOnce(makeValidResponse(['122-6#0', '122-5#0']));
+
+    const profiling = createPipelineProfiling();
+    const openAIService = {
+      createStructuredChatCompletion,
+    } as unknown as OpenAIService;
+
+    await rerankChunks(openAIService, QUESTION, chunks, 1, { profiling });
+
+    expect(profiling.rerankingCalls).toBe(2);
+    expect(profiling.rerankAttempts).toBe(2);
+    expect(profiling.rerankingOpenAiMs).toBeGreaterThanOrEqual(0);
+    expect(profiling.parsingValidationMs).toBeGreaterThanOrEqual(0);
   });
 
   it('never calls OpenAI more than MAX_RERANK_ATTEMPTS times', async () => {

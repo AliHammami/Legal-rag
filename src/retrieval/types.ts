@@ -1,4 +1,5 @@
 import type { PenalCodeChunkMetadata } from '../chunking/types.js';
+import type { PipelineProfilingTimings } from '../profiling/pipeline-timings.js';
 
 export interface SimilarChunk {
   chunkId: string;
@@ -12,7 +13,9 @@ export interface SearchSimilarChunksOptions {
   expectedDimensions?: number;
 }
 
-export type SearchQuestionOptions = SearchSimilarChunksOptions;
+export interface SearchQuestionOptions extends SearchSimilarChunksOptions {
+  profiling?: PipelineProfilingTimings;
+}
 
 export interface SimilarChunkRow {
   chunk_id: string;
