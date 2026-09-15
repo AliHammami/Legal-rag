@@ -12,6 +12,12 @@ export interface CreateEmbeddingsResult {
   embedding: number[];
 }
 
+export interface CreateChatCompletionOptions {
+  model: string;
+  messages: ChatCompletionMessageParam[];
+  signal?: AbortSignal;
+}
+
 export interface CreateStructuredChatCompletionOptions {
   model: string;
   messages: ChatCompletionMessageParam[];
@@ -56,6 +62,25 @@ export class OpenAIService {
       index: item.index,
       embedding: item.embedding,
     }));
+  }
+
+  async createChatCompletion(
+    options: CreateChatCompletionOptions,
+  ): Promise<string> {
+    const response = await this.client.chat.completions.create(
+      {
+        model: options.model,
+        messages: options.messages,
+      },
+      { signal: options.signal },
+    );
+
+    const content = response.choices[0]?.message?.content;
+    if (!content?.trim()) {
+      throw new Error('OpenAI returned empty chat completion');
+    }
+
+    return content;
   }
 
   async createStructuredChatCompletion<T>(

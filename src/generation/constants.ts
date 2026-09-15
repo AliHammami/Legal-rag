@@ -1,0 +1,5 @@
+export const DEFAULT_RAG_GENERATION_MODEL = 'gpt-5.6-luna';
+
+export const RAG_GENERATION_MODEL_ENV = 'RAG_GENERATION_MODEL';
+
+export const DEFAULT_CONTEXT_TOP_K = 5;

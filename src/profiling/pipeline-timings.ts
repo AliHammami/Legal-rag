@@ -10,6 +10,10 @@ export interface PipelineProfilingTimings {
   rerankingCalls: number;
   retrievedCandidates: number;
   rerankStatus: RerankStatus | 'pending';
+  contextBuilderMs: number;
+  generationMs: number;
+  generationCalls: number;
+  answerPipelineTotalMs: number;
 }
 
 export function createPipelineProfiling(): PipelineProfilingTimings {
@@ -23,6 +27,10 @@ export function createPipelineProfiling(): PipelineProfilingTimings {
     rerankingCalls: 0,
     retrievedCandidates: 0,
     rerankStatus: 'pending',
+    contextBuilderMs: 0,
+    generationMs: 0,
+    generationCalls: 0,
+    answerPipelineTotalMs: 0,
   };
 }
 
@@ -50,5 +58,19 @@ export function formatPerformanceReport(
     `Total                :  ${Math.round(timings.totalMs)} ms`,
     `Embedding calls      :  ${timings.embeddingCalls}`,
     `Reranking calls      :  ${timings.rerankingCalls}`,
+  ].join('\n');
+}
+
+export function formatAnswerPerformanceReport(
+  timings: PipelineProfilingTimings,
+): string {
+  const baseReport = formatPerformanceReport(timings);
+
+  return [
+    baseReport,
+    `Context builder      :  ${Math.round(timings.contextBuilderMs)} ms`,
+    `Generation LLM       :  ${Math.round(timings.generationMs)} ms`,
+    `Generation calls     :  ${timings.generationCalls}`,
+    `Answer pipeline total:  ${Math.round(timings.answerPipelineTotalMs)} ms`,
   ].join('\n');
 }

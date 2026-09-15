@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   createPipelineProfiling,
+  formatAnswerPerformanceReport,
   formatPerformanceReport,
 } from '../pipeline-timings.js';
 
@@ -18,6 +19,10 @@ describe('pipeline timings', () => {
       rerankingCalls: 0,
       retrievedCandidates: 0,
       rerankStatus: 'pending',
+      contextBuilderMs: 0,
+      generationMs: 0,
+      generationCalls: 0,
+      answerPipelineTotalMs: 0,
     });
   });
 
@@ -55,5 +60,27 @@ describe('pipeline timings', () => {
     });
 
     expect(report).toContain('Fallback             :  vector retrieval');
+  });
+
+  it('formats answer pipeline metrics', () => {
+    const report = formatAnswerPerformanceReport({
+      embeddingMs: 1000,
+      vectorSearchMs: 200,
+      jinaRerankingMs: 300,
+      mappingMs: 1,
+      totalMs: 1500,
+      embeddingCalls: 1,
+      rerankingCalls: 1,
+      retrievedCandidates: 20,
+      rerankStatus: 'success',
+      contextBuilderMs: 2,
+      generationMs: 4000,
+      generationCalls: 1,
+      answerPipelineTotalMs: 5500,
+    });
+
+    expect(report).toContain('Context builder      :  2 ms');
+    expect(report).toContain('Generation LLM       :  4000 ms');
+    expect(report).toContain('Answer pipeline total:  5500 ms');
   });
 });
