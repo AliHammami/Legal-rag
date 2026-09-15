@@ -2,8 +2,6 @@ export const DEFAULT_RAG_GENERATION_MODEL = 'gpt-5.6-luna';
 
 export const RAG_GENERATION_MODEL_ENV = 'RAG_GENERATION_MODEL';
 
-export const DEFAULT_CONTEXT_TOP_K = 5;
-
 export const DEFAULT_RELATIVE_SCORE_THRESHOLD = 0.4;
 
 export const MIN_CONTEXT_CHUNKS = 1;
