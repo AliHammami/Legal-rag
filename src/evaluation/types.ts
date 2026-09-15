@@ -8,6 +8,26 @@ export interface EvaluationQuestion {
   goldArticles: string[];
 }
 
+export interface E2EEvaluationQuestion {
+  id: string;
+  question: string;
+  goldArticles: string[];
+  referenceAnswer: string | null;
+  expectedAbstention: boolean;
+}
+
+export interface E2EDatasetValidationSummary {
+  questionCount: number;
+  normalQuestionCount: number;
+  abstentionQuestionCount: number;
+  duplicateIds: string[];
+  duplicateQuestions: string[];
+  invalidGoldArticles: string[];
+  invalidReferenceAnswers: string[];
+  missingCorpusArticles: string[];
+  isValid: boolean;
+}
+
 export interface QuestionEvaluationMetrics {
   recallAt20Vector: 0 | 1;
   recallAt5Vector: 0 | 1;
