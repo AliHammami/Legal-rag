@@ -19,6 +19,7 @@ describe('pipeline timings', () => {
       rerankingCalls: 0,
       retrievedCandidates: 0,
       rerankStatus: 'pending',
+      contextFilteringMs: 0,
       contextBuilderMs: 0,
       generationMs: 0,
       generationCalls: 0,
@@ -73,12 +74,14 @@ describe('pipeline timings', () => {
       rerankingCalls: 1,
       retrievedCandidates: 20,
       rerankStatus: 'success',
+      contextFilteringMs: 1,
       contextBuilderMs: 2,
       generationMs: 4000,
       generationCalls: 1,
       answerPipelineTotalMs: 5500,
     });
 
+    expect(report).toContain('Context filtering    :  1 ms');
     expect(report).toContain('Context builder      :  2 ms');
     expect(report).toContain('Generation LLM       :  4000 ms');
     expect(report).toContain('Answer pipeline total:  5500 ms');

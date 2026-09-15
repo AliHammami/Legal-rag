@@ -10,6 +10,7 @@ export interface PipelineProfilingTimings {
   rerankingCalls: number;
   retrievedCandidates: number;
   rerankStatus: RerankStatus | 'pending';
+  contextFilteringMs: number;
   contextBuilderMs: number;
   generationMs: number;
   generationCalls: number;
@@ -27,6 +28,7 @@ export function createPipelineProfiling(): PipelineProfilingTimings {
     rerankingCalls: 0,
     retrievedCandidates: 0,
     rerankStatus: 'pending',
+    contextFilteringMs: 0,
     contextBuilderMs: 0,
     generationMs: 0,
     generationCalls: 0,
@@ -68,6 +70,7 @@ export function formatAnswerPerformanceReport(
 
   return [
     baseReport,
+    `Context filtering    :  ${Math.round(timings.contextFilteringMs)} ms`,
     `Context builder      :  ${Math.round(timings.contextBuilderMs)} ms`,
     `Generation LLM       :  ${Math.round(timings.generationMs)} ms`,
     `Generation calls     :  ${timings.generationCalls}`,

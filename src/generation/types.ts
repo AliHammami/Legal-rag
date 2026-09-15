@@ -16,12 +16,18 @@ export interface BuiltRagContext {
   sources: ContextSource[];
 }
 
+export interface ContextFilteringSummary {
+  jinaResults: number;
+  contextResults: number;
+  relativeScoreThreshold: number;
+}
+
 export interface AnswerQuestionResult {
   question: string;
   candidates: SimilarChunk[];
   reranked: RerankedChunk[];
   rerankStatus: RerankStatus;
-  contextTopK: number;
+  contextFiltering: ContextFilteringSummary;
   context: string;
   sources: ContextSource[];
   answer: string;

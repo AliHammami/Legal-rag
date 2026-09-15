@@ -13,13 +13,13 @@ vi.mock('../../reranking/search-and-rerank-question.js', () => ({
   searchAndRerankQuestion: searchAndRerankQuestionMock,
 }));
 
-function makeChunk(chunkId: string) {
+function makeChunk(chunkId: string, rerankScore: number) {
   return {
     chunkId,
     articleNumber: chunkId.split('#')[0] ?? chunkId,
     content: `Content for ${chunkId}`,
     distance: 0.2,
-    rerankScore: 0.9,
+    rerankScore,
     metadata: {
       articleNumber: chunkId.split('#')[0] ?? chunkId,
       pageStart: 1,
@@ -35,12 +35,12 @@ function makeChunk(chunkId: string) {
   };
 }
 
-const rerankedChunks = [
-  makeChunk('122-6#0'),
-  makeChunk('122-5#0'),
-  makeChunk('462-9#0'),
-  makeChunk('462-11#0'),
-  makeChunk('122-7#0'),
+const q001RerankedChunks = [
+  makeChunk('122-6#0', 0.2965),
+  makeChunk('122-5#0', 0.1197),
+  makeChunk('462-9#0', 0.0591),
+  makeChunk('462-11#0', 0.0269),
+  makeChunk('122-7#0', 0.0261),
 ];
 
 describe('answerQuestion', () => {
@@ -56,14 +56,14 @@ describe('answerQuestion', () => {
     searchAndRerankQuestionMock.mockReset();
     generateAnswer.mockReset();
     searchAndRerankQuestionMock.mockResolvedValue({
-      candidates: rerankedChunks,
-      reranked: rerankedChunks,
+      candidates: q001RerankedChunks,
+      reranked: q001RerankedChunks,
       rerankStatus: 'success',
     });
     generateAnswer.mockResolvedValue('Réponse finale.');
   });
 
-  it('orchestrates retrieval, context building, and generation', async () => {
+  it('orchestrates retrieval, dynamic filtering, context building, and generation', async () => {
     const result = await answerQuestion(
       prisma,
       openAIService,
@@ -80,59 +80,36 @@ describe('answerQuestion', () => {
       }),
     );
     expect(result.answer).toBe('Réponse finale.');
-    expect(result.contextTopK).toBe(5);
-    expect(result.sources).toHaveLength(5);
+    expect(result.contextFiltering).toEqual({
+      jinaResults: 5,
+      contextResults: 2,
+      relativeScoreThreshold: 0.4,
+    });
+    expect(result.sources.map((source) => source.articleNumber)).toEqual([
+      '122-6',
+      '122-5',
+    ]);
     expect(result.reranked).toHaveLength(5);
     expect(result.profiling.generationCalls).toBe(1);
+    expect(result.profiling.contextFilteringMs).toBeGreaterThanOrEqual(0);
     expect(result.profiling.contextBuilderMs).toBeGreaterThanOrEqual(0);
     expect(result.profiling.answerPipelineTotalMs).toBeGreaterThanOrEqual(0);
   });
 
-  it('uses only the top 2 reranked chunks for context by default order', async () => {
+  it('passes only filtered chunks to the context builder for q001', async () => {
     const result = await answerQuestion(
       prisma,
       openAIService,
       rerankerService,
       generationService,
       'Quelles sont les conditions de la légitime défense ?',
-      { contextTopK: 2 },
     );
 
-    expect(result.contextTopK).toBe(2);
-    expect(result.sources.map((source) => source.articleNumber)).toEqual([
-      '122-6',
-      '122-5',
-    ]);
-    expect(result.reranked).toHaveLength(5);
-  });
-
-  it('uses only the top 3 reranked chunks for context', async () => {
-    const result = await answerQuestion(
-      prisma,
-      openAIService,
-      rerankerService,
-      generationService,
-      'Quelles sont les conditions de la légitime défense ?',
-      { contextTopK: 3 },
-    );
-
-    expect(result.sources.map((source) => source.articleNumber)).toEqual([
-      '122-6',
-      '122-5',
-      '462-9',
-    ]);
-  });
-
-  it('rejects invalid contextTopK values', async () => {
-    await expect(
-      answerQuestion(
-        prisma,
-        openAIService,
-        rerankerService,
-        generationService,
-        'Question ?',
-        { contextTopK: 0 },
-      ),
-    ).rejects.toThrow(/contextTopK must be a positive integer/);
+    expect(result.sources).toHaveLength(2);
+    expect(result.context).toContain('Article 122-6');
+    expect(result.context).toContain('Article 122-5');
+    expect(result.context).not.toContain('Article 462-9');
+    expect(result.context).not.toContain('Article 462-11');
+    expect(result.context).not.toContain('Article 122-7');
   });
 });

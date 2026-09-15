@@ -11,14 +11,15 @@ import {
   DEFAULT_RETRIEVAL_TOP_K,
 } from '../reranking/constants.js';
 import { buildRagContext } from './build-rag-context.js';
+import { DEFAULT_RELATIVE_SCORE_THRESHOLD } from './constants.js';
+import { dynamicContextFilter } from './dynamic-context-filter.js';
 import type { RagGenerationService } from './rag-generation.service.js';
-import { resolveContextTopK, selectContextChunks } from './select-context-chunks.js';
 import type { AnswerQuestionResult } from './types.js';
 
 export interface AnswerQuestionOptions {
   retrievalTopK?: number;
   rerankTopK?: number;
-  contextTopK?: number;
+  relativeScoreThreshold?: number;
   profiling?: PipelineProfilingTimings;
 }
 
@@ -32,7 +33,8 @@ export async function answerQuestion(
 ): Promise<AnswerQuestionResult> {
   const retrievalTopK = options.retrievalTopK ?? DEFAULT_RETRIEVAL_TOP_K;
   const rerankTopK = options.rerankTopK ?? DEFAULT_RERANK_TOP_K;
-  const contextTopK = resolveContextTopK(options.contextTopK);
+  const relativeScoreThreshold =
+    options.relativeScoreThreshold ?? DEFAULT_RELATIVE_SCORE_THRESHOLD;
   const profiling = options.profiling ?? createPipelineProfiling();
   const pipelineStart = performance.now();
 
@@ -44,7 +46,11 @@ export async function answerQuestion(
     { retrievalTopK, rerankTopK, profiling },
   );
 
-  const contextChunks = selectContextChunks(reranked, contextTopK);
+  const filteringStart = performance.now();
+  const contextChunks = dynamicContextFilter(reranked, {
+    relativeScoreThreshold,
+  });
+  profiling.contextFilteringMs = performance.now() - filteringStart;
 
   const contextStart = performance.now();
   const { context, sources } = buildRagContext(contextChunks);
@@ -64,7 +70,11 @@ export async function answerQuestion(
     candidates,
     reranked,
     rerankStatus,
-    contextTopK,
+    contextFiltering: {
+      jinaResults: reranked.length,
+      contextResults: contextChunks.length,
+      relativeScoreThreshold,
+    },
     context,
     sources,
     answer,
