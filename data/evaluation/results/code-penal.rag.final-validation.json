@@ -1,0 +1,159 @@
+{
+  "timestamp": "2026-09-15T21:19:08.975Z",
+  "project": {
+    "tests": {
+      "status": "pass"
+    },
+    "build": {
+      "status": "pass"
+    }
+  },
+  "datasets": {
+    "retrievalDataset": {
+      "status": "pass"
+    },
+    "e2eDataset": {
+      "status": "pass"
+    },
+    "e2eDatasetSummary": {
+      "questionCount": 25,
+      "normalQuestionCount": 20,
+      "abstentionQuestionCount": 5,
+      "duplicateIds": [],
+      "duplicateQuestions": [],
+      "invalidGoldArticles": [],
+      "invalidReferenceAnswers": [],
+      "missingCorpusArticles": [],
+      "isValid": true
+    }
+  },
+  "pipeline": {
+    "ingestion": {
+      "status": "pass"
+    },
+    "chunking": {
+      "status": "pass"
+    },
+    "embeddings": {
+      "status": "pass"
+    },
+    "postgresqlPgvector": {
+      "status": "pass"
+    },
+    "retrieval": {
+      "status": "pass"
+    },
+    "jinaReranking": {
+      "status": "pass"
+    },
+    "dynamicContextFiltering": {
+      "status": "pass"
+    },
+    "generation": {
+      "status": "pass"
+    }
+  },
+  "retrieval": {
+    "status": {
+      "status": "pass"
+    },
+    "metrics": {
+      "questionCount": 20,
+      "recallAt20Vector": 1,
+      "recallAt5Vector": 1,
+      "recallAt5Jina": 1,
+      "mrrVector": 0.975,
+      "mrrJina": 0.975,
+      "recallAt5ImprovementPoints": 0,
+      "mrrImprovement": 0,
+      "averageEmbeddingMs": 267.3210990999998,
+      "averageVectorSearchMs": 48.70700145000028,
+      "averageJinaRerankingMs": 264.77034650000013,
+      "averageTotalMs": 581.0732910999998
+    }
+  },
+  "e2e": {
+    "snapshot": {
+      "status": "pass"
+    },
+    "judge": {
+      "status": "pass"
+    },
+    "qualityReport": {
+      "status": "pass"
+    },
+    "metrics": {
+      "questionCount": 25,
+      "normalQuestions": 20,
+      "abstentionQuestions": 5,
+      "averageCorrectness": 3.95,
+      "averageCompleteness": 3.95,
+      "averageGroundedness": 4,
+      "correctnessPassRate": 100,
+      "completenessPassRate": 100,
+      "groundednessPassRate": 100,
+      "abstentionAccuracy": 100,
+      "problematicQuestionCount": 0,
+      "averageTotalLatencyMs": 3367.91,
+      "averageContextCharacters": 1198.56,
+      "averageFilteredContextChunks": 1.64
+    }
+  },
+  "sources": {
+    "snapshot": {
+      "status": "pass"
+    },
+    "report": {
+      "status": "pass"
+    },
+    "metrics": {
+      "averageSourceRelevance": 3.64,
+      "averageSourceCoverage": 4,
+      "sourceRelevancePassRate": 88,
+      "sourceCoveragePassRate": 100,
+      "lowSourceRelevanceQuestionIds": [
+        "q021",
+        "q024",
+        "q025"
+      ],
+      "lowSourceCoverageQuestionIds": []
+    }
+  },
+  "artifacts": {
+    "e2eResults": {
+      "status": "pass"
+    },
+    "e2eEvaluated": {
+      "status": "pass"
+    },
+    "e2eQualityReport": {
+      "status": "pass"
+    },
+    "sourcesEvaluated": {
+      "status": "pass"
+    },
+    "sourceReport": {
+      "status": "pass"
+    }
+  },
+  "limitations": {
+    "benchmarkSpecificMetrics": {
+      "status": "pass"
+    },
+    "sameModelJudgeBias": {
+      "status": "pass"
+    },
+    "contextThreshold40Percent": {
+      "status": "pass"
+    },
+    "smallCorpusNoHnsw": {
+      "status": "pass"
+    },
+    "jinaNoGlobalMetricGain": {
+      "status": "pass"
+    }
+  },
+  "corpusChunkCount": 1368,
+  "status": "PASS",
+  "failures": []
+}

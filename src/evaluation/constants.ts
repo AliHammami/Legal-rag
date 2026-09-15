@@ -22,6 +22,9 @@ export const DEFAULT_E2E_SOURCES_EVALUATED_PATH =
 export const DEFAULT_E2E_SOURCE_REPORT_PATH =
   'data/evaluation/results/code-penal.e2e.source-report.json';
 
+export const DEFAULT_RAG_FINAL_VALIDATION_PATH =
+  'data/evaluation/results/code-penal.rag.final-validation.json';
+
 export const DEFAULT_CORPUS_CHUNKS_PATH = 'data/processed/code-penal.chunks.json';
 
 export const DEFAULT_CORPUS_ARTICLES_PATH =
