@@ -4,6 +4,9 @@ export const DEFAULT_EVALUATION_DATASET_PATH =
 export const DEFAULT_E2E_EVALUATION_DATASET_PATH =
   'data/evaluation/code-penal.e2e.questions.json';
 
+export const DEFAULT_E2E_EVALUATION_RESULTS_PATH =
+  'data/evaluation/results/code-penal.e2e.results.json';
+
 export const DEFAULT_CORPUS_CHUNKS_PATH = 'data/processed/code-penal.chunks.json';
 
 export const DEFAULT_CORPUS_ARTICLES_PATH =
