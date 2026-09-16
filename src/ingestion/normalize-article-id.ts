@@ -6,7 +6,7 @@ export interface NormalizedArticleId {
   rawArticleNumber: string;
 }
 
-/** Index ?ditorial L?gifrance : « Article L. 410-1 l'ordonnance n°… » */
+/** Index ?ditorial L?gifrance : ÿ Article L. 410-1 l'ordonnance nÿÿ ÿ */
 export function isEditorialArticleLine(line: string): boolean {
   const trimmed = line.trim();
   if (!/^Article /.test(trimmed)) {
@@ -34,7 +34,7 @@ export function isEditorialArticleLine(line: string): boolean {
 
 /**
  * Normalisation ?tendue pour les corpus hors Code p?nal.
- * D?terministe ; les suffixes alphab?tiques «  A » deviennent « -A ».
+ * D?terministe ; les suffixes alphab?tiques ÿ  A ÿ deviennent ÿ -A ÿ.
  */
 export function normalizeExtendedArticleId(
   rawId: string,
@@ -94,13 +94,54 @@ export function normalizePenalArticleId(rawId: string): string {
   return rawId.trim();
 }
 
+/**
+ * D\u00E9sambigu\u00EFse les identifiants normalis\u00E9s en double.
+ * Occurrence 2 : suffixe @p{page}. Si @p{page} est d\u00E9j\u00E0 pris pour ce
+ * num\u00E9ro normalis\u00E9, ajoute @o{occurrence}.
+ */
 export function resolveDuplicateArticleNumber(
   articleNumber: string,
   occurrence: number,
   pageStart: number,
+  pageAssignmentIndex = 1,
 ): string {
   if (occurrence <= 1) {
     return articleNumber;
   }
-  return `${articleNumber}@p${pageStart}`;
+
+  const pageSuffix = `${articleNumber}@p${pageStart}`;
+  if (pageAssignmentIndex === 1) {
+    return pageSuffix;
+  }
+
+  return `${pageSuffix}@o${occurrence}`;
+}
+
+export function findDuplicateArticleNumbers(
+  articleNumbers: readonly string[],
+): string[] {
+  const seen = new Map<string, number>();
+  const duplicates = new Set<string>();
+
+  for (const articleNumber of articleNumbers) {
+    const count = (seen.get(articleNumber) ?? 0) + 1;
+    seen.set(articleNumber, count);
+    if (count > 1) {
+      duplicates.add(articleNumber);
+    }
+  }
+
+  return [...duplicates].sort();
+}
+
+export function assertUniqueArticleNumbers(
+  articleNumbers: readonly string[],
+  corpusId: string,
+): void {
+  const duplicates = findDuplicateArticleNumbers(articleNumbers);
+  if (duplicates.length > 0) {
+    throw new Error(
+      `Duplicate articleNumber(s) in ${corpusId}: ${duplicates.join(', ')}`,
+    );
+  }
 }

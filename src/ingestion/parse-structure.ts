@@ -153,6 +153,7 @@ export function parseStructure(
     duplicateWarnings: [],
   };
   const idOccurrences = new Map<string, number>();
+  const pageAssignmentCounts = new Map<string, number>();
   const context: HierarchyContext = {};
   let current: ArticleDraft | null = null;
 
@@ -207,10 +208,16 @@ export function parseStructure(
       const occurrence = (idOccurrences.get(normalized) ?? 0) + 1;
       idOccurrences.set(normalized, occurrence);
 
+      const pageKey = `${normalized}@p${pageNumber}`;
+      const pageAssignmentIndex =
+        (pageAssignmentCounts.get(pageKey) ?? 0) + 1;
+      pageAssignmentCounts.set(pageKey, pageAssignmentIndex);
+
       const articleNumber = resolveDuplicateArticleNumber(
         normalized,
         occurrence,
         pageNumber,
+        pageAssignmentIndex,
       );
 
       if (occurrence > 1) {

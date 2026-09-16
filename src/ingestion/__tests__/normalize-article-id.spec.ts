@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+  assertUniqueArticleNumbers,
+  findDuplicateArticleNumbers,
   isEditorialArticleLine,
   normalizeExtendedArticleId,
   normalizePenalArticleId,
@@ -76,5 +78,26 @@ describe('resolveDuplicateArticleNumber', () => {
     expect(resolveDuplicateArticleNumber('L1234-5', 2, 1234)).toBe(
       'L1234-5@p1234',
     );
+  });
+
+  it('suffixe la 3e occurrence sur la meme page avec @o{occurrence}', () => {
+    expect(resolveDuplicateArticleNumber('2', 3, 2999, 2)).toBe('2@p2999@o3');
+    expect(resolveDuplicateArticleNumber('2', 4, 2999, 3)).toBe('2@p2999@o4');
+  });
+
+  it('garde @p{page} distinct si la 3e occurrence est sur une autre page', () => {
+    expect(resolveDuplicateArticleNumber('2', 3, 3000, 1)).toBe('2@p3000');
+  });
+});
+
+describe('findDuplicateArticleNumbers', () => {
+  it('detecte les articleNumber dupliques', () => {
+    expect(findDuplicateArticleNumbers(['A', 'B', 'A'])).toEqual(['A']);
+  });
+
+  it('assertUniqueArticleNumbers echoue si des doublons existent', () => {
+    expect(() =>
+      assertUniqueArticleNumbers(['2@p2999', '2@p2999'], 'code-du-travail'),
+    ).toThrow(/Duplicate articleNumber/);
   });
 });

@@ -5,6 +5,7 @@ import { getCorpusConfig } from '../ingestion/corpus-config.js';
 import { MAX_SIZE, TARGET_SIZE } from './constants.js';
 import { chunkArticle } from './group-chunks.js';
 import { segmentUnits } from './segment-units.js';
+import { assertUniqueChunkIds } from './validate-chunk-ids.js';
 import type {
   PenalCodeChunkingResult,
   PenalCodeChunkingStats,
@@ -98,6 +99,8 @@ export async function chunkCorpus(
   const chunks = ingestion.articles.flatMap((article) =>
     chunkArticle(article, targetSize, maxSize),
   );
+
+  assertUniqueChunkIds(chunks, config.corpusId);
 
   const stats = computeStats(ingestion, chunks, maxSize);
 

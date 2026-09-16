@@ -19,6 +19,7 @@ import {
   pageLinesFromCleanedPages,
   parseStructure,
 } from './parse-structure.js';
+import { assertUniqueArticleNumbers } from './normalize-article-id.js';
 import type { PenalCodeIngestionResult } from './types.js';
 
 export interface IngestCorpusOptions {
@@ -83,6 +84,11 @@ export async function ingestCorpus(
   if (parseStats) {
     warnings.push(...parseStats.duplicateWarnings);
   }
+
+  assertUniqueArticleNumbers(
+    articles.map((article) => article.articleNumber),
+    config.corpusId,
+  );
 
   const oversizedArticles = annotateOversizedArticles(articles);
   let footerPollutionArticles = 0;
