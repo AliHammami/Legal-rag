@@ -46,9 +46,12 @@ export interface PenalCodeChunkingStats {
   chunksOverMax: number;
   sentenceSplitUnits: number;
   hardSplitUnits: number;
+  oversizedArticlesChunked?: number;
 }
 
 export interface PenalCodeChunkingResult {
+  corpusId?: string;
+  codeName?: string;
   source: {
     articlesFile: string;
     ingestionExtractedAt?: string;

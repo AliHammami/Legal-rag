@@ -4,8 +4,8 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import { ingestCodePenal } from '../ingest-code-penal.js';
 import type { PenalCodeIngestionResult } from '../types.js';
 
-const PDF_PATH = resolve('data/code-penal.pdf');
-const OUTPUT_PATH = resolve('data/processed/code-penal.articles.json');
+const PDF_PATH = resolve('data/code-penal-13-09-2026.pdf');
+const OUTPUT_PATH = resolve('data/processed/code-penal.integration.articles.json');
 
 describe('ingestCodePenal (PDF réel)', () => {
   let result: PenalCodeIngestionResult;
@@ -14,14 +14,14 @@ describe('ingestCodePenal (PDF réel)', () => {
     result = await ingestCodePenal({ pdfPath: PDF_PATH, outputPath: OUTPUT_PATH });
   }, 120_000);
 
-  it('produit le JSON à partir du PDF réel', async () => {
-    expect(result.stats.articleCount).toBeGreaterThan(1200);
-    expect(result.stats.articleCount).toBeLessThan(1350);
+  it('produit 1301 articles', async () => {
+    expect(result.stats.articleCount).toBe(1301);
+    expect(result.stats.uniqueArticleCount).toBe(1301);
 
     const written = JSON.parse(
       await readFile(OUTPUT_PATH, 'utf-8'),
     ) as PenalCodeIngestionResult;
-    expect(written.articles.length).toBe(result.stats.articleCount);
+    expect(written.articles.length).toBe(1301);
   }, 120_000);
 
   it('article 111-1 : court, contenu attendu', () => {
@@ -36,7 +36,6 @@ describe('ingestCodePenal (PDF réel)', () => {
     const article = result.articles.find((a) => a.articleNumber === '113-2-1');
     expect(article).toBeDefined();
   });
-
 
   it('article R131-1 : format réglementaire', () => {
     const article = result.articles.find((a) => a.articleNumber === 'R131-1');

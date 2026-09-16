@@ -1,4 +1,4 @@
-/** Pied de page Légifrance répété sur chaque page du PDF. */
+/** Pied de page Légifrance répété sur chaque page du PDF (Code pénal, legacy). */
 export const LEGIFRANCE_FOOTER_REGEX =
   /Code pénal\s*-\s*Dernière modification le \d{1,2} \S+ \d{4} - Document généré le \d{1,2} \S+ \d{4}\n?/g;
 
@@ -13,18 +13,40 @@ export const LEGIFRANCE_FOOTER_DATES_REGEX =
 export const HYPHENATION_LINE_BREAK_REGEX =
   /([a-zàâäéèêëïîôùûüç])-\n([a-zàâäéèêëïîôùûüç])/gi;
 
+export interface CleanPageOptions {
+  footerRegex?: RegExp;
+}
+
 export interface CleanPageResult {
   text: string;
   warnings: string[];
 }
 
-export function cleanPageText(raw: string): CleanPageResult {
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/** Construit le regex de pied de page Légifrance/FOP pour un code donné. */
+export function buildLegifranceFooterRegex(codeName: string): RegExp {
+  const escaped = escapeRegExp(codeName);
+  return new RegExp(
+    `${escaped}\\s*-\\s*Dernière modification le \\d{1,2} \\S+ \\d{4} - Document généré le \\d{1,2} \\S+ \\d{4}\\n?`,
+    'g',
+  );
+}
+
+export function cleanPageText(
+  raw: string,
+  options: CleanPageOptions = {},
+): CleanPageResult {
   const warnings: string[] = [];
   let text = raw;
 
-  text = text.replace(LEGIFRANCE_FOOTER_REGEX, '');
   text = text.replace(/\f/g, '\n');
   text = text.normalize('NFC');
+
+  const footerRegex = options.footerRegex ?? LEGIFRANCE_FOOTER_REGEX;
+  text = text.replace(new RegExp(footerRegex.source, footerRegex.flags), '');
   text = text.replace(/[\u00A0\u202F]/g, ' ');
 
   if (text.includes('\uFFFD')) {
@@ -60,4 +82,15 @@ export function extractFooterDates(
 
 export function isBlankPage(text: string, minChars = 10): boolean {
   return text.replace(/\s/g, '').length < minChars;
+}
+
+/** Détecte la pollution résiduelle de pied de page dans un texte nettoyé. */
+export function containsFooterPollution(text: string, codeName?: string): boolean {
+  if (/Dernière modification le \d{1,2} \S+ \d{4}/.test(text)) {
+    return true;
+  }
+  if (codeName && text.includes(`${codeName} - Derni`)) {
+    return true;
+  }
+  return false;
 }

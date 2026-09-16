@@ -55,6 +55,7 @@ describe('parseStructure', () => {
   it('extrait les articles avec hiérarchie héritée', () => {
     const articles = parseStructure(fixtureLines, {
       sourceFile: 'code-penal.pdf',
+      usePenalArticleMatcher: true,
     });
 
     expect(articles).toHaveLength(2);
@@ -74,7 +75,10 @@ describe('parseStructure', () => {
       { line: '', pageNumber: 1 },
       { line: 'Deuxième alinéa.', pageNumber: 1 },
     ];
-    const articles = parseStructure(lines, { sourceFile: 'code-penal.pdf' });
+    const articles = parseStructure(lines, {
+      sourceFile: 'code-penal.pdf',
+      usePenalArticleMatcher: true,
+    });
     expect(articles[0]!.content).toBe('Premier alinéa.\n\nDeuxième alinéa.');
   });
 });
