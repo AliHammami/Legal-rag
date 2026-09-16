@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>RAG Blueprint</title>
+  <style>@page {
+  size: A4 landscape;
+  margin: 14mm 16mm 18mm 16mm;
+}
+
+@page {
+  @bottom-center {
+    content: counter(page);
+    font-size: 9pt;
+    color: #666;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: #1a1a1a;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  page-break-after: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 2rem;
+}
+
+.cover h1 {
+  font-size: 28pt;
+  margin-bottom: 0.5rem;
+  color: #0f3460;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.cover .meta {
+  font-size: 10pt;
+  color: #777;
+}
+
+h1 {
+  font-size: 20pt;
+  color: #0f3460;
+  border-bottom: 2px solid #0f3460;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 14pt;
+  color: #16213e;
+  margin-top: 1.2rem;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 11.5pt;
+  color: #1a1a2e;
+  margin-top: 1rem;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 10.5pt;
+  color: #333;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 0.4rem 0 0.6rem;
+}
+
+ul, ol {
+  margin: 0.4rem 0 0.8rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+  margin: 0.8rem 0 1rem;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #e8eef5;
+  font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background: #f8f9fb;
+}
+
+pre {
+  background: #f4f6f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 8.5pt;
+  overflow-x: auto;
+  page-break-inside: avoid;
+}
+
+code {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 9pt;
+  background: #f0f0f0;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+.callout {
+  border-left: 4px solid #0f3460;
+  background: #f0f4fa;
+  padding: 10px 14px;
+  margin: 0.8rem 0 1rem;
+  page-break-inside: avoid;
+}
+
+.callout-retain {
+  border-left-color: #2d6a4f;
+  background: #edf7f1;
+}
+
+.callout-choose {
+  border-left-color: #b45309;
+  background: #fef7ed;
+}
+
+.callout-trap {
+  border-left-color: #b91c1c;
+  background: #fef2f2;
+}
+
+.callout strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 10pt;
+}
+
+.toc {
+  page-break-after: always;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin: 0.35rem 0;
+  font-size: 10pt;
+}
+
+.toc a {
+  color: #0f3460;
+  text-decoration: none;
+}
+
+.mermaid {
+  text-align: center;
+  margin: 1rem 0 1.2rem;
+  page-break-inside: avoid;
+}
+
+.section-break {
+  page-break-before: always;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1.5rem 0;
+}
+
+.checklist li {
+  list-style: none;
+  margin-left: -1rem;
+}
+
+.checklist li::before {
+  content: "☐ ";
+}
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div class="cover"><h1>RAG Blueprint — De zéro à un RAG production-ready</h1>
+<p class="subtitle">Guide d'ingénierie réutilisable — exemplifié sur le projet Code pénal</p><p class="meta">Version 1.0 · Projet <code>penal</code> · NestJS 12 · TypeScript · PostgreSQL · pgvector</p></div><div class="toc"><h2>Sommaire</h2>
+<ol>
+<li><a href="#1-introduction">Introduction</a></li>
+<li><a href="#2-m%C3%A9thodologie-de-travail">Méthodologie de travail</a></li>
+<li><a href="#3-ingestion">Ingestion</a></li>
+<li><a href="#4-chunking">Chunking</a></li>
+<li><a href="#5-embeddings">Embeddings</a></li>
+<li><a href="#6-stockage">Stockage</a></li>
+<li><a href="#7-retrieval">Retrieval</a></li>
+<li><a href="#8-reranking">Reranking</a></li>
+<li><a href="#9-contexte-context-selection">Contexte</a></li>
+<li><a href="#10-g%C3%A9n%C3%A9ration">Génération</a></li>
+<li><a href="#11-%C3%A9valuation">Évaluation</a></li>
+<li><a href="#12-architecture-d%C3%A9valuation-compl%C3%A8te">Architecture d&#39;évaluation</a></li>
+<li><a href="#13-alternatives-et-arbres-de-d%C3%A9cision">Alternatives et arbres de décision</a></li>
+<li><a href="#14-diagnostic">Diagnostic</a></li>
+<li><a href="#15-multi-corpus">Multi-corpus</a></li>
+<li><a href="#16-limites-du-projet">Limites du projet</a></li>
+<li><a href="#17-definition-of-done">Definition of Done</a></li>
+<li><a href="#18-r%C3%A8gle-fondamentale">Règle fondamentale</a></li>
+</ol>
+</div><hr>
+<h2>1. Introduction</h2>
+<p>Un système <strong>RAG</strong> (Retrieval-Augmented Generation) ne se résume pas à « brancher un LLM sur des documents ». C&#39;est une <strong>chaîne de transformations</strong> où chaque maillon peut amplifier ou dégrader la qualité finale. Une ingestion bruyante produit des chunks incohérents ; des chunks mal découpés produisent des embeddings trompeurs ; un retrieval trop large noie le LLM dans du bruit.</p>
+<p>Ce blueprint décrit <strong>comment construire un RAG production-ready</strong>, étape par étape, avec une méthode reproductible. Le projet <strong>Code pénal français</strong> sert d&#39;exemple concret : 1 301 articles juridiques, 1 368 chunks, embeddings <code>text-embedding-3-large</code> (3 072 dimensions), stockage PostgreSQL + pgvector, retrieval Top-20, reranking Jina v3.5, filtrage de contexte dynamique à 40 % de score relatif.</p>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Ce document est un <strong>guide d'ingénierie</strong>, pas une README de projet. Les choix documentés (modèles, seuils, tailles) sont ceux qui ont fonctionné <em>pour ce corpus et ce benchmark</em> — pas des vérités universelles.
+</div><h3>1.1 Pipeline horizontal</h3>
+<p>Chaque requête utilisateur traverse neuf étapes. Les étapes 1 à 6 préparent le corpus ; les étapes 7 à 9 servent la requête ; l&#39;évaluation (sections 11+ de ce blueprint) valide l&#39;ensemble.</p>
+<div class="mermaid">flowchart LR
+    A[INGESTION] --> B[CHUNKING]
+    B --> C[EMBEDDING]
+    C --> D[STOCKAGE]
+    D --> E[RETRIEVAL]
+    E --> F[RERANKING]
+    F --> G[CONTEXT]
+    G --> H[GENERATION]
+    H --> I[EVALUATION]
+
+    style A fill:#e8eef5
+    style B fill:#e8eef5
+    style C fill:#e8eef5
+    style D fill:#e8eef5
+    style E fill:#fef7ed
+    style F fill:#fef7ed
+    style G fill:#fef7ed
+    style H fill:#fef7ed
+    style I fill:#edf7f1</div><table>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Rôle</th>
+<th>Exemple Code pénal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ingestion</td>
+<td>Extraire et structurer la source brute</td>
+<td>PDF Légifrance → JSON articles</td>
+</tr>
+<tr>
+<td>Chunking</td>
+<td>Découper en unités indexables</td>
+<td>1 301 articles → 1 368 chunks</td>
+</tr>
+<tr>
+<td>Embedding</td>
+<td>Vectoriser le texte</td>
+<td><code>text-embedding-3-large</code>, 3 072 dims</td>
+</tr>
+<tr>
+<td>Stockage</td>
+<td>Persister chunks + vecteurs</td>
+<td>PostgreSQL + pgvector</td>
+</tr>
+<tr>
+<td>Retrieval</td>
+<td>Trouver les candidats pertinents</td>
+<td>Cosine distance, Top-20</td>
+</tr>
+<tr>
+<td>Reranking</td>
+<td>Réordonner par pertinence query-chunk</td>
+<td>Jina Reranker v3.5</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Sélectionner ce qui entre dans le prompt</td>
+<td>Seuil relatif 40 %</td>
+</tr>
+<tr>
+<td>Generation</td>
+<td>Produire la réponse grounded</td>
+<td>LLM + prompt système</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Mesurer, diagnostiquer, itérer</td>
+<td>Recall@K, MRR, LLM-as-Judge</td>
+</tr>
+</tbody></table>
+<h3>1.2 Méthodologie verticale</h3>
+<p>Pour <strong>chaque</strong> étape du pipeline, appliquer la même démarche en huit niveaux. C&#39;est le fil conducteur de ce document : ne jamais implémenter une technique « parce que les autres le font », mais parce qu&#39;un problème mesuré la justifie.</p>
+<div class="mermaid">flowchart TB
+    O[OBJECTIF<br/>Quel problème résout-on ?]
+    C[CONCEPT<br/>Comment ça fonctionne ?]
+    A[ALTERNATIVES<br/>Quelles solutions existent ?]
+    CH[CRITÈRES DE CHOIX<br/>Quand choisir quoi ?]
+    I[IMPLÉMENTATION<br/>Comment le coder ?]
+    E[ÉVALUATION<br/>Comment mesurer ?]
+    D[DIAGNOSTIC<br/>Si ça ne marche pas ?]
+    F[DEFINITION OF DONE<br/>Quand passer à la suite ?]
+
+    O --> C --> A --> CH --> I --> E --> D --> F</div><p><strong>Pourquoi cette méthode ?</strong> Un RAG échoue rarement à un seul endroit identifiable. Sans objectif clair par étape, on mélange les causes (chunking vs embedding vs retrieval). Sans alternatives documentées, on sur-ingénierie (reranker LLM à 45 s de latence pour zéro gain métrique). Sans Definition of Done, on passe à l&#39;étape suivante avec des fondations fragiles.</p>
+<div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Copier l'architecture d'un tutoriel LangChain sans adapter au corpus. Un PDF juridique Légifrance, une doc technique Markdown et une base de tickets support exigent des pipelines d'ingestion et de chunking <strong>radicalement différents</strong>.
+</div><h3>1.3 Exemple fil rouge : Code pénal</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Corpus</td>
+<td>Code pénal français (PDF Légifrance)</td>
+</tr>
+<tr>
+<td>Articles extraits</td>
+<td>1 301</td>
+</tr>
+<tr>
+<td>Chunks produits</td>
+<td>1 368</td>
+</tr>
+<tr>
+<td><code>TARGET_SIZE</code> / <code>MAX_SIZE</code></td>
+<td>1 500 / 2 000 caractères</td>
+</tr>
+<tr>
+<td>Modèle d&#39;embedding</td>
+<td><code>text-embedding-3-large</code> (3 072 dims)</td>
+</tr>
+<tr>
+<td>Stockage vectoriel</td>
+<td>PostgreSQL 16 + pgvector</td>
+</tr>
+<tr>
+<td>Retrieval</td>
+<td>Top-20, distance cosine</td>
+</tr>
+<tr>
+<td>Reranker</td>
+<td><code>jina-reranker-v3.5</code></td>
+</tr>
+<tr>
+<td>Filtrage contexte</td>
+<td>Seuil relatif 40 % du meilleur score</td>
+</tr>
+</tbody></table>
+<p>Stack technique : TypeScript strict, ESM, NestJS 12, Prisma 7, Vitest. <strong>Pas de LangChain</strong> — pipelines offline explicites dans <code>src/</code> et <code>scripts/</code>.</p>
+<hr>
+<h2>2. Méthodologie de travail</h2>
+<p>Les sections 3 (Ingestion) et 4 (Chunking) appliquent intégralement la structure A→I définie ci-dessous. Les sections 5 et 6 (Embeddings, Stockage) introduisent les concepts et les choix du projet ; leurs structures A→I complètes seront développées dans la suite de ce blueprint.</p>
+<h3>Structure A→I (applicable à chaque étape)</h3>
+<table>
+<thead>
+<tr>
+<th>Lettre</th>
+<th>Section</th>
+<th>Question clé</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>A</strong></td>
+<td>Objectif</td>
+<td>Quel problème cette étape résout-elle ?</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Concept</td>
+<td>Que se passe-t-il techniquement ?</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Alternatives</td>
+<td>Quelles solutions existent ?</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Comment choisir ?</td>
+<td>Quelles règles pratiques et arbres de décision ?</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Notre choix</td>
+<td>Qu&#39;avons-nous choisi et pourquoi (pour CE projet) ?</td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>Implémentation</td>
+<td>Fichiers, modules, décisions de code</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>Évaluation</td>
+<td>Métriques, tests, signaux à surveiller</td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td>Problèmes fréquents</td>
+<td>Symptôme → cause → mesure → solution</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Definition of Done</td>
+<td>Checklist avant de passer à l&#39;étape suivante</td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+Avant d'ajouter une complexité (reranker, hybrid search, overlap, OCR…) :<br/>
+1. Identifier le <strong>symptôme mesuré</strong> (Recall@K faible, hallucinations, latence…)<br/>
+2. Formuler une <strong>hypothèse</strong> liée à une étape précise<br/>
+3. Implémenter la solution minimale<br/>
+4. Comparer sur le <strong>même benchmark</strong><br/>
+5. Décider : garder, ajuster, ou abandonner
+</div><h3>Principes transverses</h3>
+<ol>
+<li><strong>Transformation technique, pas interprétation</strong> — L&#39;ingestion ne reformule pas le droit ; le chunking ne résume pas les articles.</li>
+<li><strong>Traçabilité</strong> — Chaque chunk porte ses métadonnées (article, pages, hiérarchie juridique, index).</li>
+<li><strong>Idempotence</strong> — Relancer <code>pnpm ingest:code-penal</code> ou <code>pnpm chunk:code-penal</code> reproduit le même artefact JSON.</li>
+<li><strong>Tests sur corpus réel</strong> — Les tests d&#39;intégration s&#39;exécutent sur le PDF et les JSON produits, pas uniquement sur des fixtures minimales.</li>
+<li><strong>Mesurer avant d&#39;optimiser</strong> — Aucun seuil (40 %, Top-20, 2 000 caractères) n&#39;est sacré ; chacun est justifié par des mesures sur le benchmark actuel.</li>
+</ol>
+<hr>
+<div class="section-break"></div><h2>3. Ingestion</h2>
+<h3>A. Objectif</h3>
+<p>Transformer une <strong>source brute</strong> (PDF, HTML, API, base SQL…) en <strong>documents structurés</strong> prêts pour le chunking : texte fidèle, métadonnées exploitables, artefacts reproductibles.</p>
+<p><strong>Problème résolu :</strong> le contenu source n&#39;est pas directement searchable ni embeddable. Un PDF Légifrance contient des pieds de page répétés, des césures de ligne, une hiérarchie implicite (Livre → Titre → Chapitre → Article) qu&#39;il faut extraire explicitement.</p>
+<h3>B. Concept</h3>
+<p>L&#39;ingestion est un pipeline séquentiel en quatre phases :</p>
+<pre><code>Source brute → Extraction → Nettoyage → Parsing structurel → JSON structuré
+</code></pre>
+<ol>
+<li><strong>Extraction</strong> — Récupérer le texte brut page par page (pdfjs-dist pour PDF, cheerio pour HTML, driver SQL pour BDD…).</li>
+<li><strong>Nettoyage</strong> — Supprimer les artefacts de mise en page (footers, césures, espaces insécables) <strong>sans</strong> altérer le sens juridique.</li>
+<li><strong>Parsing structurel</strong> — Identifier les entités documentaires (articles, sections, chapitres) et propager la hiérarchie comme métadonnées.</li>
+<li><strong>Sérialisation</strong> — Produire un JSON versionné avec stats, rapport et horodatage.</li>
+</ol>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Séparer les <strong>métadonnées document</strong> (date de modification Légifrance, date de génération PDF) des <strong>métadonnées article</strong> (numéro, livre, pages). Les dates document vont dans le rapport d'ingestion, pas dans le contenu des articles.
+</div><h3>C. Alternatives</h3>
+<table>
+<thead>
+<tr>
+<th>Approche</th>
+<th>Principe</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+<th>Complexité</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Extraction texte native (pdfjs, pdftotext)</strong></td>
+<td>Parser la couche texte du PDF</td>
+<td>Rapide, déterministe, pas de coût API</td>
+<td>Échoue sur PDF scannés ; layout complexe mal géré</td>
+<td>Faible</td>
+</tr>
+<tr>
+<td><strong>OCR (Tesseract, Azure DI, Google Vision)</strong></td>
+<td>Reconnaissance optique</td>
+<td>Indispensable pour scans / images</td>
+<td>Lent, coûteux, erreurs de reconnaissance</td>
+<td>Élevée</td>
+</tr>
+<tr>
+<td><strong>HTML / Markdown direct</strong></td>
+<td>Source déjà structurée</td>
+<td>Métadonnées riches, pas de bruit PDF</td>
+<td>Disponibilité variable selon la source</td>
+<td>Faible</td>
+</tr>
+<tr>
+<td><strong>API officielle (Légifrance PISTE, etc.)</strong></td>
+<td>Données structurées JSON/XML</td>
+<td>Fidélité juridique, versioning</td>
+<td>Quotas, authentification, dépendance externe</td>
+<td>Moyenne</td>
+</tr>
+<tr>
+<td><strong>LLM extraction</strong></td>
+<td>Demander au LLM de structurer</td>
+<td>Flexible sur formats exotiques</td>
+<td>Non déterministe, coûteux, risque d&#39;hallucination</td>
+<td>Élevée</td>
+</tr>
+<tr>
+<td><strong>Pipeline ETL (Airbyte, custom SQL)</strong></td>
+<td>Sync depuis BDD / data warehouse</td>
+<td>Idéal pour données déjà relationnelles</td>
+<td>Overkill pour un corpus statique</td>
+<td>Variable</td>
+</tr>
+</tbody></table>
+<h4>Nettoyage : spectre d&#39;intervention</h4>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Actions</th>
+<th>Risque</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Minimal</td>
+<td>Footers, form feeds, NFC, espaces insécables</td>
+<td>Très faible</td>
+</tr>
+<tr>
+<td>Modéré</td>
+<td>Césures de ligne, fusion repliures PDF</td>
+<td>Faible si règles conservatrices</td>
+</tr>
+<tr>
+<td>Agressif</td>
+<td>Correction orthographique, déduplication sémantique</td>
+<td><strong>Élevé</strong> — altère le texte source</td>
+</tr>
+</tbody></table>
+<h3>D. Comment choisir ?</h3>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>PDF natif texte</strong> (export FOP, Word→PDF) → extraction pdfjs, pas d'OCR</li>
+<li><strong>PDF scanné</strong> → OCR obligatoire ; valider manuellement un échantillon</li>
+<li><strong>HTML structuré</strong> (doc technique, wiki) → parser le DOM, conserver les balises sémantiques comme métadonnées</li>
+<li><strong>Markdown</strong> → decouper par headings (<code>#</code>, <code>##</code>)</li>
+<li><strong>JSON / API</strong> → mapping direct ; l'ingestion est un adaptateur de schéma</li>
+<li><strong>Base SQL</strong> → requête + export ; versioning via colonne <code>updated_at</code></li>
+<li><strong>Corpus juridique officiel</strong> → privilégier API ou PDF Légifrance ; ne jamais paraphraser via LLM</li>
+</ul>
+</div><div class="mermaid">flowchart TD
+    START[Quelle est la source ?]
+    START --> PDF{PDF ?}
+    PDF -->|Texte natif| PDFJS[pdfjs-dist / pdftotext]
+    PDF -->|Scan / image| OCR[OCR pipeline]
+    START --> HTML{HTML / MD ?}
+    HTML -->|Oui| DOM[Parser DOM / headings]
+    START --> API{API / JSON ?}
+    API -->|Oui| MAP[Mapping schéma]
+    START --> SQL{Base SQL ?}
+    SQL -->|Oui| ETL[Requête + export]</div><p><strong>Règles pratiques :</strong></p>
+<ul>
+<li>Commencer par l&#39;option <strong>la plus simple et déterministe</strong>.</li>
+<li>Ne pas ajouter d&#39;OCR si le PDF contient du texte sélectionnable.</li>
+<li>Toujours <strong>inspecter manuellement</strong> 5–10 documents représentatifs avant de valider le pipeline.</li>
+<li>Prévoir un champ <code>warnings[]</code> dans le rapport pour signaler les anomalies (caractères de remplacement, pages vides…).</li>
+</ul>
+<h3>E. Notre choix dans ce projet</h3>
+<table>
+<thead>
+<tr>
+<th>Décision</th>
+<th>Choix</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Source</td>
+<td><code>data/code-penal.pdf</code> (408 pages, Apache FOP)</td>
+<td>Export Légifrance officiel, texte natif</td>
+</tr>
+<tr>
+<td>Extraction</td>
+<td><code>pdfjs-dist</code> via <code>extract-pdf.ts</code></td>
+<td>Pas de scan ; pas de dépendance binaire externe</td>
+</tr>
+<tr>
+<td>Nettoyage</td>
+<td>Conservateur (<code>clean-text.ts</code>)</td>
+<td>Footers Légifrance, césures, NFC — rien de plus</td>
+</tr>
+<tr>
+<td>Parsing</td>
+<td>Regex + machine à états (<code>parse-structure.ts</code>)</td>
+<td>Hiérarchie Partie/Livre/Titre/Chapitre/Section/Article</td>
+</tr>
+<tr>
+<td>Formats articles</td>
+<td><code>111-1</code>, <code>113-2-1</code>, <code>R131-1</code>, <code>224-1 A</code>, <code>D712-9</code></td>
+<td>Regex élargi après inspection du PDF réel</td>
+</tr>
+<tr>
+<td>Sortie</td>
+<td>JSON par article avec métadonnées</td>
+<td>1 301 articles dans <code>code-penal.articles.json</code></td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Scripts offline (<code>tsx</code>), pas de NestJS</td>
+<td>Ingestion = batch, pas un service HTTP</td>
+</tr>
+</tbody></table>
+<div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Un regex d'articles trop strict : la première version ne capturait que <code>Article 111-1</code> et manquait 162 articles réglementaires (<code>R131-1</code>), à suffixe alphabétique (<code>224-1 A</code>) ou à segments multiples (<code>113-2-1</code>). Toujours valider le <strong>compte final</strong> contre une source de vérité.
+</div><h3>F. Implémentation</h3>
+<h4>Arborescence</h4>
+<pre><code>src/ingestion/
+├── ingest-code-penal.ts    # Orchestrateur principal
+├── extract-pdf.ts          # Extraction pdfjs-dist page par page
+├── clean-text.ts           # Nettoyage conservateur
+├── parse-structure.ts      # Parsing hiérarchique + articles
+├── types.ts                # PenalCodeArticle, PenalCodeIngestionResult
+└── __tests__/
+    ├── clean-text.spec.ts
+    ├── parse-structure.spec.ts
+    └── ingest-code-penal.integration.spec.ts
+
+scripts/ingest-code-penal.ts   # CLI : pnpm ingest:code-penal
+</code></pre>
+<h4>Flux de données</h4>
+<pre><code>data/code-penal.pdf
+    ↓ extractPdfPages()
+pages brutes [{ pageNumber, text }]
+    ↓ cleanPageText() + isBlankPage()
+pages nettoyées
+    ↓ pageLinesFromCleanedPages()
+lignes avec numéro de page
+    ↓ parseStructure()
+articles[] + métadonnées hiérarchiques
+    ↓ writeFile()
+data/processed/code-penal.articles.json
+data/processed/ingestion-report.json
+</code></pre>
+<h4>Schéma de sortie (<code>PenalCodeIngestionResult</code>)</h4>
+<pre><code class="language-json">{
+  &quot;source&quot;: { &quot;file&quot;: &quot;data/code-penal.pdf&quot;, &quot;type&quot;: &quot;pdf&quot;, &quot;pageCount&quot;: 408 },
+  &quot;extractedAt&quot;: &quot;2026-09-13T…&quot;,
+  &quot;stats&quot;: { &quot;articleCount&quot;: 1301, &quot;skippedPages&quot;: 0, &quot;warnings&quot;: [] },
+  &quot;report&quot;: { &quot;lastModified&quot;: &quot;…&quot;, &quot;generatedAt&quot;: &quot;…&quot;, &quot;durationMs&quot;: 12345 },
+  &quot;articles&quot;: [
+    {
+      &quot;articleNumber&quot;: &quot;111-1&quot;,
+      &quot;content&quot;: &quot;Les infractions pénales…&quot;,
+      &quot;metadata&quot;: {
+        &quot;articleNumber&quot;: &quot;111-1&quot;,
+        &quot;livre&quot;: &quot;Livre Ier : Dispositions générales&quot;,
+        &quot;pageStart&quot;: 1,
+        &quot;pageEnd&quot;: 1,
+        &quot;source&quot;: &quot;data/code-penal.pdf&quot;,
+        &quot;sourceType&quot;: &quot;pdf&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+<h4>Décisions techniques notables</h4>
+<ul>
+<li><strong><code>clean-text.ts</code></strong> — Regex <code>HYPHENATION_LINE_BREAK_REGEX</code> : fusionne <code>mot-\nsuite</code> mais ignore les tirets juridiques intra-ligne et les numéros d&#39;articles.</li>
+<li><strong><code>parse-structure.ts</code></strong> — Chaque ligne structurelle (Livre, Titre, Article…) flush l&#39;article courant et met à jour un contexte hiérarchique hérité.</li>
+<li><strong>Dates document</strong> — <code>extractFooterDates()</code> lit le pied de page Légifrance une fois ; stocké dans <code>report</code>, absent des métadonnées article.</li>
+<li><strong>Idempotence</strong> — Pas de side-effect hors écriture JSON ; relancer le script écrase les fichiers de sortie.</li>
+</ul>
+<h3>G. Évaluation</h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Comment le vérifier</th>
+<th>Seuil Code pénal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Compte d&#39;articles</td>
+<td><code>stats.articleCount</code></td>
+<td>1 301 (entre 1 200 et 1 350)</td>
+</tr>
+<tr>
+<td>Absence de footers</td>
+<td>Regex sur <code>article.content</code></td>
+<td>0 occurrence « Dernière modification »</td>
+</tr>
+<tr>
+<td>Formats spéciaux</td>
+<td>Articles témoins</td>
+<td><code>111-1</code>, <code>R131-1</code>, <code>224-1 A</code>, <code>D712-9</code> présents</td>
+</tr>
+<tr>
+<td>Hiérarchie</td>
+<td><code>metadata.livre</code>, <code>metadata.titre</code></td>
+<td>Définis sur articles représentatifs</td>
+</tr>
+<tr>
+<td>Pages vides</td>
+<td><code>stats.skippedPages</code></td>
+<td>Documenté, pas silencieux</td>
+</tr>
+<tr>
+<td>Reproductibilité</td>
+<td>Relancer 2×, diff JSON</td>
+<td>Identique (hors <code>extractedAt</code>)</td>
+</tr>
+</tbody></table>
+<p><strong>Tests automatisés :</strong></p>
+<ul>
+<li><code>ingest-code-penal.integration.spec.ts</code> — PDF réel, timeout 120 s</li>
+<li><code>parse-structure.spec.ts</code> — Fixtures unitaires hiérarchie et multi-alinéas</li>
+<li><code>clean-text.spec.ts</code> — Césures, footers, caractères de remplacement</li>
+</ul>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+L'ingestion seule ne se mesure pas en Recall@K. Ses métriques sont : <strong>complétude</strong> (tous les articles ?), <strong>fidélité</strong> (texte verbatim ?), <strong>propreté</strong> (pas de bruit ?), <strong>structure</strong> (métadonnées correctes ?).
+</div><h3>H. Problèmes fréquents</h3>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause probable</th>
+<th>Comment mesurer</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Compte d&#39;articles trop bas</td>
+<td>Regex incomplet, pages ignorées</td>
+<td>Comparer à source officielle</td>
+<td>Élargir <code>ARTICLE_LINE_REGEX</code>, inspecter pages manquantes</td>
+</tr>
+<tr>
+<td>Footers dans le contenu</td>
+<td>Regex footer incomplet</td>
+<td>Grep « Dernière modification »</td>
+<td>Ajuster <code>LEGIFRANCE_FOOTER_REGEX</code></td>
+</tr>
+<tr>
+<td>Mots coupés (<code>infractions</code> → <code>infrac-\ntions</code>)</td>
+<td>Césures non fusionnées</td>
+<td>Grep <code>-\n</code> dans JSON</td>
+<td>Vérifier <code>fixHyphenationLineBreaks</code></td>
+</tr>
+<tr>
+<td>Hiérarchie vide</td>
+<td>Lignes structurelles non reconnues</td>
+<td>Échantillon <code>metadata.livre</code></td>
+<td>Ajouter patterns (Partie, Sous-section…)</td>
+</tr>
+<tr>
+<td>Caractères ``</td>
+<td>Encodage PDF</td>
+<td><code>warnings: replacement_character_detected</code></td>
+<td>Font mapping pdfjs, post-traitement</td>
+</tr>
+<tr>
+<td>Contenu dupliqué</td>
+<td>Double flush ou pages répétées</td>
+<td>Hash par articleNumber</td>
+<td>Debugger la machine à états</td>
+</tr>
+<tr>
+<td>Ingestion lente</td>
+<td>PDF volumineux, pdfjs page par page</td>
+<td><code>report.durationMs</code></td>
+<td>Paralléliser pages, cache intermédiaire</td>
+</tr>
+</tbody></table>
+<h3>I. Definition of Done</h3>
+<ul class="checklist">
+<li>Pipeline CLI exécutable (<code>pnpm ingest:code-penal</code>)</li>
+<li>JSON de sortie conforme au schéma TypeScript (<code>PenalCodeIngestionResult</code>)</li>
+<li>Compte d'articles validé contre le corpus attendu (1 301)</li>
+<li>Zéro footer / form feed dans le contenu article</li>
+<li>Métadonnées hiérarchiques sur articles témoins</li>
+<li>Dates document dans le rapport, pas dans les articles</li>
+<li>Tests unitaires + intégration passent sur le PDF réel</li>
+<li>Rapport d'ingestion avec stats, warnings, durée</li>
+<li>Documentation des formats d'articles supportés</li>
+</ul><hr>
+<div class="section-break"></div><h2>4. Chunking</h2>
+<h3>A. Objectif</h3>
+<p>Découper les documents structurés en <strong>chunks</strong> — unités de texte indexables — optimisées pour l&#39;embedding et le retrieval.</p>
+<p><strong>Problème résolu :</strong> un article de 8 000 caractères dépasse la fenêtre efficace d&#39;un embedding ; un chunk de 200 caractères perd le contexte juridique. Le chunking cherche un <strong>compromis</strong> entre granularité sémantique et contraintes techniques du modèle d&#39;embedding.</p>
+<h3>B. Concept</h3>
+<p>Le chunking du Code pénal suit une stratégie <strong>structure-aware</strong> en trois niveaux :</p>
+<pre><code>Article → Unités juridiques → Parts → Chunks
+</code></pre>
+<ol>
+<li><strong>Segmentation</strong> (<code>segment-units.ts</code>) — Reconstruire les unités juridiques (alinéas, items de liste <code>1°</code>, sections romaines <code>I.-</code>, items alphabétiques <code>a)</code>) à partir des retours à la ligne PDF. La majorité des <code>\n</code> simples sont des <strong>repliures PDF</strong>, pas des frontières sémantiques.</li>
+<li><strong>Expansion</strong> (<code>group-chunks.ts</code>) — Si une unité dépasse <code>MAX_SIZE</code>, la subdiviser par phrases puis par coupure dure (dernier espace).</li>
+<li><strong>Regroupement</strong> — Accumuler des parts dans un buffer jusqu&#39;à approcher <code>TARGET_SIZE</code>, sans dépasser <code>MAX_SIZE</code>. Séparateur : <code>\n\n</code> (<code>UNIT_SEPARATOR</code>).</li>
+</ol>
+<p><strong>Pas d&#39;overlap.</strong> Chaque caractère de l&#39;article appartient à exactement un chunk (sauf séparateurs <code>\n\n</code> entre unités fusionnées).</p>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>TARGET_SIZE</code></td>
+<td>1 500</td>
+<td>Taille visée par chunk</td>
+</tr>
+<tr>
+<td><code>MAX_SIZE</code></td>
+<td>2 000</td>
+<td>Plafond strict (hard limit)</td>
+</tr>
+<tr>
+<td><code>UNIT_SEPARATOR</code></td>
+<td><code>\n\n</code></td>
+<td>Jointure entre unités dans un chunk</td>
+</tr>
+</tbody></table>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Sur le corpus Code pénal : 1 301 articles → 1 368 chunks. Seuls ~67 articles dépassent 2 000 caractères et sont multi-chunks. La grande majorité des articles tient en un seul chunk verbatim.
+</div><h3>C. Alternatives</h3>
+<table>
+<thead>
+<tr>
+<th>Stratégie</th>
+<th>Principe</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+<th>Quand l&#39;utiliser</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Fixed-size</strong></td>
+<td>Couper tous les N caractères</td>
+<td>Trivial à implémenter</td>
+<td>Coupe au milieu des phrases/unités</td>
+<td>Texte homogène sans structure</td>
+</tr>
+<tr>
+<td><strong>Recursive</strong></td>
+<td>Hiérarchie de séparateurs (<code>\n\n</code>, <code>\n</code>, <code>. </code>, <code> </code>)</td>
+<td>Bon compromis généraliste</td>
+<td>Ignore la structure domaine</td>
+<td>Docs techniques, prose</td>
+</tr>
+<tr>
+<td><strong>Semantic</strong></td>
+<td>Couper quand la similarité chute</td>
+<td>Frontières sémantiques fines</td>
+<td>Coûteux (embeddings intermédiaires)</td>
+<td>Texte non structuré long</td>
+</tr>
+<tr>
+<td><strong>Structure-aware</strong></td>
+<td>Respecter la structure documentaire</td>
+<td>Préserve l&#39;intégrité juridique</td>
+<td>Spécifique au domaine</td>
+<td>Code legal, specs, API docs</td>
+</tr>
+<tr>
+<td><strong>Sliding window / overlap</strong></td>
+<td>Fenêtre glissante avec recouvrement</td>
+<td>Contexte aux frontières</td>
+<td>Duplication, plus de chunks, bruit retrieval</td>
+<td>Quand la perte de contexte aux frontières est critique</td>
+</tr>
+<tr>
+<td><strong>One-doc-one-chunk</strong></td>
+<td>Un document = un chunk</td>
+<td>Simplicité maximale</td>
+<td>Impossible si docs &gt; limite embedding</td>
+<td>Articles courts (&lt; limite)</td>
+</tr>
+<tr>
+<td><strong>Parent-child</strong></td>
+<td>Petits chunks + doc parent</td>
+<td>Retrieval fin + contexte large</td>
+<td>Complexité stockage/retrieval</td>
+<td>Longs documents avec sections</td>
+</tr>
+</tbody></table>
+<h4>Taille des chunks : trade-offs</h4>
+<table>
+<thead>
+<tr>
+<th>Taille</th>
+<th>Effet sur retrieval</th>
+<th>Effet sur génération</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Trop petit (&lt; 300)</td>
+<td>Précision haute, contexte insuffisant</td>
+<td>LLM manque d&#39;information</td>
+</tr>
+<tr>
+<td>Optimal (500–2 000)</td>
+<td>Bon équilibre</td>
+<td>Contexte exploitable</td>
+</tr>
+<tr>
+<td>Trop grand (&gt; 4 000)</td>
+<td>Embedding « dilué », bruit</td>
+<td>Lost-in-the-middle, coût tokens</td>
+</tr>
+</tbody></table>
+<h3>D. Comment choisir ?</h3>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>Corpus juridique / réglementaire structuré</strong> → structure-aware, frontières = unités juridiques</li>
+<li><strong>Documentation technique avec headings</strong> → decouper par section Markdown/HTML</li>
+<li><strong>Texte non structuré (articles de blog, transcripts)</strong> → recursive ou semantic</li>
+<li><strong>FAQ courte</strong> → one-chunk-per-doc</li>
+<li><strong>Frontières floues + questions cross-section</strong> → envisager overlap 10–20 % (avec benchmark !)</li>
+<li><strong>Docs très longs + questions localisées</strong> → parent-child retrieval</li>
+</ul>
+</div><div class="mermaid">flowchart TD
+    START[Corpus structuré ?]
+    START -->|Oui| LEGAL{Juridique / réglementaire ?}
+    LEGAL -->|Oui| SA[Structure-aware<br/>unités juridiques]
+    LEGAL -->|Non| HEAD[Decoupe par headings / sections]
+    START -->|Non| LEN{Documents longs ?}
+    LEN -->|Non| ONE[One chunk per doc]
+    LEN -->|Oui| REC[Recursive / semantic]</div><p><strong>Overlap : quand oui, quand non ?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Overlap recommandé</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Articles autonomes (&lt; 2 000 chars)</td>
+<td>Non — verbatim suffit</td>
+</tr>
+<tr>
+<td>Phrases coupées aux frontières</td>
+<td>Overlap léger (10 %) ou meilleure segmentation</td>
+</tr>
+<tr>
+<td>Corpus juridique avec unités claires</td>
+<td>Non — risque de duplication et confusion retrieval</td>
+</tr>
+<tr>
+<td>Texte continu sans structure</td>
+<td>Overlap 15–20 % à benchmarker</td>
+</tr>
+</tbody></table>
+<h3>E. Notre choix dans ce projet</h3>
+<table>
+<thead>
+<tr>
+<th>Décision</th>
+<th>Choix</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stratégie</td>
+<td>Structure-aware</td>
+<td>Code pénal = articles + alinéas + listes numérotées</td>
+</tr>
+<tr>
+<td><code>TARGET_SIZE</code></td>
+<td>1 500</td>
+<td>Sous la limite embedding, chunks informatifs</td>
+</tr>
+<tr>
+<td><code>MAX_SIZE</code></td>
+<td>2 000</td>
+<td>Plafond strict ; 0 chunk au-dessus (validé par tests)</td>
+</tr>
+<tr>
+<td>Overlap</td>
+<td>Aucun</td>
+<td>Unités juridiques préservées ; pas de duplication</td>
+</tr>
+<tr>
+<td>Segmentation</td>
+<td>Reconstruction alinéas PDF</td>
+<td>85 %+ des <code>\n</code> = repliures, pas frontières</td>
+</tr>
+<tr>
+<td>Frontières fortes</td>
+<td><code>1°</code>, <code>I.-</code>, <code>a)</code></td>
+<td>Marqueurs juridiques fiables</td>
+</tr>
+<tr>
+<td>Articles ≤ 2 000</td>
+<td>1 chunk verbatim</td>
+<td>Contenu strictement identique à la source</td>
+</tr>
+<tr>
+<td>Articles &gt; 2 000</td>
+<td>Multi-chunks sans duplication</td>
+<td>Conservation complète des unités</td>
+</tr>
+<tr>
+<td><code>chunkId</code></td>
+<td><code>{articleNumber}#{index}</code></td>
+<td>Ex. <code>121-3#0</code>, <code>121-3#1</code></td>
+</tr>
+</tbody></table>
+<p><strong>Statistiques réelles :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Articles</td>
+<td>1 301</td>
+</tr>
+<tr>
+<td>Chunks</td>
+<td>1 368</td>
+</tr>
+<tr>
+<td>Articles single-chunk</td>
+<td>~1 234</td>
+</tr>
+<tr>
+<td>Articles multi-chunks</td>
+<td>~67</td>
+</tr>
+<tr>
+<td><code>chunksOverMax</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Taille max observée</td>
+<td>≤ 2 000</td>
+</tr>
+</tbody></table>
+<h3>F. Implémentation</h3>
+<h4>Arborescence</h4>
+<pre><code>src/chunking/
+├── chunk-code-penal.ts     # Orchestrateur + stats
+├── segment-units.ts          # Reconstruction unités juridiques
+├── group-chunks.ts           # Expansion + regroupement
+├── build-chunk.ts            # Construction objet PenalCodeChunk
+├── constants.ts              # TARGET_SIZE, MAX_SIZE, UNIT_SEPARATOR
+├── types.ts                  # LegalUnit, PenalCodeChunk, SplitLevel
+└── __tests__/
+    ├── segment-units.spec.ts
+    ├── group-chunks.spec.ts
+    └── chunk-code-penal.integration.spec.ts
+
+scripts/chunk-code-penal.ts   # CLI : pnpm chunk:code-penal
+</code></pre>
+<h4>Algorithme de segmentation (<code>segment-units.ts</code>)</h4>
+<pre><code>content
+  ↓ split par \n\n (blocs durs)
+  ↓ pour chaque bloc, mergeLinesInBlock()
+      ├── frontière forte (1°, I.-, a)) → nouvelle unité
+      ├── fin de phrase + majuscule → nouvelle unité
+      └── sinon → fusionner (repliure PDF)
+  ↓ LegalUnit[] avec type (paragraph, list-item, roman-section, alpha-item)
+</code></pre>
+<h4>Algorithme de regroupement (<code>group-chunks.ts</code>)</h4>
+<pre><code>LegalUnit[]
+  ↓ expandUnitsToParts(maxSize)
+      ├── unit ≤ max → 1 part
+      ├── unit &gt; max → splitBySentences
+      └── sentences &gt; max → splitByHardBoundary (dernier espace)
+  ↓ groupPartsIntoChunks(targetSize, maxSize)
+      ├── buffer + part &gt; maxSize → flush buffer, nouveau chunk
+      └── flush final
+  ↓ PenalCodeChunk[] avec metadata (unitStart, unitEnd, splitLevel)
+</code></pre>
+<h4>Schéma de sortie (<code>PenalCodeChunkingResult</code>)</h4>
+<pre><code class="language-json">{
+  &quot;source&quot;: { &quot;articlesFile&quot;: &quot;data/processed/code-penal.articles.json&quot;, &quot;articleCount&quot;: 1301 },
+  &quot;config&quot;: { &quot;targetSize&quot;: 1500, &quot;maxSize&quot;: 2000 },
+  &quot;stats&quot;: {
+    &quot;chunkCount&quot;: 1368,
+    &quot;singleChunkArticles&quot;: 1234,
+    &quot;multiChunkArticles&quot;: 67,
+    &quot;maxChunkSize&quot;: 2000,
+    &quot;avgChunkSize&quot;: 1180,
+    &quot;chunksOverMax&quot;: 0
+  },
+  &quot;chunks&quot;: [
+    {
+      &quot;chunkId&quot;: &quot;111-1#0&quot;,
+      &quot;articleNumber&quot;: &quot;111-1&quot;,
+      &quot;content&quot;: &quot;Les infractions pénales…&quot;,
+      &quot;charCount&quot;: 312,
+      &quot;metadata&quot;: {
+        &quot;livre&quot;: &quot;Livre Ier : Dispositions générales&quot;,
+        &quot;chunkIndex&quot;: 0,
+        &quot;chunkCount&quot;: 1,
+        &quot;unitStart&quot;: 0,
+        &quot;unitEnd&quot;: 2,
+        &quot;unitCount&quot;: 3,
+        &quot;pageStart&quot;: 1,
+        &quot;pageEnd&quot;: 1
+      }
+    }
+  ]
+}
+</code></pre>
+<h4>Niveaux de split (<code>SplitLevel</code>)</h4>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Quand</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>unit</code></td>
+<td>Unité juridique intacte</td>
+<td>Alinéa standard</td>
+</tr>
+<tr>
+<td><code>sentence</code></td>
+<td>Unité &gt; MAX, phrases ≤ MAX</td>
+<td>Long alinéa multi-phrases</td>
+</tr>
+<tr>
+<td><code>hard</code></td>
+<td>Phrases &gt; MAX</td>
+<td>Coupure au dernier espace</td>
+</tr>
+</tbody></table>
+<h3>G. Évaluation</h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Test</th>
+<th>Attendu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Couverture</td>
+<td>Chaque article a ≥ 1 chunk</td>
+<td>1 301 / 1 301</td>
+</tr>
+<tr>
+<td>Plafond taille</td>
+<td><code>charCount ≤ MAX_SIZE</code></td>
+<td>0 violation</td>
+</tr>
+<tr>
+<td>Verbatim (courts)</td>
+<td>Articles ≤ 2 000 chars</td>
+<td>1 chunk = contenu source exact</td>
+</tr>
+<tr>
+<td>Conservation (longs)</td>
+<td>Articles &gt; 2 000 chars</td>
+<td>Union des parts = unités originales, 0 duplication</td>
+</tr>
+<tr>
+<td>Métadonnées</td>
+<td><code>chunkId</code>, hiérarchie</td>
+<td>Format <code>{article}#{index}</code>, livre/titre présents</td>
+</tr>
+<tr>
+<td>Propreté</td>
+<td>Pas de footer</td>
+<td>Grep négatif</td>
+</tr>
+<tr>
+<td>Stats</td>
+<td><code>chunking-report.json</code></td>
+<td>Compteurs cohérents</td>
+</tr>
+</tbody></table>
+<p><strong>Tests automatisés :</strong></p>
+<ul>
+<li><code>chunk-code-penal.integration.spec.ts</code> — JSON réel, 8 assertions structurelles</li>
+<li><code>segment-units.spec.ts</code> — Repliures, listes, sections romaines</li>
+<li><code>group-chunks.spec.ts</code> — Regroupement, split par phrases, hard boundary</li>
+</ul>
+<p><strong>Métriques aval (indirectes) :</strong> un mauvais chunking se manifeste par un Recall@K faible <em>sur des questions ciblant des articles longs</em>. Ces métriques s&#39;évaluent au stade retrieval (section 7+), pas au stade chunking seul.</p>
+<div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Supposer que <code>\n</code> = alinéa. Sur le PDF Légifrance, ~85 % des retours à la ligne sont des repliures de mise en page. Fusionner d'abord, couper ensuite sur des signaux forts.
+</div><h3>H. Problèmes fréquents</h3>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause probable</th>
+<th>Comment mesurer</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chunks &gt; MAX_SIZE</td>
+<td>Split insuffisant</td>
+<td><code>stats.chunksOverMax &gt; 0</code></td>
+<td>Renforcer <code>splitByHardBoundary</code></td>
+</tr>
+<tr>
+<td>Perte de texte</td>
+<td>Bug flush / buffer</td>
+<td>Comparer caractères source vs union chunks</td>
+<td>Tester conservation (test intégration)</td>
+</tr>
+<tr>
+<td>Duplication</td>
+<td>Overlap involontaire</td>
+<td>Set de parts vs liste</td>
+<td>Vérifier unicité des parts</td>
+</tr>
+<tr>
+<td>Chunks trop petits</td>
+<td>TARGET_SIZE trop bas ou frontières trop agressives</td>
+<td>Distribution <code>charCount</code></td>
+<td>Ajuster TARGET ou règles de fusion</td>
+</tr>
+<tr>
+<td>Retrieval rate bas sur articles longs</td>
+<td>Coupure au milieu d&#39;une unité juridique</td>
+<td>Questions ciblant multi-chunks</td>
+<td>Améliorer segmentation, pas overlap aveugle</td>
+</tr>
+<tr>
+<td><code>chunkId</code> instables</td>
+<td>Index non déterministe</td>
+<td>Diff entre 2 runs</td>
+<td>Tri stable, pas de hash aléatoire</td>
+</tr>
+<tr>
+<td>Métadonnées manquantes</td>
+<td>Héritage ingestion incomplet</td>
+<td>Échantillon <code>metadata.livre</code></td>
+<td>Remonter au pipeline ingestion</td>
+</tr>
+</tbody></table>
+<h3>I. Definition of Done</h3>
+<ul class="checklist">
+<li>Pipeline CLI exécutable (<code>pnpm chunk:code-penal</code>)</li>
+<li>JSON conforme à <code>PenalCodeChunkingResult</code></li>
+<li>1 368 chunks couvrant 1 301 articles (≥ 1 chunk par article)</li>
+<li>0 chunk au-dessus de <code>MAX_SIZE = 2000</code></li>
+<li>Articles ≤ 2 000 : contenu verbatim dans un seul chunk</li>
+<li>Articles > 2 000 : conservation complète sans duplication</li>
+<li><code>chunkId</code> stable au format <code>{articleNumber}#{index}</code></li>
+<li>Métadonnées juridiques héritées + index de chunk (<code>chunkIndex</code>, <code>unitStart</code>, <code>unitEnd</code>)</li>
+<li>Tests unitaires + intégration passent</li>
+<li>Rapport <code>chunking-report.json</code> avec stats et durée</li>
+</ul><hr>
+<div class="section-break"></div><h2>5. Embeddings</h2>
+<h3>Rôle dans le pipeline</h3>
+<p>L&#39;embedding transforme chaque chunk texte en un <strong>vecteur dense</strong> dans un espace où la proximité cosine correspond à la similarité sémantique. C&#39;est la représentation que le retrieval comparera à la question utilisateur.</p>
+<pre><code>data/processed/code-penal.chunks.json (1 368 chunks)
+    ↓ embedCodePenal() — batch de 128
+data/processed/code-penal.embeddings.json
+    ↓ importCodePenal()
+PostgreSQL penal_code_chunks.embedding vector(3072)
+</code></pre>
+<h3>Choix du projet</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+<th>Fichier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Modèle</td>
+<td><code>text-embedding-3-large</code></td>
+<td><code>src/embeddings/constants.ts</code></td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>3 072</td>
+<td><code>EMBEDDING_DIMENSIONS</code></td>
+</tr>
+<tr>
+<td>Batch size</td>
+<td>128</td>
+<td><code>DEFAULT_BATCH_SIZE</code></td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><code>pnpm embed:code-penal</code></td>
+<td><code>scripts/embed-code-penal.ts</code></td>
+</tr>
+</tbody></table>
+<h3>Alternatives (aperçu)</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI API (<code>text-embedding-3-large/small</code>)</td>
+<td>Qualité, zero ops, multilingue</td>
+<td>Coût, dépendance réseau, latence</td>
+</tr>
+<tr>
+<td>Modèles locaux (HuggingFace, sentence-transformers)</td>
+<td>Pas de coût par appel, offline</td>
+<td>GPU, ops, qualité variable</td>
+</tr>
+<tr>
+<td>Modèles spécialisés (legal, medical)</td>
+<td>Domaine adapté</td>
+<td>Couverture limitée, maintenance</td>
+</tr>
+<tr>
+<td>Matryoshka / dimensions réduites</td>
+<td>Stockage et recherche plus rapides</td>
+<td>Perte de précision à mesurer</td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>Prototypage / corpus moyen</strong> → API OpenAI ou Cohere</li>
+<li><strong>Volume massif, budget contraint</strong> → modèle local + GPU</li>
+<li><strong>Données sensibles on-premise</strong> → local obligatoire</li>
+<li><strong>Multilingue</strong> → vérifier le benchmark par langue, pas les claims marketing</li>
+</ul>
+</div><p><strong>Pourquoi <code>text-embedding-3-large</code> ici ?</strong> Corpus juridique français, budget API acceptable pour 1 368 chunks (one-shot offline + requêtes utilisateur), qualité supérieure mesurée sur le benchmark retrieval (Recall@20 = 100 %). Ce choix n&#39;a pas été benchmarké contre des modèles locaux — c&#39;est une limite documentée.</p>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+1 368 chunks × 3 072 dimensions = ~4,2 M floats. L'embedding offline est un coût unique ; le coût récurrent est l'embedding des questions utilisateur (~1 appel par requête).
+</div><hr>
+<div class="section-break"></div><h2>6. Stockage</h2>
+<h3>Rôle dans le pipeline</h3>
+<p>Le stockage persiste chunks, embeddings et métadonnées dans une base queryable. C&#39;est la couche que le retrieval interroge à chaque question.</p>
+<pre><code>data/processed/code-penal.embeddings.json
+    ↓ upsertChunks() — idempotent ON CONFLICT
+PostgreSQL 16 + pgvector
+    ↓ searchSimilarChunks() — ORDER BY embedding &lt;=&gt; query
+Top-20 candidats
+</code></pre>
+<h3>Choix du projet</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+<th>Fichier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Base</td>
+<td>PostgreSQL 16</td>
+<td><code>docker-compose.yml</code> (image <code>pgvector/pgvector:pg16</code>)</td>
+</tr>
+<tr>
+<td>Extension</td>
+<td>pgvector</td>
+<td><code>prisma/migrations/…/migration.sql</code></td>
+</tr>
+<tr>
+<td>Type colonne</td>
+<td><code>vector(3072)</code></td>
+<td><code>prisma/schema.prisma</code></td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Cosine (<code>&lt;=&gt;</code>)</td>
+<td><code>src/retrieval/search-similar-chunks.ts</code></td>
+</tr>
+<tr>
+<td>ORM</td>
+<td>Prisma 7 + SQL raw pour vecteurs</td>
+<td><code>src/persistence/upsert-chunks.ts</code></td>
+</tr>
+<tr>
+<td>CLI import</td>
+<td><code>pnpm import:code-penal</code></td>
+<td><code>scripts/import-code-penal.ts</code></td>
+</tr>
+<tr>
+<td>Idempotence</td>
+<td><code>ON CONFLICT (chunk_id) DO UPDATE</code></td>
+<td>Upsert</td>
+</tr>
+</tbody></table>
+<h3>Alternatives (aperçu)</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Avantages</th>
+<th>Limites</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PostgreSQL + pgvector</strong></td>
+<td>Un seul moteur, SQL, metadata filters, ops familières</td>
+<td>Scalabilité au-delà de ~10 M vecteurs</td>
+</tr>
+<tr>
+<td><strong>Pinecone, Weaviate, Qdrant</strong></td>
+<td>Optimisées ANN, scaling horizontal</td>
+<td>Infra supplémentaire, coût</td>
+</tr>
+<tr>
+<td><strong>Elasticsearch / OpenSearch</strong></td>
+<td>Hybrid lexical + vector natif</td>
+<td>Complexité cluster, tuning</td>
+</tr>
+<tr>
+<td><strong>Chroma, LanceDB</strong></td>
+<td>Prototypage rapide</td>
+<td>Production limitée</td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>&lt; 1 M vecteurs, stack PostgreSQL existante</strong> → pgvector (notre cas : 1 368 vecteurs)</li>
+<li><strong>Hybrid search lexical + vector dès le départ</strong> → OpenSearch ou Postgres + pg_trgm</li>
+<li><strong>Scaling horizontal, latence sub-10 ms à millions de vecteurs</strong> → Qdrant / Pinecone</li>
+<li><strong>Prototypage local</strong> → Chroma / fichier — migrer avant production</li>
+</ul>
+</div><p><strong>Pourquoi pgvector ici ?</strong> 1 368 chunks — la taille du corpus ne justifie pas une vector DB dédiée. PostgreSQL est déjà requis pour les conversations (<code>Conversation</code>, <code>Message</code>). Un seul moteur = ops simplifiées. Index HNSW reporté (corpus trop petit pour en bénéficier, seq scan suffisant).</p>
+<div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Choisir Pinecone ou Weaviate pour 1 000 documents « parce que c'est ce que font les RAG ». La complexité opérationnelle doit être proportionnelle au volume et aux exigences de latence réelles.
+</div><h3>Implémentation (aperçu)</h3>
+<pre><code>src/persistence/
+├── import-code-penal.ts    # Orchestrateur import
+├── upsert-chunks.ts        # Batch upsert avec vecteurs
+├── format-vector.ts        # Literal pgvector [0.1, 0.2, …]
+├── verify-import.ts        # Validation dimensions 3072
+└── constants.ts
+
+prisma/schema.prisma        # model PenalCodeChunk
+docker-compose.yml          # pgvector/pgvector:pg16
+</code></pre>
+<p><strong>Definition of Done (stockage) — aperçu :</strong></p>
+<ul class="checklist">
+<li>1 368 lignes en base, dimensions 3072 vérifiées</li>
+<li>Import idempotent (relançable sans doublons)</li>
+<li>Requête cosine retourne des résultats cohérents</li>
+<li>Tests d'intégration retrieval passent</li>
+</ul><hr>
+<div class="section-break"></div><h2>7. Retrieval</h2>
+<h3>A. Objectif</h3>
+<p>Trouver, dans le corpus stocké, les <strong>passages les plus pertinents</strong> pour une question utilisateur. Le retrieval est le premier maillon « query-time » : une erreur ici se propage jusqu&#39;à la réponse finale, même avec le meilleur LLM.</p>
+<h3>B. Concept</h3>
+<p>Le retrieval <strong>vectoriel</strong> compare l&#39;embedding de la question à ceux des chunks via une <strong>mesure de similarité</strong> (ici : distance cosine via pgvector <code>&lt;=&gt;</code>). On retient les <strong>Top-K</strong> chunks les plus proches.</p>
+<ul>
+<li><strong>Bi-encoder</strong> : question et documents encodés séparément → recherche rapide sur des millions de vecteurs.</li>
+<li><strong>Recall@K</strong> : proportion de questions où au moins un document « gold » apparaît dans le Top-K.</li>
+<li><strong>MRR</strong> (Mean Reciprocal Rank) : pénalise un gold article mal classé (rang 5 vs rang 1).</li>
+</ul>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Recall@K mesure <em>si le bon document est retrouvé</em>. MRR mesure <em>à quel rang</em>. Les deux sont nécessaires : Recall@5 = 100 % avec MRR = 0,2 signifie que le gold est souvent en position 4–5.
+</div><h3>C. Alternatives</h3>
+<table>
+<thead>
+<tr>
+<th>Approche</th>
+<th>Principe</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+<th>Quand l&#39;envisager</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Vector search seul</strong></td>
+<td>Similarité embedding</td>
+<td>Simple, sémantique</td>
+<td>Sensible au chunking/embedding</td>
+<td>Corpus homogène, requêtes proches du texte source</td>
+</tr>
+<tr>
+<td><strong>BM25 / lexical</strong></td>
+<td>Correspondance termes</td>
+<td>Exactitude sur mots-clés</td>
+<td>Faible paraphrase</td>
+<td>Codes, références exactes, noms propres</td>
+</tr>
+<tr>
+<td><strong>Hybrid (vector + BM25)</strong></td>
+<td>Fusion des scores</td>
+<td>Meilleur des deux mondes</td>
+<td>Complexité, tuning poids</td>
+<td>Corpus mixte, requêtes courtes + sémantiques</td>
+</tr>
+<tr>
+<td><strong>Query expansion</strong></td>
+<td>Reformulations LLM</td>
+<td>Meilleure couverture</td>
+<td>Latence, coût, bruit</td>
+<td>Recall faible malgré bon embedding</td>
+</tr>
+<tr>
+<td><strong>Multi-query</strong></td>
+<td>Plusieurs requêtes fusionnées</td>
+<td>Robustesse</td>
+<td>Coût multiplié</td>
+<td>Questions ambiguës</td>
+</tr>
+<tr>
+<td><strong>Parent-child</strong></td>
+<td>Retriever petit, contexte large</td>
+<td>Précision + contexte</td>
+<td>Index double</td>
+<td>Longs documents structurés</td>
+</tr>
+<tr>
+<td><strong>Metadata filtering</strong></td>
+<td>Filtre SQL avant vector</td>
+<td>Périmètre contrôlé</td>
+<td>Dépend métadonnées fiables</td>
+<td>Multi-corpus, dates, juridictions</td>
+</tr>
+</tbody></table>
+<h3>D. Comment choisir ?</h3>
+<div class="mermaid">flowchart TD
+    Q[Question utilisateur] --> C{Corpus structuré<br/>avec métadonnées ?}
+    C -->|Oui| F[Filtre metadata<br/>puis vector search]
+    C -->|Non| V[Vector search Top-K]
+    V --> R{Recall@K faible<br/>sur benchmark ?}
+    R -->|Oui| H[Envisager hybrid<br/>ou query expansion]
+    R -->|Non| K[K suffit ?]
+    K -->|Recall@20 >> Recall@5| RR[Ajouter reranker]
+    K -->|Déjà bon| DONE[Vector seul OK]</div><div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>Corpus &lt; 100 k chunks, embedding de qualité, Recall@20 élevé</strong> → vector search seul + reranker optionnel</li>
+<li><strong>Termes exacts critiques (numéros d'articles, codes)</strong> → hybrid ou metadata filter</li>
+<li><strong>Recall faible malgré bon chunking</strong> → query expansion ou modèle d'embedding différent avant hybrid</li>
+<li><strong>Ne pas ajouter hybrid</strong> tant que Recall vector n'a pas été mesuré</li>
+</ul>
+</div><h3>E. Notre choix dans ce projet</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Top-K retrieval</td>
+<td><strong>20</strong></td>
+</tr>
+<tr>
+<td>Distance</td>
+<td><strong>Cosine</strong> (<code>embedding &lt;=&gt; query</code>)</td>
+</tr>
+<tr>
+<td>Index</td>
+<td><strong>Seq scan</strong> (pas de HNSW — 1 368 chunks)</td>
+</tr>
+<tr>
+<td>Hybrid</td>
+<td><strong>Non</strong> (pas encore justifié par les métriques)</td>
+</tr>
+<tr>
+<td>Metadata filter</td>
+<td><strong>Non</strong> (corpus mono-domaine)</td>
+</tr>
+</tbody></table>
+<p><strong>Résultats benchmark (20 questions)</strong> : Recall@20 = <strong>100 %</strong>, Recall@5 = <strong>100 %</strong>, MRR = <strong>0,975</strong>. Latence pgvector moyenne : <strong>~49 ms</strong>.</p>
+<h3>F. Implémentation</h3>
+<pre><code>src/retrieval/
+├── search-similar-chunks.ts   # Requête SQL pgvector
+├── search-question.ts           # Embed question + Top-K
+├── map-search-result.ts
+└── constants.ts                 # DEFAULT_TOP_K = 20
+
+scripts/search-question.ts       # CLI debug
+</code></pre>
+<p>Requête type : <code>ORDER BY embedding &lt;=&gt; $query::vector LIMIT 20</code>.</p>
+<h3>G. Évaluation</h3>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Seuil indicatif</th>
+<th>Notre résultat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Recall@20</td>
+<td>≥ 95 % avant prod</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Recall@5</td>
+<td>≥ 90 %</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>MRR</td>
+<td>≥ 0,85</td>
+<td>0,975</td>
+</tr>
+<tr>
+<td>Latence vector</td>
+<td>&lt; 200 ms</td>
+<td>~49 ms</td>
+</tr>
+</tbody></table>
+<p>Commande : <code>pnpm evaluate:retrieval</code></p>
+<h3>H. Problèmes fréquents</h3>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause possible</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Recall@K faible</td>
+<td>Chunking, embedding, ou gold incorrect</td>
+<td>Vérifier chunks gold ; tester reformulation</td>
+</tr>
+<tr>
+<td>Recall@20 OK, Recall@5 faible</td>
+<td>Gold en rang 6–20</td>
+<td>Reranker ou augmenter K avant filtre</td>
+</tr>
+<tr>
+<td>Bons scores, mauvaises réponses</td>
+<td>Problème downstream (contexte, génération)</td>
+<td>Ne pas tuner retrieval seul</td>
+</tr>
+<tr>
+<td>Latence élevée</td>
+<td>Index manquant sur gros corpus</td>
+<td>HNSW / IVFFlat pgvector</td>
+</tr>
+</tbody></table>
+<h3>I. Definition of Done</h3>
+<ul class="checklist">
+<li>Recall@20 et Recall@5 mesurés sur benchmark ≥ 20 questions</li>
+<li>MRR calculé et documenté</li>
+<li>Latence vector mesurée</li>
+<li>Top-K fixé et documenté</li>
+<li>Tests unitaires + intégration retrieval passent</li>
+</ul><hr>
+<div class="section-break"></div><h2>8. Reranking</h2>
+<h3>A. Objectif</h3>
+<p><strong>Réordonner</strong> les candidats du retrieval pour placer les plus pertinents en tête avant construction du contexte LLM. Le bi-encoder (retrieval) est rapide mais approximatif ; le reranker (souvent cross-encoder) compare query et document <strong>jointly</strong>.</p>
+<h3>B. Concept</h3>
+<pre><code>Retrieval Top-20  →  Reranker  →  Top-5  →  Context filter  →  LLM
+</code></pre>
+<ul>
+<li><strong>Bi-encoder</strong> : embeddings séparés → dot product rapide.</li>
+<li><strong>Cross-encoder</strong> : <code>[query ; document]</code> en une passe → score plus précis, plus lent.</li>
+<li><strong>Jina Reranker v3.5</strong> : API cross-encoder spécialisée reranking.</li>
+</ul>
+<h3>C. Alternatives</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Latence typique</th>
+<th>Qualité</th>
+<th>Coût</th>
+<th>Complexité</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pas de reranker</td>
+<td>~0 ms</td>
+<td>Ordre vector uniquement</td>
+<td>Nul</td>
+<td>Minimale</td>
+</tr>
+<tr>
+<td>Cross-encoder local (bge-reranker)</td>
+<td>100–500 ms</td>
+<td>Bonne</td>
+<td>GPU/CPU</td>
+<td>Moyenne</td>
+</tr>
+<tr>
+<td><strong>Jina API</strong></td>
+<td><strong>~265 ms</strong> (notre avg)</td>
+<td>Bonne</td>
+<td>API</td>
+<td>Faible</td>
+</tr>
+<tr>
+<td>LLM-as-reranker</td>
+<td><strong>33–45 s</strong> (GPT-5 nano, exp.)</td>
+<td>Variable</td>
+<td>Élevé</td>
+<td>Élevée</td>
+</tr>
+</tbody></table>
+<h3>D. Comment choisir ?</h3>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>MRR faible, Recall@20 OK</strong> → reranker justifié (problème d'ordre)</li>
+<li><strong>Recall@5 déjà 100 % et MRR stable</strong> → reranker = coût/latence sans gain métrique mesurable (notre cas)</li>
+<li><strong>Latence critique (&lt; 1 s total)</strong> → pas de LLM reranker ; Jina ou local</li>
+<li><strong>Ne pas ajouter de reranker</strong> « parce que les RAG en ont un » sans benchmark</li>
+</ul>
+</div><h3>E. Notre choix — trade-off documenté</h3>
+<p><strong>Expérience LLM reranker (GPT-5 nano, abandonné)</strong> :</p>
+<ul>
+<li>Latence reranking seule : <strong>33–45 s</strong> vs <strong>~265 ms</strong> Jina</li>
+<li>Réponses parfois incomplètes (6/20 items), doublons chunkId</li>
+<li>Qualité d&#39;ordonnancement parfois meilleure sur cas isolés</li>
+</ul>
+<p><strong>Choix actuel : Jina Reranker v3.5</strong></p>
+<ul>
+<li>Top-20 → Top-5</li>
+<li>Fallback vector Top-5 si API Jina en échec</li>
+<li><strong>Impact global sur benchmark 20 q : Recall@5 +0 pt, MRR +0,000</strong> — Jina n&#39;améliore pas les métriques globales car le vector search est déjà au plafond</li>
+</ul>
+<div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Conclure que « le reranker ne sert à rien » parce que Recall@5 ne bouge pas. Sur un corpus plus grand ou bruité, le reranker peut devenir critique. Notre benchmark est trop petit et trop facile pour discriminer.
+</div><h3>F. Implémentation</h3>
+<pre><code>src/reranking/
+├── jina-reranker.service.ts
+├── rerank-chunks.ts
+├── search-and-rerank-question.ts
+└── constants.ts    # JINA_RERANKER_MODEL, TOP 20→5
+</code></pre>
+<h3>G. Évaluation</h3>
+<p>Comparer <strong>MRR Vector vs MRR Jina</strong>, <strong>Recall@5 Vector vs Jina</strong>, latence Jina. Analyser cas par cas : <code>pnpm analyze:reranker</code>.</p>
+<h3>H. Problèmes fréquents</h3>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MRR inchangé</td>
+<td>Retrieval déjà optimal</td>
+<td>Garder reranker pour scale future ou retirer si latence critique</td>
+</tr>
+<tr>
+<td>Latence ×10</td>
+<td>LLM reranker</td>
+<td>Passer à Jina ou cross-encoder local</td>
+</tr>
+<tr>
+<td>Ordre incohérent</td>
+<td>K retrieval trop petit</td>
+<td>Augmenter Top-K avant rerank</td>
+</tr>
+</tbody></table>
+<h3>I. Definition of Done</h3>
+<ul class="checklist">
+<li>Reranker benchmarké vs vector seul (Recall@5, MRR)</li>
+<li>Latence reranking mesurée</li>
+<li>Fallback documenté et testé</li>
+<li>Cas améliorés / dégradés listés (ex. q016 amélioré, q010 dégradé)</li>
+</ul><hr>
+<div class="section-break"></div><h2>9. Contexte (Context Selection)</h2>
+<h3>A. Objectif</h3>
+<p>Sélectionner <strong>quels chunks</strong> et <strong>combien de texte</strong> envoyer au LLM. Trop de contexte = bruit, coût, « lost-in-the-middle ». Trop peu = réponses incomplètes.</p>
+<h3>B. Concept</h3>
+<ul>
+<li><strong>Top-K fixe</strong> : toujours N chunks (simple, prévisible).</li>
+<li><strong>Dynamic filtering</strong> : garder les chunks dont le score rerank ≥ seuil relatif × meilleur score.</li>
+<li><strong>Seuil relatif 40 %</strong> : <code>relativeScore = chunkScore / bestScore ≥ 0,4</code>.</li>
+</ul>
+<p>Notre pipeline : Jina Top-5 → filtre 40 % → MIN 1, MAX 5 chunks → <code>buildRagContext()</code>.</p>
+<h3>C. Alternatives</h3>
+<table>
+<thead>
+<tr>
+<th>Stratégie</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Top-K fixe (2, 3, 5)</td>
+<td>Simple, reproductible</td>
+<td>Envoie du bruit si K trop grand</td>
+</tr>
+<tr>
+<td>Seuil absolu</td>
+<td>Coupe les scores faibles</td>
+<td>Dépend calibration modèle</td>
+</tr>
+<tr>
+<td><strong>Seuil relatif (% du best)</strong></td>
+<td>Adaptatif par question</td>
+<td>Empirique, dépend benchmark</td>
+</tr>
+<tr>
+<td>Compression LLM</td>
+<td>Contexte court</td>
+<td>Perte info, latence, coût</td>
+</tr>
+<tr>
+<td>Map-reduce</td>
+<td>Longs corpus</td>
+<td>Complexité</td>
+</tr>
+</tbody></table>
+<h3>D. Comment choisir ?</h3>
+<p>Expérimentation réelle sur benchmark 20 questions :</p>
+<table>
+<thead>
+<tr>
+<th>Config</th>
+<th>Observations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Top-2 fixe</td>
+<td>Contexte minimal ; risque omission (ex. q001 perd 122-5)</td>
+</tr>
+<tr>
+<td>Top-3 / Top-5 fixe</td>
+<td>Plus complet ; bruit sur questions précises</td>
+</tr>
+<tr>
+<td>Seuil 40 % relatif</td>
+<td><strong>0 gold perdu</strong> ; ~<strong>1,64 chunks</strong> moyen envoyés</td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>Corpus homogène, reranker discriminant</strong> → seuil relatif + MIN/MAX bounds</li>
+<li><strong>Questions toujours multi-sources</strong> → Top-K fixe plus haut</li>
+<li><strong>Coût tokens critique</strong> → filtre agressif + mesurer completeness E2E</li>
+<li><strong>40 % n'est PAS universel</strong> — recalibrer sur votre benchmark</li>
+</ul>
+</div><h3>E. Notre choix</h3>
+<ul>
+<li><code>DEFAULT_RELATIVE_SCORE_THRESHOLD = 0.4</code></li>
+<li><code>MIN_CONTEXT_CHUNKS = 1</code>, <code>MAX_CONTEXT_CHUNKS = 5</code></li>
+<li>Contexte moyen E2E : <strong>~1 199 caractères</strong>, <strong>1,64 chunks</strong></li>
+</ul>
+<p>Sensibilité testée : 30 %, 35 %, 37,5 %, <strong>40 %</strong>, 42,5 %, 45 %, 50 % — <strong>40 %</strong> retenu (0 gold perdu).</p>
+<h3>F. Implémentation</h3>
+<pre><code>src/generation/
+├── dynamic-context-filter.ts
+├── build-rag-context.ts      # Format [Source N — Article X — chunk Y]
+├── build-rag-messages.ts
+└── constants.ts
+</code></pre>
+<h3>G. Évaluation</h3>
+<ul>
+<li>Taille moyenne contexte (caractères, nb chunks)</li>
+<li>Impact E2E completeness / groundedness</li>
+<li><code>pnpm analyze:reranker-sensitivity</code></li>
+</ul>
+<h3>H. Problèmes fréquents</h3>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Réponses incomplètes</td>
+<td>Contexte trop filtré</td>
+<td>Baisser seuil ou augmenter MIN</td>
+</tr>
+<tr>
+<td>Hallucinations</td>
+<td>Trop de bruit dans contexte</td>
+<td>Augmenter seuil ou baisser MAX</td>
+</tr>
+<tr>
+<td>Latence tokens élevée</td>
+<td>Contexte trop long</td>
+<td>Filtre plus agressif</td>
+</tr>
+</tbody></table>
+<h3>I. Definition of Done</h3>
+<ul class="checklist">
+<li>Seuil calibré sur benchmark avec gold articles</li>
+<li>Taille contexte moyenne documentée</li>
+<li>MIN/MAX chunks définis</li>
+<li>Contexte réellement envoyé sauvegardé dans snapshots E2E</li>
+</ul><hr>
+<div class="section-break"></div><h2>10. Génération</h2>
+<h3>A. Objectif</h3>
+<p>Produire une <strong>réponse en langage naturel</strong> fondée sur le contexte fourni, en minimisant hallucinations et en gérant l&#39;<strong>abstention</strong> quand le contexte est insuffisant.</p>
+<h3>B. Concept</h3>
+<p>Le LLM reçoit :</p>
+<ol>
+<li>Un <strong>system prompt</strong> (rôle, contraintes grounding)</li>
+<li>Le <strong>contexte</strong> (sources formatées)</li>
+<li>La <strong>question</strong> utilisateur</li>
+</ol>
+<p>Concepts clés : <strong>grounding</strong> (réponse supportée par le contexte), <strong>hallucination</strong> (affirmation non supportée), <strong>abstention</strong> (refus explicite si contexte insuffisant).</p>
+<h3>C. Alternatives — modèles</h3>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Exemples</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API propriétaires</td>
+<td>GPT-5.6 Luna, Claude, Gemini</td>
+<td>Qualité, tooling</td>
+<td>Coût, dépendance</td>
+</tr>
+<tr>
+<td>Open source local</td>
+<td>Llama, Mistral, Qwen</td>
+<td>Contrôle, privacy</td>
+<td>GPU, ops, qualité variable</td>
+</tr>
+<tr>
+<td>Petits modèles</td>
+<td>7B–13B</td>
+<td>Latence, coût</td>
+<td>Qualité juridique limitée</td>
+</tr>
+<tr>
+<td>Grands modèles</td>
+<td>70B+ / frontier</td>
+<td>Meilleure reasoning</td>
+<td>Coût, latence</td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>Prototype / qualité max</strong> → API frontier</li>
+<li><strong>Données sensibles on-prem</strong> → OSS local benchmarké</li>
+<li><strong>Volume massif, tâches simples</strong> → modèle petit + eval strict</li>
+<li><strong>Domaine juridique</strong> → privilégier grounding + eval abstention, pas seulement le modèle</li>
+</ul>
+</div><h3>D. Prompt et grounding</h3>
+<p>System prompt (extrait) :</p>
+<ul>
+<li>Répondre <strong>uniquement</strong> à partir du contexte</li>
+<li>Indiquer clairement si le contexte est insuffisant</li>
+<li>Ne pas inventer</li>
+</ul>
+<p>Séparation explicite <code>CONTEXTE:</code> / <code>QUESTION:</code> dans le message user.</p>
+<h3>E. Notre choix</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Modèle</td>
+<td><strong>gpt-5.6-luna</strong> (<code>RAG_GENERATION_MODEL</code>)</td>
+</tr>
+<tr>
+<td>Streaming</td>
+<td>Non (CLI batch)</td>
+</tr>
+<tr>
+<td>Citations structurées</td>
+<td>Non (phase ultérieure)</td>
+</tr>
+</tbody></table>
+<p><strong>Résultats E2E (LLM judge)</strong> : groundedness <strong>4,0/4</strong>, abstention <strong>5/5</strong>, 0 question problématique.</p>
+<h3>F. Implémentation</h3>
+<pre><code>src/generation/
+├── rag-generation.service.ts
+├── answer-question.ts          # Orchestrateur complet
+└── generation-pipeline.module.ts
+
+scripts/search-answer.ts        # CLI
+</code></pre>
+<p>Chaîne : <code>answerQuestion()</code> = searchAndRerank → filter → buildContext → generate.</p>
+<h3>G. Évaluation</h3>
+<p>Niveau E2E (section 11) : correctness, completeness, groundedness, abstention — <strong>ne pas fusionner</strong> en un score unique.</p>
+<h3>H. Problèmes fréquents</h3>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hallucinations</td>
+<td>Contexte insuffisant ou prompt faible</td>
+<td>Renforcer prompt ; eval groundedness</td>
+</tr>
+<tr>
+<td>Abstention manquée</td>
+<td>Prompt ou contexte trop large</td>
+<td>Questions hors périmètre dans benchmark</td>
+</tr>
+<tr>
+<td>Réponses incomplètes</td>
+<td>Contexte filtré trop agressif</td>
+<td>Ajuster seuil contexte</td>
+</tr>
+<tr>
+<td>Latence élevée</td>
+<td>Modèle lent</td>
+<td>~3,4 s génération avg — acceptable pour CLI</td>
+</tr>
+</tbody></table>
+<h3>I. Definition of Done</h3>
+<ul class="checklist">
+<li>Prompt grounding explicite</li>
+<li>Modèle configurable via env</li>
+<li>Benchmark E2E avec questions normales + abstention</li>
+<li>groundedness ≥ seuil sur benchmark</li>
+<li>Abstention testée (≥ 5 questions hors périmètre)</li>
+</ul><hr>
+<div class="section-break"></div><h2>11. Évaluation</h2>
+<p>L&#39;évaluation n&#39;est pas une étape « bonus » en fin de projet. C&#39;est le <strong>filet de sécurité</strong> qui empêche d&#39;optimiser le mauvais maillon, d&#39;ajouter de la complexité sans gain mesuré, et de livrer un RAG qui « a l&#39;air de marcher » sans preuve reproductible.</p>
+<p>Le projet Code pénal implémente <strong>sept niveaux d&#39;évaluation empilés</strong>, du retrieval isolé à la validation de régression globale. Chaque niveau produit des artefacts JSON versionnés dans <code>data/evaluation/results/</code>.</p>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Mesurer avant d'optimiser. Un Recall@20 à 100 % ne garantit pas une bonne réponse utilisateur — d'où les niveaux E2E, judge et sources. Inversement, un bon LLM judge ne compense pas un retrieval défaillant.
+</div><h3>Vue d&#39;ensemble des sept niveaux</h3>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Nom</th>
+<th>Question répondue</th>
+<th>Artefact principal</th>
+<th>Commande</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1</strong></td>
+<td>Benchmark retrieval</td>
+<td>Les bons articles sont-ils retrouvés ?</td>
+<td>Métriques Recall/MRR</td>
+<td><code>pnpm evaluate:retrieval</code></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Dataset E2E</td>
+<td>Le jeu de test est-il valide ?</td>
+<td>Rapport validation</td>
+<td><code>pnpm validate:e2e-dataset</code></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Snapshot E2E</td>
+<td>Le pipeline complet produit-il des résultats stables ?</td>
+<td><code>code-penal.e2e.results.json</code></td>
+<td><code>pnpm evaluate:e2e</code></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>LLM judge</td>
+<td>Les réponses sont-elles correctes, complètes, ancrées ?</td>
+<td><code>code-penal.e2e.evaluated.json</code></td>
+<td><code>pnpm evaluate:e2e:judge</code></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Évaluation sources</td>
+<td>Les chunks cités sont-ils pertinents et suffisants ?</td>
+<td><code>code-penal.e2e.source-report.json</code></td>
+<td><code>pnpm evaluate:e2e:sources</code></td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Analyse question par question</td>
+<td>Où se situent les échecs et quasi-échecs ?</td>
+<td><code>code-penal.e2e.analysis.json</code></td>
+<td><code>pnpm analyze:e2e-results</code></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Régression</td>
+<td>Tout le système reste-t-il conforme ?</td>
+<td><code>code-penal.rag.final-validation.json</code></td>
+<td><code>pnpm validate:rag</code></td>
+</tr>
+</tbody></table>
+<div class="mermaid">flowchart TB
+    subgraph L1["Niveau 1 — Retrieval"]
+        RD["code-penal.questions.json<br/>20 questions · goldArticles"]
+        RM["Recall@20 · Recall@5 · MRR"]
+    end
+    subgraph L2["Niveau 2 — Dataset E2E"]
+        ED["code-penal.e2e.questions.json<br/>25 questions · 20 normales + 5 abstention"]
+        EV["Validation goldArticles · doublons · corpus"]
+    end
+    subgraph L3["Niveau 3 — Snapshot"]
+        ER["code-penal.e2e.results.json<br/>réponses générées + contexte"]
+    end
+    subgraph L4["Niveau 4 — LLM Judge"]
+        EJ["code-penal.e2e.evaluated.json<br/>correctness · completeness · groundedness"]
+        QR["code-penal.e2e.report.json"]
+    end
+    subgraph L5["Niveau 5 — Sources"]
+        SE["code-penal.e2e.sources-evaluated.json"]
+        SR["code-penal.e2e.source-report.json"]
+    end
+    subgraph L6["Niveau 6 — Analyse"]
+        AN["code-penal.e2e.analysis.json<br/>questions problématiques"]
+    end
+    subgraph L7["Niveau 7 — Régression"]
+        FV["code-penal.rag.final-validation.json<br/>261 tests · RAG VALIDATION PASS"]
+    end
+    RD --> RM
+    ED --> EV --> ER --> EJ --> QR
+    ER --> SE --> SR
+    EJ --> AN
+    RM --> FV
+    QR --> FV
+    SR --> FV
+    AN --> FV</div><hr>
+<h3>Niveau 1 — Benchmark retrieval</h3>
+<p><strong>Objectif :</strong> mesurer la qualité du retrieval + reranking <strong>sans</strong> appeler le LLM génératif. On isole ainsi la couche « retrouver le bon article ».</p>
+<p><strong>Dataset :</strong> <code>data/evaluation/code-penal.questions.json</code> — <strong>20 questions</strong> avec <code>goldArticles</code> (numéros d&#39;articles attendus dans le top-K).</p>
+<p><strong>Métriques calculées par question :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Définition</th>
+<th>Seuil projet</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Recall@20 (vector)</strong></td>
+<td>Au moins un <code>goldArticle</code> présent dans le top-20 cosine</td>
+<td>1 = succès</td>
+</tr>
+<tr>
+<td><strong>Recall@5 (vector)</strong></td>
+<td>Idem dans le top-5 vectoriel (slice du top-20)</td>
+<td>1 = succès</td>
+</tr>
+<tr>
+<td><strong>Recall@5 (Jina)</strong></td>
+<td>Idem après reranking Jina v3.5</td>
+<td>1 = succès</td>
+</tr>
+<tr>
+<td><strong>MRR (vector / Jina)</strong></td>
+<td>Mean Reciprocal Rank du premier gold article</td>
+<td>0–1, plus haut = mieux</td>
+</tr>
+<tr>
+<td><strong>Amélioration Jina</strong></td>
+<td><code>recallAt5Jina − recallAt5Vector</code> et <code>mrrJina − mrrVector</code></td>
+<td>Points gagnés</td>
+</tr>
+</tbody></table>
+<p><strong>Résultats mesurés (septembre 2026) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Vector</th>
+<th>Jina</th>
+<th>Δ Jina</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Recall@20</td>
+<td><strong>100 %</strong></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Recall@5</td>
+<td><strong>100 %</strong></td>
+<td><strong>100 %</strong></td>
+<td><strong>+0 pt</strong></td>
+</tr>
+<tr>
+<td>MRR</td>
+<td><strong>0,975</strong></td>
+<td><strong>0,975</strong></td>
+<td><strong>+0</strong></td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Interprétation — Jina +0</strong>
+Sur ce benchmark, le reranker **ne déplace pas le plafond** Recall@5/MRR : le top-5 vectoriel contient déjà le bon article dans 100 % des cas. Jina reste en place pour le **filtrage de contexte dynamique** (scores relatifs) et pour les cas où le corpus grossira. Ne pas retirer Jina « parce que +0 sur Recall » sans mesurer l'impact sur l'E2E et les sources.
+</div><p><strong>Implémentation :</strong> <code>src/evaluation/run-retrieval-evaluation.ts</code>, <code>src/evaluation/evaluate-question-metrics.ts</code>.</p>
+<p><strong>Profiling moyen par question :</strong> embedding ~267 ms · recherche vectorielle ~49 ms · reranking Jina ~265 ms · total ~581 ms.</p>
+<hr>
+<h3>Niveau 2 — Dataset E2E</h3>
+<p><strong>Objectif :</strong> garantir que le jeu de test end-to-end est <strong>cohérent, non dupliqué et ancré dans le corpus</strong> avant de consommer des tokens de génération/judge.</p>
+<p><strong>Dataset :</strong> <code>data/evaluation/code-penal.e2e.questions.json</code> — <strong>25 questions</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Nombre</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Questions normales</td>
+<td>20</td>
+<td>Réponse attendue fondée sur le Code pénal</td>
+</tr>
+<tr>
+<td>Questions abstention</td>
+<td>5</td>
+<td>Hors corpus (droit civil, fiscal, social…) — le système doit refuser de répondre</td>
+</tr>
+</tbody></table>
+<p>Chaque question normale possède : <code>id</code> (<code>q001</code>…<code>q025</code>), <code>question</code>, <code>goldArticles</code>, <code>referenceAnswer</code>, <code>expectedAbstention: false</code>.</p>
+<p>Les questions d&#39;abstention ont <code>goldArticles: []</code>, <code>referenceAnswer: null</code>, <code>expectedAbstention: true</code>.</p>
+<p><strong>Validations exécutées (<code>validate:e2e-dataset</code>) :</strong></p>
+<ul>
+<li>Format des IDs (<code>q\d{3}</code>)</li>
+<li>Absence de doublons d'ID ou de texte de question</li>
+<li><code>goldArticles</code> présents dans le corpus (1 301 articles)</li>
+<li><code>referenceAnswer</code> non vide pour les questions normales</li>
+<li>Ratio 20/5 normales/abstention</li>
+</ul><div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Construire un benchmark E2E uniquement avec des questions « faciles » du domaine couvert. Sans questions d'abstention, un RAG hallucine en confiance sur des sujets hors corpus — et le judge ne le détectera pas.
+</div><hr>
+<h3>Niveau 3 — Snapshot E2E</h3>
+<p><strong>Objectif :</strong> exécuter le <strong>pipeline complet</strong> (retrieval → reranking → filtrage contexte 40 % → génération) sur les 25 questions et <strong>figer</strong> les résultats dans un snapshot reproductible.</p>
+<p><strong>Commande :</strong> <code>pnpm evaluate:e2e</code></p>
+<p><strong>Artefact :</strong> <code>data/evaluation/results/code-penal.e2e.results.json</code></p>
+<p><strong>Contenu par question :</strong></p>
+<ul>
+<li>Question et métadonnées (<code>expectedAbstention</code>, <code>goldArticles</code>)</li>
+<li><code>retrievedChunks</code> (top-20), <code>rerankedChunks</code> (top-5 Jina)</li>
+<li><code>filteredContextChunks</code> après seuil relatif 0,4</li>
+<li><code>context</code> textuel injecté au LLM</li>
+<li><code>generatedAnswer</code></li>
+<li>Timings détaillés (embedding, vector, Jina, génération, total)</li>
+</ul><p><strong>Vérification snapshot :</strong> <code>verifyE2EResultsSnapshot()</code> dans <code>src/evaluation/verify-e2e-snapshots.ts</code> — contrôle la structure, les statuts, l&#39;absence de champs manquants.</p>
+<p><strong>Latence moyenne mesurée :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Toutes questions</th>
+<th>Normales</th>
+<th>Abstention</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Latence totale</td>
+<td>3 368 ms</td>
+<td>3 589 ms</td>
+<td>2 484 ms</td>
+</tr>
+<tr>
+<td>Caractères contexte</td>
+<td>1 199</td>
+<td>1 255</td>
+<td>972</td>
+</tr>
+<tr>
+<td>Chunks filtrés</td>
+<td>1,64</td>
+<td>1,75</td>
+<td>1,20</td>
+</tr>
+</tbody></table>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Le snapshot est la <strong>source de vérité</strong> pour le judge et l'évaluation sources. Ne jamais juger des réponses « à la main » en prod — toujours comparer à un snapshot versionné.
+</div><hr>
+<h3>Niveau 4 — LLM judge</h3>
+<p><strong>Objectif :</strong> évaluer automatiquement la qualité des réponses générées via un <strong>LLM-as-a-judge</strong> structuré (JSON schema strict).</p>
+<p><strong>Commandes :</strong> <code>pnpm evaluate:e2e:judge</code> puis <code>pnpm report:e2e</code></p>
+<p><strong>Modèle judge :</strong> <code>gpt-5.6-luna</code> (configurable via <code>RAG_EVALUATION_JUDGE_MODEL</code>)</p>
+<p><strong>Critères (échelle 0–4, seuil de passage ≥ 3) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Description</th>
+<th>Questions évaluées</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>correctness</strong></td>
+<td>Exactitude juridique de la réponse</td>
+<td>20 normales</td>
+</tr>
+<tr>
+<td><strong>completeness</strong></td>
+<td>Couverture des éléments essentiels</td>
+<td>20 normales</td>
+</tr>
+<tr>
+<td><strong>groundedness</strong></td>
+<td>Chaque affirmation étayée par le contexte</td>
+<td>20 normales</td>
+</tr>
+<tr>
+<td><strong>abstentionCorrect</strong></td>
+<td>Refus justifié quand le corpus est insuffisant</td>
+<td>5 abstention</td>
+</tr>
+</tbody></table>
+<p><strong>Résultats mesurés — questions normales (n = 20) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Moyenne</th>
+<th>Pass rate (≥ 3)</th>
+<th>Distribution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Correctness</td>
+<td><strong>3,95</strong></td>
+<td><strong>100 %</strong></td>
+<td>19× score 4 · 1× score 3</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td><strong>3,95</strong></td>
+<td><strong>100 %</strong></td>
+<td>19× score 4 · 1× score 3</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td><strong>4,00</strong></td>
+<td><strong>100 %</strong></td>
+<td>20× score 4</td>
+</tr>
+</tbody></table>
+<p><strong>Résultats mesurés — abstention (n = 5) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Abstention correcte</td>
+<td><strong>5 / 5</strong></td>
+</tr>
+<tr>
+<td>Précision abstention</td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td>Échecs</td>
+<td><strong>0</strong> (<code>failedQuestionIds: []</code>)</td>
+</tr>
+</tbody></table>
+<p><strong>Questions problématiques :</strong> <strong>0</strong> — aucune question ne tombe sous le seuil 3 sur correctness, completeness ou groundedness, et aucune abstention incorrecte.</p>
+<div class="callout callout-trap">
+<strong>Piège fréquent — biais same-model</strong>
+Le modèle de génération et le modèle judge sont identiques (<code>gpt-5.6-luna</code>). Le judge peut être indulgent avec le style et les formulations du générateur. Limite documentée — voir section 17. Pour une validation externe, utiliser un judge de famille différente ou une revue humaine ciblée.
+</div><p><strong>Artefacts :</strong></p>
+<ul>
+<li><code>code-penal.e2e.evaluated.json</code> — scores + explications par question</li>
+<li><code>code-penal.e2e.report.json</code> — agrégats, distributions, latence</li>
+</ul><hr>
+<h3>Niveau 5 — Évaluation des sources</h3>
+<p><strong>Objectif :</strong> évaluer séparément si les <strong>chunks effectivement cités</strong> dans le contexte filtré sont pertinents pour la question et suffisants pour justifier la réponse (y compris l&#39;abstention).</p>
+<p><strong>Commande :</strong> <code>pnpm evaluate:e2e:sources</code></p>
+<p><strong>Critères (échelle 0–4, seuil ≥ 3) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Question posée au judge</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>sourceRelevance</strong></td>
+<td>Les sources fournies sont-elles pertinentes pour répondre à la question ?</td>
+</tr>
+<tr>
+<td><strong>sourceCoverage</strong></td>
+<td>Les sources couvrent-elles ce que la réponse affirme (ou l&#39;abstention) ?</td>
+</tr>
+</tbody></table>
+<p><strong>Résultats mesurés (n = 25) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Moyenne</th>
+<th>Pass rate (≥ 3)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Source relevance</td>
+<td><strong>3,64</strong></td>
+<td><strong>88 %</strong> (22/25)</td>
+</tr>
+<tr>
+<td>Source coverage</td>
+<td><strong>4,00</strong></td>
+<td><strong>100 %</strong> (25/25)</td>
+</tr>
+</tbody></table>
+<p><strong>Distribution source relevance :</strong> 20× score 4 · 2× score 3 · 2× score 2 · 1× score 1 · 0× score 0</p>
+<p><strong>Questions à relevance faible (&lt; 3) — abstention attendue :</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Question (abrégée)</th>
+<th>Relevance</th>
+<th>Coverage</th>
+<th>Diagnostic</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>q021</strong></td>
+<td>Contrat de mariage (droit civil)</td>
+<td><strong>2</strong></td>
+<td>4</td>
+<td>R645-3 match lexical « mariage » — hors sujet</td>
+</tr>
+<tr>
+<td><strong>q024</strong></td>
+<td>Quorum SA (droit des sociétés)</td>
+<td><strong>2</strong></td>
+<td>4</td>
+<td>R712-8 — texte pénal sans lien</td>
+</tr>
+<tr>
+<td><strong>q025</strong></td>
+<td>Préavis licenciement économique</td>
+<td><strong>1</strong></td>
+<td>4</td>
+<td>R131-53 / R722-5 — bruit sémantique faible</td>
+</tr>
+</tbody></table>
+<div class="callout callout-choose">
+<strong>Interprétation</strong>
+Relevance faible + coverage 4 sur les abstentions = comportement <strong>acceptable</strong>. Le retrieval remonte du bruit lexical, mais le LLM s'abstient correctement et le judge confirme que les sources ne permettent pas de répondre. Améliorer le filtrage ou ajouter un seuil de confiance retrieval pour réduire le bruit — pas pour « mieux répondre » à des questions hors corpus.
+</div><hr>
+<h3>Niveau 6 — Analyse question par question</h3>
+<p><strong>Objectif :</strong> produire une vue <strong>granulaire</strong> pour le debug : chunks retenus, réponse générée, scores judge, flag « problématique ».</p>
+<p><strong>Commande :</strong> <code>pnpm analyze:e2e-results</code></p>
+<p><strong>Artefact :</strong> <code>data/evaluation/results/code-penal.e2e.analysis.json</code></p>
+<p><strong>Règle « problématique »</strong> (<code>build-e2e-analysis.ts</code>) :</p>
+<ul>
+<li>Question normale : correctness &lt; 3 OU completeness &lt; 3 OU groundedness &lt; 3</li>
+<li>Question abstention : <code>abstentionCorrect === false</code></li>
+</ul><p><strong>Exemple détaillé — q014 (seul quasi-échec correctness/completeness) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Question</td>
+<td>« Qu&#39;est-ce que la non-assistance à personne en danger ? »</td>
+</tr>
+<tr>
+<td>Gold</td>
+<td><code>223-6</code></td>
+</tr>
+<tr>
+<td>Chunks filtrés</td>
+<td><code>223-6#0</code>, <code>122-7#0</code>, <code>223-5#0</code></td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>Problématique ?</td>
+<td><strong>Non</strong> (≥ 3 partout)</td>
+</tr>
+</tbody></table>
+<p><strong>Analyse :</strong> la réponse décrit correctement le second cas de l&#39;article 223-6 (abstention volontaire d&#39;assister une personne en péril) mais <strong>omet le premier cas</strong> : ne pas empêcher immédiatement un crime/délit contre l&#39;intégrité corporelle. Le judge pénalise la complétude sans remettre en cause l&#39;ancrage (groundedness 4).</p>
+<p><strong>Piste d&#39;amélioration mesurée :</strong> articles multi-cas (223-6) → vérifier si le chunking préserve les deux alinéas dans un seul chunk, ou ajuster le prompt pour expliciter « tous les cas prévus par l&#39;article cité ».</p>
+<hr>
+<h3>Niveau 7 — Régression et validation finale</h3>
+<p><strong>Objectif :</strong> une commande unique vérifie tests unitaires, build, datasets, artefacts, cohérence inter-rapports et métriques — <strong>gate de merge</strong>.</p>
+<p><strong>Commande :</strong> <code>pnpm validate:rag</code> (avec flags CI : <code>--skip-project-checks --tests-passed --build-passed</code>)</p>
+<p><strong>Artefact :</strong> <code>data/evaluation/results/code-penal.rag.final-validation.json</code></p>
+<p><strong>Statut actuel :</strong> <strong><code>PASS</code></strong> — 0 échec</p>
+<table>
+<thead>
+<tr>
+<th>Bloc vérifié</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tests projet</td>
+<td><strong>261 pass</strong> (5 skipped)</td>
+</tr>
+<tr>
+<td>Build</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Dataset retrieval (20 q.)</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Dataset E2E (25 q.)</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Pipeline ingestion → génération</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Retrieval Recall@20/5 = 100 %, MRR = 0,975</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>E2E snapshot + judge + report</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Sources snapshot + report</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Limitations documentées</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Corpus chunks</td>
+<td>1 368</td>
+</tr>
+</tbody></table>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+<code>validate:rag</code> est le <strong>Definition of Done</strong> automatisé du RAG. Toute modification de chunking, embedding, seuil de contexte ou prompt doit repasser cette commande avant merge.
+</div><hr>
+<div class="section-break"></div><h2>12. Architecture d&#39;évaluation complète</h2>
+<p>Schéma de bout en bout : de la question utilisateur aux gates de régression.</p>
+<div class="mermaid">flowchart TB
+    subgraph INPUT["Entrées"]
+        UQ["Question utilisateur"]
+        RQ["Benchmark retrieval<br/>20 questions"]
+        EQ["Benchmark E2E<br/>25 questions"]
+    end
+
+    subgraph CORPUS["Corpus Code pénal"]
+        PDF["code-penal.pdf"]
+        ART["1 301 articles"]
+        CHK["1 368 chunks"]
+        EMB["Embeddings 3072d"]
+        PG["PostgreSQL + pgvector"]
+    end
+
+    subgraph PIPELINE["Pipeline requête"]
+        E1["Embed question"]
+        E2["Top-20 cosine"]
+        E3["Rerank Jina top-5"]
+        E4["Filtre contexte ≥ 40 % rel."]
+        E5["Génération gpt-5.6-luna"]
+    end
+
+    subgraph EVAL_R["Niveau 1 — Retrieval eval"]
+        M1["Recall@20 / @5"]
+        M2["MRR vector vs Jina"]
+    end
+
+    subgraph EVAL_E["Niveaux 3–4 — E2E + Judge"]
+        SN["Snapshot results.json"]
+        JD["Judge correctness · completeness · groundedness · abstention"]
+        RP["Quality report"]
+    end
+
+    subgraph EVAL_S["Niveau 5 — Sources"]
+        SJ["Judge sourceRelevance · sourceCoverage"]
+        SR["Source report"]
+    end
+
+    subgraph EVAL_A["Niveau 6 — Analyse"]
+        AN["analysis.json<br/>questions problématiques"]
+    end
+
+    subgraph GATE["Niveau 7 — Régression"]
+        TST["261 tests Vitest"]
+        BLD["nest build"]
+        FV["final-validation.json"]
+        PASS["RAG VALIDATION PASS"]
+    end
+
+    PDF --> ART --> CHK --> EMB --> PG
+    UQ --> E1 --> E2 --> E3 --> E4 --> E5
+    PG --> E2
+    RQ --> PIPELINE
+    EQ --> PIPELINE
+    PIPELINE --> SN --> JD --> RP
+    SN --> SJ --> SR
+    JD --> AN
+    PIPELINE --> M1 --> M2
+    M1 --> FV
+    RP --> FV
+    SR --> FV
+    AN --> FV
+    TST --> FV
+    BLD --> FV
+    FV --> PASS</div><p><strong>Flux de données entre artefacts :</strong></p>
+<pre><code>evaluate:e2e          →  e2e.results.json
+evaluate:e2e:judge    →  e2e.evaluated.json  +  e2e.report.json
+evaluate:e2e:sources  →  e2e.sources-evaluated.json  +  e2e.source-report.json
+analyze:e2e-results   →  e2e.analysis.json
+validate:rag          →  rag.final-validation.json  (agrège tout)
+</code></pre>
+<hr>
+<div class="section-break"></div><h2>13. Alternatives et arbres de décision</h2>
+<p>Arbres <strong>transverses</strong> — ils complètent les alternatives par section (ingestion, chunking, etc.).</p>
+<h3>13.1 Faut-il ajouter un reranker ?</h3>
+<div class="mermaid">flowchart TD
+    A["Recall@5 vector < cible ?"] -->|Oui| B["Ajouter reranker<br/>Jina / Cohere / cross-encoder"]
+    A -->|Non| C["MRR vector bas<br/>bon article mal classé ?"]
+    C -->|Oui| B
+    C -->|Non| D["Reranker utile pour<br/>filtrage contexte ?"]
+    D -->|Oui| E["Garder reranker<br/>même si Recall@5 +0"]
+    D -->|Non| F["Reporter — mesurer<br/>impact E2E d'abord"]
+    B --> G["Re-mesurer Recall@5<br/>+ latence + coût API"]</div><p><strong>Cas Code pénal :</strong> Recall@5 vector = 100 %, MRR = 0,975, <strong>Δ Jina = +0</strong> — reranker retenu pour les scores relatifs du filtre contexte, pas pour le Recall.</p>
+<h3>13.2 Quel seuil de filtrage contexte ?</h3>
+<div class="mermaid">flowchart TD
+    A["Groundedness E2E OK ?"] -->|Non| B["Contexte trop bruyant"]
+    B --> C["Augmenter seuil relatif<br/>ou réduire top-K"]
+    A -->|Oui| D["Completeness basse ?"]
+    D -->|Oui| E["Contexte trop agressif"]
+    E --> F["Baisser seuil<br/>ou augmenter top-K filtré"]
+    D -->|Non| G["Seuil actuel OK<br/>40 % validé"]</div><p><strong>Cas Code pénal :</strong> seuil <strong>0,4</strong> (40 % du score relatif max Jina) — groundedness 4,0, 1,64 chunks filtrés en moyenne.</p>
+<h3>13.3 Faut-il un index HNSW / vector DB dédiée ?</h3>
+<div class="mermaid">flowchart TD
+    A["Nombre de chunks"] -->|< 10 000| B["Seq scan pgvector<br/>suffisant"]
+    A -->|10k – 1M| C["HNSW pgvector<br/>ou Qdrant"]
+    A -->|> 1M| D["Vector DB dédiée<br/>+ sharding"]
+    B --> E["1 368 chunks<br/>→ pas de HNSW"]</div><h3>13.4 Faut-il étendre le benchmark avant d&#39;optimiser ?</h3>
+<div class="mermaid">flowchart TD
+    A["Changement pipeline"] --> B["Impact retrieval ?"]
+    B -->|Oui| C["evaluate:retrieval"]
+    B -->|Non| D["Impact génération ?"]
+    C --> E["evaluate:e2e + judge"]
+    D --> E
+    E --> F["analyze:e2e-results"]
+    F --> G["validate:rag PASS ?"]
+    G -->|Non| H["Revert ou itérer"]
+    G -->|Oui| I["Merge"]</div><h3>13.5 Question hors corpus — répondre ou s&#39;abstenir ?</h3>
+<div class="mermaid">flowchart TD
+    A["Question utilisateur"] --> B["Top-1 score Jina<br/>très bas ?"]
+    B -->|Oui| C["Abstention<br/>+ message explicite"]
+    B -->|Non| D["Contexte filtré<br/>vide ?"]
+    D -->|Oui| C
+    D -->|Non| E["Générer avec<br/>contrainte groundedness"]
+    E --> F["Judge abstention<br/>sur benchmark"]</div><div class="callout callout-choose">
+<strong>Quand choisir quoi ?</strong>
+<ul>
+<li><strong>Métrique retrieval insuffisante</strong> → chunking, embedding ou top-K — pas le prompt</li>
+<li><strong>Retrieval OK, réponses incomplètes</strong> → prompt, filtrage contexte, taille chunks</li>
+<li><strong>Groundedness basse</strong> → réduire bruit contexte ou durcir instructions</li>
+<li><strong>Abstention incorrecte</strong> → questions trap benchmark + seuil confiance retrieval</li>
+</ul>
+</div><hr>
+<div class="section-break"></div><h2>14. Diagnostic</h2>
+<p>Table de référence rapide : <strong>symptôme → cause probable → mesure → solution</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause probable</th>
+<th>Mesure</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Recall@20 bas</td>
+<td>Chunking casse les articles ; mauvais embedding ; corpus incomplet</td>
+<td><code>evaluate:retrieval</code> par question</td>
+<td>Revoir découpage ; ré-embedder ; compléter ingestion</td>
+</tr>
+<tr>
+<td>Recall@20 OK, Recall@5 bas</td>
+<td>Bon article rang 6–20 ; top-K vector trop large sans rerank</td>
+<td>Comparer vector top-5 vs top-20</td>
+<td>Reranker ; réduire bruit avant Jina</td>
+</tr>
+<tr>
+<td>MRR bas, Recall OK</td>
+<td>Bon article trouvé mais mal ordonné</td>
+<td>MRR par question dans retrieval eval</td>
+<td>Reranker ; query expansion ; metadata boost</td>
+</tr>
+<tr>
+<td>Jina Δ = +0 sur Recall</td>
+<td>Corpus petit ; embedding déjà discriminant</td>
+<td><code>recallAt5ImprovementPoints</code>, <code>mrrImprovement</code></td>
+<td>Garder Jina si filtre contexte utile ; sinon évaluer coût/latence</td>
+</tr>
+<tr>
+<td>Latence retrieval &gt; 1 s</td>
+<td>API embedding ; reranker ; pas d&#39;index</td>
+<td>Profiling dans results.json</td>
+<td>Cache embedding ; batch ; HNSW si corpus grand</td>
+</tr>
+<tr>
+<td>Correctness E2E basse</td>
+<td>Prompt faible ; mauvais chunks ; hallucination</td>
+<td><code>e2e.analysis.json</code> + judge explanations</td>
+<td>Prompt juridique strict ; améliorer retrieval</td>
+</tr>
+<tr>
+<td>Completeness basse (ex. q014)</td>
+<td>Article multi-cas ; chunk tronqué ; filtre contexte agressif</td>
+<td>Compare gold vs chunks filtrés</td>
+<td>Chunking verbatim ; abaisser seuil 40 % ; prompt « tous les cas »</td>
+</tr>
+<tr>
+<td>Groundedness basse</td>
+<td>Trop de chunks bruités ; LLM invente</td>
+<td>Source eval + context length</td>
+<td>Durcir filtre ; réduire top-K ; consigne « uniquement le contexte »</td>
+</tr>
+<tr>
+<td>Abstention incorrecte (répond quand il faut refuser)</td>
+<td>Pas de questions trap ; seuil confiance absent</td>
+<td>5 questions abstention benchmark</td>
+<td>Ajouter abstention dataset ; seuil score Jina</td>
+</tr>
+<tr>
+<td>Abstention incorrecte (refuse quand il faut répondre)</td>
+<td>Seuil trop agressif ; retrieval échoue</td>
+<td>q001–q020 judge scores</td>
+<td>Baisser seuil ; élargir top-K ; debug goldArticles</td>
+</tr>
+<tr>
+<td>Source relevance basse, coverage OK</td>
+<td>Bruit lexical hors domaine (q021, q024, q025)</td>
+<td><code>lowSourceRelevanceQuestionIds</code></td>
+<td>Normal pour abstention ; filtre pre-gen si bruit gênant</td>
+</tr>
+<tr>
+<td>Source coverage basse</td>
+<td>Contexte insuffisant pour ce que la réponse affirme</td>
+<td>sourceJudge explanations</td>
+<td>Plus de chunks ; meilleur retrieval ; réponse plus courte</td>
+</tr>
+<tr>
+<td>Questions problématiques &gt; 0</td>
+<td>Régression pipeline ou prompt</td>
+<td><code>problematicQuestionIds</code></td>
+<td>Analyse par ID ; revert commit fautif</td>
+</tr>
+<tr>
+<td>Snapshot invalid</td>
+<td>Artefact corrompu ou schema changé</td>
+<td><code>verify-e2e-snapshots</code></td>
+<td>Régénérer <code>evaluate:e2e</code></td>
+</tr>
+<tr>
+<td>Judge incohérent</td>
+<td>Schema LLM non respecté</td>
+<td><code>parse-e2e-judge-response</code> tests</td>
+<td>Durcir JSON schema ; retry</td>
+</tr>
+<tr>
+<td>validate:rag FAIL</td>
+<td>Tests, build, ou métrique hors spec</td>
+<td><code>failures[]</code> dans final-validation</td>
+<td>Corriger bloc en échec ; ne pas merge</td>
+</tr>
+<tr>
+<td>Évaluation non reproductible</td>
+<td>Modèle/API changé ; pas de snapshot</td>
+<td>Comparer metadata judgeModel</td>
+<td>Pinner modèle ; versionner artefacts</td>
+</tr>
+<tr>
+<td>Multi-corpus confusion</td>
+<td>Requête route vers mauvais index</td>
+<td>Logs corpusId</td>
+<td>Metadata filter ; router explicite (section 16)</td>
+</tr>
+<tr>
+<td>Performance prod dégradée</td>
+<td>Seq scan sur gros corpus</td>
+<td>EXPLAIN sur requête vector</td>
+<td>HNSW ; partition ; vector DB</td>
+</tr>
+<tr>
+<td>Coût API élevé</td>
+<td>Re-embed complet à chaque changement</td>
+<td>Compter appels embed</td>
+<td>Embed incrémental ; cache questions</td>
+</tr>
+</tbody></table>
+<div class="callout callout-trap">
+<strong>Piège fréquent</strong>
+Corriger le prompt quand le retrieval est en cause (ou l'inverse). Toujours identifier le **niveau d'évaluation** (1–7) où le symptôme apparaît avant d'agir.
+</div><hr>
+<div class="section-break"></div><h2>15. Multi-corpus</h2>
+<p>Le blueprint actuel couvre <strong>un seul corpus</strong> : Code pénal français (1 301 articles, 1 368 chunks). La plupart des applications production finissent par en héberger plusieurs (codes adjacentes, jurisprudence, notes internes).</p>
+<h3>Principes de conception</h3>
+<table>
+<thead>
+<tr>
+<th>Principe</th>
+<th>Recommandation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Isolation des index</strong></td>
+<td>Un namespace par corpus : colonne <code>corpus_id</code>, table séparée, ou base dédiée</td>
+</tr>
+<tr>
+<td><strong>Routing explicite</strong></td>
+<td>Ne jamais mélanger les embeddings de corpus différents dans une seule recherche aveugle</td>
+</tr>
+<tr>
+<td><strong>Benchmark par corpus</strong></td>
+<td>Dataset retrieval + E2E <strong>par corpus</strong> ; pas de goldArticles cross-corpus</td>
+</tr>
+<tr>
+<td><strong>Abstention inter-corpus</strong></td>
+<td>Questions trap : « droit civil » sur corpus pénal → abstention obligatoire</td>
+</tr>
+<tr>
+<td><strong>Évaluation agrégée</strong></td>
+<td><code>validate:rag</code> par corpus, puis gate global optionnel</td>
+</tr>
+</tbody></table>
+<div class="mermaid">flowchart LR
+    Q["Question"] --> R["Router<br/>corpusId ?"]
+    R -->|penal| P["Index Code pénal<br/>1368 chunks"]
+    R -->|civil| C["Index Code civil<br/>futur"]
+    R -->|unknown| X["Abstention<br/>ou clarification"]
+    P --> PIPE["Pipeline RAG"]
+    C --> PIPE</div><h3>Extension progressive</h3>
+<ol>
+<li><strong>Phase 1 (actuel)</strong> — corpus unique, benchmark complet, RAG VALIDATION PASS.</li>
+<li><strong>Phase 2</strong> — ajouter <code>corpusId</code> au schéma Prisma + filtre <code>WHERE corpus_id = $1</code> dans <code>searchSimilarChunks</code>.</li>
+<li><strong>Phase 3</strong> — router LLM ou règles métier choisissent le corpus avant retrieval.</li>
+<li><strong>Phase 4</strong> — fusion contrôlée (multi-retrieval) uniquement si mesurée utile sur benchmark dédié.</li>
+</ol>
+<div class="callout callout-choose">
+<strong>Quand fusionner plusieurs corpus ?</strong>
+<ul>
+<li><strong>Jamais par défaut</strong> — le bruit cross-domaine reproduit les cas q021/q024/q025 à grande échelle</li>
+<li><strong>Si question transversale explicite</strong> — retrieval parallèle + rerank unifié + budget contexte doublé — à benchmarker</li>
+<li><strong>Si même domaine</strong> — ex. Code pénal + Code procédure pénale — router d'abord, fusion ensuite si Recall E2E le justifie</li>
+</ul>
+</div><hr>
+<div class="section-break"></div><h2>16. Limites du projet</h2>
+<p>Limites <strong>honestes</strong>, validées dans <code>final-rag-validation.json</code> → bloc <code>limitations</code>. Ce ne sont pas des bugs — ce sont des contraintes connues et acceptées.</p>
+<table>
+<thead>
+<tr>
+<th>Limite</th>
+<th>Description</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Métriques spécifiques au benchmark</strong></td>
+<td>20 q. retrieval, 25 q. E2E — non représentatif de toute la jurisprudence</td>
+<td>Couverture partielle du Code pénal</td>
+<td>Enrichir dataset avant prod ; monitoring utilisateur</td>
+</tr>
+<tr>
+<td><strong>Biais same-model judge</strong></td>
+<td>Génération et judge = <code>gpt-5.6-luna</code></td>
+<td>Scores potentiellement optimistes</td>
+<td>Judge externe ; échantillon revue humaine</td>
+</tr>
+<tr>
+<td><strong>Seuil contexte 40 % non universalisé</strong></td>
+<td>Validé sur ce corpus uniquement</td>
+<td>Peut être sous-optimal ailleurs</td>
+<td><code>analyze:reranker-sensitivity</code> ; A/B par corpus</td>
+</tr>
+<tr>
+<td><strong>Petit corpus, pas de HNSW</strong></td>
+<td>1 368 chunks — seq scan pgvector</td>
+<td>Non reproductible à 1 M+ chunks sans retravail infra</td>
+<td>Planifier HNSW / Qdrant avant scale</td>
+</tr>
+<tr>
+<td><strong>Jina +0 sur métriques globales</strong></td>
+<td>Recall@5 et MRR identiques vector vs Jina</td>
+<td>Coût/latence rerank sans gain retrieval mesuré</td>
+<td>Justifié par filtrage contexte ; re-mesurer si corpus grossit</td>
+</tr>
+<tr>
+<td><strong>Un seul PDF source</strong></td>
+<td>Pas de mise à jour Légifrance automatisée</td>
+<td>Corpus statique</td>
+<td>Pipeline re-ingestion périodique</td>
+</tr>
+<tr>
+<td><strong>Pas de recherche hybride BM25</strong></td>
+<td>Vector-only</td>
+<td>Termes rares ou numéros d&#39;articles exacts</td>
+<td>pg_trgm ou OpenSearch si échecs mesurés</td>
+</tr>
+<tr>
+<td><strong>Modèles OpenAI + Jina</strong></td>
+<td>Dépendance API, coût, latence</td>
+<td>Indisponibilité fournisseur</td>
+<td>Fallback local si exigence on-premise</td>
+</tr>
+<tr>
+<td><strong>Français juridique uniquement</strong></td>
+<td>Pas de benchmark multilingue</td>
+<td>—</td>
+<td>Dataset par langue</td>
+</tr>
+<tr>
+<td><strong>Sections 7–11 non couvertes ici</strong></td>
+<td>Retrieval, reranking, contexte, génération détaillés ailleurs</td>
+<td>Blueprint partiel</td>
+<td>Compléter sections pipeline</td>
+</tr>
+</tbody></table>
+<div class="callout callout-retain">
+<strong>À retenir</strong>
+Documenter les limites <strong>avant</strong> qu'un stakeholder les découvre en production. Le statut PASS signifie « conforme au contrat d'évaluation défini » — pas « parfait en conditions réelles ».
+</div><hr>
+<div class="section-break"></div><h2>17. Definition of Done</h2>
+<p>Checklist finale — un RAG Code pénal (ou fork de ce blueprint) est <strong>done</strong> quand tous les items sont cochés.</p>
+<h3>Corpus et pipeline</h3>
+<ul class="checklist">
+<li>PDF ingéré, 1 301 articles extraits et validés</li>
+<li>1 368 chunks produits, stratégie chunking documentée</li>
+<li>Embeddings 3072d générés et importés en PostgreSQL</li>
+<li>Import idempotent vérifié (<code>pnpm import:code-penal</code> relançable)</li>
+<li>Pipeline requête fonctionnel : retrieval → Jina → filtre 40 % → génération</li>
+</ul><h3>Tests unitaires et intégration</h3>
+<ul class="checklist">
+<li><strong>261 tests</strong> Vitest passent (<code>pnpm test</code>)</li>
+<li>Build NestJS pass (<code>pnpm build</code>)</li>
+<li>Tests d'intégration retrieval contre base pgvector réelle</li>
+</ul><h3>Benchmark retrieval (niveau 1)</h3>
+<ul class="checklist">
+<li>20 questions, goldArticles validés dans le corpus</li>
+<li>Recall@20 = <strong>100 %</strong></li>
+<li>Recall@5 (vector et Jina) = <strong>100 %</strong></li>
+<li>MRR ≥ <strong>0,975</strong></li>
+<li>Δ Jina documenté (ici : +0 — acceptable avec justification filtre contexte)</li>
+</ul><h3>Benchmark E2E (niveaux 2–4)</h3>
+<ul class="checklist">
+<li>25 questions E2E validées (<code>validate:e2e-dataset</code>)</li>
+<li>Snapshot <code>e2e.results.json</code> régénéré et vérifié</li>
+<li>Judge : correctness / completeness ≥ <strong>3,95</strong> moyenne, pass rate 100 %</li>
+<li>Judge : groundedness = <strong>4,0</strong>, pass rate 100 %</li>
+<li>Abstention : <strong>100 %</strong> (5/5)</li>
+<li><strong>0</strong> question problématique</li>
+</ul><h3>Évaluation sources (niveau 5)</h3>
+<ul class="checklist">
+<li>Source relevance moyenne ≥ 3,5 (actuel : <strong>3,64</strong>)</li>
+<li>Source coverage moyenne = <strong>4,0</strong></li>
+<li>Pass rate relevance ≥ 85 % (actuel : <strong>88 %</strong>)</li>
+<li>Pass rate coverage = <strong>100 %</strong></li>
+<li>Questions faible relevance (q021, q024, q025) comprises et acceptées ou corrigées</li>
+</ul><h3>Régression (niveau 7)</h3>
+<ul class="checklist">
+<li><code>pnpm validate:rag</code> → statut <strong>RAG VALIDATION PASS</strong></li>
+<li>Artefact <code>code-penal.rag.final-validation.json</code> committé ou CI-artefact</li>
+<li>Aucune entrée dans <code>failures[]</code></li>
+</ul><h3>Documentation et ops</h3>
+<ul class="checklist">
+<li>Limites section 17 communiquées aux stakeholders</li>
+<li>Modèles et versions pinées (embedding, reranker, judge, générateur)</li>
+<li>Variables d'environnement documentées (<code>.env.example</code>)</li>
+<li>Plan multi-corpus défini si extension prévue (section 16)</li>
+</ul><hr>
+<div class="section-break"></div><h2>18. Règle fondamentale</h2>
+<div class="callout callout-retain"><p><strong>Don&#39;t add complexity without a measured problem.</strong></p>
+<p><em>Ne ajoute pas de complexité sans un problème mesuré.</em></p>
+</div><p>Toute décision d&#39;architecture dans ce blueprint — reranker Jina, filtre contexte à 40 %, embeddings 3072d, LLM judge en sept niveaux — doit pouvoir répondre à trois questions :</p>
+<ol>
+<li><strong>Quel symptôme mesurable ?</strong> (ex. Recall@5 = 80 %, groundedness &lt; 3, latence &gt; 5 s)</li>
+<li><strong>Quelle métrique avant/après ?</strong> (ex. Recall@5 → 100 %, MRR 0,85 → 0,975)</li>
+<li><strong>Quel coût ?</strong> (latence +265 ms Jina, coût API, complexité ops, dette de tests)</li>
+</ol>
+<p><strong>Exemples concrets Code pénal :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Décision</th>
+<th>Problème mesuré ?</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reranker Jina</td>
+<td>Recall +0, mais filtrage contexte nécessite scores relatifs</td>
+<td>✅ Justifié</td>
+</tr>
+<tr>
+<td>Index HNSW</td>
+<td>1 368 chunks, seq scan &lt; 50 ms</td>
+<td>❌ Reporter</td>
+</tr>
+<tr>
+<td>7 niveaux d&#39;évaluation</td>
+<td>Livraison sans preuve → risque prod</td>
+<td>✅ Justifié</td>
+</tr>
+<tr>
+<td>Hybrid BM25</td>
+<td>Recall@20 déjà 100 %</td>
+<td>❌ Pas de problème mesuré</td>
+</tr>
+<tr>
+<td>Prompt « tous les cas article » (q014)</td>
+<td>Completeness 3/4 sur 223-6</td>
+<td>⚠️ À mesurer après changement</td>
+</tr>
+</tbody></table>
+<div class="mermaid">flowchart LR
+    S["Symptôme"] --> M["Mesurer<br/>niveau 1–7"]
+    M --> H{"Amélioration<br/>significative ?"}
+    H -->|Non| R["Revert"]
+    H -->|Oui| C{"Coût acceptable ?"}
+    C -->|Non| A["Alternative plus simple"]
+    C -->|Oui| K["Keep + documenter"]</div><div class="callout callout-trap">
+<strong>Anti-pattern</strong>
+Ajouter Pinecone, un second reranker, ou un agent multi-étapes parce que « c'est ce que font les RAG en 2026 ». Si <code>validate:rag</code> est PASS et qu'aucune métrique ne régresse, la complexité supplémentaire est de la dette — pas de la valeur.
+</div><hr>
+<p class="meta"><em>Blueprint RAG Code pénal — sections 12–19 · Métriques septembre 2026 · 261 tests · RAG VALIDATION PASS</em></p>
+
+<script>
+  mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
+  document.addEventListener('DOMContentLoaded', async () => {
+    await mermaid.run({ querySelector: '.mermaid' });
+  });
+</script>
+</body>
+</html>

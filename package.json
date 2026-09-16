@@ -41,6 +41,7 @@
     "analyze:e2e-results": "tsx scripts/analyze-e2e-results.ts",
     "evaluate:e2e:sources": "tsx scripts/evaluate-e2e-sources.ts",
     "validate:rag": "tsx scripts/validate-rag.ts --skip-project-checks --tests-passed --build-passed",
+    "docs:rag-blueprint": "tsx scripts/generate-rag-blueprint-pdf.ts",
     "search:answer": "tsx scripts/search-answer.ts"
   },
   "dependencies": {
@@ -67,9 +68,11 @@
     "@types/node": "^24.0.0",
     "@types/supertest": "^7.0.0",
     "@vitest/coverage-v8": "^4.1.2",
+    "marked": "^18.0.13",
     "oxlint": "^1.58.0",
     "prettier": "^3.4.2",
     "prisma": "^7.0.0",
+    "puppeteer": "^25.11.0",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
     "tsx": "^4.23.13",
