@@ -33,8 +33,10 @@ model Message {
   @@map("messages")
 }
 
-model PenalCodeChunk {
-  chunkId        String                      @id @map("chunk_id")
+model LegalCodeChunk {
+  id             String                      @id @default(cuid())
+  corpusId       String                      @map("corpus_id")
+  chunkId        String                      @map("chunk_id")
   articleNumber  String                      @map("article_number")
   content        String                      @db.Text
   charCount      Int                         @map("char_count")
@@ -44,6 +46,8 @@ model PenalCodeChunk {
   embeddedAt     DateTime                    @map("embedded_at")
   importedAt     DateTime                    @default(now()) @updatedAt @map("imported_at")
 
-  @@index([articleNumber])
-  @@map("penal_code_chunks")
+  @@unique([corpusId, chunkId])
+  @@index([corpusId])
+  @@index([corpusId, articleNumber])
+  @@map("legal_code_chunks")
 }

@@ -1,6 +1,10 @@
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { ConfigService } from '@nestjs/config';
 import { EMBEDDING_DIMENSIONS } from '../../embeddings/constants.js';
+import {
+  DEFAULT_CODE_PENAL_CORPUS_ID,
+  LEGAL_CODE_CHUNKS_TABLE,
+} from '../../persistence/constants.js';
 import { upsertChunkBatch } from '../../persistence/upsert-chunks.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 import { searchSimilarChunks } from '../search-similar-chunks.js';
@@ -57,16 +61,19 @@ describe.runIf(runIntegration)('searchSimilarChunks (integration)', () => {
 
     await upsertChunkBatch(prisma, [
       {
+        corpusId: DEFAULT_CODE_PENAL_CORPUS_ID,
         record: makeRecord(TEST_CHUNK_IDS[0], 'ret-a', queryVector),
         embeddingModel: 'text-embedding-3-large',
         embeddedAt,
       },
       {
+        corpusId: DEFAULT_CODE_PENAL_CORPUS_ID,
         record: makeRecord(TEST_CHUNK_IDS[1], 'ret-b', queryVector),
         embeddingModel: 'text-embedding-3-large',
         embeddedAt,
       },
       {
+        corpusId: DEFAULT_CODE_PENAL_CORPUS_ID,
         record: makeRecord(TEST_CHUNK_IDS[2], 'ret-c', vector(99)),
         embeddingModel: 'text-embedding-3-large',
         embeddedAt,
@@ -77,7 +84,10 @@ describe.runIf(runIntegration)('searchSimilarChunks (integration)', () => {
   afterAll(async () => {
     if (prisma) {
       await prisma.$executeRawUnsafe(
-        `DELETE FROM penal_code_chunks WHERE chunk_id = ANY($1::text[])`,
+        `DELETE FROM ${LEGAL_CODE_CHUNKS_TABLE}
+         WHERE corpus_id = $1
+           AND chunk_id = ANY($2::text[])`,
+        DEFAULT_CODE_PENAL_CORPUS_ID,
         TEST_CHUNK_IDS,
       );
       await prisma.$disconnect();

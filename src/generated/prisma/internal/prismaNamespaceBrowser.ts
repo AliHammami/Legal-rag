@@ -53,7 +53,7 @@ export const AnyNull = runtime.AnyNull
 export const ModelName = {
   Conversation: 'Conversation',
   Message: 'Message',
-  PenalCodeChunk: 'PenalCodeChunk'
+  LegalCodeChunk: 'LegalCodeChunk'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -92,7 +92,9 @@ export const MessageScalarFieldEnum = {
 export type MessageScalarFieldEnum = (typeof MessageScalarFieldEnum)[keyof typeof MessageScalarFieldEnum]
 
 
-export const PenalCodeChunkScalarFieldEnum = {
+export const LegalCodeChunkScalarFieldEnum = {
+  id: 'id',
+  corpusId: 'corpusId',
   chunkId: 'chunkId',
   articleNumber: 'articleNumber',
   content: 'content',
@@ -103,7 +105,7 @@ export const PenalCodeChunkScalarFieldEnum = {
   importedAt: 'importedAt'
 } as const
 
-export type PenalCodeChunkScalarFieldEnum = (typeof PenalCodeChunkScalarFieldEnum)[keyof typeof PenalCodeChunkScalarFieldEnum]
+export type LegalCodeChunkScalarFieldEnum = (typeof LegalCodeChunkScalarFieldEnum)[keyof typeof LegalCodeChunkScalarFieldEnum]
 
 
 export const SortOrder = {

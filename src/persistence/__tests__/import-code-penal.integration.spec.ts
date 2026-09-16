@@ -5,7 +5,8 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { EMBEDDING_DIMENSIONS } from '../../embeddings/constants.js';
 import type { PenalCodeEmbeddingResult } from '../../embeddings/types.js';
 import { importCodePenal } from '../import-code-penal.js';
-import { verifyImport } from '../verify-import.js';
+import { LEGAL_CODE_CHUNKS_TABLE } from '../constants.js';
+import { verifyCorpusImport } from '../verify-import.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 import { ConfigService } from '@nestjs/config';
 
@@ -109,7 +110,10 @@ describe.runIf(runIntegration)('importCodePenal (integration)', () => {
   afterAll(async () => {
     if (prisma) {
       await prisma.$executeRawUnsafe(
-        `DELETE FROM penal_code_chunks WHERE chunk_id = ANY($1::text[])`,
+        `DELETE FROM ${LEGAL_CODE_CHUNKS_TABLE}
+         WHERE corpus_id = $1
+           AND chunk_id = ANY($2::text[])`,
+        'code-penal',
         ['111-1#0', '111-2#0'],
       );
       await prisma.$disconnect();
@@ -125,14 +129,14 @@ describe.runIf(runIntegration)('importCodePenal (integration)', () => {
     expect(first.stats.inputRecordCount).toBe(2);
     expect(first.verification.totalRows).toBe(2);
     expect(first.verification.invalidDimensionRows).toBe(0);
-    expect(first.verification.duplicateChunkIds).toBe(0);
+    expect(first.verification.duplicateCorpusChunkIds).toBe(0);
 
     const second = await importCodePenal(prisma, { embeddingsPath: fixturePath });
 
     expect(second.verification.totalRows).toBe(2);
-    expect(second.verification.duplicateChunkIds).toBe(0);
+    expect(second.verification.duplicateCorpusChunkIds).toBe(0);
 
-    const verification = await verifyImport(prisma);
+    const verification = await verifyCorpusImport(prisma, 'code-penal');
     expect(verification.totalRows).toBe(2);
     expect(verification.invalidDimensionRows).toBe(0);
   });

@@ -1,9 +1,12 @@
-import type { PrismaService } from '../prisma/prisma.service.js';
+import { randomUUID } from 'node:crypto';
+
 import type { PenalCodeEmbeddedChunk } from '../embeddings/types.js';
+import type { PrismaService } from '../prisma/prisma.service.js';
+import { LEGAL_CODE_CHUNKS_TABLE } from './constants.js';
 import { formatVectorLiteral } from './format-vector.js';
-import { PENAL_CODE_CHUNKS_TABLE } from './constants.js';
 
 export interface UpsertChunkInput {
+  corpusId: string;
   record: PenalCodeEmbeddedChunk;
   embeddingModel: string;
   embeddedAt: Date;
@@ -22,12 +25,14 @@ const UPSERT_CONFLICT_SET = `
 
 function buildBatchUpsertSql(batchSize: number): string {
   const valuePlaceholders = Array.from({ length: batchSize }, (_, rowIndex) => {
-    const base = rowIndex * 8 + 1;
-    return `($${base}, $${base + 1}, $${base + 2}, $${base + 3}, $${base + 4}::jsonb, $${base + 5}::vector(3072), $${base + 6}, $${base + 7})`;
+    const base = rowIndex * 10 + 1;
+    return `($${base}, $${base + 1}, $${base + 2}, $${base + 3}, $${base + 4}, $${base + 5}, $${base + 6}::jsonb, $${base + 7}::vector(3072), $${base + 8}, $${base + 9})`;
   });
 
   return `
-    INSERT INTO ${PENAL_CODE_CHUNKS_TABLE} (
+    INSERT INTO ${LEGAL_CODE_CHUNKS_TABLE} (
+      id,
+      corpus_id,
       chunk_id,
       article_number,
       content,
@@ -38,7 +43,7 @@ function buildBatchUpsertSql(batchSize: number): string {
       embedded_at
     )
     VALUES ${valuePlaceholders.join(', ')}
-    ON CONFLICT (chunk_id) DO UPDATE SET
+    ON CONFLICT (corpus_id, chunk_id) DO UPDATE SET
       ${UPSERT_CONFLICT_SET}
   `;
 }
@@ -48,6 +53,8 @@ function toBatchValues(batch: UpsertChunkInput[]): unknown[] {
 
   for (const item of batch) {
     values.push(
+      randomUUID(),
+      item.corpusId,
       item.record.chunkId,
       item.record.articleNumber,
       item.record.content,

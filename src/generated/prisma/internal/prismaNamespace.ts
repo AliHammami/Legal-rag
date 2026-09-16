@@ -399,7 +399,7 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 export const ModelName = {
   Conversation: 'Conversation',
   Message: 'Message',
-  PenalCodeChunk: 'PenalCodeChunk'
+  LegalCodeChunk: 'LegalCodeChunk'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -415,7 +415,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "conversation" | "message" | "penalCodeChunk"
+    modelProps: "conversation" | "message" | "legalCodeChunk"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -567,61 +567,61 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
-    PenalCodeChunk: {
-      payload: Prisma.$PenalCodeChunkPayload<ExtArgs>
-      fields: Prisma.PenalCodeChunkFieldRefs
+    LegalCodeChunk: {
+      payload: Prisma.$LegalCodeChunkPayload<ExtArgs>
+      fields: Prisma.LegalCodeChunkFieldRefs
       operations: {
         findUnique: {
-          args: Prisma.PenalCodeChunkFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload> | null
+          args: Prisma.LegalCodeChunkFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload> | null
         }
         findUniqueOrThrow: {
-          args: Prisma.PenalCodeChunkFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+          args: Prisma.LegalCodeChunkFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload>
         }
         findFirst: {
-          args: Prisma.PenalCodeChunkFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload> | null
+          args: Prisma.LegalCodeChunkFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload> | null
         }
         findFirstOrThrow: {
-          args: Prisma.PenalCodeChunkFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+          args: Prisma.LegalCodeChunkFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload>
         }
         findMany: {
-          args: Prisma.PenalCodeChunkFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>[]
+          args: Prisma.LegalCodeChunkFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload>[]
         }
         delete: {
-          args: Prisma.PenalCodeChunkDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+          args: Prisma.LegalCodeChunkDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload>
         }
         update: {
-          args: Prisma.PenalCodeChunkUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>
+          args: Prisma.LegalCodeChunkUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload>
         }
         deleteMany: {
-          args: Prisma.PenalCodeChunkDeleteManyArgs<ExtArgs>
+          args: Prisma.LegalCodeChunkDeleteManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateMany: {
-          args: Prisma.PenalCodeChunkUpdateManyArgs<ExtArgs>
+          args: Prisma.LegalCodeChunkUpdateManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateManyAndReturn: {
-          args: Prisma.PenalCodeChunkUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$PenalCodeChunkPayload>[]
+          args: Prisma.LegalCodeChunkUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$LegalCodeChunkPayload>[]
         }
         aggregate: {
-          args: Prisma.PenalCodeChunkAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregatePenalCodeChunk>
+          args: Prisma.LegalCodeChunkAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateLegalCodeChunk>
         }
         groupBy: {
-          args: Prisma.PenalCodeChunkGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.PenalCodeChunkGroupByOutputType>[]
+          args: Prisma.LegalCodeChunkGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.LegalCodeChunkGroupByOutputType>[]
         }
         count: {
-          args: Prisma.PenalCodeChunkCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.PenalCodeChunkCountAggregateOutputType> | number
+          args: Prisma.LegalCodeChunkCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.LegalCodeChunkCountAggregateOutputType> | number
         }
       }
     }
@@ -684,7 +684,9 @@ export const MessageScalarFieldEnum = {
 export type MessageScalarFieldEnum = (typeof MessageScalarFieldEnum)[keyof typeof MessageScalarFieldEnum]
 
 
-export const PenalCodeChunkScalarFieldEnum = {
+export const LegalCodeChunkScalarFieldEnum = {
+  id: 'id',
+  corpusId: 'corpusId',
   chunkId: 'chunkId',
   articleNumber: 'articleNumber',
   content: 'content',
@@ -695,7 +697,7 @@ export const PenalCodeChunkScalarFieldEnum = {
   importedAt: 'importedAt'
 } as const
 
-export type PenalCodeChunkScalarFieldEnum = (typeof PenalCodeChunkScalarFieldEnum)[keyof typeof PenalCodeChunkScalarFieldEnum]
+export type LegalCodeChunkScalarFieldEnum = (typeof LegalCodeChunkScalarFieldEnum)[keyof typeof LegalCodeChunkScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -972,7 +974,7 @@ export type PrismaClientOptions = PrismaClientOptionsWithAccelerateUrl | PrismaC
 export type GlobalOmitConfig = {
   conversation?: Prisma.ConversationOmit
   message?: Prisma.MessageOmit
-  penalCodeChunk?: Prisma.PenalCodeChunkOmit
+  legalCodeChunk?: Prisma.LegalCodeChunkOmit
 }
 
 /* Types for Logging */

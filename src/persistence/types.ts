@@ -1,7 +1,10 @@
-export interface ImportCodePenalOptions {
+export interface ImportCorpusOptions {
   embeddingsPath?: string;
   batchSize?: number;
 }
+
+/** @deprecated Use ImportCorpusOptions */
+export type ImportCodePenalOptions = ImportCorpusOptions;
 
 export interface ImportStats {
   inputRecordCount: number;
@@ -10,12 +13,29 @@ export interface ImportStats {
 }
 
 export interface ImportVerification {
+  corpusId: string;
   totalRows: number;
+  rowsWithEmbeddings: number;
+  rowsMissingEmbeddings: number;
   invalidDimensionRows: number;
-  duplicateChunkIds: number;
+  duplicateCorpusChunkIds: number;
+}
+
+export interface GlobalImportVerification {
+  totalRows: number;
+  totalEmbeddings: number;
+  rowsMissingEmbeddings: number;
+  invalidDimensionRows: number;
+  duplicateCorpusChunkIds: number;
+  corpusCounts: Array<{
+    corpusId: string;
+    rowCount: number;
+    rowsWithEmbeddings: number;
+  }>;
 }
 
 export interface ImportResult {
+  corpusId: string;
   source: {
     embeddingsFile: string;
     embeddedAt: string;
@@ -24,4 +44,21 @@ export interface ImportResult {
   importedAt: string;
   stats: ImportStats;
   verification: ImportVerification;
+}
+
+export interface CorpusPersistenceValidation {
+  corpusId: string;
+  rowCount: number;
+  uniqueCorpusChunkIds: number;
+  duplicateCorpusChunkIds: number;
+  rowsMissingContent: number;
+  rowsMissingEmbeddings: number;
+  rowsWithEmbeddings: number;
+  invalidDimensionRows: number;
+  embeddingModels: string[];
+}
+
+export interface PersistenceValidationReport {
+  global: GlobalImportVerification;
+  corpora: CorpusPersistenceValidation[];
 }

@@ -1,4 +1,4 @@
-export { DEFAULT_OUTPUT_FILE as DEFAULT_EMBEDDINGS_FILE } from '../embeddings/constants.js';
+export { DEFAULT_CODE_PENAL_CORPUS_ID as RETRIEVAL_CORPUS_ID } from '../persistence/constants.js';
 
 export const DEFAULT_TOP_K = 20;
 export const MAX_TOP_K = 100;

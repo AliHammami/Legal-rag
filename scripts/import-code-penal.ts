@@ -16,13 +16,15 @@ async function main(): Promise<void> {
     const result = await importCodePenal(prisma);
 
     console.log(
-      `Import terminé : ${result.verification.totalRows} chunks (${result.stats.batchCount} batches)`,
+      `Import termin\u00E9 : ${result.verification.totalRows} chunks (${result.stats.batchCount} batches)`,
     );
-    console.log(`Modèle : ${result.source.embeddingModel}`);
+    console.log(`Mod\u00E8le : ${result.source.embeddingModel}`);
     console.log(
-      `Dimensions OK : ${result.verification.totalRows - result.verification.invalidDimensionRows}/${result.verification.totalRows} à 3072`,
+      `Dimensions OK : ${result.verification.rowsWithEmbeddings - result.verification.invalidDimensionRows}/${result.verification.rowsWithEmbeddings} \u00E0 3072`,
     );
-    console.log(`Doublons chunkId : ${result.verification.duplicateChunkIds}`);
+    console.log(
+      `Doublons (corpusId, chunkId) : ${result.verification.duplicateCorpusChunkIds}`,
+    );
     console.log(`Durée : ${Date.now() - startedAt} ms`);
   } finally {
     await app.close();

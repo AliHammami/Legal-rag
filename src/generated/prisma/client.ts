@@ -52,7 +52,7 @@ export type Conversation = Prisma.ConversationModel
  */
 export type Message = Prisma.MessageModel
 /**
- * Model PenalCodeChunk
+ * Model LegalCodeChunk
  * 
  */
-export type PenalCodeChunk = Prisma.PenalCodeChunkModel
+export type LegalCodeChunk = Prisma.LegalCodeChunkModel

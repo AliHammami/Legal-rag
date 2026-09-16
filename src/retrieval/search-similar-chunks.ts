@@ -1,6 +1,7 @@
 import { EMBEDDING_DIMENSIONS } from '../embeddings/constants.js';
 import { formatVectorLiteral } from '../persistence/format-vector.js';
-import { PENAL_CODE_CHUNKS_TABLE } from '../persistence/constants.js';
+import { LEGAL_CODE_CHUNKS_TABLE } from '../persistence/constants.js';
+import { RETRIEVAL_CORPUS_ID } from './constants.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import { mapSearchResults } from './map-search-result.js';
 import type { SearchSimilarChunksOptions, SimilarChunk, SimilarChunkRow } from './types.js';
@@ -16,7 +17,8 @@ const SEARCH_SIMILAR_SQL = `
     content,
     metadata,
     embedding <=> $1::vector(3072) AS distance
-  FROM ${PENAL_CODE_CHUNKS_TABLE}
+  FROM ${LEGAL_CODE_CHUNKS_TABLE}
+  WHERE corpus_id = $3
   ORDER BY embedding <=> $1::vector(3072) ASC
   LIMIT $2
 `;
@@ -37,6 +39,7 @@ export async function searchSimilarChunks(
     SEARCH_SIMILAR_SQL,
     vectorLiteral,
     topK,
+    RETRIEVAL_CORPUS_ID,
   );
 
   return mapSearchResults(rows);
