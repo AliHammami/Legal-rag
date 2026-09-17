@@ -41,6 +41,12 @@ describe('validateInputChunks', () => {
       /Empty content/,
     );
   });
+
+  it('rejette un charCount incoh\u00E9rent', () => {
+    const chunk = makeChunk('111-1#0', 'abcd');
+    chunk.charCount = 999;
+    expect(() => validateInputChunks([chunk])).toThrow(/charCount mismatch/);
+  });
 });
 
 describe('validateEmbeddingVector', () => {
@@ -56,6 +62,7 @@ describe('validateOutputRecords', () => {
     const input = [makeChunk('111-1#0'), makeChunk('111-2#0')];
     const embedding = Array.from({ length: EMBEDDING_DIMENSIONS }, () => 0.1);
     const records: PenalCodeEmbeddedChunk[] = input.map((chunk) => ({
+      corpusId: 'code-penal',
       ...chunk,
       embedding,
     }));

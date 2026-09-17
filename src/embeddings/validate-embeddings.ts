@@ -27,6 +27,55 @@ export function validateInputChunks(chunks: PenalCodeChunk[]): void {
         'CHUNK_CONTENT_EMPTY',
       );
     }
+
+    if (chunk.content.length !== chunk.charCount) {
+      throw new EmbeddingPipelineError(
+        `charCount mismatch for ${chunk.chunkId}: stored ${chunk.charCount}, actual ${chunk.content.length}`,
+        'CHAR_COUNT_MISMATCH',
+      );
+    }
+  }
+}
+
+export function validateRecordsMatchSource(
+  inputChunks: PenalCodeChunk[],
+  records: PenalCodeEmbeddedChunk[],
+): void {
+  const sourceById = new Map(inputChunks.map((chunk) => [chunk.chunkId, chunk]));
+
+  for (const record of records) {
+    const source = sourceById.get(record.chunkId);
+    if (!source) {
+      continue;
+    }
+
+    if (record.content !== source.content) {
+      throw new EmbeddingPipelineError(
+        `Content mismatch for ${record.chunkId}`,
+        'OUTPUT_CONTENT_MISMATCH',
+      );
+    }
+
+    if (record.charCount !== source.charCount) {
+      throw new EmbeddingPipelineError(
+        `charCount mismatch in output for ${record.chunkId}`,
+        'OUTPUT_CHAR_COUNT_MISMATCH',
+      );
+    }
+
+    if (record.articleNumber !== source.articleNumber) {
+      throw new EmbeddingPipelineError(
+        `articleNumber mismatch in output for ${record.chunkId}`,
+        'OUTPUT_ARTICLE_NUMBER_MISMATCH',
+      );
+    }
+
+    if (JSON.stringify(record.metadata) !== JSON.stringify(source.metadata)) {
+      throw new EmbeddingPipelineError(
+        `metadata mismatch in output for ${record.chunkId}`,
+        'OUTPUT_METADATA_MISMATCH',
+      );
+    }
   }
 }
 

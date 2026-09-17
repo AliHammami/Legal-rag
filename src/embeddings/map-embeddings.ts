@@ -44,6 +44,7 @@ export function normalizeEmbeddingVectors(
 }
 
 export function mapBatchToEmbeddedChunks(
+  corpusId: string,
   chunks: PenalCodeChunk[],
   embeddingVectors: number[][],
 ): PenalCodeEmbeddedChunk[] {
@@ -55,6 +56,7 @@ export function mapBatchToEmbeddedChunks(
   }
 
   return chunks.map((chunk, index) => ({
+    corpusId,
     chunkId: chunk.chunkId,
     articleNumber: chunk.articleNumber,
     content: chunk.content,

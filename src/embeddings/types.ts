@@ -6,7 +6,8 @@ export interface EmbeddingConfig {
   batchSize: number;
 }
 
-export interface PenalCodeEmbeddedChunk {
+export interface CorpusEmbeddedChunk {
+  corpusId: string;
   chunkId: string;
   articleNumber: string;
   content: string;
@@ -14,6 +15,9 @@ export interface PenalCodeEmbeddedChunk {
   embedding: number[];
   metadata: PenalCodeChunkMetadata;
 }
+
+/** @deprecated Use CorpusEmbeddedChunk */
+export type PenalCodeEmbeddedChunk = CorpusEmbeddedChunk;
 
 export interface PenalCodeEmbeddingStats {
   inputChunkCount: number;
@@ -24,8 +28,10 @@ export interface PenalCodeEmbeddingStats {
   duplicateChunkIds: number;
 }
 
-export interface PenalCodeEmbeddingResult {
+export interface CorpusEmbeddingResult {
+  corpusId: string;
   source: {
+    corpusId: string;
     chunksFile: string;
     chunksExtractedAt?: string;
     chunkCount: number;
@@ -33,5 +39,8 @@ export interface PenalCodeEmbeddingResult {
   embeddedAt: string;
   config: EmbeddingConfig;
   stats: PenalCodeEmbeddingStats;
-  records: PenalCodeEmbeddedChunk[];
+  records: CorpusEmbeddedChunk[];
 }
+
+/** @deprecated Use CorpusEmbeddingResult */
+export type PenalCodeEmbeddingResult = CorpusEmbeddingResult;

@@ -75,7 +75,8 @@ describe('mapBatchToEmbeddedChunks', () => {
   it('associe chunks[i] ↔ embeddings[i]', () => {
     const chunks = [chunk, { ...chunk, chunkId: '121-3#1', content: 'Autre' }];
     const embeddings = [vector(1), vector(2)];
-    const records = mapBatchToEmbeddedChunks(chunks, embeddings);
+    const records = mapBatchToEmbeddedChunks('code-penal', chunks, embeddings);
+    expect(records[0]!.corpusId).toBe('code-penal');
     expect(records[0]!.chunkId).toBe('121-3#0');
     expect(records[0]!.embedding).toEqual(vector(1));
     expect(records[1]!.chunkId).toBe('121-3#1');
