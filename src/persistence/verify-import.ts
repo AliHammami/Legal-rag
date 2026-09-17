@@ -1,5 +1,5 @@
 import { EMBEDDING_DIMENSIONS } from '../embeddings/constants.js';
-import type { PrismaService } from '../prisma/prisma.service.js';
+import type { PrismaExecutor } from './prisma-executor.js';
 import { LEGAL_CODE_CHUNKS_TABLE } from './constants.js';
 import type {
   GlobalImportVerification,
@@ -17,7 +17,7 @@ interface CorpusCountRow {
 }
 
 export async function verifyCorpusImport(
-  prisma: PrismaService,
+  prisma: PrismaExecutor,
   corpusId: string,
   expectedDimensions: number = EMBEDDING_DIMENSIONS,
 ): Promise<ImportVerification> {
@@ -73,7 +73,7 @@ export async function verifyCorpusImport(
 }
 
 export async function verifyGlobalImport(
-  prisma: PrismaService,
+  prisma: PrismaExecutor,
   expectedDimensions: number = EMBEDDING_DIMENSIONS,
 ): Promise<GlobalImportVerification> {
   const [
@@ -134,7 +134,7 @@ export async function verifyGlobalImport(
 
 /** @deprecated Use verifyCorpusImport */
 export async function verifyImport(
-  prisma: PrismaService,
+  prisma: PrismaExecutor,
   expectedDimensions: number = EMBEDDING_DIMENSIONS,
 ): Promise<{
   totalRows: number;

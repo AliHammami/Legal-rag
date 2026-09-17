@@ -50,6 +50,14 @@ async function main(): Promise<void> {
       console.log(
         `[${corpusId}] Doublons (corpusId, chunkId) : ${result.verification.duplicateCorpusChunkIds}`,
       );
+      console.log(
+        `[${corpusId}] Supprim\u00E9s (obsol\u00E8tes) : ${result.stats.deletedCount}`,
+      );
+      if (result.stats.deletedChunkIds.length > 0) {
+        console.log(
+          `[${corpusId}] chunkIds supprim\u00E9s : ${result.stats.deletedChunkIds.join(', ')}`,
+        );
+      }
     }
 
     const validation = await validatePersistence(prisma, corpusIds);

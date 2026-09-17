@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 
 import type { PenalCodeEmbeddedChunk } from '../embeddings/types.js';
-import type { PrismaService } from '../prisma/prisma.service.js';
+import type { PrismaExecutor } from './prisma-executor.js';
 import { LEGAL_CODE_CHUNKS_TABLE } from './constants.js';
 import { formatVectorLiteral } from './format-vector.js';
 
@@ -70,7 +70,7 @@ function toBatchValues(batch: UpsertChunkInput[]): unknown[] {
 }
 
 export async function upsertChunkBatch(
-  prisma: PrismaService,
+  prisma: PrismaExecutor,
   batch: UpsertChunkInput[],
 ): Promise<void> {
   if (batch.length === 0) {

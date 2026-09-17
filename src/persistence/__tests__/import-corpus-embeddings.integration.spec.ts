@@ -7,6 +7,9 @@ import { EMBEDDING_DIMENSIONS } from '../../embeddings/constants.js';
 import type { PenalCodeEmbeddingResult } from '../../embeddings/types.js';
 import { importCorpusEmbeddings } from '../import-corpus-embeddings.js';
 import { LEGAL_CODE_CHUNKS_TABLE } from '../constants.js';
+import {
+  listCorpusChunkIds,
+} from '../sync-corpus-chunks.js';
 import { verifyCorpusImport } from '../verify-import.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 
@@ -21,6 +24,8 @@ function makeFixture(
   chunkId: string,
   articleNumber: string,
   seed: number,
+  chunkIndex = 0,
+  chunkCount = 1,
 ): PenalCodeEmbeddingResult['records'][number] {
   return {
     chunkId,
@@ -34,8 +39,8 @@ function makeFixture(
       pageEnd: 1,
       source: 'test.pdf',
       sourceType: 'pdf',
-      chunkIndex: 0,
-      chunkCount: 1,
+      chunkIndex,
+      chunkCount,
       unitStart: 0,
       unitEnd: 0,
       unitCount: 1,
@@ -69,6 +74,15 @@ function makeEmbeddingFile(
   };
 }
 
+const TEST_CHUNK_IDS = [
+  '122-5#0',
+  '111-1#0',
+  '111-2#0',
+  '131-26-2#0',
+  '131-26-2#1',
+  'sync-corpus-b#0',
+];
+
 const databaseUrl = process.env.DATABASE_URL;
 const runIntegration = Boolean(databaseUrl) && process.env.RUN_DB_TESTS === 'true';
 
@@ -99,7 +113,7 @@ describe.runIf(runIntegration)('importCorpusEmbeddings (integration)', () => {
          WHERE corpus_id = ANY($1::text[])
            AND chunk_id = ANY($2::text[])`,
         ['code-penal', 'code-civil'],
-        ['122-5#0', '111-1#0', '111-2#0'],
+        TEST_CHUNK_IDS,
       );
       await prisma.$disconnect();
     }
@@ -165,10 +179,97 @@ describe.runIf(runIntegration)('importCorpusEmbeddings (integration)', () => {
     });
 
     expect(first.stats.inputRecordCount).toBe(2);
+    expect(first.stats.deletedCount).toBe(0);
     expect(second.verification.totalRows).toBe(2);
+    expect(second.stats.deletedCount).toBe(0);
+    expect(second.stats.deletedChunkIds).toEqual([]);
     expect(second.verification.duplicateCorpusChunkIds).toBe(0);
 
     const raw = await readFile(fixturePath, 'utf-8');
     expect(JSON.parse(raw).records).toHaveLength(2);
+  });
+
+  it('deletes obsolete chunkIds missing from the source file', async () => {
+    const fixturePath = join(tempDir, 'penal-sync-delete.embeddings.json');
+    const initialRecords = [
+      makeFixture('131-26-2#0', '131-26-2', 10, 0, 2),
+      makeFixture('131-26-2#1', '131-26-2', 11, 1, 2),
+    ];
+    const updatedRecords = [makeFixture('131-26-2#0', '131-26-2', 12, 0, 1)];
+
+    await writeFile(
+      fixturePath,
+      JSON.stringify(makeEmbeddingFile(initialRecords)),
+      'utf-8',
+    );
+    await importCorpusEmbeddings(prisma, 'code-penal', {
+      embeddingsPath: fixturePath,
+    });
+
+    let chunkIds = await listCorpusChunkIds(prisma, 'code-penal');
+    expect(chunkIds).toEqual(['131-26-2#0', '131-26-2#1']);
+
+    await writeFile(
+      fixturePath,
+      JSON.stringify(makeEmbeddingFile(updatedRecords)),
+      'utf-8',
+    );
+    const synced = await importCorpusEmbeddings(prisma, 'code-penal', {
+      embeddingsPath: fixturePath,
+    });
+
+    expect(synced.stats.deletedCount).toBe(1);
+    expect(synced.stats.deletedChunkIds).toEqual(['131-26-2#1']);
+
+    chunkIds = await listCorpusChunkIds(prisma, 'code-penal');
+    expect(chunkIds).toEqual(['131-26-2#0']);
+    expect(chunkIds).not.toContain('131-26-2#1');
+  });
+
+  it('does not delete rows from another corpus during sync', async () => {
+    const penalPath = join(tempDir, 'penal-isolation.embeddings.json');
+    const civilPath = join(tempDir, 'civil-isolation.embeddings.json');
+
+    await writeFile(
+      penalPath,
+      JSON.stringify(
+        makeEmbeddingFile([
+          makeFixture('111-1#0', '111-1', 20),
+          makeFixture('111-2#0', '111-2', 21),
+        ]),
+      ),
+      'utf-8',
+    );
+    await writeFile(
+      civilPath,
+      JSON.stringify(
+        makeEmbeddingFile([makeFixture('sync-corpus-b#0', 'sync-b', 22)]),
+      ),
+      'utf-8',
+    );
+
+    await importCorpusEmbeddings(prisma, 'code-civil', {
+      embeddingsPath: civilPath,
+    });
+    await importCorpusEmbeddings(prisma, 'code-penal', {
+      embeddingsPath: penalPath,
+    });
+
+    await writeFile(
+      penalPath,
+      JSON.stringify(
+        makeEmbeddingFile([makeFixture('111-1#0', '111-1', 23)]),
+      ),
+      'utf-8',
+    );
+
+    const synced = await importCorpusEmbeddings(prisma, 'code-penal', {
+      embeddingsPath: penalPath,
+    });
+
+    expect(synced.stats.deletedChunkIds).toEqual(['111-2#0']);
+
+    const civilChunkIds = await listCorpusChunkIds(prisma, 'code-civil');
+    expect(civilChunkIds).toEqual(['sync-corpus-b#0']);
   });
 });

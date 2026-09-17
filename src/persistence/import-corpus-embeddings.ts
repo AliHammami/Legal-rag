@@ -12,11 +12,80 @@ import type { PrismaService } from '../prisma/prisma.service.js';
 import {
   corpusEmbeddingsPath,
   IMPORT_BATCH_SIZE,
+  IMPORT_TRANSACTION_TIMEOUT_MS,
 } from './constants.js';
 import { PersistenceError } from './persistence.error.js';
-import type { ImportCorpusOptions, ImportResult } from './types.js';
+import type { PrismaExecutor } from './prisma-executor.js';
+import { deleteObsoleteCorpusChunks } from './sync-corpus-chunks.js';
+import type {
+  ImportCorpusOptions,
+  ImportResult,
+  ImportVerification,
+} from './types.js';
 import { upsertChunkBatch } from './upsert-chunks.js';
 import { verifyCorpusImport } from './verify-import.js';
+
+function validateCorpusImportResult(
+  verification: ImportVerification,
+  corpusId: string,
+  expectedRecordCount: number,
+): void {
+  if (verification.invalidDimensionRows > 0) {
+    throw new PersistenceError(
+      `${verification.invalidDimensionRows} rows have invalid vector dimensions for ${corpusId}`,
+      'IMPORT_VERIFICATION_FAILED',
+    );
+  }
+
+  if (verification.duplicateCorpusChunkIds > 0) {
+    throw new PersistenceError(
+      `${verification.duplicateCorpusChunkIds} duplicate (corpusId, chunkId) values found for ${corpusId}`,
+      'IMPORT_VERIFICATION_FAILED',
+    );
+  }
+
+  if (verification.totalRows !== expectedRecordCount) {
+    throw new PersistenceError(
+      `Row count mismatch after import for ${corpusId}: ${verification.totalRows} vs ${expectedRecordCount}`,
+      'IMPORT_VERIFICATION_FAILED',
+    );
+  }
+}
+
+async function syncCorpusInTransaction(
+  prisma: PrismaExecutor,
+  corpusId: string,
+  records: PenalCodeEmbeddingResult['records'],
+  embeddingModel: string,
+  embeddedAt: Date,
+  batchSize: number,
+): Promise<{ deletedCount: number; deletedChunkIds: string[] }> {
+  const expectedChunkIds = records.map((record) => record.chunkId);
+
+  for (let i = 0; i < records.length; i += batchSize) {
+    const batch = records.slice(i, i + batchSize);
+    await upsertChunkBatch(
+      prisma,
+      batch.map((record) => ({
+        corpusId,
+        record,
+        embeddingModel,
+        embeddedAt,
+      })),
+    );
+  }
+
+  const deletion = await deleteObsoleteCorpusChunks(
+    prisma,
+    corpusId,
+    expectedChunkIds,
+  );
+
+  const verification = await verifyCorpusImport(prisma, corpusId);
+  validateCorpusImportResult(verification, corpusId, records.length);
+
+  return deletion;
+}
 
 export async function importCorpusEmbeddings(
   prisma: PrismaService,
@@ -76,41 +145,34 @@ export async function importCorpusEmbeddings(
 
   const batchCount = Math.ceil(records.length / batchSize);
 
-  for (let i = 0; i < records.length; i += batchSize) {
-    const batch = records.slice(i, i + batchSize);
-    await upsertChunkBatch(
-      prisma,
-      batch.map((record) => ({
+  const deletion = await prisma.$transaction(
+    async (tx) =>
+      syncCorpusInTransaction(
+        tx as unknown as PrismaExecutor,
         corpusId,
-        record,
-        embeddingModel: embeddingResult.config.model,
+        records,
+        embeddingResult.config.model,
         embeddedAt,
-      })),
+        batchSize,
+      ),
+    {
+      maxWait: IMPORT_TRANSACTION_TIMEOUT_MS,
+      timeout: IMPORT_TRANSACTION_TIMEOUT_MS,
+    },
+  );
+
+  if (options.verbose || deletion.deletedCount > 0) {
+    console.log(
+      `[${corpusId}] Chunks obsol\u00E8tes supprim\u00E9s : ${deletion.deletedCount}`,
     );
+    if (deletion.deletedChunkIds.length > 0) {
+      console.log(
+        `[${corpusId}] chunkIds supprim\u00E9s : ${deletion.deletedChunkIds.join(', ')}`,
+      );
+    }
   }
 
   const verification = await verifyCorpusImport(prisma, corpusId);
-
-  if (verification.invalidDimensionRows > 0) {
-    throw new PersistenceError(
-      `${verification.invalidDimensionRows} rows have invalid vector dimensions for ${corpusId}`,
-      'IMPORT_VERIFICATION_FAILED',
-    );
-  }
-
-  if (verification.duplicateCorpusChunkIds > 0) {
-    throw new PersistenceError(
-      `${verification.duplicateCorpusChunkIds} duplicate (corpusId, chunkId) values found for ${corpusId}`,
-      'IMPORT_VERIFICATION_FAILED',
-    );
-  }
-
-  if (verification.totalRows !== records.length) {
-    throw new PersistenceError(
-      `Row count mismatch after import for ${corpusId}: ${verification.totalRows} vs ${records.length}`,
-      'IMPORT_VERIFICATION_FAILED',
-    );
-  }
 
   return {
     corpusId,
@@ -123,6 +185,8 @@ export async function importCorpusEmbeddings(
     stats: {
       inputRecordCount: records.length,
       batchCount,
+      deletedCount: deletion.deletedCount,
+      deletedChunkIds: deletion.deletedChunkIds,
       durationMs: Date.now() - startedAt,
     },
     verification,

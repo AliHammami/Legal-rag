@@ -1,6 +1,7 @@
 export interface ImportCorpusOptions {
   embeddingsPath?: string;
   batchSize?: number;
+  verbose?: boolean;
 }
 
 /** @deprecated Use ImportCorpusOptions */
@@ -9,6 +10,8 @@ export type ImportCodePenalOptions = ImportCorpusOptions;
 export interface ImportStats {
   inputRecordCount: number;
   batchCount: number;
+  deletedCount: number;
+  deletedChunkIds: string[];
   durationMs: number;
 }
 
