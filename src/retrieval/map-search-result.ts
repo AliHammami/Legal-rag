@@ -11,6 +11,7 @@ function parseDistance(distance: number | string): number {
 
 export function mapSearchResult(row: SimilarChunkRow): SimilarChunk {
   return {
+    corpusId: row.corpus_id,
     chunkId: row.chunk_id,
     articleNumber: row.article_number,
     content: row.content,

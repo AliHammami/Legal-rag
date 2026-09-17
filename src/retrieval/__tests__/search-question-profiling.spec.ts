@@ -23,6 +23,7 @@ function queryVector(): number[] {
 function makeResults(): SimilarChunk[] {
   return [
     {
+      corpusId: 'code-penal',
       chunkId: '122-5#0',
       articleNumber: '122-5',
       content: 'Contenu article 122-5',

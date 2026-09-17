@@ -8,14 +8,22 @@ import { PrismaService } from '../src/prisma/prisma.service.js';
 
 const CONTENT_PREVIEW_LENGTH = 120;
 
-function parseArgs(argv: string[]): { question: string; topK: number } {
+function parseArgs(argv: string[]): {
+  question: string;
+  topK: number;
+  corpusIds?: string[];
+} {
   let topK = DEFAULT_TOP_K;
+  let corpusIds: string[] | undefined;
   const questionParts: string[] = [];
 
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     if (arg === '--topK' && argv[i + 1]) {
       topK = Number(argv[++i]);
+    } else if (arg === '--corpus' && argv[i + 1]) {
+      corpusIds ??= [];
+      corpusIds.push(argv[++i]!);
     } else if (arg && !arg.startsWith('--')) {
       questionParts.push(arg);
     }
@@ -24,15 +32,15 @@ function parseArgs(argv: string[]): { question: string; topK: number } {
   const question = questionParts.join(' ').trim();
   if (!question) {
     throw new Error(
-      'Usage: pnpm search:question -- [--topK 20] "Votre question ici"',
+      'Usage: pnpm search:question -- [--topK 20] [--corpus code-penal] "Votre question ici"',
     );
   }
 
-  return { question, topK };
+  return { question, topK, corpusIds };
 }
 
 async function main(): Promise<void> {
-  const { question, topK } = parseArgs(process.argv.slice(2));
+  const { question, topK, corpusIds } = parseArgs(process.argv.slice(2));
   const startedAt = Date.now();
 
   const app = await NestFactory.createApplicationContext(RetrievalPipelineModule, {
@@ -42,9 +50,17 @@ async function main(): Promise<void> {
   try {
     const prisma = app.get(PrismaService);
     const openAIService = app.get(OpenAIService);
-    const results = await searchQuestion(prisma, openAIService, question, topK);
+    const results = await searchQuestion(prisma, openAIService, question, topK, {
+      corpusIds,
+    });
+
+    const corpusLabel =
+      corpusIds && corpusIds.length > 0
+        ? corpusIds.join(', ')
+        : 'tous les corpus';
 
     console.log(`Question : ${question}`);
+    console.log(`Corpus   : ${corpusLabel}`);
     console.log(`Top-K    : ${topK}`);
     console.log(`Résultats: ${results.length}`);
     console.log('');
@@ -56,7 +72,7 @@ async function main(): Promise<void> {
           : result.content;
 
       console.log(
-        `#${index + 1} Article ${result.articleNumber} | distance=${result.distance.toFixed(4)}`,
+        `#${index + 1} [${result.corpusId}] Article ${result.articleNumber} | distance=${result.distance.toFixed(4)}`,
       );
       console.log(`   ${preview}`);
     }

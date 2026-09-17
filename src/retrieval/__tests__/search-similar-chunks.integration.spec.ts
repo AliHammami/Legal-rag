@@ -12,7 +12,11 @@ import { searchSimilarChunks } from '../search-similar-chunks.js';
 const databaseUrl = process.env.DATABASE_URL;
 const runIntegration = Boolean(databaseUrl) && process.env.RUN_DB_TESTS === 'true';
 
-const TEST_CHUNK_IDS = ['retrieval-test-a#0', 'retrieval-test-b#0', 'retrieval-test-c#0'];
+const TEST_CHUNK_IDS = {
+  penal: ['retrieval-test-penal-a#0', 'retrieval-test-penal-b#0'],
+  civil: ['retrieval-test-civil-a#0', 'retrieval-test-civil-b#0'],
+  other: ['retrieval-test-penal-c#0'],
+};
 
 function vector(seed: number): number[] {
   return Array.from({ length: EMBEDDING_DIMENSIONS }, (_, i) => seed + i * 0.0001);
@@ -62,19 +66,31 @@ describe.runIf(runIntegration)('searchSimilarChunks (integration)', () => {
     await upsertChunkBatch(prisma, [
       {
         corpusId: DEFAULT_CODE_PENAL_CORPUS_ID,
-        record: makeRecord(TEST_CHUNK_IDS[0], 'ret-a', queryVector),
+        record: makeRecord(TEST_CHUNK_IDS.penal[0]!, 'ret-penal-a', queryVector),
         embeddingModel: 'text-embedding-3-large',
         embeddedAt,
       },
       {
         corpusId: DEFAULT_CODE_PENAL_CORPUS_ID,
-        record: makeRecord(TEST_CHUNK_IDS[1], 'ret-b', queryVector),
+        record: makeRecord(TEST_CHUNK_IDS.penal[1]!, 'ret-penal-b', queryVector),
         embeddingModel: 'text-embedding-3-large',
         embeddedAt,
       },
       {
         corpusId: DEFAULT_CODE_PENAL_CORPUS_ID,
-        record: makeRecord(TEST_CHUNK_IDS[2], 'ret-c', vector(99)),
+        record: makeRecord(TEST_CHUNK_IDS.other[0]!, 'ret-penal-c', vector(99)),
+        embeddingModel: 'text-embedding-3-large',
+        embeddedAt,
+      },
+      {
+        corpusId: 'code-civil',
+        record: makeRecord(TEST_CHUNK_IDS.civil[0]!, 'ret-civil-a', vector(50)),
+        embeddingModel: 'text-embedding-3-large',
+        embeddedAt,
+      },
+      {
+        corpusId: 'code-civil',
+        record: makeRecord(TEST_CHUNK_IDS.civil[1]!, 'ret-civil-b', vector(51)),
         embeddingModel: 'text-embedding-3-large',
         embeddedAt,
       },
@@ -85,32 +101,79 @@ describe.runIf(runIntegration)('searchSimilarChunks (integration)', () => {
     if (prisma) {
       await prisma.$executeRawUnsafe(
         `DELETE FROM ${LEGAL_CODE_CHUNKS_TABLE}
-         WHERE corpus_id = $1
-           AND chunk_id = ANY($2::text[])`,
-        DEFAULT_CODE_PENAL_CORPUS_ID,
-        TEST_CHUNK_IDS,
+         WHERE chunk_id = ANY($1::text[])`,
+        [
+          ...TEST_CHUNK_IDS.penal,
+          ...TEST_CHUNK_IDS.civil,
+          ...TEST_CHUNK_IDS.other,
+        ],
       );
       await prisma.$disconnect();
     }
   });
 
-  it('returns topK results ordered by cosine distance with identical vectors near zero', async () => {
-    const results = await searchSimilarChunks(prisma, queryVector, 2);
+  it('returns code-penal results only when filtered', async () => {
+    const results = await searchSimilarChunks(prisma, queryVector, 5, {
+      corpusIds: [DEFAULT_CODE_PENAL_CORPUS_ID],
+    });
 
-    expect(results).toHaveLength(2);
-    expect(results[0]?.distance).toBeLessThan(0.0001);
-    expect(results[1]?.distance).toBeLessThan(0.0001);
+    expect(results.length).toBeGreaterThan(0);
+    expect(results.every((result) => result.corpusId === DEFAULT_CODE_PENAL_CORPUS_ID)).toBe(
+      true,
+    );
+    expect(results.some((result) => result.chunkId === TEST_CHUNK_IDS.penal[0])).toBe(
+      true,
+    );
+  });
+
+  it('returns code-civil results only when filtered', async () => {
+    const civilVector = vector(50);
+    const results = await searchSimilarChunks(prisma, civilVector, 5, {
+      corpusIds: ['code-civil'],
+    });
+
+    expect(results.length).toBeGreaterThan(0);
+    expect(results.every((result) => result.corpusId === 'code-civil')).toBe(true);
+    expect(results.some((result) => result.chunkId === TEST_CHUNK_IDS.civil[0])).toBe(
+      true,
+    );
+  });
+
+  it('returns a global topK across multiple corpora', async () => {
+    const results = await searchSimilarChunks(prisma, queryVector, 3, {
+      corpusIds: [DEFAULT_CODE_PENAL_CORPUS_ID, 'code-civil'],
+    });
+
+    expect(results.length).toBeLessThanOrEqual(3);
     expect(
-      [results[0]?.chunkId, results[1]?.chunkId].sort(),
-    ).toEqual([TEST_CHUNK_IDS[0], TEST_CHUNK_IDS[1]].sort());
+      results.every((result) =>
+        [DEFAULT_CODE_PENAL_CORPUS_ID, 'code-civil'].includes(result.corpusId),
+      ),
+    ).toBe(true);
+  });
+
+  it('can search all corpora without a corpus filter', async () => {
+    const results = await searchSimilarChunks(prisma, queryVector, 10);
+
+    expect(results.length).toBeLessThanOrEqual(10);
+    expect(results.length).toBeGreaterThan(0);
+    expect(new Set(results.map((result) => result.corpusId)).size).toBeGreaterThan(0);
+  });
+
+  it('respects LIMIT topK', async () => {
+    const results = await searchSimilarChunks(prisma, queryVector, 1, {
+      corpusIds: [DEFAULT_CODE_PENAL_CORPUS_ID],
+    });
+    expect(results).toHaveLength(1);
+  });
+
+  it('orders results by ascending cosine distance', async () => {
+    const results = await searchSimilarChunks(prisma, queryVector, 5, {
+      corpusIds: [DEFAULT_CODE_PENAL_CORPUS_ID],
+    });
 
     for (let i = 1; i < results.length; i++) {
       expect(results[i]!.distance).toBeGreaterThanOrEqual(results[i - 1]!.distance);
     }
-  });
-
-  it('respects LIMIT topK', async () => {
-    const results = await searchSimilarChunks(prisma, queryVector, 1);
-    expect(results).toHaveLength(1);
   });
 });

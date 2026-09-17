@@ -5,8 +5,10 @@ import type { SimilarChunkRow } from '../types.js';
 function makeRow(
   chunkId: string,
   distance: number | string,
+  corpusId = 'code-penal',
 ): SimilarChunkRow {
   return {
+    corpus_id: corpusId,
     chunk_id: chunkId,
     article_number: chunkId.split('#')[0] ?? chunkId,
     content: `Content for ${chunkId}`,
@@ -31,6 +33,7 @@ describe('mapSearchResult', () => {
     const result = mapSearchResult(makeRow('111-1#0', 0.042));
 
     expect(result).toEqual({
+      corpusId: 'code-penal',
       chunkId: '111-1#0',
       articleNumber: '111-1',
       content: 'Content for 111-1#0',

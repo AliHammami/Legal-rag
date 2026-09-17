@@ -23,6 +23,7 @@ function queryVector(): number[] {
 function makeResults(): SimilarChunk[] {
   return [
     {
+      corpusId: 'code-penal',
       chunkId: '122-5#0',
       articleNumber: '122-5',
       content: 'Contenu article 122-5',
@@ -117,6 +118,21 @@ describe('searchQuestion', () => {
 
     await expect(searchQuestion(prisma, openAIService, QUESTION, 20)).rejects.toBe(
       retrievalError,
+    );
+  });
+
+  it('passes corpusIds through to searchSimilarChunks', async () => {
+    const openAIService = { createEmbeddings } as unknown as OpenAIService;
+
+    await searchQuestion(prisma, openAIService, QUESTION, 20, {
+      corpusIds: ['code-civil'],
+    });
+
+    expect(searchSimilarChunksMock).toHaveBeenCalledWith(
+      prisma,
+      queryVector(),
+      20,
+      { corpusIds: ['code-civil'] },
     );
   });
 

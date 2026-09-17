@@ -3,6 +3,7 @@ import { performance } from 'node:perf_hooks';
 import type { OpenAIService } from '../openai/openai.service.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import type { PipelineProfilingTimings } from '../profiling/pipeline-timings.js';
+import type { SearchSimilarChunksOptions } from '../retrieval/types.js';
 import { searchQuestion } from '../retrieval/search-question.js';
 import {
   DEFAULT_RERANK_TOP_K,
@@ -13,7 +14,7 @@ import type { RerankerService } from './reranker.service.js';
 import { isFallbackEligibleRerankingError } from './reranking.error.js';
 import type { RerankStatus, RerankedChunk } from './types.js';
 
-export interface SearchAndRerankQuestionOptions {
+export interface SearchAndRerankQuestionOptions extends SearchSimilarChunksOptions {
   retrievalTopK?: number;
   rerankTopK?: number;
   profiling?: PipelineProfilingTimings;
@@ -32,9 +33,12 @@ export async function searchAndRerankQuestion(
   question: string,
   options: SearchAndRerankQuestionOptions = {},
 ): Promise<SearchAndRerankQuestionResult> {
-  const retrievalTopK = options.retrievalTopK ?? DEFAULT_RETRIEVAL_TOP_K;
-  const rerankTopK = options.rerankTopK ?? DEFAULT_RERANK_TOP_K;
-  const { profiling } = options;
+  const {
+    retrievalTopK = DEFAULT_RETRIEVAL_TOP_K,
+    rerankTopK = DEFAULT_RERANK_TOP_K,
+    profiling,
+    ...searchOptions
+  } = options;
   const totalStart = profiling ? performance.now() : 0;
 
   const candidates = await searchQuestion(
@@ -42,7 +46,7 @@ export async function searchAndRerankQuestion(
     openAIService,
     question,
     retrievalTopK,
-    { profiling },
+    { profiling, ...searchOptions },
   );
 
   if (profiling) {
