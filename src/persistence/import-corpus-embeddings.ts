@@ -1,12 +1,7 @@
-import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 import { EMBEDDING_DIMENSIONS } from '../embeddings/constants.js';
-import type { PenalCodeEmbeddingResult } from '../embeddings/types.js';
-import {
-  validateEmbeddingVector,
-  validateInputChunks,
-} from '../embeddings/validate-embeddings.js';
+import type { CorpusEmbeddedChunk } from '../embeddings/types.js';
 import { getCorpusConfig } from '../ingestion/corpus-config.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import {
@@ -16,12 +11,15 @@ import {
 } from './constants.js';
 import { PersistenceError } from './persistence.error.js';
 import type { PrismaExecutor } from './prisma-executor.js';
+import { readEmbeddingsFileMetadata } from './read-embeddings-metadata.js';
+import { streamEmbeddingRecords } from './stream-embedding-records.js';
 import { deleteObsoleteCorpusChunks } from './sync-corpus-chunks.js';
 import type {
   ImportCorpusOptions,
   ImportResult,
   ImportVerification,
 } from './types.js';
+import { validateImportRecord } from './validate-import-record.js';
 import { upsertChunkBatch } from './upsert-chunks.js';
 import { verifyCorpusImport } from './verify-import.js';
 
@@ -52,23 +50,45 @@ function validateCorpusImportResult(
   }
 }
 
-async function syncCorpusInTransaction(
+async function syncCorpusFromStream(
   prisma: PrismaExecutor,
   corpusId: string,
-  records: PenalCodeEmbeddingResult['records'],
+  embeddingsPath: string,
   embeddingModel: string,
   embeddedAt: Date,
   batchSize: number,
-): Promise<{ deletedCount: number; deletedChunkIds: string[] }> {
-  const expectedChunkIds = records.map((record) => record.chunkId);
+): Promise<{ deletedCount: number; deletedChunkIds: string[]; recordCount: number }> {
+  const expectedChunkIds: string[] = [];
+  const seenChunkIds = new Set<string>();
+  let batch: CorpusEmbeddedChunk[] = [];
+  let recordCount = 0;
 
-  for (let i = 0; i < records.length; i += batchSize) {
-    const batch = records.slice(i, i + batchSize);
+  for await (const record of streamEmbeddingRecords(embeddingsPath)) {
+    validateImportRecord(record, seenChunkIds);
+    expectedChunkIds.push(record.chunkId);
+    batch.push(record);
+    recordCount++;
+
+    if (batch.length >= batchSize) {
+      await upsertChunkBatch(
+        prisma,
+        batch.map((item) => ({
+          corpusId,
+          record: item,
+          embeddingModel,
+          embeddedAt,
+        })),
+      );
+      batch = [];
+    }
+  }
+
+  if (batch.length > 0) {
     await upsertChunkBatch(
       prisma,
-      batch.map((record) => ({
+      batch.map((item) => ({
         corpusId,
-        record,
+        record: item,
         embeddingModel,
         embeddedAt,
       })),
@@ -82,9 +102,9 @@ async function syncCorpusInTransaction(
   );
 
   const verification = await verifyCorpusImport(prisma, corpusId);
-  validateCorpusImportResult(verification, corpusId, records.length);
+  validateCorpusImportResult(verification, corpusId, recordCount);
 
-  return deletion;
+  return { ...deletion, recordCount };
 }
 
 export async function importCorpusEmbeddings(
@@ -100,58 +120,29 @@ export async function importCorpusEmbeddings(
   );
   const batchSize = options.batchSize ?? IMPORT_BATCH_SIZE;
 
-  let embeddingResult: PenalCodeEmbeddingResult;
-  try {
-    embeddingResult = JSON.parse(
-      await readFile(embeddingsPath, 'utf-8'),
-    ) as PenalCodeEmbeddingResult;
-  } catch (error) {
+  const metadata = await readEmbeddingsFileMetadata(embeddingsPath);
+  if (metadata.config.dimensions !== EMBEDDING_DIMENSIONS) {
     throw new PersistenceError(
-      `Unable to read embeddings file: ${embeddingsPath}`,
-      'EMBEDDINGS_FILE_INVALID',
-      error,
-    );
-  }
-
-  if (embeddingResult.config.dimensions !== EMBEDDING_DIMENSIONS) {
-    throw new PersistenceError(
-      `Unexpected embedding dimensions in file: ${embeddingResult.config.dimensions}`,
+      `Unexpected embedding dimensions in file: ${metadata.config.dimensions}`,
       'EMBEDDING_DIMENSIONS_MISMATCH',
     );
   }
 
-  const records = embeddingResult.records;
-  validateInputChunks(
-    records.map((record) => ({
-      chunkId: record.chunkId,
-      articleNumber: record.articleNumber,
-      content: record.content,
-      charCount: record.charCount,
-      metadata: record.metadata,
-    })),
-  );
-
-  for (const record of records) {
-    validateEmbeddingVector(record.embedding, record.chunkId);
-  }
-
-  const embeddedAt = new Date(embeddingResult.embeddedAt);
+  const embeddedAt = new Date(metadata.embeddedAt);
   if (Number.isNaN(embeddedAt.getTime())) {
     throw new PersistenceError(
-      `Invalid embeddedAt in embeddings file: ${embeddingResult.embeddedAt}`,
+      `Invalid embeddedAt in embeddings file: ${metadata.embeddedAt}`,
       'EMBEDDED_AT_INVALID',
     );
   }
 
-  const batchCount = Math.ceil(records.length / batchSize);
-
-  const deletion = await prisma.$transaction(
+  const streamResult = await prisma.$transaction(
     async (tx) =>
-      syncCorpusInTransaction(
+      syncCorpusFromStream(
         tx as unknown as PrismaExecutor,
         corpusId,
-        records,
-        embeddingResult.config.model,
+        embeddingsPath,
+        metadata.config.model,
         embeddedAt,
         batchSize,
       ),
@@ -161,32 +152,33 @@ export async function importCorpusEmbeddings(
     },
   );
 
-  if (options.verbose || deletion.deletedCount > 0) {
+  if (options.verbose || streamResult.deletedCount > 0) {
     console.log(
-      `[${corpusId}] Chunks obsol\u00E8tes supprim\u00E9s : ${deletion.deletedCount}`,
+      `[${corpusId}] Chunks obsol\u00E8tes supprim\u00E9s : ${streamResult.deletedCount}`,
     );
-    if (deletion.deletedChunkIds.length > 0) {
+    if (streamResult.deletedChunkIds.length > 0) {
       console.log(
-        `[${corpusId}] chunkIds supprim\u00E9s : ${deletion.deletedChunkIds.join(', ')}`,
+        `[${corpusId}] chunkIds supprim\u00E9s : ${streamResult.deletedChunkIds.join(', ')}`,
       );
     }
   }
 
   const verification = await verifyCorpusImport(prisma, corpusId);
+  const batchCount = Math.ceil(streamResult.recordCount / batchSize);
 
   return {
     corpusId,
     source: {
       embeddingsFile: options.embeddingsPath ?? corpusEmbeddingsPath(corpusId),
-      embeddedAt: embeddingResult.embeddedAt,
-      embeddingModel: embeddingResult.config.model,
+      embeddedAt: metadata.embeddedAt,
+      embeddingModel: metadata.config.model,
     },
     importedAt: new Date().toISOString(),
     stats: {
-      inputRecordCount: records.length,
+      inputRecordCount: streamResult.recordCount,
       batchCount,
-      deletedCount: deletion.deletedCount,
-      deletedChunkIds: deletion.deletedChunkIds,
+      deletedCount: streamResult.deletedCount,
+      deletedChunkIds: streamResult.deletedChunkIds,
       durationMs: Date.now() - startedAt,
     },
     verification,
