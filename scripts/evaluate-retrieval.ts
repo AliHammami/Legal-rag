@@ -56,6 +56,7 @@ async function main(): Promise<void> {
             retrievalTopK: DEFAULT_RETRIEVAL_TOP_K,
             rerankTopK: DEFAULT_RERANK_TOP_K,
             profiling,
+            enableRouting: false,
           },
         );
 

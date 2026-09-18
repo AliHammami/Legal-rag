@@ -1,6 +1,8 @@
 import type { RerankStatus } from '../reranking/types.js';
 
 export interface PipelineProfilingTimings {
+  routingMs: number;
+  routingCalls: number;
   embeddingMs: number;
   vectorSearchMs: number;
   jinaRerankingMs: number;
@@ -19,6 +21,8 @@ export interface PipelineProfilingTimings {
 
 export function createPipelineProfiling(): PipelineProfilingTimings {
   return {
+    routingMs: 0,
+    routingCalls: 0,
     embeddingMs: 0,
     vectorSearchMs: 0,
     jinaRerankingMs: 0,
@@ -50,6 +54,7 @@ export function formatPerformanceReport(
 
   return [
     '--- Performance ---',
+    `Routing              :  ${Math.round(timings.routingMs)} ms`,
     `Retrieved candidates :  ${timings.retrievedCandidates}`,
     `Reranking            :  ${statusLabel}`,
     `Fallback             :  ${fallbackLabel}`,
@@ -58,6 +63,7 @@ export function formatPerformanceReport(
     `Jina reranking       :  ${Math.round(timings.jinaRerankingMs)} ms`,
     `Mapping              :  ${Math.round(timings.mappingMs)} ms`,
     `Total                :  ${Math.round(timings.totalMs)} ms`,
+    `Routing calls        :  ${timings.routingCalls}`,
     `Embedding calls      :  ${timings.embeddingCalls}`,
     `Reranking calls      :  ${timings.rerankingCalls}`,
   ].join('\n');

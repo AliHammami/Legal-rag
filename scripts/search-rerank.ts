@@ -10,6 +10,7 @@ import {
 } from '../src/reranking/constants.js';
 import { JinaRerankerService } from '../src/reranking/jina-reranker.service.js';
 import { RerankingPipelineModule } from '../src/reranking/reranking-pipeline.module.js';
+import { formatRoutingMetadata } from '../src/routing/format-routing-metadata.js';
 import { searchAndRerankQuestion } from '../src/reranking/search-and-rerank-question.js';
 import { OpenAIService } from '../src/openai/openai.service.js';
 import { PrismaService } from '../src/prisma/prisma.service.js';
@@ -58,15 +59,17 @@ async function main(): Promise<void> {
     const prisma = app.get(PrismaService);
     const openAIService = app.get(OpenAIService);
     const rerankerService = app.get(JinaRerankerService);
-    const { candidates, reranked, rerankStatus } = await searchAndRerankQuestion(
-      prisma,
-      openAIService,
-      rerankerService,
-      question,
-      { retrievalTopK, rerankTopK, profiling },
-    );
+    const { candidates, reranked, rerankStatus, routing } =
+      await searchAndRerankQuestion(
+        prisma,
+        openAIService,
+        rerankerService,
+        question,
+        { retrievalTopK, rerankTopK, profiling },
+      );
 
     console.log(`Question : ${question}`);
+    console.log(`Routing  : ${formatRoutingMetadata(routing)}`);
     console.log(`Candidats récupérés : ${candidates.length}`);
     console.log(`Après reranking      : ${reranked.length}`);
     console.log(`Statut reranking     : ${rerankStatus}`);

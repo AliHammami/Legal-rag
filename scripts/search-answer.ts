@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 
 import { formatRetrievalDebugReport } from '../src/debug/format-retrieval-debug.js';
 import { answerQuestion } from '../src/generation/answer-question.js';
+import { formatRoutingMetadata } from '../src/routing/format-routing-metadata.js';
 import { GenerationPipelineModule } from '../src/generation/generation-pipeline.module.js';
 import { RagGenerationService } from '../src/generation/rag-generation.service.js';
 import {
@@ -76,6 +77,7 @@ async function main(): Promise<void> {
     );
 
     console.log(`Question : ${result.question}`);
+    console.log(`Routing  : ${formatRoutingMetadata(result.routing)}`);
     console.log(`Statut reranking : ${result.rerankStatus}`);
     console.log('Context filtering:');
     console.log(`  Jina results: ${result.contextFiltering.jinaResults}`);

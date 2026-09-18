@@ -15,6 +15,7 @@ vi.mock('../../reranking/search-and-rerank-question.js', () => ({
 
 function makeChunk(chunkId: string, rerankScore: number) {
   return {
+    corpusId: 'code-penal',
     chunkId,
     articleNumber: chunkId.split('#')[0] ?? chunkId,
     content: `Content for ${chunkId}`,

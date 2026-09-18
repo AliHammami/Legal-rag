@@ -3,6 +3,8 @@ import { performance } from 'node:perf_hooks';
 import type { OpenAIService } from '../openai/openai.service.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import type { PipelineProfilingTimings } from '../profiling/pipeline-timings.js';
+import { resolveRoutingForRetrieval } from '../routing/resolve-routing-for-retrieval.js';
+import type { RoutingMetadata } from '../routing/types.js';
 import type { SearchSimilarChunksOptions } from '../retrieval/types.js';
 import { searchQuestion } from '../retrieval/search-question.js';
 import {
@@ -18,12 +20,15 @@ export interface SearchAndRerankQuestionOptions extends SearchSimilarChunksOptio
   retrievalTopK?: number;
   rerankTopK?: number;
   profiling?: PipelineProfilingTimings;
+  /** When false, skips LLM routing and uses explicit corpusIds or global retrieval. */
+  enableRouting?: boolean;
 }
 
 export interface SearchAndRerankQuestionResult {
   candidates: Awaited<ReturnType<typeof searchQuestion>>;
   reranked: RerankedChunk[];
   rerankStatus: RerankStatus;
+  routing?: RoutingMetadata;
 }
 
 export async function searchAndRerankQuestion(
@@ -37,16 +42,39 @@ export async function searchAndRerankQuestion(
     retrievalTopK = DEFAULT_RETRIEVAL_TOP_K,
     rerankTopK = DEFAULT_RERANK_TOP_K,
     profiling,
+    enableRouting = true,
+    corpusIds: explicitCorpusIds,
     ...searchOptions
   } = options;
   const totalStart = profiling ? performance.now() : 0;
+
+  let routing: RoutingMetadata | undefined;
+  let retrievalCorpusIds: string[] | undefined;
+
+  if (explicitCorpusIds !== undefined) {
+    retrievalCorpusIds =
+      explicitCorpusIds.length > 0 ? explicitCorpusIds : undefined;
+  } else if (enableRouting) {
+    const routingStart = performance.now();
+    const resolved = await resolveRoutingForRetrieval(openAIService, question);
+    if (profiling) {
+      profiling.routingMs = performance.now() - routingStart;
+      profiling.routingCalls = 1;
+    }
+    routing = resolved.routing;
+    retrievalCorpusIds = resolved.retrievalCorpusIds;
+  }
 
   const candidates = await searchQuestion(
     prisma,
     openAIService,
     question,
     retrievalTopK,
-    { profiling, ...searchOptions },
+    {
+      profiling,
+      ...searchOptions,
+      corpusIds: retrievalCorpusIds,
+    },
   );
 
   if (profiling) {
@@ -80,5 +108,5 @@ export async function searchAndRerankQuestion(
     profiling.totalMs = performance.now() - totalStart;
   }
 
-  return { candidates, reranked, rerankStatus };
+  return { candidates, reranked, rerankStatus, routing };
 }

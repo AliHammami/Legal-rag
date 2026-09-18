@@ -1,4 +1,5 @@
 import type { PipelineProfilingTimings } from '../profiling/pipeline-timings.js';
+import type { RoutingMetadata } from '../routing/types.js';
 import type { SimilarChunk } from '../retrieval/types.js';
 import type { RerankStatus, RerankedChunk } from '../reranking/types.js';
 
@@ -24,6 +25,7 @@ export interface ContextFilteringSummary {
 
 export interface AnswerQuestionResult {
   question: string;
+  routing?: RoutingMetadata;
   candidates: SimilarChunk[];
   reranked: RerankedChunk[];
   rerankStatus: RerankStatus;

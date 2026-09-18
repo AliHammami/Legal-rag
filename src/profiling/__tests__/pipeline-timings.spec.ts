@@ -10,6 +10,8 @@ describe('pipeline timings', () => {
     const profiling = createPipelineProfiling();
 
     expect(profiling).toEqual({
+      routingMs: 0,
+      routingCalls: 0,
       embeddingMs: 0,
       vectorSearchMs: 0,
       jinaRerankingMs: 0,
@@ -29,6 +31,8 @@ describe('pipeline timings', () => {
 
   it('formats a Jina performance report', () => {
     const report = formatPerformanceReport({
+      routingMs: 120,
+      routingCalls: 1,
       embeddingMs: 1050,
       vectorSearchMs: 210,
       jinaRerankingMs: 450,
@@ -40,6 +44,7 @@ describe('pipeline timings', () => {
       rerankStatus: 'success',
     });
 
+    expect(report).toContain('Routing              :  120 ms');
     expect(report).toContain('Retrieved candidates :  20');
     expect(report).toContain('Jina reranking       :  450 ms');
     expect(report).toContain('Mapping              :  1 ms');
@@ -49,6 +54,8 @@ describe('pipeline timings', () => {
 
   it('labels fallback status in the report', () => {
     const report = formatPerformanceReport({
+      routingMs: 0,
+      routingCalls: 0,
       embeddingMs: 0,
       vectorSearchMs: 0,
       jinaRerankingMs: 0,
@@ -65,6 +72,8 @@ describe('pipeline timings', () => {
 
   it('formats answer pipeline metrics', () => {
     const report = formatAnswerPerformanceReport({
+      routingMs: 150,
+      routingCalls: 1,
       embeddingMs: 1000,
       vectorSearchMs: 200,
       jinaRerankingMs: 300,

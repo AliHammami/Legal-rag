@@ -21,6 +21,8 @@ export interface AnswerQuestionOptions {
   rerankTopK?: number;
   relativeScoreThreshold?: number;
   profiling?: PipelineProfilingTimings;
+  enableRouting?: boolean;
+  corpusIds?: string[];
 }
 
 export async function answerQuestion(
@@ -38,13 +40,20 @@ export async function answerQuestion(
   const profiling = options.profiling ?? createPipelineProfiling();
   const pipelineStart = performance.now();
 
-  const { candidates, reranked, rerankStatus } = await searchAndRerankQuestion(
-    prisma,
-    openAIService,
-    rerankerService,
-    question,
-    { retrievalTopK, rerankTopK, profiling },
-  );
+  const { candidates, reranked, rerankStatus, routing } =
+    await searchAndRerankQuestion(
+      prisma,
+      openAIService,
+      rerankerService,
+      question,
+      {
+        retrievalTopK,
+        rerankTopK,
+        profiling,
+        enableRouting: options.enableRouting,
+        corpusIds: options.corpusIds,
+      },
+    );
 
   const filteringStart = performance.now();
   const contextChunks = dynamicContextFilter(reranked, {
@@ -67,6 +76,7 @@ export async function answerQuestion(
 
   return {
     question,
+    routing,
     candidates,
     reranked,
     rerankStatus,

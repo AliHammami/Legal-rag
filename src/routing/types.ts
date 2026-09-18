@@ -9,6 +9,11 @@ export interface RoutingResult {
   reason?: string;
 }
 
+export interface RoutingMetadata {
+  corpusIds: string[];
+  fallbackToGlobal: boolean;
+}
+
 export interface RouteQuestionOptions {
   model?: string;
   signal?: AbortSignal;

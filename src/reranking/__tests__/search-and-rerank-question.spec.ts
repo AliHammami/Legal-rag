@@ -6,9 +6,16 @@ import type { SimilarChunk } from '../../retrieval/types.js';
 import { searchAndRerankQuestion } from '../search-and-rerank-question.js';
 import type { RerankerService } from '../reranker.service.js';
 
-const { searchQuestionMock, rerankChunksMock } = vi.hoisted(() => ({
-  searchQuestionMock: vi.fn(),
-  rerankChunksMock: vi.fn(),
+const { routeQuestionMock, searchQuestionMock, rerankChunksMock } = vi.hoisted(
+  () => ({
+    routeQuestionMock: vi.fn(),
+    searchQuestionMock: vi.fn(),
+    rerankChunksMock: vi.fn(),
+  }),
+);
+
+vi.mock('../../routing/route-question.js', () => ({
+  routeQuestion: routeQuestionMock,
 }));
 
 vi.mock('../../retrieval/search-question.js', () => ({
@@ -23,6 +30,7 @@ const QUESTION = 'Quelles sont les conditions de la légitime défense ?';
 
 function makeChunk(chunkId: string): SimilarChunk {
   return {
+    corpusId: 'code-penal',
     chunkId,
     articleNumber: chunkId.split('#')[0] ?? chunkId,
     content: `Content for ${chunkId}`,
@@ -52,8 +60,10 @@ describe('searchAndRerankQuestion', () => {
   const reranked = [{ ...makeChunk('122-6#0'), rerankScore: 0.98 }];
 
   beforeEach(() => {
+    routeQuestionMock.mockReset();
     searchQuestionMock.mockReset();
     rerankChunksMock.mockReset();
+    routeQuestionMock.mockResolvedValue({ corpusIds: [] });
     searchQuestionMock.mockResolvedValue(candidates);
     rerankChunksMock.mockResolvedValue(reranked);
   });
