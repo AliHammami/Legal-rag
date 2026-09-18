@@ -32,5 +32,12 @@ export const DEFAULT_CORPUS_ARTICLES_PATH =
 
 export const E2E_QUESTION_ID_PATTERN = /^q\d{3}$/;
 
+export const MULTICORPUS_QUESTION_ID_PATTERN = /^q\d{3}$/;
+
+export const DEFAULT_MULTICORPUS_EVALUATION_DATASET_PATH =
+  'data/evaluation/legal-multicorpus.questions.json';
+
+export const DEFAULT_MULTICORPUS_GENERATION_MODEL = 'gpt-4.1-mini';
+
 export const EVALUATION_RETRIEVAL_TOP_K = 20;
 export const EVALUATION_RERANK_TOP_K = 5;

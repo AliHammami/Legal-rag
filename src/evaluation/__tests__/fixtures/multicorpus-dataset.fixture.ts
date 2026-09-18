@@ -1,0 +1,52 @@
+import type { LegalMulticorpusEvaluationQuestion } from '../../multicorpus-dataset.types.js';
+
+export const FIXTURE_MULTICORPUS_QUESTIONS: LegalMulticorpusEvaluationQuestion[] = [
+  {
+    id: 'q001',
+    question: 'Quelles sont les conditions de la l?gitime d?fense ?',
+    goldCorpusIds: ['code-penal'],
+    goldArticles: ['122-5'],
+    referenceAnswer: 'La l?gitime d?fense suppose une riposte n?cessaire et proportionn?e.',
+    difficulty: 'medium',
+    questionType: 'single-corpus',
+    sourceArticles: ['122-5'],
+  },
+  {
+    id: 'q002',
+    question: 'Quelles sont les conditions de validit? d un contrat ?',
+    goldCorpusIds: ['code-civil'],
+    goldArticles: ['1128'],
+    referenceAnswer: 'Le contrat requiert un consentement, une capacit? et un contenu licite.',
+    difficulty: 'easy',
+    questionType: 'single-corpus',
+    sourceArticles: ['1128'],
+  },
+  {
+    id: 'q003',
+    question: 'Quelles cons?quences civiles et p?nales peuvent d?couler d une escroquerie commerciale ?',
+    goldCorpusIds: ['code-penal', 'code-civil'],
+    goldArticles: ['313-1', '1240'],
+    referenceAnswer: 'R?ponse combinant responsabilit? civile et qualification p?nale.',
+    difficulty: 'hard',
+    questionType: 'multi-corpus',
+    sourceArticles: ['313-1', '1240'],
+  },
+  {
+    id: 'q004',
+    question: 'Quelles sont les r?gles applicables en cas de responsabilit? ?',
+    goldCorpusIds: [],
+    goldArticles: [],
+    referenceAnswer: 'Question ambigu? sans corpus identifiable.',
+    difficulty: 'medium',
+    questionType: 'ambiguous',
+  },
+  {
+    id: 'q005',
+    question: 'Quelles sont les conditions de la naturalisation fran?aise ?',
+    goldCorpusIds: [],
+    goldArticles: [],
+    referenceAnswer: 'Hors p?rim?tre des corpus disponibles.',
+    difficulty: 'medium',
+    questionType: 'out-of-scope',
+  },
+];
