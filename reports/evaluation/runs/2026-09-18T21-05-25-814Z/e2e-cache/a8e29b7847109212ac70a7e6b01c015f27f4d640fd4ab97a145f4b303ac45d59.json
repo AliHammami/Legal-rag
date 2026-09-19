@@ -1,0 +1,87 @@
+{
+  "questionId": "q382",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 2427 prévoit que le créancier hypothécaire inscrit pour un capital produisant intérêts et arrérages peut être colloqué :\n\n- pour **trois années d’intérêts et d’arrérages seulement**, au même rang que le principal ;\n- pour les intérêts et arrérages dépassant ces trois années, au moyen d’**inscriptions particulières**, prenant hypothèque à compter de leur date.\n\nToutefois, lorsque l’hypothèque garantit un **prêt viager** défini au I de l’article L. 315-1 du code de la consommation, le créancier peut être colloqué pour **la totalité des intérêts**, au même rang que le principal.\n\nLe contexte fourni ne contient aucune information sur les compétences de l’autorité saisie des amendes au titre de l’article L. 171-3 du code monétaire et financier. Il n’est donc pas possible de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2427"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.97582399938256,
+      "vectorSearchMs": 1033.9058479992673,
+      "jinaRerankingMs": 377.56081999931484,
+      "mappingMs": 0.03119399957358837,
+      "totalMs": 1612.5079300003126,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010192000307142735,
+      "contextBuilderMs": 0.009664000011980534,
+      "generationMs": 1950.0663700001314,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3562.6031759995967
+    },
+    "judge": {
+      "questionId": "q382",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement le régime de l'article 2427 : trois années au rang du principal, inscriptions particulières pour le surplus, et totalité des intérêts au même rang en cas de prêt viager. Elle ne répond toutefois pas à la seconde question relative à l'article L. 171-3, alors que la réponse attendue indique que les amendes sont prononcées par l'autorité compétente selon les conditions du code de la consommation. Cette omission rend la réponse incomplète et ne satisfait pas l'attente d'une réponse complète. En revanche, toutes les affirmations substantielles formulées sont directement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour le régime de colloque prévu à l’article 2427 : limite de trois années, inscriptions particulières pour le surplus et exception relative au prêt viager. Elle ne contient toutefois ni le texte de l’article L. 315-1 ni celui de l’article L. 171-3, alors que ces deux éléments font partie de la question, ce qui laisse des sources importantes manquantes. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes par l’article 2427, et son constat d’absence d’information sur les amendes correspond au périmètre du contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "L’article 2427 prévoit que :\n\n- le créancier hypothécaire inscrit pour un capital produisant intérêts et arrérages est colloqué, au même rang que le principal, pour **trois années seulement** d’intérêts et d’arrérages ;\n- pour les intérêts et arrérages au-delà de ces trois années, des **inscriptions particulières** doivent être prises ; elles prennent rang à compter de leur date ;\n- exception : lorsque l’hypothèque garantit un **prêt viager** défini au I de l’article L. 315-1 du code de la consommation, le créancier peut être colloqué, au même rang que le principal, pour **la totalité des intérêts**.\n\nLe contexte ne contient aucune information sur les compétences de l’autorité chargée des amendes au titre de l’article L. 171-3 du code monétaire et financier. Il n’est donc pas possible de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2427"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1131.479185000062,
+      "routingCalls": 1,
+      "embeddingMs": 276.0765810003504,
+      "vectorSearchMs": 580.7489750003442,
+      "jinaRerankingMs": 312.7816040003672,
+      "mappingMs": 0.04016599990427494,
+      "totalMs": 2301.1928679998964,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012314999476075172,
+      "contextBuilderMs": 0.009271000511944294,
+      "generationMs": 2208.0452789999545,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4509.270475000143
+    },
+    "judge": {
+      "questionId": "q382",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément le régime de l’article 2427, y compris l’exception du prêt viager. Elle ne fournit toutefois pas la compétence prévue à l’article L. 171-3, qui constitue une partie substantielle de la question. Cette omission est justifiée par l’absence de cette disposition dans le contexte et les affirmations formulées sont entièrement étayées par le contexte fourni. Néanmoins, l’indicateur attendait une réponse sans abstention : la réponse refuse explicitement de traiter la seconde partie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 2427 et permet d’étayer l’ensemble des affirmations de la réponse sur la limitation à trois années, les inscriptions particulières et l’exception du prêt viager. En revanche, elle ne contient aucune disposition relative à l’article L. 171-3 du code monétaire et financier : elle est donc seulement partiellement pertinente pour la question composée, dont une partie substantielle manque. La réponse ne formule pas d’affirmation de fond non couverte sur cet article, mais constate l’absence d’information dans le contexte, ce que le corpus fourni permet de constater."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,99 @@
+{
+  "questionId": "q333",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas l’article L455-1 ni les conditions propres à la cessation de plein droit des mesures de suspension qu’il prévoit. Il ne permet donc pas de répondre suffisamment à cette question.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "443"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-82"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-53"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 167.6807989999652,
+      "vectorSearchMs": 750.9135339995846,
+      "jinaRerankingMs": 330.2118629999459,
+      "mappingMs": 0.06043800059705973,
+      "totalMs": 1248.910447999835,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.022400000132620335,
+      "contextBuilderMs": 0.049622999504208565,
+      "generationMs": 1613.130189999938,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2862.139314999804
+    },
+    "judge": {
+      "questionId": "q333",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de répondre alors que la question appelle les conditions précises de cessation : absence de décision de la chambre de l’instruction ou de la cour d’appel dans le délai d’un mois, et au plus tard quarante jours après le prononcé. Elle est en revanche correctement fondée sur le contexte fourni, qui ne contient pas l’article L455-1 ni ces conditions."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne contiennent pas l'article L455-1 ni les délais permettant de répondre directement à la question. Elles sont donc insuffisantes pour une réponse de fond, mais elles concernent toutes des fins ou cessations de mesures/suspensions dans d'autres régimes et permettent de constater que le contexte ne fournit pas les conditions propres à l'article visé. Elles couvrent ainsi entièrement l'affirmation d'abstention de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de répondre précisément à cette question : il ne mentionne pas l’article L. 455-1 ni les conditions de cessation de plein droit des mesures qu’il prévoit.\n\nIl indique seulement que les droits de résiliation suspendus peuvent être exercés à l’expiration de la période de suspension, et exceptionnellement avant cette expiration lorsque le collège de résolution avise que les droits et engagements concernés ne seront ni transférés ni soumis à une mesure de renflouement interne.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L613-56-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 11143.277754999697,
+      "routingCalls": 1,
+      "embeddingMs": 183.29016700014472,
+      "vectorSearchMs": 220.50028500054032,
+      "jinaRerankingMs": 316.3924259999767,
+      "mappingMs": 0.03206900041550398,
+      "totalMs": 11863.52922900021,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017506000585854053,
+      "contextBuilderMs": 0.009122999384999275,
+      "generationMs": 2350.609917999245,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 14214.175590000115
+    },
+    "judge": {
+      "questionId": "q333",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les conditions de cessation de plein droit attendues (absence de décision dans le délai d’un mois et, au plus tard, quarante jours après le prononcé). Elle refuse de répondre alors qu’une réponse était attendue. En revanche, son constat que le contexte ne contient pas l’article L. 455-1 et sa synthèse des règles figurant dans le contexte sont fidèles à ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source ne traite pas de l’article L. 455-1 ni de la cessation de plein droit des mesures de suspension : elle ne permet donc pas de répondre directement à la question. Elle est toutefois suffisamment hors du périmètre visé pour étayer le constat de la réponse selon lequel le contexte fourni ne contient pas les règles demandées. Les affirmations effectivement formulées dans la réponse sur les droits de résiliation suspendus, leur exercice à l’expiration de la suspension et l’exception liée à l’avis du collège de résolution sont couvertes par la source."
+    }
+  },
+  "failureStage": "generation"
+}

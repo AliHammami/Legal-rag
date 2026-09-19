@@ -1,0 +1,91 @@
+{
+  "questionId": "q198",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les critères sont :\n\n- le **total du bilan** ;\n- le **montant net du chiffre d’affaires** ;\n- le **nombre moyen de salariés employés au cours de l’exercice**.\n\nLes seuils sont les suivants :\n\n| Catégorie | Total du bilan | Chiffre d’affaires net | Salariés moyens |\n|---|---:|---:|---:|\n| Micro-entreprise | 450 000 € | 900 000 € | 10 |\n| Petite entreprise | 7 500 000 € | 15 000 000 € | 50 |\n| Moyenne et grande entreprise | 25 000 000 € | 50 000 000 € | 250 |\n\nLes seuils sont réputés franchis à la clôture de **deux exercices consécutifs**, sur la base des derniers comptes annuels arrêtés.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "D230-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.62656100001186,
+      "vectorSearchMs": 619.1718580001034,
+      "jinaRerankingMs": 527.3262959998101,
+      "mappingMs": 0.03937900019809604,
+      "totalMs": 1341.2380639999174,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010245000012218952,
+      "contextBuilderMs": 0.007916999980807304,
+      "generationMs": 2108.783881000243,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3450.0602370002307
+    },
+    "judge": {
+      "questionId": "q198",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois critères (bilan, chiffre d’affaires net, effectif moyen) et les informations supplémentaires données sont conformes au contexte. Elle omet toutefois l’élément essentiel de l’article L. 230-1 selon lequel la taille est déterminée à partir de deux de ces trois critères. La formulation sur les salariés « au cours de l’exercice » est bien supportée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source D230-1 est directement pertinente : elle énonce les trois critères mentionnés (total du bilan, chiffre d’affaires net et nombre moyen de salariés), les seuils par catégorie et la règle des deux exercices consécutifs. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée, y compris la formulation relative aux salariés employés au cours de l’exercice."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 230-1, la taille d’une société est déterminée au regard de trois critères :\n\n- le total du bilan ;\n- le montant net du chiffre d’affaires ;\n- le nombre moyen de salariés employés au cours de l’exercice.\n\nLa catégorie dépend du dépassement ou du non-dépassement des seuils d’au moins deux de ces trois critères.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "D230-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L230-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4278.946090000216,
+      "routingCalls": 1,
+      "embeddingMs": 194.43304599961266,
+      "vectorSearchMs": 200.61569499969482,
+      "jinaRerankingMs": 538.9660210004076,
+      "mappingMs": 0.04206399992108345,
+      "totalMs": 5213.0328569998965,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017285000067204237,
+      "contextBuilderMs": 0.025870999787002802,
+      "generationMs": 1135.6152630001307,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6348.700341000222
+    },
+    "judge": {
+      "questionId": "q198",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les trois critères prévus par l’article L. 230-1 et précise correctement que la qualification dépend du dépassement ou non-dépassement d’au moins deux de ces trois seuils. Elle est pleinement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 230-1 et énonce les trois critères ainsi que la règle du dépassement ou du non-dépassement des seuils d’au moins deux d’entre eux. La source 1 est également pertinente, car elle précise les seuils et confirme notamment l’appréciation du nombre moyen de salariés au cours de l’exercice. Les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

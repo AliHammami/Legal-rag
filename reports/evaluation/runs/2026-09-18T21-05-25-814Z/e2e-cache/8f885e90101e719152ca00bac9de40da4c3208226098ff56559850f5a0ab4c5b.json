@@ -1,0 +1,119 @@
+{
+  "questionId": "q011",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Si la question vise l’article **213-1**, les personnes physiques encourent également :\n\n1. **Interdiction des droits civiques, civils et de famille** : durée maximale de **15 ans**.  \n2. **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale concernée** : durée maximale de **10 ans** pour l’interdiction temporaire.  \n3. **Interdiction de séjour** : durée maximale de **15 ans**.  \n4. **Confiscation** de tout ou partie des biens appartenant au condamné ou dont il a la libre disposition, sous réserve des droits du propriétaire de bonne foi : **aucune durée maximale n’est précisée**, puisqu’il s’agit d’une confiscation.  \n5. **Interdiction d’exercer une profession commerciale ou industrielle**, ou de diriger, administrer, gérer ou contrôler une entreprise ou société commerciale : la durée maximale **n’est pas précisée dans l’extrait fourni**.\n\nLes interdictions d’exercice prévues aux 2° et 5° peuvent être **prononcées cumulativement**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "213-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "215-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-29"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.17523399999482,
+      "vectorSearchMs": 713.1319539999822,
+      "jinaRerankingMs": 584.0129929999821,
+      "mappingMs": 0.050724999979138374,
+      "totalMs": 1486.407383999991,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01392399999895133,
+      "contextBuilderMs": 0.054952000005869195,
+      "generationMs": 3527.7295860000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5014.2167639999825
+    },
+    "judge": {
+      "questionId": "q011",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les cinq peines prévues à l’article 213-1 : interdiction des droits civiques (15 ans), interdiction d’exercer une fonction ou activité liée à l’infraction (10 ans), interdiction de séjour (15 ans), confiscation, et interdiction d’exercer ou de gérer une activité commerciale ou industrielle. Elle indique correctement l’absence de durée maximale explicitement précisée pour la confiscation et pour l’interdiction commerciale dans l’extrait, ainsi que le cumul possible des interdictions d’exercice."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 213-1) est directement pertinente : elle énumère précisément les cinq peines applicables aux personnes physiques pour les infractions du sous-titre, les maxima de 15 ans, 10 ans et 15 ans lorsqu’ils sont prévus, ainsi que le cumul des interdictions d’exercice. Elle couvre également les précisions de la réponse selon lesquelles aucune durée maximale n’est explicitement indiquée dans cet extrait pour la confiscation et pour l’interdiction commerciale. Les autres sources ne sont pas nécessaires à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas d’identifier avec certitude le « sous-titre » visé. Les deux dispositions correspondantes prévoient notamment :\n\n### Article 213-1\nLes personnes physiques encourent :\n\n- l’interdiction des droits civiques, civils et de famille : **15 ans maximum** ;\n- l’interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale concernée : **10 ans maximum** pour l’interdiction temporaire ;\n- l’interdiction de séjour : **15 ans maximum** ;\n- la confiscation de tout ou partie des biens : **aucune durée maximale indiquée** ;\n- l’interdiction d’exercer certaines fonctions, professions ou activités commerciales : **aucune durée maximale précisée dans le texte**.\n\nLes interdictions d’exercice peuvent être prononcées cumulativement.\n\n### Article 215-1\nSont également encourues :\n\n- l’interdiction des droits civiques, civils et de famille : **durée maximale non précisée** ;\n- l’interdiction d’exercer une fonction publique : **durée maximale non précisée** ;\n- l’interdiction de séjour : **durée maximale non précisée** ;\n- la confiscation des biens : **aucune durée**, car il s’agit d’une mesure de confiscation ;\n- la confiscation du matériel ayant servi à commettre l’infraction : **aucune durée** ;\n- l’interdiction d’exercer une fonction publique et l’activité de prestataire de formation professionnelle continue : **5 ans** ;\n- les autres interdictions professionnelles, commerciales ou de gestion : **durée maximale non précisée dans le texte**.\n\nCes interdictions d’exercice peuvent également être prononcées cumulativement.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "213-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "215-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-29"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.0356090000132,
+      "routingCalls": 1,
+      "embeddingMs": 181.4064880000078,
+      "vectorSearchMs": 57.85321000000113,
+      "jinaRerankingMs": 553.8541719999921,
+      "mappingMs": 0.03492000000551343,
+      "totalMs": 2123.2149510000017,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010846000019228086,
+      "contextBuilderMs": 0.02752800000598654,
+      "generationMs": 4478.525179999997,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6601.78787
+    },
+    "judge": {
+      "questionId": "q011",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les peines et durées maximales de l’article 213-1 : 15 ans pour les droits civiques, civils et de famille et le séjour, 10 ans pour l’interdiction temporaire d’exercice, confiscation, interdictions professionnelles/commerciales et possibilité de cumul. Elle ajoute toutefois une présentation de l’article 215-1, non nécessaire au regard de la référence, ce qui rend la réponse plus ambiguë et moins ciblée. Les affirmations sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes : elles énumèrent précisément les peines encourues par les personnes physiques au titre des sous-titres visés par les articles 213-1 et 215-1. Elles permettent d'étayer les durées expressément fixées (15 ans, 10 ans et 5 ans), les confiscations, les interdictions professionnelles ou commerciales et leur possible cumul. Les constatations selon lesquelles certaines durées ne sont pas précisées dans le texte sont également vérifiables à la lecture de ces dispositions, qui renvoient alors aux modalités d'autres articles."
+    }
+  },
+  "failureStage": "none"
+}

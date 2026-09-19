@@ -1,0 +1,95 @@
+{
+  "questionId": "q362",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les congés de formation des salariés exerçant des responsabilités syndicales sont encadrés par plusieurs limites :\n\n- chaque salarié ne peut prendre plus de **18 jours de congé par an** à ce titre ;\n- le nombre total de jours de congé pris annuellement dans l’établissement est plafonné par voie réglementaire, en fonction de l’effectif ;\n- un plafond spécifique est fixé pour les jours utilisables par les salariés exerçant des responsabilités syndicales ;\n- un pourcentage maximal de salariés pouvant être simultanément absents est également prévu.\n\nLe contexte fourni ne contient aucune information sur les conditions dans lesquelles une juridiction peut **ajourner le prononcé d’une peine**. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 277.99108499940485,
+      "vectorSearchMs": 1231.0524190003052,
+      "jinaRerankingMs": 266.56434800010175,
+      "mappingMs": 0.03873200062662363,
+      "totalMs": 1775.6889100000262,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010912000201642513,
+      "contextBuilderMs": 0.018691000528633595,
+      "generationMs": 2468.134827000089,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4243.866167000495
+    },
+    "judge": {
+      "questionId": "q362",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les limites figurant dans le contexte pour les congés de formation syndicale, y compris la limite individuelle de 18 jours, les plafonds dépendant de l'effectif et l'absence simultanée. Elle ne répond toutefois pas aux conditions d'ajournement du prononcé de la peine, qui constituent une partie essentielle de la question. Son constat selon lequel cette information ne figure pas dans le contexte est fondé, mais l'attente n'était pas une abstention sur cette partie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les limites des congés de formation syndicale : la limite individuelle de dix-huit jours est établie par L2145-1, et L2145-8 couvre les plafonds réglementaires liés à l'effectif, les jours réservés aux responsables syndicaux et l'absence simultanée. Aucune source ne porte sur l'ajournement du prononcé d'une peine, ce qui rend le jeu de sources insuffisant pour répondre intégralement à la question, mais il étaye le constat de la réponse selon lequel le contexte fourni ne contient pas cette information."
+    }
+  },
+  "routing": {
+    "answer": "Les congés de formation des salariés exerçant des fonctions ou responsabilités syndicales sont encadrés par deux limites :\n\n- chaque salarié ne peut prendre plus de **18 jours de congé par an** à ce titre ;\n- un arrêté fixe, selon l’effectif de l’établissement :\n  - le nombre maximal total de jours de congé utilisables par l’ensemble des salariés ;\n  - le nombre maximal de jours pouvant être pris par les salariés exerçant des responsabilités syndicales ;\n  - le pourcentage maximal de salariés pouvant être absents simultanément.\n\nLe contexte fourni ne contient aucune information sur les conditions dans lesquelles une juridiction peut **ajourner le prononcé d’une peine**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1225.658195999451,
+      "routingCalls": 1,
+      "embeddingMs": 255.53694600053132,
+      "vectorSearchMs": 596.3217310002074,
+      "jinaRerankingMs": 274.1951120002195,
+      "mappingMs": 0.044514999724924564,
+      "totalMs": 2351.7861489998177,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013162000104784966,
+      "contextBuilderMs": 0.056909999810159206,
+      "generationMs": 2038.193750999868,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4390.060408999212
+    },
+    "judge": {
+      "questionId": "q362",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les limites prévues par les articles du Code du travail présents dans le contexte, notamment le plafond individuel de dix-huit jours et les plafonds réglementaires dépendant de l’effectif. En revanche, elle ne répond pas aux conditions de l’ajournement du prononcé de la peine, pourtant essentielles à la question et indiquées dans la référence. Cette absence est correctement justifiée au regard du contexte effectivement fourni, qui ne contient aucune disposition pénale sur l’ajournement ; la réponse est donc pleinement fondée sur ce contexte, mais incomplète par rapport à la question globale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les limites des congés de formation syndicale : L2145-1 couvre le plafond individuel de dix-huit jours et L2145-8 couvre les plafonds réglementaires liés à l'effectif ainsi que les absences simultanées. Aucune source ne traite de l'ajournement pénal, ce qui rend les sources insuffisantes pour répondre intégralement à la question, mais elles permettent de soutenir le constat de la réponse selon lequel le contexte fourni ne contient pas cette information. Toutes les affirmations importantes effectivement formulées dans la réponse sont couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

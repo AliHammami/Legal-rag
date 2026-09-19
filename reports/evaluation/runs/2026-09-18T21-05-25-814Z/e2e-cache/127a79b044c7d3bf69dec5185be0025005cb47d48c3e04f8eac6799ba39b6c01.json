@@ -1,0 +1,87 @@
+{
+  "questionId": "q035",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 111-1, les infractions pénales sont classées selon leur gravité en trois catégories :\n\n- les crimes ;\n- les délits ;\n- les contraventions.\n\nLa portée juridique précise de cette classification n’est pas indiquée dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 156.55112000007648,
+      "vectorSearchMs": 597.8115199999884,
+      "jinaRerankingMs": 552.1624229999725,
+      "mappingMs": 0.07397600007243454,
+      "totalMs": 1306.6349000000628,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015890999929979444,
+      "contextBuilderMs": 0.009707999997772276,
+      "generationMs": 1409.1577810000163,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2715.8320229999954
+    },
+    "judge": {
+      "questionId": "q035",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la classification prévue par l’article 111-1 (crimes, délits, contraventions selon leur gravité) et indique avec prudence que le contexte ne précise pas les conséquences juridiques de cette classification. Elle est intégralement fondée sur le seul extrait fourni et répond à la question sans s’abstenir indûment."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 111-1 et établit expressément la classification des infractions selon leur gravité en crimes, délits et contraventions. Elle permet aussi de soutenir le constat prudent de la réponse selon lequel aucune portée juridique ou conséquence spécifique de cette classification n’est précisée dans l’extrait fourni."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 111-1, les infractions pénales sont classées selon leur gravité en trois catégories :\n\n- les crimes ;\n- les délits ;\n- les contraventions.\n\nLe contexte fourni indique seulement que cette classification repose sur la gravité des infractions. Il ne précise pas sa portée juridique concrète ni les conséquences attachées à chaque catégorie.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 784.5245740000391,
+      "routingCalls": 1,
+      "embeddingMs": 173.86740000010468,
+      "vectorSearchMs": 31.34870799991768,
+      "jinaRerankingMs": 546.8623379999772,
+      "mappingMs": 0.03118200006429106,
+      "totalMs": 1536.6670369999483,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010513999965041876,
+      "contextBuilderMs": 0.010794000001624227,
+      "generationMs": 1633.6217200000538,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3170.318242999958
+    },
+    "judge": {
+      "questionId": "q035",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la classification prévue par l’article 111-1 (crimes, délits, contraventions selon la gravité). Elle traite correctement la portée juridique au regard du seul contexte disponible : celui-ci énonce la typologie fondée sur la gravité, sans détailler les conséquences propres à chaque catégorie. Toutes les affirmations importantes sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 111-1 et énonce exactement la classification selon la gravité en crimes, délits et contraventions. Elle couvre également le constat prudent de la réponse selon lequel le contexte ne détaille pas de portée juridique concrète ou de conséquences propres à chaque catégorie."
+    }
+  },
+  "failureStage": "none"
+}

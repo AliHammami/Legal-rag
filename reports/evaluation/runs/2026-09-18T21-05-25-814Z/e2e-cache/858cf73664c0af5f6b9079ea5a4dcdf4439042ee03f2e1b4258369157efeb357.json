@@ -1,0 +1,87 @@
+{
+  "questionId": "q377",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 1222-10 du Code du travail, l’employeur doit, envers un salarié en télétravail :\n\n1. L’informer des restrictions concernant l’usage des équipements, outils informatiques ou services de communication électronique, ainsi que des sanctions encourues en cas de non-respect ;\n2. Lui accorder une priorité pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences, et l’informer des postes disponibles ;\n3. Organiser chaque année un entretien portant notamment sur ses conditions d’activité et sa charge de travail.\n\nLe contexte fourni ne contient aucune information sur les conditions d’acquisition de la réhabilitation d’une personne condamnée selon le Code pénal. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 366.30838499963284,
+      "vectorSearchMs": 1042.409768000245,
+      "jinaRerankingMs": 349.0337529992685,
+      "mappingMs": 0.03059800062328577,
+      "totalMs": 1757.8253430007026,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010712999850511551,
+      "contextBuilderMs": 0.010778000578284264,
+      "generationMs": 1967.489564999938,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3725.3648730004206
+    },
+    "judge": {
+      "questionId": "q377",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les trois obligations de l’article L. 1222-10, conformément au contexte. Elle ne répond toutefois pas au fond à la seconde partie sur la réhabilitation, alors que la réponse de référence fournit les règles de l’article 133-13 ; elle est donc incomplète et seulement partiellement correcte au regard de la question globale. L’abstention sur cette partie est justifiée par l’absence totale de contexte pénal, mais la réponse répond bien réellement à la partie documentée de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 1222-10 et est pleinement pertinente pour les trois obligations citées envers le télétravailleur. Aucune source pénale n'est fournie pour traiter au fond la réhabilitation, ce qui laisse une partie importante de la question sans source directe. Toutefois, la réponse générée s'abstient explicitement sur ce point en constatant l'absence d'information dans le contexte : toutes ses affirmations substantielles sont donc couvertes par la source disponible ou par ce constat d'absence."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 1222-10 du Code du travail, l’employeur doit envers le salarié en télétravail :\n\n1. L’informer des restrictions concernant l’utilisation des équipements, outils informatiques ou services de communication électronique, ainsi que des sanctions encourues en cas de non-respect ;\n2. Lui donner priorité pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences, et l’informer des postes disponibles ;\n3. Organiser chaque année un entretien portant notamment sur ses conditions d’activité et sa charge de travail.\n\nLe contexte fourni ne contient aucune information sur les conditions d’acquisition de la réhabilitation d’une personne condamnée selon le Code pénal. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 782.5867619998753,
+      "routingCalls": 1,
+      "embeddingMs": 177.01590900029987,
+      "vectorSearchMs": 404.30323100090027,
+      "jinaRerankingMs": 466.75808600056916,
+      "mappingMs": 0.07356500066816807,
+      "totalMs": 1830.7732750000432,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02048799954354763,
+      "contextBuilderMs": 0.015935000032186508,
+      "generationMs": 1956.574032000266,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3787.3923819996417
+    },
+    "judge": {
+      "questionId": "q377",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue exactement les trois obligations de l’article L. 1222-10 figurant dans le contexte. En revanche, elle ne répond pas au volet relatif à la réhabilitation pénale, alors que la réponse attendue devait aussi préciser son acquisition de plein droit après absence de nouvelle condamnation pendant des délais variables (et doublés en récidive). Toutes les affirmations effectivement formulées sont intégralement étayées par le contexte fourni, mais l’abstention sur la seconde partie est injustifiée au regard de l’indicateur EXPECTED ABSTENTION=false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente et exhaustive pour les երեք obligations de l’employeur envers le télétravailleur énoncées dans la réponse (information sur les restrictions et sanctions, priorité pour un poste sans télétravail, entretien annuel). Elle ne fournit aucune règle du code pénal sur la réhabilitation : elle est donc insuffisante pour répondre intégralement à la question, qui comporte aussi ce volet pénal. Néanmoins, elle couvre toutes les affirmations effectivement formulées par la réponse, y compris le constat que le contexte fourni ne contient pas d’information sur la réhabilitation."
+    }
+  },
+  "failureStage": "generation"
+}

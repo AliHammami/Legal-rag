@@ -1,0 +1,87 @@
+{
+  "questionId": "q321",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L412-10 prévoit que :\n\n- les dénominations désignant des denrées alimentaires d’origine animale ne peuvent pas être utilisées pour **décrire, commercialiser ou promouvoir** des denrées contenant des protéines végétales ;\n- un **décret** fixe la proportion de protéines végétales au-delà de laquelle cette dénomination devient interdite ;\n- ce décret précise également les **modalités d’application** de l’article ainsi que les **sanctions** en cas de manquement.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L412-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 204.03904100041837,
+      "vectorSearchMs": 959.7938470002264,
+      "jinaRerankingMs": 313.44565900042653,
+      "mappingMs": 0.0359680000692606,
+      "totalMs": 1477.349401999265,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010511999949812889,
+      "contextBuilderMs": 0.008280999958515167,
+      "generationMs": 1946.5356009993702,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3423.912324999459
+    },
+    "judge": {
+      "questionId": "q321",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les trois éléments de l’article : interdiction d’utiliser les dénominations animales pour décrire, commercialiser ou promouvoir des denrées comportant des protéines végétales ; fixation par décret d’un seuil ; précisions réglementaires sur l’application et les sanctions. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L412-10 demandé. Elle est précisément pertinente et couvre l’ensemble des affirmations importantes de la réponse générée : l’interdiction d’utiliser certaines dénominations pour des denrées comportant des protéines végétales, la fixation par décret d’un seuil de protéines végétales, ainsi que les modalités d’application et les sanctions."
+    }
+  },
+  "routing": {
+    "answer": "L’article L412-10 prévoit que :\n\n- les dénominations désignant des denrées alimentaires d’origine animale ne peuvent pas être utilisées pour **décrire, commercialiser ou promouvoir** des denrées contenant des protéines végétales ;\n- un **décret** fixe le seuil de protéines végétales au-delà duquel l’utilisation de ces dénominations est interdite ;\n- ce décret précise également les **modalités d’application** de l’article ainsi que les **sanctions** applicables en cas de manquement.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L412-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 939.5426570000127,
+      "routingCalls": 1,
+      "embeddingMs": 213.83306199964136,
+      "vectorSearchMs": 65.69257600046694,
+      "jinaRerankingMs": 348.83600500039756,
+      "mappingMs": 0.048555999994277954,
+      "totalMs": 1567.992118999362,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01817499939352274,
+      "contextBuilderMs": 0.01220100000500679,
+      "generationMs": 1318.885305000469,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2886.935628999956
+    },
+    "judge": {
+      "questionId": "q321",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’interdiction d’utiliser des dénominations d’origine animale pour des denrées comportant des protéines végétales, ainsi que le rôle du décret concernant le seuil, les modalités d’application et les sanctions. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L412-10 et répond exactement à la question. Elle couvre l’interdiction d’employer des dénominations de denrées d’origine animale pour des produits comportant des protéines végétales, le seuil fixé par décret, ainsi que les modalités d’application et les sanctions."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q193",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La liquidation des sociétés est régie par les dispositions prévues dans leurs statuts.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L237-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 175.4097949997522,
+      "vectorSearchMs": 606.1594560001977,
+      "jinaRerankingMs": 489.94772400008515,
+      "mappingMs": 0.038511999882757664,
+      "totalMs": 1271.5823450000025,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011111999861896038,
+      "contextBuilderMs": 0.008781999815255404,
+      "generationMs": 1070.1987470001914,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2341.8088349997997
+    },
+    "judge": {
+      "questionId": "q193",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la règle de l’article : la liquidation est régie par les dispositions statutaires. L’omission de la réserve introductive (« sous réserve des dispositions du présent chapitre ») est déjà intégrée dans la formulation de la question et ne retire pas d’élément essentiel à la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L237-1 et répond précisément à la question. Elle couvre l’affirmation de la réponse générée selon laquelle la liquidation est régie par les dispositions des statuts ; la réserve relative aux dispositions du chapitre figure également dans la source et est déjà formulée dans la question."
+    }
+  },
+  "routing": {
+    "answer": "La liquidation des sociétés est régie par les dispositions contenues dans les statuts.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L237-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 972.7697899998166,
+      "routingCalls": 1,
+      "embeddingMs": 165.16138199996203,
+      "vectorSearchMs": 167.3515119999647,
+      "jinaRerankingMs": 483.7147039999254,
+      "mappingMs": 0.06537700025364757,
+      "totalMs": 1789.0933570000343,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012304999865591526,
+      "contextBuilderMs": 0.009194000158458948,
+      "generationMs": 1293.8785820002668,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3083.0047200000845
+    },
+    "judge": {
+      "questionId": "q193",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la règle énoncée : la liquidation est régie par les dispositions statutaires. La réserve relative aux dispositions particulières du chapitre figure dans la question et le contexte ; son omission explicite est mineure et n'altère pas la réponse à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L237-1 et énonce précisément que, sous réserve des dispositions du chapitre, la liquidation est régie par les dispositions contenues dans les statuts. Elle couvre l’affirmation centrale de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

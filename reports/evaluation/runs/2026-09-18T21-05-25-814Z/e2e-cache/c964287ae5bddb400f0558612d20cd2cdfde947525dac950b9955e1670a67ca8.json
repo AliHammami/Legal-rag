@@ -1,0 +1,95 @@
+{
+  "questionId": "q263",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour une personne morale, le manquement aux articles 3 à 5 du règlement (UE) n° 2015/751 est passible d’une amende administrative pouvant atteindre **15 000 €**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L361-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.3071039998904,
+      "vectorSearchMs": 670.1673919996247,
+      "jinaRerankingMs": 261.8891790001653,
+      "mappingMs": 0.04171099979430437,
+      "totalMs": 1148.4406809997745,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017437000293284655,
+      "contextBuilderMs": 0.016733000054955482,
+      "generationMs": 1044.7942870003171,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2193.2799349999987
+    },
+    "judge": {
+      "questionId": "q263",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement qu’une personne morale encourt une amende administrative pouvant atteindre 15 000 € pour les manquements aux articles 3 à 5. Cette information est explicitement prévue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L361-1 vise directement les manquements au règlement (UE) n° 2015/751 et prévoit expressément, pour les articles 3 à 5, une amende administrative maximale de 15 000 € pour une personne morale. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Pour une personne morale, le manquement aux articles 3 à 5 du règlement (UE) n° 2015/751 est passible d’une amende administrative pouvant atteindre **15 000 €**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L361-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L561-40"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L171-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1230.7873990000226,
+      "routingCalls": 1,
+      "embeddingMs": 218.2817570003681,
+      "vectorSearchMs": 113.94187199976295,
+      "jinaRerankingMs": 328.2538510002196,
+      "mappingMs": 0.038188000209629536,
+      "totalMs": 1891.3805359997787,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016359999775886536,
+      "contextBuilderMs": 0.031417000107467175,
+      "generationMs": 1194.4236840000376,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3085.860785999801
+    },
+    "judge": {
+      "questionId": "q263",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement l’amende administrative maximale de 15 000 € applicable à une personne morale pour les manquements aux articles 3 à 5 du règlement. Cette information est explicitement prévue par l’article L361-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise expressément les manquements aux articles 3 à 5 du règlement (UE) n° 2015/751 et fixe, pour une personne morale, une amende administrative maximale de 15 000 €. Elle couvre intégralement l'affirmation de la réponse générée. Les sources 2 et 3 sont hors du champ précis de la question mais ne compromettent pas la suffisance de la source 1."
+    }
+  },
+  "failureStage": "none"
+}

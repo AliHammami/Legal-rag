@@ -1,0 +1,95 @@
+{
+  "questionId": "q207",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les présidents, administrateurs, directeurs généraux ou gérants doivent :\n\n- **Mentionner dans le rapport présenté aux associés** toute prise de participation, au cours de l’exercice, dans une société ayant son siège en France, lorsque cette participation représente plus du vingtième, du dixième, du cinquième, du tiers ou de la moitié du capital ou des droits de vote, ainsi que toute prise de contrôle d’une telle société.\n- **Rendre compte, dans ce même rapport, de l’activité et des résultats** de la société, de ses filiales et des sociétés qu’elle contrôle, par branche d’activité.\n- **Inclure dans l’annexe** de la société le tableau prévu à l’article L. 233-15 concernant la situation des filiales et participations.\n\nLe défaut de ces mentions ou de ce tableau est puni d’une **amende de 18 000 euros**. L’article L. 247-1 vise également, pour la mention des prises de participation ou du contrôle, le seuil des **deux tiers** du capital ou des droits de vote.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L247-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 377.4435709998943,
+      "vectorSearchMs": 610.4325699997135,
+      "jinaRerankingMs": 547.4799379999749,
+      "mappingMs": 0.03099799994379282,
+      "totalMs": 1535.417795999907,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009488000068813562,
+      "contextBuilderMs": 0.013697999995201826,
+      "generationMs": 3233.0989739997312,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4768.549466999713
+    },
+    "judge": {
+      "questionId": "q207",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les trois obligations prévues (mention des participations ou prises de contrôle, compte rendu d’activité et de résultats par branche, tableau en annexe), les seuils applicables—including le seuil des deux tiers prévu par L. 247-1—et la sanction de 18 000 euros. Toutes ces affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L. 247-1) vise directement les dirigeants mentionnés, les obligations de mention des prises de participation ou de contrôle, le compte rendu par branche d'activité, l'inclusion du tableau de l'article L. 233-15 et l'amende de 18 000 euros, y compris le seuil des deux tiers. La source 2 (article L. 233-6) confirme les obligations de rapport relatives aux participations, au contrôle et aux résultats. Les affirmations importantes de la réponse sont ainsi directement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les présidents, administrateurs, directeurs généraux ou gérants doivent :\n\n- mentionner dans le rapport présenté aux associés toute prise de participation dans une société française dépassant certains seuils du capital ou des droits de vote : plus du vingtième, du dixième, du cinquième, du tiers, de la moitié — et, selon l’article L. 247-1, des deux tiers — ainsi que toute prise de contrôle ;\n- rendre compte, dans ce même rapport, de l’activité et des résultats de la société, de ses filiales et des sociétés qu’elle contrôle, par branche d’activité ;\n- lorsque la société établit des comptes consolidés, ces informations peuvent être incluses dans le rapport sur la gestion du groupe ;\n- inclure en annexe le tableau prévu à l’article L. 233-15 concernant la situation des filiales et participations.\n\nLe non-respect de ces obligations est puni, pour les dirigeants concernés, d’une amende de 18 000 euros.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L247-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.7724370001815,
+      "routingCalls": 1,
+      "embeddingMs": 219.1160539998673,
+      "vectorSearchMs": 183.5617110002786,
+      "jinaRerankingMs": 552.077603999991,
+      "mappingMs": 0.02459299983456731,
+      "totalMs": 2081.582335999701,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010803000070154667,
+      "contextBuilderMs": 0.012515000067651272,
+      "generationMs": 3436.1346470001154,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5517.747618999798
+    },
+    "judge": {
+      "questionId": "q207",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement l’ensemble des obligations visées : mention des prises de participation franchissant les seuils indiqués et des prises de contrôle, compte rendu de l’activité et des résultats par branche, possibilité d’inclusion dans le rapport de gestion du groupe en cas de comptes consolidés, et tableau annexe relatif aux filiales et participations. Elle indique aussi correctement l’amende de 18 000 euros. Toutes ces affirmations sont directement étayées par les articles L. 247-1 et L. 233-6 fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. L'article L. 247-1 couvre les obligations de mention des prises de participation et du contrôle, le compte rendu de l'activité et des résultats, l'annexe incluant le tableau de l'article L. 233-15, ainsi que l'amende de 18 000 euros. L'article L. 233-6 couvre les seuils de participation, le compte rendu par branche d'activité et la possibilité d'inclure ces informations dans le rapport sur la gestion du groupe en présence de comptes consolidés. Toutes les affirmations importantes de la réponse générée sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

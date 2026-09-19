@@ -1,0 +1,95 @@
+{
+  "questionId": "q436",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui. Les vices du consentement sont une cause de nullité relative du contrat.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1131"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 161.50535199977458,
+      "vectorSearchMs": 671.8406769996509,
+      "jinaRerankingMs": 212.30258200038224,
+      "mappingMs": 0.028097999282181263,
+      "totalMs": 1045.7045219996944,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01413000002503395,
+      "contextBuilderMs": 0.012763000093400478,
+      "generationMs": 1000.6387889999896,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2046.379081000574
+    },
+    "judge": {
+      "questionId": "q436",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse est juridiquement correcte et reprend exactement l'article 1131 fourni : les vices du consentement constituent une cause de nullité relative du contrat. Elle est donc pleinement fondée sur le contexte. Toutefois, l'abstention était attendue ; le modèle a répondu au fond au lieu de signaler que la question était hors périmètre du Code pénal."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 répond directement à la question et énonce exactement l’affirmation de la réponse générée : les vices du consentement constituent une cause de nullité relative du contrat. La source 1 est moins directe mais reste liée au régime des contrats. Malgré l’abstention attendue au regard du périmètre, les sources couvrent entièrement la réponse effectivement fournie."
+    }
+  },
+  "routing": {
+    "answer": "Oui. Les vices du consentement sont une cause de nullité relative du contrat.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1131"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.3282420001924,
+      "routingCalls": 1,
+      "embeddingMs": 151.50327599979937,
+      "vectorSearchMs": 57.15162200015038,
+      "jinaRerankingMs": 291.4704799996689,
+      "mappingMs": 0.020085999742150307,
+      "totalMs": 1421.5007450003177,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010084999725222588,
+      "contextBuilderMs": 0.013311999849975109,
+      "generationMs": 988.0331780007109,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2409.568839999847
+    },
+    "judge": {
+      "questionId": "q436",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse est juridiquement correcte et reprend exactement l'article 1131 fourni : les vices du consentement constituent une cause de nullité relative. Elle est complète pour cette question et entièrement fondée sur le contexte. Toutefois, l'abstention était attendue ; le modèle répond au lieu de signaler que la question est hors du périmètre du Code pénal ou que le contexte ne permet pas une réponse dans le périmètre attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et énonce exactement l'affirmation centrale de la réponse générée : les vices du consentement constituent une cause de nullité relative du contrat. La source 1 est accessoire, mais ne nuit pas à la pertinence globale. Malgré l'abstention attendue dans le cadre du périmètre Code pénal, les sources couvrent intégralement le contenu effectivement affirmé par la réponse."
+    }
+  },
+  "failureStage": "abstention"
+}

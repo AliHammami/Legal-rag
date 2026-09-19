@@ -1,0 +1,119 @@
+{
+  "questionId": "q345",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L722-1, la commission doit examiner la situation du débiteur, puis se prononcer sur la recevabilité de sa demande de traitement de surendettement.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L723-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R724-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 228.89225899986923,
+      "vectorSearchMs": 806.1529430001974,
+      "jinaRerankingMs": 257.03022600058466,
+      "mappingMs": 0.1148889996111393,
+      "totalMs": 1292.2311939997599,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.021333999931812286,
+      "contextBuilderMs": 0.032382999546825886,
+      "generationMs": 1040.8330560000613,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2333.1281469995156
+    },
+    "judge": {
+      "questionId": "q345",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la démarche prévue par l’article L722-1 : la commission examine la situation du débiteur puis statue sur la recevabilité de la demande. Ces deux éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l'article L722-1 et énonce exactement les deux démarches mentionnées dans la réponse générée : examen de la situation du débiteur et décision sur la recevabilité de la demande. Les autres sources sont cohérentes mais non nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L722-1, à la réception d’une demande de traitement de surendettement, la commission doit examiner la situation du débiteur et se prononcer sur la recevabilité de sa demande.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L723-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R724-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 794.9451080001891,
+      "routingCalls": 1,
+      "embeddingMs": 288.72577999997884,
+      "vectorSearchMs": 73.05537599977106,
+      "jinaRerankingMs": 267.0080800000578,
+      "mappingMs": 0.03891400061547756,
+      "totalMs": 1423.8432950004935,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011907000094652176,
+      "contextBuilderMs": 0.02111000008881092,
+      "generationMs": 1119.71719900053,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2543.602134999819
+    },
+    "judge": {
+      "questionId": "q345",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la démarche prévue par l’article L722-1 : la commission examine la situation du débiteur et statue sur la recevabilité de la demande. Ces deux éléments sont explicitement présents dans le contexte (source 3)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l’article L722-1 et répond exactement à la question : la commission examine la situation du débiteur puis se prononce sur la recevabilité de la demande. Elle couvre intégralement les deux affirmations de la réponse générée. Les autres sources sont cohérentes mais ne sont pas nécessaires."
+    }
+  },
+  "failureStage": "none"
+}

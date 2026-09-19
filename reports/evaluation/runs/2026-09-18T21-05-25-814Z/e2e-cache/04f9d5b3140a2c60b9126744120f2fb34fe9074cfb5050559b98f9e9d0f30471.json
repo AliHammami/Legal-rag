@@ -1,0 +1,99 @@
+{
+  "questionId": "q454",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les clauses limitatives ou exclusives de responsabilité sont, en principe, écartées lorsqu’elles concernent :\n\n- la responsabilité et les garanties des constructeurs visées aux articles 1792 à 1792-6 : elles sont réputées non écrites ;\n- la responsabilité du fait des produits défectueux : elles sont interdites et réputées non écrites.\n\nException : pour les dommages causés à des biens utilisés principalement à des fins professionnelles, les clauses conclues entre professionnels sont valables en matière de produits défectueux.\n\nEn revanche, la responsabilité du dépositaire mentionnée à l’article L. 214-11 ne peut jamais être exclue ou limitée contractuellement ; tout accord contraire est nul.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1792-5"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-14"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-11-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 178.96273999998812,
+      "vectorSearchMs": 610.7917319999542,
+      "jinaRerankingMs": 282.5721650000196,
+      "mappingMs": 0.025082999956794083,
+      "totalMs": 1072.3906210000277,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010368000017479062,
+      "contextBuilderMs": 0.02131600002758205,
+      "generationMs": 2207.4469040000113,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3279.879381000006
+    },
+    "judge": {
+      "questionId": "q454",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les règles particulières figurant dans le contexte pour les constructeurs, les produits défectueux et le dépositaire. Toutefois, la question est générale et le contexte ne permet pas d’énoncer une règle générale fiable sur toutes les clauses limitatives de responsabilité : la réponse répond donc de manière partielle et sans signaler cette limite. L’abstention était attendue, mais le modèle répond de façon affirmative."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour les trois régimes spéciaux effectivement énoncés dans la réponse (constructeurs, produits défectueux, dépositaire) et couvrent précisément chacune de ses affirmations, y compris l’exception entre professionnels et la nullité de l’accord contraire. Toutefois, la question étant générale et l’abstention attendue, ces sources particulières ne suffisent pas à établir une règle générale applicable aux clauses limitatives de responsabilité ni à justifier une réponse exhaustive."
+    }
+  },
+  "routing": {
+    "answer": "Les clauses limitatives de responsabilité sont, en principe, **réputées non écrites** :\n\n- lorsqu’elles excluent ou limitent les responsabilités prévues aux articles 1792, 1792-1 et 1792-2, ou les garanties des articles 1792-3 et 1792-6 ;\n- lorsqu’elles écartent ou limitent la solidarité prévue à l’article 1792-4 ;\n- en matière de produits défectueux, lorsqu’elles écartent ou limitent la responsabilité.\n\n**Exception :** en matière de produits défectueux, ces clauses sont valables lorsqu’elles sont conclues entre professionnels et concernent des dommages causés à des biens qui ne sont pas principalement destinés à l’usage ou à la consommation privée de la victime.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1792-5"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1022.1505170000019,
+      "routingCalls": 1,
+      "embeddingMs": 374.61382499994943,
+      "vectorSearchMs": 63.41027100000065,
+      "jinaRerankingMs": 238.9109429999953,
+      "mappingMs": 0.0247899999958463,
+      "totalMs": 1699.1424889999907,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009904999984428287,
+      "contextBuilderMs": 0.011962999997194856,
+      "generationMs": 2155.754111999995,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3854.9278659999836
+    },
+    "judge": {
+      "questionId": "q454",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les deux règles présentes dans le contexte, relatives aux contrats de construction (articles 1792 et suivants) et aux produits défectueux. Toutefois, la question est formulée de manière générale et ne précise pas le régime juridique concerné : il fallait signaler cette ambiguïté ou l'insuffisance du périmètre plutôt que présenter ces seules hypothèses comme la règle applicable à toutes les clauses limitatives de responsabilité. Les affirmations sont néanmoins entièrement appuyées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les deux régimes précis exposés dans la réponse : construction (article 1792-5) et produits défectueux (article 1245-14), et elles en couvrent toutes les affirmations, y compris l'exception entre professionnels. Toutefois, la question est générale et l'abstention était attendue en raison de l'absence de précision sur le régime concerné ; ces seules sources ne permettent pas d'établir une règle générale applicable à toutes les clauses limitatives de responsabilité ni de justifier suffisamment qu'il fallait répondre sans préciser le périmètre."
+    }
+  },
+  "failureStage": "abstention"
+}

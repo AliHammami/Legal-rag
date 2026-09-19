@@ -1,0 +1,103 @@
+{
+  "questionId": "q004",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.66505999999936,
+      "vectorSearchMs": 734.381892999998,
+      "jinaRerankingMs": 561.7793180000008,
+      "mappingMs": 0.03648200001043733,
+      "totalMs": 1506.048655999999,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.029259000002639368,
+      "contextBuilderMs": 0.026557000004686415,
+      "generationMs": 1281.4437590000016,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2787.582681
+    },
+    "judge": {
+      "questionId": "q004",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition du meurtre et la peine prévues à l’article 221-1. Ces deux affirmations sont explicitement présentes dans le contexte (source 2), et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 221-1 et énonce explicitement tant la définition (« donner volontairement la mort à autrui ») que la peine de trente ans de réclusion criminelle. Elle couvre donc intégralement les deux affirmations importantes de la réponse générée. Les autres sources sont connexes mais ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 690.3943730000028,
+      "routingCalls": 1,
+      "embeddingMs": 183.87780499999644,
+      "vectorSearchMs": 54.80079999999725,
+      "jinaRerankingMs": 648.4773380000115,
+      "mappingMs": 0.09615699999267235,
+      "totalMs": 1577.6998509999976,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02253299999574665,
+      "contextBuilderMs": 0.024536000011721626,
+      "generationMs": 984.5431209999952,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2562.317909000005
+    },
+    "judge": {
+      "questionId": "q004",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition et la peine prévues à l’article 221-1. Ces deux éléments sont explicitement présents dans le contexte fourni. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 221-1 et énonce explicitement tant la définition du meurtre (« donner volontairement la mort à autrui ») que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les deux affirmations importantes de la réponse générée. Les autres sources apportent un contexte sur des qualifications ou aggravations distinctes, sans être nécessaires."
+    }
+  },
+  "failureStage": "none"
+}

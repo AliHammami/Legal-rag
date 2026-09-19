@@ -1,0 +1,95 @@
+{
+  "questionId": "q052",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 521-2 prévoit les peines prévues à l’article 521-1 pour la pratique d’expériences ou de recherches sur des animaux sans respecter les prescriptions applicables localement.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "716-16"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.74213999998756,
+      "vectorSearchMs": 633.2107090000063,
+      "jinaRerankingMs": 526.6941289999522,
+      "mappingMs": 0.08192699996288866,
+      "totalMs": 1353.760750999907,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012574999942444265,
+      "contextBuilderMs": 0.01524999993853271,
+      "generationMs": 1119.0833189999685,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2472.879653999931
+    },
+    "judge": {
+      "questionId": "q052",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la sanction prévue : les peines de l’article 521-1. Elle répond directement à la question et est explicitement soutenue par le contexte, notamment la source 1 qui mentionne les prescriptions applicables localement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources portent directement sur l’article 521-2 et indiquent que la pratique d’expériences ou recherches sur des animaux en méconnaissance des prescriptions applicables est punie des peines prévues à l’article 521-1. La source 1 reprend expressément la formulation relative aux prescriptions applicables localement. Elles couvrent intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article 521-2 prévoit que cette pratique est punie des peines prévues à l’article 521-1. Le contexte ne précise pas la nature ni le quantum de ces peines.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "716-16"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.5496900000144,
+      "routingCalls": 1,
+      "embeddingMs": 173.16017400007695,
+      "vectorSearchMs": 30.52231600007508,
+      "jinaRerankingMs": 526.8452090000501,
+      "mappingMs": 0.03821799997240305,
+      "totalMs": 1652.1458499999717,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013121000025421381,
+      "contextBuilderMs": 0.01485599996522069,
+      "generationMs": 1522.3300520000048,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.51121399994
+    },
+    "judge": {
+      "questionId": "q052",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que l'article 521-2 renvoie aux peines prévues par l'article 521-1. Elle est directement étayée par les deux extraits du contexte. La précision selon laquelle le contexte ne donne pas le quantum de ces peines est également exacte au regard du contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement la règle de l’article 521-2 selon laquelle les expériences ou recherches sur les animaux réalisées sans respecter les prescriptions applicables sont punies des peines prévues à l’article 521-1. Elles couvrent intégralement l’affirmation principale de la réponse. Elles ne détaillent pas la nature ou le quantum des peines de l’article 521-1, ce qui soutient également le constat que le contexte ne les précise pas."
+    }
+  },
+  "failureStage": "none"
+}

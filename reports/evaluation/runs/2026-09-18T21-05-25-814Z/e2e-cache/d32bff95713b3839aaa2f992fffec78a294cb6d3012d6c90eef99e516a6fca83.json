@@ -1,0 +1,111 @@
+{
+  "questionId": "q430",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Dans la procédure devant la commission des sanctions, le demandeur dispose des droits suivants :\n\n- être convoqué par lettre recommandée avec demande d’avis de réception ;\n- être assisté ou représenté par la personne de son choix ;\n- présenter ses observations avant que la commission statue ;\n- demander que la séance soit publique, sous réserve de l’acceptation du président de la commission.\n\nS’il ne se présente pas, ou si son représentant ne se présente pas sans motif légitime, il est réputé s’être désisté.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R621-41-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1454-21"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R624-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 169.1062200004235,
+      "vectorSearchMs": 592.4712310004979,
+      "jinaRerankingMs": 253.0590049996972,
+      "mappingMs": 0.06562799960374832,
+      "totalMs": 1014.7357189999893,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012476000003516674,
+      "contextBuilderMs": 0.025875999592244625,
+      "generationMs": 2157.0013069994748,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3171.785555999726
+    },
+    "judge": {
+      "questionId": "q430",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit fidèlement les garanties prévues par l’article R621-41-4 présent dans le contexte, donc elle est bien fondée sur ce contexte. Toutefois, la question est ambiguë et le cas est explicitement une question d’abstention : il fallait indiquer qu’il est impossible d’identifier avec fiabilité la procédure visée et donc les droits applicables au demandeur. La réponse choisit sans justification la procédure devant la commission des sanctions."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente pour la procédure choisie dans la réponse et énonce l’ensemble des droits et conséquences mentionnés : convocation, assistance ou représentation, observations, publicité sur demande acceptée et désistement réputé. Les autres sources ne permettent pas d’identifier la procédure visée par la question. Dans le cadre de cette question d’abstention, les sources ne suffisent pas à établir que la procédure concernée est bien celle de la commission des sanctions ; elles couvrent toutefois entièrement les affirmations effectivement formulées dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "La procédure visée n’est pas suffisamment précisée. Selon le texte concerné :\n\n- **Modification de la mention du sexe (article 61-6)** : le demandeur peut présenter sa demande devant le tribunal judiciaire, faire état de son consentement libre et éclairé et produire tous éléments de preuve. L’absence de traitement médical, d’opération ou de stérilisation ne peut justifier un refus.\n\n- **Procédure devant la commission des sanctions (article R. 621-41-4)** : le demandeur est convoqué, peut être assisté ou représenté par la personne de son choix, et peut présenter ses observations. La séance n’est pas publique, sauf s’il demande qu’elle le soit et que le président l’accepte.\n\n- **Devant le bureau de jugement (article R. 1454-21)** : le demandeur doit comparaître, sauf motif légitime. À défaut, les conséquences prévues par l’article 468 du code de procédure civile s’appliquent.\n\n- **Demande en revendication d’un bien (article R. 624-13)** : le demandeur peut adresser sa demande à l’administrateur ou au débiteur, en adresser copie au mandataire judiciaire et, en l’absence d’acquiescement dans le délai prévu, saisir le juge-commissaire. La demande vaut également demande en restitution.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R621-41-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1454-21"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R624-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 791.842246000655,
+      "routingCalls": 1,
+      "embeddingMs": 207.3693450000137,
+      "vectorSearchMs": 583.4145630002022,
+      "jinaRerankingMs": 279.5051560001448,
+      "mappingMs": 0.028760000132024288,
+      "totalMs": 1862.1926339995116,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010731000453233719,
+      "contextBuilderMs": 0.02304099965840578,
+      "generationMs": 3154.672643999569,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5016.906596000306
+    },
+    "judge": {
+      "questionId": "q430",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question ne précise pas quelle procédure est visée et appelait donc une abstention ou une demande de clarification. Bien que la réponse signale cette ambiguïté, elle tente ensuite de répondre en énumérant plusieurs procédures distinctes, sans pouvoir identifier celle concernée. Les informations fournies sont toutefois globalement fidèles et directement étayées par les quatre extraits de contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La procédure n’étant pas identifiée, les sources ne permettent pas de répondre de manière univoque aux droits du demandeur dans « cette » procédure. Elles sont néanmoins pertinentes pour constater l’ambiguïté du contexte, puisqu’elles portent sur quatre procédures distinctes et permettent donc de justifier une demande de précision ou une abstention. En outre, toutes les affirmations substantielles de la réponse générée sur chacune de ces procédures sont étayées par les extraits correspondants : modalités de la demande de modification de la mention du sexe, garanties devant la commission des sanctions, conséquences de la non-comparution devant le bureau de jugement et étapes de la revendication d’un bien."
+    }
+  },
+  "failureStage": "abstention"
+}

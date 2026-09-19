@@ -1,0 +1,111 @@
+{
+  "questionId": "q245",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le prestataire de services d’investissement doit veiller à l’accessibilité :\n\n- des services énumérés aux **1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2** ;\n- de l’ensemble des opérations nécessaires à la **réalisation, à la gestion et à la résiliation** des services définis aux articles L. 321-1 et L. 321-2.\n\nCes services et opérations doivent respecter les exigences d’accessibilité prévues à l’article L. 412-13 du code de la consommation.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L323-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L323-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L311-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.46084000030532,
+      "vectorSearchMs": 622.6407969999127,
+      "jinaRerankingMs": 584.2479989998974,
+      "mappingMs": 0.029167999979108572,
+      "totalMs": 1438.4116809996776,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013890999834984541,
+      "contextBuilderMs": 0.017103999853134155,
+      "generationMs": 2118.758292000275,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3557.209212000016
+    },
+    "judge": {
+      "questionId": "q245",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les services visés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2. Elle ajoute les opérations nécessaires à leur réalisation, gestion et résiliation, ce qui est exact et explicitement étayé par le contexte (article L. 323-2)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 (L. 323-1) et 2 (L. 323-2) sont directement pertinentes. Elles couvrent respectivement les services énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2, ainsi que l'ensemble des opérations nécessaires à leur réalisation, gestion et résiliation, avec renvoi aux exigences d'accessibilité de l'article L. 412-13 du code de la consommation. Toutes les affirmations importantes de la réponse générée sont ainsi étayées."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte indique que sont concernés les services d’investissement énumérés aux **1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 du code monétaire et financier**.\n\nToutefois, les catégories précises correspondant à ces numéros ne sont pas reproduites dans le contexte fourni. Il n’est donc pas possible de les détailler davantage à partir des seules informations disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D412-57"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "annexe-D412-57"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-32"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D412-58"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D412-50"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1364.526988999918,
+      "routingCalls": 1,
+      "embeddingMs": 236.00039099995047,
+      "vectorSearchMs": 54.32770300004631,
+      "jinaRerankingMs": 605.5374400001019,
+      "mappingMs": 0.027912999968975782,
+      "totalMs": 2260.4517419999465,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010098999831825495,
+      "contextBuilderMs": 0.028479000087827444,
+      "generationMs": 2205.033184000291,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4465.531723999884
+    },
+    "judge": {
+      "questionId": "q245",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les services visés : ceux énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 du code monétaire et financier. Cette information est explicitement fournie par le contexte (article D. 412-50, I, 4°, b). La précision selon laquelle les catégories détaillées ne sont pas reproduites dans le contexte est également exacte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 (article D. 412-50, I, 4°, b) est directement pertinente : elle identifie explicitement les services d’investissement énumérés aux 1, 2, 4 et 5 des articles L. 321-1 et L. 321-2 du code monétaire et financier. Elle couvre entièrement l’affirmation centrale de la réponse générée. Les autres sources ne sont pas nécessaires à cette réponse."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q007",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 225-1. Il ne permet donc pas de définir précisément la discrimination au sens de cet article.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 170.68172799999593,
+      "vectorSearchMs": 898.2371279999934,
+      "jinaRerankingMs": 601.9019789999875,
+      "mappingMs": 0.03701799997361377,
+      "totalMs": 1670.9211500000092,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013984000019263476,
+      "contextBuilderMs": 0.009231000003637746,
+      "generationMs": 1296.490209999989,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.463097999993
+    },
+    "judge": {
+      "questionId": "q007",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée de la discrimination selon l'article 225-1 et s'abstient alors qu'une réponse était attendue. Son constat est toutefois fidèle au contexte : celui-ci reproduit l'article 225-2, qui renvoie à l'article 225-1 sans en donner le texte ni la liste des critères."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit l’article 225-2, non l’article 225-1 demandé. Elle est donc seulement indirectement pertinente : elle renvoie aux critères de l’article 225-1 mais n’en fournit ni la définition ni la liste. En revanche, elle couvre le constat de la réponse générée selon lequel le texte de l’article 225-1 n’est pas présent dans le contexte et qu’une définition précise ne peut donc pas en être tirée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 225-1. Il ne permet donc pas de définir précisément la discrimination au sens de cet article.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 705.7988539999933,
+      "routingCalls": 1,
+      "embeddingMs": 239.82512900000438,
+      "vectorSearchMs": 50.56341699999757,
+      "jinaRerankingMs": 608.2538519999944,
+      "mappingMs": 0.032891000009840354,
+      "totalMs": 1604.5256220000156,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01497600000584498,
+      "contextBuilderMs": 0.009737999993376434,
+      "generationMs": 1296.831942000019,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2901.44626300002
+    },
+    "judge": {
+      "questionId": "q007",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée ni les critères de discrimination énumérés à l'article 225-1. Elle est néanmoins fondée sur le contexte : celui-ci reproduit seulement l'article 225-2 et renvoie à l'article 225-1 sans en donner le texte. Toutefois, une abstention était attendue comme non nécessaire selon l'indicateur."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit l’article 225-2, qui renvoie expressément à la discrimination définie aux articles 225-1 à 225-1-2 et à certains éléments visés à l’article 225-1. Elle est donc liée au sujet, mais ne contient ni la définition ni la liste des critères demandés : elle est insuffisante pour répondre directement à la question. En revanche, elle couvre les constats de la réponse générée : le texte de l’article 225-1 n’est pas fourni et le seul renvoi de l’article 225-2 ne permet pas d’en donner une définition précise."
+    }
+  },
+  "failureStage": "generation"
+}

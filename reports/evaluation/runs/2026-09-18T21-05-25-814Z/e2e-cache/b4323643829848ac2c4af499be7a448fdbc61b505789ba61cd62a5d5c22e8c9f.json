@@ -1,0 +1,95 @@
+{
+  "questionId": "q044",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 725-1, le 3° de l’article 421-1 regroupe les infractions suivantes :\n\n- la fabrication ou la détention de machines, engins meurtriers ou explosifs ;\n- la production, la vente, l’importation ou l’exportation illicites de substances explosives ;\n- l’acquisition, la détention, le transport ou le port illégitimes de substances explosives ou d’engins fabriqués avec ces substances ;\n- la détention, le port ou le transport d’armes et de munitions en violation de la réglementation applicable ;\n- les infractions prévues aux articles L. 2341-1 et L. 2341-4 du code de la défense.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "715-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 159.4854200000409,
+      "vectorSearchMs": 705.3745529999724,
+      "jinaRerankingMs": 549.6402900000103,
+      "mappingMs": 0.12070299999322742,
+      "totalMs": 1414.6577230000403,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04400500003248453,
+      "contextBuilderMs": 0.029171000001952052,
+      "generationMs": 1881.0363509999588,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3295.7767339999555
+    },
+    "judge": {
+      "questionId": "q044",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement toutes les catégories d’infractions visées par la rédaction du 3° de l’article 421-1 selon l’article 725-1, y compris les renvois aux articles L. 2341-1 et L. 2341-4 du code de la défense. Les précisions relatives au caractère illicite ou contraire à la réglementation applicable sont conformes au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la rédaction du 3° de l'article 421-1 telle que visée par l'article 725-1 et énonce toutes les catégories demandées. Elle couvre l'ensemble des affirmations importantes de la réponse générée : machines ou engins explosifs, substances explosives, engins fabriqués à leur aide, armes et munitions, ainsi que les renvois aux articles L. 2341-1 et L. 2341-4 du code de la défense. La source 2 est redondante mais également pertinente."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 725-1, le 3° de l’article 421-1 regroupe les infractions suivantes :\n\n- la fabrication ou la détention de machines, engins meurtriers ou explosifs ;\n- la production, la vente, l’importation ou l’exportation illicites de substances explosives ;\n- l’acquisition, la détention, le transport ou le port illégitimes de substances explosives ou d’engins fabriqués avec celles-ci ;\n- la détention, le port ou le transport d’armes et de munitions en violation de la réglementation applicable localement ;\n- les infractions prévues aux articles L. 2341-1 et L. 2341-4 du code de la défense.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "715-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 973.055965000065,
+      "routingCalls": 1,
+      "embeddingMs": 163.55934599996544,
+      "vectorSearchMs": 43.12241900002118,
+      "jinaRerankingMs": 527.1521949999733,
+      "mappingMs": 0.039443999994546175,
+      "totalMs": 1706.9595310000004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009821999934501946,
+      "contextBuilderMs": 0.014547999948263168,
+      "generationMs": 1720.8986329999752,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3427.891857999959
+    },
+    "judge": {
+      "questionId": "q044",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement l’ensemble des catégories d’infractions visées par la rédaction du 3° de l’article 421-1 reproduite à l’article 725-1 : machines et engins explosifs, opérations illicites sur substances explosives, acquisition/détention/transport/port illégitimes, armes et munitions contraires à la réglementation locale, et articles L. 2341-1 et L. 2341-4 du code de la défense. Toutes ces affirmations sont explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement la rédaction du 3° de l'article 421-1 visée par la question, dont la source 1 au titre de l'article 725-1. Elles énoncent expressément chacune des cinq catégories reprises dans la réponse générée : machines ou engins meurtriers/explosifs, opérations sur substances explosives, acquisition/détention/transport/port illégitimes, armes et munitions contraires à la réglementation locale, et infractions des articles L. 2341-1 et L. 2341-4 du code de la défense."
+    }
+  },
+  "failureStage": "none"
+}

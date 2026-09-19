@@ -1,0 +1,87 @@
+{
+  "questionId": "q003",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne reproduit pas l’article 224-1 et ne permet donc pas de préciser les peines selon la durée de la séquestration.\n\nIl indique seulement que, lorsque plusieurs personnes sont détenues ou séquestrées, la peine est de **trente ans de réclusion criminelle**. Elle est ramenée à **dix ans d’emprisonnement** si toutes les victimes sont libérées volontairement dans le délai prévu au troisième alinéa de l’article 224-1, sauf en cas d’atteinte à leur intégrité physique mentionnée à l’article 224-2.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "224-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 996.826691000002,
+      "vectorSearchMs": 3441.2218969999994,
+      "jinaRerankingMs": 576.7326549999998,
+      "mappingMs": 0.09297000000151456,
+      "totalMs": 5022.337304000001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.023508999998739455,
+      "contextBuilderMs": 0.022705999999743653,
+      "generationMs": 2416.4870880000017,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7438.909464
+    },
+    "judge": {
+      "questionId": "q003",
+      "correctness": 1,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les peines de l'article 224-1 selon la durée de la séquestration (vingt ans, ou cinq ans d'emprisonnement et 75 000 euros en cas de libération volontaire avant sept jours). Elle évoque à la place le régime aggravé de l'article 224-3 applicable à plusieurs victimes. Les affirmations sur cet article et sur l'absence du texte de l'article 224-1 dans le contexte sont toutefois bien étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source porte sur l'article 224-3, et non sur les peines de droit commun prévues par l'article 224-1 selon la durée de la séquestration. Elle est donc insuffisante pour répondre directement à la question, mais elle est partiellement pertinente puisqu'elle renvoie expressément au délai du troisième alinéa de l'article 224-1 et permet de constater que ce délai n'est pas reproduit. Elle couvre en revanche les affirmations effectivement formulées dans la réponse générée : trente ans en cas de pluralité de victimes, réduction à dix ans en cas de libération volontaire dans le délai visé, et exception relative aux atteintes à l'intégrité physique."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne reproduit pas l’article 224-1 ni les durées de séquestration correspondantes. Il ne permet donc pas d’indiquer les différences de peine selon la durée.\n\nIl précise seulement que, dans le cas de plusieurs personnes détenues ou séquestrées, la peine est de **trente ans de réclusion criminelle**, avec une réduction à **dix ans d’emprisonnement** en cas de libération volontaire dans le délai prévu au troisième alinéa de l’article 224-1, sauf atteinte à l’intégrité physique visée à l’article 224-2.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "224-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 946.1572520000045,
+      "routingCalls": 1,
+      "embeddingMs": 262.19371200000023,
+      "vectorSearchMs": 47.669277000000875,
+      "jinaRerankingMs": 273.3054469999988,
+      "mappingMs": 0.028684999997494742,
+      "totalMs": 1529.4471370000028,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01909499999601394,
+      "contextBuilderMs": 0.015755000000353903,
+      "generationMs": 2300.0906160000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3829.6288330000025
+    },
+    "judge": {
+      "questionId": "q003",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les peines prévues par l’article 224-1 selon la durée de la séquestration : vingt ans de réclusion criminelle, ou cinq ans d’emprisonnement et 75 000 euros d’amende en cas de libération volontaire avant sept jours. Elle évoque à la place le régime aggravé de l’article 224-3 applicable à plusieurs victimes. Ces affirmations sont toutefois fidèlement supportées par le contexte fourni, qui ne contient effectivement pas le texte de l’article 224-1 ni le délai chiffré. Comme une réponse était attendue, l’abstention est incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source porte sur l’article 224-3, non sur le régime de droit commun de l’article 224-1 demandé. Elle est néanmoins partiellement pertinente car elle renvoie au délai prévu au troisième alinéa de l’article 224-1 et traite de la libération volontaire, mais elle ne fournit ni ce délai chiffré ni les peines applicables à une séquestration d’une seule personne. En revanche, elle couvre les affirmations effectivement formulées dans la réponse générée : absence du texte et des durées de l’article 224-1 dans le contexte, peine de trente ans pour plusieurs victimes, réduction à dix ans en cas de libération volontaire dans le délai visé, et exception liée aux atteintes mentionnées à l’article 224-2."
+    }
+  },
+  "failureStage": "generation"
+}

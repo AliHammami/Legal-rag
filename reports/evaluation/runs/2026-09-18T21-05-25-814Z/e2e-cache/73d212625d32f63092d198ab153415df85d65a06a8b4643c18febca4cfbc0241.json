@@ -1,0 +1,99 @@
+{
+  "questionId": "q388",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les deux dispositions concernent des domaines distincts et le contexte ne prévoit aucune articulation directe entre elles :\n\n- **Code du commerce — article L310-7** : les modalités d’application des règles relatives aux annonces de réduction de prix sont fixées par décret en Conseil d’État. Ce décret peut notamment déterminer les secteurs dans lesquels les réductions ne peuvent pas être annoncées en pourcentage ou par référence au prix antérieurement pratiqué, ainsi que la durée ou les conditions de cette interdiction.\n- **Code du travail — article L3231-5** : lorsque l’indice national des prix à la consommation augmente d’au moins 2 % par rapport à l’indice retenu lors de la précédente fixation du salaire minimum de croissance, celui-ci est relevé dans la même proportion. Le relèvement prend effet le premier jour du mois suivant la publication de l’indice déclenchant cette hausse.\n\nAinsi, les annonces de réduction de prix sont encadrées par des modalités réglementaires propres au commerce, tandis que le salaire minimum de croissance évolue automatiquement selon l’indice des prix. Le contexte ne permet pas d’identifier une interaction juridique particulière entre ces deux mécanismes.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L310-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3231-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.8470750004053,
+      "vectorSearchMs": 959.7801570007578,
+      "jinaRerankingMs": 276.6466520000249,
+      "mappingMs": 0.15261999983340502,
+      "totalMs": 1456.4984790002927,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06308300048112869,
+      "contextBuilderMs": 0.13340900000184774,
+      "generationMs": 3143.137814000249,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4599.843166999519
+    },
+    "judge": {
+      "questionId": "q388",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les modalités prévues par chacun des deux articles et souligne à juste titre qu'aucune articulation juridique directe n'est établie par les extraits fournis. Elle précise les secteurs et restrictions possibles pour les annonces de réduction de prix, ainsi que le seuil de 2 %, la proportionnalité et la date d'effet du relèvement du SMIC. Toutes les affirmations importantes sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article L310-7 décrit les modalités réglementaires applicables aux annonces de réduction de prix, et l’article L3231-5 fixe le seuil de 2 %, la proportionnalité et la date d’effet du relèvement du SMIC. Elles couvrent les affirmations substantielles de la réponse. L’absence d’articulation juridique directe est correctement formulée comme une limite du contexte fourni, qui contient deux mécanismes distincts sans lien explicite."
+    }
+  },
+  "routing": {
+    "answer": "Les extraits fournis ne prévoient pas d’interaction directe entre ces deux régimes.\n\n- **Code du commerce — article L. 310-7** : les modalités d’application des règles relatives aux annonces de réduction de prix sont fixées par décret en Conseil d’État. Ce décret peut notamment déterminer :\n  - les secteurs dans lesquels les réductions ne peuvent pas être exprimées en pourcentage ou par référence au prix antérieurement pratiqué ;\n  - la durée ou les conditions de cette interdiction.\n\n- **Code du travail — article L. 3231-5** : lorsque l’indice national des prix à la consommation augmente d’au moins **2 %** par rapport à l’indice retenu lors de la précédente fixation du salaire minimum de croissance, celui-ci est relevé dans la même proportion à compter du premier jour du mois suivant la publication de l’indice déclenchant le relèvement.\n\n- **Article L. 3231-12** : un minimum garanti est également déterminé en fonction de l’évolution de l’indice national des prix à la consommation, notamment pour évaluer les avantages en nature. Il peut être fixé à un niveau supérieur par voie réglementaire.\n\nAinsi, dans le contexte fourni, les annonces de réduction de prix et la revalorisation du salaire minimum relèvent de mécanismes distincts : le premier concerne les modalités de présentation des prix et dépend de décrets d’application ; le second repose sur l’évolution de l’indice des prix et entraîne, sous certaines conditions, une revalorisation du salaire minimum et du minimum garanti. Aucun texte fourni ne précise que la revalorisation du salaire minimum aurait un effet sur les règles applicables aux annonces de réduction de prix.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L310-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3231-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3231-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1755.2733280006796,
+      "routingCalls": 1,
+      "embeddingMs": 345.17499299999326,
+      "vectorSearchMs": 486.3677550004795,
+      "jinaRerankingMs": 261.69868999999017,
+      "mappingMs": 0.022677000612020493,
+      "totalMs": 2848.565539999865,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014158000238239765,
+      "contextBuilderMs": 0.017505000345408916,
+      "generationMs": 3839.8544810004532,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6688.459799999371
+    },
+    "judge": {
+      "questionId": "q388",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les modalités prévues par l’article L. 310-7 (décret en Conseil d’État, secteurs concernés et interdictions possibles) et le mécanisme de relèvement du SMIC de l’article L. 3231-5 (seuil de 2 %, relèvement proportionnel et prise d’effet le mois suivant la publication). Elle souligne à juste titre que les extraits ne prévoient aucune interaction juridique directe entre ces deux régimes. La mention du minimum garanti de l’article L. 3231-12 est également exacte et explicitement fondée sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. L’article L. 310-7 couvre les modalités réglementaires des annonces de réduction de prix, l’article L. 3231-5 couvre intégralement le seuil de 2 %, le relèvement proportionnel du SMIC et sa date d’effet, et l’article L. 3231-12 couvre le minimum garanti. Elles permettent aussi de soutenir le constat prudent qu’aucune interaction directe entre les deux régimes n’est prévue dans les extraits fournis."
+    }
+  },
+  "failureStage": "none"
+}

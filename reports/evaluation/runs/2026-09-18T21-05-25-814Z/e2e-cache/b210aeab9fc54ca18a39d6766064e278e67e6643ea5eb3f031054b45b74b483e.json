@@ -1,0 +1,87 @@
+{
+  "questionId": "q476",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne précise pas les conditions d’attribution d’une parcelle par la SAFER. Il indique seulement que l’attribution préférentielle est de droit pour une exploitation agricole ne dépassant pas les limites de superficie fixées par décret, à condition que le maintien dans l’indivision n’ait pas été ordonné.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.09332999994513,
+      "vectorSearchMs": 569.319393999991,
+      "jinaRerankingMs": 308.3466110000154,
+      "mappingMs": 0.03677600005175918,
+      "totalMs": 1101.8247360000387,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010882000089623034,
+      "contextBuilderMs": 0.007365999976173043,
+      "generationMs": 1557.1298730000854,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2658.9822479999857
+    },
+    "judge": {
+      "questionId": "q476",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas de déterminer les conditions d’attribution d’une parcelle par la SAFER, ce qui est approprié pour une question hors du champ du contexte. La précision ajoutée sur l’attribution préférentielle est fidèlement tirée de l’article 832 fourni et ne prétend pas répondre aux règles propres aux SAFER."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie porte sur l’attribution préférentielle d’une exploitation agricole et non sur les règles d’attribution de parcelles par une SAFER. Elle est néanmoins directement pertinente pour justifier l’abstention : elle permet de constater que le contexte disponible ne traite pas des SAFER. Elle couvre aussi intégralement la précision formulée dans la réponse sur les conditions de l’attribution préférentielle (limites de superficie fixées par décret et absence de maintien dans l’indivision ordonné)."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de répondre à la question sur l’attribution d’une parcelle par la SAFER. Il traite uniquement de l’attribution préférentielle d’une exploitation agricole, de droit si sa superficie ne dépasse pas les limites fixées par décret et si le maintien dans l’indivision n’a pas été ordonné.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1432.7464629999595,
+      "routingCalls": 1,
+      "embeddingMs": 142.70157400006428,
+      "vectorSearchMs": 587.323143000016,
+      "jinaRerankingMs": 333.10208500002045,
+      "mappingMs": 0.054982999921776354,
+      "totalMs": 2495.9570010000607,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01898700010497123,
+      "contextBuilderMs": 0.014587000012397766,
+      "generationMs": 1532.2150139999576,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4028.215208000038
+    },
+    "judge": {
+      "questionId": "q476",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement, à juste titre, car le contexte ne traite pas des conditions d’attribution d’une parcelle par la SAFER. Elle décrit correctement le champ limité de l’article fourni, relatif à l’attribution préférentielle d’une exploitation agricole."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour justifier l’abstention : elle traite de l’attribution préférentielle d’une exploitation agricole (article 832), et non de l’attribution d’une parcelle par une SAFER. Elle couvre les précisions de la réponse sur les limites de superficie fixées par décret et l’absence de maintien de l’indivision ordonné."
+    }
+  },
+  "failureStage": "none"
+}

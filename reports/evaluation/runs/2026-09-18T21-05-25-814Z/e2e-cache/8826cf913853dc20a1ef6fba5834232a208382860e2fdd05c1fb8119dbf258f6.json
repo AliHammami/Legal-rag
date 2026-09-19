@@ -1,0 +1,111 @@
+{
+  "questionId": "q376",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Télétravail — Code du travail, article L. 1222-9\n\nLe télétravail est une forme d’organisation dans laquelle un travail pouvant être réalisé dans les locaux de l’employeur est effectué volontairement hors de ces locaux, au moyen des technologies de l’information et de la communication.\n\nEst télétravailleur le salarié qui télétravaille dès son embauche ou ultérieurement.\n\nLe télétravail est mis en place :\n\n- par un accord collectif ;\n- à défaut, par une charte élaborée par l’employeur après avis du comité social et économique, s’il existe ;\n- en l’absence d’accord ou de charte, par un accord entre le salarié et l’employeur, formalisé par tout moyen.\n\nL’accord collectif ou la charte doit notamment préciser les conditions de passage et de retour au travail sans télétravail, les modalités d’acceptation par le salarié, le contrôle du temps de travail ou la régulation de la charge de travail, ainsi que les plages horaires pendant lesquelles l’employeur peut contacter le salarié.\n\n### Instruments de paiement de faibles montants — Code monétaire et financier, article L. 133-28\n\nUn décret fixe les montants maximaux de paiement, de dépenses ou de stockage des fonds permettant de qualifier un instrument de paiement d’instrument réservé aux faibles montants.\n\nPour ces instruments, le prestataire de services de paiement peut convenir avec le payeur :\n\n1. de l’impossibilité de révoquer l’ordre après sa transmission ou après le consentement à l’opération ;\n2. de délais d’exécution différents de ceux normalement prévus ;\n3. de ne pas notifier le refus d’un ordre lorsque le payeur en a connaissance au moment de sa passation ;\n4. de ne pas appliquer certaines règles relatives notamment au blocage du compte ou de l’instrument, lorsque le prestataire ne peut pas effectuer ce blocage ;\n5. de ne pas appliquer certaines règles relatives aux opérations non autorisées, à la responsabilité et à la preuve de l’autorisation lorsque l’instrument est anonyme ou que sa nature ne permet pas au prestataire de démontrer qu’une opération a été autorisée.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-28"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R733-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-9"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 217.53535299934447,
+      "vectorSearchMs": 825.9520020000637,
+      "jinaRerankingMs": 327.0141209997237,
+      "mappingMs": 0.027600000612437725,
+      "totalMs": 1370.67370400019,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011605000123381615,
+      "contextBuilderMs": 0.019195000641047955,
+      "generationMs": 3846.5321519998834,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5217.249693999998
+    },
+    "judge": {
+      "questionId": "q376",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit fidèlement la définition et les modalités de mise en place du télétravail prévues à l’article L. 1222-9, y compris le contenu requis de l’accord ou de la charte. Elle restitue également de manière complète les dérogations conventionnelles applicables aux instruments de paiement de faibles montants selon l’article L. 133-28. Toutes les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources L. 1222-9 et L. 133-28 sont directement pertinentes et reproduisent les règles évoquées. Elles couvrent la définition, les modalités de mise en place et le contenu de l’accord ou de la charte de télétravail, ainsi que le seuil réglementaire et l’ensemble des dérogations citées pour les instruments de paiement de faibles montants. Les sources 2 et 4 sont accessoires, mais n’affectent pas la pertinence ni la couverture globale."
+    }
+  },
+  "routing": {
+    "answer": "### 1. Télétravail — Code du travail, article L. 1222-9\n\nLe télétravail est une forme d’organisation dans laquelle un travail pouvant être exécuté dans les locaux de l’employeur est réalisé, volontairement, hors de ces locaux au moyen des technologies de l’information et de la communication.\n\nEst télétravailleur le salarié qui exerce ce travail à distance dès son embauche ou ultérieurement.\n\nLe télétravail est mis en place :\n\n- par un accord collectif ;\n- à défaut, par une charte élaborée par l’employeur après avis du comité social et économique, s’il existe ;\n- en l’absence d’accord ou de charte, par un accord entre le salarié et l’employeur, formalisé par tout moyen.\n\nL’accord collectif ou la charte doit notamment préciser les conditions de passage et de retour au travail sans télétravail, les modalités d’acceptation par le salarié, le contrôle du temps ou de la charge de travail et les plages horaires durant lesquelles le salarié peut être contacté.\n\n### 2. Instruments de paiement de faibles montants — Code monétaire et financier, article L. 133-28\n\nUn décret fixe les montants maximaux de paiement, de dépenses ou de stockage des fonds permettant de qualifier certains instruments de paiement d’instruments réservés aux paiements de faibles montants.\n\nPour ces instruments, le prestataire de services de paiement peut convenir avec le payeur de règles spécifiques, notamment :\n\n- l’impossibilité de révoquer l’ordre après sa transmission ou après le consentement à l’opération ;\n- l’application de délais d’exécution différents de ceux prévus par le code ;\n- l’absence de notification du refus d’un ordre lorsque le payeur en a connaissance lors de sa passation ;\n- la non-application de certaines règles relatives au blocage du compte ou de l’instrument, lorsque le prestataire ne peut pas les bloquer ;\n- la non-application de plusieurs règles relatives aux opérations non autorisées, à la responsabilité et à la preuve, notamment lorsque l’instrument est anonyme ou que le prestataire ne peut pas démontrer qu’une opération a été autorisée.\n\nCes dispositions constituent donc un régime dérogatoire, adapté aux instruments anonymes ou destinés à des opérations de faible montant.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-28"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R733-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-9"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1104.5886519998312,
+      "routingCalls": 1,
+      "embeddingMs": 363.21264000050724,
+      "vectorSearchMs": 486.30574199929833,
+      "jinaRerankingMs": 354.3932450003922,
+      "mappingMs": 0.10869000013917685,
+      "totalMs": 2308.751912999898,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05273200012743473,
+      "contextBuilderMs": 0.0590829998254776,
+      "generationMs": 3942.4789810003713,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6251.36545300018
+    },
+    "judge": {
+      "questionId": "q376",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les dispositions pertinentes de l’article L. 1222-9 du code du travail (définition, qualité de télétravailleur, modalités de mise en place et contenu de l’accord ou de la charte) et de l’article L. 133-28 du code monétaire et financier (seuils fixés par décret et dérogations possibles pour les instruments de faibles montants). Les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 3 (article L. 1222-9) et 1 (article L. 133-28) sont directement pertinentes et reproduisent les dispositions invoquées. Elles couvrent l'ensemble des affirmations substantielles : définition et mise en place du télétravail, contenu de l'accord ou de la charte, seuils réglementaires des instruments de faible montant et dérogations possibles (révocation, délais, notification du refus, blocage, opérations non autorisées, responsabilité et preuve). Les sources 2 et 4 ne sont pas nécessaires, mais n'affectent pas la pertinence globale."
+    }
+  },
+  "failureStage": "none"
+}

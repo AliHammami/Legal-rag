@@ -1,0 +1,87 @@
+{
+  "questionId": "q372",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’interdiction concerne les opérations de paiement réalisées avec les moyens de paiement acceptés par le professionnel. Celui-ci ne peut pas appliquer des conditions différentes en raison :\n\n- du lieu de résidence du consommateur ;\n- de la localisation de son compte de paiement ;\n- de celle de son prestataire de services de paiement ;\n- ou du lieu d’émission de l’instrument de paiement.\n\nCette interdiction s’applique lorsque le paiement utilise un service de paiement visé par l’article L. 314-1 du code monétaire et financier, que les exigences d’authentification sont respectées et que le paiement est effectué dans une devise acceptée par le professionnel.\n\nPour des raisons objectives, le professionnel peut toutefois suspendre la livraison ou la prestation jusqu’à la confirmation que le paiement a bien été engagé.\n\nLe contexte fourni ne précise pas les responsabilités du prestataire de services de paiement en cas de mauvaise exécution d’une opération.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.86624999996275,
+      "vectorSearchMs": 1036.0756200002506,
+      "jinaRerankingMs": 842.9877879992127,
+      "mappingMs": 0.04053399991244078,
+      "totalMs": 2067.0753459995613,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015027999877929688,
+      "contextBuilderMs": 0.01631499920040369,
+      "generationMs": 2143.7309140004218,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4210.8496129997075
+    },
+    "judge": {
+      "questionId": "q372",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement, au regard du contexte fourni, l'interdiction spécifique de différencier les conditions des opérations de paiement selon la localisation, ainsi que ses conditions et l'exception liée à la confirmation du paiement. Elle omet toutefois l'autre volet essentiel de l'article L121-23 relatif à l'accès/aux conditions applicables aux consommateurs selon leur résidence, et ne fournit pas la règle de responsabilité en cas de mauvaise exécution, pourtant demandée. Son constat selon lequel cette dernière information n'est pas présente dans le contexte est fondé. Elle répond donc partiellement à la question sans inventer la seconde règle."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le volet relatif aux conditions différenciées appliquées aux opérations de paiement selon la résidence ou d’autres critères de localisation. Elle couvre aussi les conditions d’application et l’exception de suspension jusqu’à confirmation du paiement. En revanche, aucune source ne traite de la responsabilité du prestataire de services de paiement en cas de mauvaise exécution (notamment la règle visée à l’article L. 133-22), ce qui limite la pertinence globale pour l’ensemble de la question. Les affirmations effectivement formulées dans la réponse sont toutefois toutes étayées par la source, y compris le constat que ce contexte ne fournit pas la règle de responsabilité demandée."
+    }
+  },
+  "routing": {
+    "answer": "L’interdiction impose au professionnel de ne pas appliquer de conditions différentes aux opérations de paiement en fonction :\n\n- du lieu de résidence du consommateur ;\n- de la localisation de son compte de paiement ;\n- de la localisation de son prestataire de services de paiement ;\n- ou du lieu d’émission de l’instrument de paiement.\n\nCette interdiction s’applique lorsque le moyen de paiement accepté relève des services visés par le code monétaire et financier, que les exigences d’authentification sont respectées et que le paiement est effectué dans une devise acceptée par le professionnel.\n\nLorsque des raisons objectives le justifient, le professionnel peut toutefois suspendre la livraison ou la prestation jusqu’à confirmation que le paiement a bien été engagé.\n\nLe contexte fourni ne précise pas les responsabilités du prestataire de services de paiement en cas de mauvaise exécution d’une opération. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1286.9294210001826,
+      "routingCalls": 1,
+      "embeddingMs": 190.57320300024003,
+      "vectorSearchMs": 256.3731559999287,
+      "jinaRerankingMs": 379.64757699985057,
+      "mappingMs": 0.03359400015324354,
+      "totalMs": 2113.6151359993964,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014837999828159809,
+      "contextBuilderMs": 0.01448800042271614,
+      "generationMs": 2272.6226030001417,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4386.275667999871
+    },
+    "judge": {
+      "questionId": "q372",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement l’interdiction de différencier les conditions applicables aux opérations de paiement selon la résidence ou certains critères de localisation, ainsi que ses conditions et l’exception de suspension. Elle ne répond toutefois pas à la seconde partie essentielle sur la responsabilité du prestataire de services de paiement en cas de mauvaise exécution, alors que la question appelle une réponse complète. Toutes les affirmations formulées sont bien étayées par le contexte fourni, qui ne contient effectivement pas l’article relatif à cette responsabilité."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L121-23 et est donc très pertinente pour l’interdiction de conditions de paiement différenciées selon les critères de localisation, ses trois conditions d’application et l’exception de suspension. En revanche, elle ne contient aucun élément sur la responsabilité du prestataire de services de paiement en cas de mauvaise exécution, pourtant demandée : une source essentielle manque, ce qui limite la pertinence globale. Toutes les affirmations effectivement formulées dans la réponse générée sont toutefois couvertes par la source, y compris le constat que le contexte fourni ne permet pas de traiter la seconde partie."
+    }
+  },
+  "failureStage": "generation"
+}

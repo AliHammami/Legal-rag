@@ -1,0 +1,103 @@
+{
+  "questionId": "q105",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Peuvent conclure ces conventions :\n\n- les personnes ayant des droits sur des biens indivis en tant que propriétaires, nus-propriétaires ou usufruitiers ;\n- les indivisaires ;\n- les partenaires liés par un pacte civil de solidarité, pour l’administration des biens indivis.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1873-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "815-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "515-5-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.34289900003932,
+      "vectorSearchMs": 565.5020639998838,
+      "jinaRerankingMs": 496.4973910001572,
+      "mappingMs": 0.08155499980784953,
+      "totalMs": 1250.4542680000886,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011378000024706125,
+      "contextBuilderMs": 0.016659999964758754,
+      "generationMs": 1526.883232000051,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2777.3753620001953
+    },
+    "judge": {
+      "questionId": "q105",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les titulaires visés par l’article 1873-1 (propriétaires, nus-propriétaires et usufruitiers), mentionne les indivisaires conformément à l’article 815-1, et ajoute à juste titre le cas particulier des partenaires de PACS pour l’administration des biens indivis. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. L’article 1873-1 couvre explicitement les propriétaires, nus-propriétaires et usufruitiers ; l’article 815-1 vise les indivisaires ; et l’article 515-5-3 prévoit le cas des partenaires liés par un PACS pour l’administration des biens indivis. Elles couvrent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Peuvent conclure ces conventions :\n\n- les personnes ayant des droits sur des biens indivis en tant que propriétaires, nus-propriétaires ou usufruitiers ;\n- les indivisaires ;\n- les partenaires liés par un pacte civil de solidarité, pour l’administration des biens indivis, dans les conditions prévues par la convention.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1873-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "815-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "515-5-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 913.1687090001069,
+      "routingCalls": 1,
+      "embeddingMs": 178.09186500008218,
+      "vectorSearchMs": 72.27166299987584,
+      "jinaRerankingMs": 498.9067530001048,
+      "mappingMs": 0.042409999994561076,
+      "totalMs": 1662.511708999984,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017921000020578504,
+      "contextBuilderMs": 0.020835999865084887,
+      "generationMs": 2228.8314959998243,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3891.3896969999187
+    },
+    "judge": {
+      "questionId": "q105",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les propriétaires, nus-propriétaires et usufruitiers, conformément à l’article 1873-1. Elle mentionne aussi les indivisaires et le cas particulier des partenaires de PACS, deux précisions exactes et explicitement supportées par le contexte. Elle répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. L’article 1873-1 couvre les propriétaires, nus-propriétaires et usufruitiers ; l’article 815-1 couvre les indivisaires ; l’article 515-5-3 couvre expressément les partenaires liés par un PACS pour l’administration des biens indivis. Elles étayent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

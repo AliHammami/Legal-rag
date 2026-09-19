@@ -1,0 +1,119 @@
+{
+  "questionId": "q415",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Code de la consommation\n\nEn cas de manquement aux obligations d’information précontractuelle :\n\n- pour les obligations prévues au **5° de l’article L. 111-1**, l’amende administrative peut atteindre :\n  - **15 000 €** pour une personne physique ;\n  - **75 000 €** pour une personne morale ;\n\n- pour les obligations prévues aux **1° à 4° et 6° de l’article L. 111-1**, ainsi qu’aux articles **L. 111-2 et L. 111-3**, l’amende administrative peut atteindre :\n  - **3 000 €** pour une personne physique ;\n  - **15 000 €** pour une personne morale.\n\nCes amendes sont prononcées selon les conditions prévues au chapitre II du titre II du livre V.\n\nPar ailleurs, le contexte prévoit, pour certains contrats conclus en violation des articles **L. 224-114, L. 224-115** ou **L. 223-8**, la **nullité du contrat**, ainsi que des amendes administratives pouvant atteindre, selon le cas, **15 000 € ou 75 000 €**, et **75 000 € ou 375 000 €**.\n\n### Code du travail\n\nLa méconnaissance des règles relatives à l’égalité professionnelle entre les femmes et les hommes est punie :\n\n- d’un **emprisonnement d’un an** ;\n- d’une **amende de 3 750 €**.\n\nLa juridiction peut également ordonner l’**affichage du jugement** et son **insertion, intégrale ou par extraits, dans les journaux désignés**, aux frais de la personne condamnée, dans la limite du montant maximal de l’amende.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-51"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1146-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-16-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 178.81195500027388,
+      "vectorSearchMs": 710.6233860002831,
+      "jinaRerankingMs": 284.8060250002891,
+      "mappingMs": 0.028857000172138214,
+      "totalMs": 1174.2962440000847,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020185000263154507,
+      "contextBuilderMs": 0.02598499972373247,
+      "generationMs": 4093.4350859997794,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5267.7858389997855
+    },
+    "judge": {
+      "questionId": "q415",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les sanctions principales attendues : 15 000 € et 75 000 € pour le manquement visé au 5° de l’article L. 111-1, ainsi qu’un an d’emprisonnement et 3 750 € d’amende pour l’atteinte aux règles d’égalité professionnelle, avec les peines complémentaires possibles. Les précisions additionnelles sur les autres obligations d’information et sur certains contrats sont exactes et toutes directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : elles reproduisent les sanctions prévues pour les manquements aux obligations d’information précontractuelle (articles L. 131-1 et L. 131-1-1 du code de la consommation) et pour la méconnaissance de l’égalité professionnelle (article L. 1146-1 du code du travail). Elles couvrent également toutes les précisions additionnelles de la réponse sur les articles L. 224-114, L. 224-115 et L. 223-8, y compris les montants d’amende, la nullité des contrats et les conditions de prononcé. Les peines complémentaires d’affichage et d’insertion sont explicitement couvertes par la source 4."
+    }
+  },
+  "routing": {
+    "answer": "### Code de la consommation\n\nLes manquements aux obligations d’information précontractuelle sont sanctionnés par une amende administrative :\n\n- pour les obligations prévues au **5° de l’article L. 111-1** :  \n  **15 000 € maximum** pour une personne physique et **75 000 € maximum** pour une personne morale ;\n\n- pour les obligations prévues aux **1° à 4° et 6° de l’article L. 111-1**, ainsi qu’aux articles **L. 111-2 et L. 111-3** :  \n  **3 000 € maximum** pour une personne physique et **15 000 € maximum** pour une personne morale.\n\nCes amendes sont prononcées selon les conditions prévues au chapitre II du titre II du livre V.\n\nPour certains manquements contractuels spécifiques :\n\n- la violation de l’article **L. 224-114** peut entraîner une amende allant jusqu’à **15 000 €** pour une personne physique et **75 000 €** pour une personne morale ; le contrat conclu en violation des articles **L. 224-114 et L. 224-115** est nul ;\n- la violation de l’article **L. 223-8** peut entraîner une amende allant jusqu’à **75 000 €** pour une personne physique et **375 000 €** pour une personne morale ; le contrat conclu en violation de cet article est nul.\n\n### Code du travail — Égalité professionnelle\n\nLa méconnaissance des règles relatives à l’égalité professionnelle entre les femmes et les hommes est punie :\n\n- d’un **emprisonnement d’un an** ;\n- d’une **amende de 3 750 €**.\n\nLa juridiction peut également ordonner l’**affichage du jugement** et sa **publication dans les journaux désignés**, aux frais de la personne condamnée, dans la limite du montant maximal de l’amende.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-51"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1146-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-16-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.068068000488,
+      "routingCalls": 1,
+      "embeddingMs": 184.49437699932605,
+      "vectorSearchMs": 341.8140460001305,
+      "jinaRerankingMs": 274.78638499975204,
+      "mappingMs": 0.03578699938952923,
+      "totalMs": 1722.226637000218,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01723100058734417,
+      "contextBuilderMs": 0.022474000230431557,
+      "generationMs": 4460.952211999334,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6183.229394999333
+    },
+    "judge": {
+      "questionId": "q415",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les sanctions attendues : amende administrative maximale de 15 000 € pour une personne physique et 75 000 € pour une personne morale au titre du 5° de l’article L. 111-1, ainsi qu’un an d’emprisonnement et 3 750 € d’amende pour la méconnaissance des règles d’égalité professionnelle, avec les peines complémentaires possibles. Les précisions supplémentaires sur d’autres manquements sont correctes et explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources reproduisent directement les dispositions invoquées dans la réponse. Les sources 1 et 2 couvrent les amendes pour les obligations d'information précontractuelle de l'article L. 111-1 ainsi que L. 111-2 et L. 111-3 ; les sources 3 et 5 couvrent les manquements contractuels supplémentaires et la nullité ; la source 4 couvre les peines relatives à l'égalité professionnelle et les modalités d'affichage/publication. Toutes les affirmations importantes sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

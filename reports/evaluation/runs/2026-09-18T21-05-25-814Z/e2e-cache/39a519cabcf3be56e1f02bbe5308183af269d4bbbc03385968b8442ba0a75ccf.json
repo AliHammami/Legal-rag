@@ -1,0 +1,87 @@
+{
+  "questionId": "q068",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 686 pose trois conditions :\n\n- la servitude doit être établie au profit ou à la charge d’un **fonds**, et non d’une personne ;\n- elle doit être constituée **pour un fonds et sur un fonds** ;\n- elle ne doit rien avoir de contraire à **l’ordre public**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "686"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.04531300021335,
+      "vectorSearchMs": 608.0483690002002,
+      "jinaRerankingMs": 464.32264999998733,
+      "mappingMs": 0.03028799989260733,
+      "totalMs": 1265.4764040000737,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009636000031605363,
+      "contextBuilderMs": 0.00762900011613965,
+      "generationMs": 1252.0318450001068,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2517.5341989998706
+    },
+    "judge": {
+      "questionId": "q068",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les conditions de l’article 686 : servitude attachée à un fonds et non à une personne, établie pour un fonds et sur/un profit d’un fonds, et absence de contrariété à l’ordre public. Elle est pleinement étayée par le contexte. Elle omet seulement la précision finale relative au règlement de l’usage et de l’étendue par le titre, ou à défaut par les règles applicables."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 686 et énonce précisément les conditions reprises dans la réponse : services imposés seulement à un fonds et pour un fonds, non à/en faveur d’une personne, et absence de contrariété à l’ordre public. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "L’article 686 pose les conditions suivantes :\n\n- la servitude doit être établie **sur une propriété ou en faveur d’une propriété** ;\n- elle doit être imposée **à un fonds et pour un fonds**, et non à une personne ou en faveur d’une personne ;\n- elle ne doit pas être **contraire à l’ordre public**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "686"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1087.7059599999338,
+      "routingCalls": 1,
+      "embeddingMs": 171.2632389999926,
+      "vectorSearchMs": 57.86727700009942,
+      "jinaRerankingMs": 460.45998599985614,
+      "mappingMs": 0.045969000086188316,
+      "totalMs": 1777.3691109998617,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010711000068113208,
+      "contextBuilderMs": 0.008273999905213714,
+      "generationMs": 3138.903317999793,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4916.298455999931
+    },
+    "judge": {
+      "questionId": "q068",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les trois conditions substantielles de l'article 686 : servitude sur ou au profit d'une propriété, affectation à un fonds et pour un fonds plutôt qu'à une personne, et absence de contrariété à l'ordre public. Elle omet seulement la règle complémentaire relative à l'usage et à l'étendue, réglés par le titre ou, à défaut, par les règles applicables."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 686 et énonce expressément les trois conditions reprises dans la réponse : établissement sur ou en faveur d’une propriété, rattachement exclusif à un fonds et pour un fonds plutôt qu’à une personne, et conformité à l’ordre public. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

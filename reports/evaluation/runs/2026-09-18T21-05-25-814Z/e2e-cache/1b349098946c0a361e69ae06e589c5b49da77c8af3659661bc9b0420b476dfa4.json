@@ -1,0 +1,103 @@
+{
+  "questionId": "q399",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après le contexte fourni :\n\n- La prospection téléphonique n’est autorisée que du **lundi au vendredi**, hors jours fériés ;\n- Elle ne peut avoir lieu que de **10 h à 13 h** et de **14 h à 20 h**, selon le fuseau horaire du consommateur ;\n- Un même professionnel ne peut pas démarcher, ou tenter de démarcher, un même consommateur plus de **quatre fois sur une période de trente jours calendaires** ;\n- En principe, le consommateur doit avoir donné au préalable un **consentement libre, spécifique, éclairé, univoque et révocable** à la prospection téléphonique. Le professionnel doit pouvoir en apporter la preuve ;\n- Un appel en dehors des jours et horaires prévus est possible si le consommateur a **explicitement accepté** une date et une heure précises, et si le professionnel peut le démontrer.\n\nLe contexte ne contient toutefois pas le texte de l’**article L141-28 du code de commerce**. Il ne permet donc pas de préciser les éventuelles obligations relatives à la **consultation préalable du comité social et économique**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D223-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 179.14093900006264,
+      "vectorSearchMs": 625.2939260005951,
+      "jinaRerankingMs": 314.2606150005013,
+      "mappingMs": 0.03134999983012676,
+      "totalMs": 1118.7573049999774,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01553799957036972,
+      "contextBuilderMs": 0.02063699997961521,
+      "generationMs": 2778.6379400007427,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3897.4485639994964
+    },
+    "judge": {
+      "questionId": "q399",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les jours, plages horaires, fuseau horaire et limite de quatre sollicitations en trente jours prévus par le contexte. Les précisions sur le consentement et l’exception d’un appel à une date et heure explicitement acceptées sont également supportées par les extraits de l’article L223-1. Elle ne répond toutefois pas au volet demandé relatif à l’article L141-28 et à l’information-consultation du CSE ; cette omission réduit la complétude, même si elle est justifiée par l’absence de cet article dans le contexte. Toutes les affirmations formulées sont fondées sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les règles de prospection téléphonique : D223-9 couvre les jours, horaires, fuseau et fréquence, et L223-1 couvre le consentement préalable, sa preuve et l’exception d’un appel à une date et heure explicitement acceptées. Elles ne fournissent toutefois aucun texte de l’article L141-28 du code de commerce, pourtant central pour le volet relatif au CSE : elles sont donc seulement partiellement suffisantes pour la question globale. En revanche, toutes les affirmations effectivement formulées dans la réponse générée sont étayées par les extraits ou par l’absence constatée de L141-28 dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "D’après le contexte fourni, un professionnel peut effectuer une prospection téléphonique :\n\n- **en principe uniquement du lundi au vendredi**, hors jours fériés ;\n- **de 10 h à 13 h et de 14 h à 20 h**, selon le fuseau horaire du consommateur ;\n- **au maximum quatre fois auprès du même consommateur sur une période de trente jours calendaires**.\n\nEn outre, le démarchage est en principe interdit sans **consentement préalable** du consommateur, sauf notamment lorsqu’il intervient dans le cadre de l’exécution d’un contrat en cours et concerne son objet. Le consommateur peut toutefois consentir explicitement à être appelé à une date et à une heure précisément déterminées, y compris en dehors des créneaux habituels, à condition que le professionnel puisse en apporter la preuve.\n\nLe contexte fourni **ne contient pas l’article L141-28 du code de commerce**. Il ne permet donc pas de préciser si, ni dans quelles conditions, une **consultation préalable du comité social et économique** est requise.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D223-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1185.5605459995568,
+      "routingCalls": 1,
+      "embeddingMs": 180.32296799961478,
+      "vectorSearchMs": 298.6281869998202,
+      "jinaRerankingMs": 298.06000799965113,
+      "mappingMs": 0.027710999362170696,
+      "totalMs": 1962.6345809996128,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010631999932229519,
+      "contextBuilderMs": 0.015484999865293503,
+      "generationMs": 3082.229679999873,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5044.898442000151
+    },
+    "judge": {
+      "questionId": "q399",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les jours, horaires, fuseau horaire et plafond de quatre sollicitations prévus par l’article D223-9, et les précisions sur le consentement sont bien tirées des extraits de l’article L223-1. Elle ne donne toutefois pas la règle attendue de l’article L141-28 du code de commerce relative à l’information et à la consultation du CSE en cas de projet de vente d’un fonds de commerce. Cette omission est justifiée au regard du contexte effectivement fourni, qui ne contient pas cet article. Toutes les affirmations substantielles sont donc fondées sur le contexte. La réponse ne s’abstient pas de répondre : elle répond aux éléments documentés et signale précisément la limite du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 à 3 sont directement pertinentes pour les règles de prospection téléphonique : jours, horaires, fuseau horaire et plafond de sollicitations (D223-9), ainsi que consentement, exception liée au contrat en cours et appel hors créneaux sur consentement explicite (L223-1). Elles ne fournissent toutefois aucune source sur l’article L141-28 du code de commerce ni sur la consultation du CSE, ce qui limite leur pertinence globale au regard de l’ensemble de la question. Toutes les affirmations substantielles effectivement formulées dans la réponse sont couvertes par les extraits, y compris le constat que le contexte transmis ne contient pas cet article."
+    }
+  },
+  "failureStage": "generation"
+}

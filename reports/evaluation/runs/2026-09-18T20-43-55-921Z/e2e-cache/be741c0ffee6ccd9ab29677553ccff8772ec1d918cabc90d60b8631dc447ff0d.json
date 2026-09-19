@@ -1,0 +1,107 @@
+{
+  "questionId": "q002",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le contenu de l’article 223-1 ni les éléments constitutifs de l’infraction visée. Il indique seulement, pour d’autres dispositions, des peines d’un an d’emprisonnement et de 150 000 euros d’amende, et non de 15 000 euros. Il est donc impossible de répondre suffisamment à la question à partir des seules sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 615.6329789999982,
+      "vectorSearchMs": 2829.2323149999975,
+      "jinaRerankingMs": 244.54244800000015,
+      "mappingMs": 0.038236000000324566,
+      "totalMs": 3689.6783209999994,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.2648090000002412,
+      "contextBuilderMs": 0.19526300000143237,
+      "generationMs": 1563.5279979999978,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5253.790956999997
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’énonce aucun des éléments constitutifs demandés par l’article 223-1 et refuse de répondre. Elle est toutefois fidèlement fondée sur le contexte fourni, qui ne contient effectivement pas cet article et ne mentionne que deux autres dispositions assorties d’une amende de 150 000 euros. L’abstention n’était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne concernent pas l’article 223-1 ni les éléments constitutifs demandés : elles sont donc très insuffisantes pour répondre directement à la question. Elles permettent toutefois d’étayer les constats de la réponse générée selon lesquels le contexte fourni ne contient que d’autres dispositions, toutes deux sanctionnées d’un an d’emprisonnement et de 150 000 euros d’amende, et non de 15 000 euros."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 223-1. Il ne permet donc pas d’identifier les éléments constitutifs de l’infraction punie d’un an d’emprisonnement et de 15 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-16-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-22-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-4-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 878.2521520000009,
+      "routingCalls": 1,
+      "embeddingMs": 234.8763289999988,
+      "vectorSearchMs": 86.40448599999945,
+      "jinaRerankingMs": 237.4368570000006,
+      "mappingMs": 0.03955800000403542,
+      "totalMs": 1437.1133980000013,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02507299999706447,
+      "contextBuilderMs": 0.03999800000019604,
+      "generationMs": 1294.7276740000016,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2731.9435090000043
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’énonce aucun des éléments constitutifs demandés et ne répond donc pas à la question, alors que la réponse de référence identifie l’exposition directe à un risque immédiat par violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité. Son constat selon lequel le contexte ne contient pas l’article 223-1 est toutefois exact et entièrement fondé sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne porte sur l’article 223-1 ni ne permet d’identifier les éléments constitutifs demandés ; elles sont donc très insuffisantes pour répondre directement à la question. En revanche, les références et contenus fournis concernent tous d’autres articles, ce qui couvre le constat factuel de la réponse générée selon lequel le texte de l’article 223-1 n’est pas présent dans le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

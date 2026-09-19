@@ -1,0 +1,87 @@
+{
+  "questionId": "q037",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La peine peut être portée à **cinq ans d’emprisonnement** lorsque les sévices graves ou l’acte de cruauté ont **entraîné la mort de l’animal**. L’amende est alors portée à **75 000 euros**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 159.52261900005396,
+      "vectorSearchMs": 590.0288439999567,
+      "jinaRerankingMs": 594.6385579999769,
+      "mappingMs": 0.03147399995941669,
+      "totalMs": 1344.3783460000996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011628000065684319,
+      "contextBuilderMs": 0.007176999934017658,
+      "generationMs": 1316.7658270000247,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2661.171437000041
+    },
+    "judge": {
+      "questionId": "q037",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement la condition d’aggravation prévue : les sévices graves ou actes de cruauté doivent avoir entraîné la mort de l’animal. La mention complémentaire de l’amende de 75 000 euros est également exacte et explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "L’article 521-1 est directement pertinent : il prévoit expressément que lorsque les sévices graves ou actes de cruauté ont entraîné la mort de l’animal, les peines sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende. Il couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "La peine peut être portée à **cinq ans d’emprisonnement** lorsque les sévices graves ou l’acte de cruauté ont **entraîné la mort de l’animal**. L’amende est alors portée à **75 000 euros**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 953.6381769999862,
+      "routingCalls": 1,
+      "embeddingMs": 201.48489199997857,
+      "vectorSearchMs": 33.08853700000327,
+      "jinaRerankingMs": 588.9960519999731,
+      "mappingMs": 0.043901000055484474,
+      "totalMs": 1777.3127470000181,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011077999952249229,
+      "contextBuilderMs": 0.008740999968722463,
+      "generationMs": 1075.0521789999912,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2852.39192799991
+    },
+    "judge": {
+      "questionId": "q037",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement la condition d’aggravation prévue : les sévices graves ou l’acte de cruauté doivent avoir entraîné la mort de l’animal. La précision relative à l’amende de 75 000 euros est également explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 521-1 applicable et précise explicitement que lorsque les faits ont entraîné la mort de l’animal, les peines sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende. Elle couvre donc intégralement les deux affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q418",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "- **Code du commerce — article L125-8** : l’absence de la mention expresse exigée dans le contrat constitutif ou les statuts entraîne la **nullité** de l’acte. Les signataires sont en outre soumis à une **responsabilité solidaire**.\n\n- **Code du travail — article L1152-5** : le salarié ayant commis des agissements de harcèlement moral est **passible d’une sanction disciplinaire**. Le texte fourni ne précise pas la nature de cette sanction.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1152-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L125-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 190.26342799980193,
+      "vectorSearchMs": 652.940210999921,
+      "jinaRerankingMs": 314.43881400022656,
+      "mappingMs": 0.019252999685704708,
+      "totalMs": 1157.6962980004027,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010479999706149101,
+      "contextBuilderMs": 0.01270699966698885,
+      "generationMs": 2068.6330679999664,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3226.362325999886
+    },
+    "judge": {
+      "questionId": "q418",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les deux effets demandés : nullité de l’acte et responsabilité solidaire des signataires en cas d’absence de la mention exigée, ainsi que la possibilité d’une sanction disciplinaire pour le salarié auteur de harcèlement moral. Elle est intégralement étayée par les deux extraits de contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article L125-8 couvre l’exigence de mention, la nullité et la responsabilité solidaire des signataires, tandis que l’article L1152-5 prévoit explicitement la sanction disciplinaire en cas de harcèlement moral. Elles couvrent l’ensemble des affirmations importantes de la réponse générée, y compris l’absence de précision sur la nature de la sanction."
+    }
+  },
+  "routing": {
+    "answer": "- **Absence de mention expresse dans le contrat ou les statuts** : elle est prévue **à peine de nullité**, les signataires étant en outre tenus **solidairement responsables**.  \n- **Salarié auteur de harcèlement moral** : il est **passible d’une sanction disciplinaire**. Le texte fourni ne précise pas la nature de cette sanction.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1152-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L125-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1359.3484119996428,
+      "routingCalls": 1,
+      "embeddingMs": 237.6367609994486,
+      "vectorSearchMs": 415.3896889993921,
+      "jinaRerankingMs": 342.67576800007373,
+      "mappingMs": 0.030717000365257263,
+      "totalMs": 2355.106733999215,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01245499961078167,
+      "contextBuilderMs": 0.01592899952083826,
+      "generationMs": 2023.094253999181,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4378.237135999836
+    },
+    "judge": {
+      "questionId": "q418",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les deux effets prévus : nullité et responsabilité solidaire des signataires pour l'absence de mention exigée, ainsi que la passibilité d'une sanction disciplinaire en cas de harcèlement moral. Ces affirmations sont directement étayées par les deux sources du contexte. La précision selon laquelle la nature de la sanction n'est pas indiquée est également conforme au texte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et établit que l'absence de la mention expresse exigée dans le contrat constitutif ou les statuts entraîne la nullité et engage la responsabilité solidaire des signataires. La source 1 établit directement qu'un salarié auteur de harcèlement moral est passible d'une sanction disciplinaire. Les deux affirmations principales, ainsi que l'absence de précision sur la nature de la sanction dans le texte fourni, sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

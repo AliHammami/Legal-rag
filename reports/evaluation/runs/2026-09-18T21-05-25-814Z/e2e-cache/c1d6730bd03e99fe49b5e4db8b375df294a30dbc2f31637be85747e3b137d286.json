@@ -1,0 +1,119 @@
+{
+  "questionId": "q432",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Selon le contexte fourni :\n\n- **Pour la validité d’un contrat** : sont nécessaires le consentement des parties, leur capacité de contracter et un contenu licite et certain (article 1128).\n- **Pour la validité d’un accord d’entreprise ou d’établissement** : l’accord doit être signé par l’employeur ou son représentant et par une ou plusieurs organisations syndicales représentatives ayant recueilli **plus de 50 %** des suffrages concernés. À défaut, une validation par consultation des salariés peut être organisée sous certaines conditions, notamment un seuil de **plus de 30 %** et le respect des délais prévus (article L2232-12).\n- **Pour une obligation assortie d’une condition** : la condition doit être licite ; sinon, l’obligation est nulle (article 1304-1).\n- **Dans le cadre de l’article L. 5132-9** : le seuil applicable est de **16 heures** et la durée totale de **480 heures** (article R5132-18).\n\nLe contexte ne permet pas de déterminer quelle catégorie précise de validité est visée par la question.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1128"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2232-12"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2135-18"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5132-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 161.1626789998263,
+      "vectorSearchMs": 612.8709640000015,
+      "jinaRerankingMs": 346.92626999970526,
+      "mappingMs": 0.025510000064969063,
+      "totalMs": 1121.0109569998458,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014175999909639359,
+      "contextBuilderMs": 0.022163000889122486,
+      "generationMs": 2602.559388000518,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3723.6172020006925
+    },
+    "judge": {
+      "questionId": "q432",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les différentes conditions figurant dans le contexte et signale finalement que la catégorie de validité visée est indéterminable. Toutefois, alors qu’une abstention était attendue compte tenu de l’ambiguïté de la question, elle tente tout de même de fournir plusieurs réponses possibles, dont certaines ne concernent pas directement une « validité ». Toutes les affirmations substantielles sont néanmoins appuyées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La question est ambiguë et appelle une abstention ou une clarification. Les sources fournies sont directement pertinentes pour montrer les différentes notions de validité et conditions envisageables dans le contexte (contrat, accord collectif, condition d'une obligation), ainsi que des conditions réglementaires distinctes. Elles permettent donc de constater qu'aucune catégorie unique ne peut être déterminée. Toutes les affirmations substantielles de la réponse sont explicitement étayées : article 1128, article L2232-12 (y compris les seuils et délais), article 1304-1 et article R5132-18."
+    }
+  },
+  "routing": {
+    "answer": "Les conditions de validité dépendent de l’acte concerné :\n\n- **Pour un contrat** : consentement des parties, capacité de contracter et contenu licite et certain (article 1128).\n- **Pour une obligation assortie d’une condition** : la condition doit être licite ; à défaut, l’obligation est nulle (article 1304-1).\n- **Pour un accord d’entreprise ou d’établissement** : il doit être signé par l’employeur et par des organisations syndicales représentatives ayant recueilli plus de 50 % des suffrages exprimés. À défaut, une validation par consultation des salariés peut être organisée sous les conditions prévues par l’article L. 2232-12.\n- **Dans le dispositif visé par l’article R. 5132-18** : le seuil applicable est de 16 heures et la durée totale de 480 heures.\n\nLe contexte ne permet pas de déterminer quelle catégorie d’acte est précisément concernée.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1128"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2232-12"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2135-18"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5132-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 733.3162230001763,
+      "routingCalls": 1,
+      "embeddingMs": 160.36446100007743,
+      "vectorSearchMs": 692.0052239997312,
+      "jinaRerankingMs": 262.0631710002199,
+      "mappingMs": 0.022165000438690186,
+      "totalMs": 1847.8121039997786,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012950999662280083,
+      "contextBuilderMs": 0.02672899980098009,
+      "generationMs": 2476.9771869992837,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4324.837317999452
+    },
+    "judge": {
+      "questionId": "q432",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question ne précise pas l’acte ou le dispositif concerné. La réponse identifie correctement cette ambiguïté et indique explicitement que le contexte ne permet pas de déterminer la catégorie applicable. Les différentes conditions mentionnées sont fidèlement supportées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La question étant ambiguë et appelant une abstention, les sources sont directement pertinentes pour illustrer plusieurs régimes possibles et justifier l’impossibilité d’identifier l’acte concerné. Elles soutiennent chacune des conditions exposées : contrat (art. 1128), obligation conditionnelle (art. 1304-1), accord d’entreprise (art. L. 2232-12) et dispositif de l’art. R. 5132-18. La source L. 2232-12 couvre également, avec davantage de précisions, la possibilité de consultation des salariés."
+    }
+  },
+  "failureStage": "none"
+}

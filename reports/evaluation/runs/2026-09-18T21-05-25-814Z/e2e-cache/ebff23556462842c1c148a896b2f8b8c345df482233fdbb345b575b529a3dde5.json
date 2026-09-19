@@ -1,0 +1,95 @@
+{
+  "questionId": "q410",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les critères d’exclusion de l’acquisition ou de la réintégration dans la nationalité française sont les suivants :\n\n- une condamnation pour crime ou délit portant atteinte aux intérêts fondamentaux de la Nation ou constituant un acte de terrorisme ;\n- une condamnation, quelle que soit l’infraction, à une peine d’au moins six mois d’emprisonnement ferme ;\n- un arrêté d’expulsion non rapporté ou abrogé ;\n- une interdiction du territoire français non entièrement exécutée ;\n- un séjour irrégulier en France au regard des règles applicables aux étrangers.\n\nCes exclusions ne s’appliquent notamment pas aux mineurs concernés par certains modes d’acquisition de la nationalité, ni aux personnes réhabilitées ou dont la condamnation a été exclue du bulletin n° 2 du casier judiciaire.\n\nLa fourniture, au profit des intérêts d’une puissance étrangère, d’une entreprise étrangère ou sous contrôle étranger, de fausses informations aux autorités civiles ou militaires françaises, lorsqu’elles sont de nature à les induire en erreur et à porter atteinte aux intérêts fondamentaux de la Nation, est punie de **sept ans d’emprisonnement et de 100 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "21-27"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "411-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 192.34408199973404,
+      "vectorSearchMs": 642.9317070003599,
+      "jinaRerankingMs": 269.80574500001967,
+      "mappingMs": 0.02107399981468916,
+      "totalMs": 1105.1361610004678,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011686000041663647,
+      "contextBuilderMs": 0.019666999578475952,
+      "generationMs": 2783.9820830002427,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3889.1610599998385
+    },
+    "judge": {
+      "questionId": "q410",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon complète les exclusions prévues à l’article 21-27 du code civil, y compris les exceptions. En revanche, elle ne répond pas à la question sur les fausses informations commerciales : elle cite l’article 411-10 du code pénal, relatif à des informations fournies dans l’intérêt d’entités étrangères et aux intérêts fondamentaux de la Nation, au lieu de la sanction de l’article L123-5 du code de commerce (six mois d’emprisonnement et 4 500 euros d’amende). Toutes les affirmations formulées sont néanmoins étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les critères d’exclusion et les exceptions exposés. La source 2 couvre exactement l’affirmation finale effectivement formulée dans la réponse générée sur les fausses informations fournies dans l’intérêt d’une entité étrangère. Toutefois, elle n’est pas pertinente pour le volet demandé des fausses informations commerciales (immatriculation/radiation au registre du commerce), pour lequel la source relative à l’article L123-5 du code de commerce manque. Les sources couvrent néanmoins toutes les affirmations importantes effectivement présentes dans la réponse."
+    }
+  },
+  "routing": {
+    "answer": "### Critères d’exclusion en matière pénale\n\nL’acquisition ou la réintégration dans la nationalité française est exclue lorsque la personne :\n\n- a été condamnée pour un crime ou un délit portant atteinte aux intérêts fondamentaux de la Nation ou constituant un acte de terrorisme ;\n- a été condamnée, quelle que soit l’infraction, à une peine d’au moins six mois d’emprisonnement ferme, c’est-à-dire non assortie du sursis ;\n- fait l’objet d’un arrêté d’expulsion non rapporté ou abrogé ;\n- fait l’objet d’une interdiction du territoire français qui n’a pas été entièrement exécutée ;\n- séjourne irrégulièrement en France au regard des règles applicables aux étrangers.\n\nCes exclusions ne s’appliquent notamment pas au mineur susceptible d’acquérir la nationalité dans les cas prévus par les articles cités, ni à la personne ayant bénéficié d’une réhabilitation ou de l’exclusion de la condamnation du bulletin n° 2 du casier judiciaire.\n\n### Sanction pour la fourniture de fausses informations\n\nLe fait de fournir, au profit d’une puissance étrangère ou d’une entreprise ou organisation étrangère ou sous contrôle étranger, aux autorités civiles ou militaires françaises, des informations fausses susceptibles de les induire en erreur et de porter atteinte aux intérêts fondamentaux de la Nation est puni de :\n\n- **sept ans d’emprisonnement** ;\n- **100 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "21-27"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "411-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2126.299635999836,
+      "routingCalls": 1,
+      "embeddingMs": 165.5088450005278,
+      "vectorSearchMs": 320.6595310000703,
+      "jinaRerankingMs": 267.9024569997564,
+      "mappingMs": 0.0270409993827343,
+      "totalMs": 2880.424461999908,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07539799995720387,
+      "contextBuilderMs": 0.015207000076770782,
+      "generationMs": 3037.206180999987,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5917.729330000468
+    },
+    "judge": {
+      "questionId": "q410",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon détaillée les exclusions de l'article 21-27. En revanche, elle répond à la seconde partie par l'infraction de l'article 411-10 (fausses informations aux autorités françaises au profit d'intérêts étrangers), qui ne correspond pas aux fausses indications commerciales lors des démarches d'immatriculation ou de radiation visées par la question et la référence. Les sanctions commerciales attendues (six mois d'emprisonnement et 4 500 euros d'amende, sous condition de mauvaise foi) sont donc absentes. Toutes les affirmations formulées sont néanmoins étayées par le contexte fourni, y compris celles relatives à l'article 411-10."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les critères d’exclusion et exceptions de l’article 21-27 du code civil. En revanche, la source 2 porte sur la fourniture d’informations fausses aux autorités françaises au profit d’intérêts étrangers (article 411-10 du code pénal), et non sur les fausses indications commerciales lors de l’immatriculation ou de la radiation au registre du commerce. La source attendue sur l’article L123-5 du code de commerce manque donc, ce qui rend les sources seulement partiellement pertinentes pour la question. Toutefois, toutes les affirmations effectivement formulées dans la réponse générée sont directement étayées par les deux sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

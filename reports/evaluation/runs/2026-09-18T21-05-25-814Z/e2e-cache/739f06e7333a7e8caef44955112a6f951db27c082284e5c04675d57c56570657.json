@@ -1,0 +1,87 @@
+{
+  "questionId": "q161",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sanctions prévues sont :\n\n- **un an d’emprisonnement** ;\n- **une amende de 3 750 euros**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2243-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 197.20214999979362,
+      "vectorSearchMs": 560.5131870000623,
+      "jinaRerankingMs": 499.1796369999647,
+      "mappingMs": 0.8548550000414252,
+      "totalMs": 1257.81573499972,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07384200021624565,
+      "contextBuilderMs": 0.011194999795407057,
+      "generationMs": 1102.70042200014,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2360.6129760001786
+    },
+    "judge": {
+      "questionId": "q161",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux sanctions prévues par l'article L2243-1 : un an d'emprisonnement et 3 750 euros d'amende. Elles sont explicitement énoncées dans le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L. 2243-1 directement visé par la question. Elle énonce expressément que la soustraction aux obligations de l’article L. 2242-1 est punie d’un an d’emprisonnement et de 3 750 euros d’amende, couvrant intégralement les deux sanctions affirmées."
+    }
+  },
+  "routing": {
+    "answer": "L’article L2243-1 prévoit :\n\n- **un an d’emprisonnement** ;\n- **une amende de 3 750 euros**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2243-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.3404259998351,
+      "routingCalls": 1,
+      "embeddingMs": 200.38999700034037,
+      "vectorSearchMs": 256.149107999634,
+      "jinaRerankingMs": 503.955464000348,
+      "mappingMs": 0.02300399960950017,
+      "totalMs": 1983.8821519999765,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011200999841094017,
+      "contextBuilderMs": 0.008231000043451786,
+      "generationMs": 1085.9139209999703,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3069.8228569999337
+    },
+    "judge": {
+      "questionId": "q161",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux sanctions prévues par l'article L2243-1 pour le manquement visé : un an d'emprisonnement et 3 750 euros d'amende. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 2243-1 et vise expressément le fait de se soustraire aux obligations de l'article L. 2242-1. Elle énonce exactement les deux sanctions affirmées dans la réponse générée : un an d'emprisonnement et 3 750 euros d'amende."
+    }
+  },
+  "failureStage": "none"
+}

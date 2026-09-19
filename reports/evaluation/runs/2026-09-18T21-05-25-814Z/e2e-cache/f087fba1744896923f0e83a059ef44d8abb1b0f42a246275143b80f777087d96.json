@@ -1,0 +1,119 @@
+{
+  "questionId": "q141",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 6221-1 :\n\n- **L’employeur** doit verser un salaire à l’apprenti et lui assurer une formation professionnelle complète, dispensée en partie dans l’entreprise et en partie dans un centre de formation d’apprentis ou une section d’apprentissage.\n- **L’apprenti** doit, en contrepartie et en vue de sa formation, travailler pour l’employeur pendant la durée du contrat et suivre la formation prévue.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6235-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 179.79838900035247,
+      "vectorSearchMs": 607.9215339999646,
+      "jinaRerankingMs": 553.6087990002707,
+      "mappingMs": 0.03554200008511543,
+      "totalMs": 1341.4191990001127,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01065099984407425,
+      "contextBuilderMs": 0.025887000374495983,
+      "generationMs": 1726.9928180002607,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3068.4580560000613
+    },
+    "judge": {
+      "questionId": "q141",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les obligations réciproques prévues à l'article L. 6221-1 : salaire et formation professionnelle complète partagée entre entreprise et CFA/section d'apprentissage pour l'employeur ; travail pendant la durée du contrat et suivi de la formation pour l'apprenti. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 6221-1 et énonce expressément l'ensemble des obligations mentionnées : versement du salaire et formation complète partagée entre entreprise et CFA/section d'apprentissage pour l'employeur ; travail pour l'employeur pendant le contrat et suivi de la formation pour l'apprenti. Elle couvre donc toutes les affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 6221-1 :\n\n- **L’employeur** doit verser un salaire à l’apprenti et lui assurer une formation professionnelle complète, dispensée pour partie dans l’entreprise et pour partie dans un centre de formation d’apprentis ou une section d’apprentissage.\n- **L’apprenti** doit, en contrepartie et pendant la durée du contrat, travailler pour l’employeur en vue de sa formation et suivre la formation prévue.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6235-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 718.7650109999813,
+      "routingCalls": 1,
+      "embeddingMs": 186.35311899986118,
+      "vectorSearchMs": 231.76300900010392,
+      "jinaRerankingMs": 536.5907639996149,
+      "mappingMs": 0.11340499995276332,
+      "totalMs": 1673.6270200000145,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.09574000025168061,
+      "contextBuilderMs": 0.046525000128895044,
+      "generationMs": 1500.520998999942,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.2998970001936
+    },
+    "judge": {
+      "questionId": "q141",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les obligations réciproques prévues à l’article L. 6221-1 : salaire et formation professionnelle complète partagée entre entreprise et CFA ou section d’apprentissage pour l’employeur ; travail pour l’employeur pendant le contrat et suivi de la formation pour l’apprenti. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 6221-1 et énonce explicitement toutes les obligations mentionnées : versement d'un salaire et formation complète partagée entre entreprise et CFA ou section d'apprentissage pour l'employeur ; travail pour l'employeur pendant la durée du contrat et suivi de la formation pour l'apprenti. Les autres sources sont accessoires mais cohérentes."
+    }
+  },
+  "failureStage": "none"
+}

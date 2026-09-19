@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 
 import { MULTICORPUS_QUESTION_ID_PATTERN } from './constants.js';
 import { EvaluationError } from './evaluation.error.js';
+import type { GoldArticle } from './gold-article.js';
 import type {
   LegalMulticorpusEvaluationQuestion,
   MulticorpusDifficulty,
@@ -37,6 +38,123 @@ function parseStringArray(value: unknown, fieldName: string, questionId: string)
     }
     return entry;
   });
+}
+
+function parseGoldArticle(value: unknown, questionId: string, index: number): GoldArticle {
+  if (typeof value === 'string') {
+    throw new EvaluationError(
+      `Invalid goldArticles entry for ${questionId} at index ${index}: legacy string format is no longer supported`,
+      'DATASET_INVALID',
+    );
+  }
+
+  if (!isRecord(value)) {
+    throw new EvaluationError(
+      `Invalid goldArticles entry for ${questionId} at index ${index}`,
+      'DATASET_INVALID',
+    );
+  }
+
+  if (typeof value.corpusId !== 'string' || value.corpusId.trim().length === 0) {
+    throw new EvaluationError(
+      `Invalid goldArticles.corpusId for ${questionId} at index ${index}`,
+      'DATASET_INVALID',
+    );
+  }
+
+  if (typeof value.articleNumber !== 'string' || value.articleNumber.trim().length === 0) {
+    throw new EvaluationError(
+      `Invalid goldArticles.articleNumber for ${questionId} at index ${index}`,
+      'DATASET_INVALID',
+    );
+  }
+
+  return {
+    corpusId: value.corpusId,
+    articleNumber: value.articleNumber,
+  };
+}
+
+function parseGoldArticles(value: unknown, questionId: string): GoldArticle[] {
+  if (!Array.isArray(value)) {
+    throw new EvaluationError(
+      `Invalid evaluation item ${questionId}: goldArticles must be an array`,
+      'DATASET_INVALID',
+    );
+  }
+
+  return value.map((entry, index) => parseGoldArticle(entry, questionId, index));
+}
+
+export type LegacyMulticorpusEvaluationQuestion = Omit<
+  LegalMulticorpusEvaluationQuestion,
+  'goldArticles' | 'sourceArticles'
+> & {
+  goldArticles: string[] | GoldArticle[];
+  sourceArticles?: string[] | GoldArticle[];
+};
+
+/** Parses legacy dataset entries still using string goldArticles (migration only). */
+export function parseLegacyMulticorpusEvaluationQuestion(
+  value: unknown,
+  index: number,
+): LegacyMulticorpusEvaluationQuestion {
+  if (!isRecord(value)) {
+    throw new EvaluationError(
+      `Invalid multicorpus evaluation item at index ${index}`,
+      'DATASET_INVALID',
+    );
+  }
+
+  if (typeof value.id !== 'string' || value.id.trim().length === 0) {
+    throw new EvaluationError(
+      `Invalid multicorpus evaluation item at index ${index}: id must be a non-empty string`,
+      'DATASET_INVALID',
+    );
+  }
+
+  const goldCorpusIds = parseStringArray(value.goldCorpusIds, 'goldCorpusIds', value.id);
+  const goldArticlesRaw = value.goldArticles;
+  let goldArticles: string[] | GoldArticle[];
+
+  if (!Array.isArray(goldArticlesRaw)) {
+    throw new EvaluationError(
+      `Invalid evaluation item ${value.id}: goldArticles must be an array`,
+      'DATASET_INVALID',
+    );
+  }
+
+  if (goldArticlesRaw.length === 0) {
+    goldArticles = [];
+  } else if (typeof goldArticlesRaw[0] === 'string') {
+    goldArticles = parseStringArray(goldArticlesRaw, 'goldArticles', value.id);
+  } else {
+    goldArticles = parseGoldArticles(goldArticlesRaw, value.id);
+  }
+
+  let sourceArticles: GoldArticle[] | string[] | undefined;
+  if (value.sourceArticles !== undefined) {
+    if (
+      Array.isArray(value.sourceArticles) &&
+      value.sourceArticles.length > 0 &&
+      typeof value.sourceArticles[0] === 'string'
+    ) {
+      sourceArticles = parseStringArray(value.sourceArticles, 'sourceArticles', value.id);
+    } else {
+      sourceArticles = parseGoldArticles(value.sourceArticles, value.id);
+    }
+  }
+
+  return {
+    id: value.id,
+    question: String(value.question),
+    goldCorpusIds,
+    goldArticles,
+    referenceAnswer: String(value.referenceAnswer),
+    difficulty: value.difficulty as MulticorpusDifficulty,
+    questionType: value.questionType as MulticorpusQuestionType,
+    sourceArticles: sourceArticles as GoldArticle[] | undefined,
+  };
 }
 
 export function parseMulticorpusEvaluationQuestion(
@@ -92,11 +210,11 @@ export function parseMulticorpusEvaluationQuestion(
   }
 
   const goldCorpusIds = parseStringArray(value.goldCorpusIds, 'goldCorpusIds', value.id);
-  const goldArticles = parseStringArray(value.goldArticles, 'goldArticles', value.id);
+  const goldArticles = parseGoldArticles(value.goldArticles, value.id);
 
-  let sourceArticles: string[] | undefined;
+  let sourceArticles: GoldArticle[] | undefined;
   if (value.sourceArticles !== undefined) {
-    sourceArticles = parseStringArray(value.sourceArticles, 'sourceArticles', value.id);
+    sourceArticles = parseGoldArticles(value.sourceArticles, value.id);
   }
 
   return {
@@ -144,6 +262,14 @@ export async function loadMulticorpusEvaluationDataset(
   }
 
   return parsed.map(parseMulticorpusEvaluationQuestion);
+}
+
+export async function loadLegacyMulticorpusEvaluationDataset(
+  datasetPath: string,
+): Promise<LegacyMulticorpusEvaluationQuestion[]> {
+  const raw = await readFile(datasetPath, 'utf-8');
+  const parsed = JSON.parse(raw) as unknown[];
+  return parsed.map(parseLegacyMulticorpusEvaluationQuestion);
 }
 
 export function validateMulticorpusQuestionIds(

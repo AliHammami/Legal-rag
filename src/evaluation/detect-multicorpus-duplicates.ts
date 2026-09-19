@@ -1,3 +1,4 @@
+import { goldArticleKey } from './gold-article.js';
 import { normalizeQuestionText } from './load-multicorpus-dataset.js';
 import type {
   LegalMulticorpusEvaluationQuestion,
@@ -29,7 +30,11 @@ function jaccardSimilarity(a: Set<string>, b: Set<string>): number {
 }
 
 function goldArticlesKey(question: LegalMulticorpusEvaluationQuestion): string {
-  return [...question.goldCorpusIds].sort().join('|') + '::' + [...question.goldArticles].sort().join('|');
+  return (
+    [...question.goldCorpusIds].sort().join('|') +
+    '::' +
+    [...question.goldArticles.map(goldArticleKey)].sort().join('|')
+  );
 }
 
 export function detectMulticorpusDuplicates(

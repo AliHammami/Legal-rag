@@ -1,0 +1,111 @@
+{
+  "questionId": "q059",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1 du Code civil, une loi entre en vigueur :\n\n- à la date qu’elle fixe ;\n- à défaut, le lendemain de sa publication au Journal officiel.\n\nSi son application nécessite des mesures d’application, l’entrée en vigueur est reportée à la date d’entrée en vigueur de ces mesures. En cas d’urgence, elle peut entrer en vigueur dès sa publication si le décret de promulgation le prévoit.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1397-4"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "262"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 151.84694600000512,
+      "vectorSearchMs": 589.5183129999787,
+      "jinaRerankingMs": 587.5053100000368,
+      "mappingMs": 0.028852000017650425,
+      "totalMs": 1328.9304459999548,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009824000066146255,
+      "contextBuilderMs": 0.027055000071413815,
+      "generationMs": 1209.9963980000466,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2538.9709500001045
+    },
+    "judge": {
+      "questionId": "q059",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement les règles de l’article 1 : date fixée par la loi, à défaut lendemain de la publication au Journal officiel, report des dispositions nécessitant des mesures d’application, et entrée en vigueur dès la publication en cas d’urgence prévue par le décret de promulgation. Ces éléments sont tous explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l’article 1 du Code civil et couvre toutes les affirmations importantes de la réponse : entrée en vigueur à la date fixée ou, à défaut, le lendemain de la publication au Journal officiel ; report des dispositions nécessitant des mesures d’application ; entrée en vigueur dès la publication en cas d’urgence si le décret de promulgation le prévoit. Les autres sources ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1 du Code civil, une loi entre en vigueur :\n\n- à la date qu’elle fixe ;\n- à défaut, le lendemain de sa publication au Journal officiel.\n\nSi son exécution nécessite des mesures d’application, l’entrée en vigueur des dispositions concernées est reportée à la date d’entrée en vigueur de ces mesures.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1397-4"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "262"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1276.554563999991,
+      "routingCalls": 1,
+      "embeddingMs": 196.1218050000025,
+      "vectorSearchMs": 72.17130099993665,
+      "jinaRerankingMs": 491.70183800009545,
+      "mappingMs": 0.022225999971851707,
+      "totalMs": 2036.5950979999034,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008996000047773123,
+      "contextBuilderMs": 0.021261999965645373,
+      "generationMs": 1288.0149630000815,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3324.6479300000938
+    },
+    "judge": {
+      "questionId": "q059",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les règles de l’article 1 : date fixée par la loi, à défaut lendemain de la publication au Journal officiel, et report des dispositions nécessitant des mesures d’application. Ces éléments sont explicitement présents dans le contexte. Elle répond bien à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l’article 1 du Code civil et énonce explicitement les trois règles reprises dans la réponse : entrée en vigueur à la date fixée, à défaut le lendemain de la publication au Journal officiel, et report des dispositions nécessitant des mesures d’application. Les autres sources sont hors sujet mais n’affectent pas la suffisance de la source 3."
+    }
+  },
+  "failureStage": "none"
+}

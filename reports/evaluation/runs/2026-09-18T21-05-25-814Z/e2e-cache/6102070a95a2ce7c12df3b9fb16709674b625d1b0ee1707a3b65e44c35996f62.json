@@ -1,0 +1,95 @@
+{
+  "questionId": "q475",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les règles de classement des établissements scolaires. Il indique seulement que :\n\n- chaque établissement adopte un règlement intérieur ;\n- un ou plusieurs règlements types fixent les conditions de fonctionnement des établissements.\n\nLes règles de classement ne peuvent donc pas être déterminées à partir de ces seules dispositions.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R322-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 162.05156599998008,
+      "vectorSearchMs": 604.5095030000666,
+      "jinaRerankingMs": 286.67468099994585,
+      "mappingMs": 0.02499200007878244,
+      "totalMs": 1053.2910889999475,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011624000035226345,
+      "contextBuilderMs": 0.012255000066943467,
+      "generationMs": 1399.8898109999718,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2453.214283999987
+    },
+    "judge": {
+      "questionId": "q475",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de déterminer les règles de classement, faute d’information pertinente dans le contexte. Elle résume fidèlement les deux dispositions fournies, qui concernent le règlement intérieur et les conditions de fonctionnement, sans établir de règles de classement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour justifier l’abstention : elles portent uniquement sur l’adoption d’un règlement intérieur et sur des règlements types relatifs aux conditions de fonctionnement, sans fournir de règle de classement des établissements scolaires. Elles couvrent donc les constats de la réponse selon lesquels le contexte ne permet pas de déterminer ces règles et qu’il ne mentionne que ces deux éléments."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les règles de classement des établissements scolaires. Il indique seulement que :\n\n- des règlements types fixent leurs conditions de fonctionnement ;\n- chaque établissement adopte un règlement intérieur, communiqué à l’avance ainsi que ses modifications.\n\nAucune règle de classement n’est précisée dans les extraits fournis.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R322-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1064.1873860000633,
+      "routingCalls": 1,
+      "embeddingMs": 193.22606000001542,
+      "vectorSearchMs": 565.8970969999209,
+      "jinaRerankingMs": 267.6788049999159,
+      "mappingMs": 0.028292000060901046,
+      "totalMs": 2091.044591999962,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01296700001694262,
+      "contextBuilderMs": 0.013673999928869307,
+      "generationMs": 1531.3437620000914,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3622.424809999997
+    },
+    "judge": {
+      "questionId": "q475",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre sur des règles de classement, car le contexte ne contient que des règles relatives au règlement intérieur et aux conditions de fonctionnement. Les deux éléments cités sont fidèlement supportés par les extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont hors du sujet matériel du classement mais sont directement pertinentes pour justifier l’abstention : elles ne traitent que du règlement intérieur et des conditions de fonctionnement. Elles couvrent les constats précis de la réponse, à savoir l’existence de règlements types de fonctionnement, l’adoption et la communication du règlement intérieur, ainsi que l’absence de règle de classement dans les extraits fournis."
+    }
+  },
+  "failureStage": "none"
+}

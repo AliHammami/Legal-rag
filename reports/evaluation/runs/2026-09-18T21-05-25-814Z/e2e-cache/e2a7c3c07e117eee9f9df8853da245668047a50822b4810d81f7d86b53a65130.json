@@ -1,0 +1,87 @@
+{
+  "questionId": "q338",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un professionnel peut :\n\n- mettre en place son propre dispositif de médiation de la consommation ;\n- proposer au consommateur de recourir à un autre médiateur de la consommation répondant aux exigences légales.\n\nLorsqu’un médiateur est compétent pour l’ensemble des entreprises du secteur concerné, le professionnel doit toujours permettre au consommateur d’y recourir.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.5155919995159,
+      "vectorSearchMs": 694.5464610001072,
+      "jinaRerankingMs": 259.6627870006487,
+      "mappingMs": 0.02529899962246418,
+      "totalMs": 1186.781747000292,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009979999624192715,
+      "contextBuilderMs": 0.008204000070691109,
+      "generationMs": 1385.4564509997144,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2572.2652679998428
+    },
+    "judge": {
+      "questionId": "q338",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois éléments prévus par l’article L612-1 : dispositif propre, recours à un autre médiateur satisfaisant aux exigences légales, et obligation de permettre le recours au médiateur compétent pour l’ensemble du secteur lorsque celui-ci existe. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L612-1, qui énonce précisément les deux options offertes au professionnel (son propre dispositif ou un autre médiateur répondant aux exigences du titre) ainsi que l’obligation de permettre le recours au médiateur compétent pour l’ensemble du domaine d’activité lorsqu’il existe. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Un professionnel peut :\n\n- mettre en place son propre dispositif de médiation de la consommation ;\n- proposer au consommateur de recourir à un autre médiateur de la consommation répondant aux exigences du titre concerné.\n\nLorsqu’il existe un médiateur compétent pour l’ensemble du secteur d’activité du professionnel, celui-ci doit également permettre au consommateur d’y recourir.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1104.6871870001778,
+      "routingCalls": 1,
+      "embeddingMs": 190.02035200037062,
+      "vectorSearchMs": 65.56344599928707,
+      "jinaRerankingMs": 275.14446299988776,
+      "mappingMs": 0.06390300020575523,
+      "totalMs": 1635.5180759998038,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018856000155210495,
+      "contextBuilderMs": 0.013136000372469425,
+      "generationMs": 1178.3447019997984,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2813.904865999706
+    },
+    "judge": {
+      "questionId": "q338",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux options prévues par l’article L612-1 et précise correctement l’obligation de permettre le recours au médiateur compétent pour l’ensemble du secteur d’activité lorsqu’il existe. Toutes les affirmations sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article L612-1, est directement pertinente : elle énonce expressément les deux options offertes au professionnel (son propre dispositif ou un autre médiateur répondant aux exigences du titre) ainsi que l’obligation de permettre le recours au médiateur compétent pour l’ensemble du domaine d’activité lorsqu’il existe. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

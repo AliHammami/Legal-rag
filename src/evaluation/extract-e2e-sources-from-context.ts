@@ -1,9 +1,10 @@
+import { formatSourceBlockHeader } from '../generation/build-rag-context.js';
 import { EvaluationError } from './evaluation.error.js';
 import type { E2ESourceSnapshot } from './e2e-evaluation.types.js';
 import type { E2ESourceJudgeSourceInput } from './e2e-source-judge.types.js';
 
-const SOURCE_BLOCK_PATTERN =
-  /\[Source (\d+) — Article ([\d\w.-]+) — chunk (\d+)\]\n([\s\S]*?)(?=\n\n\[Source \d+ — Article |$)/g;
+const SOURCE_HEADER_LINE_PATTERN =
+  /^\[Source (\d+) — Article (.+?) — chunk (\d+)\]$/;
 
 export interface ParsedContextSourceBlock {
   sourceId: number;
@@ -12,28 +13,82 @@ export interface ParsedContextSourceBlock {
   content: string;
 }
 
-export function parseContextSourceBlocks(context: string): ParsedContextSourceBlock[] {
-  const blocks: ParsedContextSourceBlock[] = [];
-  const pattern = new RegExp(SOURCE_BLOCK_PATTERN.source, 'g');
+function findSourceBlockContent(
+  context: string,
+  source: E2ESourceSnapshot,
+  nextSource: E2ESourceSnapshot | undefined,
+): string {
+  const header = formatSourceBlockHeader(source);
+  const headerIndex = context.indexOf(header);
+  if (headerIndex === -1) {
+    throw new EvaluationError(
+      `Missing source block for sourceId ${source.sourceId}`,
+      'SOURCE_CONTEXT_INVALID',
+    );
+  }
 
-  for (const match of context.matchAll(pattern)) {
-    const sourceId = Number(match[1]);
-    const articleNumber = match[2];
-    const chunkIndex = Number(match[3]);
-    const content = match[4]?.trim() ?? '';
+  const bodyStart = headerIndex + header.length;
+  if (context[bodyStart] !== '\n') {
+    throw new EvaluationError(
+      `Invalid source block for sourceId ${source.sourceId}`,
+      'SOURCE_CONTEXT_INVALID',
+    );
+  }
 
-    if (!Number.isInteger(sourceId) || sourceId < 1) {
+  let bodyEnd = context.length;
+  if (nextSource) {
+    const nextHeader = formatSourceBlockHeader(nextSource);
+    const nextHeaderIndex = context.indexOf(nextHeader, bodyStart + 1);
+    if (nextHeaderIndex === -1) {
       throw new EvaluationError(
-        `Invalid source block in context: sourceId=${String(match[1])}`,
+        `Missing source block for sourceId ${nextSource.sourceId}`,
         'SOURCE_CONTEXT_INVALID',
       );
+    }
+    bodyEnd = nextHeaderIndex;
+  }
+
+  const content = context.slice(bodyStart + 1, bodyEnd).replace(/\n+$/u, '').trimEnd();
+  if (content.length === 0) {
+    throw new EvaluationError(
+      `Invalid source content for sourceId ${source.sourceId}`,
+      'SOURCE_CONTEXT_INVALID',
+    );
+  }
+
+  return content;
+}
+
+export function parseContextSourceBlocks(context: string): ParsedContextSourceBlock[] {
+  const lines = context.split('\n');
+  const blocks: ParsedContextSourceBlock[] = [];
+
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+    const line = lines[lineIndex] ?? '';
+    const headerMatch = line.match(SOURCE_HEADER_LINE_PATTERN);
+    if (!headerMatch) {
+      continue;
+    }
+
+    const sourceId = Number(headerMatch[1]);
+    const articleNumber = headerMatch[2] ?? '';
+    const chunkIndex = Number(headerMatch[3]);
+    const contentLines: string[] = [];
+
+    for (lineIndex += 1; lineIndex < lines.length; lineIndex += 1) {
+      const contentLine = lines[lineIndex] ?? '';
+      if (SOURCE_HEADER_LINE_PATTERN.test(contentLine)) {
+        lineIndex -= 1;
+        break;
+      }
+      contentLines.push(contentLine);
     }
 
     blocks.push({
       sourceId,
       articleNumber,
       chunkIndex,
-      content,
+      content: contentLines.join('\n').trimEnd(),
     });
   }
 
@@ -45,58 +100,24 @@ export function extractE2ESourcesFromContext(
   sources: E2ESourceSnapshot[],
   questionId?: string,
 ): E2ESourceJudgeSourceInput[] {
-  const suffix = questionId ? ` for question ${questionId}` : '';
-  const blocks = parseContextSourceBlocks(context);
-
-  if (blocks.length === 0 && sources.length > 0) {
-    throw new EvaluationError(
-      `Unable to extract source content from context${suffix}`,
-      'SOURCE_CONTEXT_INVALID',
-    );
+  if (sources.length === 0) {
+    return [];
   }
 
-  if (blocks.length !== sources.length) {
-    throw new EvaluationError(
-      `Source count mismatch${suffix}: context has ${blocks.length}, snapshot has ${sources.length}`,
-      'SOURCE_CONTEXT_INVALID',
+  const orderedSources = [...sources].sort((left, right) => left.sourceId - right.sourceId);
+
+  return orderedSources.map((source, index) => {
+    const content = findSourceBlockContent(
+      context,
+      source,
+      orderedSources[index + 1],
     );
-  }
-
-  const blocksBySourceId = new Map(
-    blocks.map((block) => [block.sourceId, block]),
-  );
-
-  return sources.map((source) => {
-    const block = blocksBySourceId.get(source.sourceId);
-    if (!block) {
-      throw new EvaluationError(
-        `Missing source block for sourceId ${source.sourceId}${suffix}`,
-        'SOURCE_CONTEXT_INVALID',
-      );
-    }
-
-    if (block.chunkIndex !== source.chunkIndex) {
-      throw new EvaluationError(
-        `Chunk index mismatch for sourceId ${source.sourceId}${suffix}`,
-        'SOURCE_CONTEXT_INVALID',
-      );
-    }
-
-    if (
-      block.articleNumber !== source.articleNumber ||
-      block.content.length === 0
-    ) {
-      throw new EvaluationError(
-        `Invalid source content for sourceId ${source.sourceId}${suffix}`,
-        'SOURCE_CONTEXT_INVALID',
-      );
-    }
 
     return {
       sourceId: source.sourceId,
       chunkId: source.chunkId,
       articleNumber: source.articleNumber,
-      content: block.content,
+      content,
     };
   });
 }

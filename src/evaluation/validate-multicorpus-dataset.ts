@@ -9,6 +9,8 @@ import {
 } from './load-multicorpus-dataset.js';
 import type { MulticorpusCorpusArticleRegistry } from './load-corpus-article-index.js';
 import { articleExistsInCorpus } from './load-corpus-article-index.js';
+import { goldArticleKey } from './gold-article.js';
+import { validateGoldCorpusArticleConsistency } from './reconcile-multicorpus-gold-articles.js';
 import type {
   LegalMulticorpusEvaluationQuestion,
   MulticorpusDatasetValidationSummary,
@@ -151,13 +153,15 @@ function validateGoldArticlesInRegistry(
     }
 
     for (const goldArticle of question.goldArticles) {
-      const existsInAnyCorpus = question.goldCorpusIds.some((corpusId) =>
-        articleExistsInCorpus(registry, corpusId, goldArticle),
-      );
-
-      if (!existsInAnyCorpus) {
+      if (
+        !articleExistsInCorpus(
+          registry,
+          goldArticle.corpusId,
+          goldArticle.articleNumber,
+        )
+      ) {
         issues.push(
-          `${question.id}: gold article ${goldArticle} not found in ${question.goldCorpusIds.join(', ')}`,
+          `${question.id}: gold article ${goldArticle.corpusId}/${goldArticle.articleNumber} not found`,
         );
       }
     }
@@ -177,23 +181,28 @@ function validateSourceArticles(
       continue;
     }
 
+    const sourceKeys = new Set(
+      question.sourceArticles.map((article) => goldArticleKey(article)),
+    );
+
     for (const sourceArticle of question.sourceArticles) {
-      if (!question.goldArticles.includes(sourceArticle)) {
-        const existsInAnyCorpus = question.goldCorpusIds.some((corpusId) =>
-          articleExistsInCorpus(registry, corpusId, sourceArticle),
+      if (
+        !articleExistsInCorpus(
+          registry,
+          sourceArticle.corpusId,
+          sourceArticle.articleNumber,
+        )
+      ) {
+        issues.push(
+          `${question.id}: sourceArticle ${sourceArticle.corpusId}/${sourceArticle.articleNumber} not found`,
         );
-        if (!existsInAnyCorpus && question.goldCorpusIds.length > 0) {
-          issues.push(
-            `${question.id}: sourceArticle ${sourceArticle} not found in declared corpora`,
-          );
-        }
       }
     }
 
     for (const goldArticle of question.goldArticles) {
-      if (!question.sourceArticles.includes(goldArticle)) {
+      if (!sourceKeys.has(goldArticleKey(goldArticle))) {
         issues.push(
-          `${question.id}: sourceArticles must include goldArticle ${goldArticle}`,
+          `${question.id}: sourceArticles must include goldArticle ${goldArticle.corpusId}/${goldArticle.articleNumber}`,
         );
       }
     }
@@ -280,6 +289,9 @@ export function validateMulticorpusEvaluationDataset(
     registry,
   );
   const invalidSourceArticles = validateSourceArticles(questions, registry);
+  const invalidCorpusArticleConsistency = questions.flatMap((question) =>
+    validateGoldCorpusArticleConsistency(question),
+  );
   const distributionIssues = validateDistribution(questions);
   const duplicateGroups = mergeDuplicateGroups(detectMulticorpusDuplicates(questions));
 
@@ -308,6 +320,7 @@ export function validateMulticorpusEvaluationDataset(
     ...invalidGoldCorpusIds,
     ...missingCorpusArticles.map((entry) => `missing corpus article: ${entry}`),
     ...invalidSourceArticles,
+    ...invalidCorpusArticleConsistency,
     ...invalidDifficulty,
     ...distributionIssues,
     ...duplicateGroups.map(

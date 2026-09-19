@@ -1,0 +1,103 @@
+{
+  "questionId": "q004",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 240.92371499999717,
+      "vectorSearchMs": 1241.4100829999952,
+      "jinaRerankingMs": 579.2074659999998,
+      "mappingMs": 0.043343999997887295,
+      "totalMs": 2061.6406149999966,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.024631000000226777,
+      "contextBuilderMs": 0.049917000003915746,
+      "generationMs": 993.4613890000037,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3055.2090430000026
+    },
+    "judge": {
+      "questionId": "q004",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition et la peine prévues à l’article 221-1, toutes deux explicitement présentes dans le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 221-1 et établit explicitement tant la définition du meurtre (« donner volontairement la mort à autrui ») que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.2188060000044,
+      "routingCalls": 1,
+      "embeddingMs": 206.86134100000345,
+      "vectorSearchMs": 53.360975000003236,
+      "jinaRerankingMs": 279.0285609999992,
+      "mappingMs": 0.030285000000731088,
+      "totalMs": 1461.5597909999997,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01826200000505196,
+      "contextBuilderMs": 0.021335999997972976,
+      "generationMs": 822.7938910000012,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2284.449510999999
+    },
+    "judge": {
+      "questionId": "q004",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition et la peine prévues par l'article 221-1. Ces deux affirmations sont explicitement présentes dans le contexte (source 2), et la réponse répond directement à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 221-1 et énonce explicitement tant la définition du meurtre (« donner volontairement la mort à autrui ») que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les deux affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

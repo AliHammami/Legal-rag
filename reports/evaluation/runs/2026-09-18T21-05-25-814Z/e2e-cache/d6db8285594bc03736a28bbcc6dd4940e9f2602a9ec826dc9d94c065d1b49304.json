@@ -1,0 +1,119 @@
+{
+  "questionId": "q303",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions de l’article **L. 312-1** s’appliquent à toute opération de crédit mentionnée au **6° de l’article L. 311-1**, qu’elle soit :\n\n- conclue à titre onéreux ou gratuit ;\n- assortie, le cas échéant, d’un cautionnement ;\n- d’un montant total compris entre **200 € et 75 000 € inclus**.\n\nElles ne s’appliquent toutefois pas aux opérations expressément exclues par l’article **L. 312-4**, notamment les crédits immobiliers ou garantis par une sûreté immobilière, les crédits inférieurs à 200 € ou supérieurs à 75 000 €, ainsi que certaines autorisations de découvert et certains crédits de très courte durée.\n\nLe contexte ne précise pas le contenu du **6° de l’article L. 311-1**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-84"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-94"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 238.3550450000912,
+      "vectorSearchMs": 595.019272999838,
+      "jinaRerankingMs": 281.4343050001189,
+      "mappingMs": 0.030492999590933323,
+      "totalMs": 1114.870036999695,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009397000074386597,
+      "contextBuilderMs": 0.02537000086158514,
+      "generationMs": 2468.377058999613,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.290037999861
+    },
+    "judge": {
+      "questionId": "q303",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement l’ensemble des conditions de l’article L. 312-1 : opérations visées au 6° de l’article L. 311-1, à titre onéreux ou gratuit, cautionnement éventuel et montant total compris entre 200 et 75 000 euros inclus. Les précisions sur les exclusions de l’article L. 312-4 sont globalement conformes au contexte, bien que formulées de manière synthétique."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 312-1 et couvre toutes les conditions principales énoncées : renvoi au 6° de l'article L. 311-1, caractère onéreux ou gratuit, cautionnement éventuel et seuils de 200 à 75 000 euros inclus. La source 5 étaye les exclusions supplémentaires mentionnées, notamment les crédits immobiliers ou assortis de sûretés immobilières, les montants hors seuil, certaines autorisations de découvert et les crédits très courts. Les affirmations importantes de la réponse sont donc couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions de l’article **L. 312-1** s’appliquent à toute opération de crédit mentionnée au **6° de l’article L. 311-1**, qu’elle soit :\n\n- conclue **à titre onéreux ou gratuit** ;\n- assortie, le cas échéant, d’un **cautionnement** ;\n- portant sur un montant total de crédit **au moins égal à 200 euros et au plus égal à 75 000 euros**.\n\nCette application est toutefois soumise aux exclusions prévues notamment par l’article **L. 312-4**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-84"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-94"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 917.8418020000681,
+      "routingCalls": 1,
+      "embeddingMs": 236.7498959992081,
+      "vectorSearchMs": 79.06641600001603,
+      "jinaRerankingMs": 303.7260799994692,
+      "mappingMs": 0.04414199944585562,
+      "totalMs": 1537.4775489997119,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0206319997087121,
+      "contextBuilderMs": 0.03305200021713972,
+      "generationMs": 2599.4030539998785,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4136.947889000177
+    },
+    "judge": {
+      "questionId": "q303",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de champ d’application de l’article L. 312-1 : opérations visées au 6° de L. 311-1, à titre onéreux ou gratuit, cautionnement éventuel et montant compris entre 200 et 75 000 euros inclus. La précision relative aux exclusions de l’article L. 312-4 est exacte et explicitement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 312-1 et couvre l'ensemble des conditions énoncées : opération visée au 6° de L. 311-1, caractère onéreux ou gratuit, cautionnement éventuel et seuils de 200 à 75 000 euros inclus. La source 5 est directement pertinente pour l'ajout relatif aux exclusions de l'article L. 312-4."
+    }
+  },
+  "failureStage": "none"
+}

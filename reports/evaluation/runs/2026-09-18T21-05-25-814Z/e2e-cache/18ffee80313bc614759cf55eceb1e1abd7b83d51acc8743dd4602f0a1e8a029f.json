@@ -1,0 +1,87 @@
+{
+  "questionId": "q033",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions nouvelles peuvent s’appliquer aux infractions commises avant leur entrée en vigueur si elles sont **moins sévères que les dispositions anciennes** et si l’infraction **n’a pas encore donné lieu à une condamnation passée en force de chose jugée**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "112-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.14613499992993,
+      "vectorSearchMs": 630.153255000012,
+      "jinaRerankingMs": 509.9153689999366,
+      "mappingMs": 0.029257000074721873,
+      "totalMs": 1366.2916119999718,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009837000048719347,
+      "contextBuilderMs": 0.034272999968379736,
+      "generationMs": 1086.2861079999711,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2452.6305070000235
+    },
+    "judge": {
+      "questionId": "q033",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l'article 112-1 : des dispositions nouvelles moins sévères et l'absence de condamnation passée en force de chose jugée. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 112-1 et énonce explicitement les deux conditions reprises dans la réponse : les dispositions nouvelles doivent être moins sévères et l’infraction ne doit pas avoir donné lieu à une condamnation passée en force de chose jugée. Elle est donc directement pertinente et couvre intégralement les affirmations importantes."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions nouvelles peuvent s’appliquer aux infractions commises avant leur entrée en vigueur si :\n\n- aucune condamnation n’a encore acquis force de chose jugée ; et\n- ces dispositions sont moins sévères que les anciennes.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "112-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 838.6304549999768,
+      "routingCalls": 1,
+      "embeddingMs": 226.10740500001702,
+      "vectorSearchMs": 30.16517799999565,
+      "jinaRerankingMs": 535.8306490000105,
+      "mappingMs": 0.028415999957360327,
+      "totalMs": 1630.8008939999854,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010547999991104007,
+      "contextBuilderMs": 0.007133000064641237,
+      "generationMs": 1161.197121999925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2792.0332329999655
+    },
+    "judge": {
+      "questionId": "q033",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article 112-1 : absence de condamnation passée en force de chose jugée et caractère moins sévère des dispositions nouvelles. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 112-1 et énonce explicitement les deux conditions reprises dans la réponse : l’absence de condamnation passée en force de chose jugée et le caractère moins sévère des dispositions nouvelles."
+    }
+  },
+  "failureStage": "none"
+}

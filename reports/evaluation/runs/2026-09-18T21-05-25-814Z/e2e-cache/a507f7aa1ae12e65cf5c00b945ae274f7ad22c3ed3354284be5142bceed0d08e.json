@@ -1,0 +1,103 @@
+{
+  "questionId": "q087",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’enrichissement injustifié doit être indemnisé lorsque, hors les cas de gestion d’affaires et de paiement de l’indu :\n\n- une personne s’est enrichie ;\n- cet enrichissement s’est réalisé au détriment d’une autre personne, qui s’est appauvrie ;\n- l’enrichissement ne procède ni de l’accomplissement d’une obligation par l’appauvri, ni d’une intention libérale.\n\nEn principe, l’indemnité est égale à la moindre des deux valeurs de l’enrichissement et de l’appauvrissement.\n\nL’appauvrissement est constaté au jour de la dépense et l’enrichissement est apprécié selon ce qu’il subsiste au jour de la demande ; ces valeurs sont évaluées au jour du jugement. Toutefois, si l’enrichi est de mauvaise foi, l’indemnité correspond à la plus forte de ces deux valeurs.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 181.28043299983256,
+      "vectorSearchMs": 672.4958000001498,
+      "jinaRerankingMs": 500.99428900005296,
+      "mappingMs": 0.06084199994802475,
+      "totalMs": 1354.8579549998976,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016398000065237284,
+      "contextBuilderMs": 0.09992399998009205,
+      "generationMs": 2382.1376529999543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3737.1216110000387
+    },
+    "judge": {
+      "questionId": "q087",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement le champ subsidiaire de l’action (hors gestion d’affaires et paiement de l’indu), les conditions de l’enrichissement injustifié, et la règle de calcul prévue à l’article 1303 : indemnité limitée à la moindre valeur entre enrichissement et appauvrissement. Les précisions supplémentaires sur l’absence d’obligation ou d’intention libérale, l’évaluation des valeurs et l’exception de mauvaise foi sont exactes et expressément supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l’article 1303 couvre le caractère subsidiaire de l’indemnisation et la règle de la moindre valeur, l’article 1303-1 définit l’absence de justification, et l’article 1303-4 couvre les dates d’appréciation et l’exception de mauvaise foi. Elles étayent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’enrichissement injustifié doit être indemnisé lorsque :\n\n- une personne s’est enrichie ;\n- cet enrichissement a été réalisé au détriment d’une autre, qui s’est appauvrie ;\n- l’enrichissement ne résulte ni de l’exécution d’une obligation par l’appauvri ni d’une intention libérale ;\n- l’action ne relève pas de la gestion d’affaires ou du paiement de l’indu.\n\nL’indemnité est en principe égale à la moindre des deux valeurs suivantes : celle de l’enrichissement et celle de l’appauvrissement.\n\nL’appauvrissement est constaté au jour de la dépense et l’enrichissement au jour de la demande, mais ces valeurs sont évaluées au jour du jugement. Toutefois, si l’enrichi est de mauvaise foi, l’indemnité correspond à la plus forte de ces deux valeurs.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1027.2262629999314,
+      "routingCalls": 1,
+      "embeddingMs": 166.7480059999507,
+      "vectorSearchMs": 75.58321200008504,
+      "jinaRerankingMs": 485.05067400005646,
+      "mappingMs": 0.10073899989947677,
+      "totalMs": 1754.737586000003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012063000118359923,
+      "contextBuilderMs": 0.017026999965310097,
+      "generationMs": 2239.4880319999065,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3994.264658999862
+    },
+    "judge": {
+      "questionId": "q087",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les conditions de l’enrichissement injustifié, l’exclusion de la gestion d’affaires et du paiement de l’indu, la règle de la moindre des deux valeurs, ainsi que les modalités d’évaluation et l’exception de mauvaise foi. Toutes ces affirmations sont explicitement soutenues par les articles 1303, 1303-1 et 1303-4 fournis dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l'article 1303 couvre l'exclusion de la gestion d'affaires et du paiement de l'indu ainsi que la règle de la moindre valeur ; l'article 1303-1 définit le caractère injustifié par l'absence d'exécution d'une obligation ou d'intention libérale ; l'article 1303-4 couvre les dates de constatation et d'évaluation, ainsi que l'exception de mauvaise foi. Elles soutiennent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

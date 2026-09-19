@@ -1,0 +1,87 @@
+{
+  "questionId": "q349",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En l’absence de mission de conciliation ou en cas d’échec de celle-ci, la commission peut, à la demande du débiteur et après avoir permis aux parties de présenter leurs observations :\n\n1. **Rééchelonner ou différer le paiement des dettes**, de toute nature, dans la limite :\n   - de **sept ans**, ou\n   - de **la moitié de la durée de remboursement restant à courir** des emprunts en cours.  \n   En cas de déchéance du terme, le délai peut atteindre **la moitié de la durée restant à courir avant cette déchéance** ;\n\n2. **Imputer les paiements en priorité sur le capital** ;\n\n3. **Réduire le taux d’intérêt** applicable aux échéances reportées ou rééchelonnées, éventuellement en dessous du taux légal si la situation du débiteur le justifie, sans que ce taux puisse dépasser le taux légal ;\n\n4. **Suspendre l’exigibilité des créances non alimentaires** pendant une durée maximale de **deux ans**, avec, sauf décision contraire, suspension du paiement des intérêts. Seules les sommes dues au titre du capital peuvent alors produire des intérêts, au taux maximal de l’intérêt légal.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L733-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.5589870000258,
+      "vectorSearchMs": 770.833743000403,
+      "jinaRerankingMs": 326.9061610000208,
+      "mappingMs": 0.04422099981456995,
+      "totalMs": 1327.3901659995317,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01765699964016676,
+      "contextBuilderMs": 0.0426000002771616,
+      "generationMs": 2480.7050890000537,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3808.1724039996043
+    },
+    "judge": {
+      "questionId": "q349",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’ensemble des mesures prévues par l’article L733-1 et leurs conditions : demande du débiteur, observations des parties, plafonds de sept ans ou de la moitié de la durée restante, règle particulière en cas de déchéance du terme, imputation sur le capital, encadrement du taux d’intérêt et suspension des créances non alimentaires pendant deux ans avec son régime d’intérêts. Toutes les affirmations importantes sont expressément soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article L733-1, est directement pertinente : elle traite précisément des mesures imposables par la commission en l’absence ou après l’échec de la conciliation, ainsi que des plafonds et conditions des reports et rééchelonnements. Elle couvre l’ensemble des affirmations importantes de la réponse générée : demande du débiteur, observations des parties, rééchelonnement/différé et limites de durée y compris en cas de déchéance du terme, imputation sur le capital, réduction et plafonnement du taux d’intérêt, suspension des créances non alimentaires et régime des intérêts durant cette suspension."
+    }
+  },
+  "routing": {
+    "answer": "En l’absence de mission de conciliation ou en cas d’échec de celle-ci, la commission peut, **à la demande du débiteur et après avoir permis aux parties de présenter leurs observations**, imposer les mesures suivantes :\n\n1. **Rééchelonner ou différer le paiement des dettes**, de toute nature ;\n2. **Imputer les paiements en priorité sur le capital** ;\n3. **Réduire le taux d’intérêt** applicable aux échéances reportées ou rééchelonnées, éventuellement en dessous du taux légal par une décision spéciale et motivée, sans qu’il puisse dépasser le taux légal ;\n4. **Suspendre l’exigibilité des créances non alimentaires** pour une durée maximale de deux ans, avec suspension corrélative des intérêts sauf décision contraire.\n\nConcernant les délais de report ou de rééchelonnement, ils ne peuvent normalement **excéder sept ans ou la moitié de la durée restant à courir des emprunts en cours**, la limite la plus pertinente étant celle prévue par le texte. En cas de déchéance du terme, le délai peut atteindre **la moitié de la durée qui restait à courir avant cette déchéance**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L733-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1171.6042460007593,
+      "routingCalls": 1,
+      "embeddingMs": 235.92903300002217,
+      "vectorSearchMs": 78.60424000024796,
+      "jinaRerankingMs": 305.1475400002673,
+      "mappingMs": 0.04185800068080425,
+      "totalMs": 1791.3640380008146,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019756999798119068,
+      "contextBuilderMs": 0.010227999649941921,
+      "generationMs": 2957.4775229999796,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4748.884517000057
+    },
+    "judge": {
+      "questionId": "q349",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les quatre catégories de mesures et les plafonds de sept ans/de la moitié de la durée restante, ainsi que le cas de déchéance du terme et la suspension maximale de deux ans. Elle est bien fondée sur le contexte. Elle omet toutefois la condition selon laquelle un taux inférieur au taux légal suppose que la situation du débiteur l’exige, et formule de manière imprécise l’articulation entre les deux plafonds de délai (« limite la plus pertinente »)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source est directement pertinente : l'article L733-1 traite précisément des mesures imposables après absence ou échec de conciliation et des conditions de report ou rééchelonnement. Elle couvre la quasi-totalité des affirmations de la réponse générée (demande du débiteur, observations des parties, rééchelonnement/différé, imputation sur le capital, taux réduit, suspension des créances non alimentaires et plafonds de durée). Toutefois, la réponse affirme le taux réduit « éventuellement en dessous du taux légal par une décision spéciale et motivée » sans reprendre la condition textuelle supplémentaire selon laquelle la situation du débiteur doit l'exiger ; la source couvre donc cette affirmation mais la réponse ne la restitue pas entièrement. La formulation sur l'alternative entre sept ans et la moitié de la durée restante est également moins précise que le texte."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,111 @@
+{
+  "questionId": "q122",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L7231-1 du code du travail, les services à la personne couvrent :\n\n1. **La garde d’enfants** ;\n2. **L’assistance à domicile ou l’aide à la mobilité** :\n   - des personnes âgées ;\n   - des personnes handicapées ;\n   - des personnes ayant besoin d’une aide personnelle favorisant leur maintien à domicile ;\n3. **Les services à domicile relatifs aux tâches ménagères ou familiales**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7231-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D7231-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1254-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7231-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 245.3165709997993,
+      "vectorSearchMs": 602.3447249999736,
+      "jinaRerankingMs": 860.5170219999272,
+      "mappingMs": 0.020891000051051378,
+      "totalMs": 1708.234982999973,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011862999992445111,
+      "contextBuilderMs": 0.04217400006018579,
+      "generationMs": 1362.1068359999917,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3070.405529000098
+    },
+    "judge": {
+      "questionId": "q122",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois catégories prévues par l’article L7231-1 : garde d’enfants, assistance ou aide à la mobilité des personnes concernées favorisant le maintien à domicile, et services relatifs aux tâches ménagères ou familiales à domicile. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L7231-1 visé par la question et énonce exactement les trois catégories reprises dans la réponse générée : garde d’enfants, assistance/aide à la mobilité des personnes concernées favorisant leur maintien à domicile, et services à domicile relatifs aux tâches ménagères ou familiales. Les autres sources sont accessoires mais cohérentes avec ce cadre."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L7231-1 du code du travail, les services à la personne couvrent :\n\n1. **La garde d’enfants** ;\n2. **L’assistance à domicile** ou l’aide à la mobilité dans l’environnement de proximité :\n   - des personnes âgées ;\n   - des personnes handicapées ;\n   - des personnes ayant besoin d’une aide personnelle favorisant leur maintien à domicile ;\n3. **Les services à domicile liés aux tâches ménagères ou familiales**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7231-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D7231-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1254-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7231-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 943.9039280000143,
+      "routingCalls": 1,
+      "embeddingMs": 193.66014799987897,
+      "vectorSearchMs": 233.72473599994555,
+      "jinaRerankingMs": 532.9897539999802,
+      "mappingMs": 0.04531299998052418,
+      "totalMs": 1904.3550269999541,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.021658000070601702,
+      "contextBuilderMs": 0.024972999934107065,
+      "generationMs": 1499.199392999988,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3403.610517000081
+    },
+    "judge": {
+      "questionId": "q122",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois catégories prévues par l’article L7231-1 : garde d’enfants, assistance/aide à la mobilité des personnes concernées favorisant le maintien à domicile, et services liés aux tâches ménagères ou familiales à domicile. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 7231-1 visé par la question et énumère exactement les trois catégories reprises dans la réponse : garde d’enfants, assistance ou aide à la mobilité des personnes concernées favorisant le maintien à domicile, et services relatifs aux tâches ménagères ou familiales à domicile. Elle couvre donc l’ensemble des affirmations importantes. Les autres sources sont seulement complémentaires ou contextuelles."
+    }
+  },
+  "failureStage": "none"
+}

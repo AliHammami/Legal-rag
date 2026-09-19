@@ -1,0 +1,87 @@
+{
+  "questionId": "q395",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 2332 du Code civil, les créances privilégiées sur certains meubles comprennent notamment :\n\n1. Les sommes dues au titre d’un bail ou de l’occupation d’un immeuble, garanties par le mobilier garnissant les lieux et appartenant au débiteur, y compris, le cas échéant, le mobilier d’exploitation et la récolte de l’année ;\n2. Les frais de conservation d’un meuble, garantis sur ce meuble ;\n3. Le prix de vente d’un meuble, garanti sur celui-ci ;\n4. Les créances résultant du contrat de travail de l’auxiliaire salarié d’un travailleur à domicile, garanties sur les sommes dues à ce travailleur par les donneurs d’ouvrage.\n\nLe contexte fourni ne contient aucune disposition relative aux restrictions applicables aux contrats des vendeurs à domicile indépendants selon le Code de commerce. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.71527600008994,
+      "vectorSearchMs": 696.7767380001023,
+      "jinaRerankingMs": 324.4727079998702,
+      "mappingMs": 0.02131399977952242,
+      "totalMs": 1217.0199120007455,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010287999175488949,
+      "contextBuilderMs": 0.009280999191105366,
+      "generationMs": 2160.4401930002496,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3377.4892239999026
+    },
+    "judge": {
+      "questionId": "q395",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément les quatre catégories de créances privilégiées prévues par l’article 2332 du Code civil. Elle ne répond toutefois pas aux restrictions relatives aux contrats des vendeurs à domicile indépendants, pourtant essentielles à la seconde partie de la question et présentes dans la référence. Son abstention sur ce point est bien justifiée par l’absence de tout extrait pertinent du Code de commerce dans le contexte fourni ; les affirmations formulées sont donc entièrement fondées sur ce contexte. Comme une réponse était attendue à la question dans son ensemble, la réponse partielle ne satisfait pas pleinement le critère d’absence d’abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 2332 du Code civil et est pleinement pertinente pour la première partie de la question. Aucune source relative à l’article L. 135-2 du Code de commerce n’est fournie ; dans ce contexte, elle permet de constater que les restrictions demandées ne sont pas documentées par les extraits disponibles, ce qui justifie l’abstention ciblée de la réponse. Les quatre catégories de créances énoncées dans la réponse sont toutes couvertes précisément par la source, et le constat d’absence de disposition pertinente dans le contexte est cohérent avec le corpus fourni."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 2332 du Code civil, les créances privilégiées sur certains meubles comprennent :\n\n1. les sommes dues au titre d’un bail ou de l’occupation d’un immeuble, garanties sur le mobilier appartenant au débiteur et garnissant les lieux, y compris éventuellement le mobilier d’exploitation et la récolte de l’année ;\n2. les frais de conservation d’un meuble, garantis sur ce meuble ;\n3. le prix de vente d’un meuble, garanti sur celui-ci ;\n4. les créances issues du contrat de travail de l’auxiliaire salarié d’un travailleur à domicile, au sens de l’article L. 7412-1 du Code du travail, garanties sur les sommes dues à ce travailleur par les donneurs d’ouvrage.\n\nLe contexte fourni ne contient aucune disposition relative aux restrictions applicables aux contrats des vendeurs à domicile indépendants selon le Code du commerce. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      }
+    ],
+    "profiling": {
+      "routingMs": 993.146149000153,
+      "routingCalls": 1,
+      "embeddingMs": 175.92376700043678,
+      "vectorSearchMs": 319.94972500018775,
+      "jinaRerankingMs": 321.2575989998877,
+      "mappingMs": 0.02232200000435114,
+      "totalMs": 1810.3230439992622,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011008000001311302,
+      "contextBuilderMs": 0.011471000500023365,
+      "generationMs": 2273.066183999181,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4083.419741000049
+    },
+    "judge": {
+      "questionId": "q395",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La première partie est correctement et précisément restituée conformément à l’article 2332 du Code civil. En revanche, la réponse ne fournit pas les restrictions prévues par le Code de commerce pour les vendeurs à domicile indépendants, alors que cette seconde partie est essentielle à la question. Son abstention sur ce point est toutefois entièrement justifiée par le contexte effectivement fourni, qui ne contient que l’article 2332."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la première partie : elle reproduit l’article 2332 du Code civil et permet de couvrir précisément les quatre catégories de créances privilégiées énoncées dans la réponse. En revanche, aucune source relative à l’article L. 135-2 du Code de commerce, ou aux vendeurs à domicile indépendants, n’est fournie : les sources sont donc insuffisantes pour répondre intégralement à la question. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : la première partie est textuellement fondée sur la source et le constat d’absence de disposition pertinente dans le contexte fourni est conforme au jeu de sources."
+    }
+  },
+  "failureStage": "generation"
+}

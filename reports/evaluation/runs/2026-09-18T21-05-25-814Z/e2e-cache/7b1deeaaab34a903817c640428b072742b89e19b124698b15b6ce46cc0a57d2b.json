@@ -1,0 +1,95 @@
+{
+  "questionId": "q499",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les règles applicables à la chasse pendant la période de nidification. Il indique seulement que la chasse est régie par des lois particulières.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "715"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1812"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 259.4084530000109,
+      "vectorSearchMs": 670.1541859998833,
+      "jinaRerankingMs": 284.44980899989605,
+      "mappingMs": 0.023135000141337514,
+      "totalMs": 1214.063329000026,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010127000045031309,
+      "contextBuilderMs": 0.011682000011205673,
+      "generationMs": 1241.5778370001353,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2455.6714869998395
+    },
+    "judge": {
+      "questionId": "q499",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement de donner des règles non présentes dans le contexte et indique correctement que celui-ci renvoie seulement à des lois particulières pour la chasse. Elle est entièrement fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour justifier l’abstention : elle indique que la chasse est réglée par des lois particulières, sans fournir de règles relatives à la nidification. Elle couvre donc les deux constats de la réponse générée. La source 2 est hors sujet mais n’est pas nécessaire à la justification."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de déterminer les règles applicables à la chasse en période de nidification. Il indique seulement que la chasse est régie par des lois particulières.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "715"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1812"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1124.887185000116,
+      "routingCalls": 1,
+      "embeddingMs": 221.29970999993384,
+      "vectorSearchMs": 590.4459430000279,
+      "jinaRerankingMs": 251.87452300009318,
+      "mappingMs": 0.031531999818980694,
+      "totalMs": 2188.563540000003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011748000048100948,
+      "contextBuilderMs": 0.01553999981842935,
+      "generationMs": 1598.823069000151,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3787.4213229999878
+    },
+    "judge": {
+      "questionId": "q499",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement faute d’informations suffisantes dans le contexte et indique correctement que celui-ci ne mentionne que l’existence de lois particulières régissant la chasse. Cette abstention est adaptée à une question hors du périmètre informatif du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour justifier l’abstention : elle indique que la chasse est réglée par des lois particulières, sans fournir de règles relatives à la période de nidification. Elle couvre donc les deux constats de la réponse. La source 2 est hors sujet, mais n’est pas nécessaire à la justification fournie."
+    }
+  },
+  "failureStage": "none"
+}

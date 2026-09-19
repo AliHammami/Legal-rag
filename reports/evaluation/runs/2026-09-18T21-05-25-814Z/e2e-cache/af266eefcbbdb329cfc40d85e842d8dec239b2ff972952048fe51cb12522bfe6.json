@@ -1,0 +1,107 @@
+{
+  "questionId": "q402",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "- **Prêteurs :** ils doivent assurer la mise à jour des connaissances et compétences professionnelles de leurs personnels par une formation continue adaptée, dont la durée minimale est fixée par arrêté ministériel. Cette formation peut être dispensée par un établissement de crédit ou une société de financement, ou par un organisme de formation répondant aux conditions prévues. Le non-respect des obligations visées aux articles L. 314-24 et L. 314-25 est puni d’une **amende contraventionnelle de 5e classe**.\n\n- **Auteurs de violences contre des agents publics :** le contexte ne contient pas le texte de l’article **222-14-5 du code pénal**. Il ne permet donc pas de préciser les sanctions spécifiques applicables.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R341-26"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-25"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-24"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.3185010002926,
+      "vectorSearchMs": 652.4803590001538,
+      "jinaRerankingMs": 307.7918839994818,
+      "mappingMs": 0.020983999595046043,
+      "totalMs": 1176.6435110000893,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012715999968349934,
+      "contextBuilderMs": 0.02586499974131584,
+      "generationMs": 2965.3246189998463,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4142.016580999829
+    },
+    "judge": {
+      "questionId": "q402",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie relative aux prêteurs est correcte et précise l’obligation de formation continue ainsi que la sanction contraventionnelle de 5e classe, conformément au contexte. Pour les violences contre agents publics, la réponse ne fournit pas les peines aggravées attendues au regard de la référence, mais elle indique à juste titre que le texte de l’article 222-14-5 n’est pas présent dans le contexte. Toutes les affirmations formulées sont donc étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources D314-25 et R341-26 sont directement pertinentes pour l’obligation de formation continue des prêteurs et la contravention de 5e classe en cas de manquement aux obligations visées. En revanche, aucune source ne reproduit ni ne documente l’article 222-14-5 du code pénal, qui constitue une partie essentielle de la question. La réponse générée s’abstient explicitement sur ce point en constatant cette absence de contexte ; toutes les affirmations effectivement formulées sont donc couvertes par les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "- **Prêteurs :** ils doivent assurer la mise à jour des connaissances et compétences professionnelles de leurs personnels au moyen d’une formation continue adaptée. Sa durée minimale est fixée par arrêté du ministre chargé de l’économie. La formation peut être dispensée par un établissement de crédit ou une société de financement, ou par un organisme de formation répondant aux conditions prévues par le texte.\n\n- **Auteurs de violences contre des agents publics :** le contenu fourni ne mentionne pas l’article **222-14-5 du code pénal**. Il ne permet donc pas de préciser la sanction spécifique applicable.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R341-26"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-25"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1367.5592539999634,
+      "routingCalls": 1,
+      "embeddingMs": 515.6450869999826,
+      "vectorSearchMs": 104.15129599999636,
+      "jinaRerankingMs": 273.74389600008726,
+      "mappingMs": 0.018508000299334526,
+      "totalMs": 2261.1462859995663,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010015999898314476,
+      "contextBuilderMs": 0.01397399976849556,
+      "generationMs": 2074.938942999579,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4336.1210160003975
+    },
+    "judge": {
+      "questionId": "q402",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément l'obligation de formation continue des prêteurs prévue par l'article D314-25. En revanche, elle ne répond pas au volet relatif aux sanctions applicables aux violences contre des agents publics, pourtant demandé et présent dans la référence. Cette omission rend la réponse partielle et constitue une abstention injustifiée au regard de l'indicateur. Les affirmations effectivement formulées sont toutefois entièrement étayées par le contexte : celui-ci contient D314-25 mais pas l'article 222-14-5."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source D314-25 est directement pertinente et couvre précisément l’obligation de formation continue des prêteurs, sa durée minimale et les organismes habilités à la dispenser. En revanche, aucune source ne contient l’article 222-14-5 du code pénal ni les sanctions visant les violences contre des agents publics : le corpus est donc incomplet pour répondre pleinement à la question. Les affirmations effectivement formulées dans la réponse générée sont toutefois couvertes : le premier point est étayé par D314-25 et le constat selon lequel le contenu fourni ne permet pas de préciser la sanction est cohérent avec les sources disponibles."
+    }
+  },
+  "failureStage": "generation"
+}

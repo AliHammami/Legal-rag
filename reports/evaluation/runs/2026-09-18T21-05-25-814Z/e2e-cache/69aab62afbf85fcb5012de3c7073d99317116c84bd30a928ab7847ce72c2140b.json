@@ -1,0 +1,87 @@
+{
+  "questionId": "q337",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une amende administrative pouvant aller jusqu’à **3 000 euros**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 257.960849000141,
+      "vectorSearchMs": 884.0513249998912,
+      "jinaRerankingMs": 241.3020369997248,
+      "mappingMs": 0.13000799994915724,
+      "totalMs": 1383.4827680001035,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07136400043964386,
+      "contextBuilderMs": 0.012924999929964542,
+      "generationMs": 821.1030320003629,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2204.6871330002323
+    },
+    "judge": {
+      "questionId": "q337",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement l'amende administrative maximale de 3 000 euros applicable à une personne physique. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L641-1 vise directement le manquement aux obligations d'information des articles L. 616-1 et L. 616-2 et prévoit expressément une amende administrative plafonnée à 3 000 euros pour une personne physique. Elle couvre entièrement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Pour une personne physique, le manquement est passible d’une amende administrative pouvant atteindre **3 000 euros**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1030.7970099998638,
+      "routingCalls": 1,
+      "embeddingMs": 201.2404500003904,
+      "vectorSearchMs": 50.96949000004679,
+      "jinaRerankingMs": 252.5238830000162,
+      "mappingMs": 0.024433999322354794,
+      "totalMs": 1535.5822799997404,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009471999481320381,
+      "contextBuilderMs": 0.008179999887943268,
+      "generationMs": 1274.8696619998664,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2810.4772430006415
+    },
+    "judge": {
+      "questionId": "q337",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement la sanction applicable à une personne physique : une amende administrative pouvant atteindre 3 000 euros. Cette information est explicitement prévue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L641-1 vise explicitement le manquement aux obligations d'information des articles L. 616-1 et L. 616-2 et prévoit une amende administrative plafonnée à 3 000 euros pour une personne physique. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

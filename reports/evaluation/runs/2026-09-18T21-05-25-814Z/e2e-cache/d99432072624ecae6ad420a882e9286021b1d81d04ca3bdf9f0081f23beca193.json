@@ -1,0 +1,87 @@
+{
+  "questionId": "q120",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Elle peut demander aux particuliers employeurs une contribution correspondant à ses frais de gestion lorsqu’elle :\n\n- assure le placement de travailleurs auprès d’eux ; ou\n- accomplit, pour leur compte, les formalités administratives ainsi que les déclarations sociales et fiscales liées à l’emploi de ces travailleurs.\n\nLe texte ne précise toutefois ni le montant ni les modalités de cette contribution.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.05386600014754,
+      "vectorSearchMs": 604.0101620000787,
+      "jinaRerankingMs": 570.9605920000467,
+      "mappingMs": 0.029307000106200576,
+      "totalMs": 1375.0833880000282,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01067200000397861,
+      "contextBuilderMs": 0.008050000062212348,
+      "generationMs": 1388.068121000193,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2763.1785480000544
+    },
+    "judge": {
+      "questionId": "q120",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux situations visées et précise que la contribution est représentative des frais de gestion. La mention selon laquelle le texte ne fixe ni montant ni modalités est cohérente avec le contexte, qui ne les précise pas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la règle applicable : les personnes morales ou entreprises individuelles assurant le placement de travailleurs, ou réalisant pour les particuliers employeurs les formalités et déclarations liées à l'emploi, peuvent demander une contribution représentative de leurs frais de gestion. Elle couvre les deux hypothèses, les bénéficiaires et la nature de la contribution. L'observation selon laquelle le texte ne précise pas son montant ni ses modalités est également supportée par l'absence de telles précisions dans la source."
+    }
+  },
+  "routing": {
+    "answer": "Elle peut demander aux personnes physiques employeurs une contribution destinée à représenter ses frais de gestion lorsqu’elle :\n\n- assure le placement de travailleurs auprès d’elles ; ou\n- accomplit, pour leur compte, les formalités administratives ainsi que les déclarations sociales et fiscales liées à l’emploi de ces travailleurs.\n\nLa contribution doit donc être liée à ces frais de gestion.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.2556549999863,
+      "routingCalls": 1,
+      "embeddingMs": 250.28479499998502,
+      "vectorSearchMs": 284.99155100015923,
+      "jinaRerankingMs": 554.285402999958,
+      "mappingMs": 0.033358999993652105,
+      "totalMs": 2419.8767889998853,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018619999988004565,
+      "contextBuilderMs": 0.008458999916911125,
+      "generationMs": 1777.8824579999782,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4197.793006000109
+    },
+    "judge": {
+      "questionId": "q120",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle : contribution demandée aux employeurs, représentative des frais de gestion, dans le cadre du placement de travailleurs ou de l’accomplissement pour leur compte des formalités administratives et déclarations sociales et fiscales. Tous les éléments sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la règle applicable : elle vise la personne morale ou l’entreprise individuelle assurant le placement de travailleurs auprès de personnes physiques employeurs ou accomplissant pour leur compte les formalités administratives et déclarations sociales et fiscales, et autorise une contribution représentative des frais de gestion. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

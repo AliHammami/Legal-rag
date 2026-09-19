@@ -1,0 +1,87 @@
+{
+  "questionId": "q025",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 315-1 :\n\n- **L’introduction** dans un local à usage d’habitation, commercial, agricole ou professionnel, réalisée à l’aide de manœuvres, menaces, voies de fait ou contrainte, hors les cas permis par la loi, constitue une infraction punie de **deux ans d’emprisonnement et 30 000 € d’amende**.\n- **Le maintien** dans ce local après une telle introduction, dans les mêmes conditions et hors les cas permis par la loi, constitue également une infraction punie de **deux ans d’emprisonnement et 30 000 € d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "315-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 184.74213700002292,
+      "vectorSearchMs": 641.5577210000483,
+      "jinaRerankingMs": 565.8313499999931,
+      "mappingMs": 0.03874099999666214,
+      "totalMs": 1392.2344639999792,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014644999988377094,
+      "contextBuilderMs": 0.008772999979555607,
+      "generationMs": 1530.5405460000038,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2922.81000399997
+    },
+    "judge": {
+      "questionId": "q025",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux comportements visés (introduction et maintien consécutif), les modalités de commission, l’exception des cas permis par la loi et les peines identiques de deux ans d’emprisonnement et 30 000 euros d’amende. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 315-1 et est exactement pertinente. Elle couvre l’introduction, les modalités (manœuvres, menaces, voies de fait ou contrainte), les locaux visés (habitation, commercial, agricole ou professionnel), la réserve des cas permis par la loi, le maintien consécutif à l’introduction et les peines identiques de deux ans d’emprisonnement et 30 000 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 315-1 :\n\n- **L’introduction** dans un local à usage d’habitation, commercial, agricole ou professionnel, à l’aide de manœuvres, menaces, voies de fait ou contrainte, hors les cas permis par la loi, constitue une infraction punie de **deux ans d’emprisonnement et de 30 000 euros d’amende**.\n- **Le maintien** dans ce local après une telle introduction, dans les mêmes conditions, constitue également une infraction punie de **deux ans d’emprisonnement et de 30 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "315-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 859.1869440000155,
+      "routingCalls": 1,
+      "embeddingMs": 186.97545399999944,
+      "vectorSearchMs": 30.450431999983266,
+      "jinaRerankingMs": 547.3048490000074,
+      "mappingMs": 0.035136999969836324,
+      "totalMs": 1623.9819039999857,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01102899998659268,
+      "contextBuilderMs": 0.007926999998744577,
+      "generationMs": 1468.0919209999847,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3092.101338999986
+    },
+    "judge": {
+      "questionId": "q025",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux comportements visés par l’article 315-1 (introduction et maintien) ainsi que les peines identiques de deux ans d’emprisonnement et 30 000 euros d’amende. Elle est pleinement étayée par le contexte, qui mentionne aussi les locaux commerciaux et agricoles."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 315-1 et vise précisément l’introduction dans les locaux concernés par manœuvres, menaces, voies de fait ou contrainte, ainsi que le maintien consécutif. Elle énonce les mêmes peines de deux ans d’emprisonnement et 30 000 euros d’amende pour les deux comportements, couvrant toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

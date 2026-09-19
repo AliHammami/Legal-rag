@@ -1,0 +1,119 @@
+{
+  "questionId": "q334",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le contenu des articles **L. 511-1** et **L. 511-6**. Il ne permet donc pas de déterminer précisément les pouvoirs des agents prévus par ces articles.\n\nIl indique seulement, notamment, que certains agents habilités disposent des pouvoirs définis aux sections 1 à 3 du chapitre II du titre concerné et peuvent mettre en œuvre les mesures prévues à l’article L. 521-1 ainsi qu’à la section 2 du chapitre Ier du titre II.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-51"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 244.47510800044984,
+      "vectorSearchMs": 948.6060979999602,
+      "jinaRerankingMs": 285.6895240005106,
+      "mappingMs": 0.029128000140190125,
+      "totalMs": 1478.8389950003475,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07048000022768974,
+      "contextBuilderMs": 0.10777499992400408,
+      "generationMs": 2072.021785000339,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3551.0519369998947
+    },
+    "judge": {
+      "questionId": "q334",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les pouvoirs et le champ d’habilitation demandés pour les articles L. 511-1 et L. 511-6, alors qu’une réponse était attendue. Elle se limite à constater l’absence de ces articles dans le contexte et à rapporter des éléments issus de l’article L. 511-22, ce qui est bien soutenu par le contexte mais ne répond pas à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne fournissent ni le texte de l’article L. 511-1 ni celui de l’article L. 511-6, qui sont directement visés par la question. Elles sont donc très insuffisantes pour y répondre directement, même si L. 511-5 est thématiquement proche. En revanche, elles permettent de constater l’absence des articles demandés dans le contexte fourni et soutiennent l’énoncé subsidiaire de la réponse sur des agents habilités disposant de pouvoirs définis dans des sections du chapitre II et pouvant mettre en œuvre certaines mesures, notamment via L. 511-22 et L. 511-15."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de répondre complètement :\n\n- **L’article L. 511-1 n’est pas fourni** ;\n- **l’article L. 511-6 est incomplet** : il énumère certaines dispositions concernées, mais la partie précisant les pouvoirs attribués aux agents n’apparaît pas.\n\nIl est donc impossible de déterminer, à partir du seul contexte fourni, quels sont précisément les pouvoirs des agents au titre de ces deux articles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-15"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-51"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1220.0892330007628,
+      "routingCalls": 1,
+      "embeddingMs": 223.9797600004822,
+      "vectorSearchMs": 121.33911900036037,
+      "jinaRerankingMs": 296.54630999919027,
+      "mappingMs": 0.09153399989008904,
+      "totalMs": 1862.0862839994952,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.026291999965906143,
+      "contextBuilderMs": 0.041217999532818794,
+      "generationMs": 2132.9246819997206,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3995.0909130005166
+    },
+    "judge": {
+      "questionId": "q334",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les pouvoirs ni le champ d’habilitation demandés, alors qu’elle devait répondre. Son constat est toutefois fidèlement fondé sur le contexte : l’article L. 511-1 est absent et l’extrait de L. 511-6 est tronqué avant l’énoncé des pouvoirs."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L. 511-6 est directement pertinente mais tronquée, et aucune source ne fournit l’article L. 511-1. Les autres articles sont seulement contextuels ou concernent d’autres régimes. Cet ensemble est donc insuffisant pour répondre pleinement à la question, mais il permet d’établir les constats de la réponse générée : absence de L. 511-1 et extrait incomplet de L. 511-6 ne faisant pas apparaître les pouvoirs. Ces affirmations sont entièrement couvertes par le contexte fourni."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q151",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le taux dépend du **quotient** entre :\n\n- l’effectif annuel des salariés et personnes pris en compte — notamment les salariés en contrat d’apprentissage ou de professionnalisation, certains CDI embauchés à l’issue de ces contrats et les bénéficiaires d’une convention CIFRE ;\n- et l’effectif total annuel de l’entreprise.\n\nPour les entreprises d’au moins 250 salariés redevables de la taxe d’apprentissage, lorsque ce quotient est inférieur à 5 %, les taux sont les suivants :\n\n- **moins de 1 %** : **0,4 %** ; ce taux est porté à **0,6 %** si l’entreprise compte plus de 2 000 salariés ;\n- **de 1 % à moins de 2 %** : **0,2 %** ;\n- **de 2 % à moins de 3 %** : **0,1 %** ;\n- **de 3 % à moins de 5 %** : **0,05 %**.\n\nToutefois, l’entreprise est exonérée si son quotient atteint au moins **3 %** et si l’effectif relevant des catégories prises en compte a progressé d’au moins **10 %** par rapport à l’année précédente.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6242-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.79553199978545,
+      "vectorSearchMs": 618.5148060000502,
+      "jinaRerankingMs": 551.0406090002507,
+      "mappingMs": 0.060769000090658665,
+      "totalMs": 1370.4496530001052,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013646999839693308,
+      "contextBuilderMs": 0.014958000276237726,
+      "generationMs": 3397.7647870001383,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4768.252590999939
+    },
+    "judge": {
+      "questionId": "q151",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le quotient pertinent, les catégories incluses au numérateur, l'ensemble des tranches de taux et la majoration pour les entreprises de plus de 2 000 salariés. Elle mentionne aussi, à juste titre, l'exonération conditionnelle prévue par l'article. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 6242-1 et contient le critère du quotient, les catégories incluses dans son numérateur, le seuil de 5 %, toutes les tranches de taux, la majoration à 0,6 % au-delà de 2 000 salariés et la condition d'exonération. Elle couvre donc toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le taux dépend du **quotient entre l’effectif salarié annuel relevant des catégories prises en compte** et **l’effectif total de l’entreprise**, au cours de l’année de référence.\n\nLes taux sont fixés ainsi :\n\n- **0,4 %** lorsque le quotient est inférieur à **1 %** ;\n  - ce taux est porté à **0,6 %** si l’entreprise compte plus de **2 000 salariés** ;\n- **0,2 %** lorsque le quotient est au moins égal à **1 %** et inférieur à **2 %** ;\n- **0,1 %** lorsque le quotient est au moins égal à **2 %** et inférieur à **3 %** ;\n- **0,05 %** lorsque le quotient est au moins égal à **3 %** et inférieur à **5 %**.\n\nLe quotient prend notamment en compte les salariés en contrat de professionnalisation ou d’apprentissage, certains salariés embauchés en CDI à l’issue de ces contrats, ainsi que les personnes bénéficiant d’une convention industrielle de formation par la recherche.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6242-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.0965040000156,
+      "routingCalls": 1,
+      "embeddingMs": 202.64110500039533,
+      "vectorSearchMs": 231.2232110002078,
+      "jinaRerankingMs": 553.6326870000921,
+      "mappingMs": 0.032229000236839056,
+      "totalMs": 2010.6587589997798,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07398100011050701,
+      "contextBuilderMs": 0.010443000122904778,
+      "generationMs": 2391.683896999806,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.435760000255
+    },
+    "judge": {
+      "questionId": "q151",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les critères de calcul du quotient, les quatre tranches de taux et la majoration à 0,6 % au-delà de 2 000 salariés. Elle mentionne également de façon fidèle les catégories principales incluses au numérateur. Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 6242-1 visé par la question. Elle établit le critère du quotient, les catégories comptabilisées au numérateur, les seuils de 1 %, 2 %, 3 % et 5 %, chacun des taux correspondants, ainsi que la majoration à 0,6 % lorsque l’effectif annuel excède 2 000 salariés. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

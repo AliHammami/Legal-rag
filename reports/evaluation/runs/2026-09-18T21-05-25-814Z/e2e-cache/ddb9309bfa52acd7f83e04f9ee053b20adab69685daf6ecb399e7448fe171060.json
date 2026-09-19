@@ -1,0 +1,103 @@
+{
+  "questionId": "q039",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le fait est puni de **dix ans d’emprisonnement** et de **150 000 euros d’amende**. Il s’agit donc d’une peine d’**emprisonnement**, et non de réclusion criminelle.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 175.94136599998455,
+      "vectorSearchMs": 604.5877909999108,
+      "jinaRerankingMs": 496.7932039999869,
+      "mappingMs": 0.032614000025205314,
+      "totalMs": 1277.3869759999216,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010316999978385866,
+      "contextBuilderMs": 0.01740599994082004,
+      "generationMs": 1689.876586999977,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.3007750000106
+    },
+    "judge": {
+      "questionId": "q039",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues par l'article 511-1 : dix ans d'emprisonnement et 150 000 euros d'amende. La précision distinguant l'emprisonnement de la réclusion criminelle est correcte et permet de ne pas confondre cette infraction avec celle de l'article 214-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 vise directement le fait décrit et prévoit exactement dix ans d’emprisonnement et 150 000 euros d’amende. Elle couvre intégralement la réponse. La source 3 permet en outre de distinguer cette peine de la réclusion criminelle prévue pour l’intervention de clonage elle-même."
+    }
+  },
+  "routing": {
+    "answer": "Le fait de se prêter à un tel prélèvement est puni de **dix ans d’emprisonnement et de 150 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.7918989999453,
+      "routingCalls": 1,
+      "embeddingMs": 163.56591100001242,
+      "vectorSearchMs": 28.76274299994111,
+      "jinaRerankingMs": 495.37146699998993,
+      "mappingMs": 0.03739399998448789,
+      "totalMs": 2018.5594740000088,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012697000056505203,
+      "contextBuilderMs": 0.017011000076308846,
+      "generationMs": 1370.7040190000553,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3389.301218000008
+    },
+    "judge": {
+      "questionId": "q039",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la peine prévue par l’article 511-1 pour le fait visé : dix ans d’emprisonnement et 150 000 euros d’amende. Elle est complète et directement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 vise directement le fait décrit et prévoit expressément dix ans d'emprisonnement et 150 000 euros d'amende. Elle couvre intégralement l'affirmation de la réponse générée. Les sources 2 et 3 concernent des infractions distinctes mais n'affectent pas la suffisance de la source 1."
+    }
+  },
+  "failureStage": "none"
+}

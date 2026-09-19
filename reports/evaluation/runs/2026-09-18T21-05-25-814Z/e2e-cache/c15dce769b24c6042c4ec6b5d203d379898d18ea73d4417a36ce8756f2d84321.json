@@ -1,0 +1,103 @@
+{
+  "questionId": "q160",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 2242-1, l’employeur doit engager au moins une fois tous les quatre ans :\n\n1. **Une négociation sur la rémunération**, notamment les salaires effectifs, le temps de travail et le partage de la valeur ajoutée dans l’entreprise ;\n2. **Une négociation sur l’égalité professionnelle entre les femmes et les hommes**, notamment sur les mesures visant à supprimer les écarts de rémunération, ainsi que sur la qualité de vie et des conditions de travail.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-2-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.49525899998844,
+      "vectorSearchMs": 600.351563999895,
+      "jinaRerankingMs": 524.3064969996922,
+      "mappingMs": 0.034992000088095665,
+      "totalMs": 1302.2213179999962,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015049000270664692,
+      "contextBuilderMs": 0.01692800037562847,
+      "generationMs": 1423.7345650000498,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2725.9973559998907
+    },
+    "judge": {
+      "questionId": "q160",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux négociations prévues par l’article L. 2242-1 et leurs principaux objets : rémunération (salaires effectifs, temps de travail, partage de la valeur ajoutée) et égalité professionnelle (suppression des écarts de rémunération, qualité de vie et conditions de travail). Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 2242-1 et énonce exactement les deux négociations ainsi que leurs objets. Elle est donc parfaitement pertinente et couvre l'ensemble des affirmations importantes de la réponse générée. Les sources 2 et 3 sont contextuelles mais ne diminuent pas cette couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 2242-1, l’employeur doit engager au moins une fois tous les quatre ans :\n\n1. Une négociation sur la rémunération, notamment les salaires effectifs, le temps de travail et le partage de la valeur ajoutée dans l’entreprise ;\n\n2. Une négociation sur l’égalité professionnelle entre les femmes et les hommes, notamment sur les mesures visant à supprimer les écarts de rémunération, ainsi que sur la qualité de vie et des conditions de travail.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-2-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 818.5103810001165,
+      "routingCalls": 1,
+      "embeddingMs": 229.3704589996487,
+      "vectorSearchMs": 225.30263799987733,
+      "jinaRerankingMs": 566.9221919998527,
+      "mappingMs": 0.04047999996691942,
+      "totalMs": 1840.1780790002085,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010569999925792217,
+      "contextBuilderMs": 0.017311999574303627,
+      "generationMs": 1334.3243180001155,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.5438700001687
+    },
+    "judge": {
+      "questionId": "q160",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux négociations prévues par l’article L. 2242-1, leur périodicité quadriennale et leurs principaux objets. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 2242-1 et énonce exactement les deux négociations quadriennales mentionnées dans la réponse, avec leurs objets. Les sources 2 et 3 sont périphériques mais ne contredisent pas la réponse."
+    }
+  },
+  "failureStage": "none"
+}

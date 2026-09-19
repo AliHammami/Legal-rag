@@ -1,0 +1,87 @@
+{
+  "questionId": "q350",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La commission prescrit des mesures de traitement lorsque l’examen de la demande révèle que les ressources ou l’actif réalisable du débiteur le permettent. Ces mesures sont prises selon les conditions prévues aux articles L. 732-1, L. 733-1, L. 733-4 et L. 733-7.\n\nSi la situation du débiteur est irrémédiablement compromise, c’est-à-dire s’il est manifestement impossible de mettre en œuvre ces mesures, la commission peut :\n\n1. **Imposer un rétablissement personnel sans liquidation judiciaire**, lorsque le débiteur :\n   - ne possède que des biens meublants nécessaires à la vie courante et des biens non professionnels indispensables à son activité professionnelle ; ou\n   - ne possède que des biens dépourvus de valeur marchande, ou dont les frais de vente seraient manifestement disproportionnés par rapport à leur valeur vénale.\n\n2. **Saisir le juge des contentieux de la protection**, avec l’accord du débiteur, afin de demander l’ouverture d’une procédure de rétablissement personnel avec liquidation judiciaire, lorsque le débiteur ne remplit pas les conditions de la première option.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 398.57001599948853,
+      "vectorSearchMs": 885.4111469993368,
+      "jinaRerankingMs": 283.8098060004413,
+      "mappingMs": 0.02752599958330393,
+      "totalMs": 1567.8536790004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01369599997997284,
+      "contextBuilderMs": 0.009087000042200089,
+      "generationMs": 2525.2174110002816,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4093.1041750004515
+    },
+    "judge": {
+      "questionId": "q350",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de prescription des mesures et les deux options en cas de situation irrémédiablement compromise, y compris les critères relatifs aux biens et l'accord du débiteur pour la saisine du juge. Toutes les affirmations importantes sont explicitement soutenues par l'article L724-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l'article L. 724-1, répond directement à la question : elle fixe la condition tenant aux ressources ou à l'actif réalisable pour prescrire des mesures, définit la situation irrémédiablement compromise et énonce les deux voies possibles. Elle couvre toutes les affirmations importantes de la réponse générée, y compris les conditions précises relatives aux biens pour le rétablissement sans liquidation, l'absence de ces conditions pour la seconde option, ainsi que l'accord du débiteur pour saisir le juge."
+    }
+  },
+  "routing": {
+    "answer": "La commission prescrit des mesures de traitement lorsque l’examen de la demande révèle que les ressources ou l’actif réalisable du débiteur le permettent. Ces mesures sont alors prises selon les conditions prévues aux articles L. 732-1, L. 733-1, L. 733-4 et L. 733-7.\n\nSi la situation du débiteur est irrémédiablement compromise, c’est-à-dire s’il est manifestement impossible de mettre en œuvre ces mesures, la commission peut :\n\n1. **Imposer un rétablissement personnel sans liquidation judiciaire**, lorsque le débiteur ne possède que :\n   - des biens meublants nécessaires à la vie courante ;\n   - des biens non professionnels indispensables à son activité professionnelle ;\n   - ou des biens dépourvus de valeur marchande, ou dont les frais de vente seraient manifestement disproportionnés par rapport à leur valeur.\n\n2. **Saisir le juge des contentieux de la protection**, avec l’accord du débiteur, afin d’ouvrir une procédure de rétablissement personnel avec liquidation judiciaire, lorsque le débiteur ne se trouve pas dans la situation décrite ci-dessus.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1049.9194250004366,
+      "routingCalls": 1,
+      "embeddingMs": 393.5642299996689,
+      "vectorSearchMs": 60.25093400012702,
+      "jinaRerankingMs": 272.21615900006145,
+      "mappingMs": 0.03172199986875057,
+      "totalMs": 1776.0140540003777,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013110999949276447,
+      "contextBuilderMs": 0.009188000112771988,
+      "generationMs": 1921.6064309999347,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3697.654291000217
+    },
+    "judge": {
+      "questionId": "q350",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de prescription des mesures et les deux options en cas de situation irrémédiablement compromise, y compris les critères relatifs aux biens et l’accord du débiteur pour la saisine du juge. Toutes les affirmations importantes sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L. 724-1) répond directement à la question : elle énonce la condition tenant aux ressources ou à l'actif réalisable, les renvois aux articles régissant les mesures, la définition de la situation irrémédiablement compromise et les deux options de la commission. Elle couvre explicitement toutes les affirmations importantes de la réponse générée, y compris les catégories de biens, l'absence de valeur marchande ou la disproportion des frais de vente, ainsi que l'accord du débiteur pour saisir le juge."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q131",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de méconnaissance de l’article L. 5221-4, peuvent être prononcées :\n\n- une amende de **3 000 euros** ;\n- à titre de peine complémentaire, l’interdiction d’exercer l’activité d’entrepreneur de travail temporaire pendant **dix ans au plus** ;\n- l’affichage du jugement aux frais de la personne condamnée et son insertion, intégrale ou par extraits, dans les journaux désignés par la juridiction. Ces frais sont plafonnés au montant maximal de l’amende encourue.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5224-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 240.51145300013013,
+      "vectorSearchMs": 614.7877650000155,
+      "jinaRerankingMs": 480.5518630000297,
+      "mappingMs": 0.03322799992747605,
+      "totalMs": 1335.918335000053,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013410000130534172,
+      "contextBuilderMs": 0.008885999908670783,
+      "generationMs": 1527.674049000023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2863.6243459999096
+    },
+    "judge": {
+      "questionId": "q131",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les sanctions prévues : amende de 3 000 euros, interdiction d'exercer l'activité d'entrepreneur de travail temporaire pour dix ans au plus, ainsi que l'affichage et l'insertion du jugement avec plafonnement des frais. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L. 5224-1 directement applicable à la méconnaissance de l'article L. 5221-4. Elle couvre explicitement l'amende de 3 000 euros, l'interdiction d'exercer pendant dix ans au plus, ainsi que l'affichage et l'insertion du jugement et le plafonnement des frais."
+    }
+  },
+  "routing": {
+    "answer": "En cas de méconnaissance de l’article L. 5221-4, les sanctions suivantes peuvent être prononcées :\n\n- une amende de **3 000 euros** ;\n- à titre de peine complémentaire, l’interdiction d’exercer l’activité d’entrepreneur de travail temporaire pour une durée maximale de **dix ans** ;\n- l’affichage du jugement aux frais de la personne condamnée et son insertion, intégrale ou par extraits, dans les journaux désignés par la juridiction, dans la limite du montant maximal de l’amende encourue.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5224-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 850.8503389998805,
+      "routingCalls": 1,
+      "embeddingMs": 206.78154300013557,
+      "vectorSearchMs": 233.122999999905,
+      "jinaRerankingMs": 493.07700000004843,
+      "mappingMs": 0.03876499994657934,
+      "totalMs": 1783.901191999903,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013691999949514866,
+      "contextBuilderMs": 0.010870000114664435,
+      "generationMs": 1386.6602809999604,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3170.593757999828
+    },
+    "judge": {
+      "questionId": "q131",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement l’amende de 3 000 euros et les deux peines complémentaires prévues : interdiction d’exercer jusqu’à dix ans, puis affichage et insertion du jugement avec plafonnement des frais. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L. 5224-1 directement visé par la question. Elle énonce explicitement l'amende de 3 000 euros, l'interdiction d'exercer l'activité d'entrepreneur de travail temporaire pendant dix ans au plus, ainsi que l'affichage et l'insertion du jugement avec plafonnement des frais au montant maximal de l'amende. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

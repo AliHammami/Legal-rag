@@ -1,0 +1,103 @@
+{
+  "questionId": "q391",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Sont compétents pour rechercher et constater les manquements et infractions relatifs à la sécurité, aux équipements de travail et aux moyens de protection :\n\n- les agents de contrôle de l’inspection du travail mentionnés à l’article L. 8112-1 du code du travail ;\n- les agents des douanes ;\n- les agents de la concurrence, de la consommation et de la répression des fraudes ;\n- les ingénieurs des mines ;\n- les ingénieurs de l’industrie et des mines ;\n- les agents habilités en application de l’article L. 4314-1.\n\nIls interviennent dans le cadre de leurs compétences respectives. Les agents de contrôle de l’inspection du travail et, le cas échéant, les fonctionnaires de contrôle assimilés, peuvent constater les infractions concurremment avec les officiers et agents de police judiciaire.\n\nS’agissant plus particulièrement des agents de la concurrence, de la consommation et de la répression des fraudes, ils exercent les pouvoirs prévus au I de l’article L. 511-22 du code de la consommation.\n\nLe contexte fourni ne permet pas de préciser davantage les pouvoirs applicables aux autres catégories d’agents.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4311-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-11-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3221-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 238.301169000566,
+      "vectorSearchMs": 687.894330999814,
+      "jinaRerankingMs": 310.55964899994433,
+      "mappingMs": 0.028873000293970108,
+      "totalMs": 1236.812162999995,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011497999541461468,
+      "contextBuilderMs": 0.024091999977827072,
+      "generationMs": 3613.408955000341,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4850.265089999884
+    },
+    "judge": {
+      "questionId": "q391",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les catégories d'agents énumérées à l'article L. 4311-6, y compris les agents habilités au titre de l'article L. 4314-1. Elle précise correctement que les agents de la concurrence, de la consommation et de la répression des fraudes disposent des pouvoirs du I de l'article L. 511-22 du code de la consommation, et ne généralise pas indûment cette règle aux autres agents. La mention du constat concurrent avec la police judiciaire est issue du contexte, mais de l'article L. 3221-9 portant sur d'autres dispositions ; son application aux infractions ici visées n'est donc pas directement étayée, sans affecter substantiellement la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source 1 est directement pertinente : elle énumère toutes les catégories d'agents citées dans la réponse pour les manquements et infractions concernant les équipements de travail et moyens de protection, et prévoit expressément les pouvoirs du I de l'article L. 511-22 du code de la consommation pour les agents de la DGCCRF. Elle couvre donc l'essentiel. En revanche, l'affirmation selon laquelle les agents de l'inspection du travail et fonctionnaires assimilés constatent ces infractions concurremment avec les officiers et agents de police judiciaire n'est pas étayée pour ce champ : la source 3 prévoit cette règle pour d'autres dispositions. Les sources 2 et 4 ne complètent pas utilement cette lacune."
+    }
+  },
+  "routing": {
+    "answer": "Sont compétents, dans leurs domaines respectifs :\n\n- les agents de contrôle de l’inspection du travail mentionnés à l’article L. 8112-1 ;\n- les fonctionnaires de contrôle assimilés, le cas échéant ;\n- les agents des douanes ;\n- les agents de la concurrence, de la consommation et de la répression des fraudes ;\n- les ingénieurs des mines ;\n- les ingénieurs de l’industrie et des mines ;\n- les agents habilités en application de l’article L. 4314-1.\n\nIls peuvent rechercher et constater les manquements et infractions aux règles applicables aux équipements de travail et aux moyens de protection, notamment celles du titre concerné et des règlements européens mentionnés.\n\nLes agents de contrôle de l’inspection du travail — ou les fonctionnaires assimilés — exercent cette compétence concurremment avec les officiers et agents de police judiciaire. Les agents de la concurrence, de la consommation et de la répression des fraudes disposent, pour ces contrôles, des pouvoirs prévus au I de l’article L. 511-22 du code de la consommation.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4311-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3221-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.4705290002748,
+      "routingCalls": 1,
+      "embeddingMs": 205.86937099974602,
+      "vectorSearchMs": 288.1363989999518,
+      "jinaRerankingMs": 283.3401279998943,
+      "mappingMs": 0.03234299924224615,
+      "totalMs": 2107.8759610001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011950000189244747,
+      "contextBuilderMs": 0.01690799929201603,
+      "generationMs": 3215.5830319998786,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5323.497039000504
+    },
+    "judge": {
+      "questionId": "q391",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie tous les agents compétents visés à l’article L. 4311-6, y compris les agents habilités au titre de L. 4314-1, et indique correctement que les agents de la DGCCRF disposent des pouvoirs du I de l’article L. 511-22 du code de la consommation. Elle ajoute toutefois les fonctionnaires assimilés ainsi qu’une compétence concurrente avec les officiers et agents de police judiciaire : ces éléments proviennent du second extrait mais concernent les « dispositions » de l’article L. 3221-9, et ne sont pas établis comme applicables aux infractions relatives aux équipements de travail. Cette extension est donc un défaut mineur de correction et de fondement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source 1 est directement pertinente : elle énumère les agents compétents pour les manquements et infractions relatifs aux équipements de travail et moyens de protection, y compris les agents habilités au titre de L. 4314-1, et prévoit expressément les pouvoirs du I de l’article L. 511-22 du code de la consommation pour les agents de la DGCCRF. La source 2 concerne bien les pouvoirs d’agents de l’inspection du travail, mais dans le cadre des dispositions visées par l’article L. 3221-9 ; elle ne permet pas d’étendre aux infractions sur les équipements de travail l’intervention des fonctionnaires assimilés ni la compétence concurrente avec les officiers et agents de police judiciaire. La majorité de la réponse est donc couverte, mais ces affirmations additionnelles importantes ne le sont pas pour le champ demandé."
+    }
+  },
+  "failureStage": "none"
+}

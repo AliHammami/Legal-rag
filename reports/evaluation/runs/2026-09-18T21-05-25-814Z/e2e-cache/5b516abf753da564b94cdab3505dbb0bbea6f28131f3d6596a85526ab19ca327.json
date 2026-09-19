@@ -1,0 +1,119 @@
+{
+  "questionId": "q434",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas de déterminer quelle infraction est concernée. Les peines indiquées sont :\n\n- **Vol** : 3 ans d’emprisonnement et 45 000 € d’amende.\n- **Violation de l’article L. 221-10-1** : 1 an d’emprisonnement et 150 000 € d’amende.\n- **Infraction prévue à l’article 322-1, aggravée** :  \n  - 5 ans d’emprisonnement et 75 000 € d’amende pour l’infraction définie au I ;  \n  - 15 000 € d’amende et un travail d’intérêt général pour celle définie au II.\n- **Violation de l’article L. 413-2** : 1 an d’emprisonnement et 150 000 € d’amende.\n- **Violation de l’article L. 433-2** : 2 ans d’emprisonnement et 300 000 € d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L453-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 175.10866599995643,
+      "vectorSearchMs": 677.2996720001101,
+      "jinaRerankingMs": 243.20740799978375,
+      "mappingMs": 0.01947000063955784,
+      "totalMs": 1095.6664549997076,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009436999447643757,
+      "contextBuilderMs": 0.01891699992120266,
+      "generationMs": 2078.5988199999556,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.380153999664
+    },
+    "judge": {
+      "questionId": "q434",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que l’infraction visée n’est pas identifiable, donc qu’aucune peine unique ne peut être déterminée. Les peines alternatives listées correspondent toutes exactement aux extraits du contexte et sont présentées sans prétendre résoudre l’ambiguïté."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La question ne précise aucune infraction, ce qui justifie l’abstention quant à une peine unique. Les sources fournies sont directement pertinentes pour étayer les différentes peines conditionnelles mentionnées : vol, contravention à L. 221-10-1, cas aggravés de l’article 322-1 visés par 322-3, violations de L. 413-2 et L. 433-2. Toutes les affirmations pénales concrètes de la réponse sont couvertes par les extraits."
+    }
+  },
+  "routing": {
+    "answer": "La peine encourue dépend de l’infraction concernée :\n\n- **Vol (article 311-3)** : 3 ans d’emprisonnement et 45 000 € d’amende.\n- **Violation de l’article L. 221-10-1 (article L242-7-1)** : 1 an d’emprisonnement et 150 000 € d’amende.\n- **Infraction aggravée prévue à l’article 322-3** : 5 ans d’emprisonnement et 75 000 € d’amende pour l’infraction visée au I de l’article 322-1 ; 15 000 € d’amende et un travail d’intérêt général pour celle visée au II.\n- **Violation de l’article L. 413-2 (article L451-3)** : 1 an d’emprisonnement et 150 000 € d’amende.\n- **Violation de l’article L. 433-2 (article L453-7)** : 2 ans d’emprisonnement et 300 000 € d’amende.\n\nLe contexte ne permet pas d’identifier quelle infraction est visée par la question.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L453-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 761.573089000769,
+      "routingCalls": 1,
+      "embeddingMs": 224.50160999968648,
+      "vectorSearchMs": 559.6989900004119,
+      "jinaRerankingMs": 232.04405299946666,
+      "mappingMs": 0.024152000434696674,
+      "totalMs": 1777.8676809994504,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011196999810636044,
+      "contextBuilderMs": 0.021716000512242317,
+      "generationMs": 2406.342669999227,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4184.250746000558
+    },
+    "judge": {
+      "questionId": "q434",
+      "correctness": 2,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question ne précise aucune infraction, de sorte qu’une peine unique ne peut pas être déterminée. La réponse relève bien cette ambiguïté, mais elle tente néanmoins de fournir plusieurs peines hypothétiques au lieu de s’abstenir clairement. Les peines et renvois énoncés sont tous directement étayés par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources fournissent plusieurs qualifications distinctes assorties de peines différentes, ce qui est pertinent pour constater qu’en l’absence d’identification de l’infraction dans la question, aucune peine unique ne peut être déterminée. Toutes les peines, les renvois d’articles et les distinctions entre les deux hypothèses de l’article 322-3 mentionnés dans la réponse sont directement étayés par les sources."
+    }
+  },
+  "failureStage": "abstention"
+}

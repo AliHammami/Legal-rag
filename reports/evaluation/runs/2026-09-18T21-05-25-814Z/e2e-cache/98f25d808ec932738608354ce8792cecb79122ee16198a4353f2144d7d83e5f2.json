@@ -1,0 +1,103 @@
+{
+  "questionId": "q441",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas d’identifier précisément les « critères de loyauté applicables ».\n\nIl mentionne toutefois les critères suivants :\n\n- respect des valeurs républicaines ;\n- indépendance ;\n- transparence financière ;\n- ancienneté minimale d’un an ;\n- audience d’au moins 8 % des suffrages exprimés ;\n- influence ;\n- effectifs d’adhérents et cotisations.\n\nPar ailleurs, l’article R2152-11 indique que le ministre chargé du travail vérifie que le montant de la cotisation établit la réalité de l’adhésion. Aucun critère expressément qualifié de « loyauté » n’est défini dans les extraits fournis.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2152-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7343-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2261-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.9656510000059,
+      "vectorSearchMs": 712.4276960000061,
+      "jinaRerankingMs": 334.8346339999989,
+      "mappingMs": 0.04301400000258582,
+      "totalMs": 1237.3080800000025,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017687999999907333,
+      "contextBuilderMs": 0.0181220000013127,
+      "generationMs": 2320.033807,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3557.3956190000026
+    },
+    "judge": {
+      "questionId": "q441",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique clairement que le contexte ne permet pas d’identifier des critères de « loyauté » au sens demandé, ce qui constitue l’abstention attendue. Elle distingue utilement les critères effectivement présents dans le contexte (représentativité) de critères expressément qualifiés de loyauté, sans affirmer qu’ils répondent à la question. Les éléments complémentaires cités sont fidèlement supportés par les sources."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne définissent pas de critères expressément qualifiés de « loyauté », ce qui est pertinent pour justifier l’abstention attendue. La source 2 couvre intégralement la liste des critères de représentativité mentionnés avec prudence dans la réponse, et la source 1 couvre la précision relative au contrôle du montant des cotisations. La source 3 est hors sujet mais n’affecte pas la couverture des affirmations."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas d’identifier des « critères de loyauté » applicables.\n\nIl mentionne toutefois :\n\n- les critères de représentativité des organisations représentant les travailleurs des plateformes : valeurs républicaines, indépendance, transparence financière, ancienneté minimale, audience, influence, effectifs d’adhérents et cotisations ;\n- l’appréciation de l’adhésion au regard du montant de la cotisation ;\n- certains critères relatifs à l’activité conventionnelle, notamment le nombre d’accords conclus et les thèmes de négociation couverts.\n\nAucun de ces textes ne définit expressément un critère de « loyauté ».",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2152-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7343-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2261-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 878.1363629999978,
+      "routingCalls": 1,
+      "embeddingMs": 332.5187450000012,
+      "vectorSearchMs": 567.065171000002,
+      "jinaRerankingMs": 339.4611900000018,
+      "mappingMs": 0.059979999998176936,
+      "totalMs": 2117.277995999997,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.028871000002254732,
+      "contextBuilderMs": 0.030215999999199994,
+      "generationMs": 2139.849457999997,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4257.205828999999
+    },
+    "judge": {
+      "questionId": "q441",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le contexte ne permet pas d’identifier des critères de loyauté, tout en distinguant les critères effectivement mentionnés (représentativité, cotisations et activité conventionnelle). Ces précisions sont fidèlement étayées par les trois sources et elle s’abstient clairement de répondre au-delà du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont pertinentes pour justifier l’abstention : elles énumèrent des critères de représentativité, d’adhésion par la cotisation et d’activité conventionnelle, sans définir de critère de « loyauté ». Elles couvrent l’ensemble des constats formulés dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

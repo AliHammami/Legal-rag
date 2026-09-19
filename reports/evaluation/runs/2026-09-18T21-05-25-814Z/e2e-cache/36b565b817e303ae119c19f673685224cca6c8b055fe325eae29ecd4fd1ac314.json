@@ -1,0 +1,87 @@
+{
+  "questionId": "q411",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour l’enregistrement des déclarations de nationalité :\n\n- **Déclarations souscrites en France** : directeur des services de greffe judiciaires du tribunal judiciaire ;\n- **Déclarations souscrites à l’étranger** : ministre de la Justice ;\n- **Exceptions**, quel que soit le lieu de souscription : les déclarations fondées sur :\n  1. le mariage avec un conjoint français ;\n  2. la qualité d’ascendant de Français, au titre de l’article 21-13-1 ;\n  3. la qualité de frère ou sœur de Français, au titre de l’article 21-13-2.\n\nCes déclarations sont enregistrées par **l’autorité administrative désignée par décret en Conseil d’État**.\n\nLe contexte fourni ne contient aucune information sur la protection des droits des salariés dans l’exercice du droit de grève. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 154.18564200028777,
+      "vectorSearchMs": 673.5376989999786,
+      "jinaRerankingMs": 311.8378630001098,
+      "mappingMs": 0.038203999400138855,
+      "totalMs": 1139.6871690005064,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017355999909341335,
+      "contextBuilderMs": 0.009897000156342983,
+      "generationMs": 2460.392611000687,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3600.1176500003785
+    },
+    "judge": {
+      "questionId": "q411",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reproduit correctement et de façon complète les règles de l’article 26-1 relatives aux autorités d’enregistrement, y compris les exceptions. En revanche, elle ne répond pas au volet sur la protection des salariés exerçant le droit de grève, alors que la réponse de référence attend la protection contre les sanctions, licenciements et discriminations. Son refus sur ce point est néanmoins entièrement fondé au regard du seul contexte fourni, qui ne contient aucune information sur le droit de grève."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour le premier volet et couvre précisément toutes les autorités compétentes selon le lieu de souscription ainsi que les trois exceptions. Elle ne traite pas du droit de grève, mais elle permet de soutenir le constat de la réponse selon lequel le contexte fourni ne contient aucune information sur cette seconde partie. Les affirmations importantes de la réponse générée sont donc couvertes par la source disponible."
+    }
+  },
+  "routing": {
+    "answer": "Pour l’enregistrement des déclarations de nationalité :\n\n- **Déclarations souscrites en France** : elles sont enregistrées par le **directeur des services de greffe judiciaires du tribunal judiciaire**.\n- **Déclarations souscrites à l’étranger** : elles sont enregistrées par le **ministre de la Justice**.\n- **Exceptions** : les déclarations fondées sur :\n  1. le **mariage avec un conjoint français** ;\n  2. la qualité d’**ascendant de Français** prévue à l’article 21-13-1 ;\n  3. la qualité de **frère ou sœur de Français** prévue à l’article 21-13-2,  \n  sont enregistrées par l’**autorité administrative désignée par décret en Conseil d’État**, quel que soit le lieu de souscription indiqué dans le contexte.\n\nLe contexte fourni ne contient aucune information sur la protection des droits des salariés dans l’exercice du droit de grève. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1452.9764000000432,
+      "routingCalls": 1,
+      "embeddingMs": 189.06631899997592,
+      "vectorSearchMs": 390.5371749997139,
+      "jinaRerankingMs": 295.82667100057006,
+      "mappingMs": 0.024479000829160213,
+      "totalMs": 2328.4547290001065,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010642999783158302,
+      "contextBuilderMs": 0.008570000529289246,
+      "generationMs": 2488.1733389999717,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4816.655354000628
+    },
+    "judge": {
+      "questionId": "q411",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement toutes les autorités d’enregistrement prévues par l’article 26-1, y compris les trois catégories d’exceptions. Elle ne répond pas au fond à la protection du droit de grève, alors que la réponse de référence attend la protection contre les sanctions, licenciements et discriminations liés à l’exercice normal de ce droit. Cette omission réduit la correction et la complétude. En revanche, l’ensemble des affirmations formulées est strictement étayé par le seul contexte fourni, qui ne contient effectivement aucune règle relative au droit de grève. La réponse ne refuse pas globalement de répondre : elle traite la partie documentée et signale explicitement la limite pour l’autre partie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour la partie relative aux autorités compétentes pour l’enregistrement des déclarations de nationalité et couvre précisément les règles générales ainsi que les trois exceptions citées. Elle ne fournit aucune règle de droit du travail sur le droit de grève ; elle permet néanmoins d’étayer le constat limité de la réponse selon lequel le contexte fourni ne contient pas cette information. Toutes les affirmations effectivement formulées dans la réponse sont ainsi couvertes par la source."
+    }
+  },
+  "failureStage": "generation"
+}

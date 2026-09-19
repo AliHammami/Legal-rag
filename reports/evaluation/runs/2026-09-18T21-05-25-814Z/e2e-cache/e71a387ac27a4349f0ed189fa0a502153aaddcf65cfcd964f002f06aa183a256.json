@@ -1,0 +1,103 @@
+{
+  "questionId": "q449",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne mentionne pas expressément les « pratiques abusives ».  \n\nS’il s’agit de **pratiques commerciales agressives**, elles sont punies de **deux ans d’emprisonnement et de 300 000 € d’amende**. L’amende peut être portée à **10 % du chiffre d’affaires annuel moyen** ; le tribunal peut également ordonner l’affichage ou la diffusion de la décision.\n\nS’il s’agit de **pratiques commerciales trompeuses**, les mêmes peines s’appliquent, avec des majorations spécifiques dans certains cas, notamment en ligne.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-11"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.86134900001343,
+      "vectorSearchMs": 622.2966990000277,
+      "jinaRerankingMs": 279.363903999998,
+      "mappingMs": 0.033687999995891005,
+      "totalMs": 1111.5926990000007,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011572999996133149,
+      "contextBuilderMs": 0.017281000007642433,
+      "generationMs": 2061.7179440000036,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3173.350930000015
+    },
+    "judge": {
+      "questionId": "q449",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question vise de façon indéterminée une « pratique abusive » et le contexte ne définit ni ne sanctionne cette notion générale : une abstention était attendue. La réponse le relève, mais répond néanmoins en assimilant conditionnellement la notion à des pratiques commerciales agressives ou trompeuses. Les sanctions énoncées pour ces qualifications sont bien étayées par le contexte, mais elles ne permettent pas de répondre de manière fiable à la question telle que posée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent sur les pratiques commerciales agressives et trompeuses, et non sur la notion générale et indéterminée de « pratique abusive ». Elles sont donc seulement partiellement pertinentes pour la question, même si elles permettent d’étayer les qualifications envisagées conditionnellement par la réponse. Toutes les affirmations substantielles de la réponse sur ces qualifications sont couvertes : deux ans d’emprisonnement, 300 000 € d’amende, relèvement à 10 % du chiffre d’affaires annuel moyen et affichage/diffusion pour les pratiques agressives (L.132-11), ainsi que les peines et aggravation en ligne pour les pratiques trompeuses (L.132-2)."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne définit pas précisément la notion de « pratique abusive ».\n\nS’il s’agit d’une **pratique commerciale agressive**, elle est punie de **deux ans d’emprisonnement et 300 000 € d’amende**. L’amende peut être portée à **10 % du chiffre d’affaires annuel moyen** des trois derniers exercices connus. Le tribunal ordonne également l’affichage ou la diffusion de la décision ou d’un communiqué.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-11"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 868.7380159999884,
+      "routingCalls": 1,
+      "embeddingMs": 177.4415319999971,
+      "vectorSearchMs": 647.3978990000032,
+      "jinaRerankingMs": 263.8902860000089,
+      "mappingMs": 0.042733000009320676,
+      "totalMs": 1957.54015299998,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011996999994153157,
+      "contextBuilderMs": 0.01838100000168197,
+      "generationMs": 2140.2957540000207,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4097.921229
+    },
+    "judge": {
+      "questionId": "q449",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse relève correctement que « pratique abusive » n’est pas définie avec précision, mais elle fournit ensuite une sanction en assimilant conditionnellement cette expression à une pratique commerciale agressive. Les peines indiquées sont exactes et intégralement appuyées par le contexte (article L. 132-11), mais la question était ambiguë et appelait une abstention plutôt qu’une réponse sur une qualification hypothétique."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source L.132-11 est directement pertinente pour l’hypothèse explicitement retenue dans la réponse, celle d’une pratique commerciale agressive, et elle étaye l’ensemble des sanctions citées (deux ans, 300 000 €, majoration à 10 % du chiffre d’affaires moyen annuel des trois derniers exercices, affichage ou diffusion). Les autres sources ne définissent pas la notion générale de « pratique abusive » et ne permettent pas de trancher cette qualification ambiguë ; elles confirment seulement l’existence de régimes distincts pour des pratiques trompeuses ou l’inobservation d’une décision."
+    }
+  },
+  "failureStage": "abstention"
+}

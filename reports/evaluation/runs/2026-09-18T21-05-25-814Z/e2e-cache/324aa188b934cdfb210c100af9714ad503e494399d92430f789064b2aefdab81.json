@@ -1,0 +1,103 @@
+{
+  "questionId": "q053",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 717-2, la manipulation artificielle des prix est punie de :\n\n- **2 ans d’emprisonnement** et **30 000 euros d’amende** ;\n- lorsque les prix concernés sont ceux de **produits alimentaires**, la peine est portée à **3 ans d’emprisonnement** et **45 000 euros d’amende**.\n\nLes personnes physiques encourent également :\n\n- l’interdiction des droits civiques, civils et de famille ;\n- l’affichage ou la diffusion de la décision prononcée.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "727-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.85677900002338,
+      "vectorSearchMs": 572.1884340000106,
+      "jinaRerankingMs": 534.6073960000649,
+      "mappingMs": 0.03790500003378838,
+      "totalMs": 1338.7202599999728,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012073999969288707,
+      "contextBuilderMs": 0.019010999938473105,
+      "generationMs": 1424.6369669999694,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2763.397934000008
+    },
+    "judge": {
+      "questionId": "q053",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les peines principales prévues par l’article 717-2 (deux ans et 30 000 euros), leur aggravation pour les produits alimentaires (trois ans et 45 000 euros), ainsi que les deux peines complémentaires applicables aux personnes physiques. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 vise directement l’article 717-2 et énonce expressément les peines principales, leur aggravation pour les produits alimentaires et les deux peines complémentaires applicables aux personnes physiques. Les sources 1 et 3 corroborent ces éléments, bien que la source 1 porte un autre numéro et la source 3 relève d’un autre code. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 717-2 :\n\n- **Peine principale** : deux ans d’emprisonnement et **30 000 € d’amende**.\n- **Si les prix concernés sont ceux de produits alimentaires** : trois ans d’emprisonnement et **45 000 € d’amende**.\n\nLes personnes physiques encourent également :\n\n1. l’interdiction des droits civiques, civils et de famille ;\n2. l’affichage ou la diffusion de la décision prononcée.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "727-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2048.0429739999818,
+      "routingCalls": 1,
+      "embeddingMs": 184.7741789999418,
+      "vectorSearchMs": 38.552198000019416,
+      "jinaRerankingMs": 533.5317100000102,
+      "mappingMs": 0.02742599998600781,
+      "totalMs": 2804.9528210000135,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011456000036559999,
+      "contextBuilderMs": 0.013142999960109591,
+      "generationMs": 2110.685354999965,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4915.674074999988
+    },
+    "judge": {
+      "questionId": "q053",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les peines principales prévues par l’article 717-2 (deux ans et 30 000 €, portés à trois ans et 45 000 € pour les produits alimentaires) ainsi que les deux peines complémentaires applicables aux personnes physiques. Toutes ces affirmations sont explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 717-2 visé et énonce explicitement les peines principales, leur aggravation pour les produits alimentaires, ainsi que les deux peines complémentaires applicables aux personnes physiques. Elle couvre toutes les affirmations importantes de la réponse générée. Les sources 1 et 3 sont redondante ou complémentaire, sans nuire à la pertinence."
+    }
+  },
+  "failureStage": "none"
+}

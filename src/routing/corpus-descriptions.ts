@@ -7,17 +7,17 @@ import type { CorpusRoutingDescription } from './types.js';
 
 const CORPUS_DOMAIN_DESCRIPTIONS: Record<string, string> = {
   'code-penal':
-    'Infractions, responsabilit? p?nale, peines et r?gles g?n?rales du droit p?nal.',
+    'Droit pénal : infractions, éléments constitutifs, tentative, complicité, circonstances, peines, responsabilité pénale, légitime défense, violences, vol, escroquerie, recel, etc.',
   'code-civil':
-    'Contrats, responsabilit? civile, obligations, propri?t?, famille et droit civil g?n?ral.',
+    'Droit civil général : personnes, famille, successions, obligations, contrats (hors contrats de consommation spécifiques), responsabilité civile, dommages-intérêts, biens, prescription civile, sûretés, etc.',
   'code-du-travail':
-    'Relations de travail, contrat de travail, licenciement, conditions de travail et droit du travail.',
+    'Droit du travail : contrat de travail, licenciement, rémunération, durée du travail, congés, harcèlement, représentation du personnel, relations employeur/salarié, santé au travail, etc.',
   'code-du-commerce':
-    'Actes de commerce, soci?t?s commerciales, faillite et droit commercial.',
+    'Droit commercial : commerçants, actes de commerce, fonds de commerce, sociétés commerciales, baux commerciaux, procédures collectives commerciales, registre du commerce, etc.',
   'code-monetaire-et-financier':
-    'Banque, assurance, march?s financiers, monnaie et r?gulation financi?re.',
+    'Droit monétaire et financier : monnaie, banque, crédit bancaire, établissements financiers, services de paiement, marchés financiers, instruments financiers, assurance, intermédiaires financiers, blanchiment, etc.',
   'code-de-la-consommation':
-    'Protection des consommateurs, cr?dit ? la consommation, ventes et pratiques commerciales.',
+    'Droit de la consommation : relations professionnel/consommateur, contrats de consommation, crédit à la consommation, garanties légales, vices cachés, pratiques commerciales, clauses abusives, démarchage, vente à distance, etc.',
 };
 
 function toRoutingDescription(config: CorpusConfig): CorpusRoutingDescription {

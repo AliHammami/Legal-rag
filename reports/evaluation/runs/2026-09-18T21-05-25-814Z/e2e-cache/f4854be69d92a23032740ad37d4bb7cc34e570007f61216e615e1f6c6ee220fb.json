@@ -1,0 +1,103 @@
+{
+  "questionId": "q465",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "En cas de conflit d’intérêts :\n\n- **Les juges des tribunaux de commerce** doivent le prévenir ou y mettre immédiatement fin.\n- **Le courtier de marchandises assermenté** doit s’abstenir de participer à la délibération concernant une partie avec laquelle il est en conflit.\n- **Les prestataires de services d’investissement** doivent détecter, éviter ou gérer les conflits. Si les mesures prises sont insuffisantes, ils doivent informer clairement leurs clients, avant d’agir, de la nature et de la source du conflit ainsi que des mesures d’atténuation.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L722-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R131-39"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 155.94138199998997,
+      "vectorSearchMs": 588.8517040000297,
+      "jinaRerankingMs": 312.0330070001073,
+      "mappingMs": 0.03609599999617785,
+      "totalMs": 1056.89647399995,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012804999947547913,
+      "contextBuilderMs": 0.02624499995727092,
+      "generationMs": 2115.223132999963,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3172.1867980000097
+    },
+    "judge": {
+      "questionId": "q465",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question, formulée de manière générale et sans domaine ni acteur identifié, appelait une abstention. La réponse fournit des règles sectorielles exactes et toutes étayées par le contexte, mais répond sans signaler qu’il n’existe pas, dans les extraits fournis, de règle générale unique applicable à tout conflit d’intérêts."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour les trois règles sectorielles effectivement énoncées dans la réponse (juges consulaires, courtiers assermentés, prestataires de services d’investissement), et elles couvrent intégralement ces affirmations. Toutefois, la question est générale et appelait une abstention : les sources ne permettent pas d’établir une règle générale unique applicable à tout conflit d’intérêts, ni ne justifient explicitement l’absence d’une telle règle. Elles sont donc seulement partiellement pertinentes au regard de la question posée, bien qu’elles couvrent la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "En cas de conflit d’intérêts :\n\n- **Les juges des tribunaux de commerce** doivent le prévenir ou y mettre fin immédiatement.\n- **Le courtier de marchandises assermenté** doit s’abstenir de participer à la délibération concernée.\n- **Les prestataires de services d’investissement** doivent détecter, éviter ou gérer les conflits. Si les mesures prises sont insuffisantes, ils doivent informer clairement leurs clients, avant d’agir, de la nature et de la source du conflit ainsi que des mesures d’atténuation.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L722-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R131-39"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 670.3972219999414,
+      "routingCalls": 1,
+      "embeddingMs": 222.57088500005193,
+      "vectorSearchMs": 564.8825090000173,
+      "jinaRerankingMs": 269.09894299996085,
+      "mappingMs": 0.13190599996596575,
+      "totalMs": 1727.1146469999803,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015204000053927302,
+      "contextBuilderMs": 0.02197200001683086,
+      "generationMs": 1959.4752530000405,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3686.63553999993
+    },
+    "judge": {
+      "questionId": "q465",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est générique et la référence indique qu'une abstention était attendue : il n'est pas possible d'énoncer une règle unique sans préciser le domaine ou la personne concernée. La réponse tente néanmoins de répondre en juxtaposant trois régimes sectoriels. Ces affirmations sont fidèlement soutenues par le contexte fourni, mais ne constituent pas une réponse fiable à la question générale attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour les trois régimes sectoriels effectivement énoncés dans la réponse générée et les soutiennent précisément. Toutefois, la question est générale et appelait une abstention faute de domaine précisé : les sources ne permettent pas d'établir une règle générale unique applicable à tout conflit d'intérêts, ni de justifier explicitement cette absence de règle univoque. La couverture des affirmations formulées est néanmoins complète."
+    }
+  },
+  "failureStage": "abstention"
+}

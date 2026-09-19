@@ -1,0 +1,87 @@
+{
+  "questionId": "q205",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les peines encourues sont **deux ans d’emprisonnement et 9 000 euros d’amende**. Elles s’appliquent notamment :\n\n- au fait d’empêcher un obligataire de participer à une assemblée générale d’obligataires ;\n- au fait d’accorder, garantir ou promettre des avantages particuliers pour influencer son vote ou sa non-participation au vote.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L245-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 383.2307309997268,
+      "vectorSearchMs": 564.9170589996502,
+      "jinaRerankingMs": 538.314100000076,
+      "mappingMs": 0.03296699980273843,
+      "totalMs": 1486.522243999876,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010844000149518251,
+      "contextBuilderMs": 0.009518000297248363,
+      "generationMs": 1218.5339060002007,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2705.0845659999177
+    },
+    "judge": {
+      "questionId": "q205",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les peines prévues (deux ans d’emprisonnement et 9 000 euros d’amende) et couvre les deux comportements visés, y compris l’influence sur le vote ou l’absence de participation. Toutes les affirmations sont directement étayées par l’article L245-11 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "L’article L245-11 est directement pertinent : il vise expressément l’empêchement d’un obligataire de participer à une assemblée générale et l’octroi, la garantie ou la promesse d’avantages particuliers pour orienter un vote ou provoquer l’absence de vote. Il prévoit exactement les peines indiquées, soit deux ans d’emprisonnement et 9 000 euros d’amende, et couvre toutes les affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Les peines encourues sont :\n\n- **Deux ans d’emprisonnement** ;\n- **9 000 euros d’amende**.\n\nCes peines s’appliquent aussi bien au fait d’empêcher un obligataire de participer à une assemblée générale qu’au fait d’accorder, garantir ou promettre des avantages particuliers pour influencer son vote ou sa non-participation.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L245-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1422.344849999994,
+      "routingCalls": 1,
+      "embeddingMs": 192.18668499961495,
+      "vectorSearchMs": 203.1942670000717,
+      "jinaRerankingMs": 560.1458070003428,
+      "mappingMs": 0.040560000110417604,
+      "totalMs": 2377.942195000127,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011769999749958515,
+      "contextBuilderMs": 0.009229000192135572,
+      "generationMs": 1198.4132289998233,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3576.3860780000687
+    },
+    "judge": {
+      "questionId": "q205",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux peines prévues et les applique correctement aux deux comportements visés. Les précisions sur l’influence du vote ou de la non-participation sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "L’article L245-11 est directement pertinent : il vise expressément l’empêchement d’un obligataire de participer à une assemblée générale ainsi que l’octroi, la garantie ou la promesse d’avantages particuliers pour orienter un vote ou une absence de vote. Il prévoit exactement deux ans d’emprisonnement et 9 000 euros d’amende, couvrant l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

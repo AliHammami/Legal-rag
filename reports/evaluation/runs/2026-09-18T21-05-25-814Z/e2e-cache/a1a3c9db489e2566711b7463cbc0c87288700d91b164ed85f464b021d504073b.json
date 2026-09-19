@@ -1,0 +1,87 @@
+{
+  "questionId": "q466",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Selon l’article 21-2 fourni, l’étranger ou l’apatride peut acquérir la nationalité française par déclaration s’il remplit les conditions suivantes :\n\n- être marié à une personne de nationalité française ;\n- attendre un délai de quatre ans à compter du mariage ;\n- maintenir une communauté de vie affective et matérielle avec son conjoint depuis le mariage ;\n- vérifier que le conjoint français a conservé sa nationalité ;\n- justifier d’une connaissance suffisante de la langue française.\n\nLe délai est porté à cinq ans si, au moment de la déclaration :\n\n- l’intéressé ne justifie pas avoir résidé de manière ininterrompue et régulière en France pendant au moins trois ans depuis le mariage ; ou\n- il ne prouve pas que son conjoint français a été inscrit, pendant la communauté de vie à l’étranger, au registre des Français établis hors de France.\n\nEnfin, lorsque le mariage a été célébré à l’étranger, il doit avoir été préalablement transcrit sur les registres de l’état civil français.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "21-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.7501939999638,
+      "vectorSearchMs": 569.5787639999762,
+      "jinaRerankingMs": 250.0473850000417,
+      "mappingMs": 0.03902400005608797,
+      "totalMs": 1028.4431229999755,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01753800001461059,
+      "contextBuilderMs": 0.012070000055246055,
+      "generationMs": 2488.3794739999576,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3516.861601999961
+    },
+    "judge": {
+      "questionId": "q466",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement et complètement les conditions prévues par l’article 21-2 fourni pour l’acquisition de la nationalité française par déclaration à raison du mariage. Toutes les affirmations importantes sont explicitement supportées par le contexte. Toutefois, une abstention était attendue : la réponse répond au fond au lieu de signaler l’impossibilité ou le hors-périmètre attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article 21-2, est directement pertinente : elle énonce précisément les conditions d’acquisition de la nationalité française par déclaration à raison du mariage. Elle couvre toutes les affirmations importantes de la réponse générée : délai de quatre ans, communauté de vie affective et matérielle, conservation de la nationalité du conjoint, connaissance de la langue française, cas de prolongation à cinq ans et exigence de transcription du mariage célébré à l’étranger. მიუხედავად l’abstention attendue, les sources sont pleinement pertinentes et couvrantes pour le contenu effectivement affirmé."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 21-2 fourni, l’étranger ou l’apatride peut acquérir la nationalité française par déclaration après :\n\n- avoir contracté mariage avec une personne de nationalité française ;\n- quatre ans de mariage, avec maintien depuis le mariage d’une communauté de vie affective et matérielle ;\n- la conservation de la nationalité française par le conjoint au jour de la déclaration ;\n- une connaissance suffisante de la langue française.\n\nLe délai est porté à cinq ans si, au moment de la déclaration, l’intéressé :\n\n- ne justifie pas avoir résidé de manière ininterrompue et régulière en France pendant au moins trois ans depuis le mariage ; ou\n- ne peut pas prouver que son conjoint français a été inscrit au registre des Français établis hors de France pendant la durée de leur vie commune à l’étranger.\n\nEnfin, si le mariage a été célébré à l’étranger, il doit avoir été préalablement transcrit sur les registres de l’état civil français.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "21-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 870.143311999971,
+      "routingCalls": 1,
+      "embeddingMs": 212.75292699993588,
+      "vectorSearchMs": 54.755421999958344,
+      "jinaRerankingMs": 239.25608900003135,
+      "mappingMs": 0.035810999921523035,
+      "totalMs": 1376.9892260000343,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011950000072829425,
+      "contextBuilderMs": 0.06730999995488673,
+      "generationMs": 2667.451119000092,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4044.52818699996
+    },
+    "judge": {
+      "questionId": "q466",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement et complètement les conditions figurant dans le contexte : mariage avec un Français, délai de quatre ans et communauté de vie, conservation de la nationalité du conjoint, connaissance du français, cas de prolongation à cinq ans et transcription du mariage célébré à l’étranger. Elle ne s’abstient toutefois pas alors qu’une abstention était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 21-2 et est précisément pertinente pour les conditions d’acquisition de la nationalité française par déclaration à raison du mariage. Elle couvre l’ensemble des affirmations importantes de la réponse générée : délai de quatre ans, communauté de vie affective et matérielle, maintien de la nationalité du conjoint, connaissance du français, hypothèses du délai de cinq ans et transcription du mariage célébré à l’étranger."
+    }
+  },
+  "failureStage": "abstention"
+}

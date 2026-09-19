@@ -1,0 +1,95 @@
+{
+  "questionId": "q086",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un paiement suppose nécessairement l’existence d’une dette.\n\nLa restitution est exclue lorsque le paiement concerne une obligation naturelle qui a été volontairement acquittée. En revanche, ce qui a été reçu sans être dû doit en principe être restitué.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.0205540000461,
+      "vectorSearchMs": 575.2712470002007,
+      "jinaRerankingMs": 510.7371689998545,
+      "mappingMs": 0.02571900002658367,
+      "totalMs": 1292.1347159999423,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009894000133499503,
+      "contextBuilderMs": 0.011498000007122755,
+      "generationMs": 1689.6841909999494,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2981.851013999898
+    },
+    "judge": {
+      "questionId": "q086",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la condition posée par l’article 1302 (tout paiement suppose une dette) et l’exception à la restitution pour les obligations naturelles volontairement acquittées. La précision selon laquelle l’indu est en principe restituable est également expressément supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce la condition de validité du paiement (existence d’une dette), le principe de restitution de l’indu et l’exclusion pour les obligations naturelles volontairement acquittées. Elle couvre toutes les affirmations importantes de la réponse générée. La source 2 est accessoire mais cohérente avec le sujet de la restitution."
+    }
+  },
+  "routing": {
+    "answer": "La condition nécessaire est l’existence d’une dette : tout paiement suppose une dette.\n\nLa restitution est exclue lorsque le paiement concerne une obligation naturelle qui a été volontairement acquittée. En revanche, ce qui a été reçu sans être dû est en principe sujet à restitution.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 762.1432769999374,
+      "routingCalls": 1,
+      "embeddingMs": 192.13470300007612,
+      "vectorSearchMs": 57.01964099984616,
+      "jinaRerankingMs": 463.94194399984553,
+      "mappingMs": 0.02408199990168214,
+      "totalMs": 1475.298162000021,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009466000134125352,
+      "contextBuilderMs": 0.011634000111371279,
+      "generationMs": 1754.6179260001518,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3229.9448549998924
+    },
+    "judge": {
+      "questionId": "q086",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la condition posée par l’article 1302 (« tout paiement suppose une dette ») et l’exception à restitution relative aux obligations naturelles volontairement acquittées. La précision selon laquelle ce qui est reçu sans être dû est en principe restituable est également explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 1302 et répond intégralement aux deux volets : nécessité d'une dette pour tout paiement et exclusion de la restitution des obligations naturelles volontairement acquittées. Elle couvre aussi l'affirmation complémentaire selon laquelle ce qui a été reçu sans être dû est sujet à restitution. La source 2 est accessoire mais pertinente au régime général de la restitution."
+    }
+  },
+  "failureStage": "none"
+}

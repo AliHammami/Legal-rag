@@ -1,0 +1,95 @@
+{
+  "questionId": "q500",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’inscription au tableau de l’Ordre des médecins.\n\nIl précise seulement que :\n\n- la demande d’inscription est déposée ou envoyée en recommandé à la Haute autorité, avec les pièces justificatives ;\n- elle peut être présentée par voie électronique ;\n- un récépissé est délivré lorsque le dossier est complet ;\n- l’absence de réponse dans les quatre mois suivant ce récépissé vaut décision d’inscription ;\n- la commission statue selon les conditions prévues par les articles R. 811-33 à R. 811-35.\n\nLes conditions de fond elles-mêmes ne figurent pas dans le contexte.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-61"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-57"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 321.46990999998525,
+      "vectorSearchMs": 616.9246479999274,
+      "jinaRerankingMs": 316.12183700012974,
+      "mappingMs": 0.03137900005094707,
+      "totalMs": 1254.576688000001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01400399999693036,
+      "contextBuilderMs": 0.012791999848559499,
+      "generationMs": 1915.8757770000957,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3170.4881160000805
+    },
+    "judge": {
+      "questionId": "q500",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas d’établir les conditions de fond d’inscription au tableau de l’Ordre des médecins. Les seules précisions apportées concernent fidèlement la procédure mentionnée dans le contexte et sont correctement distinguées des conditions de fond. L’abstention est donc appropriée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur l’inscription au tableau de l’Ordre des médecins, mais sur une procédure d’inscription auprès de la Haute autorité et d’une commission nationale. Elles sont donc pertinentes pour justifier l’abstention : elles montrent que le contexte ne fournit que des éléments procéduraux relevant d’un autre cadre, sans énoncer les conditions de fond demandées. Toutes les précisions procédurales reprises dans la réponse sont directement couvertes par les sources, de même que le renvoi aux articles R. 811-33 à R. 811-35."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions substantielles d’inscription au tableau de l’ordre des médecins.\n\nIl indique seulement que :\n\n- la demande d’inscription est déposée ou envoyée en recommandé avec accusé de réception, ou présentée par voie électronique ;\n- elle doit être accompagnée des pièces justificatives ;\n- le candidat doit préciser, le cas échéant, s’il exerce dans une société ;\n- après réception d’un dossier complet, un récépissé est délivré ;\n- l’absence de réponse dans un délai de quatre mois vaut décision d’inscription.\n\nLes conditions spécifiques d’accès au tableau de l’ordre des médecins ne figurent pas dans les extraits fournis.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-61"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-57"
+      }
+    ],
+    "profiling": {
+      "routingMs": 918.4128979998641,
+      "routingCalls": 1,
+      "embeddingMs": 204.68457300006412,
+      "vectorSearchMs": 620.2608660000842,
+      "jinaRerankingMs": 323.95097800018266,
+      "mappingMs": 0.038671999936923385,
+      "totalMs": 2067.3760509998538,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011127999983727932,
+      "contextBuilderMs": 0.011730999918654561,
+      "generationMs": 2233.0893769999966,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4300.497594999848
+    },
+    "judge": {
+      "questionId": "q500",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît correctement que le contexte ne contient pas les conditions substantielles d’inscription au tableau de l’ordre des médecins. Elle distingue utilement les seules modalités procédurales mentionnées dans l’extrait, sans les présenter comme des conditions d’accès. Toutes les affirmations sur le dépôt, les pièces, la société, le récépissé et le délai de quatre mois sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas directement sur le tableau de l’ordre des médecins : elles concernent une commission nationale et une Haute autorité non identifiées comme l’Ordre des médecins. Elles sont donc insuffisantes pour répondre positivement aux conditions substantielles demandées, ce qui permet de justifier l’abstention. La source R821-57 couvre toutefois toutes les modalités procédurales énumérées dans la réponse (dépôt, pièces, exercice en société, voie électronique, récépissé et délai de quatre mois), ainsi que le constat que ces extraits ne fournissent pas les conditions spécifiques d’accès au tableau des médecins."
+    }
+  },
+  "failureStage": "none"
+}

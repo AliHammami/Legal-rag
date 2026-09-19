@@ -1,0 +1,95 @@
+{
+  "questionId": "q314",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 314-22, les prêteurs doivent, lors de l’élaboration, de l’octroi et de l’exécution d’un contrat de crédit :\n\n- agir de manière honnête, équitable, transparente et professionnelle ;\n- agir au mieux des droits et des intérêts des emprunteurs ;\n- fonder l’octroi du crédit, des services accessoires ou du conseil sur les informations relatives à la situation de l’emprunteur ;\n- prendre en compte toute demande spécifique formulée par l’emprunteur ;\n- tenir compte d’hypothèses raisonnables concernant les risques que la durée du crédit fait courir à l’emprunteur.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 217.64684999920428,
+      "vectorSearchMs": 744.6855959994718,
+      "jinaRerankingMs": 381.54599099978805,
+      "mappingMs": 0.05790800042450428,
+      "totalMs": 1343.97559799999,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017767000012099743,
+      "contextBuilderMs": 0.022447999566793442,
+      "generationMs": 1526.0629179999232,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2870.0905240001157
+    },
+    "judge": {
+      "questionId": "q314",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement l'ensemble des obligations prévues à l'article L. 314-22 : comportement honnête, équitable, transparent et professionnel, primauté des droits et intérêts de l'emprunteur, et fondement de l'octroi sur sa situation, ses demandes spécifiques et des hypothèses raisonnables relatives aux risques liés à la durée du crédit. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 314-22 et est exactement pertinente. Elle couvre toutes les obligations énoncées dans la réponse générée : comportement honnête, équitable, transparent et professionnel, action au mieux des droits et intérêts de l'emprunteur, ainsi que prise en compte de sa situation, de ses demandes spécifiques et des risques raisonnablement liés à la durée du crédit. La source 2 est complémentaire mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 314-22, les prêteurs doivent :\n\n- agir de manière honnête, équitable, transparente et professionnelle ;\n- agir au mieux des droits et des intérêts des emprunteurs ;\n- fonder l’octroi du crédit, des services accessoires ou du conseil sur les informations relatives à la situation de l’emprunteur ;\n- prendre en compte toute demande spécifique formulée par l’emprunteur ;\n- tenir compte des hypothèses raisonnables concernant les risques que la durée du contrat de crédit fait courir à l’emprunteur.\n\nCes obligations s’appliquent à l’élaboration, à l’octroi et à l’exécution du contrat de crédit, ainsi qu’aux services de conseil et services accessoires.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 973.89023800008,
+      "routingCalls": 1,
+      "embeddingMs": 286.9050080003217,
+      "vectorSearchMs": 55.10867099929601,
+      "jinaRerankingMs": 349.8478040006012,
+      "mappingMs": 0.028101000003516674,
+      "totalMs": 1665.9134200001135,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02979299984872341,
+      "contextBuilderMs": 0.02281999960541725,
+      "generationMs": 1441.4046780001372,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3107.379274999723
+    },
+    "judge": {
+      "questionId": "q314",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement l'ensemble des obligations prévues par l'article L. 314-22 : comportement honnête, équitable, transparent et professionnel, intérêt de l'emprunteur, prise en compte de sa situation et de ses demandes spécifiques, ainsi que des risques raisonnablement liés à la durée du crédit. Elle précise correctement le champ d'application aux contrats de crédit, services de conseil et services accessoires, conformément au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 314-22 et est exactement pertinente. Elle couvre toutes les affirmations importantes de la réponse : principes d'honnêteté, d'équité, de transparence et de professionnalisme, protection des droits et intérêts de l'emprunteur, fondement sur sa situation et ses demandes spécifiques, prise en compte des risques liés à la durée, ainsi que le champ d'application aux contrats de crédit, services de conseil et services accessoires. La source 2 est connexe mais non nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

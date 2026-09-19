@@ -1,0 +1,95 @@
+{
+  "questionId": "q366",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’opposition au mariage, l’officier d’état civil qui célèbre néanmoins le mariage avant la remise de la mainlevée encourt :\n\n- **3 000 euros d’amende** ;\n- **des dommages-intérêts**.\n\nEn cas de délit connexe puni d’une peine d’emprisonnement et impliquant un permis de conduire, la juridiction peut, à la place de l’emprisonnement, prononcer une ou plusieurs peines privatives ou restrictives de liberté :\n\n1. la **suspension du permis de conduire** pour cinq ans au plus ;\n2. l’**interdiction de conduire certains véhicules** pendant cinq ans au plus ;\n3. l’**annulation du permis**, avec interdiction d’en solliciter un nouveau pendant cinq ans au plus ;\n4. la **confiscation d’un ou plusieurs véhicules** ;\n5. l’**immobilisation d’un ou plusieurs véhicules** pendant un an au plus ;\n6. l’interdiction, pendant cinq ans au plus, de conduire un véhicule non équipé d’un dispositif homologué d’anti-démarrage par éthylotest électronique.\n\nLe contexte prévoit également d’autres peines de même nature : l’interdiction de détenir ou porter une arme, la confiscation d’armes et le retrait du permis de chasser.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "68"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 259.76313599944115,
+      "vectorSearchMs": 1196.3916950002313,
+      "jinaRerankingMs": 315.02495499979705,
+      "mappingMs": 0.04624500032514334,
+      "totalMs": 1771.321567999199,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01568100042641163,
+      "contextBuilderMs": 0.018121999688446522,
+      "generationMs": 2427.7332739997655,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4199.113722000271
+    },
+    "judge": {
+      "questionId": "q366",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la sanction prévue par l’article 68 (3 000 euros d’amende et tous dommages-intérêts) et énumère avec exactitude les principales peines de l’article 131-6 relatives au permis et aux véhicules, avec leurs durées maximales lorsqu’elles sont prévues. Elle mentionne aussi les autres peines pertinentes figurant dans le contexte. Toutes les affirmations importantes sont directement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la sanction applicable à l'officier d'état civil célébrant un mariage malgré une opposition sans mainlevée. La source 2 répond directement aux peines privatives ou restrictives de liberté substituables à l'emprisonnement, notamment celles relatives au permis et aux véhicules. Elles étayent l'ensemble des affirmations importantes de la réponse générée, y compris les montants, durées maximales, confiscation et immobilisation, ainsi que les autres peines mentionnées."
+    }
+  },
+  "routing": {
+    "answer": "En cas d’opposition au mariage, l’officier d’état civil ne peut célébrer le mariage avant la remise de la mainlevée. S’il le célèbre malgré tout, il encourt :\n\n- **3 000 euros d’amende** ;\n- **tous dommages-intérêts**.\n\nPour un **délit connexe puni d’une peine d’emprisonnement**, la juridiction peut remplacer l’emprisonnement par une ou plusieurs peines privatives ou restrictives de liberté liées au permis de conduire :\n\n- suspension du permis pendant **cinq ans au plus** ;\n- interdiction de conduire certains véhicules pendant **cinq ans au plus** ;\n- annulation du permis, avec interdiction d’en solliciter un nouveau pendant **cinq ans au plus** ;\n- confiscation d’un ou plusieurs véhicules appartenant au condamné ;\n- immobilisation d’un ou plusieurs véhicules pendant **un an au plus** ;\n- interdiction, pendant **cinq ans au plus**, de conduire un véhicule non équipé d’un dispositif homologué d’antidémarrage par éthylotest électronique.\n\nLe contexte ne précise pas qu’un délit connexe serait effectivement constitué ni quelles peines seraient concrètement prononcées.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "68"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2818.7376600001007,
+      "routingCalls": 1,
+      "embeddingMs": 225.23060399945825,
+      "vectorSearchMs": 261.2444829996675,
+      "jinaRerankingMs": 322.4277189997956,
+      "mappingMs": 0.03613400086760521,
+      "totalMs": 3627.7501259995624,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01590999960899353,
+      "contextBuilderMs": 0.017319999635219574,
+      "generationMs": 3415.1695449994877,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7042.970993000083
+    },
+    "judge": {
+      "questionId": "q366",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la sanction prévue par l’article 68 (3 000 euros d’amende et dommages-intérêts) et les principales peines de l’article 131-6 liées au permis ou aux véhicules, avec leurs durées maximales. Elle est entièrement fondée sur le contexte. Elle omet toutefois les autres peines de l’article 131-6 figurant dans le contexte, notamment celles relatives aux armes et au permis de chasser ; cette omission reste mineure au regard du ciblage de la question sur un délit impliquant le permis de conduire."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la sanction de l'officier d'état civil en cas de célébration malgré opposition (mainlevée, amende de 3 000 euros et dommages-intérêts). La source 2 répond directement aux peines privatives ou restrictives de liberté substituables à l'emprisonnement pour un délit, notamment celles relatives au permis et aux véhicules. Toutes les affirmations substantielles de la réponse générée — montants, conditions, types de peines et durées maximales — sont couvertes par ces sources. La précision finale selon laquelle aucun délit connexe concret n'est établi est compatible avec l'absence de faits supplémentaires dans le contexte."
+    }
+  },
+  "failureStage": "none"
+}

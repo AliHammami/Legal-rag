@@ -1,0 +1,99 @@
+{
+  "questionId": "q421",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Harcèlement sexuel au travail\n\n- **Sanction disciplinaire** : tout salarié ayant commis des faits de harcèlement sexuel est passible d’une sanction disciplinaire (article L. 1153-6).\n- **Sanctions pénales** : le harcèlement sexuel est puni de **deux ans d’emprisonnement et de 30 000 € d’amende**.\n- Les peines sont portées à **trois ans d’emprisonnement et 45 000 € d’amende** dans plusieurs circonstances aggravantes, notamment lorsque les faits sont commis :\n  - par une personne abusant de l’autorité liée à ses fonctions ;\n  - sur un mineur de quinze ans ;\n  - sur une personne particulièrement vulnérable ou dépendante ;\n  - par plusieurs personnes ;\n  - au moyen d’un service de communication en ligne ou d’un support numérique ou électronique.\n\nLe harcèlement sexuel peut notamment résulter de propos ou comportements répétés à connotation sexuelle ou sexiste, ou d’une pression grave, même non répétée, destinée à obtenir un acte de nature sexuelle.\n\n### Contrôles et confiscation d’argent liquide\n\nSelon l’article L. 722-18, la méconnaissance des obligations visées aux articles L. 722-6 à L. 722-8 est punie d’une **amende égale à 50 % de la somme concernée** par l’infraction ou la tentative.\n\nEn cas de constatation par les agents des douanes :\n\n- ils peuvent retenir temporairement la totalité de l’argent liquide pendant **30 jours au maximum**, avec renouvellement possible jusqu’à **90 jours** ;\n- les motifs de la retenue doivent être notifiés à l’auteur de l’infraction ;\n- après 90 jours, l’argent peut être consigné, sur autorisation du procureur de la République, pendant une durée maximale de **douze mois à compter du premier jour de la retenue temporaire** ;\n- les documents relatifs à l’argent retenu peuvent être conservés ou copiés ;\n- l’argent peut être saisi et sa **confiscation peut être prononcée par la juridiction compétente** lorsqu’il existe les éléments ou raisons plausibles permettant de penser que l’intéressé a commis, ou participé à, une ou plusieurs infractions douanières.\n\nLe contexte ne précise pas de lien particulier entre les règles relatives au harcèlement sexuel et celles concernant le contrôle et la confiscation d’argent liquide.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1153-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L722-18"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-33"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.4547839993611,
+      "vectorSearchMs": 660.3410639995709,
+      "jinaRerankingMs": 382.7115709995851,
+      "mappingMs": 0.03130699973553419,
+      "totalMs": 1267.5668320003897,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012276999652385712,
+      "contextBuilderMs": 0.02171000000089407,
+      "generationMs": 4055.7807170003653,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5323.390204000287
+    },
+    "judge": {
+      "questionId": "q421",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement la sanction disciplinaire et les peines pénales du harcèlement sexuel, y compris les principales circonstances aggravantes. Elle restitue aussi fidèlement l'amende de 50 %, les délais de retenue et de consignation, ainsi que les possibilités de saisie et confiscation prévues par le contexte. Les affirmations importantes sont toutes étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L. 1153-6 couvre la sanction disciplinaire, l'article 222-33 couvre la définition pénale, les peines et les circonstances aggravantes du harcèlement sexuel, et L. 722-18 couvre l'amende, la retenue, la consignation, les documents, la saisie et la confiscation d'argent liquide. Elles étayent toutes les affirmations juridiques substantielles de la réponse générée. La dernière observation sur l'absence de lien particulier entre les deux régimes n'est pas une affirmation juridique nécessitant une source spécifique."
+    }
+  },
+  "routing": {
+    "answer": "En cas de harcèlement sexuel au travail :\n\n- **Sanction disciplinaire** : tout salarié ayant commis des faits de harcèlement sexuel est passible d’une sanction disciplinaire (article L. 1153-6 du Code du travail).\n- **Sanctions pénales** : les faits sont punis de **2 ans d’emprisonnement et de 30 000 € d’amende**.\n- Ces peines sont portées à **3 ans d’emprisonnement et 45 000 € d’amende** notamment lorsque les faits sont commis par une personne abusant de l’autorité de ses fonctions, par plusieurs personnes, ou au moyen d’un service de communication en ligne ou d’un support numérique ou électronique.\n\nLe contexte fourni **ne contient aucune disposition relative aux contrôles, ni à la confiscation d’argent liquide en cas d’infraction**. Il ne permet donc pas de répondre sur ce point.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1153-6"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-33"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1364.0291830003262,
+      "routingCalls": 1,
+      "embeddingMs": 164.69193299952894,
+      "vectorSearchMs": 452.68727499991655,
+      "jinaRerankingMs": 334.5918399998918,
+      "mappingMs": 0.050743999890983105,
+      "totalMs": 2316.0869859997183,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015066000632941723,
+      "contextBuilderMs": 0.014026000164449215,
+      "generationMs": 2394.275723999366,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4710.400442999788
+    },
+    "judge": {
+      "questionId": "q421",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse est exacte sur la sanction disciplinaire et les peines pénales du harcèlement sexuel, y compris plusieurs circonstances aggravantes. Elle ne fournit toutefois pas les règles attendues relatives à l'argent liquide (amende de 50 %, retenue, consignation, saisie et confiscation), ce qui la rend substantiellement incomplète au regard de la question et de la référence. Toutes ses affirmations positives sont soutenues par le contexte, et l'absence de dispositions sur l'argent liquide dans ce contexte justifie son impossibilité de répondre sur ce volet."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet harcèlement sexuel : elles établissent la sanction disciplinaire et les peines pénales, y compris les circonstances aggravantes mentionnées. En revanche, aucune source ne traite des contrôles, retenues, consignations, saisies ou confiscations d’argent liquide, qui constituent un volet important de la question. Elles permettent néanmoins d’étayer le constat de la réponse selon lequel le contexte fourni ne contient pas de telles dispositions. Toutes les affirmations positives de la réponse générée, ainsi que son constat d’absence de contenu sur l’argent liquide dans le contexte, sont couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

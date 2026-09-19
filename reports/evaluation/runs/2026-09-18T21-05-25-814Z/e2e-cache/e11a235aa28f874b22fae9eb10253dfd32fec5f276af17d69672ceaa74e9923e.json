@@ -1,0 +1,95 @@
+{
+  "questionId": "q488",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’ouverture d’une crèche.\n\nIl indique seulement que, pour obtenir un agrément de services à la personne, le demandeur doit notamment disposer de moyens humains, matériels et financiers suffisants, respecter un cahier des charges et ne pas avoir fait l’objet de certaines condamnations ou sanctions. Il ne précise pas les règles spécifiques applicables à l’ouverture d’une crèche.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7124-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.28875300008804,
+      "vectorSearchMs": 672.3686039999593,
+      "jinaRerankingMs": 272.0993449999951,
+      "mappingMs": 0.02613100002054125,
+      "totalMs": 1163.842868000036,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01006899995263666,
+      "contextBuilderMs": 0.016915000043809414,
+      "generationMs": 1696.7626109999837,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2860.641356999986
+    },
+    "judge": {
+      "questionId": "q488",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît correctement que le contexte ne fournit pas les règles spécifiques d’ouverture d’une crèche. Elle distingue à juste titre les conditions d’agrément des services à la personne mentionnées par l’article R. 7232-6 des conditions propres à une crèche, et cette explication est entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 7232-6 est pertinente pour justifier l’abstention : elle traite explicitement d’un agrément de services à la personne et énumère les conditions reprises dans la réponse, sans fournir de règles spécifiques relatives à l’ouverture d’une crèche. La source R. 7124-1 est hors sujet, mais n’affaiblit pas ce constat. Les affirmations importantes de la réponse sont couvertes par la source R. 7232-6."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’ouverture d’une crèche.\n\nIl indique seulement que, pour obtenir un agrément de services à la personne, il faut notamment :\n\n- disposer de moyens humains, matériels et financiers suffisants ;\n- s’engager à respecter un cahier des charges ;\n- ne pas avoir fait l’objet de certaines condamnations ou sanctions ;\n- lorsque l’activité concerne des mineurs, ne pas être inscrit au fichier judiciaire national automatisé des auteurs d’infractions sexuelles.\n\nIl précise également qu’une autorisation préfectorale est nécessaire pour engager ou produire un enfant de moins de seize ans dans certaines activités, mais cela ne concerne pas directement l’ouverture d’une crèche.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7124-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1304.6032080000732,
+      "routingCalls": 1,
+      "embeddingMs": 199.7171550000785,
+      "vectorSearchMs": 594.3463729999494,
+      "jinaRerankingMs": 282.333386000013,
+      "mappingMs": 0.025325999944470823,
+      "totalMs": 2381.0504430000437,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011001999955624342,
+      "contextBuilderMs": 0.017057999968528748,
+      "generationMs": 1893.3888769999612,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4274.475897999946
+    },
+    "judge": {
+      "questionId": "q488",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie clairement que le contexte ne permet pas de déterminer les conditions d’ouverture d’une crèche. Les précisions complémentaires sur l’agrément de services à la personne et l’autorisation relative au travail des mineurs sont fidèles au contexte et explicitement distinguées de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas directement sur les conditions d’ouverture d’une crèche, mais elles sont pertinentes pour justifier l’abstention : la première concerne un agrément de services à la personne et la seconde l’autorisation d’engager ou produire des mineurs dans certaines activités. Elles permettent de constater que le contexte fourni est hors périmètre ou insuffisant pour répondre à la question. Toutes les précisions factuelles de la réponse sur ces deux dispositifs sont couvertes par les extraits."
+    }
+  },
+  "failureStage": "none"
+}

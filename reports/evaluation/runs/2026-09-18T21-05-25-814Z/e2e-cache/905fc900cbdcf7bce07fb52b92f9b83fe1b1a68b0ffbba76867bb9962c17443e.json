@@ -1,0 +1,103 @@
+{
+  "questionId": "q239",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L212-1, les actions de numéraire sont celles :\n\n- dont le montant est libéré en espèces ou par compensation ;\n- qui sont émises à la suite de l’incorporation au capital de réserves, bénéfices ou primes d’émission ;\n- dont le montant provient à la fois d’une incorporation de réserves, bénéfices ou primes d’émission et d’une libération en espèces.\n\nDans ce dernier cas, elles doivent être intégralement libérées lors de la souscription.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-7"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L742-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L743-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L212-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L212-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 164.37388599989936,
+      "vectorSearchMs": 626.8237629998475,
+      "jinaRerankingMs": 513.9357420001179,
+      "mappingMs": 0.03248099982738495,
+      "totalMs": 1305.1960170003586,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012265999801456928,
+      "contextBuilderMs": 0.026474999729543924,
+      "generationMs": 1455.758355999831,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2761.009558999911
+    },
+    "judge": {
+      "questionId": "q239",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois catégories d’actions de numéraire prévues par l’article L. 228-7 reproduit à l’article L. 212-1, ainsi que l’exigence de libération intégrale à la souscription pour les actions mixtes. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 4 est directement l’article L. 212-1 demandé et reproduit intégralement l’article L. 228-7 définissant les actions de numéraire. Elle couvre explicitement les trois catégories énoncées dans la réponse ainsi que l’exigence de libération intégrale à la souscription pour les actions mixtes. La source 1 confirme le même texte."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas l’article L212-1, mais l’article L228-7 indique que les actions de numéraire :\n\n- sont libérées en espèces ou par compensation ;\n- peuvent résulter d’une incorporation au capital de réserves, bénéfices ou primes d’émission ;\n- peuvent combiner une incorporation et une libération en espèces ; dans ce cas, elles doivent être intégralement libérées lors de la souscription.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4265.174046,
+      "routingCalls": 1,
+      "embeddingMs": 194.50683100009337,
+      "vectorSearchMs": 399.10149100003764,
+      "jinaRerankingMs": 511.32724300026894,
+      "mappingMs": 0.025458000134676695,
+      "totalMs": 5370.175412999932,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009462000336498022,
+      "contextBuilderMs": 0.00941399997100234,
+      "generationMs": 1668.6401060000062,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7038.844634999987
+    },
+    "judge": {
+      "questionId": "q239",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit fidèlement les trois catégories d’actions de numéraire et la règle de libération intégrale lors de la souscription pour les actions mixtes. Ces éléments sont explicitement fournis par le contexte. La mention que le texte figure à l’article L228-7 plutôt qu’à L212-1 est exacte au regard du contexte et ne constitue pas une abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la définition et les caractéristiques des actions de numéraire demandées : libération en espèces ou par compensation, émission par incorporation de réserves, bénéfices ou primes, combinaison des deux modalités et libération intégrale à la souscription pour cette dernière catégorie. Elle couvre toutes les affirmations substantielles de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

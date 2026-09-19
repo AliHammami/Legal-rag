@@ -1,0 +1,99 @@
+{
+  "questionId": "q320",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article L. 441-3 ni les dispositions précisant les techniques interdites ou les cas d’exemption. Il ne permet donc pas de répondre suffisamment à la question.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L521-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 829.7371800001711,
+      "vectorSearchMs": 778.8643779996783,
+      "jinaRerankingMs": 346.07021200004965,
+      "mappingMs": 0.038532999344170094,
+      "totalMs": 1954.7475359998643,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010653999634087086,
+      "contextBuilderMs": 0.019536999985575676,
+      "generationMs": 1533.458854000084,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3488.251320000738
+    },
+    "judge": {
+      "questionId": "q320",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de répondre alors que la question admet une réponse de fond attendue : elle n’indique ni les techniques interdites ni le cas d’exemption. Son constat est toutefois fidèle au contexte fourni, qui ne contient pas le texte de l’article L. 441-3 ni ces précisions (seulement une disposition pénale le mentionnant)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne fournissent pas le contenu de l’article L. 441-3 ni les techniques interdites ou l’exemption demandées. La source 3 ne fait que mentionner cet article au titre des sanctions, tandis que les sources 1 et 2 sont étrangères au sujet. Elles sont donc insuffisantes pour répondre au fond, mais le contexte fourni permet bien d’étayer le constat de la réponse générée selon lequel les précisions sollicitées ne sont pas disponibles."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le contenu de l’article L. 441-3. Il indique seulement que les délits prévus par cet article sont punis de deux ans d’emprisonnement et de 300 000 euros d’amende.\n\nIl ne permet donc pas de déterminer quelles techniques sont interdites ni dans quel cas un professionnel peut être exempté de cette obligation.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4188.103434000164,
+      "routingCalls": 1,
+      "embeddingMs": 235.75627200026065,
+      "vectorSearchMs": 95.05738999973983,
+      "jinaRerankingMs": 321.87832899950445,
+      "mappingMs": 0.032472999766469,
+      "totalMs": 4840.864845000207,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017423000186681747,
+      "contextBuilderMs": 0.026477999985218048,
+      "generationMs": 1909.0166139993817,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6749.934843000025
+    },
+    "judge": {
+      "questionId": "q320",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit ni les techniques interdites ni le cas d’exemption demandé, alors que ces éléments sont attendus selon la référence. Elle est toutefois pleinement fondée sur le contexte : celui-ci ne contient effectivement pas le texte de l’article L. 441-3 et mentionne seulement les sanctions applicables. L’indicateur n’attendant pas d’abstention, le refus de répondre est évalué comme incorrect au titre de l’abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source L. 454-6 mentionne bien l’article L. 441-3, mais uniquement pour en prévoir les sanctions ; elle ne contient aucune information sur les techniques interdites ni sur l’exception demandée. La source L. 121-23 est hors sujet. En revanche, la réponse générée se limite à constater l’absence du contenu substantiel de l’article et à relever l’existence des sanctions, ce qui est couvert par la source L. 454-6."
+    }
+  },
+  "failureStage": "generation"
+}

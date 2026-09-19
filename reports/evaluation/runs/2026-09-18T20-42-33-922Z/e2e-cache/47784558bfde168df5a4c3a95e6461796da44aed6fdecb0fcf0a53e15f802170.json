@@ -1,0 +1,95 @@
+{
+  "questionId": "q005",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 221-12, la disparition forcée consiste en :\n\n- l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne ;\n- dans des conditions la soustrayant à la protection de la loi ;\n- par des agents de l’État, ou par des personnes agissant avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État ;\n- lorsque ces actes sont suivis de la disparition de la personne et accompagnés soit du déni de la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nCette infraction est punie de la réclusion criminelle à perpétuité.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-12"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.87761500000488,
+      "vectorSearchMs": 1105.4824600000065,
+      "jinaRerankingMs": 251.88183800000115,
+      "mappingMs": 0.04091799999878276,
+      "totalMs": 1587.3239780000004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.023540999995020684,
+      "contextBuilderMs": 0.11994699999922886,
+      "generationMs": 1471.3842559999975,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3058.8847440000027
+    },
+    "judge": {
+      "questionId": "q005",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments constitutifs de l'article 221-12 (privation de liberté, soustraction à la protection de la loi, implication ou acquiescement des autorités de l'État, disparition et déni ou dissimulation) ainsi que la peine de réclusion criminelle à perpétuité. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 221-12 et contient l'ensemble des éléments constitutifs de la disparition forcée exposés dans la réponse, ainsi que la peine de réclusion criminelle à perpétuité. La source 2 est accessoire mais pertinente au régime des peines complémentaires du crime visé."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 221-12, la disparition forcée consiste en l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne, dans des conditions la soustrayant à la protection de la loi, commise par des agents de l’État ou avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État.\n\nCes actes doivent être suivis de la disparition de la personne et accompagnés soit du refus de reconnaître la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nLa disparition forcée est punie de la réclusion criminelle à perpétuité.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-12"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 664.6061469999986,
+      "routingCalls": 1,
+      "embeddingMs": 190.30085300000064,
+      "vectorSearchMs": 54.6353900000031,
+      "jinaRerankingMs": 564.7657780000009,
+      "mappingMs": 0.05492700000468176,
+      "totalMs": 1474.4286839999986,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.029027000004134607,
+      "contextBuilderMs": 0.11995200000092154,
+      "generationMs": 1869.462977999996,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3344.8878549999936
+    },
+    "judge": {
+      "questionId": "q005",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les éléments constitutifs de l'article 221-12 (privation de liberté par des agents de l'État ou avec l'accord des autorités, soustraction à la protection de la loi, disparition, déni ou dissimulation) et indique exactement la peine de réclusion criminelle à perpétuité. Toutes les affirmations essentielles sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 221-12 et couvre intégralement la définition de la disparition forcée (formes de privation de liberté, soustraction à la protection de la loi, implication ou acquiescement d'autorités de l'État, disparition, déni ou dissimulation) ainsi que la peine de réclusion criminelle à perpétuité. La source 2 est pertinente de façon accessoire sur les peines complémentaires, mais n'est pas nécessaire aux affirmations de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

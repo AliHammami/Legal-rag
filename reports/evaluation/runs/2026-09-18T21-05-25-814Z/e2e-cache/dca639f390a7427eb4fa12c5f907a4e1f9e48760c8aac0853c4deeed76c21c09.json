@@ -1,0 +1,87 @@
+{
+  "questionId": "q324",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Il doit en informer sans délai, par tout moyen dont il peut justifier :\n\n- celui qui lui a fourni les produits ;\n- ceux à qui il les a cédés.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L411-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.4859019992873,
+      "vectorSearchMs": 784.9002419998869,
+      "jinaRerankingMs": 302.6197469998151,
+      "mappingMs": 0.023182000033557415,
+      "totalMs": 1327.108169999905,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0092569999396801,
+      "contextBuilderMs": 0.0113129997625947,
+      "generationMs": 970.9953690003604,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2298.1334620006382
+    },
+    "judge": {
+      "questionId": "q324",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement l'obligation prévue par l'article cité : information sans délai, par un moyen justifiable, du fournisseur et des acquéreurs/cocontractants auxquels les produits ont été cédés. Tous les éléments sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L411-2 et énonce exactement l'obligation visée : informer sans délai, par des moyens dont l'opérateur peut justifier, le fournisseur des produits et les personnes auxquelles ils ont été cédés. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Il doit en informer sans délai :\n\n- celui qui lui a fourni les produits ;\n- ceux à qui il les a cédés.\n\nL’information doit être faite par tout moyen dont il peut justifier.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L411-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1312.3469730000943,
+      "routingCalls": 1,
+      "embeddingMs": 232.6492159999907,
+      "vectorSearchMs": 70.94654899928719,
+      "jinaRerankingMs": 293.28727800026536,
+      "mappingMs": 0.028802999295294285,
+      "totalMs": 1909.292293000035,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01844200026243925,
+      "contextBuilderMs": 0.008860000409185886,
+      "generationMs": 1076.9730920000002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2986.300567000173
+    },
+    "judge": {
+      "questionId": "q324",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l'obligation prévue : information sans délai du fournisseur et des acquéreurs, par tout moyen dont l'opérateur peut justifier. Elle est intégralement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L411-2 et vise exactement l’obligation demandée : informer sans délai, par tous moyens justifiables, le fournisseur et les personnes auxquelles les produits ont été cédés. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

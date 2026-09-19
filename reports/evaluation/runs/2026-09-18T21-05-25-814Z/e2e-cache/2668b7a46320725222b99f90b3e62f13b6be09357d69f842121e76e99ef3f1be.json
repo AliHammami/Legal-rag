@@ -1,0 +1,95 @@
+{
+  "questionId": "q119",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Sont soumises à agrément les personnes morales ou entreprises individuelles qui exercent :\n\n1. La garde d’enfants au-dessous de la limite d’âge fixée par arrêté ;\n2. Les activités relevant du 2° de l’article L. 7231-1, sauf celles exclues par décret lorsqu’elles ne mettent pas en cause la sécurité des personnes.\n\nPour obtenir l’agrément, elles doivent en outre :\n\n- disposer des moyens humains, matériels et financiers nécessaires ;\n- s’engager à respecter le cahier des charges applicable ;\n- ne pas avoir de dirigeants condamnés ou sanctionnés de manière leur interdisant de gérer, diriger ou exercer une activité commerciale ;\n- lorsque l’activité concerne des mineurs, ne pas être inscrites au fichier judiciaire national automatisé des auteurs d’infractions sexuelles, cette condition concernant les personnes désignées par le texte.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7232-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 227.54058799985796,
+      "vectorSearchMs": 568.1089490000159,
+      "jinaRerankingMs": 561.8168129997794,
+      "mappingMs": 0.028458999935537577,
+      "totalMs": 1357.5292090000585,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020463000051677227,
+      "contextBuilderMs": 0.01508600008673966,
+      "generationMs": 2471.4530370000284,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3829.0286590000615
+    },
+    "judge": {
+      "questionId": "q119",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux catégories d’activités soumises à agrément, avec l’exception réglementaire liée à la sécurité. Elle ajoute à juste titre les conditions réglementaires d’octroi de l’agrément, toutes présentes dans le contexte, y compris la condition spécifique relative au fichier judiciaire lorsque l’activité est liée aux mineurs."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement aux catégories d’activités soumises à agrément. La source 2 est également pertinente car la réponse générée ajoute les conditions d’octroi de cet agrément. Toutes les affirmations importantes de la réponse sont explicitement couvertes : garde d’enfants sous la limite d’âge, activités du 2° de l’article L. 7231-1 et exception, moyens nécessaires, respect du cahier des charges, absence de certaines condamnations ou sanctions, et condition relative au fichier judiciaire pour les activités liées aux mineurs."
+    }
+  },
+  "routing": {
+    "answer": "Une personne morale ou une entreprise individuelle est soumise à agrément lorsqu’elle exerce :\n\n- des activités de garde d’enfants au-dessous d’une limite d’âge fixée par arrêté ;\n- les activités relevant du 2° de l’article L. 7231-1, sauf celles définies par décret qui ne mettent pas en cause la sécurité des personnes.\n\nL’agrément est accordé par le préfet si les conditions suivantes sont remplies :\n\n1. disposer des moyens humains, matériels et financiers nécessaires ;\n2. s’engager à respecter le cahier des charges applicable ;\n3. ne pas avoir de dirigeants condamnés ou sanctionnés de manière à leur interdire de gérer, diriger une personne morale ou exercer une activité commerciale ;\n4. lorsque l’activité concerne des mineurs, ne pas être inscrit au fichier judiciaire national automatisé des auteurs d’infractions sexuelles, pour la personne représentante, l’encadrant et les intervenants concernés.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7232-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1547.2856880000327,
+      "routingCalls": 1,
+      "embeddingMs": 216.109982999973,
+      "vectorSearchMs": 252.33253800007515,
+      "jinaRerankingMs": 593.6310940000694,
+      "mappingMs": 0.05069199996069074,
+      "totalMs": 2609.4410439999774,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013287999900057912,
+      "contextBuilderMs": 0.05410599987953901,
+      "generationMs": 2508.5616359999403,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5118.085288999835
+    },
+    "judge": {
+      "questionId": "q119",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux catégories d'activités qui entraînent la soumission à agrément, avec l'exception prévue. Elle ajoute les conditions réglementaires d'octroi de l'agrément, qui sont exactes et intégralement étayées par le contexte, sans contredire la réponse à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en énonçant les deux catégories d’activités soumises à agrément et l’exception réglementaire. La source 2 est également pertinente pour les conditions supplémentaires d’octroi que la réponse générée ajoute. Elle couvre les quatre conditions énumérées, y compris la condition relative au fichier judiciaire lorsque l’activité est liée aux mineurs."
+    }
+  },
+  "failureStage": "none"
+}

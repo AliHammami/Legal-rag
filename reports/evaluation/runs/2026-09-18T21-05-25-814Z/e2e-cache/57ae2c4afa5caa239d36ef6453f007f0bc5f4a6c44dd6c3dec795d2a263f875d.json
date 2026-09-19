@@ -1,0 +1,111 @@
+{
+  "questionId": "q400",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne reproduit pas l’article **L. 1142-1 du code du travail** ; il ne permet donc pas de préciser les restrictions relatives aux critères de sélection à l’emploi, notamment en matière d’égalité professionnelle entre les femmes et les hommes.\n\nEn revanche, l’article **D. 314-22 du code de la consommation** définit les personnels concernés par les exigences de compétence :\n\n- les personnes physiques travaillant pour le prêteur et participant directement à l’élaboration, la proposition, l’octroi ou au conseil concernant les contrats de crédit ;\n- les personnes qui dirigent ou encadrent directement ces personnels ;\n- pour les intermédiaires de crédit, les personnels définis par l’article R. 519-15 du code monétaire et financier.\n\nCes personnels doivent posséder et maintenir les compétences professionnelles requises. Les salariés en contrat de formation en alternance sont temporairement dispensés de cette obligation, à condition de n’exercer ces activités qu’en présence et sous la direction d’un salarié qualifié.\n\nAinsi, sur la base du seul contexte, on peut identifier les exigences de compétence et les profils concernés, mais pas les restrictions résultant de l’article L. 1142-1 concernant les critères de sélection à l’emploi.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-24"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 183.0027340007946,
+      "vectorSearchMs": 678.1456809993833,
+      "jinaRerankingMs": 309.0719719994813,
+      "mappingMs": 0.01969200000166893,
+      "totalMs": 1170.2706069992855,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009293999522924423,
+      "contextBuilderMs": 0.0174150001257658,
+      "generationMs": 4108.788948000409,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5279.096249000169
+    },
+    "judge": {
+      "questionId": "q400",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement, à partir du contexte, les personnels soumis aux exigences de compétence et le régime particulier des salariés en alternance. Elle ne fournit toutefois pas la restriction essentielle issue de l’article L. 1142-1 du code du travail : l’interdiction de discrimination ou de mention fondée sur le sexe, la situation de famille ou la grossesse dans le recrutement et les conditions de travail. Son constat d’absence de cet article dans le contexte est fondé, mais elle ne répond donc que partiellement à la question combinée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources couvrent directement le volet relatif aux personnels du crédit : catégories de personnes visées, encadrement, intermédiaires, obligation de compétence et exception encadrée pour l’alternance (D. 314-22 et L. 314-24). Elles ne fournissent toutefois pas l’article L. 1142-1 du code du travail ni son contenu, source essentielle pour répondre intégralement à la question combinée sur les critères de sélection à l’emploi. Elles permettent néanmoins de justifier le constat de la réponse selon lequel ce volet ne peut pas être précisé à partir du contexte. Toutes les affirmations factuelles importantes effectivement formulées par la réponse sont ainsi couvertes par les sources ou par l’absence constatée de la disposition invoquée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas le texte de l’article **L. 1142-1 du code du travail**. Il ne permet donc pas de préciser les restrictions relatives aux critères de sélection à l’emploi, notamment au regard de l’égalité professionnelle et de la non-discrimination.\n\nD’après l’article **D. 314-22 du code de la consommation**, les personnels concernés sont :\n\n- les personnes physiques travaillant pour le prêteur et participant directement à l’élaboration, la proposition, l’octroi ou au conseil concernant des contrats de crédit ;\n- les personnes qui dirigent ou encadrent directement ces personnels ;\n- les personnels des intermédiaires de crédit, selon la définition de l’article R. 519-15 du code monétaire et financier.\n\nCes personnels doivent disposer des compétences professionnelles requises, conformément à l’article D. 314-23, notamment par un diplôme approprié ou une formation professionnelle adaptée.\n\nLes personnes en contrat de formation en alternance sont exemptées de cette obligation pendant la durée de leur contrat, à condition de n’exercer ces activités qu’en présence et sous la direction d’un salarié qualifié.\n\nEn revanche, le contexte ne permet pas d’identifier les critères de sélection à l’emploi interdits ou les garanties particulières résultant de l’article L. 1142-1.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-24"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1021.9931080006063,
+      "routingCalls": 1,
+      "embeddingMs": 195.56582299992442,
+      "vectorSearchMs": 345.4255659999326,
+      "jinaRerankingMs": 308.2099960008636,
+      "mappingMs": 0.021517000161111355,
+      "totalMs": 1871.2395940003917,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011149999685585499,
+      "contextBuilderMs": 0.027353000827133656,
+      "generationMs": 3142.6520260004327,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5013.939566000365
+    },
+    "judge": {
+      "questionId": "q400",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement, au regard du contexte, les personnels visés par D. 314-22, l’exigence de compétence et le régime des alternants. Elle omet toutefois la restriction essentielle attendue de L. 1142-1 : l’interdiction de fonder les offres, recrutements ou conditions de travail sur le sexe, la situation de famille ou la grossesse. Son constat selon lequel cette règle ne peut être établie à partir du contexte est justifié, puisque cet article n’y figure pas. Elle est donc pleinement fondée sur le contexte, mais seulement partielle par rapport à la question et à la référence; elle ne répond pas réellement au volet central sur les critères de sélection."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources couvrent directement le volet relatif aux personnels du crédit : catégories de personnes visées (D. 314-22), obligation et modalités de compétence (D. 314-23 et L. 314-24), ainsi que l’exception applicable aux salariés en alternance sous supervision (D. 314-22). En revanche, aucune source ne contient l’article L. 1142-1 du code du travail ni les restrictions de non-discrimination à l’embauche : elles sont donc insuffisantes pour répondre entièrement à la question combinée. Elles couvrent néanmoins les affirmations effectivement formulées par la réponse générée, y compris le constat justifié que le contexte ne permet pas d’identifier les critères d’emploi interdits au titre de L. 1142-1."
+    }
+  },
+  "failureStage": "generation"
+}

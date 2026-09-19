@@ -1,0 +1,111 @@
+{
+  "questionId": "q305",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L354-1 prévoit les conversions suivantes :\n\n- **30 000 euros** → **3 580 000 francs CFP** ;\n- **150 000 euros** → **17 900 000 francs CFP** ;\n- **300 000 euros** → **35 800 000 francs CFP** ;\n- **375 000 euros** → **44 750 000 francs CFP**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L351-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D351-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 241.7762280004099,
+      "vectorSearchMs": 793.3100829999894,
+      "jinaRerankingMs": 353.03230199962854,
+      "mappingMs": 0.06739100068807602,
+      "totalMs": 1388.2220120001584,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01740499958395958,
+      "contextBuilderMs": 0.0236570006236434,
+      "generationMs": 1237.5299639999866,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2625.8127970006317
+    },
+    "judge": {
+      "questionId": "q305",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement les quatre remplacements prévus par l’article L354-1. Toutes les conversions indiquées sont explicitement présentes dans le contexte, et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article L354-1 visé et énonce explicitement les quatre remplacements de montants pour la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna. Elle couvre intégralement toutes les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article L354-1 prévoit les remplacements suivants :\n\n- **30 000 euros** → **3 580 000 francs CFP** ;\n- **150 000 euros** → **17 900 000 francs CFP** ;\n- **300 000 euros** → **35 800 000 francs CFP** ;\n- **375 000 euros** → **44 750 000 francs CFP**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L351-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D351-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 995.328835000284,
+      "routingCalls": 1,
+      "embeddingMs": 247.28882700018585,
+      "vectorSearchMs": 58.23975499998778,
+      "jinaRerankingMs": 253.7292919997126,
+      "mappingMs": 0.034210000187158585,
+      "totalMs": 1554.6509790001437,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009564999490976334,
+      "contextBuilderMs": 0.019538000226020813,
+      "generationMs": 1279.884539999999,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2834.573123000562
+    },
+    "judge": {
+      "questionId": "q305",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement les quatre remplacements prévus par l’article L354-1. Tous les montants et devises correspondent à la référence et sont explicitement énoncés dans le contexte fourni. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l’article L354-1 directement visé par la question et énonce explicitement les quatre remplacements de montants pour la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna. Elle couvre intégralement toutes les affirmations de la réponse générée. Les autres sources sont non nécessaires."
+    }
+  },
+  "failureStage": "none"
+}

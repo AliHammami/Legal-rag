@@ -1,0 +1,95 @@
+{
+  "questionId": "q417",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le code de la consommation prévoit :\n\n- en cas de manquement à l’obligation de disponibilité des pièces détachées : une amende administrative pouvant atteindre **15 000 € pour une personne physique** et **75 000 € pour une personne morale** ;\n- en cas de manquement à l’obligation d’informer sur la durée de disponibilité : une amende pouvant atteindre **3 000 € pour une personne physique** et **15 000 € pour une personne morale**.\n\nCes amendes sont prononcées selon les conditions prévues au chapitre II du titre II du livre V.\n\nLe contexte fourni ne contient aucune information sur l’atténuation de la responsabilité pénale en cas de troubles psychiques au moment des faits. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 183.14596399944276,
+      "vectorSearchMs": 695.4725750004873,
+      "jinaRerankingMs": 315.67411200050265,
+      "mappingMs": 0.03130499925464392,
+      "totalMs": 1194.36478099972,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016989000141620636,
+      "contextBuilderMs": 0.020131000317633152,
+      "generationMs": 2067.7978330003098,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3262.210854999721
+    },
+    "judge": {
+      "questionId": "q417",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse donne correctement les plafonds d’amende administrative liés à la disponibilité des pièces détachées (15 000 € / 75 000 €), mais ne répond pas au volet essentiel concernant les troubles psychiques et l’atténuation ou l’exclusion de responsabilité pénale. L’ajout relatif au manquement à l’information sur la durée de disponibilité est exact et fondé sur le contexte, mais n’était pas nécessaire. Toutes les affirmations factuelles formulées sont soutenues par le contexte fourni ; en revanche, l’abstention sur la seconde partie rend la réponse incomplète alors qu’une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les sanctions administratives relatives aux pièces détachées : la source 1 couvre exactement le plafond de 15 000 € pour une personne physique et 75 000 € pour une personne morale, et la source 2 couvre l’obligation distincte d’information sur la durée de disponibilité. En revanche, aucune source ne porte sur le code pénal ou les troubles psychiques, ce qui rend l’ensemble insuffisant pour répondre pleinement à la question en deux volets. Les affirmations effectivement formulées dans la réponse générée sur les amendes et leurs conditions de prononcé sont couvertes par les sources ; le constat que le contexte ne contient pas d’information sur les troubles psychiques est cohérent avec les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Le code de la consommation prévoit, en cas de manquement à l’obligation de disponibilité des pièces détachées :\n\n- une amende administrative pouvant aller jusqu’à **15 000 € pour une personne physique** ;\n- **75 000 € pour une personne morale**.\n\nCette amende est prononcée selon les conditions prévues au chapitre II du titre II du livre V.\n\nPar ailleurs, le contexte mentionne une amende pouvant atteindre **3 000 € pour une personne physique** et **15 000 € pour une personne morale** en cas de manquement à l’obligation d’informer sur la durée de disponibilité des pièces détachées.\n\nLe contexte fourni ne contient aucune information sur la manière dont le code pénal atténue la responsabilité pénale en cas de troubles psychiques au moment des faits.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.5456529995427,
+      "routingCalls": 1,
+      "embeddingMs": 244.4341569999233,
+      "vectorSearchMs": 109.28973399940878,
+      "jinaRerankingMs": 314.4861479997635,
+      "mappingMs": 0.017760999500751495,
+      "totalMs": 1487.8253049999475,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009964000433683395,
+      "contextBuilderMs": 0.013139000162482262,
+      "generationMs": 1820.81028399989,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3308.6665519997478
+    },
+    "judge": {
+      "questionId": "q417",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement les plafonds de 15 000 € pour une personne physique et 75 000 € pour une personne morale concernant l’obligation de disponibilité. Elle ne répond toutefois pas au volet relatif à l’atténuation de la responsabilité pénale pour trouble psychique, pourtant nécessaire à une réponse complète au regard de la référence. Cette omission est néanmoins explicitement et correctement justifiée par l’absence de tout extrait pertinent du code pénal dans le contexte fourni. L’information supplémentaire sur l’obligation d’information est bien soutenue par le contexte, mais n’était pas nécessaire."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour les sanctions liées au manquement à l’obligation de disponibilité des pièces détachées. La source 2 est pertinente pour la précision supplémentaire relative à l’obligation d’information sur cette disponibilité. En revanche, aucune source ne porte sur le code pénal ni sur les troubles psychiques, ce qui laisse un volet important de la question sans source directe. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les montants et conditions des amendes sont reproduits par les sources 1 et 2, et le constat d’absence d’information pénale dans le contexte est cohérent avec les seules sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

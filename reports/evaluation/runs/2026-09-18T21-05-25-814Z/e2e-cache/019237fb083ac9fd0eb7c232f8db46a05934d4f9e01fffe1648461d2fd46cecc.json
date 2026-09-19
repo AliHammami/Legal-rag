@@ -1,0 +1,87 @@
+{
+  "questionId": "q181",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans une société en commandite par actions, il existe deux types d’associés :\n\n- **Les commandités** : ils ont la qualité de commerçant et répondent **indéfiniment et solidairement** des dettes sociales.\n- **Les commanditaires** : ils ont la qualité d’actionnaires et ne supportent les pertes qu’à concurrence de leurs apports.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.28460999997333,
+      "vectorSearchMs": 563.0608879998326,
+      "jinaRerankingMs": 507.3498039999977,
+      "mappingMs": 0.027925999835133553,
+      "totalMs": 1270.752816000022,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009986999910324812,
+      "contextBuilderMs": 0.008458999916911125,
+      "generationMs": 1188.9055610001087,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2459.686739000026
+    },
+    "judge": {
+      "questionId": "q181",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux catégories d’associés et leurs responsabilités respectives, conformément à l’article L226-1 fourni : commandités commerçants responsables indéfiniment et solidairement, et commanditaires actionnaires dont les pertes sont limitées à leurs apports."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source (article L. 226-1) est directement pertinente : elle identifie les commandités et les commanditaires d’une société en commandite par actions, ainsi que leur qualité et l’étendue respective de leur responsabilité. Elle couvre intégralement les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Dans une société en commandite par actions, il existe deux types d’associés :\n\n- **Les commandités** : ils ont la qualité de commerçant et sont **indéfiniment et solidairement responsables** des dettes sociales.\n- **Les commanditaires** : ils ont la qualité d’actionnaires et ne supportent les pertes qu’**à concurrence de leurs apports**. Leur nombre ne peut être inférieur à trois.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1333.3294810000807,
+      "routingCalls": 1,
+      "embeddingMs": 171.84233999997377,
+      "vectorSearchMs": 164.05152400024235,
+      "jinaRerankingMs": 515.0508210002445,
+      "mappingMs": 0.027784000150859356,
+      "totalMs": 2184.3426169999875,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009352999739348888,
+      "contextBuilderMs": 0.007329999934881926,
+      "generationMs": 1583.5008449996822,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3767.872175999917
+    },
+    "judge": {
+      "questionId": "q181",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux catégories d'associés et leurs responsabilités respectives, conformément à l'article L226-1. La précision sur le minimum de trois commanditaires est également exacte et explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "L'article L. 226-1 est directement pertinent : il définit les commandités et commanditaires d'une société en commandite par actions, précise leur qualité et leur régime de responsabilité/pertes, ainsi que le minimum de trois commanditaires. Il couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

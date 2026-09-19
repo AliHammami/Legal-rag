@@ -1,0 +1,87 @@
+{
+  "questionId": "q077",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 931, les donations entre vifs doivent obligatoirement :\n\n- être passées devant notaire, selon la forme ordinaire des contrats ;\n- faire l’objet d’une minute conservée par le notaire.\n\nÀ défaut, l’acte est nul.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "931"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 175.25571800000034,
+      "vectorSearchMs": 575.6422689999454,
+      "jinaRerankingMs": 487.4108779998496,
+      "mappingMs": 0.027420999947935343,
+      "totalMs": 1238.363051999826,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011445000069215894,
+      "contextBuilderMs": 0.008000000147148967,
+      "generationMs": 1323.0808630001266,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2561.4764489999507
+    },
+    "judge": {
+      "questionId": "q077",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux formalités prévues par l’article 931 (acte passé devant notaire dans la forme ordinaire des contrats et conservation d’une minute) ainsi que la sanction de nullité. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 931 du code civil et énonce précisément les deux formalités demandées : passage devant notaires dans la forme ordinaire des contrats et conservation d’une minute. Elle couvre également la sanction de nullité mentionnée dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 931, les actes de donation entre vifs doivent obligatoirement :\n\n- être passés devant notaire ;\n- respecter la forme ordinaire des contrats ;\n- faire l’objet d’une minute conservée par le notaire.\n\nÀ défaut de ces formalités, l’acte est nul.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "931"
+      }
+    ],
+    "profiling": {
+      "routingMs": 881.8417640000116,
+      "routingCalls": 1,
+      "embeddingMs": 185.09706599987112,
+      "vectorSearchMs": 56.38953599985689,
+      "jinaRerankingMs": 495.01527499989606,
+      "mappingMs": 0.023609000025317073,
+      "totalMs": 1618.394491000101,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010471999878063798,
+      "contextBuilderMs": 0.007575999945402145,
+      "generationMs": 1248.24054600019,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2866.661629999988
+    },
+    "judge": {
+      "questionId": "q077",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois formalités prévues par l’article 931 (passation devant notaire, forme ordinaire des contrats, conservation d’une minute) ainsi que la sanction de nullité. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 931 du code civil et énonce expressément les trois formalités mentionnées dans la réponse (passation devant notaires, forme ordinaire des contrats et conservation d’une minute), ainsi que la nullité en cas de non-respect. Elle couvre donc l’ensemble des affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

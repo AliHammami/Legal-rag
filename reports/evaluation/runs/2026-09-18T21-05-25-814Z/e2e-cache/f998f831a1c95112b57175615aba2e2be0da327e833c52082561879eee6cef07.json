@@ -1,0 +1,103 @@
+{
+  "questionId": "q169",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L2251-1, une convention ou un accord collectif peut prévoir des stipulations **plus favorables aux salariés** que les dispositions légales en vigueur. En revanche, il ne peut pas déroger aux dispositions légales ayant un **caractère d’ordre public**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2251-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3121-68"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2263-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 341.0200149999,
+      "vectorSearchMs": 604.1590160001069,
+      "jinaRerankingMs": 551.623031000141,
+      "mappingMs": 0.048390999902039766,
+      "totalMs": 1496.8818089999259,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01486800005659461,
+      "contextBuilderMs": 0.024211999960243702,
+      "generationMs": 1711.9578859996982,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3208.8877940000966
+    },
+    "judge": {
+      "questionId": "q169",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article L2251-1 : les accords peuvent prévoir des stipulations plus favorables aux salariés, sans pouvoir déroger aux dispositions d’ordre public. Ces deux affirmations sont explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L2251-1 et répond exactement à la question : stipulations plus favorables aux salariés admises, sans dérogation aux dispositions d’ordre public. Elle couvre intégralement les deux affirmations importantes de la réponse générée. Les sources 2 et 3 sont seulement contextuelles et ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L2251-1, une convention ou un accord collectif peut prévoir des dispositions plus favorables aux salariés que la loi. En revanche, il ne peut pas déroger aux dispositions légales d’ordre public.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2251-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3121-68"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2263-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1021.1349960002117,
+      "routingCalls": 1,
+      "embeddingMs": 225.19058900000528,
+      "vectorSearchMs": 230.76106900023296,
+      "jinaRerankingMs": 543.0497070001438,
+      "mappingMs": 0.02891199989244342,
+      "totalMs": 2020.2333209998906,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0183419999666512,
+      "contextBuilderMs": 0.017795000225305557,
+      "generationMs": 1459.3313290001824,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3479.608130999841
+    },
+    "judge": {
+      "questionId": "q169",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article L2251-1 : stipulations plus favorables aux salariés possibles, sans dérogation aux dispositions d’ordre public. Ces deux affirmations sont explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L2251-1 et énonce explicitement les deux points centraux de la réponse : des stipulations plus favorables aux salariés sont possibles, mais aucune dérogation n’est admise aux dispositions d’ordre public. Les sources 2 et 3 sont secondaires, mais ne nuisent pas à la pertinence ni à la couverture."
+    }
+  },
+  "failureStage": "none"
+}

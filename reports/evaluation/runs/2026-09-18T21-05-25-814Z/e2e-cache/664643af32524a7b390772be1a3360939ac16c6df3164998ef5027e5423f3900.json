@@ -1,0 +1,91 @@
+{
+  "questionId": "q397",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 2332-3 du Code civil, les privilèges s’exercent dans l’ordre suivant :\n\n1. Le privilège du conservateur, lorsque les frais de conservation sont postérieurs à la naissance des autres privilèges ;\n2. Le privilège du bailleur d’immeuble qui ignorait l’existence des autres privilèges ;\n3. Le privilège du conservateur, lorsque les frais de conservation sont antérieurs à la naissance des autres privilèges ;\n4. Le privilège du vendeur de meuble ;\n5. Le privilège du bailleur d’immeuble qui connaissait l’existence des autres privilèges.\n\nEntre les conservateurs d’un même meuble, la préférence revient au plus récent. Le privilège de l’auxiliaire salarié d’un travailleur à domicile est assimilé à celui du vendeur de meuble.\n\nS’agissant des fonds communs de placement constitués dans le cadre d’un accord de participation, ils sont régis par les règles applicables aux fonds communs de placement d’entreprise mentionnés aux articles L. 214-164 et L. 214-165 du Code monétaire et financier.\n\nEn outre, le règlement du fonds peut prévoir que celui-ci reçoive les sommes attribuées au titre de la participation à un salarié disposant d’un droit de créance sur l’entreprise. Dans ce cas, les sommes sont versées directement par l’entreprise dans les deux mois suivant la décision du salarié. Le contexte ne précise pas davantage le contenu des règles des articles L. 214-164 et L. 214-165.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3324-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 170.32384599931538,
+      "vectorSearchMs": 737.8957449998707,
+      "jinaRerankingMs": 314.61555800028145,
+      "mappingMs": 0.025799999944865704,
+      "totalMs": 1222.8985689999536,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011361999437212944,
+      "contextBuilderMs": 0.02287099976092577,
+      "generationMs": 2819.797220999375,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4042.7446710001677
+    },
+    "judge": {
+      "questionId": "q397",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement l’ordre d’exercice des privilèges de l’article 2332-3, y compris la règle entre conservateurs et l’assimilation de l’auxiliaire salarié. En revanche, elle ne répond pas aux conditions générales visées par l’article L. 214-163 du Code monétaire et financier : elle traite plutôt des fonds issus d’un accord de participation au regard de l’article D. 3324-34 et des articles L. 214-164 et L. 214-165, sans mentionner le régime applicable à défaut de disposition contraire, les FIA concernés, les SICAV d’actionnariat salarié ni les compartiments. Les affirmations effectivement formulées sont toutefois toutes étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les affirmations relatives à l'ordre des privilèges de l'article 2332-3. La source 2 est pertinente pour les affirmations effectivement faites sur les fonds issus d'un accord de participation et le versement dans les deux mois, mais elle ne traite pas des conditions générales de l'article L. 214-163 visées par la question (FIA, SICAV d'actionnariat salarié, compartiments). Les sources couvrent néanmoins toutes les affirmations substantielles de la réponse générée, y compris son constat explicite que le contexte ne précise pas les règles de L. 214-164 et L. 214-165."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 2332-3 du Code civil, les privilèges spéciaux s’exercent dans l’ordre suivant :\n\n1. Le privilège du conservateur, lorsque les frais de conservation sont postérieurs à la naissance des autres privilèges ;\n2. Le privilège du bailleur d’immeuble qui ignorait l’existence des autres privilèges ;\n3. Le privilège du conservateur, lorsque les frais de conservation sont antérieurs à la naissance des autres privilèges ;\n4. Le privilège du vendeur de meuble ;\n5. Le privilège du bailleur d’immeuble qui connaissait l’existence des autres privilèges.\n\nEntre les conservateurs d’un même meuble, la préférence revient au plus récent. Le privilège de l’auxiliaire salarié d’un travailleur à domicile est assimilé à celui du vendeur de meuble.\n\nLe contexte fourni ne contient aucune information sur les conditions générales applicables aux fonds communs de placement d’entreprise selon le Code monétaire et financier. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.065741000697,
+      "routingCalls": 1,
+      "embeddingMs": 518.6456130007282,
+      "vectorSearchMs": 260.5656979996711,
+      "jinaRerankingMs": 314.0963229993358,
+      "mappingMs": 0.03218999970704317,
+      "totalMs": 2116.4312749998644,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01234699971973896,
+      "contextBuilderMs": 0.008636999875307083,
+      "generationMs": 2184.7120219999924,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4301.172992000356
+    },
+    "judge": {
+      "questionId": "q397",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement et exhaustivement l'ordre des privilèges prévu à l'article 2332-3 du Code civil, y compris la règle entre conservateurs et l'assimilation de l'auxiliaire salarié. Elle ne répond toutefois pas au volet relatif aux fonds communs de placement d'entreprise, qui constitue une partie essentielle de la question. Cette omission est justifiée par l'absence de tout contexte sur le Code monétaire et financier : les affirmations effectivement formulées sont donc entièrement fondées sur le contexte. La réponse traite réellement la première partie de la question et identifie explicitement la limite documentaire pour la seconde."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente et exhaustive pour le volet relatif aux privilèges spéciaux de l’article 2332-3 du Code civil, mais aucune source ne traite des fonds communs de placement d’entreprise ni de l’article L214-163 du Code monétaire et financier. Elle est donc seulement partiellement pertinente au regard de la question entière. En revanche, elle couvre toutes les affirmations effectivement formulées dans la réponse générée : l’ordre des privilèges, la règle entre conservateurs, l’assimilation de l’auxiliaire salarié, ainsi que le constat justifié que le contexte fourni ne contient pas d’information sur le second volet."
+    }
+  },
+  "failureStage": "generation"
+}

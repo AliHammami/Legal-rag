@@ -1,0 +1,103 @@
+{
+  "questionId": "q048",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 713-3 vise les discriminations fondées sur l’état de santé ou le handicap lorsqu’elles consistent en un refus d’embauche ou un licenciement motivé par une inaptitude médicalement constatée.\n\nCette inaptitude doit être constatée dans le cadre des règles locales applicables à la médecine du travail ou à la fonction publique. Ainsi définies, ces situations relèvent de l’exception prévue à l’article 225-3.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "713-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "723-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1133-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 150.1515659999568,
+      "vectorSearchMs": 616.1307570000645,
+      "jinaRerankingMs": 544.3213199999882,
+      "mappingMs": 0.025166000006720424,
+      "totalMs": 1310.6597560000373,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010104999993927777,
+      "contextBuilderMs": 0.02292200003284961,
+      "generationMs": 2183.969714000006,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3494.6705009998986
+    },
+    "judge": {
+      "questionId": "q048",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions prévues : discrimination liée à l’état de santé ou au handicap, refus d’embauche ou licenciement, et inaptitude médicalement constatée dans le cadre des règles locales de médecine du travail ou de fonction publique. La mention de l’exception de l’article 225-3 est également explicitement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 713-3) est directement pertinente et reproduit exactement la règle visée : refus d'embauche ou licenciement fondé sur une inaptitude médicalement constatée, dans le cadre des règles locales de médecine du travail ou de fonction publique. Elle couvre l'ensemble des affirmations substantielles de la réponse, y compris le renvoi à l'exception de l'article 225-3. La source 3 confirme ce cadre général."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas d’article **713-3**, mais l’article **L1133-3**.\n\nDans le contexte de l’embauche ou du licenciement :\n\n- l’article **L1132-1** interdit d’écarter une personne d’une procédure de recrutement ou de licencier un salarié en raison de son état de santé ou de son handicap ;\n- toutefois, selon l’article **L1133-3**, une différence de traitement fondée sur une **inaptitude constatée par le médecin du travail** en raison de l’état de santé ou du handicap n’est pas considérée comme discriminatoire si elle est **objective, nécessaire et appropriée**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1132-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1133-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1693.8453989999834,
+      "routingCalls": 1,
+      "embeddingMs": 163.00882599991746,
+      "vectorSearchMs": 328.7239889999619,
+      "jinaRerankingMs": 565.1936129999813,
+      "mappingMs": 0.023572999984025955,
+      "totalMs": 2750.827125000069,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009979000082239509,
+      "contextBuilderMs": 0.011820000014267862,
+      "generationMs": 2209.397893000045,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4960.258534000022
+    },
+    "judge": {
+      "questionId": "q048",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse corrige explicitement la référence d’article probable (L1133-3) et expose correctement l’interdiction de principe ainsi que l’exception liée à une inaptitude constatée par le médecin du travail, sous réserve qu’elle soit objective, nécessaire et appropriée. Ces éléments sont entièrement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : L1132-1 couvre l’interdiction d’écarter au recrutement ou de licencier en raison de l’état de santé ou du handicap, et L1133-3 couvre précisément l’exception fondée sur une inaptitude constatée par le médecin du travail, sous conditions d’objectivité, de nécessité et d’adéquation. Elles étayent l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

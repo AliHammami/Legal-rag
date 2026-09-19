@@ -1,0 +1,111 @@
+{
+  "questionId": "q134",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 5212-1, l’effectif salarié d’une entreprise de travail temporaire est déterminé selon les modalités de l’article L. 130-1 du Code de la sécurité sociale.\n\nToutefois, les salariés mis à disposition ne sont pas pris en compte dans cet effectif. Pour apprécier le nombre de salariés, la période retenue est l’année au titre de laquelle la contribution due au titre de l’obligation d’emploi est exigible.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D5212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1151-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6331-1-A"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 215.82813799986616,
+      "vectorSearchMs": 600.2416950000916,
+      "jinaRerankingMs": 546.3205379999708,
+      "mappingMs": 0.03562700003385544,
+      "totalMs": 1362.4530140000861,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014601999893784523,
+      "contextBuilderMs": 0.09076300007291138,
+      "generationMs": 2378.568082000129,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3741.1359919998795
+    },
+    "judge": {
+      "questionId": "q134",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que, dans une entreprise de travail temporaire, les salariés mis à disposition sont exclus de l'effectif. Elle ajoute à juste titre que l'effectif est déterminé selon l'article L. 130-1 du Code de la sécurité sociale et que la période d'appréciation est l'année au titre de laquelle la contribution est due. Ces éléments sont explicitement prévus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 5212-1 et couvre l'ensemble des éléments importants de la réponse : renvoi aux modalités de l'article L. 130-1 du code de la sécurité sociale, exclusion des salariés mis à disposition dans les entreprises de travail temporaire, et appréciation sur l'année au titre de laquelle la contribution est due. La source 2 confirme spécifiquement l'exclusion des salariés mis à disposition. Les sources 3 et 4 sont moins directement utiles mais ne nuisent pas à la pertinence globale."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 5212-1, dans les entreprises de travail temporaire, l’effectif salarié est déterminé selon les modalités de l’article L. 130-1 du Code de la sécurité sociale, mais les salariés mis à disposition ne sont pas pris en compte.\n\nLe franchissement du seuil est apprécié au titre de l’année pour laquelle la contribution prévue aux articles L. 5212-9 à L. 5212-11 est due.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D5212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1151-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6331-1-A"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.0717579999473,
+      "routingCalls": 1,
+      "embeddingMs": 240.96601199987344,
+      "vectorSearchMs": 247.00955099985003,
+      "jinaRerankingMs": 554.4687720001675,
+      "mappingMs": 0.0268909998703748,
+      "totalMs": 1963.5947310000192,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009988999925553799,
+      "contextBuilderMs": 0.02097499999217689,
+      "generationMs": 2031.1333099999465,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3994.7662209998816
+    },
+    "judge": {
+      "questionId": "q134",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que l’effectif est déterminé selon l’article L. 130-1 du Code de la sécurité sociale, tout en excluant les salariés mis à disposition dans les entreprises de travail temporaire. Elle ajoute à juste titre la règle relative à l’année retenue pour apprécier le seuil. Ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, qui reproduit directement l'article L. 5212-1, est pleinement pertinente : elle prévoit le renvoi aux modalités de l'article L. 130-1 du Code de la sécurité sociale, l'exclusion des salariés mis à disposition dans les entreprises de travail temporaire et la période annuelle retenue pour apprécier le nombre de salariés. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée. La source 2 confirme également l'exclusion, tandis que les sources 3 et 4 ne sont pas nécessaires."
+    }
+  },
+  "failureStage": "none"
+}

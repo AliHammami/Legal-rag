@@ -1,0 +1,103 @@
+{
+  "questionId": "q408",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions relatives au plan d’épargne d’entreprise s’appliquent au plan d’épargne retraite d’entreprise collectif, sous réserve des règles particulières de ce dernier.\n\nSont notamment applicables les règles concernant :\n\n- les versements ;\n- la composition et la gestion du plan ;\n- l’évaluation des titres ;\n- l’indisponibilité des sommes ;\n- le régime social et fiscal.\n\nToutefois, certaines dispositions sont exclues, notamment les articles L. 3332-10 et L. 3332-18 à L. 3332-28 du Code du travail, ainsi que les règles particulières prévues par le chapitre concerné. Les modalités d’application sont fixées par les articles réglementaires relatifs au plan d’épargne d’entreprise mentionnés dans le contexte.\n\nEn revanche, le contexte fourni ne contient aucune disposition relative aux sanctions pénales applicables lorsqu’un conducteur de véhicule terrestre à moteur cause, par négligence, une incapacité de travail inférieure ou égale à trois mois. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-13"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R222-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3334-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3334-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.61072400026023,
+      "vectorSearchMs": 681.4305119998753,
+      "jinaRerankingMs": 273.8830079995096,
+      "mappingMs": 0.02154699992388487,
+      "totalMs": 1184.9728469997644,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011772999539971352,
+      "contextBuilderMs": 0.01610499992966652,
+      "generationMs": 2986.506137000397,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4171.515708999708
+    },
+    "judge": {
+      "questionId": "q408",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement le principe d’application des règles du plan d’épargne d’entreprise au plan d’épargne retraite d’entreprise collectif, ainsi que les exclusions des articles L. 3332-10 et L. 3332-18 à L. 3332-28. Elle est aussi étayée par le contexte pour les catégories de règles réglementaires évoquées. En revanche, elle ne fournit pas la sanction pénale demandée pour la seconde partie (deux ans d’emprisonnement et 30 000 euros d’amende selon la référence). Cette omission substantielle rend la réponse incomplète et partiellement correcte. L’abstention sur cette partie est bien justifiée par le contexte, mais l’indicateur attendait une réponse à la question complète."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour la première partie, puisqu’elles établissent l’application des règles du plan d’épargne d’entreprise au plan d’épargne retraite collectif, les exceptions citées et certaines catégories de règles réglementaires applicables. Elles ne contiennent toutefois aucune disposition pénale relative au conducteur d’un véhicule terrestre à moteur et à l’incapacité de travail : elles sont donc insuffisantes pour répondre à l’intégralité de la question. Elles couvrent néanmoins les affirmations effectivement formulées dans la réponse générée, y compris le constat d’absence de disposition pénale dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions relatives au plan d’épargne d’entreprise s’appliquent au plan d’épargne pour la retraite collectif, sous réserve des règles particulières du chapitre concerné et des articles L. 3332-18 à L. 3332-24.\n\nSont notamment applicables les règles concernant :\n\n- les versements ;\n- la composition et la gestion du plan ;\n- l’évaluation des titres ;\n- l’indisponibilité des sommes ;\n- le régime social et fiscal.\n\nEn revanche, le contexte fourni ne contient aucune disposition relative aux sanctions pénales applicables lorsqu’un conducteur de véhicule terrestre à moteur cause, par négligence, une incapacité de travail inférieure ou égale à trois mois. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3334-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3334-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1252.3745949994773,
+      "routingCalls": 1,
+      "embeddingMs": 204.02859899960458,
+      "vectorSearchMs": 357.9840770000592,
+      "jinaRerankingMs": 302.65807599946856,
+      "mappingMs": 0.018151999451220036,
+      "totalMs": 2117.0915549993515,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009348000399768353,
+      "contextBuilderMs": 0.01196799986064434,
+      "generationMs": 1774.8704169997945,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3891.9912689998746
+    },
+    "judge": {
+      "questionId": "q408",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La première partie est correctement restituée au regard du contexte : application des règles du plan d'épargne d'entreprise, sous réserve des dispositions particulières et des exceptions citées, avec les domaines réglementaires applicables. En revanche, la réponse ne fournit pas la sanction pénale demandée (deux ans d'emprisonnement et 30 000 euros d'amende selon la référence). L'abstention sur cette seconde partie est bien fondée sur le contexte, qui ne contient aucune règle pénale, mais elle ne répond pas entièrement à une question pour laquelle l'abstention n'était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour la partie relative au plan d’épargne pour la retraite collectif : elles fondent l’application des règles du plan d’épargne d’entreprise, les réserves/exceptions citées et les domaines réglementaires énumérés. Elles ne contiennent toutefois aucune disposition pénale relative à la négligence d’un conducteur et à l’incapacité de travail, alors que cette seconde partie est essentielle à la question globale. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes : la première partie est étayée par les sources 1 et 2, et le constat que le contexte fourni ne comporte pas de règle pénale résulte bien de leur contenu limité au code du travail."
+    }
+  },
+  "failureStage": "generation"
+}

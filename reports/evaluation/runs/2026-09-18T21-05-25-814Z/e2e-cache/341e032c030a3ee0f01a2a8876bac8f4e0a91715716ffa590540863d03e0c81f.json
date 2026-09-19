@@ -1,0 +1,99 @@
+{
+  "questionId": "q132",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer quels textes « priment » sur les dispositions du titre visé à l’article L. 5221-1 du Code du travail.\n\nIl indique seulement, à l’article L. 1225-11, que certaines dispositions — notamment les articles L. 1225-4, L. 1225-17, L. 1225-29, L. 1226-2, L. 1226-10, L. 4624-3 et L. 4624-4 — restent applicables.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1225-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 168.39080799999647,
+      "vectorSearchMs": 577.5081470001023,
+      "jinaRerankingMs": 518.7243369999342,
+      "mappingMs": 0.028285000007599592,
+      "totalMs": 1264.714228999801,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013246000045910478,
+      "contextBuilderMs": 0.01497299992479384,
+      "generationMs": 2419.658063999843,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3684.4104599999264
+    },
+    "judge": {
+      "questionId": "q132",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n'apporte pas les textes demandés et s'abstient à tort alors qu'une réponse était attendue. Elle est toutefois fidèle au contexte fourni : celui-ci ne contient pas l'article L. 5221-1 ni la règle de primauté recherchée, et la description de l'article L. 1225-11 est exacte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne contiennent pas l'article L. 5221-1 ni les textes auxquels il confère primauté ; elles sont donc très insuffisantes pour répondre directement à la question. Toutefois, la réponse générée se limite à constater l'insuffisance du contexte et à décrire l'article L. 1225-11 : ce constat et cette description sont intégralement étayés par la source 2."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article **L. 5221-1** ni les dispositions précisant les textes qui priment sur le titre concerné. Il ne permet donc pas de répondre à cette question.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3321-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1225-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.0537690001074,
+      "routingCalls": 1,
+      "embeddingMs": 207.9767990000546,
+      "vectorSearchMs": 251.99579499987885,
+      "jinaRerankingMs": 538.8027160000056,
+      "mappingMs": 0.06205999990925193,
+      "totalMs": 1817.9250449999236,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012481000041589141,
+      "contextBuilderMs": 0.019454999826848507,
+      "generationMs": 1765.6705880002119,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.636366000166
+    },
+    "judge": {
+      "questionId": "q132",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les textes demandés et s'abstient alors qu'une réponse était attendue. Son constat selon lequel le contexte ne contient pas l'article L. 5221-1 est exact : les extraits fournis portent sur d'autres articles."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources ne répondent pas directement à la question : aucune ne contient l'article L. 5221-1 ni n'identifie les traités, conventions ou accords qui priment. Elles sont donc très insuffisantes pour répondre au fond. En revanche, elles permettent de constater que le contexte fourni ne contient pas le texte de l'article L. 5221-1 ; elles couvrent ainsi le constat central formulé par la réponse générée, même si cette abstention n'était pas attendue."
+    }
+  },
+  "failureStage": "generation"
+}

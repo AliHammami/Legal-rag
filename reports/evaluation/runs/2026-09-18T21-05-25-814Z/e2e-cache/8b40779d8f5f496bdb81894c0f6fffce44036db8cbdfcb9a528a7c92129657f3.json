@@ -1,0 +1,103 @@
+{
+  "questionId": "q390",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les ventes volontaires de meubles aux enchères publiques peuvent être organisées et réalisées :\n\n- par des opérateurs exerçant à titre individuel ou sous la forme juridique de leur choix ;\n- par des personnes physiques ou morales remplissant les conditions de l’article L. 321-4 :\n  - pour une personne physique : nationalité française, européenne ou relevant de l’EEE, absence de condamnation ou sanction incompatible, qualification requise et déclaration préalable auprès du Conseil des maisons de vente ;\n  - pour une personne morale : constitution conforme au droit d’un État membre de l’Union européenne ou de l’EEE, établissement en France et présence, parmi ses dirigeants, associés ou salariés, d’une personne remplissant les conditions requises.\n\nLes notaires peuvent également exercer cette activité, mais seulement :\n\n- s’ils ont suivi à leurs frais une formation préalable de 60 heures portant sur la réglementation, la pratique et la déontologie des ventes aux enchères ;\n- si cette formation est organisée par le Conseil des maisons de vente et sanctionnée par un certificat ;\n- dans les communes où aucun commissaire de justice n’est établi d’office ;\n- à titre accessoire, dans le cadre de leur office et selon les règles qui leur sont applicables ;\n- uniquement sur mandat du propriétaire des biens.\n\nIls ne peuvent toutefois pas organiser de ventes volontaires aux enchères publiques de marchandises en gros.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R321-18-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.48033700045198,
+      "vectorSearchMs": 717.8728139996529,
+      "jinaRerankingMs": 335.27574800048023,
+      "mappingMs": 0.02479800023138523,
+      "totalMs": 1230.689130999148,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013302000239491463,
+      "contextBuilderMs": 0.03587599936872721,
+      "generationMs": 3023.2766740005463,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4254.027451000176
+    },
+    "judge": {
+      "questionId": "q390",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les opérateurs individuels ou sous toute forme juridique, les conditions prévues à l’article L. 321-4, ainsi que la formation notariale de 60 heures, son organisation et le mandat exclusif du propriétaire. Toutefois, elle transforme l’exception géographique relative aux ventes de marchandises en gros dans les communes sans office de commissaire de justice en une condition générale d’exercice des notaires, et affirme une interdiction générale des ventes de marchandises en gros. Le contexte ne formule pas une telle interdiction générale. Elle omet aussi les critères d’appréciation du caractère accessoire de l’activité notariale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "Les trois sources sont directement pertinentes : L. 321-2 identifie les opérateurs et le régime particulier des notaires, L. 321-4 détaille les conditions applicables aux personnes physiques et morales, et R. 321-18-1 justifie précisément la formation notariale de 60 heures et le certificat. Elles couvrent la grande majorité des affirmations de la réponse, notamment le caractère accessoire et le mandat du propriétaire. En revanche, elles ne soutiennent pas la présentation de l'absence de commissaire de justice comme une condition générale d'exercice des notaires, ni l'interdiction générale des ventes de marchandises en gros : L. 321-2 formule une exception relative à ces ventes dans les communes concernées."
+    }
+  },
+  "routing": {
+    "answer": "Les ventes volontaires de meubles aux enchères publiques peuvent être organisées et réalisées par :\n\n- des opérateurs exerçant à titre individuel ou sous la forme juridique de leur choix ;\n- des personnes physiques ou morales remplissant les conditions de l’article L. 321-4.\n\nPour une personne physique, il faut notamment être français ou ressortissant de l’Union européenne ou de l’Espace économique européen, ne pas avoir fait l’objet de certaines condamnations ou sanctions incompatibles avec l’activité, disposer de la qualification requise et avoir déclaré son activité auprès du Conseil des maisons de vente.\n\nPour une personne morale, celle-ci doit notamment être constituée dans l’Union européenne ou l’Espace économique européen, disposer d’un établissement en France et comprendre au moins un dirigeant, associé ou salarié remplissant les conditions requises pour une personne physique.\n\nLes notaires peuvent également exercer cette activité, mais sous des conditions particulières :\n\n- ils doivent avoir suivi, à leurs frais, une formation préalable de 60 heures portant sur la réglementation, la pratique et la déontologie des ventes aux enchères ;\n- cette formation est organisée par le Conseil des maisons de vente et donne lieu à la délivrance d’un certificat ;\n- ils ne peuvent intervenir que dans les communes où il n’existe pas d’office de commissaire de justice ;\n- ils ne peuvent pas organiser de ventes volontaires de marchandises en gros ;\n- ils exercent cette activité à titre accessoire, dans le cadre de leur office et selon les règles qui leur sont applicables ;\n- ils ne peuvent être mandatés que par le propriétaire des biens.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R321-18-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1148.8534460002556,
+      "routingCalls": 1,
+      "embeddingMs": 225.2730789994821,
+      "vectorSearchMs": 205.8491789996624,
+      "jinaRerankingMs": 310.1793590001762,
+      "mappingMs": 0.028003999963402748,
+      "totalMs": 1890.209746000357,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010358000174164772,
+      "contextBuilderMs": 0.02453700080513954,
+      "generationMs": 3157.9015179993585,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5048.154617000371
+    },
+    "judge": {
+      "questionId": "q390",
+      "correctness": 2,
+      "completeness": 3,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les opérateurs, les conditions des personnes physiques et morales, ainsi que la formation de 60 heures, le caractère accessoire et le mandat du propriétaire pour les notaires. Toutefois, elle interprète de façon trop large la restriction géographique : l'article L. 321-2 n'interdit pas aux notaires d'intervenir dans toutes les communes disposant d'un office de commissaire de justice ; l'exception vise les ventes de marchandises en gros dans les communes sans un tel office. Elle affirme aussi une interdiction générale des ventes de marchandises en gros, alors que le texte la limite à cette situation géographique. Les autres éléments sont étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : L321-2 traite des opérateurs autorisés et du régime spécifique des notaires, L321-4 des conditions applicables aux personnes physiques et morales, et R321-18-1 de la formation notariale de 60 heures et du certificat. Elles couvrent l’ensemble des affirmations importantes de la réponse générée, y compris les restrictions relatives aux notaires. Elles permettent aussi de constater que la réponse a formulé de manière trop large la restriction sur les communes et les ventes de marchandises en gros, mais cette erreur n’est pas un défaut de couverture des sources."
+    }
+  },
+  "failureStage": "generation"
+}

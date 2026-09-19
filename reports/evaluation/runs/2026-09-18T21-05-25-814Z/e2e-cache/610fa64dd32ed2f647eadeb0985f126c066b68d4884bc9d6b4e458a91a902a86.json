@@ -1,0 +1,91 @@
+{
+  "questionId": "q360",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour éviter la nullité de la société, le contrat constitutif ou les statuts doivent principalement respecter les conditions suivantes :\n\n- aucun des fondateurs ne doit être frappé d’incapacité ; la nullité peut résulter de l’incapacité de tous les fondateurs ;\n- les dispositions imposant un nombre minimal de deux associés doivent être respectées.\n\nEn revanche :\n\n- une clause statutaire contraire à une disposition impérative du droit des sociétés n’entraîne pas nécessairement la nullité de la société : si aucune nullité n’est prévue, la clause est réputée non écrite ;\n- la violation des statuts ne constitue en principe pas une cause de nullité, sauf disposition légale contraire.\n\nS’agissant de la responsabilité pénale, l’article 434-43 vise une situation distincte : lorsqu’une personne morale a fait l’objet d’une dissolution prononcée comme peine, la violation des obligations qui en découlent par une personne physique est punie de deux ans d’emprisonnement et de 30 000 euros d’amende. Le maintien ou la reconstitution de la personne morale dissoute est puni de trois ans d’emprisonnement et de 45 000 euros d’amende.\n\nLorsque la dissolution a été prononcée pour une infraction commise en récidive, les peines correspondantes sont aggravées : elles sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende dans le cas prévu par le texte. Le contexte ne précise toutefois pas les conditions générales de la responsabilité pénale de la personne morale elle-même.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1844-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-43"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.01358199957758,
+      "vectorSearchMs": 908.524962999858,
+      "jinaRerankingMs": 261.4743470000103,
+      "mappingMs": 0.04337699990719557,
+      "totalMs": 1405.1065330002457,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016133000142872334,
+      "contextBuilderMs": 0.029312999919056892,
+      "generationMs": 4737.597301000729,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6142.759719999507
+    },
+    "judge": {
+      "questionId": "q360",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne traite pas les exigences de l’article L125-8 du Code de commerce (mention de l’absence de privilège ou nantissement, ou de la levée de l’opposition, et responsabilité solidaire des signataires), ni la récidive des personnes morales prévue à l’article 132-15 (amende de 5e classe multipliée par dix dans l’année). Elle répond à la place à l’article 1844-10 du Code civil et à l’article 434-43 du Code pénal. Ces développements sont majoritairement appuyés par le contexte fourni, mais la présentation du premier alinéa de l’article 434-43 comme ne visant que la dissolution est trop restrictive : le texte vise toute peine prévue à l’article 131-39."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 3,
+      "explanation": "Les sources fournies ne sont pas pertinentes pour la question posée : elles portent sur les causes de nullité des sociétés (art. 1844-10 du Code civil) et sur les conséquences pénales de certaines peines prononcées contre une personne morale (art. 434-43 du Code pénal), au lieu des exigences de l’article L125-8 du Code de commerce et de la récidive prévue par l’article 132-15 du Code pénal. Elles couvrent néanmoins la plupart des affirmations effectivement formulées dans la réponse générée. Une réserve importante subsiste : le premier alinéa de l’article 434-43 ne vise pas uniquement une dissolution, mais toute peine prévue à l’article 131-39 ; la réponse le restreint donc indûment à la dissolution."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne précise pas les conditions que doivent contenir le contrat constitutif ou les statuts pour éviter leur nullité.\n\nIl indique seulement qu’en cas de dissolution de la personne morale prononcée sur le fondement de l’article 131-39 :\n\n- la violation des obligations résultant de cette peine par une personne physique est punie de **deux ans d’emprisonnement et 30 000 € d’amende** ;\n- le maintien ou la reconstitution, même déguisée, de la personne morale dissoute est puni de **trois ans d’emprisonnement et 45 000 € d’amende** ;\n- lorsque la dissolution a été prononcée pour une infraction commise en récidive, ou pour l’infraction de maintien ou de reconstitution, les peines sont portées à **cinq ans d’emprisonnement et 75 000 € d’amende**.\n\nLe texte ne permet donc pas de préciser l’articulation avec les conditions de validité ou de nullité du contrat constitutif ou des statuts.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-43"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1283.958933999762,
+      "routingCalls": 1,
+      "embeddingMs": 251.82938500028104,
+      "vectorSearchMs": 546.0981819992885,
+      "jinaRerankingMs": 278.14863099996,
+      "mappingMs": 0.04164400044828653,
+      "totalMs": 2360.1682120002806,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03153599984943867,
+      "contextBuilderMs": 0.05996400024741888,
+      "generationMs": 2829.175627999939,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5189.445516999811
+    },
+    "judge": {
+      "questionId": "q360",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit ni la mention statutaire exigée par l'article L125-8 du Code de commerce ni la règle de récidive de l'article 132-15 du Code pénal (amende maximale multipliée par dix). Elle se limite à déclarer le contexte insuffisant et à restituer des règles de l'article 434-43, qui sont hors sujet au regard de la question. Ces éléments sont toutefois fidèlement tirés du contexte fourni, de sorte que la réponse est factuellement fondée sur ce contexte, mais elle constitue une abstention alors qu'une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source (article 434-43) est largement hors sujet par rapport aux conditions de validité du contrat/statuts et à la récidive des personnes morales visées dans la question. Elle traite néanmoins de dissolution, de maintien/reconstitution et d'aggravation de peines en cas de récidive, ce qui permet de constater qu'elle ne fournit pas les éléments statutaires demandés. Elle couvre en revanche les affirmations effectivement formulées dans la réponse générée : les peines de deux ans et 30 000 euros, trois ans et 45 000 euros, puis cinq ans et 75 000 euros, ainsi que leur champ relatif à la dissolution."
+    }
+  },
+  "failureStage": "generation"
+}

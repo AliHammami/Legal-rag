@@ -1,0 +1,95 @@
+{
+  "questionId": "q416",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour un manquement à l’obligation d’informer sur la durée de disponibilité des pièces détachées prévue à l’article L. 111-4, l’article L. 131-2 prévoit une amende administrative maximale de :\n\n- **3 000 € pour une personne physique** ;\n- **15 000 € pour une personne morale**.\n\nL’amende est prononcée selon les conditions prévues au chapitre II du titre II du livre V du code de la consommation.\n\nLe contexte fourni ne contient aucune disposition du **code monétaire et financier** ni information relative aux responsabilités imposées aux banquiers. Il ne permet donc pas de répondre sur ce point.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 324.1927789999172,
+      "vectorSearchMs": 682.1693310001865,
+      "jinaRerankingMs": 239.25788199994713,
+      "mappingMs": 0.03106199949979782,
+      "totalMs": 1245.6796089997515,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011029999703168869,
+      "contextBuilderMs": 0.014786999672651291,
+      "generationMs": 2435.902336999774,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3681.6163649996743
+    },
+    "judge": {
+      "questionId": "q416",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les sanctions du code de la consommation : 3 000 € pour une personne physique et 15 000 € pour une personne morale, ainsi que le renvoi aux modalités de prononcé. Elle ne fournit toutefois pas les sanctions et responsabilités applicables aux banquiers, pourtant demandées et présentes dans la référence. Cette omission est justifiée au regard du contexte réellement fourni, qui ne contient aucune disposition du code monétaire et financier ; les affirmations de la réponse sont donc entièrement fondées sur ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet relatif au code de la consommation, notamment l'amende de 3 000 € pour une personne physique, 15 000 € pour une personne morale et les modalités de prononcé. Elles ne contiennent toutefois aucune disposition du code monétaire et financier concernant les banquiers, qui constitue un volet important de la question. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes : les montants et le renvoi procédural sont repris par la source 1, et le constat que le contexte fourni ne contient pas de disposition du code monétaire et financier est conforme aux sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Pour un manquement à l’obligation d’informer sur la durée de disponibilité des pièces détachées, le code de la consommation prévoit une amende administrative maximale de :\n\n- **3 000 € pour une personne physique** ;\n- **15 000 € pour une personne morale**.\n\nElle est prononcée selon les conditions prévues au chapitre II du titre II du livre V.\n\nLe contexte fourni ne contient aucune disposition du **code monétaire et financier** permettant d’indiquer les responsabilités imposées aux banquiers.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1171.7318869996816,
+      "routingCalls": 1,
+      "embeddingMs": 240.70135500002652,
+      "vectorSearchMs": 247.14484200067818,
+      "jinaRerankingMs": 269.48153200000525,
+      "mappingMs": 0.022780999541282654,
+      "totalMs": 1929.1071939999238,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010972999967634678,
+      "contextBuilderMs": 0.015554000623524189,
+      "generationMs": 2088.9576630005613,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4018.0993969999254
+    },
+    "judge": {
+      "questionId": "q416",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement les plafonds d’amende administrative applicables au manquement à l’information sur la disponibilité des pièces détachées et leur cadre de prononcé. Elle n’indique toutefois pas les sanctions et responsabilités des banquiers attendues par la question et la référence. Cette omission est néanmoins explicitement justifiée par l’absence de toute disposition pertinente du code monétaire et financier dans le contexte fourni. Les affirmations formulées sont entièrement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre exactement la sanction relative au manquement à l'information sur la durée de disponibilité des pièces détachées. La source 2 porte sur l'obligation de disponibilité elle-même, distincte de l'obligation d'information. Aucune source ne concerne le code monétaire et financier ni les responsabilités des banquiers : les sources sont donc seulement partiellement pertinentes au regard de la question complète, mais elles permettent de constater que le contexte fourni ne contient pas de disposition sur ce second volet. Toutes les affirmations effectivement formulées dans la réponse générée sont couvertes par les sources."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,91 @@
+{
+  "questionId": "q276",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’offre au public de titres financiers réalisée par une personne ou une entité non autorisée par la loi :\n\n- les contrats conclus et les titres financiers ou parts sociales émis sont frappés de nullité ;\n- l’action en nullité des contrats conclus se prescrit par trois ans à compter du jour où la nullité est encourue ;\n- l’offre au public de titres émis par une personne ou entité elle-même non autorisée est également interdite, les contrats conclus étant alors nuls.\n\nEn outre, certaines violations des formalités applicables à l’émission de valeurs mobilières offertes au public sont punies d’une amende de cinquième classe, notamment pour le dirigeant concerné ou l’intermédiaire. Le contexte ne permet toutefois pas d’affirmer que cette amende s’applique automatiquement à toute offre réalisée sans autorisation légale.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L411-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.17980100028217,
+      "vectorSearchMs": 590.7648299997672,
+      "jinaRerankingMs": 286.83705799933523,
+      "mappingMs": 0.03583400044590235,
+      "totalMs": 1091.8469730000943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014291000552475452,
+      "contextBuilderMs": 0.03688700031489134,
+      "generationMs": 2515.482012999244,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3607.393302999437
+    },
+    "judge": {
+      "questionId": "q276",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les nullités applicables et le délai de prescription triennal. Elle mentionne aussi à juste titre la nullité des contrats en cas d’offre portant sur des titres émis par une entité non autorisée. Elle n’indique toutefois pas explicitement, comme sanction autonome, la nullité des titres négociables émis par une personne non autorisée. Les précisions sur l’amende de cinquième classe sont fidèles au contexte et clairement présentées comme relatives à des manquements formels spécifiques, non automatiques."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement applicable : elle prévoit les nullités, l’interdiction visant les titres émis par une entité non autorisée et la prescription triennale. La source 2 est pertinente pour la précision ajoutée sur l’amende de cinquième classe, limitée à des manquements formalistes déterminés, et permet de soutenir la réserve selon laquelle elle n’est pas automatique pour toute offre sans autorisation. Les affirmations substantielles de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "En cas d’offre au public de titres financiers réalisée sans autorisation légale :\n\n- les contrats conclus sont nuls ;\n- les titres financiers ou parts sociales émis sont également nuls ;\n- l’action en nullité des contrats se prescrit par trois ans à compter du jour où la nullité est encourue.\n\nLorsque l’offre porte sur des titres émis par une autre entité non autorisée, les contrats conclus sont nuls.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L411-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1179.0345070008188,
+      "routingCalls": 1,
+      "embeddingMs": 206.1709289997816,
+      "vectorSearchMs": 164.14979299996048,
+      "jinaRerankingMs": 286.83042300026864,
+      "mappingMs": 0.05231100041419268,
+      "totalMs": 1836.2735719997436,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.029267000034451485,
+      "contextBuilderMs": 0.483283999375999,
+      "generationMs": 1830.741507999599,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3667.5458100000396
+    },
+    "judge": {
+      "questionId": "q276",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les nullités applicables aux contrats et aux titres ou parts émis, le délai de prescription de trois ans des actions en nullité des contrats, ainsi que le cas particulier de l'offre portant sur les titres ou parts émis par une entité non autorisée. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L411-1 applicable : elle prévoit la nullité des contrats conclus et des titres financiers ou parts sociales émis en cas d'offre sans autorisation légale, la nullité des contrats pour une offre portant sur des titres émis par une autre entité non autorisée, ainsi que la prescription triennale de l'action en nullité des contrats. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

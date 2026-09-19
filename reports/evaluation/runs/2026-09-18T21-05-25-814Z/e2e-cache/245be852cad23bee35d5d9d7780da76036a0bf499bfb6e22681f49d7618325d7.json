@@ -1,0 +1,87 @@
+{
+  "questionId": "q274",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les adhérents des chambres de compensation ne peuvent pas invoquer le secret professionnel lorsqu’elles leur demandent des informations :\n\n- pour assurer la surveillance des positions ;\n- concernant l’identité des donneurs d’ordres dont ils tiennent les comptes ;\n- concernant les positions de ces donneurs d’ordres ;\n- concernant leur solvabilité.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L440-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.26412099972367,
+      "vectorSearchMs": 816.6648159995675,
+      "jinaRerankingMs": 308.88082200009376,
+      "mappingMs": 0.05316000059247017,
+      "totalMs": 1326.9101300006732,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02216999977827072,
+      "contextBuilderMs": 0.0180479995906353,
+      "generationMs": 1414.7192069999874,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2741.6804649997503
+    },
+    "judge": {
+      "questionId": "q274",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux catégories de demandes visées par l’article fourni : surveillance des positions et informations relatives à l’identité, aux positions et à la solvabilité des donneurs d’ordres. Elle répond directement à la question et toutes ses affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L440-10, qui répond précisément à la question. Elle couvre l’ensemble des cas énoncés dans la réponse générée : demandes visant la surveillance des positions et demandes concernant l’identité, les positions et la solvabilité des donneurs d’ordres dont les adhérents tiennent les comptes."
+    }
+  },
+  "routing": {
+    "answer": "Les adhérents des chambres de compensation ne peuvent pas invoquer le secret professionnel lorsque celles-ci leur adressent des demandes visant à :\n\n- surveiller les positions ;\n- obtenir des informations sur l’identité des donneurs d’ordres dont ils tiennent les comptes ;\n- connaître les positions de ces donneurs d’ordres ;\n- apprécier leur solvabilité.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L440-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1088.9486110005528,
+      "routingCalls": 1,
+      "embeddingMs": 205.173823999241,
+      "vectorSearchMs": 136.48120399937034,
+      "jinaRerankingMs": 342.1938040005043,
+      "mappingMs": 0.037262000143527985,
+      "totalMs": 1772.8787369998172,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013935999944806099,
+      "contextBuilderMs": 0.013690999709069729,
+      "generationMs": 1272.0839479994029,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3044.9992779996246
+    },
+    "judge": {
+      "questionId": "q274",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux catégories de demandes prévues : surveillance des positions et informations relatives à l’identité, aux positions et à la solvabilité des donneurs d’ordres concernés. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la règle applicable : les adhérents ne peuvent opposer le secret professionnel aux demandes des chambres de compensation destinées à surveiller les positions ou portant sur l’identité, les positions et la solvabilité des donneurs d’ordres dont ils tiennent les comptes. Elle couvre l’ensemble des éléments de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

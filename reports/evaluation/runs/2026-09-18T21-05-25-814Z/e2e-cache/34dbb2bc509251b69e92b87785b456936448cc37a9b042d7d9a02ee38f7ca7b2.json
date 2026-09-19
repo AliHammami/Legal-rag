@@ -1,0 +1,87 @@
+{
+  "questionId": "q295",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L213-1 impose au contractant professionnel de :\n\n- conserver l’écrit constatant le contrat pendant la durée fixée par décret ;\n- garantir à tout moment l’accès à cet écrit à son cocontractant, si celui-ci en fait la demande.\n\nCes obligations s’appliquent lorsque le contrat est conclu par voie électronique et porte sur une somme égale ou supérieure au montant fixé par décret.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L213-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.4168560001999,
+      "vectorSearchMs": 654.396364999935,
+      "jinaRerankingMs": 304.1907770000398,
+      "mappingMs": 0.043355999514460564,
+      "totalMs": 1152.0808760002255,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01797599997371435,
+      "contextBuilderMs": 0.010572000406682491,
+      "generationMs": 1339.7197829997167,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2491.839807000011
+    },
+    "judge": {
+      "questionId": "q295",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux obligations prévues par l’article L213-1 (conservation de l’écrit pendant le délai fixé par décret et accès garanti sur demande) ainsi que la condition de seuil applicable aux contrats électroniques. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L213-1 et énonce précisément les deux obligations mentionnées (conservation de l’écrit pendant le délai fixé par décret et garantie d’accès sur demande), ainsi que la condition relative au contrat électronique et au seuil fixé par décret. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article L213-1 impose au contractant professionnel :\n\n- de conserver l’écrit constatant le contrat pendant la durée fixée par décret ;\n- d’en garantir à tout moment l’accès à son cocontractant, si celui-ci en fait la demande.\n\nCes obligations s’appliquent lorsque le contrat est conclu par voie électronique et porte sur une somme au moins égale au montant fixé par décret.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L213-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1378.3370770001784,
+      "routingCalls": 1,
+      "embeddingMs": 250.8536660000682,
+      "vectorSearchMs": 54.10927699971944,
+      "jinaRerankingMs": 329.3768929997459,
+      "mappingMs": 0.061859999783337116,
+      "totalMs": 2012.7738509997725,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014298000372946262,
+      "contextBuilderMs": 0.00899600051343441,
+      "generationMs": 1256.5760390004143,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3269.3805200001225
+    },
+    "judge": {
+      "questionId": "q295",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux obligations prévues par l’article L213-1 (conservation pendant le délai fixé par décret et garantie d’accès sur demande) ainsi que leur condition d’application relative au contrat électronique et au seuil fixé par décret. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L213-1 et vise exactement les obligations demandées : conservation de l’écrit pendant le délai fixé par décret et garantie d’accès à tout moment sur demande du cocontractant. Elle couvre également la condition d’application relative au contrat électronique et au seuil de somme fixé par décret."
+    }
+  },
+  "failureStage": "none"
+}

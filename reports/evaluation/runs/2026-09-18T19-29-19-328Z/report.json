@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "datasetVersion": "legal-multicorpus-v2-gold-articles",
+    "datasetPath": "data/evaluation/legal-multicorpus.questions.json",
+    "timestamp": "2026-09-18T19-29-19-328Z",
+    "evaluatorVersion": "1.0.0",
+    "modelConfiguration": {
+      "embeddingModel": "text-embedding-3-large",
+      "rerankerModel": "jina-reranker-v3.5",
+      "generationModel": "gpt-5.6-luna",
+      "routingModel": "gpt-5.6-luna",
+      "judgeModel": "gpt-gpt-5.6-terra",
+      "retrievalTopK": 20,
+      "rerankTopK": 5,
+      "relativeScoreThreshold": 0.4,
+      "routingEnabled": true
+    },
+    "questionCount": 5,
+    "limit": 5
+  },
+  "routing": {
+    "summary": {
+      "exactMatchRate": 1,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "ambiguousEmptyPredictionRate": 0,
+      "outOfScopeEmptyPredictionRate": 0,
+      "averageLatencyMs": 1260.1318222000002
+    },
+    "breakdown": [
+      {
+        "label": "single-corpus",
+        "count": 5,
+        "metrics": {
+          "exactMatch": 1,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        }
+      },
+      {
+        "label": "easy",
+        "count": 5,
+        "metrics": {
+          "exactMatch": 1,
+          "f1": 1
+        }
+      },
+      {
+        "label": "code-penal",
+        "count": 5,
+        "metrics": {
+          "exactMatch": 1,
+          "f1": 1
+        }
+      }
+    ],
+    "results": [
+      {
+        "questionId": "q001",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 1803.7175819999993,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q002",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 1689.3233900000014,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q003",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 848.1532779999998,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q004",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 873.8153899999998,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q005",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 1085.6494710000006,
+        "fallbackToGlobal": false
+      }
+    ]
+  },
+  "errors": {
+    "byStage": {
+      "routing": 0,
+      "retrieval": 0,
+      "reranking": 0,
+      "generation": 0,
+      "abstention": 0,
+      "none": 5
+    },
+    "results": [
+      {
+        "questionId": "q001",
+        "failureStage": "none"
+      },
+      {
+        "questionId": "q002",
+        "failureStage": "none"
+      },
+      {
+        "questionId": "q003",
+        "failureStage": "none"
+      },
+      {
+        "questionId": "q004",
+        "failureStage": "none"
+      },
+      {
+        "questionId": "q005",
+        "failureStage": "none"
+      }
+    ]
+  }
+}

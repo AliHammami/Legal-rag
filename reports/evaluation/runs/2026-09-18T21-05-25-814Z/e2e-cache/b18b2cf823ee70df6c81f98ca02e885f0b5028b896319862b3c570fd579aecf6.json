@@ -1,0 +1,99 @@
+{
+  "questionId": "q317",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L421-2, ces produits doivent respecter le **règlement (UE) 2023/988 du 10 mai 2023**, relatif à la sécurité générale des produits.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L421-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R412-43-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 261.48412499949336,
+      "vectorSearchMs": 750.8179079992697,
+      "jinaRerankingMs": 322.7029410004616,
+      "mappingMs": 0.02905000001192093,
+      "totalMs": 1335.0648389998823,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012593000195920467,
+      "contextBuilderMs": 0.045838999561965466,
+      "generationMs": 1066.0723259998485,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2401.2048509996384
+    },
+    "judge": {
+      "questionId": "q317",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le règlement (UE) 2023/988 du 10 mai 2023 relatif à la sécurité générale des produits. Elle est directement étayée par l'article L421-2 fourni. Elle omet les précisions sur les règlements et directives modifiés ou abrogés, mais celles-ci ne sont pas indispensables pour répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L421-2 et identifie explicitement le règlement (UE) 2023/988 du 10 mai 2023 relatif à la sécurité générale des produits. Elle est donc parfaitement pertinente et couvre intégralement l'affirmation de la réponse générée. Les sources 2 et 3 ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L421-2, ces produits doivent respecter le **règlement (UE) 2023/988 du 10 mai 2023**, qui :\n\n- modifie le règlement (UE) n° 1025/2012 ;\n- modifie la directive (UE) 2020/1828 ;\n- abroge la directive 2001/95/CE et la directive 87/357/CEE.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L421-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1057.4257769994438,
+      "routingCalls": 1,
+      "embeddingMs": 237.68730800040066,
+      "vectorSearchMs": 75.31252999976277,
+      "jinaRerankingMs": 373.09704500064254,
+      "mappingMs": 0.023828000761568546,
+      "totalMs": 1743.6035580001771,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009843000210821629,
+      "contextBuilderMs": 0.029956999234855175,
+      "generationMs": 1188.2348549999297,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2931.885106999427
+    },
+    "judge": {
+      "questionId": "q317",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le règlement (UE) 2023/988 du 10 mai 2023 et reproduit fidèlement ses modifications et abrogations. Tous ces éléments sont explicitement présents dans le contexte de l’article L421-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L421-2 et identifie explicitement le règlement (UE) 2023/988 du 10 mai 2023, ainsi que les règlements/directives qu’il modifie ou abroge. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée. La source 2 est également cohérente mais redondante."
+    }
+  },
+  "failureStage": "none"
+}

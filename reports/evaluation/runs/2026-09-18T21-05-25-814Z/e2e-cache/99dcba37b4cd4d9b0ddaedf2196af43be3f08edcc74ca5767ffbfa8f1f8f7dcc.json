@@ -1,0 +1,111 @@
+{
+  "questionId": "q155",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une entreprise peut bénéficier de l’aide de l’État si :\n\n- elle compte **moins de 250 salariés** ;\n- le contrat prépare à un **diplôme ou titre à finalité professionnelle de niveau au plus égal au baccalauréat** ;\n- le contrat est transmis par l’employeur à l’opérateur de compétences **dans les six mois suivant sa conclusion**, puis déposé par celui-ci auprès du ministre chargé de la formation professionnelle ;\n- l’employeur n’a pas déjà bénéficié d’une aide à l’embauche d’un apprenti pour **le même apprenti et la même certification professionnelle** dans le cadre d’un précédent contrat.\n\nL’aide est attribuée au titre de la **première année d’exécution** du contrat. Son montant maximal est de **5 000 euros**, ou **6 000 euros** lorsque l’apprenti est reconnu travailleur handicapé. Elle peut être réduite ou suspendue notamment en cas de rupture anticipée, de suspension sans rémunération ou de défaut de transmission des données requises.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5121-24"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.56523299962282,
+      "vectorSearchMs": 621.2172839995474,
+      "jinaRerankingMs": 504.1814779997803,
+      "mappingMs": 0.04675700003281236,
+      "totalMs": 1357.0396930002607,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013656999915838242,
+      "contextBuilderMs": 0.02816099999472499,
+      "generationMs": 2532.875239999965,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3889.966541000176
+    },
+    "judge": {
+      "questionId": "q155",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les conditions substantielles d’éligibilité (entreprise de moins de 250 salariés et préparation d’un diplôme ou titre au plus équivalent au baccalauréat), ainsi que les conditions procédurales prévues par le contexte. Les précisions sur la première année, les montants, la suspension et la rupture sont également fidèles aux dispositions fournies. Toutes les affirmations importantes sont étayées par les sources D6243-1, L6243-1 et D6243-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources D6243-1 et L6243-1 répondent directement aux conditions d’éligibilité tenant à l’effectif de l’entreprise et au niveau du diplôme ou titre préparé. La source D6243-2 couvre les conditions procédurales, l’absence d’aide antérieure pour le même apprenti et la même certification, ainsi que la première année d’exécution, les montants, la suspension et les effets d’une rupture anticipée. La source R5121-24 est hors sujet, mais elle n’est pas nécessaire à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Une entreprise peut bénéficier de l’aide de l’État si :\n\n- elle compte **moins de 250 salariés** ;\n- le contrat d’apprentissage prépare à un **diplôme ou titre à finalité professionnelle de niveau inférieur ou égal au baccalauréat** ;\n- le contrat est transmis par l’employeur à l’opérateur de compétences **dans les six mois suivant sa conclusion**, puis déposé par celui-ci auprès du ministre chargé de la formation professionnelle ;\n- l’employeur n’a pas déjà bénéficié d’une aide pour un contrat d’apprentissage précédemment conclu avec le **même apprenti**, pour la **même certification professionnelle**.\n\nL’aide est attribuée au titre de la **première année** du contrat. Elle peut atteindre **5 000 euros**, ou **6 000 euros** lorsque l’apprenti est reconnu travailleur handicapé. Elle cesse notamment en cas de rupture anticipée du contrat ou de suspension entraînant l’absence de rémunération de l’apprenti.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5121-24"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1028.554004999809,
+      "routingCalls": 1,
+      "embeddingMs": 244.9016849999316,
+      "vectorSearchMs": 231.36489999992773,
+      "jinaRerankingMs": 511.7911519999616,
+      "mappingMs": 0.03825700003653765,
+      "totalMs": 2016.6752769998275,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010839000344276428,
+      "contextBuilderMs": 0.02291400032117963,
+      "generationMs": 3177.077787999995,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5193.794760999735
+    },
+    "judge": {
+      "questionId": "q155",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux conditions principales attendues (entreprise de moins de 250 salariés et préparation d’un diplôme ou titre au plus équivalent au baccalauréat). Elle ajoute les conditions procédurales et d’absence de double aide prévues par l’article D6243-2, ainsi que des précisions exactes sur la première année, les montants et les cas de cessation ou suspension de l’aide. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 répondent directement aux conditions de fond posées par la question : entreprise de moins de 250 salariés et préparation d'un diplôme ou titre à finalité professionnelle au plus équivalent au baccalauréat. La source 4 couvre explicitement l'ensemble des précisions ajoutées dans la réponse générée : conditions de transmission et de dépôt, absence d'aide antérieure pour le même employeur, apprenti et certification, attribution durant la première année, plafonds de 5 000 et 6 000 euros, ainsi que les effets de la rupture ou de la suspension. La source 3 est hors sujet mais n'affecte pas la pertinence et la couverture globales."
+    }
+  },
+  "failureStage": "none"
+}

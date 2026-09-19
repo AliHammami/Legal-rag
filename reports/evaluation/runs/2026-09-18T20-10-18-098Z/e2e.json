@@ -1,0 +1,580 @@
+{
+  "summary": {
+    "baseline": {
+      "correctness": 1.8,
+      "completeness": 1.8,
+      "groundedness": 4,
+      "abstention": 0.4,
+      "sourceRelevance": 2.2,
+      "sourceCoverage": 2.6
+    },
+    "routing": {
+      "correctness": 2,
+      "completeness": 1.8,
+      "groundedness": 4,
+      "abstention": 0.4,
+      "sourceRelevance": 2.6,
+      "sourceCoverage": 3.2
+    }
+  },
+  "latency": {
+    "baseline": {
+      "average": 4891.102191799999,
+      "p50": 5320.346898000002,
+      "p95": 6841.133764999999
+    },
+    "routing": {
+      "average": 3679.6816169999997,
+      "p50": 3693.3507039999968,
+      "p95": 4706.415283999999
+    },
+    "routingStage": {
+      "average": 948.1948872000015,
+      "p50": 988.024217000002,
+      "p95": 1042.2826320000022
+    },
+    "embedding": {
+      "average": 255.7236834000032,
+      "p50": 226.6755270000067,
+      "p95": 408.46070800000234
+    },
+    "retrieval": {
+      "average": 62.87293240000072,
+      "p50": 68.0146950000053,
+      "p95": 84.09597999999824
+    },
+    "reranking": {
+      "average": 520.7670034000009,
+      "p50": 572.7860609999989,
+      "p95": 603.526595000003
+    },
+    "generation": {
+      "average": 1891.4081555999996,
+      "p50": 1771.3835439999966,
+      "p95": 2706.4773940000014
+    }
+  },
+  "breakdown": [
+    {
+      "label": "single-corpus",
+      "count": 5,
+      "metrics": {
+        "baselineCorrectness": 1.8,
+        "routingCorrectness": 2
+      }
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q001",
+      "questionType": "single-corpus",
+      "difficulty": "easy",
+      "expectedAbstention": false,
+      "baseline": {
+        "answer": "Le contexte ne précise pas la peine de base prévue par l’article 222-1.\n\nIl indique toutefois que cette peine peut être aggravée :\n- à **20 ans de réclusion criminelle** dans plusieurs circonstances prévues à l’article 222-3 ;\n- à **30 ans** notamment en cas de bande organisée, d’habitude sur certaines victimes ou de mutilation ou infirmité permanente ;\n- à la **réclusion criminelle à perpétuité** si les tortures ont entraîné la mort sans intention de la donner.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-4"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-3"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-5"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-3"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-6"
+          }
+        ],
+        "profiling": {
+          "routingMs": 0,
+          "routingCalls": 0,
+          "embeddingMs": 1482.9222449999997,
+          "vectorSearchMs": 2133.2151919999997,
+          "jinaRerankingMs": 651.2712029999984,
+          "mappingMs": 0.023677999999563326,
+          "totalMs": 4267.713765,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.017148000000815955,
+          "contextBuilderMs": 0.037975000001097214,
+          "generationMs": 2573.1073369999995,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 6841.133764999999
+        },
+        "judge": {
+          "questionId": "q001",
+          "correctness": 1,
+          "completeness": 1,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse n’indique pas la peine de base de quinze ans de réclusion criminelle et ne répond donc pas directement à la question. Les aggravations mentionnées sont en revanche correctement étayées par le contexte fourni. Le modèle reconnaît l’absence de l’article 222-1 dans le contexte, mais il s’abstient ainsi de répondre alors qu’une réponse était attendue."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 3,
+          "explanation": "Les sources sont pertinentes pour les peines aggravées mentionnées dans la réponse : l’article 222-3 couvre la peine de vingt ans, les articles 222-4 et 222-5 celle de trente ans, et l’article 222-6 la réclusion criminelle à perpétuité. En revanche, aucune source ne fournit l’article 222-1 ni sa peine de base de quinze ans, qui constitue le point central de la question. Les affirmations d’aggravation sont donc largement couvertes, mais la réponse principale attendue ne peut pas être étayée par ces sources."
+        }
+      },
+      "routing": {
+        "answer": "Le contexte ne reproduit pas l’article 222-1 et ne permet donc pas de déterminer la peine de base encourue.\n\nIl indique toutefois que l’infraction peut être punie :\n\n- de **20 ans de réclusion criminelle** dans certains cas aggravants ;\n- de **30 ans de réclusion criminelle** notamment en cas de bande organisée, d’habitude sur certaines victimes ou de mutilation ou infirmité permanente ;\n- de la **réclusion criminelle à perpétuité** si elle a entraîné la mort de la victime sans intention de la donner.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-4"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-3"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-5"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-3"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-6"
+          }
+        ],
+        "profiling": {
+          "routingMs": 988.024217000002,
+          "routingCalls": 1,
+          "embeddingMs": 408.46070800000234,
+          "vectorSearchMs": 50.14914800000042,
+          "jinaRerankingMs": 552.5620930000005,
+          "mappingMs": 0.2506290000019362,
+          "totalMs": 1999.5048989999996,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.049803999998403015,
+          "contextBuilderMs": 0.06153899999844725,
+          "generationMs": 2706.4773940000014,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 4706.415283999999
+        },
+        "judge": {
+          "questionId": "q001",
+          "correctness": 1,
+          "completeness": 1,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne donne pas la peine de base demandée, qui est de quinze ans de réclusion criminelle, et refuse à tort de répondre. Les peines aggravées mentionnées sont correctement étayées par le contexte, mais elles ne répondent pas à la question principale."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 3,
+          "explanation": "Les sources sont pertinentes pour les peines aggravées applicables à l’infraction de l’article 222-1 : elles couvrent les peines de 20 ans, de 30 ans et la réclusion criminelle à perpétuité. En revanche, aucune ne reproduit l’article 222-1 ni ne fournit la peine de base de quinze ans demandée. La couverture des affirmations relatives aux aggravations est donc bonne, mais la réponse principale à la question n’est pas couverte."
+        }
+      },
+      "failureStage": "generation"
+    },
+    {
+      "questionId": "q002",
+      "questionType": "single-corpus",
+      "difficulty": "easy",
+      "expectedAbstention": false,
+      "baseline": {
+        "answer": "Le contexte fourni ne contient pas le contenu de l’article 223-1 ni les éléments constitutifs de l’infraction concernée. Il mentionne seulement, pour d’autres articles, des peines d’un an d’emprisonnement et de 150 000 euros d’amende.\n\nIl n’est donc pas possible de répondre précisément à la question concernant l’infraction punie d’un an d’emprisonnement et de 15 000 euros d’amende.",
+        "sources": [
+          {
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L242-7-1"
+          },
+          {
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L451-3"
+          }
+        ],
+        "profiling": {
+          "routingMs": 0,
+          "routingCalls": 0,
+          "embeddingMs": 923.7182009999997,
+          "vectorSearchMs": 2061.102682999999,
+          "jinaRerankingMs": 591.0865850000009,
+          "mappingMs": 0.2278999999998632,
+          "totalMs": 3576.875960000001,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.22840700000051584,
+          "contextBuilderMs": 0.25466899999992165,
+          "generationMs": 1742.8657239999993,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 5320.346898000002
+        },
+        "judge": {
+          "questionId": "q002",
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse n’indique pas les éléments constitutifs demandés et s’abstient alors qu’une réponse était attendue. Elle est toutefois correctement fondée sur le contexte fourni, qui ne contient effectivement que des dispositions relatives à des articles différents et à une amende de 150 000 euros."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 0,
+          "sourceCoverage": 0,
+          "explanation": "Les deux sources concernent les articles L242-7-1 et L451-3, ainsi qu'une amende de 150 000 euros, et non l'article 223-1 ni l'amende de 15 000 euros. Elles ne permettent donc pas d'identifier ou de couvrir les éléments constitutifs de l'infraction demandée."
+        }
+      },
+      "routing": {
+        "answer": "Le contexte fourni ne contient pas le texte de l’article 223-1. Il ne permet donc pas d’identifier les éléments constitutifs de l’infraction punie d’un an d’emprisonnement et de 15 000 euros d’amende.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "225-16-2"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "226-22-2"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "226-4-1"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "322-3"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "725-6"
+          }
+        ],
+        "profiling": {
+          "routingMs": 889.6679829999994,
+          "routingCalls": 1,
+          "embeddingMs": 226.17793800000072,
+          "vectorSearchMs": 71.72179799999867,
+          "jinaRerankingMs": 572.7860609999989,
+          "mappingMs": 0.05819800000244868,
+          "totalMs": 1760.4798310000006,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.02457200000208104,
+          "contextBuilderMs": 0.184994999999617,
+          "generationMs": 1732.549747000001,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 3493.2611340000003
+        },
+        "judge": {
+          "questionId": "q002",
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse n’identifie aucun élément constitutif de l’infraction visée par l’article 223-1 et constitue donc une abstention injustifiée puisque la question appelait une réponse. En revanche, le constat que le contexte fourni ne contient pas l’article 223-1 est exact et fondé sur le contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 1,
+          "sourceCoverage": 2,
+          "explanation": "Les cinq sources portent sur d'autres articles du Code pénal et ne sont pas directement pertinentes pour identifier les éléments constitutifs de l'infraction visée à l'article 223-1. Elles permettent toutefois de constater que le texte de l'article 223-1 n'est pas fourni dans le contexte, ce qui couvre partiellement le constat formulé dans la réponse, mais ne couvre aucun des éléments constitutifs attendus."
+        }
+      },
+      "failureStage": "generation"
+    },
+    {
+      "questionId": "q003",
+      "questionType": "single-corpus",
+      "difficulty": "easy",
+      "expectedAbstention": false,
+      "baseline": {
+        "answer": "Le contexte fourni ne reproduit pas l’article 224-1 et ne permet donc pas de déterminer les peines selon la durée de la séquestration.\n\nIl indique seulement que, lorsque plusieurs personnes sont détenues ou séquestrées, la peine est de **trente ans de réclusion criminelle**. Toutefois, si elles sont libérées volontairement dans le délai prévu au troisième alinéa de l’article 224-1, la peine est de **dix ans d’emprisonnement**, sauf atteinte à leur intégrité physique mentionnée à l’article 224-2.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "224-3"
+          }
+        ],
+        "profiling": {
+          "routingMs": 0,
+          "routingCalls": 0,
+          "embeddingMs": 242.5997239999997,
+          "vectorSearchMs": 994.6850490000033,
+          "jinaRerankingMs": 1985.528836999998,
+          "mappingMs": 0.02860099999816157,
+          "totalMs": 3222.8820820000037,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.11667799999850104,
+          "contextBuilderMs": 0.012180999998236075,
+          "generationMs": 2945.854143000004,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 6168.886276000001
+        },
+        "judge": {
+          "questionId": "q003",
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse n’indique pas les peines prévues par l’article 224-1 selon la durée de la séquestration et refuse à tort de répondre alors qu’une réponse était attendue. Les informations supplémentaires sur l’article 224-3 sont correctement reprises et entièrement étayées par le contexte, mais elles ne répondent pas à la question."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 1,
+          "sourceCoverage": 2,
+          "explanation": "La source porte sur l’article 224-3 et non sur les peines de l’article 224-1 selon la durée de la séquestration. Elle étaye correctement les affirmations accessoires relatives à la pluralité de victimes, aux trente ans de réclusion et à la réduction à dix ans en cas de libération volontaire, mais elle ne couvre pas les peines pertinentes de vingt ans et de cinq ans prévues par l’article 224-1."
+        }
+      },
+      "routing": {
+        "answer": "Le contexte fourni ne reproduit pas l’article 224-1 ni son troisième alinéa. Il permet seulement d’indiquer que :\n\n- la séquestration de plusieurs personnes est punie de **trente ans de réclusion criminelle** ;\n- une libération volontaire dans le délai prévu par l’article 224-1 peut entraîner une peine de **dix ans d’emprisonnement**, sauf atteinte à l’intégrité physique visée à l’article 224-2.\n\nLes différences de peine selon la durée de la séquestration ne peuvent donc pas être déterminées intégralement à partir du contexte fourni.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "224-3"
+          }
+        ],
+        "profiling": {
+          "routingMs": 1042.2826320000022,
+          "routingCalls": 1,
+          "embeddingMs": 240.1756150000001,
+          "vectorSearchMs": 40.38304100000096,
+          "jinaRerankingMs": 291.794415999997,
+          "mappingMs": 0.3591099999975995,
+          "totalMs": 1615.0495700000029,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.02516299999842886,
+          "contextBuilderMs": 0.015132000000448897,
+          "generationMs": 2153.2880579999983,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 3768.4039639999974
+        },
+        "judge": {
+          "questionId": "q003",
+          "correctness": 1,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse n’indique pas les peines demandées par l’article 224-1 selon la durée de séquestration (vingt ans, ou cinq ans d’emprisonnement et 75 000 euros d’amende en cas de libération volontaire avant sept jours). Elle fournit seulement des éléments relatifs à l’article 224-3, qui sont bien présents et correctement repris du contexte, mais ne répond pas à la question. Comme une réponse était attendue, le refus de déterminer la réponse rend l’abstention incorrecte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 3,
+          "explanation": "La source est pertinente de façon indirecte : elle concerne l’infraction de l’article 224-1 et mentionne le délai de libération volontaire, mais elle ne fournit pas le troisième alinéa de l’article 224-1 ni les peines de vingt ans et de cinq ans demandées. Elle couvre toutefois les affirmations reprises dans la réponse sur la peine de trente ans en cas de pluralité de victimes et la peine de dix ans en cas de libération volontaire, ainsi que l’exception relative aux atteintes à l’intégrité physique."
+        }
+      },
+      "failureStage": "generation"
+    },
+    {
+      "questionId": "q004",
+      "questionType": "single-corpus",
+      "difficulty": "easy",
+      "expectedAbstention": false,
+      "baseline": {
+        "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-4"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-1"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-3"
+          }
+        ],
+        "profiling": {
+          "routingMs": 0,
+          "routingCalls": 0,
+          "embeddingMs": 175.94954000000143,
+          "vectorSearchMs": 1026.924469999998,
+          "jinaRerankingMs": 572.6898099999962,
+          "mappingMs": 0.04566200000408571,
+          "totalMs": 1775.6493730000002,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.022100999995018356,
+          "contextBuilderMs": 0.023148000000219326,
+          "generationMs": 1097.7709179999947,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 2873.491479999997
+        },
+        "judge": {
+          "questionId": "q004",
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend exactement la définition du meurtre et la peine prévue par l’article 221-1. Elle répond directement et complètement à la question, et ses affirmations sont explicitement étayées par la Source 2 du contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 2 reproduit directement l'article 221-1 et contient à la fois la définition juridique du meurtre et la peine de trente ans de réclusion criminelle. Elle couvre donc intégralement les affirmations importantes de la réponse. Les sources 1 et 3 sont accessoires mais ne diminuent pas la pertinence de la source directement applicable."
+        }
+      },
+      "routing": {
+        "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-4"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-1"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-3"
+          }
+        ],
+        "profiling": {
+          "routingMs": 815.2039839999998,
+          "routingCalls": 1,
+          "embeddingMs": 177.12862900000619,
+          "vectorSearchMs": 68.0146950000053,
+          "jinaRerankingMs": 583.1658520000055,
+          "mappingMs": 0.028961999996681698,
+          "totalMs": 1643.5779489999986,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.016740999999456108,
+          "contextBuilderMs": 0.02048600000125589,
+          "generationMs": 1093.3420350000015,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 2736.976999000006
+        },
+        "judge": {
+          "questionId": "q004",
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend exactement la définition du meurtre et la peine prévues par l’article 221-1. Elle répond intégralement à la question et chaque affirmation est directement étayée par la Source 2."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La Source 2 reproduit directement l’article 221-1 et contient exactement la définition juridique du meurtre ainsi que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les deux affirmations importantes de la réponse. Les Sources 1 et 3 sont accessoires, mais leur présence ne réduit pas la pertinence de la Source 2."
+        }
+      },
+      "failureStage": "none"
+    },
+    {
+      "questionId": "q005",
+      "questionType": "single-corpus",
+      "difficulty": "easy",
+      "expectedAbstention": false,
+      "baseline": {
+        "answer": "Selon l’article 221-12, la disparition forcée consiste en l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne, commise par des agents de l’État ou avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État, dans des conditions la soustrayant à la protection de la loi.\n\nCes actes doivent être suivis de la disparition de la personne et accompagnés soit du déni de la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nCette infraction est punie de la réclusion criminelle à perpétuité.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-12"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-14"
+          }
+        ],
+        "profiling": {
+          "routingMs": 0,
+          "routingCalls": 0,
+          "embeddingMs": 196.69112600000517,
+          "vectorSearchMs": 882.6579749999946,
+          "jinaRerankingMs": 258.88912100000016,
+          "mappingMs": 0.037190999995800667,
+          "totalMs": 1338.3096920000025,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.022736999999324325,
+          "contextBuilderMs": 0.01967300000251271,
+          "generationMs": 1913.2749169999952,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 3251.6525399999955
+        },
+        "judge": {
+          "questionId": "q005",
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend correctement les éléments constitutifs de la disparition forcée prévus par l’article 221-12, notamment la privation de liberté par des agents de l’État ou avec l’autorisation, l’appui ou l’acquiescement des autorités, la soustraction à la protection de la loi, la disparition subséquente et le déni ou la dissimulation. Elle indique également correctement la réclusion criminelle à perpétuité. Tous les éléments essentiels sont couverts et sont directement étayés par le contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 reproduit directement l’article 221-12 et couvre tous les éléments constitutifs de la disparition forcée ainsi que la peine de réclusion criminelle à perpétuité. La source 2, bien que portant sur des peines complémentaires non mentionnées dans la réponse, reste pertinente à titre complémentaire. Les affirmations importantes de la réponse sont donc entièrement étayées."
+        }
+      },
+      "routing": {
+        "answer": "Selon l’article 221-12, la disparition forcée consiste en l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne, dans des conditions la soustrayant à la protection de la loi, par des agents de l’État ou avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État.\n\nCes actes doivent être suivis de la disparition de la personne et accompagnés soit du déni de la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nCette infraction est punie de la réclusion criminelle à perpétuité.",
+        "sources": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-12"
+          },
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-14"
+          }
+        ],
+        "profiling": {
+          "routingMs": 1005.7956200000044,
+          "routingCalls": 1,
+          "embeddingMs": 226.6755270000067,
+          "vectorSearchMs": 84.09597999999824,
+          "jinaRerankingMs": 603.526595000003,
+          "mappingMs": 1.5150309999953606,
+          "totalMs": 1921.6890339999954,
+          "embeddingCalls": 1,
+          "rerankingCalls": 1,
+          "retrievedCandidates": 20,
+          "rerankStatus": "success",
+          "contextFilteringMs": 0.042136000003665686,
+          "contextBuilderMs": 0.0918390000006184,
+          "generationMs": 1771.3835439999966,
+          "generationCalls": 1,
+          "answerPipelineTotalMs": 3693.3507039999968
+        },
+        "judge": {
+          "questionId": "q005",
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend correctement les éléments constitutifs de la disparition forcée prévus par l’article 221-12, ainsi que la peine de réclusion criminelle à perpétuité. Elle est complète sur les points demandés et entièrement étayée par le contexte fourni."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 reproduit directement l’article 221-12 et couvre tous les éléments constitutifs de la disparition forcée ainsi que la peine de réclusion criminelle à perpétuité. La source 2, bien que non nécessaire à la question, reste pertinente concernant les peines complémentaires. Les affirmations importantes de la réponse sont donc entièrement couvertes."
+        }
+      },
+      "failureStage": "none"
+    }
+  ]
+}

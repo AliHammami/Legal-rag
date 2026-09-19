@@ -1,0 +1,95 @@
+{
+  "questionId": "q451",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui, la force majeure peut être invoquée si l’événement :\n\n- échappe au contrôle du débiteur ;\n- ne pouvait pas être raisonnablement prévu lors de la conclusion du contrat ;\n- rend impossible l’exécution de l’obligation, malgré des mesures appropriées.\n\nSi l’empêchement est temporaire, l’exécution est suspendue, sauf si le retard justifie la résolution du contrat. S’il est définitif, le contrat est résolu de plein droit et les parties sont libérées de leurs obligations.  \nPour la prestation choisie, son impossibilité due à la force majeure libère également le débiteur.\n\nLe contexte ne permet toutefois pas de déterminer si ces conditions sont réunies dans une situation précise.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1218"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1307-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 196.18137500004377,
+      "vectorSearchMs": 700.8946340000257,
+      "jinaRerankingMs": 228.80902099999366,
+      "mappingMs": 0.03064100001938641,
+      "totalMs": 1125.9482730000163,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014725000015459955,
+      "contextBuilderMs": 0.012764999992214143,
+      "generationMs": 2149.5944860000163,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3275.58006800001
+    },
+    "judge": {
+      "questionId": "q451",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les conditions et les effets de la force majeure prévus par les extraits fournis (article 1218 et impossibilité de la prestation choisie). Elle précise explicitement que le contexte ne permet pas d’établir si ces conditions sont remplies dans un cas concret, ce qui constitue l’abstention attendue pour cette question dépourvue de faits."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article 1218 définit les conditions de la force majeure contractuelle et ses effets en cas d’empêchement temporaire ou définitif, tandis que l’article 1307-2 couvre la libération du débiteur lorsque la prestation choisie devient impossible par force majeure. Elles couvrent l’ensemble des affirmations juridiques importantes de la réponse ainsi que la réserve selon laquelle l’application à une situation concrète ne peut être déterminée sans faits."
+    }
+  },
+  "routing": {
+    "answer": "Oui, mais seulement si les conditions de la force majeure sont réunies :\n\n- l’événement échappe au contrôle du débiteur ;\n- il ne pouvait pas être raisonnablement prévu lors de la conclusion du contrat ;\n- ses effets ne peuvent pas être évités par des mesures appropriées ;\n- il empêche l’exécution de l’obligation.\n\nSi l’empêchement est temporaire, l’exécution est suspendue, sauf si le retard justifie la résolution du contrat. S’il est définitif, le contrat est résolu de plein droit et les parties sont libérées de leurs obligations.\n\nEn outre, lorsque l’impossibilité concerne la prestation choisie et procède d’un cas de force majeure, le débiteur est libéré. Le contexte ne fournit toutefois pas les faits permettant de déterminer si ces conditions sont effectivement remplies.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1218"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1307-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1229.4478879999951,
+      "routingCalls": 1,
+      "embeddingMs": 202.30582400003914,
+      "vectorSearchMs": 664.0680619999766,
+      "jinaRerankingMs": 273.37000100000296,
+      "mappingMs": 0.027094999968539923,
+      "totalMs": 2369.2575079999515,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010860000038519502,
+      "contextBuilderMs": 0.015303000051062554,
+      "generationMs": 2041.1589089999907,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4410.454255000048
+    },
+    "judge": {
+      "questionId": "q451",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les conditions et effets de la force majeure prévus par les articles fournis, y compris la libération en cas d’impossibilité de la prestation choisie. Elle précise explicitement que les faits nécessaires pour déterminer si ces conditions sont réunies font défaut, ce qui constitue une abstention appropriée face à la question factuellement indéterminée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article 1218 énonce les conditions et les effets de la force majeure en matière contractuelle, et l’article 1307-2 couvre la libération du débiteur en cas d’impossibilité de la prestation choisie résultant de la force majeure. Elles couvrent l’ensemble des affirmations juridiques importantes de la réponse. L’absence de faits concrets dans le contexte permet en outre de soutenir l’impossibilité de conclure à l’application effective de ces conditions."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,111 @@
+{
+  "questionId": "q336",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L621-1 distingue deux catégories d’associations pouvant agir :\n\n- **Les associations régulièrement déclarées**, dont les statuts prévoient explicitement la défense des intérêts des consommateurs : elles doivent avoir été **agréées** à cette fin conformément à l’article L811-1.\n- **Les organisations mentionnées à l’article L211-2 du Code de l’action sociale et des familles** : elles sont **dispensées d’agrément**.\n\nCes associations peuvent exercer les droits reconnus à la partie civile pour les faits portant un préjudice direct ou indirect à l’intérêt collectif des consommateurs.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-7"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 253.38906200043857,
+      "vectorSearchMs": 749.6185119999573,
+      "jinaRerankingMs": 309.69204799924046,
+      "mappingMs": 0.044343000277876854,
+      "totalMs": 1312.7859460003674,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.021657999604940414,
+      "contextBuilderMs": 0.02576800063252449,
+      "generationMs": 2013.7794710006565,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3326.623565999791
+    },
+    "judge": {
+      "questionId": "q336",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement la distinction de l’article L. 621-1 : les associations régulièrement déclarées à objet statutaire explicite de défense des consommateurs doivent être agréées selon l’article L. 811-1, tandis que les organisations visées à l’article L. 211-2 du CASF en sont dispensées. La précision sur l’exercice des droits de la partie civile est également conforme au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l’article L. 621-1 et établit précisément la distinction demandée : agrément requis pour les associations régulièrement déclarées ayant un objet statutaire explicite de défense des consommateurs, et dispense d’agrément pour les organisations visées à l’article L. 211-2 du CASF. Elle couvre aussi l’affirmation complémentaire relative à l’exercice des droits reconnus à la partie civile pour les atteintes à l’intérêt collectif des consommateurs."
+    }
+  },
+  "routing": {
+    "answer": "L’article L621-1 distingue deux catégories :\n\n- **Les associations régulièrement déclarées**, dont l’objet statutaire explicite est la défense des intérêts des consommateurs. Elles doivent être **agréées** à cette fin conformément à l’article L811-1 pour pouvoir agir en justice et exercer les droits reconnus à la partie civile.\n- **Les organisations définies à l’article L211-2 du Code de l’action sociale et des familles**, qui sont **dispensées de cet agrément** pour agir dans les conditions prévues par l’article L621-1.\n\nDans les deux cas, l’action doit concerner des faits portant un préjudice direct ou indirect à l’intérêt collectif des consommateurs.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-7"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.4369250005111,
+      "routingCalls": 1,
+      "embeddingMs": 243.86882700026035,
+      "vectorSearchMs": 60.97962400037795,
+      "jinaRerankingMs": 254.45300199929625,
+      "mappingMs": 0.028243000619113445,
+      "totalMs": 1582.7970369998366,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013179999776184559,
+      "contextBuilderMs": 0.022547000087797642,
+      "generationMs": 1970.79649099987,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3553.640727000311
+    },
+    "judge": {
+      "questionId": "q336",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les associations régulièrement déclarées à objet statutaire explicite de défense des consommateurs, soumises à l’agrément de l’article L. 811-1, et les organisations visées à l’article L. 211-2 du CASF, dispensées d’agrément. Elle mentionne aussi correctement la condition tenant au préjudice direct ou indirect à l’intérêt collectif des consommateurs. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l'article L. 621-1 et couvre la distinction centrale entre les associations régulièrement déclarées, soumises à agrément, et les organisations visées à l'article L. 211-2 du CASF, dispensées d'agrément. Elle couvre également la condition relative aux faits causant un préjudice direct ou indirect à l'intérêt collectif des consommateurs. Les autres sources sont cohérentes avec le cadre d'action des associations mentionnées, sans être nécessaires à la réponse."
+    }
+  },
+  "failureStage": "none"
+}

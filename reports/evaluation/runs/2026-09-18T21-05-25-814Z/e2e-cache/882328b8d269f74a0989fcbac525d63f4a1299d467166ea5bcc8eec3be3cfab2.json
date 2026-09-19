@@ -1,0 +1,87 @@
+{
+  "questionId": "q006",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 221-18, l’homicide routier est caractérisé lorsque :\n\n- le conducteur d’un véhicule terrestre à moteur cause la mort d’autrui ;\n- le décès est causé sans intention de le donner, dans les conditions prévues à l’article 121-3 ;\n- et au moins l’une des circonstances suivantes est présente :\n  1. violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité ;\n  2. état d’ivresse manifeste, état alcoolique ou refus des vérifications d’alcoolémie ;\n  3. usage de stupéfiants ou refus des vérifications correspondantes ;\n  4. consommation volontaire, détournée ou manifestement excessive de certaines substances psychoactives ;\n  5. absence de permis, ou permis annulé, invalidé, suspendu ou retenu ;\n  6. dépassement de la vitesse maximale autorisée d’au moins 30 km/h ;\n  7. fuite après l’accident ou absence de secours à une personne en danger ;\n  8. usage illégal du téléphone tenu en main ou d’un dispositif porté à l’oreille.\n\nLa peine prévue est de **sept ans d’emprisonnement et 100 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 191.27369499999622,
+      "vectorSearchMs": 799.5235799999937,
+      "jinaRerankingMs": 561.2161469999992,
+      "mappingMs": 0.07706100000359584,
+      "totalMs": 1552.1656660000008,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03531599999405444,
+      "contextBuilderMs": 0.014987999995355494,
+      "generationMs": 2554.760924000002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4107.001778999998
+    },
+    "judge": {
+      "questionId": "q006",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les conditions générales (conducteur d’un véhicule terrestre à moteur, mort d’autrui sans intention, renvoi à l’article 121-3) et les huit hypothèses visibles dans le contexte, ainsi que la peine. Elle est intégralement étayée par le contexte fourni. Toutefois, la référence indique que les violations vont des points 1° à 10° : la réponse ne couvre que huit hypothèses et simplifie légèrement la condition de fuite, qui suppose notamment la connaissance de l’accident et une tentative d’échapper à la responsabilité."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 221-18 et est donc parfaitement pertinente. Elle couvre les conditions générales, les huit hypothèses effectivement présentes dans l'extrait et la peine mentionnée dans la réponse générée. Les formulations synthétiques sur la fuite et l'assistance restent rattachables au 7° de la source, même si elles n'en reprennent pas toutes les précisions."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 221-18, l’homicide routier est caractérisé lorsque :\n\n- le conducteur d’un véhicule terrestre à moteur cause la mort d’autrui ;\n- la mort est causée sans intention de la donner ;\n- les conditions de l’article 121-3 sont réunies ;\n- et au moins l’une des circonstances suivantes est présente :\n\n1. violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité prévue par la loi ou le règlement ;\n2. état d’ivresse manifeste, état alcoolique ou refus de se soumettre aux vérifications d’alcoolémie ;\n3. usage de stupéfiants constaté ou refus des vérifications correspondantes ;\n4. consommation volontaire, détournée ou manifestement excessive de substances psychoactives ;\n5. absence de permis de conduire, ou permis annulé, invalidé, suspendu ou retenu ;\n6. dépassement d’au moins 30 km/h de la vitesse maximale autorisée ;\n7. fuite après l’accident ou absence de secours ou d’assistance à une personne en danger ;\n8. usage illégal du téléphone tenu en main ou port à l’oreille d’un dispositif susceptible d’émettre du son.\n\nCette infraction est punie de sept ans d’emprisonnement et de 100 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.6285120000102,
+      "routingCalls": 1,
+      "embeddingMs": 211.84345400000166,
+      "vectorSearchMs": 129.34981400000106,
+      "jinaRerankingMs": 567.3020239999896,
+      "mappingMs": 0.10006199999770615,
+      "totalMs": 2035.2824219999893,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.023837999993702397,
+      "contextBuilderMs": 0.015184000003500842,
+      "generationMs": 2654.2999189999973,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4689.665914000012
+    },
+    "judge": {
+      "questionId": "q006",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les éléments constitutifs généraux et les circonstances 1° à 8° reproduites dans le contexte, ainsi que la peine prévue. Elle est donc solidement fondée sur le contexte. Toutefois, elle présente cette liste comme exhaustive alors que la référence vise les violations des points 1° à 10° : les conditions des 9° et 10° sont absentes, ce qui rend la réponse incomplète à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 221-18 et est donc parfaitement pertinente. Elle couvre toutes les affirmations importantes de la réponse générée : qualité de conducteur, mort d’autrui sans intention, renvoi à l’article 121-3, circonstances listées aux 1° à 8°, ainsi que la peine de sept ans d’emprisonnement et 100 000 euros d’amende. L’absence des 9° et 10° dans la réponse générée ne réduit pas la couverture des affirmations effectivement formulées."
+    }
+  },
+  "failureStage": "generation"
+}

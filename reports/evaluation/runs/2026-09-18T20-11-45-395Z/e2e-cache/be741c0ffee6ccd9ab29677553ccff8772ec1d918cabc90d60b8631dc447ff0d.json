@@ -1,0 +1,107 @@
+{
+  "questionId": "q002",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de répondre. Il mentionne uniquement des infractions punies d’un an d’emprisonnement et de 150 000 euros d’amende, sans préciser l’article 223-1 ni les éléments constitutifs de l’infraction punie de 15 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 252.60420599999998,
+      "vectorSearchMs": 1806.0173929999983,
+      "jinaRerankingMs": 218.75768700000117,
+      "mappingMs": 0.03248900000107824,
+      "totalMs": 2277.5437859999984,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.030740000001969747,
+      "contextBuilderMs": 0.07906999999977415,
+      "generationMs": 1725.1969989999998,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4003.104702999999
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n'énonce pas les éléments constitutifs demandés et ne répond donc pas à la question au regard de la référence. En revanche, son constat selon lequel le contexte ne contient ni l'article 223-1 ni la peine de 15 000 euros est exactement supporté par les seuls extraits fournis. L'abstention était toutefois inattendue puisque EXPECTED ABSTENTION est false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne portent pas sur l’article 223-1 ni sur l’infraction assortie de 15 000 euros d’amende ; elles sont donc insuffisantes pour répondre directement à la question. Elles sont toutefois pertinentes pour étayer l’abstention formulée, puisqu’elles mentionnent uniquement des peines d’un an d’emprisonnement et de 150 000 euros d’amende, sans éléments constitutifs ni référence à l’article 223-1. Elles couvrent ainsi les constats importants de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 223-1. Il ne permet donc pas d’identifier les éléments constitutifs de l’infraction ni de confirmer la peine d’un an d’emprisonnement et de 15 000 euros d’amende prévue par cet article.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-16-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-22-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-4-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 897.3595740000019,
+      "routingCalls": 1,
+      "embeddingMs": 254.68445900000006,
+      "vectorSearchMs": 121.49760799999785,
+      "jinaRerankingMs": 549.9830750000001,
+      "mappingMs": 0.03750700000091456,
+      "totalMs": 1823.6617389999992,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04965699999956996,
+      "contextBuilderMs": 0.08866200000193203,
+      "generationMs": 1576.034483000003,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3399.859993000002
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n'énonce aucun des éléments constitutifs demandés et ne répond donc pas à la question, alors que la réponse attendue était possible. Son constat selon lequel le contexte ne contient pas l'article 223-1 est toutefois exact et entièrement fondé sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne reproduit ni ne concerne l’article 223-1 : elles portent sur les articles 225-16-2, 226-22-2, 226-4-1, 322-3 et 725-6. Elles sont donc non pertinentes pour répondre directement au fond, mais elles permettent de constater que le contexte fourni ne contient pas le texte requis. Elles couvrent ainsi les constats d’absence de l’article 223-1 et d’impossibilité d’en déduire les éléments constitutifs ou la peine formulés dans la réponse générée."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q024",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 311-10 prévoit la réclusion criminelle à perpétuité lorsque le vol est précédé, accompagné ou suivi :\n\n- de violences ayant entraîné la mort ;\n- de tortures ou d’actes de barbarie.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 196.62049800000386,
+      "vectorSearchMs": 605.5236330000334,
+      "jinaRerankingMs": 589.7925420000101,
+      "mappingMs": 0.028674000001046807,
+      "totalMs": 1392.013020000013,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012997000012546778,
+      "contextBuilderMs": 0.01397900003939867,
+      "generationMs": 1680.3137850000057,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3072.375289000047
+    },
+    "judge": {
+      "questionId": "q024",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux circonstances aggravantes de l’article 311-10 et précise correctement qu’elles doivent précéder, accompagner ou suivre le vol. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 311-10 et énonce exactement les deux circonstances qui portent le vol à la réclusion criminelle à perpétuité : violences ayant entraîné la mort, ou tortures ou actes de barbarie, lorsque ces faits précèdent, accompagnent ou suivent le vol. Elle couvre intégralement les affirmations de la réponse générée. La source 2 est non nécessaire mais n'affecte pas l'évaluation."
+    }
+  },
+  "routing": {
+    "answer": "L’article 311-10 prévoit la réclusion criminelle à perpétuité lorsque le vol est précédé, accompagné ou suivi :\n\n- de violences ayant entraîné la mort ;\n- ou de tortures ou d’actes de barbarie.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 967.9272749999654,
+      "routingCalls": 1,
+      "embeddingMs": 205.523155999952,
+      "vectorSearchMs": 28.84616700001061,
+      "jinaRerankingMs": 546.2972130000126,
+      "mappingMs": 0.024153999984264374,
+      "totalMs": 1748.6497930000187,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010913999984040856,
+      "contextBuilderMs": 0.01196400000480935,
+      "generationMs": 1835.1793499999912,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.86256899999
+    },
+    "judge": {
+      "questionId": "q024",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux circonstances aggravantes de l’article 311-10 : violences ayant entraîné la mort, ou tortures/actes de barbarie, lorsqu’elles précèdent, accompagnent ou suivent le vol. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 311-10 et énonce expressément les deux circonstances aggravantes mentionnées dans la réponse : violences ayant entraîné la mort, ou tortures ou actes de barbarie, lorsqu'elles précèdent, accompagnent ou suivent le vol. Elle couvre donc entièrement les affirmations importantes. La source 2 est non nécessaire mais n'affecte pas l'évaluation."
+    }
+  },
+  "failureStage": "none"
+}

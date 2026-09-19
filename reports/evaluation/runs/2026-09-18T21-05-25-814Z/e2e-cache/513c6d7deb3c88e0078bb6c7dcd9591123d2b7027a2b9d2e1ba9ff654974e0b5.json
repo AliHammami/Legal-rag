@@ -1,0 +1,95 @@
+{
+  "questionId": "q497",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après le contexte fourni, les principales règles sont les suivantes :\n\n- **Règles applicables à la vente** : les ventes d’immeubles suivent les articles **L. 322-5 à L. 322-12 du Code des procédures civiles d’exécution**, sauf les articles **L. 322-6 et L. 322-9**, et sous réserve de leur compatibilité avec le Code de commerce.\n- **Rôle du juge-commissaire** : il fixe la **mise à prix** et les conditions essentielles de la vente. Il peut :\n  - ordonner une **vente par adjudication amiable** lorsque cela permet une meilleure cession ;\n  - autoriser une **vente de gré à gré**, aux prix et conditions qu’il détermine.\n- **Saisie immobilière déjà engagée** : si elle a été suspendue par l’ouverture d’une procédure de sauvegarde, de redressement ou de liquidation judiciaires, le liquidateur peut être **subrogé dans les droits du créancier saisissant**. La procédure peut alors reprendre au stade où elle avait été suspendue.\n- **Adjudication amiable** : certaines règles des articles L. 322-7, L. 322-8 à L. 322-11 et L. 322-12 sont applicables, et une **surenchère reste possible**.\n- **Cahier des conditions de vente** : dans les deux mois suivant la publication ou la mention du jugement concerné, le liquidateur doit l’établir et le déposer au greffe du juge chargé des saisies immobilières.\n- Ce cahier doit notamment indiquer :\n  1. le jugement ou le commandement de payer, ainsi que sa publication ;\n  2. la désignation de l’immeuble, son origine de propriété, les servitudes, les baux et le procès-verbal de description ;\n  3. la mise à prix, les conditions de vente et les modalités de paiement du prix.\n- **Effet du paiement** : le paiement du prix au liquidateur et des frais de vente entraîne la **purge des hypothèques et privilèges** du débiteur.\n- **Limitation des actes de l’adjudicataire** : avant ces paiements, l’adjudicataire ne peut pas disposer du bien, sauf pour constituer une hypothèque accessoire à un prêt destiné à son acquisition.\n\nLe contexte ne permet toutefois pas de présenter l’ensemble des règles générales de la saisie immobilière, notamment les étapes et recours non mentionnés dans ces textes.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L642-18"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R742-33"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.97998400009237,
+      "vectorSearchMs": 610.6324990000576,
+      "jinaRerankingMs": 301.0495589999482,
+      "mappingMs": 0.029103999957442284,
+      "totalMs": 1128.7425800000783,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011158000212162733,
+      "contextBuilderMs": 0.019004000118002295,
+      "generationMs": 4082.7731029998977,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5211.5539979999885
+    },
+    "judge": {
+      "questionId": "q497",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement les règles particulières figurant dans le contexte, relatives à la vente d’immeubles dans le cadre d’une procédure collective et à certaines saisies suspendues. Toutefois, la question porte sur les règles générales de la saisie immobilière, que ces extraits ne permettent pas d’exposer : la réponse est donc incomplète et potentiellement trompeuse en présentant ce régime spécial comme les « principales règles ». Toutes les affirmations substantielles sont néanmoins étayées par les deux sources fournies. Malgré sa réserve finale, elle tente de répondre de manière détaillée au lieu de s’abstenir clairement face à l’insuffisance du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les règles spéciales qu’elles exposent : vente d’immeubles et saisie immobilière dans le contexte d’une procédure collective, ainsi que contenu du cahier des conditions de vente. Elles ne suffisent toutefois pas à répondre de façon générale aux règles de la saisie immobilière, ce que la réponse constate explicitement en fin de texte. Toutes les affirmations substantielles énoncées dans la réponse sont couvertes par les sources : renvoi aux articles L. 322-5 à L. 322-12 avec exceptions, pouvoirs du juge-commissaire, subrogation et reprise de la saisie suspendue, adjudication amiable et surenchère, délai et contenu du cahier, purge des sûretés et restriction des actes de disposition de l’adjudicataire."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne détaille pas les règles de la saisie immobilière.\n\nIl indique seulement que :\n\n- la vente sur saisie immobilière purge de plein droit l’immeuble du droit de suite attaché à l’hypothèque ;\n- après avoir été sommé de payer, le tiers acquéreur peut payer, purger l’immeuble selon les règles applicables, ou se laisser saisir.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2461"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2456"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.0187220000662,
+      "routingCalls": 1,
+      "embeddingMs": 209.4644599999301,
+      "vectorSearchMs": 88.84629600006156,
+      "jinaRerankingMs": 245.60248699993826,
+      "mappingMs": 0.028319999808445573,
+      "totalMs": 1669.9892329999711,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012122999876737595,
+      "contextBuilderMs": 0.02095099980942905,
+      "generationMs": 1812.194811000023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3482.226142999949
+    },
+    "judge": {
+      "questionId": "q497",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne détaille pas les règles générales de la saisie immobilière, ce qui constitue l’abstention attendue. Les deux précisions données sont fidèlement et directement supportées par les articles 2461 et 2456 fournis, sans extrapolation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont pertinentes pour justifier l’abstention : elles ne présentent que des effets limités liés à la saisie immobilière et aux options du tiers acquéreur, sans détailler ses règles générales. Elles couvrent directement les deux précisions formulées dans la réponse : la purge de plein droit du droit de suite lors de la vente sur saisie immobilière (art. 2461) et les choix du tiers acquéreur après sommation de payer, dont se laisser saisir (art. 2456)."
+    }
+  },
+  "failureStage": "none"
+}

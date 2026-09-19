@@ -1,0 +1,87 @@
+{
+  "questionId": "q073",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 531, un bateau ou une usine sur bateau est qualifié de **meuble** lorsqu’il :\n\n- n’est pas fixé par des piliers ;\n- ne fait pas partie d’une maison.\n\nToutefois, en raison de leur importance, la saisie de certains de ces biens peut être soumise à des **formes particulières**, prévues par le Code de procédure civile.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "531"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 171.48591899988241,
+      "vectorSearchMs": 619.0932060000487,
+      "jinaRerankingMs": 525.0470370000694,
+      "mappingMs": 0.03382100001908839,
+      "totalMs": 1315.6850819999818,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010225000092759728,
+      "contextBuilderMs": 0.0074640000239014626,
+      "generationMs": 1756.9785760000814,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3072.688089000061
+    },
+    "judge": {
+      "questionId": "q073",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux critères de qualification comme meuble (absence de fixation par piliers et absence d’intégration à une maison) et la conséquence procédurale relative à une saisie pouvant relever de formes particulières en raison de l’importance des biens. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 531 directement visé par la question. Elle énonce explicitement les critères de qualification comme meubles (absence de fixation par piliers et absence d’appartenance à la maison) ainsi que la possibilité de formes particulières de saisie en raison de l’importance de certains objets. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 531, un bateau ou une usine sur bateau est qualifié de **meuble** lorsqu’il :\n\n- n’est pas fixé par des piliers ;\n- ne fait pas partie d’une maison.\n\nToutefois, en raison de leur importance, certains de ces biens peuvent être soumis à des **formalités particulières de saisie**, prévues par le Code de procédure civile.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "531"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.0430949998554,
+      "routingCalls": 1,
+      "embeddingMs": 179.70514600002207,
+      "vectorSearchMs": 54.377963999984786,
+      "jinaRerankingMs": 498.357016999973,
+      "mappingMs": 0.036336000077426434,
+      "totalMs": 2063.543253000127,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009788000024855137,
+      "contextBuilderMs": 0.007441000081598759,
+      "generationMs": 1930.1712050000206,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3993.740877999924
+    },
+    "judge": {
+      "questionId": "q073",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux critères de qualification comme meuble (absence de fixation par piliers et absence d’intégration à une maison) ainsi que la conséquence procédurale, à savoir la possible application de formes particulières de saisie en raison de l’importance du bien. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 531 et vise précisément les critères de qualification comme meubles (absence de fixation par piliers et absence d’appartenance à la maison) ainsi que la conséquence sur la saisie (formes particulières possibles en raison de l’importance de certains biens). Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

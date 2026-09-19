@@ -1,0 +1,119 @@
+{
+  "questionId": "q446",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui, pour un groupement d’intérêt économique ou un groupement européen d’intérêt économique, la nullité peut être fondée sur l’illicéité de l’objet du groupement. Dans ce cas, l’action en nullité n’est pas éteinte par la cessation ultérieure de la cause de nullité.\n\nLe contexte ne permet toutefois pas d’affirmer qu’un acte quelconque peut être annulé pour « illégalité de l’objet » en dehors de ces hypothèses.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1153-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1152-3"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L252-9"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "220-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 181.72160499999882,
+      "vectorSearchMs": 665.3560469999793,
+      "jinaRerankingMs": 240.56376499999897,
+      "mappingMs": 0.033513000002130866,
+      "totalMs": 1087.775305999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013375000009546056,
+      "contextBuilderMs": 0.03397799999220297,
+      "generationMs": 2701.0189170000085,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3788.8712570000207
+    },
+    "judge": {
+      "questionId": "q446",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les hypothèses précises du contexte relatives aux GIE et GEIE, tout en précisant qu’elles ne permettent pas de répondre de façon générale pour « un acte » quelconque. La formulation initiale affirmative est légèrement ambiguë, car l’exception vise l’illicéité de l’objet du groupement, mais les nuances apportées ensuite évitent une généralisation non justifiée. Toutes les affirmations substantielles sont appuyées par les articles L. 251-5 et L. 252-9 fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les articles L. 251-5 et L. 252-9 sont directement pertinents : ils visent respectivement les GIE et GEIE, prévoient les causes de nullité applicables et énoncent expressément l’exception tenant à l’illicéité de l’objet du groupement, pour laquelle la cessation de la cause n’éteint pas l’action. Ils couvrent donc l’affirmation limitée à ces groupements ainsi que le constat d’absence de base, dans le contexte fourni, pour généraliser à tout acte."
+    }
+  },
+  "routing": {
+    "answer": "Oui. L’article 1202 prévoit expressément la nullité de certains actes ayant un objet illicite, notamment :\n\n- une contre-lettre augmentant le prix stipulé dans le traité de cession d’un office ministériel ;\n- un contrat dissimulant une partie du prix dans certaines ventes ou cessions énumérées par le texte.\n\nEn revanche, le contexte ne permet pas de déterminer de manière générale si toute illégalité de l’objet entraîne une nullité absolue ou relative. L’article 1179 précise que cette qualification dépend de l’intérêt protégé : intérêt général pour la nullité absolue, intérêt privé pour la nullité relative.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1156"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "220-3"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1179"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1157"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1202"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1231.3881849999889,
+      "routingCalls": 1,
+      "embeddingMs": 199.77634100001887,
+      "vectorSearchMs": 91.65984700000263,
+      "jinaRerankingMs": 235.54655900000944,
+      "mappingMs": 0.029236000002129003,
+      "totalMs": 1758.478833000001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015814000013051555,
+      "contextBuilderMs": 0.02614900001208298,
+      "generationMs": 2234.977058999997,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3993.5449090000184
+    },
+    "judge": {
+      "questionId": "q446",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse s’appuie correctement sur les cas particuliers de nullité prévus par l’article 1202 et restitue fidèlement le critère de distinction des nullités de l’article 1179. Toutefois, elle tente de répondre à une question générale alors que le contexte ne contient pas la règle générale relative à l’illicéité de l’objet ; elle ne fournit donc qu’une réponse partielle. Une abstention était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "L’article 1202 est directement pertinent, car il prévoit explicitement des nullités pour des actes poursuivant des objets ou buts illicites dans des hypothèses déterminées. L’article 1179 est également pertinent pour la distinction entre nullité absolue et relative. Les autres sources sont marginales. Les sources ne contiennent toutefois pas de règle générale permettant de répondre de façon complète à la question générale sur l’illégalité de l’objet, ce qui justifie une pertinence globale de 3. Toutes les affirmations effectivement formulées dans la réponse sont couvertes : les deux exemples sont repris de l’article 1202 et le critère de qualification est fidèlement repris de l’article 1179 ; le constat de l’absence de règle générale dans le contexte est cohérent avec les extraits fournis."
+    }
+  },
+  "failureStage": "abstention"
+}

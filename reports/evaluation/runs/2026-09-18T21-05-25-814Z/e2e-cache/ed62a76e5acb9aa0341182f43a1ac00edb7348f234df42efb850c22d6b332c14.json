@@ -1,0 +1,95 @@
+{
+  "questionId": "q022",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 313-1, l’escroquerie repose sur la tromperie : faux nom, fausse qualité, abus d’une qualité vraie ou manœuvres frauduleuses. Cette tromperie détermine la victime à remettre un bien ou des fonds, à fournir un service ou à consentir un acte.\n\nSelon l’article 312-1, l’extorsion repose sur la violence, la menace de violences ou la contrainte pour obtenir notamment la remise de fonds, de valeurs ou d’un bien.\n\nAinsi, l’escroquerie obtient la remise par tromperie, tandis que l’extorsion l’obtient par pression ou violence.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "313-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.4864950000192,
+      "vectorSearchMs": 574.8331749999779,
+      "jinaRerankingMs": 506.5112530000042,
+      "mappingMs": 0.03935699997236952,
+      "totalMs": 1287.8999700000277,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011781000008340925,
+      "contextBuilderMs": 0.014532000001054257,
+      "generationMs": 1637.6264490000322,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2925.5631449999637
+    },
+    "judge": {
+      "questionId": "q022",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les procédés : tromperie par faux nom, fausse qualité, abus de qualité vraie ou manœuvres frauduleuses pour l’escroquerie, contre violence, menace de violences ou contrainte pour l’extorsion. Elle précise adéquatement les remises ou prestations visées et toutes les affirmations sont directement étayées par les articles fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont les textes directement applicables (articles 313-1 et 312-1) et décrivent précisément les méthodes d'obtention à comparer. Elles couvrent l'ensemble des affirmations importantes : tromperie par faux nom, fausse qualité, abus de qualité vraie ou manœuvres frauduleuses pour l'escroquerie ; violence, menace de violences ou contrainte pour l'extorsion ; ainsi que les remises, services et actes concernés."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 313-1, l’escroquerie repose sur la tromperie : usage d’un faux nom ou d’une fausse qualité, abus d’une qualité vraie ou emploi de manœuvres frauduleuses, afin de déterminer la victime à remettre un bien, des fonds ou à fournir un service.\n\nSelon l’article 312-1, l’extorsion repose sur la violence, la menace de violences ou la contrainte pour obtenir notamment la remise d’un bien ou de fonds.\n\nAinsi, l’escroquerie obtient la remise par la tromperie, tandis que l’extorsion l’obtient par la force, la menace ou la contrainte.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "313-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 767.9833099999814,
+      "routingCalls": 1,
+      "embeddingMs": 207.2761499999906,
+      "vectorSearchMs": 54.33260700001847,
+      "jinaRerankingMs": 561.589701000019,
+      "mappingMs": 0.04703200003132224,
+      "totalMs": 1591.2667219999712,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019448000006377697,
+      "contextBuilderMs": 0.022213999996893108,
+      "generationMs": 1645.5030280000065,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3236.821962999995
+    },
+    "judge": {
+      "questionId": "q022",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les méthodes : tromperie par faux nom, fausse qualité, abus de qualité vraie ou manœuvres frauduleuses pour l’escroquerie, contre violence, menace de violences ou contrainte pour l’extorsion. Elle est complète pour la question et toutes ses affirmations essentielles sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement les articles visés et sont précisément pertinentes : l'article 313-1 décrit les procédés trompeurs constitutifs de l'escroquerie et les remises ou services obtenus, tandis que l'article 312-1 énumère la violence, la menace de violences et la contrainte comme moyens de l'extorsion pour obtenir notamment une remise. Elles couvrent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

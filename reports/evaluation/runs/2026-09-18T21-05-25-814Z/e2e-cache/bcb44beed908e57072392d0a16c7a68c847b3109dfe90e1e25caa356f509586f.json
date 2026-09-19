@@ -1,0 +1,95 @@
+{
+  "questionId": "q354",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "- **Altération ou falsification d’actes d’état civil** : elle entraîne le paiement de **dommages-intérêts aux parties**, sans préjudice des **peines prévues par le Code pénal**. L’inscription sur une feuille volante ou ailleurs que sur les registres prévus est également sanctionnée.\n\n- **Obligations des notaires et huissiers concernant les protêts** :\n  - ils doivent **laisser une copie exacte** des protêts ;\n  - ils doivent transmettre les copies au greffier du tribunal compétent du domicile du débiteur, soit **contre récépissé**, soit par **lettre recommandée avec demande d’avis de réception** ;\n  - cette formalité doit être accomplie **dans les quinze jours de l’acte**.\n\n  Le non-respect de ces obligations est sanctionné par la **destitution**, les **dépens** et des **dommages-intérêts envers les parties**. Les textes fournis divergent toutefois sur le nombre de copies à transmettre : deux copies, dont une destinée au parquet, selon l’article L131-64, et une copie concernant certains protêts selon l’article L511-55.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-64"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-55"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "52"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 246.3441469995305,
+      "vectorSearchMs": 865.2814959995449,
+      "jinaRerankingMs": 257.48438899964094,
+      "mappingMs": 0.028824999928474426,
+      "totalMs": 1369.1841350002214,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011448999866843224,
+      "contextBuilderMs": 0.023406000807881355,
+      "generationMs": 3736.5559329995885,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5105.832706000656
+    },
+    "judge": {
+      "questionId": "q354",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les sanctions prévues pour l'altération ou le faux dans les actes d'état civil, y compris l'inscription irrégulière hors registres. Elle expose aussi les obligations de copie et de transmission des protêts, le délai de quinze jours, les modalités de remise ou d'envoi, ainsi que les sanctions. La mention de la divergence entre les articles L131-64 et L511-55 est fidèle au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l'article 52 couvre les altérations, faux et inscriptions irrégulières des actes d'état civil ainsi que les dommages-intérêts et peines pénales ; les articles L131-64 et L511-55 couvrent les obligations des notaires et huissiers relatives aux copies de protêts, aux modalités de transmission, au délai et aux sanctions. Elles étayent toutes les affirmations importantes de la réponse, y compris la divergence explicitement signalée entre le nombre et le champ des copies à transmettre."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne précise pas les sanctions encourues en cas d’altération d’actes d’état civil.\n\nConcernant les protêts, les notaires et les huissiers doivent :\n\n- laisser une copie exacte des protêts ;\n- remettre contre récépissé au greffier compétent, ou lui adresser par lettre recommandée avec accusé de réception, une copie exacte des protêts faute de paiement des traites acceptées et des billets à ordre ;\n- accomplir cette transmission dans les quinze jours de l’acte.\n\nLe non-respect de ces obligations est sanctionné par la destitution, les dépens et des dommages-intérêts envers les parties.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-55"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1226.148133000359,
+      "routingCalls": 1,
+      "embeddingMs": 218.1069630002603,
+      "vectorSearchMs": 393.4264590004459,
+      "jinaRerankingMs": 288.98789400048554,
+      "mappingMs": 0.03840600047260523,
+      "totalMs": 2126.7381649995223,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012601999565958977,
+      "contextBuilderMs": 0.011127999983727932,
+      "generationMs": 2593.959846000187,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4720.730661000125
+    },
+    "judge": {
+      "questionId": "q354",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de manière détaillée les obligations relatives aux protêts ainsi que leurs sanctions, conformément au contexte. Elle ne répond toutefois pas à la première partie de la question sur l'altération des actes d'état civil, alors que la référence indique les sanctions applicables. Cette omission majeure limite la correction et la complétude, mais les affirmations effectivement formulées sont toutes étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L511-55 est directement pertinente et très précise pour la partie relative aux protêts : copie exacte, modalités de remise ou d'envoi au greffier, délai de quinze jours et sanctions. Elle est toutefois sans rapport avec l'altération des actes d'état civil et ne permet pas d'établir les sanctions correspondantes. La réponse générée s'abstient explicitement sur ce point ; toutes les affirmations positives qu'elle formule sur les protêts, ainsi que le constat que ce contexte ne précise pas les sanctions d'état civil, sont couvertes par la source fournie."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,119 @@
+{
+  "questionId": "q242",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L. 211-1 définit les instruments financiers comme comprenant :\n\n- les **titres financiers** ;\n- les **contrats financiers**, également appelés « instruments financiers à terme ».\n\nIl précise que les titres financiers comprennent :\n\n1. les titres de capital émis par les sociétés par actions ;\n2. les titres de créance ;\n3. les parts ou actions d’organismes de placement collectif.\n\nLes contrats financiers sont les contrats à terme figurant sur une liste fixée par décret.\n\nSont expressément exclus de la définition des instruments financiers les **effets de commerce** et les **bons de caisse**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D211-1-A"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L531-0"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L774-27"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L211-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L211-41"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.21175799984485,
+      "vectorSearchMs": 628.5189200001769,
+      "jinaRerankingMs": 552.2473439997993,
+      "mappingMs": 0.03154799994081259,
+      "totalMs": 1382.0409559998661,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013274000026285648,
+      "contextBuilderMs": 0.026205999776721,
+      "generationMs": 1488.21696300013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2870.3209420000203
+    },
+    "judge": {
+      "questionId": "q242",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la structure de l’article L. 211-1 : instruments financiers composés des titres financiers et contrats financiers, catégories de titres, définition des contrats financiers par renvoi à une liste fixée par décret, et exclusion expresse des effets de commerce et des bons de caisse. Tous ces éléments sont directement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 4 reproduit directement et intégralement les quatre paragraphes de l’article L. 211-1 pertinents : composition des instruments financiers, catégories de titres financiers, définition des contrats financiers par renvoi à une liste fixée par décret, et exclusion des effets de commerce et bons de caisse. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article L. 211-1 définit les instruments financiers comme comprenant :\n\n- les **titres financiers**, à savoir :\n  - les titres de capital émis par les sociétés par actions ;\n  - les titres de créance ;\n  - les parts ou actions d’organismes de placement collectif ;\n- les **contrats financiers**, également appelés « instruments financiers à terme », qui sont les contrats à terme figurant sur une liste fixée par décret.\n\nIl précise expressément que les **effets de commerce** et les **bons de caisse** ne sont pas des instruments financiers.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D211-1-A"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L531-0"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L774-27"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L211-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L211-41"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.2695649997331,
+      "routingCalls": 1,
+      "embeddingMs": 227.55719400011003,
+      "vectorSearchMs": 143.393827999942,
+      "jinaRerankingMs": 548.6935319998302,
+      "mappingMs": 0.024348000064492226,
+      "totalMs": 1942.9691149997525,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009568000212311745,
+      "contextBuilderMs": 0.019160999916493893,
+      "generationMs": 2256.6462480002083,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4199.651995999739
+    },
+    "judge": {
+      "questionId": "q242",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement la structure de l’article L. 211-1 : instruments financiers = titres financiers et contrats financiers, énumération complète des trois catégories de titres, définition des contrats financiers par renvoi à une liste fixée par décret, et exclusion expresse des effets de commerce et bons de caisse. Toutes ces affirmations sont directement étayées par le contexte (source 4)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 4 reproduit directement l’article L. 211-1 et couvre l’ensemble des éléments de la réponse générée : la distinction entre titres financiers et contrats financiers, les trois catégories de titres, la définition des contrats financiers par référence à une liste fixée par décret, ainsi que l’exclusion expresse des effets de commerce et des bons de caisse."
+    }
+  },
+  "failureStage": "none"
+}

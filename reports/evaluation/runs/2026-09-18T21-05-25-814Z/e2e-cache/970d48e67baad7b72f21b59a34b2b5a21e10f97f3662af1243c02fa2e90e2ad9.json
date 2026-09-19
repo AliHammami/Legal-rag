@@ -1,0 +1,87 @@
+{
+  "questionId": "q103",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1832 du Code civil, une société est instituée par deux ou plusieurs personnes qui conviennent, par contrat, d’affecter à une entreprise commune des biens ou leur industrie afin de partager les bénéfices ou de profiter des économies réalisées.\n\nDans les cas prévus par la loi, elle peut également être instituée par la volonté d’une seule personne.\n\nLes associés s’engagent à contribuer aux pertes.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 172.130839999998,
+      "vectorSearchMs": 574.4746230000164,
+      "jinaRerankingMs": 535.4989979998209,
+      "mappingMs": 0.06370200007222593,
+      "totalMs": 1282.2020739999134,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01737200003117323,
+      "contextBuilderMs": 0.010725999949499965,
+      "generationMs": 1570.5458990000188,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2852.786305999849
+    },
+    "judge": {
+      "questionId": "q103",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les trois éléments de l'article 1832 : constitution par contrat entre deux ou plusieurs personnes avec affectation de biens ou industrie à une entreprise commune, possibilité d'une institution unipersonnelle dans les cas légaux, et engagement des associés à contribuer aux pertes. Ces affirmations sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1832 du Code civil, qui répond intégralement à la question : modalités d’institution de la société, possibilité d’une institution par une seule personne dans les cas légaux, et engagement des associés à contribuer aux pertes. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1832 du Code civil, une société est instituée :\n\n- par deux ou plusieurs personnes qui concluent un contrat pour affecter à une entreprise commune des biens ou leur industrie ;\n- dans les cas prévus par la loi, par la volonté d’une seule personne.\n\nL’objectif est de partager les bénéfices ou de profiter des économies réalisées. Les associés s’engagent également à contribuer aux pertes.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.6580969998613,
+      "routingCalls": 1,
+      "embeddingMs": 141.56764700007625,
+      "vectorSearchMs": 67.00130000011995,
+      "jinaRerankingMs": 509.1187490001321,
+      "mappingMs": 0.025396999903023243,
+      "totalMs": 1742.398475999944,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010208999970927835,
+      "contextBuilderMs": 0.007753999903798103,
+      "generationMs": 1297.5655009998009,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3039.988702000119
+    },
+    "judge": {
+      "questionId": "q103",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux modalités d’institution prévues par l’article 1832 du Code civil, l’objet de partage des bénéfices ou de l’économie, ainsi que l’engagement des associés à contribuer aux pertes. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1832 du Code civil, qui répond exactement aux deux volets de la question : les modalités d’institution de la société et l’engagement des associés à contribuer aux pertes. Elle couvre explicitement toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

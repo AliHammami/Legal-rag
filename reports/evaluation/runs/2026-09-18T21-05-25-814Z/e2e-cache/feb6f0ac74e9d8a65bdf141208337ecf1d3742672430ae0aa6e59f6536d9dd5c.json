@@ -1,0 +1,87 @@
+{
+  "questionId": "q326",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L432-2, sont interdits :\n\n1. Délivrer un label rouge sans respecter les conditions prévues par l’article L. 642-3 du code rural et de la pêche maritime ;\n2. Délivrer un label rouge non homologué conformément à l’article L. 641-4 ;\n3. Délivrer un label rouge en violation de l’article L. 641-2 ;\n4. Utiliser ou tenter d’utiliser frauduleusement un label rouge ;\n5. Apposer ou faire apparaître sciemment un label rouge inexact sur des produits mis en vente ou destinés à l’être, notamment par addition, retranchement ou altération ;\n6. Utiliser une présentation faisant croire, ou pouvant faire croire, qu’un produit bénéficie d’un label rouge ;\n7. Faire croire ou tenter de faire croire qu’un produit portant un label rouge est garanti par l’État ou un organisme public.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L432-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.80483100004494,
+      "vectorSearchMs": 764.7521939994767,
+      "jinaRerankingMs": 311.047864000313,
+      "mappingMs": 0.0274679996073246,
+      "totalMs": 1275.661368000321,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01248099934309721,
+      "contextBuilderMs": 0.008695999160408974,
+      "generationMs": 2105.3435770003125,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3381.0384440002963
+    },
+    "judge": {
+      "questionId": "q326",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les sept interdictions de l'article L432-2 : les trois hypothèses de délivrance irrégulière, l'utilisation frauduleuse, l'apposition sciemment inexacte, la présentation trompeuse et la fausse garantie par l'État ou un organisme public. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement et intégralement l’article L432-2 visé par la question. Elle énonce les sept interdictions reprises dans la réponse générée, y compris les renvois aux articles du code rural, l’utilisation frauduleuse, l’apposition sciemment inexacte, la présentation trompeuse et la fausse garantie publique."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L432-2, sont interdits :\n\n1. Délivrer un label rouge sans respecter les conditions prévues par l’article L. 642-3 du code rural et de la pêche maritime ;\n2. Délivrer un label rouge non homologué conformément à l’article L. 641-4 ;\n3. Délivrer un label rouge en violation de l’article L. 641-2 ;\n4. Utiliser ou tenter d’utiliser frauduleusement un label rouge ;\n5. Apposer ou faire apparaître, en le sachant inexact, un label rouge sur des produits mis en vente ou destinés à l’être, notamment par addition, retranchement ou altération ;\n6. Utiliser un mode de présentation laissant croire qu’un produit bénéficie d’un label rouge ;\n7. Faire croire ou tenter de faire croire qu’un produit portant un label rouge est garanti par l’État ou par un organisme public.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L432-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2530.8883440000936,
+      "routingCalls": 1,
+      "embeddingMs": 240.82065699994564,
+      "vectorSearchMs": 49.53023200016469,
+      "jinaRerankingMs": 269.17697700019926,
+      "mappingMs": 0.17147499974817038,
+      "totalMs": 3090.6208950001746,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03667700011283159,
+      "contextBuilderMs": 0.009120000526309013,
+      "generationMs": 1709.2149870004505,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4799.894899000414
+    },
+    "judge": {
+      "questionId": "q326",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les sept interdictions énumérées à l’article L432-2 : les trois hypothèses de délivrance irrégulière, l’utilisation frauduleuse, l’apposition ou l’altération sciemment inexacte, la présentation trompeuse et la prétendue garantie publique. Toutes les affirmations sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement et intégralement l’article L432-2 visé par la question. Elle énumère les sept interdictions reprises dans la réponse générée, y compris les renvois aux articles du code rural, l’utilisation frauduleuse ou tentée, l’apposition sciemment inexacte, la présentation trompeuse et la fausse garantie publique."
+    }
+  },
+  "failureStage": "none"
+}

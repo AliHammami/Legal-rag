@@ -1,0 +1,87 @@
+{
+  "questionId": "q480",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "L’adoption plénière est permise lorsque :\n\n- l’enfant a moins de quinze ans ;\n- il est accueilli au foyer du ou des adoptants depuis au moins six mois.\n\nToutefois, si l’enfant a plus de quinze ans, elle peut être demandée, sous réserve que les conditions soient remplies, pendant sa minorité et dans les trois ans suivant sa majorité, lorsque :\n\n1. l’enfant a été accueilli avant ses quinze ans par des personnes qui ne remplissaient pas les conditions légales pour adopter ;\n2. l’enfant a fait l’objet d’une adoption simple avant ses quinze ans ;\n3. les conditions prévues au 2° et au 3° de l’article 344 sont réunies ;\n4. le cas est prévu à l’article 370-1-3.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "345"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.88787899992894,
+      "vectorSearchMs": 613.6835179999471,
+      "jinaRerankingMs": 229.6515570000047,
+      "mappingMs": 0.024781000101938844,
+      "totalMs": 1067.305468000006,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011131000006571412,
+      "contextBuilderMs": 0.007532999967224896,
+      "generationMs": 2207.948900000076,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3275.2819790000794
+    },
+    "judge": {
+      "questionId": "q480",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement et complètement les conditions et exceptions de l'article 345 figurant dans le contexte. Toutefois, l'abstention était attendue et la réponse apporte une réponse de fond ; l'abstention est donc incorrecte selon l'indicateur fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle reproduit l’article 345 relatif aux conditions de l’adoption plénière. Elle couvre l’ensemble des affirmations substantielles de la réponse générée, y compris la règle des moins de quinze ans et six mois d’accueil, ainsi que les quatre hypothèses dérogatoires pour l’enfant de plus de quinze ans. Le fait qu’une abstention soit attendue n’affecte pas la pertinence ni la couverture intrinsèque de cette source."
+    }
+  },
+  "routing": {
+    "answer": "L’adoption plénière est possible :\n\n- en principe, pour un enfant âgé de moins de 15 ans, accueilli au foyer du ou des adoptants depuis au moins six mois ;\n- exceptionnellement, pour un enfant de plus de 15 ans, si les conditions sont remplies, pendant sa minorité et dans les trois ans suivant sa majorité, lorsque :\n  1. il a été accueilli avant ses 15 ans par des personnes ne remplissant pas les conditions légales pour adopter ;\n  2. il a fait l’objet d’une adoption simple avant ses 15 ans ;\n  3. il se trouve dans les cas prévus aux 2° et 3° de l’article 344 ;\n  4. il se trouve dans les cas prévus à l’article 370-1-3.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "345"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1127.1075420000125,
+      "routingCalls": 1,
+      "embeddingMs": 226.33055100007914,
+      "vectorSearchMs": 55.022511999937706,
+      "jinaRerankingMs": 289.0120399999432,
+      "mappingMs": 0.02517999999690801,
+      "totalMs": 1697.521015000064,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011239000014029443,
+      "contextBuilderMs": 0.008382000029087067,
+      "generationMs": 1835.8551159999333,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3533.4029940000037
+    },
+    "judge": {
+      "questionId": "q480",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement les conditions d’âge, d’accueil de six mois et les quatre hypothèses dérogatoires prévues par l’article 345 reproduit dans le contexte. Elle ne couvre toutefois pas l’ensemble des conditions générales susceptibles de s’appliquer à une adoption plénière. Surtout, une abstention était attendue : la réponse apporte néanmoins une réponse affirmative détaillée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 345 du Code civil, qui énonce les conditions d’âge, d’accueil au foyer pendant six mois et les quatre hypothèses permettant une adoption plénière après quinze ans. Elle couvre l’ensemble des affirmations formulées dans la réponse générée. Malgré l’abstention attendue, la source est directement pertinente et suffisante pour répondre aux éléments effectivement avancés."
+    }
+  },
+  "failureStage": "abstention"
+}

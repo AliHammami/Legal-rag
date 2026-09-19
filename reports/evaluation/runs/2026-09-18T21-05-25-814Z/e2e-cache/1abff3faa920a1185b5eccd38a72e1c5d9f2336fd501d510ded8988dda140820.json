@@ -1,0 +1,91 @@
+{
+  "questionId": "q016",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 228-1, lorsque le parent est condamné comme auteur d’un crime prévu au titre concerné commis sur son enfant, la juridiction de jugement doit :\n\n- ordonner le retrait total de l’autorité parentale, sauf décision contraire spécialement motivée ;\n- si elle n’ordonne pas ce retrait total, ordonner le retrait partiel de l’autorité parentale ou le retrait de l’exercice de cette autorité, sauf décision contraire spécialement motivée.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "378"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "228-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 196.62774600001285,
+      "vectorSearchMs": 564.232982000045,
+      "jinaRerankingMs": 604.1753679999965,
+      "mappingMs": 0.0334900000016205,
+      "totalMs": 1365.1266049999977,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013399999996181577,
+      "contextBuilderMs": 0.028888000000733882,
+      "generationMs": 1806.2894830000005,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3171.4698060000082
+    },
+    "judge": {
+      "questionId": "q016",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le mécanisme prévu à l’article 228-1 : retrait total de l’autorité parentale par principe, sauf décision spécialement motivée, puis, à défaut de retrait total, retrait partiel ou retrait de l’exercice de l’autorité parentale, également sauf décision contraire spécialement motivée. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement le I de l’article 228-1 et vise exactement l’hypothèse questionnée. Elle couvre intégralement les deux mesures exposées dans la réponse : retrait total de l’autorité parentale sauf décision contraire spécialement motivée, puis, en l’absence de retrait total, retrait partiel ou retrait de l’exercice de l’autorité parentale, également sauf décision contraire spécialement motivée. La source 1 est corroborante mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "En cas de condamnation d’un parent comme auteur d’un crime commis sur son enfant, la juridiction de jugement doit :\n\n- ordonner le **retrait total de l’autorité parentale**, sauf décision contraire spécialement motivée ;\n- si elle n’ordonne pas ce retrait total, ordonner le **retrait partiel de l’autorité parentale** ou le **retrait de l’exercice de cette autorité**, sauf décision contraire spécialement motivée.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "228-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 980.0995000000112,
+      "routingCalls": 1,
+      "embeddingMs": 177.77883899997687,
+      "vectorSearchMs": 35.69594199996209,
+      "jinaRerankingMs": 572.9788759999792,
+      "mappingMs": 0.030405000026803464,
+      "totalMs": 1766.6150469999993,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.023077999998349696,
+      "contextBuilderMs": 0.010703999956604093,
+      "generationMs": 1636.2580829999642,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3402.9189130000304
+    },
+    "judge": {
+      "questionId": "q016",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le mécanisme prévu par l'article 228-1 pour un crime commis sur l'enfant : retrait total de l'autorité parentale en principe, sauf décision contraire spécialement motivée, puis à défaut retrait partiel ou retrait de l'exercice, également sauf décision contraire spécialement motivée. Elle répond à la question et toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le passage pertinent de l'article 228-1 applicable à la condamnation d'un parent comme auteur d'un crime commis sur son enfant. Elle couvre intégralement les mesures énoncées : retrait total en principe, exception par décision spécialement motivée, puis, en l'absence de retrait total, retrait partiel ou retrait de l'exercice, également sauf décision contraire spécialement motivée."
+    }
+  },
+  "failureStage": "none"
+}

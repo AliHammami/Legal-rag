@@ -1,0 +1,115 @@
+{
+  "questionId": "q300",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L. 217-1 prévoit une application limitée du chapitre :\n\n- lorsqu’un contrat porte à la fois sur des biens couverts par le chapitre et sur d’autres biens non couverts, le chapitre ne s’applique qu’aux biens couverts ;\n- lorsque le contrat a pour objet principal la vente de biens couverts, avec, à titre accessoire, des services non couverts, le chapitre ne s’applique qu’aux biens, et non aux services ;\n- en cas d’offre groupée au sens de l’article L. 224-42-2, le chapitre s’applique également seulement aux biens.\n\nAinsi, dans un contrat combiné, l’application du chapitre est dissociée : elle concerne les biens relevant de ce régime, mais pas les autres biens ni les services accessoires qui en sont exclus.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L112-4-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 163.77430800069124,
+      "vectorSearchMs": 584.7378240004182,
+      "jinaRerankingMs": 295.273509000428,
+      "mappingMs": 0.024839000776410103,
+      "totalMs": 1043.8410689998418,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01013999991118908,
+      "contextBuilderMs": 0.025698999874293804,
+      "generationMs": 2432.4149390002713,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3476.3008190002292
+    },
+    "judge": {
+      "questionId": "q300",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les trois règles de l’article L. 217-1, II : séparation entre biens couverts et non couverts, exclusion des services accessoires non couverts lorsque la vente des biens est l’objet principal, et limitation aux seuls biens dans une offre groupée. Ces affirmations sont explicitement soutenues par le contexte et répondent directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 217-1, notamment son II, qui énonce expressément les trois hypothèses reprises dans la réponse : contrat mêlant biens couverts et non couverts, services accessoires non couverts dans un contrat principalement consacré à la vente de biens, et offre groupée. Elle est donc parfaitement pertinente et couvre toutes les affirmations importantes. Les autres sources sont accessoires."
+    }
+  },
+  "routing": {
+    "answer": "L’article L. 217-1 prévoit une application limitée du chapitre dans les contrats combinés :\n\n- si le contrat comprend des biens relevant du chapitre et d’autres biens qui n’y sont pas soumis, le chapitre ne s’applique qu’aux biens couverts ;\n- si l’objet principal est la vente de biens couverts, accompagnée à titre accessoire de services non couverts, le chapitre ne s’applique qu’aux biens ;\n- en cas d’offre groupée, il ne s’applique également qu’aux biens.\n\nAinsi, la présence de biens ou de services non couverts n’étend pas l’application du chapitre à l’ensemble du contrat.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L112-4-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1209.3184549994767,
+      "routingCalls": 1,
+      "embeddingMs": 202.51390300039202,
+      "vectorSearchMs": 49.05757699999958,
+      "jinaRerankingMs": 459.72794200014323,
+      "mappingMs": 0.02297199983149767,
+      "totalMs": 1920.6736340001225,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010350000113248825,
+      "contextBuilderMs": 0.021021000109612942,
+      "generationMs": 2459.0414159996435,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4379.757159000263
+    },
+    "judge": {
+      "questionId": "q300",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les trois règles du II de l’article L. 217-1 : contrats mêlant biens couverts et non couverts, contrat principalement relatif à des biens avec services accessoires, et offre groupée. Elle conclut justement que le chapitre ne s’applique qu’aux biens couverts. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 217-1, notamment son II, qui traite expressément des trois hypothèses visées : contrat mêlant biens couverts et non couverts, vente principale de biens avec services accessoires non couverts, et offre groupée. Elle étaye donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

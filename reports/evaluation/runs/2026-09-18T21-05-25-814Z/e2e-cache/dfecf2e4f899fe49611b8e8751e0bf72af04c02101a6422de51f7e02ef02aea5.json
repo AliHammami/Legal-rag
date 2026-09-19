@@ -1,0 +1,87 @@
+{
+  "questionId": "q015",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le délaissement d’un mineur de quinze ans est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.\n\nL’exception prévue s’applique lorsque les circonstances du délaissement ont permis d’assurer **la santé et la sécurité du mineur**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 168.41742399998475,
+      "vectorSearchMs": 568.9721819999977,
+      "jinaRerankingMs": 513.5787019999698,
+      "mappingMs": 0.031171999988146126,
+      "totalMs": 1251.0782350000227,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010043999995104969,
+      "contextBuilderMs": 0.007023999991361052,
+      "generationMs": 1285.3957229999942,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2536.5005989999627
+    },
+    "judge": {
+      "questionId": "q015",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue (sept ans d’emprisonnement et 100 000 euros d’amende) ainsi que l’exception tenant aux circonstances ayant assuré la santé et la sécurité du mineur. Ces deux éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, correspondant à l’article 227-1, est directement pertinente : elle énonce exactement la peine de sept ans d’emprisonnement et 100 000 euros d’amende, ainsi que l’exception lorsque les circonstances du délaissement ont permis d’assurer la santé et la sécurité du mineur. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le délaissement d’un mineur de quinze ans est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.\n\nL’exception s’applique si les circonstances du délaissement ont permis d’assurer **la santé et la sécurité du mineur**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.9268709999742,
+      "routingCalls": 1,
+      "embeddingMs": 205.64872900000773,
+      "vectorSearchMs": 30.369888999965042,
+      "jinaRerankingMs": 509.140580999956,
+      "mappingMs": 0.025261999981012195,
+      "totalMs": 1667.1472620000131,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009993000014219433,
+      "contextBuilderMs": 0.007077999995090067,
+      "generationMs": 1303.6535060000024,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2970.826805999968
+    },
+    "judge": {
+      "questionId": "q015",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue et l'exception relative aux circonstances ayant assuré la santé et la sécurité du mineur. Ces deux éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 227-1 et vise exactement le délaissement d’un mineur de quinze ans. Elle étaye explicitement la peine de sept ans d’emprisonnement et 100 000 euros d’amende ainsi que l’exception tenant aux circonstances ayant permis d’assurer la santé et la sécurité du mineur."
+    }
+  },
+  "failureStage": "none"
+}

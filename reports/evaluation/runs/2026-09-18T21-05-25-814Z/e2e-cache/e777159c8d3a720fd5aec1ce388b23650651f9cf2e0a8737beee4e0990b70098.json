@@ -1,0 +1,99 @@
+{
+  "questionId": "q093",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1101 du Code civil, le contrat est un **accord de volontés** entre au moins deux personnes. Il constitue donc un acte juridique fondé sur le consentement des parties et a pour objet de **créer, modifier, transmettre ou éteindre des obligations**.\n\nSes effets sont en principe limités aux parties : conformément à l’article 1199, le contrat ne crée d’obligations qu’entre elles. Les tiers ne peuvent donc ni en demander l’exécution ni être contraints de l’exécuter, sous réserve des exceptions prévues par les textes mentionnés.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1101"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1199"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 252.40252899983898,
+      "vectorSearchMs": 597.0317309999373,
+      "jinaRerankingMs": 494.1773210000247,
+      "mappingMs": 0.03259399998933077,
+      "totalMs": 1343.6956239999272,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013082000194117427,
+      "contextBuilderMs": 0.01218599989078939,
+      "generationMs": 2034.0858989998233,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3377.8152489999775
+    },
+    "judge": {
+      "questionId": "q093",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l’article 1101 et explique correctement l’effet relatif du contrat entre les parties, conformément à l’article 1199. Toutes les affirmations essentielles sont explicitement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reprend directement la définition du contrat donnée à l’article 1101, incluant l’accord de volontés et les effets possibles sur les obligations. La source 2 est directement pertinente pour l’effet relatif du contrat invoqué dans la réponse. Toutes les affirmations juridiques essentielles sont couvertes par ces extraits."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1101 du Code civil, le contrat est un **accord de volontés** entre au moins deux personnes. Sa nature juridique repose donc sur la rencontre de leurs consentements. Cet accord a pour objet de **créer, modifier, transmettre ou éteindre des obligations**.\n\nSes effets sont les suivants :\n\n- le contrat produit en principe des obligations **uniquement entre les parties** : les tiers ne peuvent ni en demander l’exécution ni être contraints de l’exécuter, conformément à l’article 1199 ;\n- les parties sont tenues non seulement par les obligations expressément prévues, mais aussi par les conséquences que leur imposent **l’équité, l’usage ou la loi**, selon l’article 1194.\n\nAinsi, le contrat constitue une source d’obligations pour les parties, dont la portée dépasse les seules stipulations écrites lorsque l’équité, l’usage ou la loi le justifient.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1101"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1199"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1194"
+      }
+    ],
+    "profiling": {
+      "routingMs": 792.7577909999527,
+      "routingCalls": 1,
+      "embeddingMs": 150.7154290000908,
+      "vectorSearchMs": 58.18683800008148,
+      "jinaRerankingMs": 482.61874999990687,
+      "mappingMs": 0.05018000002019107,
+      "totalMs": 1484.3579740000423,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016416999977082014,
+      "contextBuilderMs": 0.024182000197470188,
+      "generationMs": 2304.150204999838,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3788.5587439998053
+    },
+    "judge": {
+      "questionId": "q093",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse définit correctement le contrat conformément à l’article 1101 et explique ses effets essentiels : création, modification, transmission ou extinction d’obligations, effet relatif entre les parties et extension des obligations aux suites données par l’équité, l’usage ou la loi. Toutes les affirmations importantes sont directement soutenues par les articles 1101, 1199 et 1194 présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l’article 1101 définit le contrat et son objet, l’article 1199 établit l’effet relatif du contrat, et l’article 1194 couvre les suites résultant de l’équité, de l’usage et de la loi. Elles soutiennent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

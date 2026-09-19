@@ -1,0 +1,87 @@
+{
+  "questionId": "q357",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le professionnel est **responsable de plein droit** à l’égard du consommateur de la bonne exécution des obligations du contrat conclu à distance, y compris lorsque celles-ci sont exécutées par d’autres prestataires.\n\nIl peut toutefois s’exonérer de tout ou partie de cette responsabilité s’il prouve que l’inexécution ou la mauvaise exécution est imputable :\n\n- au consommateur ;\n- au fait imprévisible et insurmontable d’un tiers au contrat ;\n- à un cas de force majeure.\n\nLa nature de cette responsabilité est donc une **responsabilité de plein droit**, sous réserve de ces causes d’exonération.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.46872000023723,
+      "vectorSearchMs": 1064.9498250000179,
+      "jinaRerankingMs": 382.575527000241,
+      "mappingMs": 0.10314300004392862,
+      "totalMs": 1699.4107119999826,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02669600024819374,
+      "contextBuilderMs": 0.01242200005799532,
+      "generationMs": 1570.3450569994748,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3269.8054430000484
+    },
+    "judge": {
+      "questionId": "q357",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le régime de l'article L221-15 : responsabilité de plein droit pour la bonne exécution, y compris par d'autres prestataires, et exonération totale ou partielle si l'inexécution est imputable au consommateur, à un tiers présentant les caractères d'imprévisibilité et d'insurmontabilité, ou à la force majeure. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L221-15 du code de la consommation, qui régit la responsabilité du professionnel dans les contrats conclus à distance. Elle couvre intégralement les affirmations importantes : responsabilité de plein droit, application lorsque l'exécution est confiée à d'autres prestataires, et exonération totale ou partielle en cas d'imputabilité au consommateur, de fait imprévisible et insurmontable d'un tiers, ou de force majeure."
+    }
+  },
+  "routing": {
+    "answer": "Le professionnel est **responsable de plein droit** à l’égard du consommateur de la bonne exécution des obligations du contrat conclu à distance, y compris lorsque l’exécution est confiée à d’autres prestataires.\n\nIl peut toutefois s’exonérer de tout ou partie de cette responsabilité en prouvant que l’inexécution ou la mauvaise exécution est imputable :\n\n- au consommateur ;\n- au fait d’un tiers au contrat, à condition que ce fait soit imprévisible et insurmontable ;\n- à un cas de force majeure.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1630.10397499986,
+      "routingCalls": 1,
+      "embeddingMs": 254.13276899978518,
+      "vectorSearchMs": 166.72621299978346,
+      "jinaRerankingMs": 377.643562999554,
+      "mappingMs": 0.044761999510228634,
+      "totalMs": 2428.6829420002177,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0190420001745224,
+      "contextBuilderMs": 0.012519000098109245,
+      "generationMs": 2079.6901040002704,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4508.418916999362
+    },
+    "judge": {
+      "questionId": "q357",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le régime de l’article L221-15 : responsabilité de plein droit, y compris en cas d’exécution par des prestataires, et trois causes d’exonération (fait du consommateur, fait imprévisible et insurmontable d’un tiers, force majeure). Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L221-15 du code de la consommation, qui répond précisément à la question. Elle établit la responsabilité de plein droit du professionnel, y compris lorsque des prestataires exécutent les obligations, ainsi que les trois hypothèses d’exonération. Toutes les affirmations importantes de la réponse générée sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

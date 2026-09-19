@@ -1,0 +1,119 @@
+{
+  "questionId": "q287",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du chapitre s’appliquent :\n\n1. **Aux services de paiement** fournis par les prestataires de services de paiement mentionnés au livre V, dans le cadre des activités définies au II de l’article L. 314-1.\n\n2. **Lorsque les prestataires du payeur et du bénéficiaire sont situés** :\n   - l’un en France métropolitaine, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Mayotte ou à Saint-Martin ;\n   - l’autre dans l’un de ces territoires, dans un autre État membre de l’Union européenne ou dans un autre État partie à l’accord sur l’Espace économique européen ;\n   - et que l’opération est réalisée en euros ou dans la devise d’un État membre de l’Union européenne hors zone euro, ou d’un autre État partie à l’EEE.\n\n3. **Pour les opérations dans une devise d’un État extérieur à l’EEE**, seules les parties de l’opération effectuées dans l’Union sont concernées, avec certaines exceptions prévues par le texte.\n\n4. **Lorsque seul le prestataire du payeur ou celui du bénéficiaire est situé dans les territoires français précités**, quelle que soit la devise utilisée, le chapitre s’applique aux parties de l’opération effectuées dans l’Union, sous réserve des exceptions énumérées au IV de l’article L. 133-1.\n\nEn outre, le chapitre ne s’applique pas aux opérations effectuées entre prestataires de services de paiement pour leur propre compte. Des règles particulières sont prévues pour les prestataires de services d’information sur les comptes et pour la monnaie électronique.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L732-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.04094699956477,
+      "vectorSearchMs": 580.4777870001271,
+      "jinaRerankingMs": 343.71060599945486,
+      "mappingMs": 0.03237600065767765,
+      "totalMs": 1172.301575999707,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01624599937349558,
+      "contextBuilderMs": 0.030475999228656292,
+      "generationMs": 4291.907168000005,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5464.264893999323
+    },
+    "judge": {
+      "questionId": "q287",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le champ d’application des I à IV : prestataires concernés, localisations requises, distinction selon les devises EEE ou hors EEE, limitation aux parties exécutées dans l’Union et cas où un seul prestataire est situé dans les territoires visés. Elle mentionne aussi correctement les exclusions relatives aux opérations pour compte propre, aux services d’information sur les comptes et l’application à la monnaie électronique. Les exceptions des III et IV ne sont toutefois pas énumérées précisément, ce qui constitue une omission mineure de complétude. Toutes les affirmations importantes sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 4 reproduisent directement l'article L. 133-1, qui répond précisément à la question. Elles couvrent les conditions des I à IV (prestataires et activités visés, localisation, devises EEE ou hors EEE, parties exécutées dans l'Union et exceptions), ainsi que les précisions de la réponse sur les services d'information sur les comptes, les opérations entre prestataires pour leur propre compte et la monnaie électronique (V à VII)."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du chapitre s’appliquent :\n\n1. **Aux services de paiement** fournis par les prestataires mentionnés au livre V, dans le cadre des activités définies au II de l’article L. 314-1.\n\n2. **Lorsque les prestataires du bénéficiaire et du payeur sont situés** :\n   - l’un en France métropolitaine ou dans certains territoires français mentionnés par le texte, et\n   - l’autre en France, dans un autre État membre de l’Union européenne ou dans un État partie à l’accord sur l’Espace économique européen,\n   \n   et que l’opération est réalisée :\n   - en euros ;\n   - dans la devise d’un État membre de l’Union européenne hors zone euro ;\n   - ou dans la devise d’un autre État partie à l’accord sur l’Espace économique européen.\n\n3. **Lorsque l’opération est réalisée dans la devise d’un État extérieur à l’Espace économique européen**, les dispositions s’appliquent seulement aux parties de l’opération effectuées dans l’Union européenne, avec certaines exceptions prévues par le texte.\n\n4. **Lorsque seul le prestataire du bénéficiaire ou celui du payeur est situé dans les territoires français concernés**, quelle que soit la devise utilisée, les dispositions s’appliquent aux parties de l’opération effectuées dans l’Union européenne, sous réserve des exclusions énumérées au IV.\n\nEn outre :\n\n- certaines dispositions seulement s’appliquent aux services fournis par les prestataires de services d’information sur les comptes ;\n- le chapitre ne s’applique pas aux opérations effectuées entre prestataires de services de paiement pour leur propre compte ;\n- il s’applique à l’émission et à la gestion de monnaie électronique, sans préjudice de règles particulières.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L732-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 987.3513989998028,
+      "routingCalls": 1,
+      "embeddingMs": 250.18867400009185,
+      "vectorSearchMs": 255.3393259998411,
+      "jinaRerankingMs": 330.4945120001212,
+      "mappingMs": 0.06039400026202202,
+      "totalMs": 1823.4783660005778,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013955000787973404,
+      "contextBuilderMs": 0.04764899984002113,
+      "generationMs": 3502.05382000003,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5325.602474000305
+    },
+    "judge": {
+      "questionId": "q287",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les conditions des I à IV de l’article L. 133-1 : qualité des prestataires, localisation des PSP, devises concernées, application limitée aux parties exécutées dans l’Union dans les cas prévus et exceptions. Elle mentionne aussi fidèlement les règles des V à VII relatives aux prestataires d’information sur les comptes, aux opérations inter-PSP pour compte propre et à la monnaie électronique. Les formulations synthétiques sur les exceptions restent conformes au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 4 reproduisent directement et intégralement les conditions d’application de l’article L. 133-1, I à VII : champ des services, localisation des prestataires, devises, limitation aux parties réalisées dans l’Union, exceptions, prestataires d’information sur les comptes, opérations inter-prestataires et monnaie électronique. Elles couvrent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

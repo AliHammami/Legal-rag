@@ -1,0 +1,87 @@
+{
+  "questionId": "q290",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le gouverneur de la Banque de France doit adresser **au moins une fois par an** au **Président de la République et au Parlement** un rapport portant sur :\n\n- les opérations de la Banque de France ;\n- la politique monétaire mise en œuvre dans le cadre du Système européen de banques centrales ;\n- les perspectives de cette politique.\n\nIl est entendu par les **commissions des finances de l’Assemblée nationale et du Sénat**, à leur initiative, dans le respect de l’article 108 du traité instituant la Communauté européenne et des règles de confidentialité de la Banque centrale européenne. Il peut également demander à être entendu par ces commissions.\n\nEnfin, les comptes de la Banque de France et le rapport des commissaires aux comptes sont transmis aux commissions des finances des deux assemblées.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L143-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.5246819993481,
+      "vectorSearchMs": 679.2759419996291,
+      "jinaRerankingMs": 305.1185510000214,
+      "mappingMs": 0.03172399941831827,
+      "totalMs": 1206.9938350003213,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011466999538242817,
+      "contextBuilderMs": 0.008866999298334122,
+      "generationMs": 1755.400512999855,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2962.4247309993953
+    },
+    "judge": {
+      "questionId": "q290",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de l'article fourni : destinataires, périodicité et objet du rapport annuel ; audition à l'initiative des commissions, possibilité pour le gouverneur de la demander, et conditions de respect du traité et de la confidentialité ; transmission des comptes et du rapport des commissaires aux comptes aux commissions des finances des deux assemblées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article L143-1, est directement pertinente : elle traite précisément du rapport annuel du gouverneur, de ses destinataires et de son contenu, des modalités et conditions de son audition par les commissions des finances, ainsi que de la transmission des comptes et du rapport des commissaires aux comptes. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le gouverneur de la Banque de France doit adresser **au Président de la République et au Parlement**, **au moins une fois par an**, un rapport portant sur :\n\n- les opérations de la Banque de France ;\n- la politique monétaire mise en œuvre dans le cadre du Système européen de banques centrales ;\n- les perspectives de cette politique.\n\nIl est entendu par les commissions des finances de l’Assemblée nationale et du Sénat **à l’initiative de celles-ci**, dans le respect de l’article 108 du traité instituant la Communauté européenne et des règles de confidentialité de la Banque centrale européenne. Il peut également demander lui-même à être entendu par ces commissions.\n\nEnfin, les comptes de la Banque de France et le rapport des commissaires aux comptes sont transmis aux commissions des finances de l’Assemblée nationale et du Sénat.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L143-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1157.1223600003868,
+      "routingCalls": 1,
+      "embeddingMs": 221.80614100024104,
+      "vectorSearchMs": 110.98602599930018,
+      "jinaRerankingMs": 306.0858030002564,
+      "mappingMs": 0.03720800019800663,
+      "totalMs": 1796.0648670000955,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010201000608503819,
+      "contextBuilderMs": 0.00853000022470951,
+      "generationMs": 1820.4466220000759,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3616.5378069998696
+    },
+    "judge": {
+      "questionId": "q290",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de l'article fourni : destinataires, périodicité et objet du rapport annuel ; audition à l'initiative des commissions, sous les réserves prévues, et possibilité pour le gouverneur de la solliciter ; transmission des comptes et du rapport des commissaires aux comptes aux commissions des finances des deux assemblées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L143-1 et répond à l’ensemble de la question : destinataires, périodicité et contenu du rapport ; modalités et réserves applicables aux auditions ; faculté du gouverneur de demander une audition ; transmission des comptes et du rapport des commissaires aux comptes. Toutes les affirmations importantes de la réponse générée y sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q343",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 616-1, le professionnel doit :\n\n- communiquer au consommateur les coordonnées du ou des médiateurs compétents dont il relève, selon les modalités fixées par décret en Conseil d’État ;\n- fournir à nouveau ces informations lorsqu’un litige n’a pas pu être réglé après une réclamation préalable directement adressée à ses services.\n\nCes coordonnées doivent être affichées de manière visible et lisible sur le site internet du professionnel, ses conditions générales de vente ou de service, ses bons de commande ou, à défaut, par tout autre moyen approprié. L’adresse du site internet du ou des médiateurs doit également être mentionnée.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R616-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.59429300017655,
+      "vectorSearchMs": 796.3412199998274,
+      "jinaRerankingMs": 319.233808000572,
+      "mappingMs": 0.02703200001269579,
+      "totalMs": 1342.2518019992858,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010456000454723835,
+      "contextBuilderMs": 0.01207400020211935,
+      "generationMs": 1786.4200360001996,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3128.7035900000483
+    },
+    "judge": {
+      "questionId": "q343",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article L. 616-1 : communication selon les modalités fixées par décret en Conseil d’État, puis fourniture de l’information lorsqu’un litige subsiste après une réclamation préalable auprès des services du professionnel. Les précisions sur l’affichage et l’adresse du site des médiateurs sont correctement fondées sur l’article R. 616-1 présent dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 616-1 et couvre les deux obligations visées : communication selon des modalités fixées par décret en Conseil d'État et fourniture de la même information après l'échec d'une réclamation préalable. La source 1, prise en application de cet article, couvre précisément les modalités concrètes d'affichage ainsi que la mention de l'adresse du site des médiateurs, ajoutées dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 616-1, le professionnel doit communiquer au consommateur les coordonnées du ou des médiateurs compétents :\n\n- de manière générale, selon les modalités fixées par décret en Conseil d’État ;\n- également lorsqu’un litige n’a pas pu être réglé après une réclamation préalable directement adressée à ses services.\n\nCette information doit être rendue visible et lisible notamment sur le site internet, les conditions générales de vente ou de service, les bons de commande ou, à défaut, par tout autre moyen approprié. L’adresse du site internet du ou des médiateurs doit aussi être indiquée.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R616-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 938.0827529998496,
+      "routingCalls": 1,
+      "embeddingMs": 250.40530999936163,
+      "vectorSearchMs": 69.25460899993777,
+      "jinaRerankingMs": 324.47045600041747,
+      "mappingMs": 0.04238400049507618,
+      "totalMs": 1582.2948449999094,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015168999321758747,
+      "contextBuilderMs": 0.02144200075417757,
+      "generationMs": 2015.198169999756,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3597.537968999706
+    },
+    "judge": {
+      "questionId": "q343",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article L. 616-1 : communication générale selon les modalités réglementaires et fourniture en cas d’échec d’une réclamation préalable auprès des services du professionnel. Les précisions sur les supports et l’adresse du site du médiateur sont également explicitement fondées par l’article R. 616-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 616-1 et couvre les deux obligations invoquées : communication selon les modalités fixées par décret en Conseil d’État et fourniture de l’information après l’échec d’une réclamation préalable auprès des services du professionnel. La source 1, prise en application de cet article, couvre précisément les précisions ajoutées sur les supports visibles et lisibles ainsi que sur l’adresse du site des médiateurs. Toutes les affirmations importantes de la réponse sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

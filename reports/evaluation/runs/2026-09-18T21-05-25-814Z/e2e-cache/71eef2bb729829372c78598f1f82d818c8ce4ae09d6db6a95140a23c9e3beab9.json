@@ -1,0 +1,87 @@
+{
+  "questionId": "q351",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’urgence, le juge des référés peut ordonner toute mesure propre à empêcher ou faire cesser une atteinte à l’intimité de la vie privée, notamment :\n\n- un séquestre ;\n- une saisie ;\n- toute autre mesure appropriée.\n\nCes mesures sont applicables lorsqu’il existe une atteinte à la vie privée nécessitant une intervention urgente. Elles peuvent être ordonnées sans préjudice de la réparation du dommage subi.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 250.3129040002823,
+      "vectorSearchMs": 959.2871310003102,
+      "jinaRerankingMs": 422.8525700001046,
+      "mappingMs": 5.469827999360859,
+      "totalMs": 1638.328409999609,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.3054459998384118,
+      "contextBuilderMs": 0.14182200003415346,
+      "generationMs": 1935.7170219998807,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3574.589465999976
+    },
+    "judge": {
+      "questionId": "q351",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les mesures possibles (séquestre, saisie et toute autre mesure appropriée), leur objet (empêcher ou faire cesser l’atteinte) et leurs conditions de prononcé en référé (urgence), tout en mentionnant l’absence de préjudice pour la réparation du dommage. Ces éléments sont directement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit l’article 9 du code civil et est directement pertinente : elle prévoit les mesures telles que le séquestre et la saisie, ainsi que toute autre mesure propre à empêcher ou faire cesser une atteinte à l’intimité de la vie privée. Elle couvre également les conditions évoquées dans la réponse, notamment l’urgence pour le prononcé en référé et le fait que ces mesures sont sans préjudice de la réparation du dommage subi."
+    }
+  },
+  "routing": {
+    "answer": "En cas d’urgence, le juge des référés peut ordonner toute mesure propre à empêcher ou faire cesser une atteinte à l’intimité de la vie privée, notamment :\n\n- un séquestre ;\n- une saisie ;\n- ou toute autre mesure appropriée.\n\nCes mesures peuvent être ordonnées sans préjudice de la réparation du dommage subi.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1233.834848000668,
+      "routingCalls": 1,
+      "embeddingMs": 231.0002039996907,
+      "vectorSearchMs": 99.9210789995268,
+      "jinaRerankingMs": 355.71953000035137,
+      "mappingMs": 0.05368399992585182,
+      "totalMs": 1920.560231000185,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01831700000911951,
+      "contextBuilderMs": 0.017045999877154827,
+      "generationMs": 1660.997192000039,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3581.602615999989
+    },
+    "judge": {
+      "questionId": "q351",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le séquestre, la saisie et toute autre mesure appropriée, précise qu’elles visent à empêcher ou faire cesser l’atteinte à l’intimité de la vie privée, et indique la condition d’urgence pour qu’elles soient ordonnées en référé. Elle mentionne aussi qu’elles sont sans préjudice de la réparation du dommage. Tous ces éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 9 du Code civil, qui vise les mesures pouvant être prescrites (séquestre, saisie et autres mesures propres à empêcher ou faire cesser l’atteinte), leur objet, la réserve de la réparation du dommage, et la condition d’urgence pour qu’elles puissent être ordonnées en référé. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

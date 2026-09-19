@@ -1,0 +1,119 @@
+{
+  "questionId": "q001",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne contient pas le texte de l’article 222-1 ni la peine de base qu’il prévoit. Il ne permet donc pas de déterminer précisément la peine encourue.\n\nIl indique seulement que cette peine peut être aggravée à :\n\n- 20 ans de réclusion criminelle dans les cas de l’article 222-3 ;\n- 30 ans de réclusion criminelle dans les cas des articles 222-4 et 222-5 ;\n- la réclusion criminelle à perpétuité si les tortures ont entraîné la mort sans intention de la donner, selon l’article 222-6.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-5"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 826.3399419999987,
+      "vectorSearchMs": 3316.9845490000007,
+      "jinaRerankingMs": 303.74770999999964,
+      "mappingMs": 0.0371579999991809,
+      "totalMs": 4459.008808000002,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04870699999810313,
+      "contextBuilderMs": 0.05435899999793037,
+      "generationMs": 2593.0658380000023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7054.093622
+    },
+    "judge": {
+      "questionId": "q001",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne donne pas la peine de base demandée par l'article 222-1, qui est de quinze ans de réclusion criminelle, et s'abstient à tort alors qu'une réponse était attendue. Elle est toutefois correctement fondée sur le contexte quant à l'absence du texte de l'article 222-1 et quant aux peines aggravées qu'elle mentionne (20 ans, 30 ans et perpétuité)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont pertinentes pour les peines aggravées évoquées : l'article 222-3 prévoit vingt ans, les articles 222-4 et 222-5 trente ans, et l'article 222-6 la perpétuité. Elles ne contiennent toutefois pas l'article 222-1 ni sa peine de base, directement demandée, de sorte qu'elles sont insuffisantes pour répondre pleinement à la question. Elles couvrent néanmoins les affirmations de la réponse générée : l'absence dans le contexte du texte et de la peine de base de l'article 222-1 est vérifiable, et toutes les aggravations énumérées sont soutenues par les sources."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne reproduit pas l’article 222-1 et ne permet donc pas de déterminer la peine de base encourue pour avoir soumis une personne à des tortures.\n\nIl indique toutefois que cette peine peut être aggravée :\n- à **20 ans de réclusion criminelle** dans certains cas (article 222-3) ;\n- à **30 ans** notamment en bande organisée, de manière habituelle sur certaines victimes ou en cas de mutilation ou d’infirmité permanente (articles 222-4 et 222-5) ;\n- à la **réclusion criminelle à perpétuité** si les tortures ont entraîné la mort sans intention de la donner (article 222-6).",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-5"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 840.6734530000031,
+      "routingCalls": 1,
+      "embeddingMs": 261.8466799999951,
+      "vectorSearchMs": 57.256381999999576,
+      "jinaRerankingMs": 264.4513999999981,
+      "mappingMs": 0.11991800000396324,
+      "totalMs": 1424.407594999997,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.024849999994330574,
+      "contextBuilderMs": 0.23484199999802513,
+      "generationMs": 2376.984672999999,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3801.6817819999997
+    },
+    "judge": {
+      "questionId": "q001",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la peine de base demandée à l'article 222-1, qui est de quinze ans de réclusion criminelle. Elle décrit toutefois correctement plusieurs régimes d'aggravation figurant dans le contexte. Son refus de répondre à la peine de base constitue une abstention alors qu'une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent sur des circonstances aggravantes d'une infraction renvoyant à l'article 222-1, mais ne reproduisent pas cet article ni sa peine de base : elles sont donc seulement partiellement pertinentes pour répondre directement à la question. En revanche, elles couvrent les affirmations de la réponse générée : vingt ans dans certains cas (art. 222-3), trente ans en bande organisée, de manière habituelle sur certaines victimes ou en cas de mutilation/infirmité permanente (art. 222-4 et 222-5), et perpétuité en cas de mort sans intention de la donner (art. 222-6). Elles permettent également de constater que la peine de base n'est pas fournie dans le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

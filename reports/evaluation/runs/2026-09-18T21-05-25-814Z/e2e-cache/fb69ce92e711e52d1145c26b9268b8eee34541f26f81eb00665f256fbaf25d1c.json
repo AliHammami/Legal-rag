@@ -1,0 +1,91 @@
+{
+  "questionId": "q203",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L249-1, peuvent être prononcées à titre de peines complémentaires :\n\n- l’interdiction d’exercer une fonction publique ;\n- l’interdiction d’exercer l’activité professionnelle ou sociale dans le cadre de laquelle l’infraction a été commise ;\n- l’interdiction d’exercer une profession commerciale ou industrielle ;\n- l’interdiction de diriger, administrer, gérer ou contrôler, directement ou indirectement, pour son propre compte ou pour autrui, une entreprise commerciale ou industrielle ou une société commerciale.\n\nCes interdictions peuvent être prononcées cumulativement.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L249-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.6124699995853,
+      "vectorSearchMs": 580.8030779999681,
+      "jinaRerankingMs": 605.808128000237,
+      "mappingMs": 0.02566999988630414,
+      "totalMs": 1388.279360000044,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011334999930113554,
+      "contextBuilderMs": 0.03957499982789159,
+      "generationMs": 1372.1965570002794,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2760.5443049999885
+    },
+    "judge": {
+      "questionId": "q203",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’ensemble des interdictions prévues par l’article L249-1, y compris les précisions sur la direction, l’administration, la gestion ou le contrôle direct ou indirect d’une entreprise ou société commerciale. Elle indique correctement leur caractère cumulatif et toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L249-1 et énonce toutes les interdictions mentionnées dans la réponse, y compris l’exercice d’une fonction publique, l’activité professionnelle ou sociale liée à l’infraction, la profession commerciale ou industrielle, ainsi que la direction, l’administration, la gestion ou le contrôle direct ou indirect d’une entreprise ou société commerciale. Elle confirme également que ces interdictions peuvent être cumulatives. La source 2 est redondante mais cohérente."
+    }
+  },
+  "routing": {
+    "answer": "Peuvent être prononcées, cumulativement :\n\n- l’interdiction d’exercer une fonction publique ;\n- l’interdiction d’exercer l’activité professionnelle ou sociale dans le cadre de laquelle l’infraction a été commise ;\n- l’interdiction d’exercer une profession commerciale ou industrielle ;\n- l’interdiction de diriger, administrer, gérer ou contrôler, directement ou indirectement, une entreprise commerciale ou industrielle ou une société commerciale, pour son propre compte ou pour le compte d’autrui.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L249-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2631.0721889999695,
+      "routingCalls": 1,
+      "embeddingMs": 193.0942809996195,
+      "vectorSearchMs": 173.0527389999479,
+      "jinaRerankingMs": 562.1072120000608,
+      "mappingMs": 0.0386069999076426,
+      "totalMs": 3559.3911770000122,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011042000260204077,
+      "contextBuilderMs": 0.00876499991863966,
+      "generationMs": 1397.0779960001819,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4956.49638100015
+    },
+    "judge": {
+      "questionId": "q203",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère correctement les quatre interdictions prévues par l’article L249-1, y compris les précisions sur le contrôle direct ou indirect, pour son propre compte ou pour autrui, et indique qu’elles peuvent être prononcées cumulativement. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L249-1 visé par la question. Elle énonce chacune des interdictions listées dans la réponse, y compris les modalités relatives à la direction, administration, gestion ou contrôle direct ou indirect d’une entreprise ou société commerciale, pour son compte ou celui d’autrui, ainsi que leur caractère cumulatif."
+    }
+  },
+  "failureStage": "none"
+}

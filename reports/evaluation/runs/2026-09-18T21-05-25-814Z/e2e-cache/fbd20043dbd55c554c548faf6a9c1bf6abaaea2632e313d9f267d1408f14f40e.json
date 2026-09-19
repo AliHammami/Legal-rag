@@ -1,0 +1,87 @@
+{
+  "questionId": "q353",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les obligations d’une personne concernant son concours à la justice.\n\nEn revanche, lorsqu’un salarié a rompu abusivement son contrat de travail et conclut un nouveau contrat, le nouvel employeur est solidairement responsable du dommage causé à l’ancien employeur dans les cas suivants :\n\n1. Il est démontré qu’il est intervenu dans la rupture ;\n2. Il a engagé le salarié en sachant que celui-ci était encore lié par un contrat de travail ;\n3. Il a continué à l’employer après avoir appris qu’il était encore lié à un autre employeur.\n\nDans ce troisième cas, sa responsabilité n’est pas engagée si, au moment où il a été averti, le contrat était déjà arrivé à expiration : par l’arrivée du terme pour un CDD, ou par l’expiration du préavis ou l’écoulement d’un délai de quinze jours depuis la rupture pour un CDI.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 198.2256720000878,
+      "vectorSearchMs": 813.2618180001155,
+      "jinaRerankingMs": 321.1217719996348,
+      "mappingMs": 0.0455510001629591,
+      "totalMs": 1332.7031519999728,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017110000364482403,
+      "contextBuilderMs": 0.03410799987614155,
+      "generationMs": 2304.465165999718,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3637.3107049996033
+    },
+    "judge": {
+      "questionId": "q353",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon détaillée les trois hypothèses de responsabilité solidaire du nouvel employeur, y compris l’exception liée à l’expiration du contrat. Elle omet toutefois la réponse de fond à la première partie : l’article 10 du code civil impose à chacun de prêter son concours à la justice, sous peine d’astreinte ou d’amende civile. Cette omission est justifiée au regard du contexte effectivement fourni, qui ne contient que l’article L1237-3 : toutes les affirmations formulées sont donc fondées sur ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie (article L1237-3 du code du travail) est directement pertinente et très complète pour la seconde partie de la question : elle énonce les trois hypothèses de responsabilité solidaire du nouvel employeur ainsi que l’exception tenant à l’expiration du CDD, du préavis ou au délai de quinze jours pour le CDI. Elle ne permet toutefois pas de répondre positivement à la première partie relative au concours à la justice, ce qui justifie une pertinence seulement partielle. La réponse générée constate explicitement l’absence de précision du contexte sur ce point et toutes ses affirmations de fond sur la responsabilité du nouvel employeur sont couvertes par la source."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne précise pas les obligations imposées à une personne concernant son concours à la justice.\n\nS’agissant du nouvel employeur, il est solidairement responsable du dommage causé à l’ancien employeur lorsque le salarié a rompu abusivement son contrat et que le nouvel employeur :\n\n1. est intervenu dans la rupture ;\n2. a engagé le salarié en sachant qu’il était déjà lié par un contrat de travail ;\n3. a continué à l’employer après avoir appris qu’il était encore lié à un autre employeur.\n\nDans ce troisième cas, la responsabilité n’est pas engagée si, au moment où le nouvel employeur a été averti, le contrat abusivement rompu avait déjà pris fin : par l’arrivée du terme pour un CDD, ou par l’expiration du préavis ou l’écoulement d’un délai de quinze jours depuis la rupture pour un CDI.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3198.021185999736,
+      "routingCalls": 1,
+      "embeddingMs": 252.3403310002759,
+      "vectorSearchMs": 488.24692799989134,
+      "jinaRerankingMs": 281.33428800012916,
+      "mappingMs": 0.025565999560058117,
+      "totalMs": 4220.049624000676,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010658000595867634,
+      "contextBuilderMs": 0.008675999939441681,
+      "generationMs": 2386.6552510000765,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6606.732340999879
+    },
+    "judge": {
+      "questionId": "q353",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon complète les trois hypothèses de responsabilité solidaire du nouvel employeur, ainsi que l’exception applicable en cas de CDD arrivé à terme ou de CDI après expiration du préavis ou quinze jours. En revanche, elle ne répond pas à la première partie de la question relative au concours à la justice, alors que la référence attend l’obligation de collaborer à la justice sous peine d’astreinte ou d’amende civile. Cette omission réduit la correction et la complétude globales. Toutes les affirmations juridiques formulées sur le nouvel employeur sont directement étayées par le contexte, lequel ne contient effectivement aucune information sur le concours à la justice."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie (article L1237-3 du code du travail) est directement pertinente pour la seconde partie de la question et couvre intégralement les conditions de responsabilité solidaire du nouvel employeur ainsi que l'exception liée à l'expiration du contrat. Elle ne traite pas du concours à la justice, mais elle permet de constater que le contexte ne contient pas cette information, ce que la réponse générée formule explicitement. Toutes les affirmations substantielles de la réponse sont donc étayées par la source ou correspondent au constat d'absence d'information dans le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

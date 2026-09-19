@@ -1,0 +1,87 @@
+{
+  "questionId": "q258",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Il peut offrir des opérations de banque à des personnes physiques résidant en France uniquement :\n\n- s’il a obtenu l’autorisation préalable de l’Autorité de contrôle prudentiel et de résolution ;\n- et dans les conditions fixées par le présent chapitre.\n\nCela concerne les établissements dont le siège est situé dans un État figurant sur la liste du Comité d’aide au développement de l’OCDE et qui n’est pas partie à l’accord sur l’Espace économique européen.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L318-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.33541900012642,
+      "vectorSearchMs": 1009.8951050001197,
+      "jinaRerankingMs": 1841.3976559997536,
+      "mappingMs": 0.03310400014743209,
+      "totalMs": 3090.6933830003254,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010367000009864569,
+      "contextBuilderMs": 0.00774900009855628,
+      "generationMs": 1827.4175890004262,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4918.137203999795
+    },
+    "judge": {
+      "questionId": "q258",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les conditions légales : siège dans un État bénéficiaire de l’aide publique au développement figurant sur la liste du CAD de l’OCDE, non partie à l’EEE, autorisation préalable de l’ACPR et respect des conditions du chapitre. Tous ces éléments sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l'article L318-1 vise exactement les établissements de crédit ayant leur siège dans un État bénéficiaire de l'aide publique au développement, non partie à l'EEE, et leurs offres d'opérations de banque à des personnes physiques résidant en France. Elle couvre l'ensemble des affirmations importantes de la réponse générée : autorisation préalable de l'ACPR, respect des conditions du chapitre, inscription sur la liste du CAD de l'OCDE et exclusion des États parties à l'accord EEE."
+    }
+  },
+  "routing": {
+    "answer": "Il ne peut offrir ces opérations de banque que si :\n\n- son siège social est situé dans un État figurant sur la liste des États bénéficiaires de l’aide publique au développement établie par le Comité d’aide au développement de l’OCDE ;\n- cet État n’est pas partie à l’accord sur l’Espace économique européen ;\n- il a obtenu l’autorisation préalable de l’Autorité de contrôle prudentiel et de résolution ;\n- il respecte les conditions fixées par le chapitre concerné.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L318-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1248.4464730001055,
+      "routingCalls": 1,
+      "embeddingMs": 219.98866900010034,
+      "vectorSearchMs": 160.8006310001947,
+      "jinaRerankingMs": 374.04832100030035,
+      "mappingMs": 0.033276999834924936,
+      "totalMs": 2003.3495460003614,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013809999916702509,
+      "contextBuilderMs": 0.009267000015825033,
+      "generationMs": 1417.8215339998715,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3421.2030420000665
+    },
+    "judge": {
+      "questionId": "q258",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement toutes les conditions de l’article : État figurant sur la liste OCDE des bénéficiaires de l’APD, État non partie à l’EEE, autorisation préalable de l’ACPR et respect des conditions du chapitre. Ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L318-1 vise précisément les établissements de crédit ayant leur siège dans un État bénéficiaire de l’aide publique au développement et les conditions d’offre d’opérations de banque à des personnes physiques résidant en France. Elle couvre explicitement l’inscription sur la liste du CAD de l’OCDE, l’absence de participation à l’EEE, l’autorisation préalable de l’ACPR et le respect des conditions du chapitre."
+    }
+  },
+  "failureStage": "none"
+}

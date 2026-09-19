@@ -1,0 +1,103 @@
+{
+  "questionId": "q175",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L222-1, les associés commanditaires ne répondent des dettes sociales qu’à concurrence du montant de leur apport. Cet apport ne peut toutefois pas être réalisé en industrie.\n\nPrécision : l’article concerne les associés commanditaires d’une société en commandite simple, et non d’une société en nom collectif.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L222-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-162-16"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 164.33902799990028,
+      "vectorSearchMs": 598.8105000001378,
+      "jinaRerankingMs": 506.59781700000167,
+      "mappingMs": 0.03162699984386563,
+      "totalMs": 1269.8064589998685,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010122000239789486,
+      "contextBuilderMs": 0.018704000394791365,
+      "generationMs": 1800.308760999702,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3070.1514539998025
+    },
+    "judge": {
+      "questionId": "q175",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l'article L222-1 : les commanditaires ne répondent des dettes sociales qu'à concurrence de leur apport, lequel ne peut être un apport en industrie. La précision corrige utilement l'inexactitude de la formulation de la question : l'article concerne la société en commandite simple, tandis que les commandités ont le statut d'associés en nom collectif."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L222-1 et couvre intégralement les deux affirmations principales : responsabilité limitée au montant de l'apport et interdiction de l'apport en industrie. Elle indique aussi que les associés commandités ont le statut des associés en nom collectif, ce qui étaye la précision selon laquelle les commanditaires visés ne sont pas des associés d'une SNC. La source 2 confirme par contraste le régime des associés en nom collectif."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L222-1, les associés commanditaires ne répondent des dettes sociales qu’à concurrence du montant de leur apport. Celui-ci ne peut pas consister en un apport en industrie.\n\nÀ proprement parler, cette règle concerne les associés commanditaires, et non les associés d’une société en nom collectif : dans une SNC, les associés répondent indéfiniment et solidairement des dettes sociales selon l’article L221-1.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L222-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1208.574188000057,
+      "routingCalls": 1,
+      "embeddingMs": 248.92502399999648,
+      "vectorSearchMs": 163.81045099999756,
+      "jinaRerankingMs": 503.2266389997676,
+      "mappingMs": 0.08968099998310208,
+      "totalMs": 2124.6484329998493,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016789000015705824,
+      "contextBuilderMs": 0.015376999974250793,
+      "generationMs": 1971.9108699997887,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4096.598129000049
+    },
+    "judge": {
+      "questionId": "q175",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la règle de l’article L222-1 : les commanditaires ne répondent des dettes sociales qu’à concurrence de leur apport, lequel ne peut être un apport en industrie. Elle relève utilement l’ambiguïté de la question : l’article vise les commanditaires d’une société en commandite simple, tandis que les associés d’une SNC sont indéfiniment et solidairement responsables selon l’article L221-1. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 énonce directement la limitation de responsabilité des associés commanditaires au montant de leur apport et l’interdiction de l’apport en industrie. La source 2 couvre directement la précision apportée sur les associés d’une SNC, qui répondent indéfiniment et solidairement des dettes sociales. Toutes les affirmations importantes de la réponse sont ainsi explicitement étayées."
+    }
+  },
+  "failureStage": "none"
+}

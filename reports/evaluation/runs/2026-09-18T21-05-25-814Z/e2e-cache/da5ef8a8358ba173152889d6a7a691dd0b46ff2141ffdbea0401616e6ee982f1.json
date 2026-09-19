@@ -1,0 +1,107 @@
+{
+  "questionId": "q272",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L. 433-1 distingue plusieurs situations :\n\n- **Société établie dans un État membre de l’Union européenne ou de l’EEE autre que la France** : les règles françaises s’appliquent si :\n  1. ses titres de capital avec droits de vote ne sont pas admis aux négociations sur un marché réglementé de l’État de son siège statutaire ;\n  2. ces titres ont été admis pour la première fois en France sur un marché réglementé d’un État membre de l’Union européenne ou de l’EEE.\n\n- **Admission simultanée dans plusieurs États** : l’AMF est compétente si elle a été désignée comme autorité compétente, soit par les autorités concernées dans certains cas antérieurs au 20 mai 2006, soit par la société faisant l’objet de l’offre dans les cas postérieurs à cette date. La société doit informer l’AMF, qui rend cette décision publique.\n\n- **Société établie hors de l’Union européenne et de l’EEE** : les conditions d’application des règles françaises sont fixées par le règlement général de l’AMF lorsque ses instruments financiers sont admis aux négociations sur un marché réglementé français.\n\nLe critère central est donc le **lieu du siège statutaire**, combiné au **lieu d’admission aux négociations des titres** et, le cas échéant, à la **désignation de l’AMF comme autorité compétente**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 377.0225320002064,
+      "vectorSearchMs": 709.184991999995,
+      "jinaRerankingMs": 348.5922530000098,
+      "mappingMs": 0.048676999751478434,
+      "totalMs": 1434.9019939997233,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016638000030070543,
+      "contextBuilderMs": 0.034204000141471624,
+      "generationMs": 2967.463136999868,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.437762999907
+    },
+    "judge": {
+      "questionId": "q272",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les critères du II de l'article L. 433-1 (siège dans l'UE/EEE hors France, absence d'admission dans l'État du siège et première admission en France), ainsi que les règles pertinentes en cas d'admission simultanée. Elle ajoute de façon exacte le régime des sociétés hors UE/EEE prévu au III. Toutes ces affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 reproduisent directement l'article L. 433-1 et sont précisément pertinentes. Elles étayent les critères applicables aux sociétés UE/EEE hors France, le cas de première admission simultanée et de désignation de l'AMF, ainsi que le régime des sociétés hors UE/EEE admises sur un marché réglementé français. La source 3 est hors sujet mais n'affecte pas la couverture assurée par les deux premières."
+    }
+  },
+  "routing": {
+    "answer": "L’article L. 433-1 distingue deux situations :\n\n- **Société ayant son siège statutaire dans un autre État de l’Union européenne ou de l’EEE que la France** : les règles françaises s’appliquent lorsque :\n  1. ses titres de capital assortis de droits de vote ne sont pas admis aux négociations sur un marché réglementé de l’État de son siège ;\n  2. ces titres ont été admis pour la première fois aux négociations sur un marché réglementé français.\n\n  En cas d’admission simultanée dans plusieurs États, l’Autorité des marchés financiers doit avoir été désignée comme autorité compétente, notamment par la société concernée ou par les autorités des autres États concernés.\n\n- **Société ayant son siège hors de l’Union européenne et de l’EEE** : les règles françaises peuvent s’appliquer lorsque ses instruments financiers sont admis aux négociations sur un marché réglementé français, selon les conditions fixées par le règlement général de l’AMF.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-5"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L433-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 901.7436840003356,
+      "routingCalls": 1,
+      "embeddingMs": 193.29552200017497,
+      "vectorSearchMs": 215.16468400042504,
+      "jinaRerankingMs": 926.6701079998165,
+      "mappingMs": 0.05551299965009093,
+      "totalMs": 2236.9598749997094,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016480999998748302,
+      "contextBuilderMs": 0.043169999960809946,
+      "generationMs": 2671.464628999587,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4908.493666000199
+    },
+    "judge": {
+      "questionId": "q272",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux critères cumulatifs du II de l’article L. 433-1 pour une société établie dans un autre État de l’UE/EEE : absence d’admission dans l’État du siège et première admission sur un marché réglementé en France. Elle ajoute correctement les règles applicables aux admissions simultanées ainsi que le cas des sociétés hors UE/EEE, tous explicitement prévus par le contexte. Elle répond donc pleinement, sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 2 et 3 reproduisent directement les dispositions pertinentes de l'article L. 433-1. Elles étayent les deux critères cumulatifs applicables aux sociétés ayant leur siège dans un autre État de l'UE/EEE, les modalités en cas de première admission simultanée, ainsi que le renvoi au règlement général de l'AMF pour les sociétés hors UE/EEE admises sur un marché réglementé français. La source 4 est non nécessaire et la source 1 est périphérique, sans affecter la pertinence et la couverture globales."
+    }
+  },
+  "failureStage": "none"
+}

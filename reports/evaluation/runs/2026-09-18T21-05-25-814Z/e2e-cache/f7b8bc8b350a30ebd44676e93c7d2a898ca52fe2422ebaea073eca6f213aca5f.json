@@ -1,0 +1,91 @@
+{
+  "questionId": "q098",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsque la sanction civile est cumulable avec une amende administrative ou pénale infligée pour les mêmes faits, le montant global des amendes prononcées ne peut pas dépasser le maximum légal le plus élevé.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1254"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.79378000018187,
+      "vectorSearchMs": 561.5446150000207,
+      "jinaRerankingMs": 582.9068170001265,
+      "mappingMs": 0.030567000154405832,
+      "totalMs": 1352.304885999998,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01080499985255301,
+      "contextBuilderMs": 0.007846999913454056,
+      "generationMs": 1100.417945999885,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2452.7500779998954
+    },
+    "judge": {
+      "questionId": "q098",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement la règle prévue par le contexte : en cas de cumul avec une amende administrative ou pénale pour les mêmes faits, le total des amendes ne peut excéder le maximum légal le plus élevé. Elle répond directement à la question et est entièrement étayée par l'article fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la disposition applicable au cumul d’une sanction civile avec une amende administrative ou pénale pour les mêmes faits. Elle énonce expressément que le montant global des amendes prononcées ne peut dépasser le maximum légal le plus élevé, ce qui couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne précise pas les règles de cumul entre l’amende civile prévue à l’article L. 242-18-1 et une amende administrative ou pénale prononcée pour les mêmes faits.\n\nIl indique seulement que plusieurs sanctions administratives prononcées pour des manquements en concours s’exécutent cumulativement (article L. 522-7). Cette disposition ne permet pas de déterminer les limitations applicables au cumul avec une sanction civile ou pénale.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L522-7"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-18-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2162.757711000042,
+      "routingCalls": 1,
+      "embeddingMs": 253.4380709999241,
+      "vectorSearchMs": 62.52467800001614,
+      "jinaRerankingMs": 560.4314379999414,
+      "mappingMs": 0.032223999965935946,
+      "totalMs": 3039.2156799999066,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010083999950438738,
+      "contextBuilderMs": 0.018688000040128827,
+      "generationMs": 1694.2947970000096,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4733.545813999837
+    },
+    "judge": {
+      "questionId": "q098",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’énonce pas la règle attendue : en cas de cumul pour les mêmes faits, le montant global des amendes ne peut excéder le maximum légal le plus élevé. Elle se limite à constater l’absence de cette règle dans le contexte et ne répond donc pas à la question. Cette constatation est néanmoins fidèle au contexte fourni : L. 242-18-1 reproduit ne contient pas la limitation de cumul, et L. 522-7 concerne seulement le cumul de sanctions administratives pour des manquements en concours."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L. 242-18-1 est directement liée à la sanction civile visée, mais elle ne contient pas la règle de plafonnement du cumul avec une amende administrative ou pénale recherchée. La source L. 522-7 est seulement connexe, car elle traite du cumul de sanctions administratives pour des manquements en concours. En revanche, ces deux sources couvrent les constats de la réponse générée : L. 242-18-1 fourni ne précise pas le cumul en cause et L. 522-7 ne permet pas d’en déduire une règle concernant une sanction civile ou pénale."
+    }
+  },
+  "failureStage": "generation"
+}

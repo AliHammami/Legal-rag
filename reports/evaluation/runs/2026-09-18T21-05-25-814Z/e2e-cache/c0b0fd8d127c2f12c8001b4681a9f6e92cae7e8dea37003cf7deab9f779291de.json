@@ -1,0 +1,115 @@
+{
+  "questionId": "q008",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après le contexte fourni, l’article 226-1 exige les éléments suivants :\n\n- **un procédé quelconque** ;\n- **un acte volontaire** ;\n- **une atteinte à l’intimité de la vie privée d’autrui** ;\n- notamment, le fait de **capter, enregistrer ou transmettre**, **sans le consentement de leur auteur**, des paroles prononcées dans les conditions visées par l’article.\n\nLe contexte étant tronqué après « des paroles prononcées à », il ne permet pas de préciser complètement les différentes hypothèses prévues par l’article 226-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-33-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 176.45651100002578,
+      "vectorSearchMs": 864.6958689999883,
+      "jinaRerankingMs": 567.3761999999988,
+      "mappingMs": 0.03050900000380352,
+      "totalMs": 1608.6033829999797,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011819000006653368,
+      "contextBuilderMs": 0.0213190000213217,
+      "generationMs": 2315.8891189999995,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3924.5390249999764
+    },
+    "judge": {
+      "questionId": "q008",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les éléments généraux visibles dans l'extrait (procédé quelconque, volonté, atteinte à la vie privée d'autrui) ainsi que la modalité relative à la captation, l'enregistrement ou la transmission de paroles sans consentement. Elle reste toutefois incomplète quant aux hypothèses de l'article, notamment en raison de la troncature signalée. Toutes les affirmations substantielles sont appuyées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit l’incipit de l’article 226-1 et couvre les éléments énoncés dans la réponse (procédé quelconque, caractère volontaire, atteinte à l’intimité de la vie privée d’autrui, captation/enregistrement/transmission de paroles sans consentement). Sa troncature justifie également l’affirmation selon laquelle les autres hypothèses de l’article ne peuvent pas être précisées complètement. Les autres sources ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’extrait fourni de l’article 226-1, l’atteinte à l’intimité de la vie privée suppose :\n\n- un procédé quelconque ;\n- une atteinte volontaire ;\n- l’atteinte à l’intimité de la vie privée d’autrui ;\n- la captation, l’enregistrement ou la transmission de paroles ;\n- l’absence de consentement de leur auteur.\n\nL’extrait étant incomplet, il ne permet pas de préciser l’ensemble des situations et modalités prévues par l’article 226-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-3-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 820.2703510000138,
+      "routingCalls": 1,
+      "embeddingMs": 185.57843799999682,
+      "vectorSearchMs": 62.676169999991544,
+      "jinaRerankingMs": 533.3014469999762,
+      "mappingMs": 0.031724999978905544,
+      "totalMs": 1601.902390000003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012734000018099323,
+      "contextBuilderMs": 0.0174059999990277,
+      "generationMs": 2217.820548000018,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3819.7654570000013
+    },
+    "judge": {
+      "questionId": "q008",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les éléments figurant dans l’extrait fourni : procédé quelconque, caractère volontaire, atteinte à la vie privée d’autrui, captation/enregistrement/transmission de paroles et absence de consentement de leur auteur. Elle répond à la question tout en signalant à juste titre que l’extrait est tronqué."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'extrait pertinent de l'article 226-1 et étaye tous les éléments énumérés dans la réponse : procédé quelconque, caractère volontaire, atteinte à l'intimité de la vie privée d'autrui, captation/enregistrement/transmission de paroles et absence de consentement. Sa phrase inachevée justifie également le constat selon lequel l'extrait est incomplet et ne permet pas de détailler toutes les modalités de l'article."
+    }
+  },
+  "failureStage": "none"
+}

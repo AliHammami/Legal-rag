@@ -1,0 +1,99 @@
+{
+  "questionId": "q227",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 442-1, engage la responsabilité de son auteur et l’oblige à réparer le préjudice causé le fait, dans le cadre de la négociation, de la conclusion ou de l’exécution d’un contrat :\n\n1. D’obtenir ou tenter d’obtenir un avantage sans contrepartie ou manifestement disproportionné ;\n2. De soumettre ou tenter de soumettre l’autre partie à des obligations créant un déséquilibre significatif ;\n3. D’imposer des pénalités logistiques ne respectant pas l’article L. 441-17 ;\n4. De pratiquer ou d’obtenir des prix, délais de paiement, conditions ou modalités de vente ou d’achat discriminatoires et non justifiés par de réelles contreparties, créant un avantage ou un désavantage concurrentiel ;\n5. De ne pas mener de bonne foi les négociations commerciales, empêchant la conclusion du contrat dans le délai légal ;\n6. De soumettre un partenaire à des procédures de mise en concurrence ou à des appels d’offres répétés dont la fréquence ou les modalités créent un déséquilibre significatif.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L420-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.39109899988398,
+      "vectorSearchMs": 618.1769820000045,
+      "jinaRerankingMs": 563.6091990000568,
+      "mappingMs": 0.027991000097244978,
+      "totalMs": 1430.2332179998048,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013544999994337559,
+      "contextBuilderMs": 0.01962299970909953,
+      "generationMs": 2152.7644360000268,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.0428200000897
+    },
+    "judge": {
+      "questionId": "q227",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les six pratiques visées au I de l’article L. 442-1 et leur régime de responsabilité. Elle omet toutefois la rupture brutale d’une relation commerciale établie, également prévue par l’article L. 442-1 et attendue par la référence. Toutes les affirmations formulées sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement le I de l’article L. 442-1 et est donc parfaitement pertinente. Elle couvre l’ensemble des six pratiques et le régime de responsabilité énoncés dans la réponse générée. La source 1 est secondaire et n’est pas nécessaire à cette couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 442-1, engagent la responsabilité de leur auteur les pratiques suivantes :\n\n1. Obtenir ou tenter d’obtenir un avantage sans contrepartie, ou manifestement disproportionné au regard de la contrepartie consentie ;\n\n2. Soumettre ou tenter de soumettre l’autre partie à des obligations créant un déséquilibre significatif dans les droits et obligations des parties ;\n\n3. Imposer des pénalités logistiques ne respectant pas l’article L. 441-17 ;\n\n4. Pratiquer ou obtenir des prix, délais de paiement, conditions ou modalités de vente ou d’achat discriminatoires, non justifiés par des contreparties réelles, créant un avantage ou un désavantage concurrentiel ;\n\n5. Ne pas mener de bonne foi les négociations commerciales, entraînant l’absence de conclusion d’un contrat dans le délai légal ;\n\n6. Soumettre un partenaire commercial à des procédures de mise en concurrence ou à des appels d’offres répétés dont la fréquence ou les modalités créent un déséquilibre significatif.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L420-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.6090649999678,
+      "routingCalls": 1,
+      "embeddingMs": 160.0866040000692,
+      "vectorSearchMs": 163.8246669997461,
+      "jinaRerankingMs": 575.4417989999056,
+      "mappingMs": 0.0421569999307394,
+      "totalMs": 2026.0342430002056,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011818000115454197,
+      "contextBuilderMs": 0.021752999629825354,
+      "generationMs": 1920.331720000133,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3946.408094999846
+    },
+    "judge": {
+      "questionId": "q227",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les six pratiques énumérées à l’article L. 442-1, I, avec leurs conditions essentielles (avantage sans contrepartie ou disproportionné, déséquilibre significatif, pénalités logistiques irrégulières, discrimination non justifiée créant un avantage ou désavantage concurrentiel, négociation de mauvaise foi conduisant à l’absence de contrat dans le délai, et appels d’offres répétés déséquilibrés). Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement et intégralement l’article L. 442-1, I, pertinent pour la question. Elle étaye chacune des six pratiques listées dans la réponse générée ainsi que leur effet d’engagement de responsabilité et de réparation du préjudice. Les sources 1 et 2 sont accessoires, mais ne réduisent ni la pertinence ni la couverture apportées par la source 3."
+    }
+  },
+  "failureStage": "none"
+}

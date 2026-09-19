@@ -1,0 +1,95 @@
+{
+  "questionId": "q192",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une société en liquidation peut transmettre son patrimoine par voie de fusion à condition que la répartition de ses actifs entre les associés n’ait pas fait l’objet d’un début d’exécution.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 825.6676969998516,
+      "vectorSearchMs": 593.9911919999868,
+      "jinaRerankingMs": 530.2967489999719,
+      "mappingMs": 0.03912999993190169,
+      "totalMs": 1950.0344410003163,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010958000086247921,
+      "contextBuilderMs": 0.016706999856978655,
+      "generationMs": 1479.307797999587,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3429.3794800001197
+    },
+    "judge": {
+      "questionId": "q192",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la condition posée par l'article L236-1 : la répartition des actifs entre les associés ne doit pas avoir commencé à être exécutée. Elle répond directement à la question et est intégralement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L236-1 et énonce exactement la condition applicable aux sociétés en liquidation : la répartition des actifs entre les associés ne doit pas avoir fait l’objet d’un début d’exécution. Elle est pleinement pertinente et couvre intégralement l’affirmation de la réponse générée. La source 2 est redondante et concerne la scission, mais n’affecte pas la suffisance de la source 1."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L236-1, une société en liquidation peut transmettre son patrimoine par voie de fusion à condition que la répartition de ses actifs entre les associés n’ait pas fait l’objet d’un début d’exécution.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1115.695837999694,
+      "routingCalls": 1,
+      "embeddingMs": 235.4465359998867,
+      "vectorSearchMs": 174.09989900002256,
+      "jinaRerankingMs": 543.1312939999625,
+      "mappingMs": 0.037868000101298094,
+      "totalMs": 2068.439178999979,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01053699990734458,
+      "contextBuilderMs": 0.015645000152289867,
+      "generationMs": 1042.6477609998547,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3111.120784000028
+    },
+    "judge": {
+      "questionId": "q192",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la condition prévue par l’article L236-1 : la répartition des actifs entre les associés ne doit pas avoir fait l’objet d’un début d’exécution. Elle répond directement à la question et est explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l’article L236-1 directement visé et énonce expressément la condition selon laquelle la répartition des actifs entre les associés ne doit pas avoir fait l’objet d’un début d’exécution. Elle couvre intégralement l’affirmation de la réponse générée. La source 2 est redondante et porte sur la scission, mais n’affecte pas la pertinence ni la couverture assurées par la source 1."
+    }
+  },
+  "failureStage": "none"
+}

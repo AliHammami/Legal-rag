@@ -1,0 +1,95 @@
+{
+  "questionId": "q147",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un décret en Conseil d’État.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6234-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6324-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.20694599999115,
+      "vectorSearchMs": 613.4187409998849,
+      "jinaRerankingMs": 463.04661000007764,
+      "mappingMs": 0.02495699981227517,
+      "totalMs": 1275.727053000126,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012130999937653542,
+      "contextBuilderMs": 0.012992999982088804,
+      "generationMs": 942.0483230003156,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2217.8097299998626
+    },
+    "judge": {
+      "questionId": "q147",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le décret en Conseil d’État comme l’acte déterminant les mesures d’application. Elle est directement et intégralement étayée par l’article L6234-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, correspondant exactement à l’article L6234-1 visé, indique explicitement qu’un décret en Conseil d’État détermine les mesures d’application du titre. Elle couvre intégralement la réponse générée. La source 2 est redondante et non nécessaire, mais ne nuit pas à l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Un décret en Conseil d’État.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6234-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6324-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1094.5610030000098,
+      "routingCalls": 1,
+      "embeddingMs": 235.07326099975035,
+      "vectorSearchMs": 233.37591300019994,
+      "jinaRerankingMs": 485.02266800031066,
+      "mappingMs": 0.024449999909847975,
+      "totalMs": 2048.092358000111,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012147999834269285,
+      "contextBuilderMs": 0.19064199971035123,
+      "generationMs": 888.0820219996385,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2936.391051999759
+    },
+    "judge": {
+      "questionId": "q147",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le décret en Conseil d’État comme l’acte déterminant les mesures d’application. Elle est directement et entièrement étayée par l’article L6234-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, correspondant exactement à l’article L6234-1 visé, énonce directement qu’un décret en Conseil d’État détermine les mesures d’application du titre. Elle couvre intégralement la réponse générée. La source 2 est redondante et porte sur un autre chapitre, mais n’altère pas la pertinence globale."
+    }
+  },
+  "failureStage": "none"
+}

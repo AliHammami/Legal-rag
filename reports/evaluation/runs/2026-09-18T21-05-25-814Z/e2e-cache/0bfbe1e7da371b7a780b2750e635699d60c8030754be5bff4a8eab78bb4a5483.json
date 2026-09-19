@@ -1,0 +1,95 @@
+{
+  "questionId": "q453",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après le contexte, la faillite personnelle entraîne :\n\n- **L’interdiction de diriger, gérer, administrer ou contrôler**, directement ou indirectement, toute entreprise commerciale ou artisanale, toute exploitation agricole, toute entreprise ayant une autre activité indépendante, ainsi que toute personne morale.\n- **La possibilité pour le tribunal de prononcer une incapacité d’exercer une fonction publique élective**, pour une durée égale à celle de la faillite personnelle, dans la limite de **cinq ans**. Cette incapacité prend effet à compter de sa notification par le ministère public, lorsque la décision est devenue définitive.\n\nLe contexte ne permet pas de préciser les autres effets éventuels de la faillite.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 336.88095500000054,
+      "vectorSearchMs": 609.3125609999988,
+      "jinaRerankingMs": 300.28231300000334,
+      "mappingMs": 0.028764999995473772,
+      "totalMs": 1246.5382480000262,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011095999972894788,
+      "contextBuilderMs": 0.01759100001072511,
+      "generationMs": 1930.8046759999706,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3177.3838220000034
+    },
+    "judge": {
+      "questionId": "q453",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement des effets de la faillite personnelle figurant dans le contexte, mais la question générale sur « la faillite » appelait une abstention faute de périmètre précisé et de contexte suffisamment complet. La réponse tente néanmoins une réponse substantielle. Les affirmations données sont toutes directement étayées par les articles L653-2 et L653-10."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources L653-2 et L653-10 sont directement pertinentes pour les deux effets précis affirmés au sujet de la faillite personnelle et les couvrent intégralement. La source L722-9 est hors sujet. Pour une question générale sur les effets d'une « faillite », le corpus ne permet toutefois pas une réponse exhaustive ni de déterminer clairement le périmètre exact du terme ; la réponse le signale pour les autres effets."
+    }
+  },
+  "routing": {
+    "answer": "La faillite personnelle entraîne l’interdiction de diriger, gérer, administrer ou contrôler, directement ou indirectement :\n\n- toute entreprise commerciale ou artisanale ;\n- toute exploitation agricole ;\n- toute entreprise exerçant une autre activité indépendante ;\n- toute personne morale.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1362.2059539999464,
+      "routingCalls": 1,
+      "embeddingMs": 160.0255730000208,
+      "vectorSearchMs": 173.30895099998452,
+      "jinaRerankingMs": 286.6760760000325,
+      "mappingMs": 0.028354000009130687,
+      "totalMs": 1982.3719549999805,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011277000012341887,
+      "contextBuilderMs": 0.011770999990403652,
+      "generationMs": 1524.706445000018,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3507.1115519999876
+    },
+    "judge": {
+      "questionId": "q453",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement un effet de la faillite personnelle, conformément au contexte. Toutefois, la question générale sur les effets d’une « faillite » est ambiguë et ne permet pas d’identifier avec certitude le régime visé ; une abstention ou une demande de précision était attendue. La réponse ne couvre donc pas les effets potentiellement visés de manière générale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L653-2 est directement pertinente pour l’affirmation formulée : elle énonce exactement que la faillite personnelle emporte l’interdiction de diriger, gérer, administrer ou contrôler les entreprises, exploitations et personnes morales listées. Elle couvre intégralement les éléments importants de la réponse générée, même si elle ne permet pas à elle seule de répondre de manière exhaustive à la question générale et ambiguë sur les effets d’une « faillite »."
+    }
+  },
+  "failureStage": "abstention"
+}

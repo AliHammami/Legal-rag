@@ -1,0 +1,95 @@
+{
+  "questionId": "q282",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 466-1, les autorités judiciaires compétentes peuvent solliciter l’avis de l’Autorité des marchés financiers à tout moment de la procédure lorsque les poursuites concernent :\n\n- des infractions mettant en cause des sociétés dont les titres sont admis aux négociations sur un marché réglementé ou offerts au public sur un système multilatéral de négociation ;\n- ou des infractions commises à l’occasion d’opérations sur un marché d’instruments financiers ou d’actifs mentionnés au II de l’article L. 421-1.\n\nEn revanche, cet avis doit obligatoirement être demandé lorsque les poursuites sont engagées sur le fondement des articles L. 465-1 à L. 465-3-3.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L466-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L621-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.21096500009298,
+      "vectorSearchMs": 595.64062200021,
+      "jinaRerankingMs": 280.32752100005746,
+      "mappingMs": 0.03148899972438812,
+      "totalMs": 1119.2734320005402,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009801000356674194,
+      "contextBuilderMs": 0.01696899998933077,
+      "generationMs": 2077.4633539998904,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3196.7731710001826
+    },
+    "judge": {
+      "questionId": "q282",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux hypothèses matérielles visées, précise que la demande d’avis peut intervenir à tout moment de la procédure et distingue correctement le cas où cet avis est obligatoire pour les poursuites fondées sur les articles L. 465-1 à L. 465-3-3. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 466-1 et couvre intégralement les conditions matérielles des poursuites, la possibilité de demander l’avis à tout stade de la procédure et le caractère obligatoire de la demande pour les poursuites engagées sur le fondement des articles L. 465-1 à L. 465-3-3. La source 2 est accessoire mais cohérente avec le sujet."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 466-1, les autorités judiciaires compétentes peuvent solliciter l’avis de l’Autorité des marchés financiers, à tout moment de la procédure, lorsque les poursuites concernent :\n\n- des infractions mettant en cause des sociétés dont les titres sont admis aux négociations sur un marché réglementé ou offerts au public sur un système multilatéral de négociation ;\n- ou des infractions commises à l’occasion d’opérations sur un marché d’instruments financiers ou d’actifs mentionnés au II de l’article L. 421-1.\n\nLa demande d’avis devient obligatoire lorsque les poursuites sont engagées sur le fondement des articles L. 465-1 à L. 465-3-3.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L466-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L621-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 948.7600149996579,
+      "routingCalls": 1,
+      "embeddingMs": 196.6098739998415,
+      "vectorSearchMs": 120.62529799994081,
+      "jinaRerankingMs": 285.25416300073266,
+      "mappingMs": 0.02274599950760603,
+      "totalMs": 1551.3243410000578,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010049999691545963,
+      "contextBuilderMs": 0.012544000521302223,
+      "generationMs": 1899.855348999612,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3451.210530000739
+    },
+    "judge": {
+      "questionId": "q282",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions matérielles visées par l’article L. 466-1, précise que la demande peut intervenir à tout moment de la procédure et distingue correctement la faculté de solliciter l’AMF de l’obligation applicable aux poursuites fondées sur les articles L. 465-1 à L. 465-3-3. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 466-1 et vise exactement les conditions de sollicitation facultative de l’avis de l’AMF, le moment procédural, ainsi que le cas où cet avis est obligatoire. Elle couvre l’ensemble des affirmations importantes de la réponse générée. La source 2 est seulement complémentaire et n’est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

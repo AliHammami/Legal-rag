@@ -1,0 +1,99 @@
+{
+  "questionId": "q412",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Obligations relatives à l’avis de défaut de paiement\n\nSelon l’article L. 131-49 :\n\n- Le porteur doit aviser son endosseur et le tireur du défaut de paiement dans les **quatre jours ouvrables** suivant le protêt ou, en cas de clause de retour sans frais, suivant la présentation.\n- Le notaire ou l’huissier doit prévenir le tireur, lorsque ses nom et domicile figurent sur le chèque, dans les **quarante-huit heures** suivant l’enregistrement des motifs du refus de paiement, par lettre recommandée.\n- Chaque endosseur doit transmettre l’avis à son propre endosseur dans les **deux jours ouvrables** suivant sa réception, en indiquant les personnes ayant transmis les avis précédents. Le même avis doit être adressé, dans le même délai, à l’avaliseur.\n- L’avis peut être donné sous toute forme, y compris par simple renvoi du chèque. Celui qui le donne doit pouvoir prouver qu’il l’a fait dans le délai ; l’envoi postal dans ce délai suffit.\n- L’absence d’avis dans le délai n’entraîne pas la déchéance des droits, mais peut engager la responsabilité de son auteur pour le préjudice causé, dans la limite du montant du chèque.\n- Si l’adresse d’un endosseur est absente ou illisible, l’avis peut être donné à l’endosseur précédent.\n\n### Adaptations territoriales\n\nPour la **Polynésie française**, l’article L. 733-2 prévoit notamment :\n\n- lorsque l’un des prestataires de paiement est situé en Polynésie française et l’autre en métropole, dans un département ou une collectivité mentionnée par le texte, le délai prévu à l’article L. 133-13 est adapté : il est porté à la fin du **quatrième jour ouvrable** ;\n- les délais de présentation des chèques sont spécifiques :\n  - **huit jours** pour un chèque émis et payable en Polynésie française ;\n  - **soixante-dix jours** pour un chèque émis hors de Polynésie française et payable dans ce territoire ;\n- plusieurs dispositions du régime des chèques sont rendues applicables aux chèques postaux tirés sur l’Office des postes et télécommunications, notamment les articles L. 131-31 à L. 131-37 et L. 131-39 à L. 131-46.\n\nLe contexte fourni ne précise pas de modification particulière, pour la Polynésie française, des délais de notification de l’article L. 131-49 eux-mêmes.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-49"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L733-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-40"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 162.7634269995615,
+      "vectorSearchMs": 739.4694959996268,
+      "jinaRerankingMs": 388.27188900019974,
+      "mappingMs": 0.03647199925035238,
+      "totalMs": 1290.6046430002898,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02980600018054247,
+      "contextBuilderMs": 0.03284699935466051,
+      "generationMs": 5011.137067000382,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6301.8139460003
+    },
+    "judge": {
+      "questionId": "q412",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon détaillée les obligations de l'article L. 131-49 : délais, chaîne des endosseurs, avaliseur, forme et preuve de l'avis, ainsi que responsabilité sans déchéance. Elle décrit aussi fidèlement les adaptations expressément présentes dans le contexte pour la Polynésie française, tout en précisant justement qu'elles ne modifient pas directement les délais d'avis de l'article L. 131-49. Elle ne reprend toutefois pas l'élément de la référence relatif à l'article 33 du code civil et aux adaptations outre-mer, ce qui limite légèrement son exhaustivité par rapport à la formulation générale sur les juridictions territoriales. Toutes ses affirmations importantes sont supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 couvre directement et intégralement les obligations d’avis du défaut de paiement prévues à l’article L. 131-49 : délais du porteur, obligation des notaires/huissiers, transmission par les endosseurs et à l’avaliseur, forme et preuve de l’avis, absence de déchéance et responsabilité plafonnée. La source 2 couvre les adaptations expressément citées pour la Polynésie française, y compris le délai de l’article L. 133-13, les délais de présentation des chèques et l’applicabilité aux chèques postaux. La précision selon laquelle le contexte ne prévoit pas de modification spécifique de L. 131-49 est cohérente avec les adaptations reproduites. La source 3 est non nécessaire à la réponse, mais n’altère pas la pertinence globale."
+    }
+  },
+  "routing": {
+    "answer": "Les obligations relatives à l’avis de défaut de paiement sont les suivantes :\n\n- Le porteur doit aviser son endosseur et le tireur dans les quatre jours ouvrables suivant le protêt ou, en cas de clause de retour sans frais, suivant la présentation.\n- Les notaires et huissiers doivent prévenir le tireur, lorsque ses nom et domicile figurent sur le chèque, dans les quarante-huit heures suivant l’enregistrement des motifs du refus de paiement. Cette notification doit être envoyée par lettre recommandée et leur responsabilité peut être engagée en cas de manquement.\n- Chaque endosseur doit transmettre l’avis à son propre endosseur dans les deux jours ouvrables suivant sa réception, en indiquant les personnes ayant précédemment donné avis, jusqu’au tireur.\n- Le même avis doit être adressé à l’avaliseur lorsqu’il est donné au signataire avalisé.\n- Si l’adresse d’un endosseur est absente ou illisible, l’avis peut être donné à l’endosseur précédent.\n- L’avis peut être donné sous toute forme, y compris par simple renvoi du chèque. Il appartient à celui qui le donne de prouver qu’il a respecté le délai ; l’envoi postal dans ce délai suffit.\n- Le défaut d’avis dans le délai n’entraîne pas la déchéance, mais peut engager la responsabilité de son auteur pour le préjudice causé, dans la limite du montant du chèque.\n\nLe contexte fourni ne précise toutefois aucune adaptation de ces obligations selon les différentes juridictions territoriales françaises. Il indique seulement que, lorsque le chèque doit être déclaré à la Banque de France et que le paiement est refusé pour insuffisance de provision, cette situation est signalée par une mention spéciale sur l’avis de non-paiement.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-49"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R131-37"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1226.8220330001786,
+      "routingCalls": 1,
+      "embeddingMs": 177.3607310000807,
+      "vectorSearchMs": 159.6794710000977,
+      "jinaRerankingMs": 294.81045099999756,
+      "mappingMs": 0.03535600006580353,
+      "totalMs": 1858.7363719996065,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012975000776350498,
+      "contextBuilderMs": 0.07273299992084503,
+      "generationMs": 3322.5980659993365,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5181.465839999728
+    },
+    "judge": {
+      "questionId": "q412",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue avec précision les obligations de l’article L131-49 : délais d’avis, devoir des notaires et huissiers, chaîne des endosseurs, avaliseur, modalités de preuve et responsabilité sans déchéance. Elle relève à juste titre que le contexte fourni ne contient pas d’adaptations selon les juridictions territoriales françaises, hormis la mention relative à la Banque de France. Elle ne fournit donc pas l’élément territorial évoqué par la référence, ce qui limite légèrement la complétude, mais toutes ses affirmations importantes sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et très complète pour les obligations d’avis de défaut de paiement prévues à l’article L131-49 : délais, destinataires, rôle des notaires et huissiers, chaîne des endossements, avaliseur, modalités, preuve et responsabilité. La source 2 étaye la mention relative à l’avis de non-paiement et à la déclaration à la Banque de France. En revanche, aucune source ne traite d’adaptations selon des juridictions territoriales françaises : les sources sont donc insuffisantes sur cette partie de la question. Les affirmations effectivement formulées dans la réponse générée sont toutefois toutes couvertes par les deux sources, y compris le constat d’absence d’adaptation territoriale dans le contexte fourni."
+    }
+  },
+  "failureStage": "none"
+}

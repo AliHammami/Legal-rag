@@ -1,0 +1,95 @@
+{
+  "questionId": "q494",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les conditions d’ouverture d’un établissement d’enseignement privé hors contrat.\n\nIl indique seulement que le directeur d’un tel établissement peut être sanctionné s’il ne remédie pas aux manquements constatés après une mise en demeure, et que le non-respect d’une mesure de fermeture est pénalement puni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5134-128"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-17-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.19171199994162,
+      "vectorSearchMs": 646.3078630000819,
+      "jinaRerankingMs": 573.1372869999614,
+      "mappingMs": 0.03210199996829033,
+      "totalMs": 1431.6999509998132,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012433999916538596,
+      "contextBuilderMs": 0.016608000034466386,
+      "generationMs": 1572.524454999948,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3004.2619949998334
+    },
+    "judge": {
+      "questionId": "q494",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît correctement que le contexte ne fournit pas les conditions d’ouverture demandées. Elle décrit avec exactitude les seules informations pertinentes présentes dans le contexte, relatives aux sanctions après mise en demeure et au non-respect d’une fermeture."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 concerne directement les établissements privés accueillant des classes hors contrat, mais elle traite uniquement des sanctions liées aux manquements après mise en demeure et à l’inexécution d’une fermeture, non des conditions d’ouverture. La source 1 ne porte pas clairement sur les établissements hors contrat ni sur leurs conditions d’ouverture. Pour l’abstention, les sources sont néanmoins suffisantes : elles ne fournissent pas les conditions demandées et la source 2 étaye les deux constats factuels formulés dans la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne précise pas les conditions d’ouverture d’un établissement d’enseignement privé hors contrat.\n\nIl indique seulement que le directeur d’un tel établissement peut être sanctionné s’il ne remédie pas, malgré une mise en demeure des autorités compétentes, aux manquements constatés. Il prévoit également des sanctions en cas de non-fermeture après une mesure de fermeture.\n\nLes conditions d’ouverture ne peuvent donc pas être déterminées à partir des éléments fournis.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5134-128"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-17-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 938.8580400000792,
+      "routingCalls": 1,
+      "embeddingMs": 256.23462400003336,
+      "vectorSearchMs": 569.8801299999468,
+      "jinaRerankingMs": 244.91966899996623,
+      "mappingMs": 0.034398999996483326,
+      "totalMs": 2009.9603800000623,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015241999877616763,
+      "contextBuilderMs": 0.01559399999678135,
+      "generationMs": 1811.817745000124,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3821.8186129999813
+    },
+    "judge": {
+      "questionId": "q494",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse constate correctement que le contexte ne fournit pas les conditions d’ouverture d’un établissement privé hors contrat. Elle distingue à juste titre les seules informations disponibles, relatives aux manquements, mises en demeure et fermetures, et s’abstient de déduire des conditions non présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente pour étayer les deux éléments effectivement mentionnés dans la réponse : sanctions du directeur qui ne remédie pas aux manquements malgré mise en demeure, et sanctions en cas de non-fermeture ou d’obstacle à une fermeture. Elle ne fournit pas les conditions d’ouverture, ce qui permet de justifier l’abstention limitée au contexte fourni. La source 1 est peu utile à cette conclusion, mais n’empêche pas l’ensemble d’être suffisant pour soutenir les constats formulés."
+    }
+  },
+  "failureStage": "none"
+}

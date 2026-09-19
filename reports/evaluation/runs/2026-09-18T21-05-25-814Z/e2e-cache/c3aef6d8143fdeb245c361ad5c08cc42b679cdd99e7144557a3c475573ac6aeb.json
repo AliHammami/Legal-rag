@@ -1,0 +1,95 @@
+{
+  "questionId": "q127",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L4221-1, les établissements et locaux de travail doivent :\n\n- être aménagés de manière à garantir la sécurité des travailleurs ;\n- être maintenus dans un état constant de propreté ;\n- présenter des conditions d’hygiène et de salubrité propres à assurer la santé des personnes concernées.\n\nLes conditions d’application sont déterminées par des décrets en Conseil d’État prévus à l’article L. 4111-6.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R4534-138"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.17424100008793,
+      "vectorSearchMs": 620.3030989998952,
+      "jinaRerankingMs": 504.4614390002098,
+      "mappingMs": 0.06923999986611307,
+      "totalMs": 1332.0854249999393,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01656399993225932,
+      "contextBuilderMs": 0.02131900005042553,
+      "generationMs": 1637.5394550000783,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2969.671485000057
+    },
+    "judge": {
+      "questionId": "q127",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois exigences de l’article L4221-1 (sécurité, propreté constante, hygiène et salubrité assurant la santé) et ajoute correctement la précision relative aux décrets en Conseil d’État. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L4221-1 et couvre explicitement toutes les exigences citées dans la réponse : aménagement garantissant la sécurité, état constant de propreté, conditions d’hygiène et de salubrité assurant la santé, ainsi que le renvoi aux décrets en Conseil d’État prévus à l’article L. 4111-6. La source 2 est seulement contextuelle et non nécessaire, mais ne nuit pas à la pertinence globale."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L4221-1, les établissements et locaux de travail doivent :\n\n- être aménagés de manière à garantir la sécurité des travailleurs ;\n- être maintenus dans un état constant de propreté ;\n- présenter des conditions d’hygiène et de salubrité propres à assurer la santé des intéressés.\n\nLes conditions d’application sont déterminées par les décrets prévus à l’article L. 4111-6.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R4534-138"
+      }
+    ],
+    "profiling": {
+      "routingMs": 866.263901000144,
+      "routingCalls": 1,
+      "embeddingMs": 376.11508599994704,
+      "vectorSearchMs": 233.42667499999516,
+      "jinaRerankingMs": 496.9658309998922,
+      "mappingMs": 0.04049700009636581,
+      "totalMs": 1972.844571000198,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011110000079497695,
+      "contextBuilderMs": 0.014879999915137887,
+      "generationMs": 1351.4433879998978,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3324.3228519998956
+    },
+    "judge": {
+      "questionId": "q127",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois exigences de l’article L4221-1 (sécurité, propreté constante, hygiène et salubrité assurant la santé) et ajoute correctement la précision sur les décrets prévus à l’article L. 4111-6. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L4221-1 et étaye l’ensemble des exigences citées : aménagement garantissant la sécurité, propreté constante, conditions d’hygiène et de salubrité assurant la santé, ainsi que le renvoi aux décrets prévus à l’article L. 4111-6. La source 2 est périphérique et non nécessaire, mais ne réduit pas la pertinence ni la couverture globales."
+    }
+  },
+  "failureStage": "none"
+}

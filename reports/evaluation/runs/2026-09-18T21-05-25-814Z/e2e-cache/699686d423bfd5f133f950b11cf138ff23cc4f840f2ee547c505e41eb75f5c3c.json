@@ -1,0 +1,119 @@
+{
+  "questionId": "q164",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du livre contenant l’article L2211-1 sont applicables :\n\n- aux employeurs de droit privé ;\n- aux établissements publics à caractère industriel et commercial ;\n- aux établissements publics à caractère administratif lorsqu’ils emploient du personnel dans les conditions du droit privé.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4621-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3211-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2211-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1311-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 180.58637200016528,
+      "vectorSearchMs": 611.4655069997534,
+      "jinaRerankingMs": 499.16560800001025,
+      "mappingMs": 0.02917699981480837,
+      "totalMs": 1291.278983999975,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018486000131815672,
+      "contextBuilderMs": 0.021656000055372715,
+      "generationMs": 1688.8082050001249,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2980.1362390001304
+    },
+    "judge": {
+      "questionId": "q164",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les trois catégories visées par l'article L2211-1. Elle omet seulement de préciser explicitement que les dispositions s'appliquent également « à leurs salariés » pour les employeurs de droit privé, élément présent dans la référence et le contexte. Toutes les affirmations formulées sont directement étayées par la source 4."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 4 est l'article L2211-1 lui-même et répond directement à la question. Elle couvre chacune des trois catégories d'employeurs ou établissements citées dans la réponse générée : employeurs de droit privé, EPIC et EPA employant du personnel dans les conditions du droit privé."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du livre contenant l’article L2211-1 sont applicables :\n\n- aux employeurs de droit privé ;\n- aux établissements publics à caractère industriel et commercial ;\n- aux établissements publics à caractère administratif lorsqu’ils emploient du personnel dans les conditions du droit privé.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4621-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3211-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2211-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1311-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1021.5106249996461,
+      "routingCalls": 1,
+      "embeddingMs": 172.53125699982047,
+      "vectorSearchMs": 226.7595689999871,
+      "jinaRerankingMs": 485.63212600024417,
+      "mappingMs": 0.04531600000336766,
+      "totalMs": 1906.5065890001133,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.1018070001155138,
+      "contextBuilderMs": 0.03468699986115098,
+      "generationMs": 1227.4209110001102,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3134.07209599996
+    },
+    "judge": {
+      "questionId": "q164",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les trois catégories visées par l'article L2211-1. Elle omet seulement de préciser explicitement que les dispositions s'appliquent aussi « à leurs salariés » pour les employeurs de droit privé, ce qui constitue une omission mineure. Toutes les affirmations sont directement étayées par le contexte, notamment la source 4."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 4 reproduit directement l'article L2211-1 et vise précisément les trois catégories énoncées dans la réponse générée : employeurs de droit privé, EPIC et EPA employant du personnel dans les conditions du droit privé. Elle couvre donc intégralement les affirmations importantes. Les autres sources sont accessoires."
+    }
+  },
+  "failureStage": "none"
+}

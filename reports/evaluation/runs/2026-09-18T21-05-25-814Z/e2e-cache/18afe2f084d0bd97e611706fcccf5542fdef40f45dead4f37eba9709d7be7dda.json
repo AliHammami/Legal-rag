@@ -1,0 +1,87 @@
+{
+  "questionId": "q036",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La mise à mort volontaire, sans nécessité, d’un animal domestique est punie de **six mois d’emprisonnement et de 7 500 euros d’amende**, hors du cadre d’activités légales.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.21035700000357,
+      "vectorSearchMs": 617.0816709999926,
+      "jinaRerankingMs": 548.487306999974,
+      "mappingMs": 0.052506000036373734,
+      "totalMs": 1354.858937000041,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013583999942056835,
+      "contextBuilderMs": 0.009768000105395913,
+      "generationMs": 1218.3355389999924,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2573.2262030000566
+    },
+    "judge": {
+      "questionId": "q036",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues (six mois d’emprisonnement et 7 500 euros d’amende) et reprend correctement la condition relative au fait d’agir hors du cadre d’activités légales. Ces éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l’article 522-1 applicable à la mise à mort volontaire, sans nécessité, d’un animal domestique hors du cadre d’activités légales, et énonce exactement les peines mentionnées dans la réponse : six mois d’emprisonnement et 7 500 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "La mise à mort volontaire, sans nécessité, d’un animal domestique est punie de **six mois d’emprisonnement** et de **7 500 euros d’amende**, lorsqu’elle est commise hors du cadre d’activités légales.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1070.352518999949,
+      "routingCalls": 1,
+      "embeddingMs": 141.28508800000418,
+      "vectorSearchMs": 36.778255000011995,
+      "jinaRerankingMs": 574.122803999926,
+      "mappingMs": 0.03394700004719198,
+      "totalMs": 1822.5972070000134,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010282999952323735,
+      "contextBuilderMs": 0.007373000029474497,
+      "generationMs": 1251.777092000004,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3074.3983989999397
+    },
+    "judge": {
+      "questionId": "q036",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les peines prévues (six mois d’emprisonnement et 7 500 euros d’amende) et précise correctement la condition selon laquelle les faits doivent être commis hors du cadre d’activités légales. Tous ces éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 522-1 du Code pénal et vise précisément la mise à mort volontaire, sans nécessité, d'un animal domestique hors du cadre d'activités légales. Elle établit explicitement les deux sanctions citées (six mois d'emprisonnement et 7 500 euros d'amende) ainsi que la condition ajoutée dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

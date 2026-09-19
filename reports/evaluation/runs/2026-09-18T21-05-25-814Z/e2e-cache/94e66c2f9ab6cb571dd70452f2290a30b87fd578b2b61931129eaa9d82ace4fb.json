@@ -1,0 +1,95 @@
+{
+  "questionId": "q051",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon le 3° de l’article 421-1, sont interdits, en infraction à la réglementation applicable localement :\n\n- la production, la vente, l’importation ou l’exportation de substances explosives ;\n- l’acquisition, la détention, le transport ou le port illégitimes de substances explosives ou d’engins fabriqués à l’aide de ces substances.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "715-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 184.26623100007419,
+      "vectorSearchMs": 570.4490430000005,
+      "jinaRerankingMs": 545.5978840000462,
+      "mappingMs": 0.02958299999590963,
+      "totalMs": 1300.3755820000079,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010242999996989965,
+      "contextBuilderMs": 0.015158000052906573,
+      "generationMs": 1872.7533999999287,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3173.164024000056
+    },
+    "judge": {
+      "questionId": "q051",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux séries d'actes explicitement relatifs aux substances explosives : production/vente/importation/exportation, puis acquisition/détention/transport/port illégitimes, avec la condition d'infraction à la réglementation applicable. Elle omet toutefois la fabrication ou la détention de machines, engins meurtriers ou explosifs mentionnée en tête du 3°, également incluse dans la réponse de référence. Toutes les affirmations formulées sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement le 3° de l’article 421-1 et sont donc pleinement pertinentes. Elles étayent toutes les affirmations de la réponse générée : production, vente, importation et exportation de substances explosives, ainsi que l’acquisition, la détention, le transport et le port illégitimes de ces substances ou d’engins fabriqués à l’aide de celles-ci, sous la condition d’infraction à la réglementation applicable localement."
+    }
+  },
+  "routing": {
+    "answer": "Selon le 3° de l’article 421-1, sont interdits, en infraction à la réglementation applicable localement :\n\n- la production, la vente, l’importation ou l’exportation de substances explosives ;\n- l’acquisition, la détention, le transport ou le port illégitimes de substances explosives ou d’engins fabriqués avec ces substances.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "715-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 817.587334999931,
+      "routingCalls": 1,
+      "embeddingMs": 242.9734429999953,
+      "vectorSearchMs": 30.33116499998141,
+      "jinaRerankingMs": 546.1326409999747,
+      "mappingMs": 0.03046599996741861,
+      "totalMs": 1637.0815850000363,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01318500004708767,
+      "contextBuilderMs": 0.01330599992070347,
+      "generationMs": 1855.1829229999566,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3492.297900000005
+    },
+    "judge": {
+      "questionId": "q051",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux catégories d'actes visant explicitement les substances explosives : production/vente/importation/exportation en infraction à la réglementation locale, et acquisition/détention/transport/port illégitimes. Elle omet toutefois l'élément introductif du 3° relatif à la fabrication ou détention de machines, engins meurtriers ou explosifs, également attendu par la référence. Toutes les affirmations formulées sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement le 3° de l’article 421-1 et énoncent expressément les actes relatifs aux substances explosives repris dans la réponse générée : production, vente, importation, exportation, ainsi que acquisition, détention, transport et port illégitimes. Elles couvrent donc l’ensemble des affirmations importantes formulées, même si la réponse ne reprend pas l’élément introductif relatif à la fabrication ou détention de machines ou engins."
+    }
+  },
+  "failureStage": "none"
+}

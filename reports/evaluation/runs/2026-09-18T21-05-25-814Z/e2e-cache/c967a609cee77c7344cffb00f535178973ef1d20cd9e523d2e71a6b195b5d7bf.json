@@ -1,0 +1,107 @@
+{
+  "questionId": "q455",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "En cas de rupture brutale, même partielle, d’une relation commerciale établie, sans préavis écrit tenant notamment compte de la durée de la relation, l’auteur de la rupture engage sa responsabilité et doit réparer le préjudice causé.\n\nUne réduction substantielle et inhabituelle des volumes de commandes peut également engager cette responsabilité lorsqu’elle compromet l’équilibre de la relation commerciale.\n\nEn cas de litige, un préavis de dix-huit mois exclut la responsabilité fondée sur une durée insuffisante du préavis. Toutefois, une résiliation sans préavis reste possible en cas d’inexécution des obligations de l’autre partie ou de force majeure.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L8223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L134-12"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7112-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3153-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.6002810000209,
+      "vectorSearchMs": 558.1319770000409,
+      "jinaRerankingMs": 268.4464390000212,
+      "mappingMs": 0.030184999981429428,
+      "totalMs": 1051.2391519999946,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011193000013008714,
+      "contextBuilderMs": 0.02107600000454113,
+      "generationMs": 3038.661361000035,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4089.9453349999967
+    },
+    "judge": {
+      "questionId": "q455",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les règles applicables à la rupture brutale d'une relation commerciale établie : responsabilité et réparation du préjudice en l'absence de préavis écrit adéquat, réduction substantielle des commandes, plafond de sécurité de dix-huit mois et exceptions d'inexécution ou de force majeure. Ces affirmations sont directement étayées par l'article L442-1 fourni. Toutefois, une abstention était attendue et la réponse répond au fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 (article L442-1, II) est directement pertinente et couvre l’ensemble des affirmations de la réponse : responsabilité et réparation en cas de rupture brutale sans préavis écrit adapté, réduction substantielle des commandes, préavis de dix-huit mois et exceptions d’inexécution ou de force majeure. Les autres sources sont sans pertinence pour ces affirmations, mais n’altèrent pas la suffisance de la source 5."
+    }
+  },
+  "routing": {
+    "answer": "En cas de rupture brutale de relations commerciales établies :\n\n- L’auteur de la rupture engage sa responsabilité et doit réparer le préjudice causé.\n- La rupture doit être précédée d’un préavis écrit tenant notamment compte de la durée de la relation commerciale, des usages du commerce, des accords interprofessionnels et des conditions économiques du marché.\n- En cas de litige, la responsabilité ne peut être engagée pour préavis insuffisant si un préavis de 18 mois a été respecté.\n- Une résiliation sans préavis reste possible en cas d’inexécution des obligations de l’autre partie ou de force majeure.\n- Une réduction substantielle et inhabituelle des volumes de commandes peut également engager la responsabilité de son auteur si elle compromet l’équilibre de la relation commerciale.\n\nPour l’agent commercial, la cessation des relations avec le mandant ouvre droit à une indemnité compensatrice du préjudice subi. Ce droit doit être revendiqué dans l’année suivant la cessation du contrat, faute de quoi il est perdu. Les ayants droit en bénéficient également lorsque la cessation résulte du décès de l’agent.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L134-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.1637970000156,
+      "routingCalls": 1,
+      "embeddingMs": 230.16454199998407,
+      "vectorSearchMs": 210.04781099996762,
+      "jinaRerankingMs": 325.42336999997497,
+      "mappingMs": 0.08898499998031184,
+      "totalMs": 1789.9157860000269,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012152999988757074,
+      "contextBuilderMs": 0.012498000054620206,
+      "generationMs": 2611.9037719999906,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4401.8649879999575
+    },
+    "judge": {
+      "questionId": "q455",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement les règles applicables à la rupture brutale d’une relation commerciale établie et le régime spécifique de l’agent commercial. Toutes les affirmations importantes sont directement étayées par les deux extraits fournis. Toutefois, une abstention était attendue : la réponse répond au fond sans signaler que la question relève du droit commercial et est hors du périmètre annoncé du Code pénal."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes au regard des affirmations formulées : l’article L442-1, II couvre la responsabilité, le préavis, le plafond de sécurité de dix-huit mois, les exceptions d’inexécution et de force majeure, ainsi que la réduction substantielle des commandes ; l’article L134-12 couvre l’indemnité de l’agent commercial, le délai d’un an et les ayants droit. Elles couvrent donc l’ensemble des affirmations importantes de la réponse générée, même si la question était censée appeler une abstention au regard du périmètre annoncé."
+    }
+  },
+  "failureStage": "abstention"
+}

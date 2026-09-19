@@ -1,0 +1,103 @@
+{
+  "questionId": "q311",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La fiche standardisée d’information doit être fournie **lors de la première simulation** à toute personne qui :\n\n- se voit proposer ou sollicite une assurance garantissant le remboursement d’un prêt ;\n- lorsque le prêt est destiné à financer une opération relative à la réparation, l’amélioration ou l’entretien d’un immeuble à usage d’habitation ou à usage professionnel et d’habitation ;\n- porte sur un crédit **supérieur à 75 000 euros** ;\n- et est garanti par une hypothèque, une sûreté comparable sur un bien immobilier à usage d’habitation ou un droit lié à un tel bien.\n\nSelon l’article L. 313-10, la fiche doit :\n\n- mentionner la possibilité pour l’emprunteur de souscrire l’assurance auprès de l’assureur de son choix, dans les conditions prévues aux articles L. 313-29 et L. 313-30 ;\n- préciser les types de garanties proposées.\n\nElle doit être rédigée de manière claire et lisible. D’après les précisions réglementaires, elle indique notamment la définition des garanties, les garanties minimales éventuellement exigées par le prêteur, les garanties envisagées et la part du capital couverte, ainsi qu’une estimation personnalisée du coût de l’assurance.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 823.6603199997917,
+      "vectorSearchMs": 916.1843210002407,
+      "jinaRerankingMs": 313.6982659995556,
+      "mappingMs": 0.037583000026643276,
+      "totalMs": 2053.6120980000123,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014804999344050884,
+      "contextBuilderMs": 0.022499999962747097,
+      "generationMs": 3174.658874999732,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5228.317548999563
+    },
+    "judge": {
+      "questionId": "q311",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les conditions cumulatives de remise lors de la première simulation (assurance proposée ou sollicitée, catégories de prêts/opérations visées, seuil de 75 000 euros et garantie immobilière) et les mentions exigées par l'article L. 313-10. Les précisions supplémentaires sur la lisibilité et le contenu réglementaire de la fiche sont également directement supportées par les articles R. 313-8 et R. 313-9 fournis dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L. 313-10 répond directement aux conditions de remise de la fiche (première simulation, assurance proposée ou sollicitée, catégories de prêts/opérations, seuil de 75 000 euros et sûreté immobilière) ainsi qu’aux mentions exigées (libre choix de l’assureur et types de garanties). Les sources R. 313-8 et R. 313-9 soutiennent précisément les compléments de la réponse sur la présentation claire et lisible et sur le contenu détaillé, notamment garanties, quotité et estimation personnalisée du coût."
+    }
+  },
+  "routing": {
+    "answer": "La fiche standardisée d’information doit être remise **lors de la première simulation** à toute personne qui :\n\n- se voit proposer ou sollicite une assurance garantissant le remboursement :\n  - d’un prêt mentionné au 1° de l’article L. 313-1 ; ou\n  - d’un prêt destiné à financer la réparation, l’amélioration ou l’entretien d’un immeuble à usage d’habitation, ou à usage professionnel et d’habitation ;\n- lorsque le crédit est **supérieur à 75 000 euros** ;\n- et qu’il est garanti par une hypothèque, une sûreté comparable sur un bien immobilier à usage d’habitation, ou un droit lié à un tel bien.\n\nLa fiche doit être rédigée **de manière claire et lisible**. Elle doit notamment :\n\n- mentionner la possibilité pour l’emprunteur de souscrire l’assurance auprès de l’assureur de son choix, dans les conditions prévues aux articles L. 313-29 et L. 313-30 ;\n- préciser les types de garanties proposées.\n\nSelon les précisions réglementaires fournies, elle indique également les garanties minimales éventuellement exigées par le prêteur, les garanties envisagées et la part du capital à couvrir, ainsi qu’une estimation personnalisée du coût de l’assurance, comprenant le coût périodique, le coût total sur la durée du prêt et le taux annuel effectif de l’assurance.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1147.7859629997984,
+      "routingCalls": 1,
+      "embeddingMs": 381.52231900021434,
+      "vectorSearchMs": 103.4742090003565,
+      "jinaRerankingMs": 309.4290080005303,
+      "mappingMs": 0.04387299995869398,
+      "totalMs": 1942.2842380004004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01570899970829487,
+      "contextBuilderMs": 0.03556900005787611,
+      "generationMs": 3434.009893000126,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5376.355241999961
+    },
+    "judge": {
+      "questionId": "q311",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les conditions cumulatives de remise lors de la première simulation (type de prêt, seuil de 75 000 euros et garantie immobilière) et les mentions exigées par l’article L. 313-10. Les précisions supplémentaires sur la clarté, les garanties minimales, le capital couvert et le coût proviennent bien des articles R. 313-8 et R. 313-9 inclus dans le contexte. Elle répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L313-10 répond directement aux conditions de remise de la fiche (première simulation, catégories de prêts, seuil de 75 000 euros et garanties immobilières) ainsi qu’à ses mentions essentielles (libre choix de l’assureur et types de garanties). Les sources R313-8 et R313-9 étayent précisément les compléments invoqués dans la réponse sur la présentation claire et lisible, les garanties minimales, le capital couvert et l’estimation détaillée du coût."
+    }
+  },
+  "failureStage": "none"
+}

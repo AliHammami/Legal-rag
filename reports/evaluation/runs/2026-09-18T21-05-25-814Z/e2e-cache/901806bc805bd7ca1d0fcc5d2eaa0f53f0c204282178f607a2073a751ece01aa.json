@@ -1,0 +1,103 @@
+{
+  "questionId": "q049",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 714-1 prévoit, pour la destruction, la dégradation ou la détérioration d’un objet mobilier classé ou d’une découverte archéologique, une peine de :\n\n- **sept ans d’emprisonnement** ;\n- **100 000 € d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "724-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "714-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.30828500003554,
+      "vectorSearchMs": 581.2822640000377,
+      "jinaRerankingMs": 553.5492980000563,
+      "mappingMs": 0.02498999994713813,
+      "totalMs": 1312.1927770000184,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010013999999500811,
+      "contextBuilderMs": 0.013793999911285937,
+      "generationMs": 1965.9528719999362,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3278.177625000011
+    },
+    "judge": {
+      "questionId": "q049",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les deux peines prévues pour les hypothèses visées : sept ans d’emprisonnement et 100 000 € d’amende. Ces éléments sont explicitement énoncés dans le contexte de l’article 714-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 est directement l'article 714-1 et énonce expressément que la destruction, dégradation ou détérioration d'un objet mobilier classé ou d'une découverte archéologique est punie de sept ans d'emprisonnement et de 100 000 € d'amende. Elle couvre intégralement les sanctions affirmées dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article 714-1 prévoit, pour la destruction, la dégradation ou la détérioration :\n\n- d’un objet mobilier classé, inscrit ou protégé selon la réglementation locale ;\n- ou d’une découverte archéologique faite lors de fouilles ou fortuitement,\n\nune peine de **sept ans d’emprisonnement et de 100 000 € d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "714-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2049.2149030000437,
+      "routingCalls": 1,
+      "embeddingMs": 195.10518800001591,
+      "vectorSearchMs": 28.624689999967813,
+      "jinaRerankingMs": 634.4265690000029,
+      "mappingMs": 0.024081000010482967,
+      "totalMs": 2907.4206230000127,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009495999896898866,
+      "contextBuilderMs": 0.014602000010199845,
+      "generationMs": 2314.5060740000335,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5221.958520999993
+    },
+    "judge": {
+      "questionId": "q049",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues (sept ans d’emprisonnement et 100 000 € d’amende) pour les deux hypothèses visées par la question. Les précisions sur l’objet mobilier classé, inscrit ou protégé et sur la découverte archéologique lors de fouilles ou fortuite sont conformes au texte fourni de l’article 714-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 714-1 et énonce précisément la peine de sept ans d'emprisonnement et 100 000 euros d'amende pour un objet mobilier classé, inscrit ou protégé localement, ainsi que pour une découverte archéologique faite lors de fouilles ou fortuitement. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

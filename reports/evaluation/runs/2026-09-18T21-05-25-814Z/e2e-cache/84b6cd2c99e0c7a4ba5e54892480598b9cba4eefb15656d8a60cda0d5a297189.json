@@ -1,0 +1,95 @@
+{
+  "questionId": "q038",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour une personne physique condamnée pour sévices graves ou actes de cruauté envers un animal domestique, les peines complémentaires possibles sont :\n\n- **l’interdiction de détenir un animal**, à titre définitif ou temporaire ;\n- **l’interdiction d’exercer une activité professionnelle ou sociale**, à titre définitif ou pour une durée maximale de cinq ans, lorsque les facilités procurées par cette activité ont été sciemment utilisées pour préparer ou commettre l’infraction.\n\nCette dernière interdiction ne peut pas s’appliquer à l’exercice d’un mandat électif ou de responsabilités syndicales.\n\nEn outre, lorsque le condamné est le propriétaire de l’animal, ou lorsque celui-ci est inconnu, le tribunal peut statuer sur le sort de l’animal et **prononcer sa confiscation**, avec remise éventuelle à une fondation ou association de protection animale.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 180.9920689999126,
+      "vectorSearchMs": 611.2207509999862,
+      "jinaRerankingMs": 561.1932729999535,
+      "mappingMs": 0.04268700000829995,
+      "totalMs": 1353.480475999997,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013987999991513789,
+      "contextBuilderMs": 0.016475999960675836,
+      "generationMs": 2832.951017000014,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4186.470277999993
+    },
+    "judge": {
+      "questionId": "q038",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux peines complémentaires prévues : interdiction de détenir un animal, définitive ou temporaire, et interdiction d'exercer une activité professionnelle ou sociale, définitive ou limitée à cinq ans sous la condition d'utilisation consciente des facilités de l'activité. Elle mentionne correctement l'exception des mandats électifs et responsabilités syndicales. L'ajout relatif au sort et à la confiscation éventuelle de l'animal est exact et expressément prévu par le contexte, bien qu'il ne fasse pas partie des peines complémentaires stricto sensu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 vise directement les sévices graves ou actes de cruauté sur un animal domestique et énonce expressément les deux peines complémentaires, leurs durées et conditions, ainsi que l’exception relative aux mandats électifs et responsabilités syndicales. Elle couvre aussi l’affirmation additionnelle sur la décision concernant le sort de l’animal, la confiscation et sa remise éventuelle à une association ou fondation. La source 2 confirme les peines complémentaires, bien que la source 1 suffise à couvrir l’ensemble des affirmations importantes."
+    }
+  },
+  "routing": {
+    "answer": "Pour une personne physique condamnée pour sévices graves ou actes de cruauté envers un animal domestique, les peines complémentaires possibles sont :\n\n- **l’interdiction de détenir un animal**, à titre définitif ou pour une durée déterminée ;\n- **l’interdiction d’exercer une activité professionnelle ou sociale**, définitivement ou temporairement pour une durée maximale de **cinq ans**, lorsque les facilités procurées par cette activité ont été sciemment utilisées pour préparer ou commettre l’infraction.\n\nCette dernière interdiction ne peut pas concerner l’exercice d’un **mandat électif** ou de **responsabilités syndicales**.\n\nLe tribunal peut également **confisquer l’animal** et prévoir sa remise à une fondation ou à une association de protection animale.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1067.755169000011,
+      "routingCalls": 1,
+      "embeddingMs": 147.11865200009197,
+      "vectorSearchMs": 61.61715299997013,
+      "jinaRerankingMs": 590.9530169999925,
+      "mappingMs": 0.03517000004649162,
+      "totalMs": 1867.508010999998,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010366999893449247,
+      "contextBuilderMs": 0.017801000038161874,
+      "generationMs": 2843.0935090000276,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4710.6374129999895
+    },
+    "judge": {
+      "questionId": "q038",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux peines complémentaires prévues : interdiction de détenir un animal, définitive ou temporaire, et interdiction d'exercer une activité professionnelle ou sociale, définitive ou temporaire dans la limite de cinq ans, sous la condition liée à l'utilisation consciente des facilités de l'activité. Elle mentionne aussi correctement l'exception des mandats électifs et responsabilités syndicales. La précision sur la confiscation et la remise de l'animal est également expressément prévue par le contexte dans les conditions indiquées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 521-1) porte directement sur les sévices graves ou actes de cruauté envers un animal domestique et énonce les interdictions complémentaires, leurs durées, leur condition d'application et les exceptions liées aux mandats électifs et responsabilités syndicales. Elle couvre également la possibilité de confiscation et de remise de l'animal à une fondation ou association. La source 2 est cohérente sur les interdictions, bien que la source 1 suffise à couvrir toutes les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

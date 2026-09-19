@@ -1,0 +1,119 @@
+{
+  "questionId": "q214",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L225-52, les personnes visées peuvent :\n\n- être déclarées responsables du passif social ;\n- être soumises à des interdictions et à des déchéances.\n\nCes conséquences s’appliquent dans les conditions prévues par les dispositions des titres III et IV du livre VI relatives au redressement et à la liquidation judiciaires.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-93"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-52"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-24"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-256"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-255"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 197.5782130002044,
+      "vectorSearchMs": 619.6684200000018,
+      "jinaRerankingMs": 565.3020799998194,
+      "mappingMs": 0.036474999971687794,
+      "totalMs": 1382.641445999965,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01563600031659007,
+      "contextBuilderMs": 0.03179799998179078,
+      "generationMs": 1275.1431180001236,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2657.8450730000623
+    },
+    "judge": {
+      "questionId": "q214",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conséquences prévues par l’article L225-52 : responsabilité possible du passif social et soumission aux interdictions et déchéances, dans les conditions des titres III et IV du livre VI. Elle est directement et entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L225-52 visé par la question et énonce exactement les conséquences mentionnées dans la réponse : responsabilité possible du passif social, interdictions et déchéances, dans les conditions prévues par les titres III et IV du livre VI. Les autres sources sont concordantes mais non nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L225-52, les personnes visées peuvent :\n\n- être rendues responsables du passif social ;\n- être soumises à des interdictions et à des déchéances.\n\nCes mesures s’appliquent dans les conditions prévues par les dispositions des titres III et IV du livre VI.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-93"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-52"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-24"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-256"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-255"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1190.378342999611,
+      "routingCalls": 1,
+      "embeddingMs": 172.2887469995767,
+      "vectorSearchMs": 160.48643499985337,
+      "jinaRerankingMs": 567.1086499998346,
+      "mappingMs": 0.03235499979928136,
+      "totalMs": 2090.325364000164,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0144640002399683,
+      "contextBuilderMs": 0.018548000138252974,
+      "generationMs": 1251.5944980001077,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3341.9606909998693
+    },
+    "judge": {
+      "questionId": "q214",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux conséquences prévues par l’article L225-52 : responsabilité du passif social et soumission aux interdictions et déchéances, en précisant qu’elles s’appliquent selon les conditions des titres III et IV du livre VI. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L225-52 et énonce précisément les deux conséquences mentionnées dans la réponse (responsabilité du passif social, interdictions et déchéances) ainsi que leur application dans les conditions prévues par les titres III et IV du livre VI. Les autres sources sont corroborantes, bien que non nécessaires."
+    }
+  },
+  "failureStage": "none"
+}

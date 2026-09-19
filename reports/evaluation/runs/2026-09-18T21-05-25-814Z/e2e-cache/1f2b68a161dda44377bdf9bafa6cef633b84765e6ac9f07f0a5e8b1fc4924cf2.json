@@ -1,0 +1,111 @@
+{
+  "questionId": "q065",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 578, l’usufruit est le droit de jouir des biens appartenant à autrui comme le ferait le propriétaire.\n\nL’obligation principale de l’usufruitier est d’en conserver la substance.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "589"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "578"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "609"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "608"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.1094929999672,
+      "vectorSearchMs": 590.6127229999984,
+      "jinaRerankingMs": 494.9190420000814,
+      "mappingMs": 0.027818000060506165,
+      "totalMs": 1284.727109999978,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009316999930888414,
+      "contextBuilderMs": 0.01856899994891137,
+      "generationMs": 1589.3806549999863,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2874.149468999938
+    },
+    "judge": {
+      "questionId": "q065",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article 578 et identifie correctement l’obligation essentielle de l’usufruitier : conserver la substance des biens. Ces deux éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 578 et couvre intégralement les deux affirmations essentielles : la définition de l'usufruit comme droit de jouir d'une chose appartenant à autrui comme le propriétaire, et l'obligation d'en conserver la substance. Les autres sources sont accessoires mais cohérentes avec le sujet."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 578, l’usufruit est le droit de jouir de biens appartenant à autrui comme le ferait le propriétaire.\n\nL’obligation principale de l’usufruitier est de conserver la substance de ces biens.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "589"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "578"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "608"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "609"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.5924609999638,
+      "routingCalls": 1,
+      "embeddingMs": 192.09073500009254,
+      "vectorSearchMs": 60.08853399998043,
+      "jinaRerankingMs": 479.1496610000031,
+      "mappingMs": 0.023890000069513917,
+      "totalMs": 1858.05932999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01022900000680238,
+      "contextBuilderMs": 0.0145819999743253,
+      "generationMs": 1155.596038000076,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3013.6890070000663
+    },
+    "judge": {
+      "questionId": "q065",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article 578 et identifie exactement l’obligation principale : conserver la substance des biens. Ces deux éléments sont explicitement présents dans le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 578 et étaye intégralement les deux affirmations centrales : la définition de l'usufruit comme droit de jouir des choses appartenant à autrui comme le propriétaire, et l'obligation d'en conserver la substance. Les autres sources sont secondaires mais ne nuisent pas à la pertinence de l'ensemble."
+    }
+  },
+  "failureStage": "none"
+}

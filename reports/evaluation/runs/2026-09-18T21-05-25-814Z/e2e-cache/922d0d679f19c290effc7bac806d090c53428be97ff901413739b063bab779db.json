@@ -1,0 +1,87 @@
+{
+  "questionId": "q352",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En référé, le juge peut ordonner notamment :\n\n- l’insertion d’une rectification ;\n- la diffusion d’un communiqué ;\n\nafin de faire cesser l’atteinte à la présomption d’innocence. Ces mesures sont aux frais de la personne physique ou morale responsable, sans préjudice de la réparation du dommage subi.\n\nLe contexte fourni ne contient aucune information sur les obligations d’un commerçant non immatriculé. Il ne permet donc pas de répondre à cette partie de la question.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.6458529997617,
+      "vectorSearchMs": 970.5279240002856,
+      "jinaRerankingMs": 304.49238200020045,
+      "mappingMs": 0.07899800036102533,
+      "totalMs": 1470.7814749991521,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011522999964654446,
+      "contextBuilderMs": 0.008925999514758587,
+      "generationMs": 1795.7493519997224,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3266.566655999981
+    },
+    "judge": {
+      "questionId": "q352",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement les mesures de référé prévues par l’article 9-1 du code civil, y compris leur prise en charge et la réserve de réparation du dommage. En revanche, elle ne répond pas au second volet relatif au commerçant non immatriculé, alors que la réponse attendue indique qu’il ne peut se prévaloir de la qualité de commerçant tout en restant soumis aux responsabilités correspondantes. Les affirmations émises sont entièrement fondées sur le contexte fourni, lequel ne contient effectivement que l’article 9-1. Toutefois, l’abstention partielle rend la réponse insuffisante alors qu’une réponse complète était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le premier volet : elle prévoit les mesures de référé, notamment l’insertion d’une rectification et la diffusion d’un communiqué, aux frais du responsable et sans préjudice de la réparation du dommage. Elle ne traite pas du statut ou des obligations du commerçant non immatriculé, ce qui laisse une source importante manquante pour la question complète. Toutefois, elle couvre toutes les affirmations effectivement formulées par la réponse générée, y compris le constat que le contexte fourni ne contient pas d’information sur le second volet."
+    }
+  },
+  "routing": {
+    "answer": "En référé, le juge peut ordonner toute mesure destinée à faire cesser l’atteinte à la présomption d’innocence, notamment :\n\n- l’insertion d’une rectification ;\n- la diffusion d’un communiqué.\n\nCes mesures sont prises aux frais de la personne physique ou morale responsable, sans préjudice de la réparation du dommage subi.\n\nLe contexte fourni ne contient aucune information sur les obligations d’un commerçant non immatriculé.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1336.3810970000923,
+      "routingCalls": 1,
+      "embeddingMs": 237.36387800052762,
+      "vectorSearchMs": 562.223210000433,
+      "jinaRerankingMs": 392.1544239996001,
+      "mappingMs": 0.05817599967122078,
+      "totalMs": 2528.207709999755,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017568999901413918,
+      "contextBuilderMs": 0.013016999699175358,
+      "generationMs": 1567.5175689999014,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4095.770698999986
+    },
+    "judge": {
+      "questionId": "q352",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les mesures de référé prévues pour faire cesser une atteinte à la présomption d’innocence, y compris leur prise en charge par le responsable. Elle ne fournit toutefois pas les règles applicables au commerçant non immatriculé, élément essentiel de la seconde partie de la question. Cette omission est justifiée au regard du contexte, qui ne contient que l’article 9-1 du code civil ; toutes les affirmations formulées sont donc fondées sur ce contexte. La réponse répond néanmoins réellement à une partie substantielle de la question et ne constitue pas une abstention globale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 9-1 du code civil et est pleinement pertinente pour les mesures de référé relatives à la présomption d’innocence. Elle ne contient toutefois aucune règle sur le commerçant non immatriculé, qui constitue une partie importante de la question. Toutes les affirmations effectivement formulées dans la réponse générée sur le référé, les exemples de mesures, les frais et la réparation du dommage sont couvertes par la source ; le constat d’absence d’information sur le second point est cohérent avec le contexte fourni."
+    }
+  },
+  "failureStage": "generation"
+}

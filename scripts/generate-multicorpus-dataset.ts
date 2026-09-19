@@ -13,7 +13,10 @@ import {
   generateMultiCorpusQuestions,
   generateSingleCorpusQuestions,
 } from '../src/evaluation/generate-multicorpus-questions.js';
-import { loadMulticorpusCorpusArticleRegistry } from '../src/evaluation/load-corpus-article-index.js';
+import {
+  loadMulticorpusCorpusArticleRegistry,
+  type MulticorpusCorpusArticleRegistry,
+} from '../src/evaluation/load-corpus-article-index.js';
 import {
   AMBIGUOUS_SEED_QUESTIONS,
   OUT_OF_SCOPE_SEED_QUESTIONS,
@@ -374,10 +377,12 @@ async function generateMultiCorpusSection(
 
 function assignAllQuestionIds(
   questions: LegalMulticorpusEvaluationQuestion[],
+  registry: MulticorpusCorpusArticleRegistry,
 ): LegalMulticorpusEvaluationQuestion[] {
   return assignQuestionIds(
     questions.map(({ id: _id, ...rest }) => rest),
     1,
+    registry,
   );
 }
 
@@ -419,12 +424,15 @@ async function main(): Promise<void> {
 
     const dataset = sanitizeMulticorpusDataset(
       finalizeDifficultyDistribution(
-        assignAllQuestionIds([
-          ...singleCorpusQuestions,
-          ...multiCorpusQuestions,
-          ...ambiguousQuestions,
-          ...outOfScopeQuestions,
-        ]),
+        assignAllQuestionIds(
+          [
+            ...singleCorpusQuestions,
+            ...multiCorpusQuestions,
+            ...ambiguousQuestions,
+            ...outOfScopeQuestions,
+          ],
+          registry,
+        ),
       ),
     );
 

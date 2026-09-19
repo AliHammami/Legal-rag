@@ -1,0 +1,103 @@
+{
+  "questionId": "q046",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 727-2, la diffusion d’informations mensongères visant à provoquer artificiellement la hausse ou la baisse du prix de biens est punie de :\n\n- **2 ans d’emprisonnement** ;\n- **30 000 euros d’amende**.\n\nLorsque les produits concernés sont **alimentaires**, les peines sont portées à :\n\n- **3 ans d’emprisonnement** ;\n- **45 000 euros d’amende**.\n\nDes peines complémentaires peuvent également être prononcées contre les personnes physiques : interdiction des droits civiques, civils et de famille, ainsi que l’affichage ou la diffusion de la décision.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "727-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-9"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-3-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 151.3614570000209,
+      "vectorSearchMs": 621.2725570000475,
+      "jinaRerankingMs": 530.147055999958,
+      "mappingMs": 0.04576100001577288,
+      "totalMs": 1302.8585060000187,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012180999969132245,
+      "contextBuilderMs": 0.021466000005602837,
+      "generationMs": 1627.4058070000028,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2930.31089600001
+    },
+    "judge": {
+      "questionId": "q046",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines principales prévues par l’article 727-2 (deux ans et 30 000 euros), ainsi que l’aggravation pour les produits alimentaires (trois ans et 45 000 euros). Elle ajoute correctement les peines complémentaires encourues par les personnes physiques, lesquelles sont explicitement prévues dans le contexte. Elle répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 727-2 et énonce les peines principales, l'aggravation relative aux produits alimentaires et les peines complémentaires pour les personnes physiques. Elle couvre ainsi toutes les affirmations importantes de la réponse générée. Les sources 2 et 3 sont également corroborantes, bien que la source 1 suffise."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 727-2, la diffusion d’informations mensongères visant à provoquer artificiellement la hausse ou la baisse du prix de biens est punie de :\n\n- **2 ans d’emprisonnement** ;\n- **30 000 euros d’amende**.\n\nSi les prix concernent des **produits alimentaires**, les peines sont portées à :\n\n- **3 ans d’emprisonnement** ;\n- **45 000 euros d’amende**.\n\nDes peines complémentaires peuvent également être prononcées : interdiction des droits civiques, civils et de famille, ainsi qu’affichage ou diffusion de la décision.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "727-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4678.384085000027,
+      "routingCalls": 1,
+      "embeddingMs": 169.35929400008172,
+      "vectorSearchMs": 54.25566200003959,
+      "jinaRerankingMs": 550.5942480000667,
+      "mappingMs": 0.03334600001107901,
+      "totalMs": 5452.678426999948,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010244000004604459,
+      "contextBuilderMs": 0.014427000074647367,
+      "generationMs": 2022.2195000000065,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7474.929160999949
+    },
+    "judge": {
+      "questionId": "q046",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines principales prévues par l'article 727-2 (deux ans et 30 000 euros, portés à trois ans et 45 000 euros pour les produits alimentaires). Elle mentionne aussi correctement les peines complémentaires applicables aux personnes physiques, toutes explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 727-2 et vise exactement l'infraction et les peines demandées. Elle couvre les peines principales (deux ans et 30 000 euros), leur aggravation pour les produits alimentaires (trois ans et 45 000 euros), ainsi que les deux peines complémentaires mentionnées dans la réponse. La source 2 est redondante, mais également cohérente sur le fond."
+    }
+  },
+  "failureStage": "none"
+}

@@ -13,7 +13,10 @@ import {
 } from './constants.js';
 import { rerankChunks } from './rerank-chunks.js';
 import type { RerankerService } from './reranker.service.js';
-import { isFallbackEligibleRerankingError } from './reranking.error.js';
+import {
+  formatRerankingFailureMessage,
+  isFallbackEligibleRerankingError,
+} from './reranking.error.js';
 import type { RerankStatus, RerankedChunk } from './types.js';
 
 export interface SearchAndRerankQuestionOptions extends SearchSimilarChunksOptions {
@@ -98,7 +101,9 @@ export async function searchAndRerankQuestion(
       throw error;
     }
 
-    console.warn('Jina reranking failed, using vector search fallback.');
+    console.warn(
+      `Jina reranking failed: ${formatRerankingFailureMessage(error)}; using vector search fallback.`,
+    );
     reranked = candidates.slice(0, rerankTopK);
     rerankStatus = 'fallback';
   }

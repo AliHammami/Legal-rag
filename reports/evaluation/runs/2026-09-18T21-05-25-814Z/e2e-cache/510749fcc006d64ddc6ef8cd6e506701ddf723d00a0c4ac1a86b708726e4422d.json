@@ -1,0 +1,95 @@
+{
+  "questionId": "q341",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le litige transfrontalier est un litige de nature contractuelle entre un consommateur et un professionnel, portant sur l’exécution d’un contrat de vente ou de fourniture de services, lorsque, au moment de la conclusion du contrat, le consommateur réside dans un État membre différent de celui où le professionnel est établi.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L611-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 172.114238999784,
+      "vectorSearchMs": 663.1929560005665,
+      "jinaRerankingMs": 303.9244900001213,
+      "mappingMs": 0.07707200013101101,
+      "totalMs": 1139.3757400000468,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011843999847769737,
+      "contextBuilderMs": 0.021329999901354313,
+      "generationMs": 1107.4800820006058,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2246.8998509999365
+    },
+    "judge": {
+      "questionId": "q341",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article L611-1 : litige contractuel consommateur-professionnel, relatif à l’exécution d’un contrat de vente ou de fourniture de services, avec résidence du consommateur dans un autre État membre que le lieu d’établissement du professionnel au moment de la conclusion. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L611-1, 2°) définit directement et explicitement le litige transfrontalier avec tous les critères repris dans la réponse générée : nature contractuelle, parties consommateur et professionnel, exécution d’un contrat de vente ou de fourniture de services, et résidence du consommateur dans un autre État membre que le lieu d’établissement du professionnel au moment de la conclusion. La source 2 est connexe mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Le litige transfrontalier est défini comme un litige de nature contractuelle entre un consommateur et un professionnel, portant sur l’exécution d’un contrat de vente ou de fourniture de services, lorsque, au moment de la conclusion du contrat, le consommateur réside dans un État membre différent de celui où le professionnel est établi.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L611-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 740.9016260001808,
+      "routingCalls": 1,
+      "embeddingMs": 261.04686600062996,
+      "vectorSearchMs": 68.82324400078505,
+      "jinaRerankingMs": 378.34176499955356,
+      "mappingMs": 0.027804000303149223,
+      "totalMs": 1449.2084130002186,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010416999459266663,
+      "contextBuilderMs": 0.015487000346183777,
+      "generationMs": 1119.160121999681,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2568.4050439996645
+    },
+    "judge": {
+      "questionId": "q341",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article L611-1, 2° : litige contractuel consommateur-professionnel relatif à l’exécution d’un contrat de vente ou de fourniture de services, avec résidence du consommateur dans un autre État membre que l’établissement du professionnel au moment de la conclusion."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L611-1, 2°) définit directement et intégralement le litige transfrontalier selon tous les critères repris dans la réponse générée : nature contractuelle, parties au litige, exécution d’un contrat de vente ou de fourniture de services, et différence entre l’État membre de résidence du consommateur et celui de l’établissement du professionnel au moment de la conclusion. La source 2 est également connexe, bien que non nécessaire à cette définition."
+    }
+  },
+  "failureStage": "none"
+}

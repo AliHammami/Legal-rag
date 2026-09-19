@@ -1,4 +1,5 @@
 import { ALL_CORPUS_IDS } from '../ingestion/corpus-config.js';
+import { goldArticleKey } from './gold-article.js';
 import { mergeDuplicateGroups, detectMulticorpusDuplicates } from './detect-multicorpus-duplicates.js';
 import type {
   LegalMulticorpusEvaluationQuestion,
@@ -39,7 +40,7 @@ function computeCorpusStats(
 
     for (const question of relatedQuestions) {
       for (const article of question.goldArticles) {
-        distinctGoldArticles.add(article);
+        distinctGoldArticles.add(goldArticleKey(article));
         goldArticleCount += 1;
       }
     }
@@ -95,7 +96,7 @@ function computeArticleCoverage(
         continue;
       }
       for (const article of question.goldArticles) {
-        seen.add(article);
+        seen.add(goldArticleKey(article));
       }
     }
   }
@@ -114,11 +115,9 @@ function computeOverrepresentedArticles(
   const counts = new Map<string, number>();
 
   for (const question of questions) {
-    for (const corpusId of question.goldCorpusIds) {
-      for (const article of question.goldArticles) {
-        const key = `${corpusId}::${article}`;
-        counts.set(key, (counts.get(key) ?? 0) + 1);
-      }
+    for (const article of question.goldArticles) {
+      const key = goldArticleKey(article);
+      counts.set(key, (counts.get(key) ?? 0) + 1);
     }
   }
 
@@ -199,7 +198,7 @@ export function formatMulticorpusDatasetReport(report: MulticorpusDatasetReport)
   } else {
     for (const group of report.duplicateGroups) {
       lines.push(
-        `  ${group.questionIds.join(', ')} — ${group.reason} (similarity ${group.similarity.toFixed(2)})`,
+        `  ${group.questionIds.join(', ')} ï¿½ ${group.reason} (similarity ${group.similarity.toFixed(2)})`,
       );
     }
   }

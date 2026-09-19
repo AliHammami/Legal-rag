@@ -1,0 +1,87 @@
+{
+  "questionId": "q371",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "- **Obligation du professionnel :** avant la conclusion du contrat, il doit obtenir le **consentement exprès** du consommateur pour tout paiement supplémentaire venant s’ajouter au prix du bien ou du service principal.\n- **Droit du consommateur :** si le paiement supplémentaire résulte d’un consentement donné par défaut — notamment en l’absence d’opposition à des options payantes non sollicitées — le consommateur peut demander le **remboursement des sommes versées**.\n- Ces règles s’appliquent également à certaines fournitures d’eau, de gaz, d’électricité, de chauffage urbain et de contenu numérique non fourni sur support matériel.\n\nLe contexte fourni ne contient aucune information sur les **limites de durée de la période d’essai d’un contrat de travail à durée indéterminée**. Il ne permet donc pas de répondre à cette partie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.9496729997918,
+      "vectorSearchMs": 903.1399330003187,
+      "jinaRerankingMs": 338.30619700066745,
+      "mappingMs": 0.03084000013768673,
+      "totalMs": 1452.4816009998322,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011547000147402287,
+      "contextBuilderMs": 0.009133999235928059,
+      "generationMs": 2034.268698000349,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3486.7867149999365
+    },
+    "judge": {
+      "questionId": "q371",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les obligations de consentement exprès et le droit au remboursement prévus par le contexte. Elle omet toutefois les durées maximales de période d’essai en CDI attendues par la référence (2, 3 et 4 mois selon la catégorie). Son constat selon lequel le contexte ne contient pas cette information est exact, et toutes ses affirmations positives sont soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour les règles relatives au consentement exprès aux paiements supplémentaires, au remboursement en cas de consentement par défaut et au champ d’application mentionné. Elle ne contient toutefois aucune disposition sur la période d’essai en CDI, qui constitue une partie importante de la question. Toutes les affirmations positives de la réponse générée sont fidèlement couvertes par l’article L121-17, et le constat d’absence d’information sur la période d’essai est cohérent avec l’unique source fournie."
+    }
+  },
+  "routing": {
+    "answer": "- **Obligation du professionnel :** avant la conclusion du contrat, il doit obtenir le **consentement exprès** du consommateur pour tout paiement supplémentaire venant s’ajouter au prix du bien ou du service principal.\n- **Droit du consommateur :** si le paiement supplémentaire résulte d’un consentement donné par défaut — notamment parce qu’il n’a pas expressément refusé une option payante qu’il n’avait pas sollicitée — il peut demander le **remboursement des sommes versées** à ce titre.\n- Ces règles s’appliquent également à certaines fournitures d’eau, de gaz, d’électricité, de chauffage urbain et de contenu numérique non fourni sur support matériel.\n\nLe contexte fourni ne contient **aucune information sur les limites de durée de la période d’essai d’un contrat de travail à durée indéterminée**. Il ne permet donc pas de répondre à cette partie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 948.7493110001087,
+      "routingCalls": 1,
+      "embeddingMs": 721.6708939997479,
+      "vectorSearchMs": 427.98917399998754,
+      "jinaRerankingMs": 310.8541399994865,
+      "mappingMs": 0.04121399950236082,
+      "totalMs": 2409.57668899931,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012657999992370605,
+      "contextBuilderMs": 0.01018499955534935,
+      "generationMs": 2191.0664910003543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4600.679084000178
+    },
+    "judge": {
+      "questionId": "q371",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les règles de consentement exprès et de remboursement prévues par l'article L121-17, y compris son champ d'application mentionné dans le contexte. En revanche, elle ne répond pas aux limites de durée de la période d'essai en CDI (2, 3 et 4 mois selon la catégorie), qui constituent une partie essentielle de la question. Son abstention sur cette partie est bien justifiée par l'absence de contexte correspondant, et toutes ses affirmations sont fondées sur le contexte fourni ; toutefois, l'indicateur attendait une absence d'abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L121-17 est directement pertinente et couvre précisément la partie consommation : consentement exprès préalable, remboursement en cas d’option payante acceptée par défaut et champ d’application étendu à certaines fournitures et contenus numériques. En revanche, aucune source ne concerne la période d’essai en CDI et ses durées maximales, qui constitue une partie importante de la question. Les affirmations effectivement formulées dans la réponse générée sont toutes étayées par la source, y compris le constat qu’aucune information relative à la période d’essai n’est fournie dans le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

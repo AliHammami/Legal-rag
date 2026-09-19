@@ -1,0 +1,95 @@
+{
+  "questionId": "q370",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’employeur doit :\n\n- adresser chaque année une déclaration à l’organisme chargé du recouvrement des cotisations et contributions sociales dont il relève ;\n- l’envoyer au plus tard le **31 janvier**, au titre de l’année civile précédente ;\n- y indiquer notamment :\n  - le nombre de salariés partis en préretraite ou placés en cessation anticipée d’activité ;\n  - leur âge et le montant de l’avantage qui leur est versé ;\n  - le nombre de mises à la retraite d’office à l’initiative de l’employeur ;\n  - ainsi que, selon le texte applicable, le nombre de salariés concernés par certains licenciements ou ruptures conventionnelles.\n\nL’obligation ne s’applique que si l’employeur a été concerné, au cours de l’année précédente, par au moins une des situations visées par le texte.\n\nEn cas de défaut de déclaration dans le délai prescrit, l’employeur encourt une pénalité égale à **600 fois le taux horaire du salaire minimum de croissance**. Cette pénalité est recouvrée par l’organisme chargé du recouvrement des cotisations et son produit est affecté à la **Caisse nationale d’assurance vieillesse**.\n\nLes deux extraits fournis prévoient toutefois des différences concernant les catégories de salariés à déclarer : l’un vise notamment les salariés âgés d’au moins 60 ans licenciés, tandis que l’autre vise les salariés âgés d’au moins 55 ans licenciés ou ayant bénéficié d’une rupture conventionnelle.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L320-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 273.2833489999175,
+      "vectorSearchMs": 996.3395060002804,
+      "jinaRerankingMs": 311.512991999276,
+      "mappingMs": 0.09525700006633997,
+      "totalMs": 1581.273014999926,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015965000726282597,
+      "contextBuilderMs": 0.02452700026333332,
+      "generationMs": 3812.9517999999225,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5394.283286999911
+    },
+    "judge": {
+      "questionId": "q370",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement le destinataire, l’échéance annuelle du 31 janvier, les informations et catégories de salariés à déclarer, la condition d’application de l’obligation, ainsi que la pénalité de 600 fois le SMIC horaire. Les précisions sur le recouvrement et l’affectation du produit sont également explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement les dispositions relatives à la déclaration annuelle : destinataire, échéance du 31 janvier, catégories et informations déclarées, condition d’application, montant de la pénalité, recouvrement et affectation de son produit. Elles couvrent également explicitement la divergence relevée dans la réponse entre l’ancien texte (salariés licenciés de 60 ans et plus) et le texte L1221-18 (55 ans et plus, licenciement ou rupture conventionnelle)."
+    }
+  },
+  "routing": {
+    "answer": "L’employeur doit adresser chaque année, au plus tard le **31 janvier**, à l’organisme chargé du recouvrement des cotisations et contributions sociales dont il relève, une déclaration indiquant notamment :\n\n- le nombre de salariés partis en préretraite ou placés en cessation anticipée d’activité durant l’année précédente ;\n- leur âge ;\n- le montant de l’avantage qui leur est versé ;\n- le nombre de mises à la retraite d’office à l’initiative de l’employeur.\n\nSelon l’article L. 1221-18 fourni, la déclaration doit également mentionner les salariés âgés d’au moins **55 ans** licenciés ou ayant bénéficié d’une rupture conventionnelle au cours de l’année précédente.\n\nL’obligation s’applique lorsque l’employeur a concerné au moins un salarié dans l’une de ces situations au cours de l’année précédente, notamment un départ en préretraite, une cessation anticipée d’activité ou une mise à la retraite à l’initiative de l’employeur.\n\nEn cas de défaut de déclaration dans le délai prescrit, l’employeur encourt une pénalité égale à **600 fois le taux horaire du salaire minimum de croissance**. Cette pénalité est recouvrée par l’organisme chargé du recouvrement des cotisations et son produit est affecté à la Caisse nationale d’assurance vieillesse.\n\nLe contexte contient toutefois une autre version du dispositif, visant notamment les salariés âgés d’au moins 60 ans licenciés et ne mentionnant pas la rupture conventionnelle ; il ne permet pas de déterminer quelle version est applicable dans une situation particulière.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L320-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1073.9614530000836,
+      "routingCalls": 1,
+      "embeddingMs": 216.11070899944752,
+      "vectorSearchMs": 494.7505569998175,
+      "jinaRerankingMs": 326.80401999969035,
+      "mappingMs": 0.08586400002241135,
+      "totalMs": 2111.753192000091,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0675299996510148,
+      "contextBuilderMs": 0.036940000019967556,
+      "generationMs": 3914.278500000015,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6026.148951999843
+    },
+    "judge": {
+      "questionId": "q370",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les obligations prévues par l’article L. 1221-18 : destinataire, échéance annuelle du 31 janvier, informations à déclarer (préretraite/cessation anticipée, âge, avantage, mises à la retraite d’office, salariés de 55 ans ou plus licenciés ou en rupture conventionnelle), condition d’application et pénalité de 600 fois le SMIC horaire. Les précisions sur le recouvrement et l’affectation du produit sont également explicitement présentes dans le contexte. La mention de la divergence avec l’ancienne version contextuelle est elle aussi fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article L. 1221-18) est directement pertinente et couvre l’ensemble des éléments centraux de la réponse : destinataire, échéance du 31 janvier, catégories et informations déclarées, condition d’application, pénalité de 600 fois le SMIC horaire, recouvrement et affectation. La source 1 justifie également l’observation sur l’existence d’une autre version du dispositif, avec le seuil de 60 ans et sans rupture conventionnelle."
+    }
+  },
+  "failureStage": "none"
+}

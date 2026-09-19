@@ -1,0 +1,95 @@
+{
+  "questionId": "q097",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans une obligation conditionnelle :\n\n- **La condition suspensive** : son accomplissement rend l’obligation pure et simple. Elle est réputée accomplie si la partie qui y avait intérêt en a empêché l’accomplissement.\n- **La condition résolutoire** : son accomplissement entraîne l’anéantissement de l’obligation. Elle est réputée défaillie si la partie qui y avait intérêt a provoqué son accomplissement.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 472.55240799998865,
+      "vectorSearchMs": 633.3733179999981,
+      "jinaRerankingMs": 486.90254899999127,
+      "mappingMs": 0.035373999970033765,
+      "totalMs": 1592.9044069999363,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01375199994072318,
+      "contextBuilderMs": 0.0168700001668185,
+      "generationMs": 1768.4609189999755,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3361.406403000001
+    },
+    "judge": {
+      "questionId": "q097",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les deux types de conditions conformément à l’article 1304 et à la référence. Les précisions supplémentaires sur les conditions réputées accomplies ou défaillies sont exactes et explicitement soutenues par l’article 1304-3 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la distinction demandée entre conditions suspensive et résolutoire. La source 2 est directement pertinente pour les précisions ajoutées dans la réponse sur la condition réputée accomplie ou défaillie. Ensemble, elles couvrent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Dans une obligation conditionnelle :\n\n- **La condition suspensive** retarde les effets de l’obligation : son accomplissement rend l’obligation **pure et simple**.\n- **La condition résolutoire** met fin à l’obligation : son accomplissement entraîne son **anéantissement**.\n\nEn outre, la condition suspensive est réputée accomplie si la partie intéressée en empêche l’accomplissement, tandis que la condition résolutoire est réputée défaillie si la partie intéressée en provoque l’accomplissement.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 919.8088529999368,
+      "routingCalls": 1,
+      "embeddingMs": 171.63739700010046,
+      "vectorSearchMs": 102.4855000001844,
+      "jinaRerankingMs": 486.2629849999212,
+      "mappingMs": 0.04668400017544627,
+      "totalMs": 1680.2705689999275,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01426299987360835,
+      "contextBuilderMs": 0.02304500015452504,
+      "generationMs": 1395.7502870000899,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3076.06558699999
+    },
+    "judge": {
+      "questionId": "q097",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les deux conditions conformément à l'article 1304 et à la référence : l'accomplissement de la condition suspensive rend l'obligation pure et simple, tandis que celui de la condition résolutoire l'anéantit. Le complément relatif à l'empêchement ou à la provocation de la condition est également exact et explicitement soutenu par l'article 1304-3 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article 1304 définit précisément les effets respectifs des conditions suspensive et résolutoire, et l'article 1304-3 couvre explicitement la règle complémentaire relative à l'empêchement ou à la provocation de leur accomplissement. Elles couvrent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

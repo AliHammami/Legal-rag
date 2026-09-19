@@ -1,0 +1,99 @@
+{
+  "questionId": "q394",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 2331 du Code civil, les créances privilégiées sur la généralité des meubles comprennent, d’après le contexte fourni :\n\n1. **Les frais de justice**, à condition qu’ils aient profité au créancier auquel le privilège est opposé ;\n2. **Les frais funéraires** ;\n3. **Certaines rémunérations et indemnités**, notamment :\n   - les rémunérations des salariés et apprentis pour les six derniers mois ;\n   - le salaire différé agricole ;\n   - certaines créances du conjoint survivant ;\n   - les indemnités de fin de contrat et de précarité ;\n   - les indemnités liées au préavis, aux congés payés et à certaines situations d’inaptitude ;\n   - certaines indemnités de licenciement, dans les limites prévues par l’article 2331 ;\n   - diverses indemnités dues aux salariés en application des articles cités du Code du travail.\n\nL’article L. 3253-1 du Code du travail précise que les créances résultant du contrat de travail sont garanties dans les conditions prévues notamment par le **3° de l’article 2331**.\n\nEn revanche, le contexte fourni ne contient aucune disposition relative au **Code de la consommation**, ni aucune modification concernant les références au Code du travail ou au Code de l’action sociale et des familles. Il ne permet donc pas de préciser ces modifications.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2331"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 185.38021999970078,
+      "vectorSearchMs": 674.6503429999575,
+      "jinaRerankingMs": 297.065421000123,
+      "mappingMs": 0.0230919998139143,
+      "totalMs": 1157.146801000461,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013321000151336193,
+      "contextBuilderMs": 0.026932000182569027,
+      "generationMs": 3562.6935970000923,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4719.889636000618
+    },
+    "judge": {
+      "questionId": "q394",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les principales catégories de créances privilégiées prévues par l’article 2331, notamment les frais de justice, les frais funéraires et les rémunérations ou indemnités énumérées au 3°. Elle ne fournit toutefois pas les adaptations spécifiques du Code de la consommation attendues par la question, même si elle explique à juste titre que le contexte transmis ne contient aucune disposition permettant de les établir. Toutes les affirmations substantielles qu’elle formule sont soutenues par le contexte, y compris l’absence de base contextuelle relative au Code de la consommation. Elle répond donc réellement à la partie documentée de la question plutôt que de s’abstenir entièrement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "L’article 2331 est directement pertinent et permet d’étayer les catégories de créances privilégiées énoncées. L’article L. 3253-1 soutient également l’affirmation complémentaire sur la garantie des créances issues du contrat de travail. Aucune source ne traite toutefois des adaptations du Code de la consommation demandées ; les sources sont donc insuffisantes pour répondre positivement à cette seconde partie, mais elles permettent à la réponse de constater, de façon limitée au contexte fourni, qu’elle ne peut pas la préciser. Toutes les affirmations substantielles effectivement formulées dans la réponse sont couvertes par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 2331 du Code civil, sont privilégiées sur la généralité des meubles :\n\n1. **Les frais de justice**, à condition qu’ils aient profité au créancier auquel le privilège est opposé ;\n2. **Les frais funéraires** ;\n3. **Certaines rémunérations et indemnités**, notamment :\n   - les rémunérations des salariés et apprentis pour les six derniers mois ;\n   - le salaire différé agricole ;\n   - certaines créances du conjoint survivant ;\n   - les indemnités de fin de contrat et de précarité ;\n   - les indemnités liées au préavis, aux congés payés et à certaines situations d’inaptitude ;\n   - certaines indemnités de licenciement, dans les limites prévues par l’article ;\n   - diverses indemnités dues aux salariés en application des articles cités du Code du travail.\n\nLe contexte fourni **ne précise pas les modifications particulières applicables dans le Code de la consommation**, notamment celles concernant le remplacement ou l’adaptation des références au Code du travail ou au Code de l’action sociale et des familles. Il ne permet donc pas de répondre à cette seconde partie avec suffisamment de précision.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2331"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1567.6289289994165,
+      "routingCalls": 1,
+      "embeddingMs": 177.7033689999953,
+      "vectorSearchMs": 142.06228900048882,
+      "jinaRerankingMs": 326.68633900023997,
+      "mappingMs": 0.03266899939626455,
+      "totalMs": 2214.1544530000538,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011226000264286995,
+      "contextBuilderMs": 0.015982000157237053,
+      "generationMs": 3040.8850749991834,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5255.074965999462
+    },
+    "judge": {
+      "questionId": "q394",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les principales catégories énumérées par l’article 2331 dans le contexte, y compris la condition applicable aux frais de justice et les diverses créances salariales. Elle ne répond toutefois pas au fond à la seconde partie relative aux adaptations du Code de la consommation, alors que celle-ci est demandée et figure dans la référence. Son constat d’absence de contexte sur ce point est pleinement justifié par les sources fournies : aucune disposition du Code de la consommation ni adaptation des renvois aux codes du travail ou de l’action sociale n’y apparaît. Elle répond donc effectivement à la partie documentée sans inventer d’éléments."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et couvre les catégories énoncées dans la réponse au titre de l'article 2331 (frais de justice, frais funéraires et rémunérations/indemnités détaillées). Aucune source ne porte sur l'article L. 771-3 du Code de la consommation ni sur les adaptations des renvois aux codes du travail et de l'action sociale ; toutefois, cela soutient le constat d'abstention formulé pour cette seconde partie. La source 1 est hors du champ direct (privilèges sur certains meubles, art. 2332) et n'apporte pas de couverture supplémentaire déterminante."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q407",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans les entreprises d’au moins cinquante salariés, l’employeur doit publier chaque année :\n\n- l’ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes ;\n- les actions mises en œuvre pour supprimer ces écarts.\n\nCette publication doit respecter les modalités et la méthodologie fixées par décret. Les indicateurs sont également rendus publics sur le site internet du ministère chargé du travail, selon des conditions déterminées par décret.\n\nEn cas d’absence de publication, une pénalité peut être appliquée. Elle peut atteindre au maximum 1 % des rémunérations et gains versés pendant la période de manquement, son montant étant fixé par l’autorité administrative.\n\nLe contexte fourni ne précise pas les sanctions pénales applicables en cas de violation délibérée des règles de sécurité ayant entraîné une incapacité de travail.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.93723899964243,
+      "vectorSearchMs": 592.1146419998258,
+      "jinaRerankingMs": 328.8592050001025,
+      "mappingMs": 0.01815399993211031,
+      "totalMs": 1139.9758150000125,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010387000627815723,
+      "contextBuilderMs": 0.01318500004708767,
+      "generationMs": 1963.867654000409,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3103.8793369997293
+    },
+    "judge": {
+      "questionId": "q407",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les obligations annuelles de publication et ajoute, de manière fondée sur le contexte, la pénalité administrative pouvant atteindre 1 % en cas de défaut de publication. Elle ne donne toutefois pas la sanction pénale demandée pour la violation délibérée des règles de sécurité ayant causé une incapacité de travail (un an d'emprisonnement et 15 000 euros d'amende pour une ITT inférieure ou égale à trois mois). Toutes les affirmations formulées sont soutenues par le contexte fourni, qui ne contient effectivement pas cette sanction pénale. La réponse traite réellement la première partie de la question et signale explicitement la limite du contexte pour la seconde."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources couvrent directement les obligations annuelles de publication des indicateurs et actions (L. 1142-8), ainsi que la pénalité administrative pouvant aller jusqu’à 1 % en cas d’absence de publication (L. 2242-8). Elles ne contiennent toutefois aucune disposition sur la sanction pénale demandée en cas de violation délibérée d’une obligation de sécurité ayant causé une incapacité de travail : une source essentielle manque donc pour répondre intégralement à la question. Toutes les affirmations effectivement formulées dans la réponse générée, y compris le constat que le contexte fourni ne précise pas cette sanction pénale, sont cohérentes avec les sources."
+    }
+  },
+  "routing": {
+    "answer": "Dans les entreprises d’au moins cinquante salariés, l’employeur doit publier chaque année :\n\n- l’ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes ;\n- les actions mises en œuvre pour supprimer ces écarts.\n\nCette publication doit respecter les modalités et la méthodologie fixées par décret. Les indicateurs sont également rendus publics sur le site internet du ministère chargé du travail, dans les conditions prévues par décret.\n\nEn cas d’absence de publication, une pénalité pouvant atteindre 1 % des rémunérations et gains versés peut être appliquée, selon les conditions prévues par l’article L. 2242-8. Le contexte fourni ne précise toutefois aucune sanction pénale concernant une violation délibérée des règles de sécurité ayant entraîné une incapacité de travail.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1061.7093169996515,
+      "routingCalls": 1,
+      "embeddingMs": 200.69618699979037,
+      "vectorSearchMs": 338.52723699994385,
+      "jinaRerankingMs": 313.93473399989307,
+      "mappingMs": 0.01959799975156784,
+      "totalMs": 1914.9148630006239,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010879999957978725,
+      "contextBuilderMs": 0.01706800051033497,
+      "generationMs": 1911.1279030004516,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3826.0790449995548
+    },
+    "judge": {
+      "questionId": "q407",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les obligations annuelles de publication et la publicité des indicateurs sur le site du ministère, ainsi que la pénalité administrative pouvant atteindre 1 % en cas d’absence de publication. Elle ne donne toutefois pas la sanction pénale demandée pour la violation manifestement délibérée d’une obligation de sécurité ayant causé une ITT d’au plus trois mois (un an d’emprisonnement et 15 000 euros d’amende). Toutes les affirmations formulées sont étayées par le contexte fourni, qui ne contient effectivement pas cette incrimination pénale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources couvrent directement et précisément les obligations de publication annuelle des indicateurs et des actions, leur mise à disposition sur le site du ministère, ainsi que la pénalité administrative maximale de 1 % en cas d’absence de publication. Elles ne fournissent en revanche aucune source relative à la sanction pénale demandée pour la violation délibérée d’une obligation de sécurité ayant causé une incapacité de travail, ce qui limite leur pertinence globale pour cette question à deux volets. Toutes les affirmations effectivement formulées dans la réponse générée sont néanmoins étayées par les sources, y compris le constat que le contexte fourni ne précise pas cette sanction pénale."
+    }
+  },
+  "failureStage": "generation"
+}

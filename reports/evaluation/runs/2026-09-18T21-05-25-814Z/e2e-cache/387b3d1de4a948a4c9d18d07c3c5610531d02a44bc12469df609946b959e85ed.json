@@ -1,0 +1,111 @@
+{
+  "questionId": "q232",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les honoraires ne sont pas soumis aux tarifs réglementés lorsque les prestations sont accomplies **en concurrence avec des prestations non tarifées d’autres professionnels**, sauf disposition contraire.\n\nDans ce cas :\n\n- les honoraires sont **fixés librement** entre le professionnel et le client ;\n- une **convention d’honoraires écrite** doit préciser notamment leur montant ou leur mode de détermination, ainsi que les frais et débours prévisibles ;\n- le montant tient compte, selon les usages, de la fortune du client, de la difficulté de l’affaire, des frais exposés, de la notoriété du professionnel et de ses diligences ;\n- le professionnel ne peut demander ou percevoir que les sommes prévues par cette convention, outre le remboursement des sommes dues à des tiers et avancées pour le compte du client ou du débiteur.\n\nLe contexte précise toutefois que les honoraires dus au titre d’un **mandat de justice** ne relèvent pas de cette fixation libre.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-16"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 370.4010799997486,
+      "vectorSearchMs": 614.2206649999134,
+      "jinaRerankingMs": 570.3876100000925,
+      "mappingMs": 0.07658000010997057,
+      "totalMs": 1555.1821670001373,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012959999963641167,
+      "contextBuilderMs": 0.018238999880850315,
+      "generationMs": 2537.5705939996988,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4092.793963999953
+    },
+    "judge": {
+      "questionId": "q232",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la condition centrale : les prestations accomplies en concurrence avec celles d’autres professionnels non soumis à un tarif ne relèvent pas d’un tarif réglementé, sauf disposition contraire. Elle reprend fidèlement les modalités prévues par les textes (convention écrite, critères de fixation, frais et débours) et mentionne correctement l’exception relative au mandat de justice pour la libre fixation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l’article L. 444-1 énonce la condition d’absence de tarif réglementé et les exigences de la convention ainsi que les critères d’honoraires ; R. 444-16 couvre la libre fixation et l’exception du mandat de justice ; R. 444-13 couvre la limitation aux honoraires conventionnels et le remboursement des avances à des tiers. Elles couvrent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les prestations ne sont pas soumises à un tarif réglementé lorsqu’elles sont accomplies **en concurrence avec des prestations non tarifées d’autres professionnels**, sauf disposition contraire.\n\nDans ce cas :\n\n- les honoraires sont **librement fixés** entre le professionnel et le client ;\n- ils tiennent notamment compte de la fortune du client, de la difficulté de l’affaire, des frais exposés, de la notoriété et des diligences accomplies ;\n- une **convention d’honoraires écrite** doit préciser le montant ou le mode de détermination des honoraires, ainsi que les frais et débours prévisibles ;\n- le professionnel ne peut percevoir que les sommes prévues par cette convention, outre le remboursement des sommes dues à des tiers et avancées pour le compte du client ou du débiteur.\n\nEn cas de contestation, les honoraires sont fixés par le juge chargé de la taxation.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-16"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 913.3539020000026,
+      "routingCalls": 1,
+      "embeddingMs": 223.32578699989244,
+      "vectorSearchMs": 228.020491999574,
+      "jinaRerankingMs": 560.7184190000407,
+      "mappingMs": 0.024778999853879213,
+      "totalMs": 1925.4738340000622,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010331999976187944,
+      "contextBuilderMs": 0.01793299987912178,
+      "generationMs": 3091.748747000005,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5017.259235000238
+    },
+    "judge": {
+      "questionId": "q232",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement la condition principale : les prestations accomplies en concurrence avec celles d’autres professionnels non soumises à un tarif, sauf disposition contraire. Elle restitue également les modalités essentielles prévues par les textes : critères de détermination des honoraires, convention écrite, encadrement des sommes pouvant être perçues, remboursement des avances et règlement des contestations par le juge chargé de la taxation. Ces éléments sont tous étayés par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l’article L444-1 énonce la condition d’exclusion du tarif réglementé, les critères des honoraires et l’obligation de convention écrite. Les articles R444-16 et R444-13 couvrent respectivement la libre fixation et la taxation en cas de contestation, ainsi que la limitation aux honoraires conventionnels et le remboursement des avances à des tiers. Toutes les affirmations importantes de la réponse générée sont ainsi couvertes."
+    }
+  },
+  "failureStage": "none"
+}

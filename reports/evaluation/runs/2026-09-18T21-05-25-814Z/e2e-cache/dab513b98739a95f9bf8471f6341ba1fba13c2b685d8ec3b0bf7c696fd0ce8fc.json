@@ -1,0 +1,87 @@
+{
+  "questionId": "q118",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’applicabilité du titre repose sur les critères suivants :\n\n- le salarié est employé par un particulier ;\n- il travaille au domicile privé de ce particulier, ou à proximité ;\n- il réalise des travaux à caractère familial ou ménager ;\n- l’employeur n’agit pas dans un but lucratif ;\n- l’emploi répond aux besoins de la vie personnelle du particulier, notamment familiale ;\n- les besoins liés à la vie professionnelle sont exclus.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 357.61700400011614,
+      "vectorSearchMs": 663.653907999862,
+      "jinaRerankingMs": 505.9773999999743,
+      "mappingMs": 0.031395000172778964,
+      "totalMs": 1527.309731000103,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014005000004544854,
+      "contextBuilderMs": 0.00887800008058548,
+      "generationMs": 1747.9308450000826,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3275.2716369999107
+    },
+    "judge": {
+      "questionId": "q118",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement et exhaustivement les critères de l'article fourni : emploi par un particulier, au domicile privé ou à proximité, travaux familiaux ou ménagers, absence de but lucratif, satisfaction de besoins personnels notamment familiaux, et exclusion des besoins professionnels. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l’article L7221-1, qui fixe précisément les conditions d’applicabilité du titre. Elle couvre toutes les affirmations importantes de la réponse générée : emploi par un particulier, au domicile privé ou à proximité, travaux familiaux ou ménagers, absence de but lucratif, besoins personnels notamment familiaux, et exclusion des besoins professionnels."
+    }
+  },
+  "routing": {
+    "answer": "L’applicabilité du titre repose sur plusieurs critères :\n\n- le salarié est employé par un particulier ;\n- il travaille au domicile privé de celui-ci, ou à proximité ;\n- les travaux réalisés présentent un caractère familial ou ménager ;\n- l’emploi est exercé sans but lucratif ;\n- il vise à satisfaire des besoins relevant de la vie personnelle du particulier, notamment familiale ;\n- ces besoins ne doivent pas relever de sa vie professionnelle.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.3993210000917,
+      "routingCalls": 1,
+      "embeddingMs": 209.2912799997721,
+      "vectorSearchMs": 283.0502049999777,
+      "jinaRerankingMs": 504.52577499998733,
+      "mappingMs": 0.07966300006955862,
+      "totalMs": 2021.38003999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04539299989119172,
+      "contextBuilderMs": 0.00974200014024973,
+      "generationMs": 1562.0158269999083,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.45895700017
+    },
+    "judge": {
+      "questionId": "q118",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les critères de l’article fourni : emploi par un particulier, au domicile privé ou à proximité, travaux à caractère familial ou ménager, absence de but lucratif, satisfaction de besoins personnels notamment familiaux, à l’exclusion des besoins professionnels."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l'article L7221-1, est directement pertinente : elle énonce expressément les conditions d'application du titre. Elle couvre l'ensemble des critères affirmés dans la réponse générée, y compris l'emploi par un particulier, le domicile privé ou sa proximité, le caractère familial ou ménager des travaux, l'absence de but lucratif, les besoins personnels notamment familiaux et l'exclusion des besoins professionnels."
+    }
+  },
+  "failureStage": "none"
+}

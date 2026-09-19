@@ -1,0 +1,87 @@
+{
+  "questionId": "q367",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de manquement du professionnel à son obligation de délivrance du bien, le consommateur peut :\n\n- **Mettre en demeure** le professionnel d’effectuer la délivrance dans un délai supplémentaire raisonnable. Si le professionnel ne s’exécute pas dans ce délai, le consommateur peut résoudre le contrat. La résolution prend effet à la réception, par le professionnel, de la lettre ou de l’écrit l’en informant, sauf exécution entre-temps.\n- **Résoudre immédiatement le contrat** :\n  1. si le professionnel refuse de délivrer le bien ou s’il est manifeste qu’il ne le délivrera pas ;\n  2. si le bien n’est pas délivré à la date ou à l’expiration du délai prévu à l’article L. 216-1, lorsque cette date ou ce délai constitue une condition essentielle du contrat. Cette condition doit résulter des circonstances de la conclusion du contrat ou d’une demande expresse du consommateur avant sa conclusion.\n\nLe consommateur peut également suspendre le paiement de tout ou partie du prix jusqu’à l’exécution du professionnel, dans les conditions des articles 1219 et 1220 du Code civil. Ces dispositions ne font pas obstacle à l’allocation de dommages et intérêts.\n\nLe contexte fourni ne contient aucune information sur le cadre juridique applicable à la forme, au fonctionnement, à la responsabilité ou à la constitution des sociétés coopératives de commerçants de détail. Il ne permet donc pas de répondre à cette partie de la question.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.4739679992199,
+      "vectorSearchMs": 1137.942455000244,
+      "jinaRerankingMs": 1849.3680809997022,
+      "mappingMs": 0.07295100018382072,
+      "totalMs": 3187.9070410002023,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02875200007110834,
+      "contextBuilderMs": 0.026232999749481678,
+      "generationMs": 2770.313437999226,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5958.288185999729
+    },
+    "judge": {
+      "questionId": "q367",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de manière détaillée les modalités de suspension du paiement et de résolution prévues à l’article L. 216-6, y compris les cas de résolution immédiate et les dommages-intérêts. Elle ne répond toutefois pas au second volet essentiel relatif au régime des sociétés coopératives de commerçants de détail, alors que la référence attend notamment la forme SARL ou SA à capital variable et les textes applicables. Son constat selon lequel le contexte fourni ne contient pas ces informations est exact, et toutes ses affirmations positives sont bien étayées par le contexte. Néanmoins, l’abstention partielle sur une partie de la question rend l’abstention incorrecte au regard de l’indicateur attendu à false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L216-6 est directement pertinente et couvre de façon précise le premier volet de la question : suspension du paiement, mise en demeure, délai supplémentaire raisonnable, prise d’effet de la résolution, hypothèses de résolution immédiate et dommages-intérêts. En revanche, aucune source ne porte sur le régime des sociétés coopératives de commerçants de détail, ce qui rend l’ensemble des sources seulement partiellement pertinent au regard de la question complète. Les affirmations effectivement formulées dans la réponse générée sur la résolution sont toutes étayées par la source, et le constat d’absence d’information sur le second volet correspond au contenu du contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "En cas de manquement du professionnel à son obligation de délivrance :\n\n- **Résolution après mise en demeure** : le consommateur doit mettre en demeure le professionnel de délivrer le bien dans un délai supplémentaire raisonnable. Si le professionnel ne s’exécute pas dans ce délai, le consommateur peut résoudre le contrat. La résolution prend effet à la réception, par le professionnel, de la lettre ou de l’écrit l’en informant, sauf si le professionnel s’est exécuté entre-temps.\n- **Résolution immédiate** : elle est possible lorsque :\n  1. le professionnel refuse de délivrer le bien ou qu’il est manifeste qu’il ne le délivrera pas ;\n  2. le bien n’est pas délivré à la date ou à l’expiration du délai prévu, lorsque cette date ou ce délai constitue une condition essentielle du contrat. Cette condition doit résulter des circonstances de la conclusion du contrat ou d’une demande expresse du consommateur formulée avant sa conclusion.\n\nLe consommateur peut également suspendre le paiement de tout ou partie du prix dans les conditions prévues par les articles 1219 et 1220 du Code civil. La résolution ne fait pas obstacle à l’octroi éventuel de dommages et intérêts.\n\nEn revanche, le contexte fourni ne contient aucune information sur le cadre juridique applicable à la forme, à la responsabilité ou à la constitution des sociétés coopératives de commerçants de détail. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1262.3774509998038,
+      "routingCalls": 1,
+      "embeddingMs": 199.6846509994939,
+      "vectorSearchMs": 456.22915099933743,
+      "jinaRerankingMs": 348.9848279999569,
+      "mappingMs": 0.04584299959242344,
+      "totalMs": 2267.3570130001754,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020496000535786152,
+      "contextBuilderMs": 0.012641999870538712,
+      "generationMs": 2780.966292999685,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5048.366170999594
+    },
+    "judge": {
+      "questionId": "q367",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La première partie est correcte et reprend fidèlement les modalités de suspension du paiement, de résolution après mise en demeure, de résolution immédiate et de dommages-intérêts prévues par l'article L216-6. En revanche, la réponse ne fournit pas le cadre juridique demandé pour les sociétés coopératives de commerçants de détail (notamment l'article L124-3 du Code de commerce, les formes SARL ou SA à capital variable et le régime applicable). Cette omission rend la réponse incomplète au regard de la question globale. Les affirmations effectivement formulées sont toutes étayées par le contexte, mais le modèle s'abstient sur une partie substantielle alors qu'une réponse complète était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L216-6 est directement pertinente et couvre de façon complète les modalités de suspension du paiement, de résolution après mise en demeure, de prise d’effet de la résolution, de résolution immédiate et de dommages-intérêts exposées dans la réponse. En revanche, aucune source ne porte sur les sociétés coopératives de commerçants de détail ou sur l’article L124-3 du Code de commerce : les sources sont donc insuffisantes pour répondre à l’ensemble de la question. La réponse constate précisément cette absence de contenu pour sa seconde partie, sans formuler d’affirmation juridique non étayée ; ses affirmations importantes sont donc couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

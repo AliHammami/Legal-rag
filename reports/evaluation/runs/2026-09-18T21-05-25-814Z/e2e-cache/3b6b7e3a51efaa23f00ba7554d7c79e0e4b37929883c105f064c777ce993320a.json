@@ -1,0 +1,87 @@
+{
+  "questionId": "q462",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui. Le directeur régional peut mettre en demeure l’employeur de prendre toutes les mesures utiles pour remédier à une situation dangereuse, sur rapport de l’agent de contrôle de l’inspection du travail.\n\nCela est possible notamment en cas de non-respect des principes généraux de prévention ou de l’obligation générale de santé et de sécurité.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 165.49496199999703,
+      "vectorSearchMs": 724.8563940000022,
+      "jinaRerankingMs": 311.7271789999795,
+      "mappingMs": 0.021750999963842332,
+      "totalMs": 1202.1289509999915,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009932000015396625,
+      "contextBuilderMs": 0.009741000016219914,
+      "generationMs": 1654.7328349999734,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2856.8930350000155
+    },
+    "judge": {
+      "questionId": "q462",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement le mécanisme prévu par le contexte : le directeur régional peut mettre en demeure l’employeur de prendre les mesures utiles après constat d’une situation dangereuse par l’inspection du travail, notamment en cas de méconnaissance des principes de prévention ou de l’obligation de santé et sécurité. Toutefois, alors qu’une abstention était attendue, elle répond sur le fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L4721-1 est directement pertinente : elle prévoit la mise en demeure de l’employeur par le directeur régional, sur rapport de l’agent de contrôle constatant une situation dangereuse, et vise expressément le non-respect des principes généraux de prévention ainsi que l’obligation générale de santé et de sécurité. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Oui. Le directeur régional peut mettre l’employeur en demeure de prendre toutes les mesures utiles pour remédier à une situation dangereuse, sur rapport de l’inspection du travail, notamment en cas de non-respect des principes généraux de prévention ou de l’obligation générale de santé et de sécurité.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.583685999969,
+      "routingCalls": 1,
+      "embeddingMs": 188.2192459999933,
+      "vectorSearchMs": 625.0995080000139,
+      "jinaRerankingMs": 289.8251249999739,
+      "mappingMs": 0.03744599997298792,
+      "totalMs": 2127.794425000029,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011881999962497503,
+      "contextBuilderMs": 0.007752000004984438,
+      "generationMs": 1675.0011059999815,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3802.8285289999912
+    },
+    "judge": {
+      "questionId": "q462",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement le mécanisme prévu par le contexte : le directeur régional peut mettre l’employeur en demeure, sur rapport de l’inspection du travail constatant une situation dangereuse, notamment en cas de méconnaissance des principes de prévention ou de l’obligation de santé et sécurité. Elle répond effectivement au fond, mais une abstention était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 4721-1 et est précisément pertinente pour la réponse : elle prévoit la mise en demeure de l'employeur par le directeur régional, sur rapport de l'inspection du travail constatant une situation dangereuse, ainsi que les deux fondements cités (principes généraux de prévention et obligation générale de santé et de sécurité). Toutes les affirmations importantes de la réponse sont couvertes par cette source."
+    }
+  },
+  "failureStage": "abstention"
+}

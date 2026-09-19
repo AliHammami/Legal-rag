@@ -1,0 +1,103 @@
+{
+  "questionId": "q238",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L231-10, le fait d’affirmer sincères et véritables des souscriptions que l’on sait fictives est puni de :\n\n- **cinq ans d’emprisonnement** ;\n- **9 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L231-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.26811800012365,
+      "vectorSearchMs": 574.4355729999952,
+      "jinaRerankingMs": 546.3585330001079,
+      "mappingMs": 0.03953799977898598,
+      "totalMs": 1320.1300909998827,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012889999896287918,
+      "contextBuilderMs": 0.02771399961784482,
+      "generationMs": 1267.9826340000145,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2588.163468999788
+    },
+    "judge": {
+      "questionId": "q238",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux sanctions prévues par l’article L231-10 pour l’affirmation de souscriptions fictives : cinq ans d’emprisonnement et 9 000 euros d’amende. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L231-10 et vise expressément le fait d’affirmer sincères et véritables des souscriptions que la personne sait fictives. Elle prévoit explicitement cinq ans d’emprisonnement et 9 000 euros d’amende, couvrant intégralement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article L231-10 ni les sanctions applicables aux affirmations de souscriptions fictives. Il ne permet donc pas de répondre précisément à cette question.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L241-3"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1945.658368000295,
+      "routingCalls": 1,
+      "embeddingMs": 191.05048600025475,
+      "vectorSearchMs": 161.79602999985218,
+      "jinaRerankingMs": 558.3519290001132,
+      "mappingMs": 0.02529199980199337,
+      "totalMs": 2856.9556289999746,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009788999799638987,
+      "contextBuilderMs": 0.019990999717265368,
+      "generationMs": 1443.8647239999846,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4300.856988999993
+    },
+    "judge": {
+      "questionId": "q238",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de donner les sanctions alors que la réponse attendue est cinq ans d'emprisonnement et 9 000 euros d'amende. Elle est toutefois fidèle au contexte fourni, qui ne contient ni l'article L231-10 ni une disposition relative aux souscriptions fictives. L'abstention est incorrecte car EXPECTED ABSTENTION est false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne reproduisent pas l’article L231-10 ni l’incrimination des affirmations de souscriptions fictives. Elles sont donc insuffisantes pour répondre directement à la question. Toutefois, elles permettent de soutenir le constat de la réponse générée selon lequel le contexte fourni ne contient pas cet article ni cette incrimination ; aucune source fournie ne traite des souscriptions fictives. La couverture des affirmations effectivement formulées par la réponse abstentionniste est donc complète."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,91 @@
+{
+  "questionId": "q383",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 2429 du code civil :\n\n- **Échéance ou dernière échéance déterminée** : l’inscription peut produire effet jusqu’à **un an au plus après cette échéance**, sans dépasser **50 ans**.\n- **Échéance indéterminée** ou hypothèque rechargeable : durée maximale de **50 ans** à compter de la formalité.\n- **Échéance antérieure ou concomitante à l’inscription** : durée maximale de **10 ans** à compter de la formalité.\n- Lorsque plusieurs créances sont garanties, une inscription unique peut être prise jusqu’à la date la plus éloignée applicable.\n\nS’agissant des alternatives à l’emprisonnement pour un délit, le contexte fourni ne contient pas l’article **131-5-1** du code pénal. Il mentionne seulement l’article **131-4**, qui fixe l’échelle des peines d’emprisonnement. Il ne permet donc pas d’identifier les alternatives pouvant être prescrites.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2429"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.00852300040424,
+      "vectorSearchMs": 1276.381198999472,
+      "jinaRerankingMs": 318.7757119992748,
+      "mappingMs": 0.06314900051802397,
+      "totalMs": 1788.323432999663,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015179000794887543,
+      "contextBuilderMs": 0.0999389998614788,
+      "generationMs": 2526.7084160000086,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4315.158579000272
+    },
+    "judge": {
+      "questionId": "q383",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de manière complète les trois régimes de durée de l'inscription hypothécaire prévus par l'article 2429, ainsi que la règle applicable aux créances multiples. En revanche, elle ne répond pas au volet relatif à l'article 131-5-1 et au stage comme alternative à l'emprisonnement, pourtant demandé et présent dans la référence. Son refus sur ce point est néanmoins entièrement justifié par le contexte effectivement fourni, qui ne contient que l'article 131-4 et aucun élément sur l'article 131-5-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les règles de durée d'inscription hypothécaire de l'article 2429. En revanche, l'article 131-5-1 demandé n'est pas fourni : la source 2 porte sur l'article 131-4 et ne permet pas de répondre directement aux alternatives à l'emprisonnement. Les sources couvrent néanmoins les affirmations effectivement formulées dans la réponse générée : les trois régimes, la règle des créances multiples, ainsi que le constat que le contexte ne contient que l'article 131-4 et non l'article 131-5-1."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 2429 du code civil :\n\n- **Échéance ou dernière échéance déterminée** : l’inscription peut produire effet jusqu’à **un an au plus après cette échéance**, sans pouvoir dépasser **cinquante ans**.\n- **Échéance indéterminée** ou hypothèque assortie d’une clause de rechargement : la durée maximale est de **cinquante ans à compter de la formalité**.\n- **Échéance antérieure ou concomitante à l’inscription** : la durée maximale est de **dix ans à compter de la formalité**.\n- Lorsque plusieurs créances sont garanties, le créancier peut prendre des inscriptions distinctes ou une inscription unique jusqu’à la date la plus éloignée.\n\nLe contexte ne reproduit pas l’article **131-5-1 du code pénal**. Il ne permet donc pas d’indiquer quelles alternatives à l’emprisonnement peuvent être prescrites pour un délit puni d’emprisonnement.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2429"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1007.2182289995253,
+      "routingCalls": 1,
+      "embeddingMs": 209.80843100044876,
+      "vectorSearchMs": 227.9978430001065,
+      "jinaRerankingMs": 313.17076400015503,
+      "mappingMs": 0.04938900005072355,
+      "totalMs": 1758.2846139995381,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02217600028961897,
+      "contextBuilderMs": 0.012037999927997589,
+      "generationMs": 2231.7579469997436,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3990.0870880000293
+    },
+    "judge": {
+      "questionId": "q383",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon détaillée les trois régimes de durée de l'inscription hypothécaire prévus par l'article 2429, ainsi que la règle applicable en cas de pluralité de créances. En revanche, elle ne répond pas au second volet sur l'article 131-5-1, alors que l'élément essentiel attendu est la possibilité de prescrire un stage, d'une durée maximale d'un mois, dans un délai de six mois après la condamnation définitive. Son refus est néanmoins correctement fondé sur le contexte fourni, qui ne contient que l'article 2429. Comme une réponse était attendue sans abstention, l'abstention sur la moitié de la question n'est pas conforme à l'indicateur."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente et complète pour le volet relatif à l’article 2429 du code civil, y compris les trois régimes de durée et le cas de pluralité de créances. En revanche, aucune source ne porte sur l’article 131-5-1 du code pénal, ce qui laisse le second volet de la question sans source directe. Les affirmations effectivement formulées dans la réponse générée sur l’hypothèque sont toutes couvertes par la source, et son constat selon lequel le contexte ne reproduit pas l’article 131-5-1 est également conforme aux sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,111 @@
+{
+  "questionId": "q473",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de répondre à cette question : il ne contient pas les règles relatives à la garde à vue en procédure pénale. Il traite principalement du suivi socio-judiciaire, des obligations imposées au condamné et de la garde judiciaire de biens saisis.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-45"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1962"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-36-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 190.46226099994965,
+      "vectorSearchMs": 623.3787870000815,
+      "jinaRerankingMs": 307.46983700001147,
+      "mappingMs": 0.04390599997714162,
+      "totalMs": 1121.391106999945,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011752999969758093,
+      "contextBuilderMs": 0.02036899991799146,
+      "generationMs": 1536.4192370000528,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2657.8521739999996
+    },
+    "judge": {
+      "questionId": "q473",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et à juste titre : le contexte ne contient aucune règle de procédure pénale relative à la garde à vue. Elle décrit correctement les thèmes effectivement présents dans les extraits."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur les règles de garde à vue en procédure pénale, mais elles sont pertinentes pour justifier l'abstention : elles traitent du suivi socio-judiciaire et d'obligations post-condamnation (articles 131-36-1 et 132-45), ainsi que de la garde judiciaire d'effets saisis (article 1962). Elles couvrent donc les constats de la réponse sur l'absence de règles de garde à vue et sur les thèmes réellement présents dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de présenter les règles de la garde à vue.\n\nIl indique seulement que, pour l’application du paragraphe concerné, est considérée comme détenue toute personne placée en garde à vue (article 434-28, 1°). Il ne précise ni les conditions de placement, ni la durée, ni les droits de la personne gardée à vue, ni les modalités de contrôle de la mesure.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-45"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-44"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-26"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-28"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-41-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 900.0319369999925,
+      "routingCalls": 1,
+      "embeddingMs": 189.24748899997212,
+      "vectorSearchMs": 31.5547469999874,
+      "jinaRerankingMs": 300.14481500000693,
+      "mappingMs": 0.04554199997801334,
+      "totalMs": 1421.0526240000036,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014231999986805022,
+      "contextBuilderMs": 0.03516299999319017,
+      "generationMs": 1834.080132999923,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3255.1924360000994
+    },
+    "judge": {
+      "questionId": "q473",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient à juste titre de présenter les règles générales de garde à vue, absentes du contexte. Elle identifie correctement l’unique information pertinente fournie par l’article 434-28, selon laquelle une personne placée en garde à vue est regardée comme détenue pour l’application du paragraphe concerné, et précise adéquatement les éléments non couverts par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 4 est directement pertinente pour justifier l’abstention : elle mentionne uniquement qu’une personne placée en garde à vue est regardée comme détenue pour l’application du paragraphe concerné, sans fournir les règles procédurales générales. Les autres sources sont hors sujet, mais n’affectent pas le constat. La réponse générée est entièrement soutenue par cette limite du contenu fourni."
+    }
+  },
+  "failureStage": "none"
+}

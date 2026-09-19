@@ -1,0 +1,87 @@
+{
+  "questionId": "q156",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L2222-1, le champ d’application professionnel des conventions et accords collectifs de travail est défini en termes d’activités économiques.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2222-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.9074459997937,
+      "vectorSearchMs": 624.5204740003683,
+      "jinaRerankingMs": 509.20651899976656,
+      "mappingMs": 0.032634999603033066,
+      "totalMs": 1311.7618990000337,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01053600013256073,
+      "contextBuilderMs": 0.007902999874204397,
+      "generationMs": 1036.3182859998196,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2348.1067160000093
+    },
+    "judge": {
+      "questionId": "q156",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle générale selon laquelle le champ professionnel est défini en termes d’activités économiques. Elle omet toutefois la précision essentielle applicable aux professions agricoles, pour lesquelles il peut aussi tenir compte du statut juridique des entreprises ou du régime de protection sociale des salariés. L’affirmation fournie est entièrement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L2222-1 et énonce explicitement que le champ d’application professionnel est défini en termes d’activités économiques. Elle couvre donc intégralement l’affirmation de la réponse générée. Elle contient aussi la précision relative aux professions agricoles, non mentionnée dans la réponse, mais cette omission n’affecte pas la couverture des affirmations effectivement formulées."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L2222-1, le champ d’application professionnel des conventions et accords collectifs de travail est défini en termes d’activités économiques.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2222-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.5871770000085,
+      "routingCalls": 1,
+      "embeddingMs": 232.75855199992657,
+      "vectorSearchMs": 237.89762299973518,
+      "jinaRerankingMs": 506.8411329998635,
+      "mappingMs": 0.03673700010403991,
+      "totalMs": 1900.1485850000754,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011345000006258488,
+      "contextBuilderMs": 0.008504999801516533,
+      "generationMs": 967.2041839999147,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2867.382021999918
+    },
+    "judge": {
+      "questionId": "q156",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle générale selon laquelle le champ professionnel est défini par les activités économiques. Elle omet toutefois la précision essentielle prévue pour certaines professions agricoles : le champ peut aussi tenir compte du statut juridique des entreprises ou du régime de protection sociale des salariés. Toutes les affirmations formulées sont directement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L2222-1 directement applicable et énonce explicitement que le champ d’application professionnel est défini en termes d’activités économiques. Elle couvre intégralement l’affirmation de la réponse générée, même si celle-ci omet la particularité relative à certaines professions agricoles."
+    }
+  },
+  "failureStage": "none"
+}

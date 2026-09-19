@@ -1,0 +1,95 @@
+{
+  "questionId": "q496",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas de déterminer les conditions de la **retraite pour inaptitude** au sens de la pension de vieillesse.\n\nIl mentionne seulement :\n\n- le **licenciement pour inaptitude**, lorsque l’employeur justifie par écrit l’impossibilité de reclassement ou lorsque le médecin du travail constate l’inaptitude à tout poste dans l’entreprise ;\n- la **mise à la retraite**, possible lorsque le salarié atteint l’âge prévu par l’article L. 351-8 du Code de la sécurité sociale, sous certaines conditions et après respect d’une procédure d’interrogation écrite du salarié.\n\nLes conditions spécifiques d’attribution d’une pension de retraite pour inaptitude ne sont pas fournies.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L321-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 712.6784929998685,
+      "vectorSearchMs": 623.8018090000842,
+      "jinaRerankingMs": 287.75159100000747,
+      "mappingMs": 0.038995999842882156,
+      "totalMs": 1624.299291000003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015535000013187528,
+      "contextBuilderMs": 0.02485300018452108,
+      "generationMs": 2036.1064939999487,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3660.52852599998
+    },
+    "judge": {
+      "questionId": "q496",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient clairement de donner les conditions de la pension de retraite pour inaptitude, qui ne figurent pas dans le contexte. Elle distingue de façon exacte les éléments effectivement présents : licenciement pour inaptitude et mise à la retraite, sans les confondre avec la retraite pour inaptitude."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont pertinentes pour justifier l’abstention : la première traite uniquement du licenciement pour inaptitude et de l’impossibilité de reclassement, tandis que la seconde traite de la mise à la retraite et de la procédure associée. Elles permettent de constater que le contexte ne fournit pas les conditions d’attribution d’une pension de vieillesse pour inaptitude. Les distinctions et constats formulés dans la réponse sont couverts."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions de la **retraite pour inaptitude**.\n\nIl traite seulement :\n\n- du **licenciement pour inaptitude** lorsque l’employeur ne peut pas procéder au reclassement ou lorsque l’inaptitude à tout poste est constatée par le médecin du travail ;\n- de la **mise à la retraite** par l’employeur, sous certaines conditions d’âge et de procédure.\n\nAucune condition spécifique relative à la retraite pour inaptitude n’est exposée dans les sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L321-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1046.81932400004,
+      "routingCalls": 1,
+      "embeddingMs": 209.14676799997687,
+      "vectorSearchMs": 577.3741049999371,
+      "jinaRerankingMs": 251.26085500000045,
+      "mappingMs": 0.07206999999471009,
+      "totalMs": 2084.7084980001673,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012341000139713287,
+      "contextBuilderMs": 0.018959000008180737,
+      "generationMs": 1807.712789000012,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3892.461643999908
+    },
+    "judge": {
+      "questionId": "q496",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement de fournir des conditions non présentes dans le contexte. Elle distingue correctement le licenciement pour inaptitude et la mise à la retraite, seuls sujets couverts par les extraits, de la retraite pour inaptitude demandée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne traitent pas des conditions de la retraite pour inaptitude, mais elles sont pertinentes pour justifier l’abstention : la première porte sur le licenciement pour inaptitude et la seconde sur la mise à la retraite par l’employeur. Elles couvrent ainsi les constats de la réponse selon lesquels le contexte traite uniquement de ces deux mécanismes et n’expose aucune condition spécifique de retraite pour inaptitude."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q325",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L451-1, l’opérateur encourt **un an d’emprisonnement et 150 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 240.07909299992025,
+      "vectorSearchMs": 917.0437679998577,
+      "jinaRerankingMs": 394.4266149997711,
+      "mappingMs": 0.025828000158071518,
+      "totalMs": 1551.6879960000515,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010115999728441238,
+      "contextBuilderMs": 0.01144499983638525,
+      "generationMs": 1523.4580229995772,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3075.1948330001906
+    },
+    "judge": {
+      "questionId": "q325",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la sanction prévue par l’article L451-1 dans le contexte : un an d’emprisonnement et 150 000 euros d’amende."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L451-1 et vise expressément le défaut d’information prévu à l’article L. 411-2. Elle énonce exactement les deux sanctions affirmées dans la réponse générée : un an d’emprisonnement et 150 000 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas les dispositions des articles **L. 411-2** et **L. 451-1**. Il ne permet donc pas de déterminer la sanction encourue par l’opérateur.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L572-23"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L572-18"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L574-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1525.98630100023,
+      "routingCalls": 1,
+      "embeddingMs": 201.06560500059277,
+      "vectorSearchMs": 151.02957900054753,
+      "jinaRerankingMs": 266.41735100001097,
+      "mappingMs": 0.02889000065624714,
+      "totalMs": 2144.704967999831,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010670999996364117,
+      "contextBuilderMs": 0.018851999193429947,
+      "generationMs": 1454.4648209996521,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3599.2057510009035
+    },
+    "judge": {
+      "questionId": "q325",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la sanction demandée, qui est d’un an d’emprisonnement et 150 000 euros d’amende. Son constat selon lequel les articles visés ne figurent pas dans le contexte est exact et fondé sur celui-ci, mais elle s’abstient alors qu’une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources ne portent ni sur les articles L. 411-2 et L. 451-1 ni sur l'obligation d'information de l'opérateur visée par la question ; elles sont donc très insuffisantes pour répondre directement à la question. Elles permettent toutefois de constater que le contexte fourni ne contient pas ces dispositions. La réponse générée se limite précisément à ce constat d'absence, qui est entièrement couvert par les sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

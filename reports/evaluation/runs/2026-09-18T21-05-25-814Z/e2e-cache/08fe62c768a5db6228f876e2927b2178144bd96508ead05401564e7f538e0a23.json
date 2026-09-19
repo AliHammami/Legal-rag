@@ -1,0 +1,87 @@
+{
+  "questionId": "q296",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans un contrat de vente d’un bien mobilier, toute somme versée d’avance produit des intérêts au taux légal en matière civile, quelle que soit sa nature ou sa qualification dans l’acte. Les intérêts courent à l’expiration d’un délai de trois mois suivant le versement jusqu’à la livraison, puis sont déduits du solde à payer lors de celle-ci.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.3947970001027,
+      "vectorSearchMs": 589.4594569997862,
+      "jinaRerankingMs": 272.81944099999964,
+      "mappingMs": 0.03188699949532747,
+      "totalMs": 1072.7574869999662,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01024600025266409,
+      "contextBuilderMs": 0.008577999658882618,
+      "generationMs": 1277.186734000221,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2349.9716729996726
+    },
+    "judge": {
+      "questionId": "q296",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le champ des sommes versées d’avance, le taux légal en matière civile, le point de départ après trois mois, la période jusqu’à la livraison et la déduction des intérêts du solde lors de celle-ci. Ces éléments sont explicitement contenus dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L214-2 applicable à la vente d’un bien mobilier. Elle couvre l’ensemble des affirmations importantes : toute somme versée d’avance, quelle que soit sa qualification, produit des intérêts au taux légal en matière civile ; ceux-ci courent après trois mois jusqu’à la livraison et sont déduits du solde à payer lors de celle-ci."
+    }
+  },
+  "routing": {
+    "answer": "Pour la vente d’un bien mobilier, toute somme versée d’avance porte intérêt au taux légal en matière civile. Les intérêts courent à compter de l’expiration d’un délai de trois mois suivant le versement, jusqu’à la livraison, et sont déduits du solde à payer lors de celle-ci.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1742.9816519999877,
+      "routingCalls": 1,
+      "embeddingMs": 226.86542300041765,
+      "vectorSearchMs": 49.05421099998057,
+      "jinaRerankingMs": 249.4327020002529,
+      "mappingMs": 0.09021700080484152,
+      "totalMs": 2268.4584379997104,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013100000098347664,
+      "contextBuilderMs": 0.009850000031292439,
+      "generationMs": 1213.785577999428,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3482.276367000304
+    },
+    "judge": {
+      "questionId": "q296",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement le régime applicable au bien mobilier : intérêt au taux légal civil, point de départ après trois mois suivant le versement, cours jusqu’à la livraison et déduction du solde lors de celle-ci. Ces éléments sont tous explicitement présents dans le contexte. L’absence de mention expresse du maintien de l’obligation de livrer est mineure au regard de la question, centrée sur le traitement des intérêts."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L214-2 et vise expressément les sommes versées d’avance pour la vente d’un bien mobilier. Elle couvre toutes les affirmations importantes de la réponse générée : taux légal civil, point de départ après trois mois, cours jusqu’à la livraison et déduction des intérêts du solde lors de la livraison."
+    }
+  },
+  "failureStage": "none"
+}

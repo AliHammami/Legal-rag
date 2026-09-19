@@ -1,0 +1,87 @@
+{
+  "questionId": "q212",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L251-1, le groupement d’intérêt économique (GIE) a pour objectifs de :\n\n- faciliter ou développer l’activité économique de ses membres ;\n- améliorer ou accroître les résultats de cette activité.\n\nSes limites sont les suivantes :\n\n- il ne doit pas avoir pour but de réaliser des bénéfices pour lui-même ;\n- son activité doit être rattachée à l’activité économique de ses membres ;\n- elle doit rester auxiliaire par rapport à cette activité.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 523.7564989998937,
+      "vectorSearchMs": 600.0147369997576,
+      "jinaRerankingMs": 550.2051190002821,
+      "mappingMs": 0.024708000011742115,
+      "totalMs": 1674.0331919998862,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009746999945491552,
+      "contextBuilderMs": 0.00851100031286478,
+      "generationMs": 1299.7484690002166,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2973.808863000013
+    },
+    "judge": {
+      "questionId": "q212",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les objectifs et les limites prévus par l’article L251-1 : facilitation ou développement de l’activité des membres, amélioration des résultats, absence de bénéfice propre, rattachement à l’activité des membres et caractère auxiliaire. Tous les éléments sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L251-1 et énonce expressément l’ensemble des objectifs et limites mentionnés dans la réponse générée : facilitation ou développement de l’activité des membres, amélioration ou accroissement des résultats, absence de bénéfice propre, rattachement à l’activité économique des membres et caractère auxiliaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L251-1, le groupement d’intérêt économique a pour objectifs de :\n\n- faciliter ou développer l’activité économique de ses membres ;\n- améliorer ou accroître les résultats de cette activité.\n\nSon activité est toutefois limitée :\n\n- il ne doit pas avoir pour but de réaliser des bénéfices pour lui-même ;\n- elle doit se rattacher à l’activité économique de ses membres ;\n- elle ne peut avoir qu’un caractère auxiliaire par rapport à cette activité.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 755.0492400000803,
+      "routingCalls": 1,
+      "embeddingMs": 221.60388799989596,
+      "vectorSearchMs": 173.48949200008065,
+      "jinaRerankingMs": 597.7685080002993,
+      "mappingMs": 0.03494699997827411,
+      "totalMs": 1747.9723620000295,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010274000000208616,
+      "contextBuilderMs": 0.008274000138044357,
+      "generationMs": 1426.1821060003713,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.180255000014
+    },
+    "judge": {
+      "questionId": "q212",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les objectifs et les limites prévus par l’article L251-1 : facilitation ou développement de l’activité des membres, amélioration ou accroissement de ses résultats, absence de bénéfice propre, rattachement à l’activité des membres et caractère uniquement auxiliaire. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L251-1 et énonce expressément tous les objectifs et toutes les limites mentionnés dans la réponse générée : facilitation ou développement de l’activité économique des membres, amélioration ou accroissement des résultats, absence de bénéfices propres, rattachement à l’activité des membres et caractère auxiliaire."
+    }
+  },
+  "failureStage": "none"
+}

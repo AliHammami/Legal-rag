@@ -1,0 +1,95 @@
+{
+  "questionId": "q268",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L421-1, un marché réglementé d’instruments financiers est **un système multilatéral**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L421-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L420-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.90659799985588,
+      "vectorSearchMs": 600.4927849997766,
+      "jinaRerankingMs": 366.6663310001604,
+      "mappingMs": 0.025299999862909317,
+      "totalMs": 1219.1256269998848,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009818000253289938,
+      "contextBuilderMs": 0.014831999782472849,
+      "generationMs": 922.2429109998047,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2141.4040350001305
+    },
+    "judge": {
+      "questionId": "q268",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le marché réglementé comme un « système multilatéral », ce qui répond directement à la question. Elle omet les précisions de l'article sur la rencontre non discrétionnaire d'intérêts acheteurs et vendeurs et la conclusion de contrats, mais celles-ci ne sont pas indispensables à la question formulée sur le type de système. L'affirmation est explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : l’article L421-1 qualifie explicitement le marché réglementé d’instruments financiers de « système multilatéral ». Elle couvre intégralement l’affirmation centrale de la réponse générée. La source 2 est également cohérente mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L421-1, un marché réglementé d’instruments financiers est **un système multilatéral**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L421-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L420-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 861.6153810000978,
+      "routingCalls": 1,
+      "embeddingMs": 222.08494099974632,
+      "vectorSearchMs": 126.89352799998596,
+      "jinaRerankingMs": 401.2990740002133,
+      "mappingMs": 0.14673699997365475,
+      "totalMs": 1612.0719579998404,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019911000039428473,
+      "contextBuilderMs": 0.018086000345647335,
+      "generationMs": 879.863657000009,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2491.9839650001377
+    },
+    "judge": {
+      "questionId": "q268",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le marché réglementé comme un « système multilatéral », ce qui répond directement au type de système demandé. Elle est explicitement soutenue par l'article L421-1 fourni. Elle omet les précisions sur la rencontre non discrétionnaire des intérêts acheteurs et vendeurs, mais celles-ci dépassent l'identification du type de système."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, correspondant directement à l'article L. 421-1, qualifie explicitement le marché réglementé d'instruments financiers de « système multilatéral ». Elle est directement pertinente et couvre entièrement l'affirmation essentielle de la réponse générée. La source 2 est également cohérente mais n'est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

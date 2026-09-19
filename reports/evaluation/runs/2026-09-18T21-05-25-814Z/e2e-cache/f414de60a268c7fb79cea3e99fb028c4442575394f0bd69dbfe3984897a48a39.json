@@ -1,0 +1,87 @@
+{
+  "questionId": "q045",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 726-1, le prélèvement d’un organe sur un donneur vivant mineur est en principe interdit et puni de **sept ans d’emprisonnement et 100 000 € d’amende**.\n\nUne exception est prévue pour un **prélèvement de moelle osseuse au profit de son frère ou de sa sœur**, qui peut être autorisé si :\n\n- un **comité médical** l’autorise, selon les règles applicables ;\n- chacun des titulaires de l’autorité parentale, ou le représentant légal, a consenti ;\n- le consentement est exprimé devant le président du tribunal judiciaire ou le magistrat désigné, et peut être révoqué à tout moment ;\n- en cas d’urgence, le procureur de la République peut recueillir le consentement par tout moyen ;\n- le mineur est informé du prélèvement s’il est apte à exprimer sa volonté ;\n- le **refus du mineur fait obstacle au prélèvement**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "726-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.09234299999662,
+      "vectorSearchMs": 616.0244340000208,
+      "jinaRerankingMs": 520.4621739999857,
+      "mappingMs": 0.028505000052973628,
+      "totalMs": 1335.6366159999743,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010013999999500811,
+      "contextBuilderMs": 0.008051000069826841,
+      "generationMs": 2615.459869000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3951.1230460000224
+    },
+    "judge": {
+      "questionId": "q045",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement l’interdiction de principe et l’exception limitée au prélèvement de moelle osseuse au profit d’un frère ou d’une sœur. Elle reprend l’ensemble des garanties prévues : autorisation du comité médical, consentement des titulaires de l’autorité parentale ou du représentant légal, recueil devant le président du tribunal judiciaire ou son délégué, révocabilité, procédure d’urgence, information du mineur apte et effet obstructif de son refus. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le texte pertinent de l’article 726-1 (modifiant l’article 511-3) et couvre l’interdiction de principe, les peines, l’exception de prélèvement de moelle osseuse au profit d’un frère ou d’une sœur, l’autorisation du comité médical, les consentements requis et leurs modalités, le cas d’urgence, l’information du mineur apte à exprimer sa volonté et l’effet de son refus."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 726-1 :\n\n- Le prélèvement d’un organe sur un donneur vivant mineur est en principe puni de sept ans d’emprisonnement et de 100 000 € d’amende.\n- Une exception est prévue pour le prélèvement de moelle osseuse au profit de son frère ou de sa sœur.\n- Ce prélèvement doit être autorisé par un comité médical.\n- Le consentement de chacun des titulaires de l’autorité parentale ou du représentant légal du mineur est requis.\n- Le mineur doit être informé du prélèvement afin d’exprimer sa volonté, s’il est apte à le faire.\n- Le refus du mineur empêche le prélèvement.\n- Les consentements sont exprimés devant le président du tribunal judiciaire ou le magistrat désigné par lui et peuvent être révoqués à tout moment. En cas d’urgence, ils peuvent être recueillis par tout moyen par le procureur de la République.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "726-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 6294.221477999934,
+      "routingCalls": 1,
+      "embeddingMs": 177.999717000057,
+      "vectorSearchMs": 640.9417840000242,
+      "jinaRerankingMs": 524.3522420000518,
+      "mappingMs": 0.0332979999948293,
+      "totalMs": 7637.573934999993,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01016400009393692,
+      "contextBuilderMs": 0.00750000006519258,
+      "generationMs": 2295.2481670000125,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9932.846138000023
+    },
+    "judge": {
+      "questionId": "q045",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le principe d'interdiction pénale et l'exception limitée au prélèvement de moelle osseuse au profit d'un frère ou d'une sœur. Elle reprend les conditions prévues : autorisation du comité médical, consentement des titulaires de l'autorité parentale ou du représentant légal, information du mineur apte à exprimer sa volonté, effet obstructif de son refus, formalités et révocabilité du consentement, ainsi que le régime d'urgence. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le texte pertinent : interdiction et peine, exception limitée à la moelle osseuse au profit d’un frère ou d’une sœur, autorisation du comité médical, consentements parentaux ou du représentant légal, information et refus du mineur, formalités devant le président du tribunal judiciaire, révocabilité et procédure d’urgence. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

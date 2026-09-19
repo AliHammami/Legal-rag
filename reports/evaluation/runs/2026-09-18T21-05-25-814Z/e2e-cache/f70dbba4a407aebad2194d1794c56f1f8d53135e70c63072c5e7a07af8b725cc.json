@@ -1,0 +1,103 @@
+{
+  "questionId": "q477",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après le contexte fourni, les règles de déontologie applicables aux avocats sont notamment les suivantes :\n\n- **Interdiction de partager leurs émoluments avec un tiers**, sous peine de sanctions disciplinaires.\n- **Obligation de remettre aux parties, avant tout règlement, un état de frais détaillé**, même si elles ne le demandent pas.\n- Cet état doit distinguer les **émoluments, provisions, frais et débours**, en précisant les références réglementaires correspondantes.\n- **Aucun émolument ne peut être demandé pour la rédaction ou l’établissement de l’état de frais**, ni pour ses éventuelles copies.\n\nLe contexte ne permet pas de présenter l’ensemble des règles de déontologie des avocats.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-76"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-74"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-3-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.77846499998122,
+      "vectorSearchMs": 606.7190089999931,
+      "jinaRerankingMs": 286.82206599996425,
+      "mappingMs": 0.03439699998125434,
+      "totalMs": 1142.3998499999288,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008979000034742057,
+      "contextBuilderMs": 0.016764999949373305,
+      "generationMs": 2042.920363000012,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3185.3588950000703
+    },
+    "judge": {
+      "questionId": "q477",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "Les éléments énoncés sont fidèlement supportés par le contexte, mais ils ne constituent que des règles ponctuelles relatives aux émoluments et aux états de frais, et non une réponse fiable à la question générale sur la déontologie des avocats. Malgré sa réserve finale, la réponse tente de répondre alors qu’une abstention était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes pour les règles ponctuelles mentionnées dans la réponse (partage d’émoluments et état de frais). Elles sont toutefois insuffisantes pour répondre de manière générale aux règles de déontologie des avocats, ce que la réponse reconnaît explicitement. Toutes les affirmations concrètes formulées sont couvertes par les sources : l’interdiction et la sanction disciplinaire (source 1), ainsi que le contenu, le moment de remise et la gratuité de l’état de frais (source 2). La source 3 est sans rapport avec les avocats."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de présenter l’ensemble des règles déontologiques des avocats. Il établit toutefois les obligations suivantes :\n\n- **Interdiction de partager les émoluments avec un tiers**, sous peine de sanctions disciplinaires (article R. 444-76).\n- **Remise obligatoire d’un état de frais avant tout règlement**, même si le client ne le demande pas (article R. 444-74).\n- Cet état doit distinguer les **émoluments, provisions, frais et débours**, et préciser les références réglementaires correspondantes.\n- **Aucun émolument ne peut être demandé** pour la rédaction ou l’établissement de cet état de frais, ni pour ses éventuelles copies.\n\nLe contexte mentionne également que le non-respect de certaines règles professionnelles peut entraîner des poursuites disciplinaires, mais il ne précise pas les autres règles concernées.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-76"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-74"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-3-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1035.1806700000307,
+      "routingCalls": 1,
+      "embeddingMs": 201.5034760000417,
+      "vectorSearchMs": 573.9726399999345,
+      "jinaRerankingMs": 270.71598900004756,
+      "mappingMs": 0.030203000060282648,
+      "totalMs": 2081.4513269999297,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010855000000447035,
+      "contextBuilderMs": 0.020188000053167343,
+      "generationMs": 2299.290500000003,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4380.78613500006
+    },
+    "judge": {
+      "questionId": "q477",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas de présenter l’ensemble des règles déontologiques des avocats, ce qui constitue l’abstention attendue. Les éléments ensuite mentionnés sont fidèles aux articles fournis et sont correctement présentés comme limités au contexte disponible."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources R. 444-74 et R. 444-76 concernent directement des obligations professionnelles applicables aux avocats et permettent d'étayer les règles limitées exposées. Elles ne suffisent pas à répondre de manière exhaustive à la question générale sur la déontologie des avocats, ce qui justifie l'abstention partielle. La source R. 814-3-2 porte sur d'autres professionnels et n'étaye pas directement les avocats, mais la réponse reste prudente en évoquant seulement certaines règles professionnelles sans les attribuer précisément aux avocats. Toutes les affirmations concrètes sur le partage des émoluments et les états de frais sont couvertes par les deux premières sources."
+    }
+  },
+  "failureStage": "none"
+}

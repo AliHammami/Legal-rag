@@ -65,8 +65,13 @@ describe('searchAndRerankQuestion fallback', () => {
   });
 
   it('falls back to vector Top 5 when Jina reranking fails', async () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
     rerankChunksMock.mockRejectedValue(
-      new RerankingError('Jina reranker API returned HTTP 503', 'API_ERROR'),
+      new RerankingError(
+        'Jina reranker API returned HTTP 429',
+        'API_ERROR',
+        JSON.stringify({ code: 'RATE_CONCURRENCY_LIMIT_EXCEEDED' }),
+      ),
     );
 
     const result = await searchAndRerankQuestion(
@@ -75,6 +80,14 @@ describe('searchAndRerankQuestion fallback', () => {
       rerankerService,
       'Question ?',
     );
+
+    expect(warnSpy).toHaveBeenCalledWith(
+      expect.stringContaining('HTTP 429 RATE_CONCURRENCY_LIMIT_EXCEEDED'),
+    );
+    expect(warnSpy).toHaveBeenCalledWith(
+      expect.stringContaining('using vector search fallback'),
+    );
+    warnSpy.mockRestore();
 
     expect(result.rerankStatus).toBe('fallback');
     expect(result.reranked).toHaveLength(5);

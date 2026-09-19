@@ -1,0 +1,91 @@
+{
+  "questionId": "q309",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 341-19, ces dispositions s’appliquent aux autorisations de découvert remboursables dans un délai :\n\n- supérieur à un mois ;\n- inférieur ou égal à trois mois.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-19"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 265.93072100076824,
+      "vectorSearchMs": 775.3442689999938,
+      "jinaRerankingMs": 307.70004600007087,
+      "mappingMs": 0.03162099979817867,
+      "totalMs": 1349.0435709999874,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010646000504493713,
+      "contextBuilderMs": 0.015336999669671059,
+      "generationMs": 1308.5021050004289,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2657.5815839990973
+    },
+    "judge": {
+      "questionId": "q309",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux limites temporelles prévues par l’article L. 341-19 : un délai strictement supérieur à un mois et inférieur ou égal à trois mois. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 341-19 et énonce expressément que l’autorisation de découvert doit être remboursable dans un délai supérieur à un mois et inférieur ou égal à trois mois. Elle couvre intégralement les deux limites temporelles affirmées dans la réponse générée. La source 2 est accessoire et ne nuit pas à l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas l’article L. 341-19 ni les limites temporelles qu’il prévoit. Il ne permet donc pas de répondre à cette question.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R519-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2451.988704999909,
+      "routingCalls": 1,
+      "embeddingMs": 239.45330899953842,
+      "vectorSearchMs": 202.63265199959278,
+      "jinaRerankingMs": 358.77075999975204,
+      "mappingMs": 0.04804399982094765,
+      "totalMs": 3253.0537470001727,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012817000038921833,
+      "contextBuilderMs": 0.010408000089228153,
+      "generationMs": 1217.5788570009172,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4470.664051000029
+    },
+    "judge": {
+      "questionId": "q309",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’apporte pas la limite temporelle demandée, alors que la réponse attendue est une autorisation de découvert remboursable dans un délai supérieur à un mois et inférieur ou égal à trois mois. L’abstention est donc injustifiée au regard de l’attente. Elle est néanmoins fondée sur le contexte fourni, qui ne contient pas l’article L. 341-19 ni cette règle de manière explicite."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 519-3 ne traite pas de l’article L. 341-19 ni du régime des opérations visées aux articles L. 341-1 à L. 341-18. Elle évoque toutefois des délais d’un mois et de trois mois dans un contexte distinct, relatif à l’appréciation de seuils. Elle est donc très insuffisante pour répondre directement à la question. En revanche, elle couvre le constat prudent de la réponse générée : le texte fourni ne contient effectivement pas l’article L. 341-19 ni sa règle explicite."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q221",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L321-1, un bien est considéré comme **d’occasion** lorsqu’il remplit l’une des conditions suivantes :\n\n- il est entré, à un stade quelconque de la production ou de la distribution, en la possession d’une personne pour son usage propre, par un acte à titre onéreux ou gratuit ;\n- il a subi des altérations qui ne permettent pas sa mise en vente comme bien neuf.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.7117960001342,
+      "vectorSearchMs": 626.2652330002747,
+      "jinaRerankingMs": 531.939826999791,
+      "mappingMs": 0.08602000027894974,
+      "totalMs": 1358.0335429999977,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012304000090807676,
+      "contextBuilderMs": 0.009169000200927258,
+      "generationMs": 1506.279120999854,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2864.343495000154
+    },
+    "judge": {
+      "questionId": "q221",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux critères alternatifs de l’article L321-1 : possession pour usage propre à un stade de la production ou distribution, par acte onéreux ou gratuit, ou altérations empêchant la vente comme neuf. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 321-1 et énonce expressément les deux critères alternatifs définissant un bien d’occasion. Elle est donc parfaitement pertinente et couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 321-1, est considéré comme **bien d’occasion** tout bien qui :\n\n- à un stade quelconque de sa production ou de sa distribution, est entré en possession d’une personne pour son usage propre, par un acte à titre onéreux ou gratuit ; ou\n- a subi des altérations empêchant sa mise en vente comme bien neuf.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.0946539998986,
+      "routingCalls": 1,
+      "embeddingMs": 167.52488300018013,
+      "vectorSearchMs": 165.89510199986398,
+      "jinaRerankingMs": 556.074869999662,
+      "mappingMs": 0.029764000326395035,
+      "totalMs": 1913.6566059999168,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01077699987217784,
+      "contextBuilderMs": 0.011578000150620937,
+      "generationMs": 1772.919648999814,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3686.6078659999184
+    },
+    "judge": {
+      "questionId": "q221",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions alternatives prévues par l’article L. 321-1 : possession à un stade de la production ou distribution pour usage propre, à titre onéreux ou gratuit, ou altérations empêchant la vente comme neuf. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 321-1 et énonce expressément les deux critères alternatifs du bien d’occasion. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

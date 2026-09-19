@@ -1,0 +1,95 @@
+{
+  "questionId": "q137",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le non-respect de l’article L. 5213-5 entraîne :\n\n- une amende prévue pour les contraventions de la quatrième classe ;\n- l’application des dispositions des articles L. 4741-4, L. 4741-5 et L. 4741-12.\n\nLe contexte fourni ne précise pas le contenu ni les effets détaillés de ces trois derniers articles.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5215-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.92252400005236,
+      "vectorSearchMs": 578.1624880000018,
+      "jinaRerankingMs": 523.8768780000973,
+      "mappingMs": 0.03343999991193414,
+      "totalMs": 1338.0295009999536,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01435400010086596,
+      "contextBuilderMs": 0.012357000028714538,
+      "generationMs": 1866.015567000024,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3204.081896000076
+    },
+    "judge": {
+      "questionId": "q137",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement à la fois l’amende prévue pour les contraventions de quatrième classe et l’applicabilité des articles L. 4741-4, L. 4741-5 et L. 4741-12. Ces deux affirmations sont explicitement supportées par le contexte. La précision selon laquelle le contexte ne détaille pas ces derniers articles est également exacte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 5215-1 vise directement le non-respect de l'obligation issue de l'article L. 5213-5 et prévoit l'amende de quatrième classe. La source L. 5215-1 vise directement la même méconnaissance et rend applicables les articles L. 4741-4, L. 4741-5 et L. 4741-12. Elles couvrent toutes les affirmations substantielles de la réponse, y compris le constat que le contenu détaillé de ces trois articles n'est pas fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le non-respect de l’obligation de réentraînement au travail et de rééducation professionnelle des malades et blessés est puni de l’amende prévue pour les contraventions de la quatrième classe.\n\nEn outre, les articles L. 4741-4, L. 4741-5 et L. 4741-12 sont applicables. Le contexte fourni ne précise toutefois pas le contenu ni les effets de ces dispositions.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5215-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.4256739998236,
+      "routingCalls": 1,
+      "embeddingMs": 229.597205999773,
+      "vectorSearchMs": 263.01364100002684,
+      "jinaRerankingMs": 505.7374309999868,
+      "mappingMs": 0.03229000000283122,
+      "totalMs": 2021.8354270001873,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01050800015218556,
+      "contextBuilderMs": 0.014733999967575073,
+      "generationMs": 1664.494568000082,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3686.362407000037
+    },
+    "judge": {
+      "questionId": "q137",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la conséquence prévue par l’article L. 5215-1, à savoir l’application des articles L. 4741-4, L. 4741-5 et L. 4741-12. Elle ajoute correctement la sanction contraventionnelle de quatrième classe prévue par l’article R. 5215-1, également présent dans le contexte. Toutes les affirmations importantes sont donc étayées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 vise directement la sanction du non-respect de l’obligation mentionnée à l’article L. 5213-5 (amende de quatrième classe). La source 2 vise directement les autres conséquences, en renvoyant aux articles L. 4741-4, L. 4741-5 et L. 4741-12. Elles couvrent toutes les affirmations substantielles de la réponse, y compris la réserve selon laquelle le contenu de ces articles n’est pas précisé dans le contexte."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q032",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 131-1, les personnes physiques encourent les durées suivantes de réclusion criminelle ou de détention criminelle :\n\n- À perpétuité ;\n- Trente ans au plus ;\n- Vingt ans au plus ;\n- Quinze ans au plus.\n\nLa durée d’une peine à temps est d’au moins dix ans.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.01394700002857,
+      "vectorSearchMs": 574.1964659999358,
+      "jinaRerankingMs": 564.3806530000875,
+      "mappingMs": 0.03196100005879998,
+      "totalMs": 1348.6507059999276,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011439000023528934,
+      "contextBuilderMs": 0.007670999970287085,
+      "generationMs": 1270.9050599999027,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2619.5822049999842
+    },
+    "judge": {
+      "questionId": "q032",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les quatre durées prévues par l’article 131-1 et précise correctement que la réclusion ou détention criminelle à temps est d’au moins dix ans. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 131-1 et énumère précisément les quatre durées de réclusion ou détention criminelle (perpétuité, trente, vingt et quinze ans au plus), ainsi que le minimum de dix ans pour une peine à temps. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 131-1, les personnes physiques encourent les durées suivantes de réclusion criminelle ou de détention criminelle :\n\n- À perpétuité ;\n- Jusqu’à 30 ans ;\n- Jusqu’à 20 ans ;\n- Jusqu’à 15 ans.\n\nPour les peines à temps, la durée minimale est de 10 ans.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.938994999975,
+      "routingCalls": 1,
+      "embeddingMs": 188.41275500005577,
+      "vectorSearchMs": 30.60165500000585,
+      "jinaRerankingMs": 553.9419289999641,
+      "mappingMs": 0.07507900008931756,
+      "totalMs": 1695.0054629999213,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01703400001861155,
+      "contextBuilderMs": 0.010675999918021262,
+      "generationMs": 1276.3041449999437,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2971.345388000016
+    },
+    "judge": {
+      "questionId": "q032",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les quatre niveaux de peines prévus par l’article 131-1 (perpétuité, trente, vingt et quinze ans au plus) et précise correctement le minimum de dix ans pour les peines à temps. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 131-1 et énumère exactement les quatre durées de réclusion ou détention criminelle mentionnées dans la réponse, ainsi que le minimum de dix ans pour les peines à temps. Elle est donc directement pertinente et couvre l’ensemble des affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

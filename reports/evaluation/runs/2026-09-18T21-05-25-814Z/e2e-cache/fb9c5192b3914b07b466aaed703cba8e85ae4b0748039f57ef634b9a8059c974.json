@@ -1,0 +1,103 @@
+{
+  "questionId": "q040",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’interdiction visée à l’article 722-1 constitue une obligation de s’abstenir de conduire certains véhicules terrestres dans le cadre de la mesure prévue par l’article 132-45.\n\nElle présente les caractéristiques suivantes :\n\n- elle ne porte pas sur tous les véhicules, mais seulement sur certains véhicules déterminés ;\n- elle concerne les véhicules terrestres pour lesquels la conduite exige légalement un permis ;\n- elle impose une abstention de conduire ces véhicules ;\n- le texte ne prévoit pas, dans le contexte fourni, une interdiction générale de conduire ni une interdiction visant les véhicules pour lesquels aucun permis n’est requis.\n\nLe contexte ne permet pas de préciser la durée de cette interdiction, les infractions permettant de la prononcer ou les modalités concrètes de sa mise en œuvre. Il ne faut pas non plus lui appliquer automatiquement l’ajout relatif au dispositif antidémarrage par éthylotest électronique, qui figure dans l’article 712-2 et non dans le texte cité de l’article 722-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "722-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-21"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R131-4-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "712-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "223-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 178.0412859999342,
+      "vectorSearchMs": 597.8155500000576,
+      "jinaRerankingMs": 624.3406180000165,
+      "mappingMs": 0.02639200002886355,
+      "totalMs": 1400.252781999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010170000023208559,
+      "contextBuilderMs": 0.018589999992400408,
+      "generationMs": 3953.0363720000023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5353.3295540000545
+    },
+    "judge": {
+      "questionId": "q040",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’interdiction comme l’obligation de s’abstenir de conduire certains véhicules terrestres nécessitant un permis, conformément au 7° de l’article 132-45 reproduit par l’article 722-1. Elle précise justement que la mesure est limitée à certains véhicules et n’englobe pas ceux ne nécessitant pas de permis. Les précisions sur l’absence, dans ce contexte, de durée ou de conditions liées aux infractions, ainsi que la distinction avec l’ajout relatif à l’éthylotest figurant dans l’article 712-2, sont également soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la disposition visée par l'article 722-1 : l'obligation de s'abstenir de conduire certains véhicules terrestres nécessitant un permis. Elle couvre donc la nature, le champ limité à certains véhicules et la condition tenant à l'exigence d'un permis. La source 4 permet en outre de distinguer cette rédaction de celle incluant l'alternative relative à l'éthylotest électronique, attribuée à l'article 712-2. Les autres sources ne sont pas nécessaires à la réponse. Les constats d'absence de précision, dans le contexte fourni, sur la durée, les infractions concernées et les modalités sont compatibles avec les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le contenu de l’article 722-1. Il ne permet donc pas d’en expliquer précisément la nature ni les conditions d’application.\n\nIl indique seulement que, lorsqu’une juridiction prononce une **interdiction temporaire de conduire certains véhicules**, elle doit préciser dans sa décision :\n\n- les catégories de véhicules concernées ;\n- la durée de l’interdiction.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3281.4153170000063,
+      "routingCalls": 1,
+      "embeddingMs": 191.84436600003392,
+      "vectorSearchMs": 72.195534999948,
+      "jinaRerankingMs": 555.6499729999341,
+      "mappingMs": 0.0264350000070408,
+      "totalMs": 4101.158907000092,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00968799996189773,
+      "contextBuilderMs": 0.007621000055223703,
+      "generationMs": 1741.809312999947,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5842.993326000054
+    },
+    "judge": {
+      "questionId": "q040",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie partiellement une interdiction temporaire de conduire certains véhicules et mentionne les modalités de précision dans la décision (catégories et durée). Elle n’indique toutefois pas l’élément essentiel de la référence : les véhicules terrestres nécessitant un permis, visés au 7° de l’article 132-45. Toutes les affirmations substantielles sont soutenues par le contexte fourni. Malgré sa réserve sur l’insuffisance du contexte, elle apporte une réponse partielle concrète."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour l’interdiction temporaire de conduire certains véhicules et pour les modalités imposées à la juridiction (catégories concernées et durée). Elle ne permet toutefois pas d’établir le rattachement à l’article 722-1, au 7° de l’article 132-45, ni la condition tenant aux véhicules terrestres nécessitant un permis. En revanche, elle couvre l’ensemble des affirmations concrètes formulées par la réponse générée, y compris les catégories et la durée."
+    }
+  },
+  "failureStage": "generation"
+}

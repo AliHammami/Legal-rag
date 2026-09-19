@@ -1,0 +1,91 @@
+{
+  "questionId": "q486",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Selon l’article 545 du Code civil, l’expropriation est possible uniquement :\n\n- pour cause d’utilité publique ;\n- moyennant une indemnité juste ;\n- cette indemnité doit être préalable à la cession de la propriété.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-160"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "545"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 812.0004459999036,
+      "vectorSearchMs": 617.4548049999867,
+      "jinaRerankingMs": 359.93118899990804,
+      "mappingMs": 0.03818199993111193,
+      "totalMs": 1789.4541560000507,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05275100003927946,
+      "contextBuilderMs": 0.018083999981172383,
+      "generationMs": 1584.7719049999723,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3374.3056470000884
+    },
+    "judge": {
+      "questionId": "q486",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement les trois conditions formulées par l’article 545 du Code civil : utilité publique et indemnité juste et préalable. Ces affirmations sont directement étayées par le contexte. Toutefois, l’abstention était attendue et la réponse répond au fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article 545 du Code civil) est directement pertinente et énonce expressément les trois conditions reprises dans la réponse : cause d’utilité publique, indemnité juste et indemnité préalable. La source 1 est accessoire et ne contribue pas aux affirmations formulées, mais n’altère pas la pertinence ni la couverture globale."
+    }
+  },
+  "routing": {
+    "answer": "L’expropriation n’est possible que si deux conditions sont réunies :\n\n- elle est justifiée par une cause d’utilité publique ;\n- elle donne lieu au versement d’une juste et préalable indemnité au propriétaire.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "545"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1123.1254940000363,
+      "routingCalls": 1,
+      "embeddingMs": 214.44983000005595,
+      "vectorSearchMs": 54.432968999957666,
+      "jinaRerankingMs": 250.93465599999763,
+      "mappingMs": 0.029164999956265092,
+      "totalMs": 1642.9963299999945,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012092999997548759,
+      "contextBuilderMs": 0.007799999904818833,
+      "generationMs": 1118.0654390000273,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2761.0886460000183
+    },
+    "judge": {
+      "questionId": "q486",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement les deux conditions figurant à l’article 545 : cause d’utilité publique et juste et préalable indemnité. Elle est complète et entièrement fondée sur le contexte. Toutefois, l’abstention était attendue ; le modèle a répondu au lieu de signaler que la question relevait d’un périmètre hors contexte attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 545, qui énonce précisément les deux conditions affirmées dans la réponse générée : une cause d’utilité publique et une juste et préalable indemnité. Elle est donc pleinement pertinente et couvre toutes les affirmations importantes, même si la question était étiquetée comme appelant une abstention."
+    }
+  },
+  "failureStage": "abstention"
+}

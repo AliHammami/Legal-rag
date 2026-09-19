@@ -1,0 +1,87 @@
+{
+  "questionId": "q013",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le génocide est défini comme le fait, en exécution d’un plan concerté visant à détruire totalement ou partiellement un groupe national, ethnique, racial, religieux ou déterminé selon tout autre critère arbitraire, de commettre ou faire commettre contre ses membres notamment :\n\n- des atteintes volontaires à la vie ;\n- des atteintes graves à l’intégrité physique ou psychique ;\n- leur soumission à des conditions d’existence susceptibles d’entraîner la destruction du groupe ;\n- des mesures visant à entraver les naissances ;\n- le transfert forcé d’enfants.\n\nCe crime est puni de la réclusion criminelle à perpétuité.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.77607100000023,
+      "vectorSearchMs": 584.0989209999971,
+      "jinaRerankingMs": 533.2360139999946,
+      "mappingMs": 0.03943000000435859,
+      "totalMs": 1321.2534449999803,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013520000007702038,
+      "contextBuilderMs": 0.008517000009305775,
+      "generationMs": 1492.5410370000172,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2813.832720000006
+    },
+    "judge": {
+      "questionId": "q013",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition légale : plan concerté, destruction totale ou partielle d’un groupe visé, liste des cinq actes constitutifs, puis indique exactement la peine de réclusion criminelle à perpétuité. Toutes les affirmations principales sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 211-1 du Code pénal, directement consacré à la définition du génocide et à sa sanction. Elle couvre explicitement le plan concerté, les groupes protégés, chacun des cinq actes énumérés et la réclusion criminelle à perpétuité, soit toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le génocide est défini comme le fait, en exécution d’un plan concerté visant à détruire totalement ou partiellement un groupe national, ethnique, racial, religieux ou déterminé selon tout autre critère arbitraire, de commettre ou faire commettre contre ses membres notamment :\n\n- une atteinte volontaire à la vie ;\n- une atteinte grave à l’intégrité physique ou psychique ;\n- leur soumission à des conditions d’existence susceptibles d’entraîner la destruction du groupe ;\n- des mesures visant à entraver les naissances ;\n- le transfert forcé d’enfants.\n\nCe crime est puni de la réclusion criminelle à perpétuité.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 816.670186000003,
+      "routingCalls": 1,
+      "embeddingMs": 190.698292999994,
+      "vectorSearchMs": 36.270157999999356,
+      "jinaRerankingMs": 506.103517999989,
+      "mappingMs": 0.028372000000672415,
+      "totalMs": 1549.8362900000066,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010990000009769574,
+      "contextBuilderMs": 0.007634000008692965,
+      "generationMs": 1723.8432979999925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3273.7078459999757
+    },
+    "judge": {
+      "questionId": "q013",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les éléments constitutifs du génocide énumérés à l’article 211-1 (plan concerté, destruction totale ou partielle d’un groupe protégé, liste des actes) et indique correctement la réclusion criminelle à perpétuité. Toutes les affirmations principales sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 211-1 du Code pénal, directement applicable. Elle définit expressément le génocide, énumère les actes constitutifs repris dans la réponse et prévoit explicitement la réclusion criminelle à perpétuité. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

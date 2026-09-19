@@ -1,0 +1,95 @@
+{
+  "questionId": "q240",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 213-0-1, les émetteurs peuvent acquérir et conserver :\n\n1. **Les titres de créances négociables** ;\n2. **Les titres de créance ne donnant pas accès au capital**, admis aux négociations sur un marché réglementé ou sur un système multilatéral de négociation répondant aux exigences de protection des investisseurs ;\n3. **Les obligations ne donnant pas accès au capital**, émises par des établissements de crédit, des entreprises d’investissement ou des sociétés de financement.\n\nPour les titres mentionnés aux 2° et 3°, cette acquisition ou conservation vise notamment à favoriser leur liquidité.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D213-0-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L213-0-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.963367999997,
+      "vectorSearchMs": 596.1009380002506,
+      "jinaRerankingMs": 570.9414249998517,
+      "mappingMs": 0.026106999721378088,
+      "totalMs": 1392.0706350002438,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010307000018656254,
+      "contextBuilderMs": 0.012386000249534845,
+      "generationMs": 1478.3998340000398,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2870.504050000105
+    },
+    "judge": {
+      "questionId": "q240",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois catégories prévues aux 1°, 2° et 3° de l’article L. 213-0-1, avec les conditions essentielles relatives à l’admission à la négociation et au statut des émetteurs d’obligations. La précision sur la finalité de liquidité est également expressément supportée par le contexte. Elle répond sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 213-0-1 et énumère les trois catégories citées dans la réponse, avec les conditions relatives au marché ou système multilatéral et au statut des émetteurs. Elle couvre également la finalité de favoriser la liquidité. La source 1 est complémentaire sur les modalités de conservation, sans être nécessaire à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 213-0-1, les émetteurs peuvent acquérir et conserver :\n\n1. **Les titres de créance négociables** ;\n2. **Les titres de créance ne donnant pas accès au capital**, admis aux négociations sur un marché réglementé ou un système multilatéral de négociation répondant aux conditions prévues ;\n3. **Les obligations ne donnant pas accès au capital**, émises par des établissements de crédit, des entreprises d’investissement ou des sociétés de financement.\n\nPour les titres de la troisième catégorie, la souscription ou l’acquisition est prévue lorsque l’émetteur a lui-même le statut d’établissement de crédit, d’entreprise d’investissement ou de société de financement.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D213-0-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L213-0-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1231.1206550002098,
+      "routingCalls": 1,
+      "embeddingMs": 213.6909890002571,
+      "vectorSearchMs": 108.63393099978566,
+      "jinaRerankingMs": 593.5597640001215,
+      "mappingMs": 0.02433199994266033,
+      "totalMs": 2147.0961549999192,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0091540003195405,
+      "contextBuilderMs": 0.013931999914348125,
+      "generationMs": 1724.7746930001304,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3871.901862000115
+    },
+    "judge": {
+      "questionId": "q240",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois catégories prévues par l’article L. 213-0-1 et précise fidèlement la condition particulière applicable aux titres de la troisième catégorie lorsque l’émetteur possède le statut requis. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 213-0-1 et énumère explicitement les trois catégories de titres visées, ainsi que la condition de statut applicable à la souscription ou acquisition des obligations du 3°. Elle couvre donc l'ensemble des affirmations importantes de la réponse. La source 1 est complémentaire sur les modalités de conservation mais n'est pas nécessaire pour répondre à la question."
+    }
+  },
+  "failureStage": "none"
+}

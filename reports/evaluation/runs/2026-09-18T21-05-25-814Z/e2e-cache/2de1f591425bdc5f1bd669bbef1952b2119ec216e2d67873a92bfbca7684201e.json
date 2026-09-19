@@ -1,0 +1,91 @@
+{
+  "questionId": "q179",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L221-1, les créanciers doivent :\n\n- mettre préalablement la société en demeure de payer, par acte extrajudiciaire ;\n- attendre que cette mise en demeure reste vaine avant de poursuivre un associé en nom collectif.\n\nIls ne peuvent donc pas agir directement contre l’associé sans avoir d’abord vainement mis en demeure la société.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1858"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 198.31856699986383,
+      "vectorSearchMs": 608.5427170000039,
+      "jinaRerankingMs": 525.024741999805,
+      "mappingMs": 0.03463099990040064,
+      "totalMs": 1331.9577199998312,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010199999902397394,
+      "contextBuilderMs": 0.020945999771356583,
+      "generationMs": 1738.1095039998181,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3070.1081299996004
+    },
+    "judge": {
+      "questionId": "q179",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement l'obligation procédurale centrale : mise en demeure préalable de la société par acte extrajudiciaire, demeurée vaine, avant toute poursuite contre un associé. Elle est intégralement fondée sur le contexte. Elle omet toutefois les éléments complémentaires de l'article selon lesquels les associés ont la qualité de commerçant et répondent indéfiniment et solidairement des dettes sociales."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L221-1 et vise précisément les conditions de poursuite d'un associé par les créanciers : mise en demeure préalable de la société, par acte extrajudiciaire, demeurée vaine. Elle couvre toutes les affirmations importantes de la réponse générée. La source 2 est également cohérente sur le principe, mais moins précise et n'est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L221-1, les créanciers doivent :\n\n1. **Mettre préalablement la société en demeure** de payer les dettes sociales, par **acte extrajudiciaire**.\n2. **Attendre que cette mise en demeure reste vaine** avant de poursuivre le paiement auprès d’un associé en nom collectif.\n\nIls ne peuvent donc agir directement contre l’associé qu’après l’échec de cette démarche préalable.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 916.4587310003117,
+      "routingCalls": 1,
+      "embeddingMs": 216.808915999718,
+      "vectorSearchMs": 196.46152199991047,
+      "jinaRerankingMs": 549.7140489998274,
+      "mappingMs": 0.027526999823749065,
+      "totalMs": 1879.4928409997374,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010226999875158072,
+      "contextBuilderMs": 0.011473000049591064,
+      "generationMs": 1483.656644999981,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3363.177122999914
+    },
+    "judge": {
+      "questionId": "q179",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la condition préalable prévue par l’article L221-1 : une mise en demeure de la société par acte extrajudiciaire, demeurée vaine, avant toute poursuite contre un associé. Elle répond directement à la question et est entièrement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L221-1 et énonce précisément l'obligation invoquée : mise en demeure préalable de la société par acte extrajudiciaire, demeurée vaine, avant toute poursuite contre un associé. Elle couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

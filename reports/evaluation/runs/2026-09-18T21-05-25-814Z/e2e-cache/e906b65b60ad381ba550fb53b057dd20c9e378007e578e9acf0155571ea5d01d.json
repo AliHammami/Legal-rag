@@ -1,0 +1,87 @@
+{
+  "questionId": "q125",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du titre s’appliquent aux salariés définis à l’article L. 7211-2.\n\nEn sont exclus les concierges attachés à la personne même du propriétaire, qui relèvent des dispositions du titre II applicables aux employés de maison.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 217.76852099993266,
+      "vectorSearchMs": 599.3750620000064,
+      "jinaRerankingMs": 506.0797219998203,
+      "mappingMs": 0.028401000192388892,
+      "totalMs": 1323.2947070000228,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013183000031858683,
+      "contextBuilderMs": 0.008139000041410327,
+      "generationMs": 1244.3091639999766,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2567.633230000036
+    },
+    "judge": {
+      "questionId": "q125",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d’application prévu par l’article L. 7211-1 et l’exclusion des concierges attachés à la personne même du propriétaire, avec leur rattachement au titre II applicable aux employés de maison. Elle est intégralement fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 7211-1 visé par la question. Elle établit à la fois l'application aux salariés définis à l'article L. 7211-2 et l'exclusion des concierges attachés à la personne même du propriétaire, ainsi que leur rattachement au titre II applicable aux employés de maison. Toutes les affirmations importantes de la réponse générée sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du titre s’appliquent aux salariés définis à l’article **L. 7211-2**.\n\nEn sont exclus les **concierges attachés à la personne même du propriétaire**, qui relèvent des dispositions du **titre II applicables aux employés de maison**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.7745850000065,
+      "routingCalls": 1,
+      "embeddingMs": 235.83960400009528,
+      "vectorSearchMs": 224.32566100009717,
+      "jinaRerankingMs": 517.1506329998374,
+      "mappingMs": 0.026187000097706914,
+      "totalMs": 2001.1689160000533,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012718999991193414,
+      "contextBuilderMs": 0.009011999936774373,
+      "generationMs": 1173.2785460001323,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.4764960000757
+    },
+    "judge": {
+      "questionId": "q125",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d’application et l’exclusion prévus par l’article L. 7211-1 : salariés définis à l’article L. 7211-2, exclusion des concierges attachés à la personne même du propriétaire, soumis au titre II relatif aux employés de maison. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 7211-1 et énonce expressément tant le champ d’application (salariés définis à l’article L. 7211-2) que l’exclusion des concierges attachés à la personne même du propriétaire et leur rattachement au titre II applicable aux employés de maison. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

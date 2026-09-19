@@ -1,0 +1,95 @@
+{
+  "questionId": "q173",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’elle est consultée sur la politique de l’emploi, la Commission comprend :\n\n- le ministre chargé du travail ou son représentant, qui la préside ;\n- le ministre chargé de l’agriculture ou son représentant ;\n- le ministre chargé de l’économie ou son représentant ;\n- le président de la section sociale du Conseil d’État ;\n- six représentants des organisations d’employeurs représentatives au niveau national interprofessionnel ;\n- dix représentants titulaires des organisations syndicales de salariés représentatives au même niveau ;\n- des représentants des régions, des départements et des collectivités ultramarines.\n\nPour les projets de loi, d’ordonnance ou de décret relatifs à l’emploi, à l’orientation et à la formation professionnelle, s’ajoutent également les ministres compétents et huit représentants des régions et collectivités ultramarines, ainsi que deux représentants des départements.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2272-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2272-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.77685299981385,
+      "vectorSearchMs": 606.5957770003006,
+      "jinaRerankingMs": 693.2833670000546,
+      "mappingMs": 0.0375240002758801,
+      "totalMs": 1494.7193419998512,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012498999945819378,
+      "contextBuilderMs": 0.015269000083208084,
+      "generationMs": 2676.278489000164,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4171.032515999861
+    },
+    "judge": {
+      "questionId": "q173",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement la composition de base de la Commission et l’ajout de représentants des régions, départements et collectivités ultramarines lors des consultations relevant de la politique de l’emploi. Les précisions réglementaires sur les ministres, le Conseil d’État et les nombres de représentants sont toutes étayées par le contexte. La précision relative aux projets de loi, d’ordonnance ou de décret est également conforme au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. L'article L. 2272-1 couvre la composition générale et l'ajout de représentants des régions, départements et collectivités ultra-marines lors des consultations en matière de politique de l'emploi. L'article R. 2272-1 étaye précisément les ministres, la présidence, le président de la section sociale du Conseil d'Etat, les effectifs des représentants patronaux et syndicaux, ainsi que la composition additionnelle applicable aux projets de loi, d'ordonnance et de décret concernés. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Lorsqu’elle est consultée sur la politique de l’emploi, de l’orientation et de la formation professionnelle initiale et continue, la Commission comprend :\n\n- les représentants de l’État, du Conseil d’État ;\n- les représentants des organisations d’employeurs et des organisations syndicales de salariés représentatives au niveau national ;\n- des représentants des régions, des départements et des collectivités ultramarines.\n\nPour les projets de loi, d’ordonnance ou de décret relatifs à ces domaines, s’ajoutent notamment les ministres chargés de l’emploi, de la formation professionnelle, de l’éducation nationale et de l’enseignement supérieur, ainsi que huit représentants des régions et collectivités ultramarines et deux représentants des départements.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2272-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2272-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.1382659999654,
+      "routingCalls": 1,
+      "embeddingMs": 202.31371100014076,
+      "vectorSearchMs": 296.74701899988577,
+      "jinaRerankingMs": 598.425848999992,
+      "mappingMs": 0.029368999879807234,
+      "totalMs": 2018.6768630002625,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010855000000447035,
+      "contextBuilderMs": 0.018093999940901995,
+      "generationMs": 2792.212212000042,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4810.924972999841
+    },
+    "judge": {
+      "questionId": "q173",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la composition applicable lors des consultations sur la politique de l’emploi : représentants de l’État et du Conseil d’État, organisations d’employeurs et organisations syndicales représentatives au niveau national, ainsi que représentants des régions, départements et collectivités ultramarines. Le complément relatif aux projets de loi, d’ordonnance ou de décret est également conforme au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la composition de la Commission lorsqu'elle est consultée en matière de politique de l'emploi, d'orientation et de formation professionnelle, y compris l'ajout des représentants des régions, départements et collectivités ultra-marines. La source 2 couvre précisément le complément de la réponse relatif aux consultations sur les projets de loi, d'ordonnance et de décret, avec les ministres et le nombre de représentants territoriaux mentionnés. Toutes les affirmations importantes sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

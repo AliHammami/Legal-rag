@@ -1,0 +1,95 @@
+{
+  "questionId": "q187",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "À la clôture de chaque exercice, ils doivent dresser :\n\n- l’inventaire ;\n- les comptes annuels, conformément aux dispositions applicables.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.50345299998298,
+      "vectorSearchMs": 623.4631860000081,
+      "jinaRerankingMs": 505.20428100042045,
+      "mappingMs": 0.06962599977850914,
+      "totalMs": 1341.2675650003366,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01796999992802739,
+      "contextBuilderMs": 0.014381000306457281,
+      "generationMs": 1132.5583870001137,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2473.8676980002783
+    },
+    "judge": {
+      "questionId": "q187",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’inventaire et les comptes annuels à dresser à la clôture de chaque exercice. Elle est pleinement conforme à la référence et directement étayée par l’article L232-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L232-1 et énonce que, à la clôture de chaque exercice, les organes concernés dressent l'inventaire et les comptes annuels conformément aux dispositions visées. Elle est donc directement pertinente et couvre intégralement les deux éléments affirmés dans la réponse générée. La source 2 n'est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "À la clôture de chaque exercice, le conseil d’administration, le directoire ou les gérants doivent dresser :\n\n- l’inventaire ;\n- les comptes annuels conformément aux dispositions applicables.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1127.004910999909,
+      "routingCalls": 1,
+      "embeddingMs": 198.68609600001946,
+      "vectorSearchMs": 193.772699999623,
+      "jinaRerankingMs": 534.1606860002503,
+      "mappingMs": 0.033030999824404716,
+      "totalMs": 2053.6872089998797,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010821000207215548,
+      "contextBuilderMs": 0.01534199994057417,
+      "generationMs": 1428.331751999911,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3482.053394000046
+    },
+    "judge": {
+      "questionId": "q187",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’inventaire et les comptes annuels, avec le renvoi aux dispositions applicables. Ces éléments sont directement énoncés dans le contexte de l’article L232-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la disposition pertinente de l’article L232-1 et énonce que, à la clôture de chaque exercice, les organes visés dressent l’inventaire et les comptes annuels conformément aux dispositions indiquées. Elle couvre intégralement les deux éléments de la réponse générée. La source 2 est non nécessaire mais ne nuit pas à l’évaluation."
+    }
+  },
+  "failureStage": "none"
+}

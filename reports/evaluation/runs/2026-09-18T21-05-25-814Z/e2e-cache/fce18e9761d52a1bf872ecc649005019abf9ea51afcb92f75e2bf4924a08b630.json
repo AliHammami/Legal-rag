@@ -1,0 +1,103 @@
+{
+  "questionId": "q306",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L351-2, les références au code du travail sont remplacées par les références aux dispositions applicables localement ayant le même effet.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L351-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L252-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L950-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R950-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.7702600006014,
+      "vectorSearchMs": 702.3700710004196,
+      "jinaRerankingMs": 251.3034100001678,
+      "mappingMs": 0.029671999625861645,
+      "totalMs": 1202.5537000000477,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016099000349640846,
+      "contextBuilderMs": 0.020471999421715736,
+      "generationMs": 978.3604199998081,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2180.9748499998823
+    },
+    "judge": {
+      "questionId": "q306",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article L351-2 : les références au code du travail sont remplacées par celles aux dispositions applicables localement ayant le même effet. Elle répond directement à la question et est explicitement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L351-2 et énonce exactement le remplacement des références au code du travail par celles aux dispositions applicables localement ayant le même effet. Elle couvre intégralement l’affirmation de la réponse générée. Les autres sources sont plus générales et ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L351-2, les références au code du travail sont remplacées par les références aux dispositions applicables localement ayant le même effet.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L351-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L252-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1243.9489749995992,
+      "routingCalls": 1,
+      "embeddingMs": 240.06893999967724,
+      "vectorSearchMs": 58.34264000039548,
+      "jinaRerankingMs": 295.66516000032425,
+      "mappingMs": 0.03182800021022558,
+      "totalMs": 1838.0838959999382,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009918000549077988,
+      "contextBuilderMs": 0.015490000136196613,
+      "generationMs": 924.483783999458,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2762.6022100001574
+    },
+    "judge": {
+      "questionId": "q306",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l'article L351-2 : les références au code du travail sont remplacées par celles aux dispositions locales applicables ayant le même effet. Elle est complète et directement fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L351-2 et énonce exactement le remplacement des références au code du travail par les dispositions applicables localement ayant le même effet. Elle couvre intégralement l'affirmation de la réponse générée. La source 2 est secondaire mais cohérente avec ce mécanisme d'adaptation locale."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q186",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L229-8, les assemblées générales de la société européenne sont soumises aux règles prescrites par la section 3 du texte.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L229-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 180.61940199974924,
+      "vectorSearchMs": 613.5379069996998,
+      "jinaRerankingMs": 521.2984099998139,
+      "mappingMs": 0.04822599980980158,
+      "totalMs": 1315.5756369996816,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010832000058144331,
+      "contextBuilderMs": 0.08851699996739626,
+      "generationMs": 1093.9023740002885,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2409.59399199998
+    },
+    "judge": {
+      "questionId": "q186",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle énoncée dans le contexte et répond directement à la question. L’omission de l’intitulé complet « Code de commerce » n’altère pas le sens, puisque le contexte fourni est tronqué après « section 3 du »."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle reproduit l'article L229-8 et énonce que les assemblées générales de la société européenne sont soumises aux règles prescrites par la section 3. Elle couvre entièrement l'affirmation de la réponse générée, y compris sa formulation prudente « du texte », le contenu source étant tronqué après « section 3 du »."
+    }
+  },
+  "routing": {
+    "answer": "Les assemblées générales de la société européenne sont soumises aux règles prescrites par la section 3 du texte.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L229-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.614767999854,
+      "routingCalls": 1,
+      "embeddingMs": 923.9199709999375,
+      "vectorSearchMs": 163.6676609995775,
+      "jinaRerankingMs": 535.7257240000181,
+      "mappingMs": 0.11617299960926175,
+      "totalMs": 2648.07570900023,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01740399980917573,
+      "contextBuilderMs": 0.02191700041294098,
+      "generationMs": 940.409513999708,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3588.533700000029
+    },
+    "judge": {
+      "questionId": "q186",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle fournie : les assemblées générales sont soumises aux règles de la section 3. Elle est entièrement étayée par le contexte. Elle ne précise pas que cette section relève du Code de commerce, mais cette précision est absente du contexte tronqué et constitue une omission mineure au regard de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle reprend l'article L229-8 et énonce expressément que les assemblées générales de la société européenne sont soumises aux règles prescrites par la section 3. Elle couvre intégralement l'affirmation de la réponse générée, laquelle ne va pas au-delà du contenu fourni."
+    }
+  },
+  "failureStage": "none"
+}

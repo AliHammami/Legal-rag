@@ -1,0 +1,95 @@
+{
+  "questionId": "q489",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les règles de la responsabilité médicale devant l’ONIAM. Il indique seulement que les litiges relatifs à l’adhésion au régime d’assurance suivent les règles de compétence prévues à l’article L. 5422-16.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5424-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.73144200001843,
+      "vectorSearchMs": 625.1120660000015,
+      "jinaRerankingMs": 305.09821500000544,
+      "mappingMs": 0.03809899999760091,
+      "totalMs": 1179.006030999939,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012073000078089535,
+      "contextBuilderMs": 0.008861999958753586,
+      "generationMs": 1556.0016080000205,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2735.041382000083
+    },
+    "judge": {
+      "questionId": "q489",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre sur les règles de responsabilité médicale devant l’ONIAM, domaine non couvert par le contexte. Elle décrit correctement la seule information disponible, relative aux litiges d’adhésion à un régime d’assurance et à l’article L. 5422-16."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source ne traite pas directement de la responsabilité médicale devant l’ONIAM, mais elle est pertinente pour justifier l’abstention : elle montre que le seul contexte disponible concerne les litiges d’adhésion à un régime d’assurance et non les règles demandées. Elle couvre intégralement les constats formulés dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de répondre à cette question : il ne contient aucune règle relative à la responsabilité médicale devant l’ONIAM.\n\nIl mentionne seulement :\n- la responsabilité liée au consentement à l’assistance médicale à la procréation (article 342-13) ;\n- certaines incapacités de recevoir des libéralités pour les professionnels de santé (article 909) ;\n- une prescription de cinq ans concernant une action en responsabilité dans le cadre d’une mesure de protection (article 413).",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "342-13"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "909"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "413"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1445.9001210000133,
+      "routingCalls": 1,
+      "embeddingMs": 204.75584699993487,
+      "vectorSearchMs": 58.41782400000375,
+      "jinaRerankingMs": 269.20426900009625,
+      "mappingMs": 0.0276259999955073,
+      "totalMs": 1978.338722000015,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010804999968968332,
+      "contextBuilderMs": 0.028952999971807003,
+      "generationMs": 2119.435863999999,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4097.822645999957
+    },
+    "judge": {
+      "questionId": "q489",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement, conformément à l’attente, car le contexte ne contient aucune règle sur la responsabilité médicale devant l’ONIAM. Les trois éléments mentionnés sont fidèlement rattachés aux sources fournies et n’ajoutent pas d’affirmation non fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne traitent pas de la responsabilité médicale devant l’ONIAM, ce qui permet de justifier l’abstention. Elles couvrent également les trois exemples précis cités : responsabilité liée à l’AMP (art. 342-13), incapacités de libéralités visant notamment les professionnels de santé (art. 909) et prescription quinquennale d’une action en responsabilité relative à une mesure de protection (art. 413)."
+    }
+  },
+  "failureStage": "none"
+}

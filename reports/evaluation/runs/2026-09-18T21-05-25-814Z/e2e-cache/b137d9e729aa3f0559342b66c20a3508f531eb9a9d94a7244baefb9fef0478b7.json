@@ -1,0 +1,87 @@
+{
+  "questionId": "q293",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L221-2, sont exclus du champ d’application du chapitre :\n\n1. Les contrats portant sur les services sociaux, y compris le logement social, l’aide à l’enfance et aux familles, sauf les services à la personne mentionnés à l’article L. 7231-1 du Code du travail ;\n2. Les contrats portant sur les services de santé fournis par des professionnels de santé aux patients ;\n3. Les contrats portant sur les jeux d’argent et de hasard ainsi que les transactions portant sur des paris ;\n4. Les contrats portant sur les services financiers ;\n5. Les contrats portant sur un forfait touristique ;\n6. Les contrats relatifs à l’utilisation de biens à temps partagé, aux produits de vacances à long terme, à la revente et à l’échange ;\n7. Les contrats rédigés par un officier public ;\n8. Les contrats portant sur la fourniture de denrées alimentaires, de boissons ou d’autres biens ménagers de consommation courante livrés physiquement lors de tournées fréquentes et régulières ;\n9. Les contrats portant sur les services de transport de passagers, sauf les dispositions prévues à l’article L. 221-14 ;\n10. Les contrats conclus au moyen de distributeurs automatiques ou de sites commerciaux automatisés ;\n11. Les contrats conclus avec des opérateurs de télécommunications pour l’utilisation de cabines téléphoniques publiques ou pour une connexion unique par téléphone, internet ou télécopie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.458762999624,
+      "vectorSearchMs": 599.4366720002145,
+      "jinaRerankingMs": 291.7958699995652,
+      "mappingMs": 0.032472999766469,
+      "totalMs": 1121.7539470000193,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010143999941647053,
+      "contextBuilderMs": 0.014752999879419804,
+      "generationMs": 2319.213476999663,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3441.0013339994475
+    },
+    "judge": {
+      "questionId": "q293",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les onze catégories d’exclusion figurant dans le contexte, avec les principales exceptions et précisions. Elle omet seulement certains détails secondaires, notamment la finalité des services de santé et la précision sur les services/produits à valeur ajoutée accessibles par téléphone ou SMS. La référence mentionne aussi les contrats immobiliers, mais ceux-ci ne figurent ni dans le texte du contexte ni parmi les onze exclusions de l’article fourni ; leur absence ne doit donc pas être pénalisée ici."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L221-2 et énumère les onze catégories d’exclusions visées par la réponse. Elle couvre également les exceptions et précisions importantes reprises : services à la personne, exception relative à l’article L. 221-14 pour le transport de passagers, et conditions des contrats de télécommunications. Les légères simplifications de la réponse n’introduisent pas d’affirmation non couverte."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L221-2, sont exclus du champ d’application du chapitre :\n\n1. Les contrats relatifs aux services sociaux, y compris le logement social, l’aide à l’enfance et aux familles, sauf certains services à la personne.\n2. Les contrats relatifs aux services de santé fournis par des professionnels de santé, notamment la prescription, la délivrance et la fourniture de médicaments et dispositifs médicaux.\n3. Les contrats relatifs aux jeux d’argent et de hasard ainsi qu’aux paris.\n4. Les contrats relatifs aux services financiers.\n5. Les contrats portant sur un forfait touristique.\n6. Les contrats d’utilisation de biens à temps partagé, de produits de vacances à long terme, ainsi que les contrats de revente et d’échange correspondants.\n7. Les contrats rédigés par un officier public.\n8. Les contrats portant sur la fourniture de denrées alimentaires, de boissons ou de biens ménagers courants livrés physiquement lors de tournées fréquentes et régulières.\n9. Les contrats portant sur les services de transport de passagers, sauf les dispositions prévues à l’article L. 221-14.\n10. Les contrats conclus au moyen de distributeurs automatiques ou de sites commerciaux automatisés.\n11. Les contrats conclus avec des opérateurs de télécommunications pour l’utilisation de cabines téléphoniques publiques ou pour une connexion unique par téléphone, internet ou télécopie, notamment certains services et produits à valeur ajoutée.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 912.3916069995612,
+      "routingCalls": 1,
+      "embeddingMs": 184.0906309997663,
+      "vectorSearchMs": 48.584556999616325,
+      "jinaRerankingMs": 306.5763980001211,
+      "mappingMs": 0.02437100000679493,
+      "totalMs": 1451.7047040006146,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0098860003054142,
+      "contextBuilderMs": 0.009312000125646591,
+      "generationMs": 2336.5901110004634,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3788.321019999683
+    },
+    "judge": {
+      "questionId": "q293",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les onze catégories présentes dans le contexte et leurs principales précisions. Elle omet toutefois les contrats immobiliers mentionnés dans la réponse de référence (vraisemblablement contenus dans une partie non fournie de l'article), ce qui empêche une note maximale en correction et complétude. Toutes les affirmations formulées sont explicitement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L221-2 et énumère les onze catégories d’exclusion reprises dans la réponse générée, avec leurs précisions (exceptions, modalités et renvois). Toutes les affirmations importantes de la réponse sont explicitement couvertes par cette source."
+    }
+  },
+  "failureStage": "none"
+}

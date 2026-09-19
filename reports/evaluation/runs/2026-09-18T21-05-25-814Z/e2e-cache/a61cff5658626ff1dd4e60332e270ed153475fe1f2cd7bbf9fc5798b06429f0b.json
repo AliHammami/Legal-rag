@@ -1,0 +1,95 @@
+{
+  "questionId": "q083",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Elle ne peut bénéficier aux enfants à naître que dans les cas expressément prévus au chapitre VI du titre concerné.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1081"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1086"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 172.1593910001684,
+      "vectorSearchMs": 640.5939189998899,
+      "jinaRerankingMs": 490.03006899985485,
+      "mappingMs": 0.07764699985273182,
+      "totalMs": 1302.8972839999478,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01495700003579259,
+      "contextBuilderMs": 0.02007600013166666,
+      "generationMs": 1288.4776860000566,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2591.41902999999
+    },
+    "judge": {
+      "questionId": "q083",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement la restriction de l'article 1081 : la donation ne peut profiter aux enfants à naître que dans les cas énoncés au chapitre VI du présent titre. Elle répond directement à la question et est explicitement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1081) énonce directement la restriction demandée et couvre intégralement l’affirmation de la réponse générée : le bénéfice au profit des enfants à naître n’est possible que dans les cas énoncés au chapitre VI du présent titre. La source 2 est connexe mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "La donation entre vifs faite par contrat de mariage ne peut bénéficier aux enfants à naître que dans les cas expressément prévus au chapitre VI du titre concerné.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1081"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1086"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1017.4299989999272,
+      "routingCalls": 1,
+      "embeddingMs": 365.90318599995226,
+      "vectorSearchMs": 76.62902500014752,
+      "jinaRerankingMs": 481.25505100004375,
+      "mappingMs": 0.029517999850213528,
+      "totalMs": 1941.274759999942,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018287000013515353,
+      "contextBuilderMs": 0.011739999987185001,
+      "generationMs": 1642.3832449999172,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.694464000175
+    },
+    "judge": {
+      "questionId": "q083",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement la restriction prévue à l’article 1081 : les enfants à naître ne peuvent bénéficier de la donation que dans les cas énoncés au chapitre VI du présent titre. Elle répond directement à la question et est entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1081) énonce directement et explicitement la restriction demandée : la donation ne peut avoir lieu au profit des enfants à naître que dans les cas énoncés au chapitre VI du présent titre. Elle couvre intégralement l'affirmation de la réponse générée. La source 2 est connexe mais n'est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

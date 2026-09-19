@@ -1,0 +1,95 @@
+{
+  "questionId": "q256",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L316-1 du Code monétaire et financier** :\n\n- Le consommateur a le droit de recourir **gratuitement à un médiateur**.\n- Ce recours concerne les litiges l’opposant à un établissement de crédit, une société de financement, un établissement de monnaie électronique, un établissement de paiement ou un prestataire de services d’information sur les comptes.\n- Le litige doit porter sur les services fournis ou l’exécution de contrats relevant des titres concernés du Code monétaire et financier, ainsi que sur certains produits financiers mentionnés par le texte.\n\nL’article L316-1 impose également à chaque médiateur d’établir **un compte rendu annuel d’activité** et de le transmettre au président de la commission d’évaluation et de contrôle de la médiation de la consommation, au gouverneur de la Banque de France et au président du comité consultatif compétent.\n\nLes autres obligations du médiateur — diligence, compétence, indépendance, impartialité, transparence, rapport annuel, absence de conflit d’intérêts et conditions de nomination et de rémunération — sont précisées par l’article **L613-1 du Code de la consommation**, et non directement par l’article L316-1.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L316-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L613-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.47791299968958,
+      "vectorSearchMs": 604.9426810001023,
+      "jinaRerankingMs": 331.9863049997948,
+      "mappingMs": 0.08037999970838428,
+      "totalMs": 1145.5211869999766,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011541000101715326,
+      "contextBuilderMs": 0.04616999998688698,
+      "generationMs": 2809.9288300001062,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3955.522241999861
+    },
+    "judge": {
+      "questionId": "q256",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement le droit au recours gratuit à un médiateur, les catégories de professionnels concernées, le champ des litiges et l'obligation de compte rendu annuel avec ses destinataires. Les précisions sur les autres exigences applicables aux médiateurs sont également étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L316-1 et couvre le droit au recours gratuit, les professionnels visés, le champ des litiges et la transmission du compte rendu annuel à ses destinataires. La source 3 couvre précisément les autres obligations du médiateur mentionnées dans la réponse (diligence, compétence, indépendance, impartialité, transparence, rapport, conflits d'intérêts, nomination et rémunération). La source 1 appuie le cadre général du recours effectif à la médiation. L'ensemble couvre toutes les affirmations importantes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 316-1 du Code monétaire et financier :\n\n- **Droit du consommateur :** tout consommateur peut recourir **gratuitement à un médiateur**, dans les conditions prévues par le Code de la consommation, pour résoudre un litige l’opposant à un établissement de crédit, une société de financement, un établissement de monnaie électronique, un établissement de paiement ou un prestataire de services d’information sur les comptes.\n- Le litige doit concerner les **services fournis** ou l’**exécution de contrats** relevant des titres visés par l’article, ainsi que les produits mentionnés aux titres Ier et II du livre II.\n\n- **Obligation des médiateurs :** chaque médiateur doit établir un **compte rendu annuel d’activité** et le transmettre :\n  - au président de la commission d’évaluation et de contrôle de la médiation de la consommation ;\n  - au gouverneur de la Banque de France ;\n  - au président du comité consultatif mentionné à l’article L. 614-1.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L316-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.5875550000928,
+      "routingCalls": 1,
+      "embeddingMs": 225.2589989998378,
+      "vectorSearchMs": 177.56279100012034,
+      "jinaRerankingMs": 362.35464599961415,
+      "mappingMs": 0.022369000129401684,
+      "totalMs": 2096.813405999914,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009134999942034483,
+      "contextBuilderMs": 0.009314000140875578,
+      "generationMs": 2511.4154440001585,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4608.255776999984
+    },
+    "judge": {
+      "questionId": "q256",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le droit gratuit de saisir un médiateur, les professionnels concernés, le champ des litiges et l'obligation de compte rendu annuel avec ses trois destinataires. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 316-1 du Code monétaire et financier. Elle couvre explicitement le droit du consommateur à une médiation gratuite, les professionnels concernés, le champ des litiges, ainsi que l’obligation de compte rendu annuel et ses trois destinataires. Toutes les affirmations importantes de la réponse générée y sont étayées."
+    }
+  },
+  "failureStage": "none"
+}

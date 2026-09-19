@@ -1,0 +1,99 @@
+{
+  "questionId": "q481",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas de présenter les règles générales de la détention provisoire.\n\nIl indique seulement que :\n\n- lorsqu’une peine entre dans les conditions prévues par l’article 132-25, la juridiction peut ordonner le placement ou le maintien en détention du condamné ;\n- cette mesure doit être assortie de l’exécution provisoire ;\n- elle s’effectue dans les conditions prévues aux articles 397-4 et 465-1 du code de procédure pénale ;\n- lorsque la détention provisoire a déjà été subie, la juridiction tient compte de la durée d’emprisonnement restant à exécuter, notamment lorsqu’elle est inférieure ou égale à six mois.\n\nLes règles précises de la détention provisoire ne sont pas reproduites dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-25"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-6"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-63"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.94204999995418,
+      "vectorSearchMs": 612.8147839999292,
+      "jinaRerankingMs": 303.1703719999641,
+      "mappingMs": 0.02960100001655519,
+      "totalMs": 1103.986517000012,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01344999996945262,
+      "contextBuilderMs": 0.017044999985955656,
+      "generationMs": 2227.0586749999784,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3331.083840999985
+    },
+    "judge": {
+      "questionId": "q481",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse abstient correctement de donner les règles générales, absentes du contexte. Les précisions limitées fournies sont fidèles à l’article 132-25 reproduit : possibilité de placement ou maintien en détention sous exécution provisoire, renvoi aux articles de procédure pénale, et prise en compte d’un reliquat inférieur ou égal à six mois après détention provisoire."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "La source 1 est directement liée à une situation limitée de placement ou maintien en détention après jugement et permet de justifier que le contexte ne fournit pas les règles générales de la détention provisoire. Les sources 2 et 3 n'apportent pas de règles générales complémentaires. Les affirmations sur l'exécution provisoire et les renvois aux articles 397-4 et 465-1 sont couvertes par l'article 132-25. En revanche, la formulation selon laquelle la juridiction « tient compte » de la durée restant à exécuter est imprécise : la source prévoit cette durée comme condition d'un régime d'exécution de peine, sans énoncer cette règle générale de prise en compte."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de présenter les règles générales de la détention provisoire.\n\nIl indique seulement que :\n\n- lorsque la peine restant à exécuter après une détention provisoire est inférieure ou égale à six mois, certaines mesures d’aménagement doivent en principe être envisagées ;\n- dans certains cas, la juridiction peut ordonner le placement ou le maintien en détention du condamné si elle assortit sa décision de l’exécution provisoire ;\n- le juge de l’application des peines fixe alors les modalités d’exécution dans un délai de cinq jours ouvrables ;\n- le fait, pour un agent pénitentiaire, de recevoir ou retenir une personne sans titre légal, ou de prolonger indûment une détention, constitue une infraction punie de deux ans d’emprisonnement et de 30 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-25"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 670.1065819999203,
+      "routingCalls": 1,
+      "embeddingMs": 241.91306300007273,
+      "vectorSearchMs": 61.13810600002762,
+      "jinaRerankingMs": 298.9500359999947,
+      "mappingMs": 0.03470400010701269,
+      "totalMs": 1272.1694850000786,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01118899998255074,
+      "contextBuilderMs": 0.015128999948501587,
+      "generationMs": 2367.6380780000472,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3639.8424759999616
+    },
+    "judge": {
+      "questionId": "q481",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas d’exposer les règles générales de la détention provisoire, ce qui est approprié. Les précisions limitées qu’elle fournit sont fidèles aux extraits : aménagement lorsque le reliquat est au plus de six mois, possibilité de placement ou maintien en détention sous exécution provisoire, délai de cinq jours ouvrables pour le JAP, et infraction liée à une détention sans titre ou indûment prolongée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne permettent pas de présenter les règles générales de la détention provisoire : elles portent seulement sur l'aménagement d'une peine après détention provisoire, le maintien ou placement en détention lié à l'exécution provisoire, et l'incrimination de certaines détentions irrégulières. Elles sont donc insuffisantes pour répondre directement à la question, mais pertinentes pour justifier l'abstention et les limites exposées. Toutes les précisions factuelles de la réponse sont couvertes par les articles 132-25 et 432-6."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q315",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Sont interdits, pour les produits dont l’importation est prohibée en méconnaissance de l’article L. 422-2 :\n\n- la détention en vue de leur vente ou de leur distribution gratuite ;\n- leur mise en vente ;\n- leur vente ;\n- leur distribution à titre gratuit.\n\nCes faits sont punis d’une amende de 5e classe et peuvent entraîner la confiscation des produits ou des biens ayant servi à commettre l’infraction.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R452-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.57910500001162,
+      "vectorSearchMs": 760.4014200000092,
+      "jinaRerankingMs": 282.0027979994193,
+      "mappingMs": 0.1739719994366169,
+      "totalMs": 1236.1884580003098,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02695699967443943,
+      "contextBuilderMs": 0.015032999217510223,
+      "generationMs": 2122.50057800021,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3358.741004999727
+    },
+    "judge": {
+      "questionId": "q315",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les actes visés (détention en vue de la vente ou de la distribution gratuite, mise en vente, vente et distribution gratuite) et ajoute des sanctions exactes au regard du contexte. Elle omet toutefois la précision essentielle de la référence sur les produits concernés : ceux dont l’importation est prohibée par des décisions applicables de la Commission européenne ou qui ne respectent pas leurs prescriptions."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 452-1 vise directement les comportements interdits en méconnaissance de l’article L. 422-2 (détention en vue de la vente ou de la distribution gratuite, mise en vente, vente et distribution gratuite) et couvre également les sanctions mentionnées, soit l’amende de 5e classe et la confiscation."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article R452-1, sont interdits, en méconnaissance de l’article L. 422-2, les faits suivants concernant des produits dont l’importation est prohibée :\n\n- les détenir en vue de leur vente ou de leur distribution gratuite ;\n- les mettre en vente ;\n- les vendre ;\n- les distribuer gratuitement.\n\nLe contexte ne précise pas quels produits sont visés par l’article L. 422-2.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R452-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1878.8067560000345,
+      "routingCalls": 1,
+      "embeddingMs": 214.19955000001937,
+      "vectorSearchMs": 121.2999300006777,
+      "jinaRerankingMs": 306.25690099969506,
+      "mappingMs": 0.027267999947071075,
+      "totalMs": 2520.6233700001612,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01082099974155426,
+      "contextBuilderMs": 0.008105000481009483,
+      "generationMs": 1698.0347619997337,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4218.686711999588
+    },
+    "judge": {
+      "questionId": "q315",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les actes interdits (détention en vue de vente ou de distribution gratuite, mise en vente, vente et distribution gratuite) pour les produits dont l’importation est prohibée. Elle omet toutefois l’élément essentiel de l’article L. 422-2 précisé par la référence : les produits concernés sont ceux dont l’importation est prohibée par des décisions applicables de la Commission européenne relatives aux contrôles vétérinaires, ou non conformes à leurs prescriptions. Cette omission est explicitement justifiée par l’absence du texte de L. 422-2 dans le contexte. Toutes les affirmations substantielles sont bien étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source R452-1 est directement pertinente pour les interdictions de détention, mise en vente, vente et distribution gratuite de produits dont l’importation est prohibée en méconnaissance de L. 422-2. Elle couvre l’ensemble des affirmations substantielles de la réponse générée, y compris le fait que le contexte ne précise pas davantage les catégories de produits visées par L. 422-2."
+    }
+  },
+  "failureStage": "none"
+}

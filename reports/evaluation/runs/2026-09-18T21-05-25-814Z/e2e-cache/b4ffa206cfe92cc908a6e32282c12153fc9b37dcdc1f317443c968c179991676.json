@@ -1,0 +1,103 @@
+{
+  "questionId": "q226",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 430-1, une opération de concentration est réalisée dans les situations suivantes :\n\n1. **Lorsque deux ou plusieurs entreprises auparavant indépendantes fusionnent** ;\n\n2. **Lorsqu’une ou plusieurs personnes ou entreprises acquièrent le contrôle** de tout ou partie d’une ou plusieurs autres entreprises, notamment par :\n   - une prise de participation au capital ;\n   - l’achat d’éléments d’actifs ;\n   - un contrat ;\n   - ou tout autre moyen ;\n\n3. **Lorsqu’est créée une entreprise commune** qui exerce durablement toutes les fonctions d’une entité économique autonome.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.49410599982366,
+      "vectorSearchMs": 568.4591629998758,
+      "jinaRerankingMs": 582.6063290000893,
+      "mappingMs": 0.0408100001513958,
+      "totalMs": 1377.6635920000263,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011560999788343906,
+      "contextBuilderMs": 0.024133999831974506,
+      "generationMs": 1456.4968539997935,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2834.20765999984
+    },
+    "judge": {
+      "questionId": "q226",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois hypothèses prévues par l’article L. 430-1 : fusion d’entreprises indépendantes, acquisition directe ou indirecte du contrôle de tout ou partie d’autres entreprises (avec les moyens énumérés), et création durable d’une entreprise commune autonome. Ces éléments sont tous explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 430-1 et énonce explicitement les trois hypothèses mentionnées dans la réponse : fusion d’entreprises auparavant indépendantes, acquisition directe ou indirecte du contrôle par les moyens cités, et création durable d’une entreprise commune autonome. Les sources 2 et 3 sont périphériques mais n’affectent pas la suffisance de la source 1."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L430-1, une opération de concentration est réalisée dans les situations suivantes :\n\n1. **Lorsque deux ou plusieurs entreprises auparavant indépendantes fusionnent** ;\n\n2. **Lorsqu’une ou plusieurs personnes ou entreprises acquièrent le contrôle** de tout ou partie d’une ou plusieurs autres entreprises, notamment par :\n   - une prise de participation au capital ;\n   - l’achat d’éléments d’actifs ;\n   - un contrat ;\n   - ou tout autre moyen ;\n\n3. **Lorsqu’une entreprise commune est créée**, à condition qu’elle accomplisse durablement toutes les fonctions d’une entité économique autonome.\n\nLe contrôle correspond à la possibilité d’exercer une **influence déterminante** sur l’activité d’une entreprise, notamment par des droits de propriété, de jouissance, ou des droits ou contrats influençant la composition ou les décisions de ses organes.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 923.649352000095,
+      "routingCalls": 1,
+      "embeddingMs": 238.01420700037852,
+      "vectorSearchMs": 182.18576100002974,
+      "jinaRerankingMs": 584.5155389998108,
+      "mappingMs": 0.023350000381469727,
+      "totalMs": 1928.419893000275,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01070099975913763,
+      "contextBuilderMs": 0.0179449999704957,
+      "generationMs": 1761.3145650001243,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3689.7720870003104
+    },
+    "judge": {
+      "questionId": "q226",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois hypothèses de concentration prévues par l’article L430-1 : fusion d’entreprises indépendantes, acquisition directe ou indirecte du contrôle, et création durable d’une entreprise commune autonome. Les précisions sur les modalités d’acquisition du contrôle et sur l’influence déterminante sont également explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L430-1 et couvre toutes les affirmations importantes : fusion d'entreprises indépendantes, acquisition directe ou indirecte du contrôle et ses modalités, création durable d'une entreprise commune autonome, ainsi que la définition du contrôle par l'influence déterminante. Les sources 2 et 3 sont périphériques mais n'affectent pas la pertinence ni la couverture."
+    }
+  },
+  "failureStage": "none"
+}

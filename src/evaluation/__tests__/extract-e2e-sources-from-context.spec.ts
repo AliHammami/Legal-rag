@@ -34,6 +34,20 @@ Contenu de l'article R645-3.`;
 
     expect(parseContextSourceBlocks(context)[0]?.articleNumber).toBe('R645-3');
   });
+
+  it('parses article numbers with spaces and disambiguation suffixes', () => {
+    const context = `[Source 1 — Article Annexe I@p2339 — chunk 0]
+Contenu de l'annexe.
+
+[Source 2 — Article 2@p2999@o3 — chunk 1]
+Autre contenu.`;
+
+    const blocks = parseContextSourceBlocks(context);
+
+    expect(blocks).toHaveLength(2);
+    expect(blocks[0]?.articleNumber).toBe('Annexe I@p2339');
+    expect(blocks[1]?.articleNumber).toBe('2@p2999@o3');
+  });
 });
 
 describe('extractE2ESourcesFromContext', () => {
@@ -62,13 +76,45 @@ describe('extractE2ESourcesFromContext', () => {
     });
   });
 
-  it('rejects mismatched source counts', () => {
+  it('extracts disambiguated article numbers using snapshot headers', () => {
+    const context = `[Source 1 — Article Annexe I@p2339 — chunk 0]
+Contenu de l'annexe.
+
+[Source 2 — Article 2@p2999@o3 — chunk 1]
+Autre contenu.`;
+
+    const sources = extractE2ESourcesFromContext(context, [
+      {
+        sourceId: 1,
+        chunkId: 'annexe-i#0',
+        articleNumber: 'Annexe I@p2339',
+        chunkIndex: 0,
+      },
+      {
+        sourceId: 2,
+        chunkId: '2#1',
+        articleNumber: '2@p2999@o3',
+        chunkIndex: 1,
+      },
+    ]);
+
+    expect(sources).toHaveLength(2);
+    expect(sources[1]?.content).toContain('Autre contenu');
+  });
+
+  it('rejects missing snapshot headers in context', () => {
     expect(() =>
       extractE2ESourcesFromContext(q001Context, [
         {
           sourceId: 1,
           chunkId: '122-6#0',
           articleNumber: '122-6',
+          chunkIndex: 0,
+        },
+        {
+          sourceId: 2,
+          chunkId: '999-9#0',
+          articleNumber: '999-9',
           chunkIndex: 0,
         },
       ]),

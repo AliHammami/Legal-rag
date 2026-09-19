@@ -1,11 +1,17 @@
 import type { OpenAIService } from '../openai/openai.service.js';
 import { DEFAULT_MULTICORPUS_GENERATION_MODEL } from './constants.js';
-import type { CorpusArticleRecord } from './load-corpus-article-index.js';
+import type { GoldArticle } from './gold-article.js';
+import { uniqueGoldArticles } from './gold-article.js';
+import type {
+  CorpusArticleRecord,
+  MulticorpusCorpusArticleRegistry,
+} from './load-corpus-article-index.js';
 import type {
   LegalMulticorpusEvaluationQuestion,
   MulticorpusDifficulty,
   MulticorpusQuestionType,
 } from './multicorpus-dataset.types.js';
+import { reconcileQuestionGoldArticles } from './reconcile-multicorpus-gold-articles.js';
 import type { MultiCorpusArticleBundle } from './select-diverse-articles.js';
 
 export interface GeneratedQuestionCandidate {
@@ -189,22 +195,103 @@ export async function generateMultiCorpusQuestions(
   return response.questions ?? [];
 }
 
+type QuestionCandidateInput = {
+  question: string;
+  goldCorpusIds: string[];
+  goldArticles: string[] | GoldArticle[];
+  referenceAnswer: string;
+  difficulty: MulticorpusDifficulty;
+  questionType: MulticorpusQuestionType;
+  sourceArticles?: string[] | GoldArticle[];
+};
+
+function normalizeCandidateGoldArticles(
+  candidate: QuestionCandidateInput,
+  id: string,
+  registry?: MulticorpusCorpusArticleRegistry,
+): GoldArticle[] {
+  const raw = candidate.goldArticles;
+  if (raw.length === 0) {
+    return [];
+  }
+
+  if (typeof raw[0] !== 'string') {
+    return uniqueGoldArticles(raw as GoldArticle[]);
+  }
+
+  if (candidate.goldCorpusIds.length === 1) {
+    return uniqueGoldArticles(
+      (raw as string[]).map((articleNumber) => ({
+        corpusId: candidate.goldCorpusIds[0]!,
+        articleNumber: articleNumber.trim(),
+      })),
+    );
+  }
+
+  if (!registry) {
+    throw new Error(
+      `Multicorpus article registry is required to resolve gold articles for ${id}`,
+    );
+  }
+
+  const reconciled = reconcileQuestionGoldArticles(
+    {
+      id,
+      question: candidate.question,
+      goldCorpusIds: candidate.goldCorpusIds,
+      goldArticles: raw as unknown as GoldArticle[],
+      referenceAnswer: candidate.referenceAnswer,
+      questionType: candidate.questionType,
+    },
+    registry,
+  );
+
+  if (reconciled.unresolved) {
+    throw new Error(
+      `Unable to resolve gold articles for ${id}`,
+    );
+  }
+
+  return reconciled.resolved;
+}
+
 export function assignQuestionIds(
-  candidates: GeneratedQuestionCandidate[],
+  candidates: QuestionCandidateInput[],
   startIndex: number,
+  registry?: MulticorpusCorpusArticleRegistry,
 ): LegalMulticorpusEvaluationQuestion[] {
-  return candidates.map((candidate, offset) => ({
-    id: `q${String(startIndex + offset).padStart(3, '0')}`,
-    question: candidate.question.trim(),
-    goldCorpusIds: [...candidate.goldCorpusIds],
-    goldArticles: [...candidate.goldArticles],
-    referenceAnswer: candidate.referenceAnswer.trim(),
-    difficulty: candidate.difficulty,
-    questionType: candidate.questionType,
-    sourceArticles: candidate.sourceArticles
-      ? [...candidate.sourceArticles]
-      : [...candidate.goldArticles],
-  }));
+  return candidates.map((candidate, offset) => {
+    const id = `q${String(startIndex + offset).padStart(3, '0')}`;
+    const goldArticles = normalizeCandidateGoldArticles(candidate, id, registry);
+    const sourceArticles = candidate.sourceArticles
+      ? normalizeCandidateGoldArticles(
+          {
+            ...candidate,
+            goldCorpusIds:
+              candidate.goldCorpusIds.length > 0
+                ? candidate.goldCorpusIds
+                : [...new Set(goldArticles.map((article) => article.corpusId))],
+            goldArticles: candidate.sourceArticles as string[] | GoldArticle[],
+          },
+          `${id}-source`,
+          registry,
+        )
+      : goldArticles;
+
+    return {
+      id,
+      question: candidate.question.trim(),
+      goldCorpusIds: [...candidate.goldCorpusIds],
+      goldArticles,
+      referenceAnswer: candidate.referenceAnswer.trim(),
+      difficulty: candidate.difficulty,
+      questionType: candidate.questionType,
+      sourceArticles:
+        sourceArticles.length > 0
+          ? uniqueGoldArticles([...sourceArticles, ...goldArticles])
+          : undefined,
+    };
+  });
 }
 
 export function buildDifficultyMix(

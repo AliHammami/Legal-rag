@@ -1,0 +1,95 @@
+{
+  "questionId": "q420",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le Conseil national contribue à la lutte contre les fraudes en mettant en œuvre, sous sa responsabilité et à ses frais, un fichier national automatisé des interdits de gérer. Ce fichier vise notamment à prévenir certaines infractions et à favoriser l’exécution des interdictions de gérer prononcées par les juridictions. Il recense les faillites personnelles et les interdictions de diriger, gérer, administrer ou contrôler certaines entreprises ou personnes morales, lorsqu’elles résultent de décisions juridictionnelles passées en force de chose jugée.\n\nLe contexte fourni ne précise pas les peines criminelles encourues par les personnes physiques. Il mentionne seulement les infractions prévues aux articles 434-40-1 du code pénal et L. 654-15 du code de commerce, sans indiquer les peines applicables.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L128-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L741-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.58788200002164,
+      "vectorSearchMs": 637.6618339996785,
+      "jinaRerankingMs": 328.6353339999914,
+      "mappingMs": 0.028269000351428986,
+      "totalMs": 1173.9445120003074,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010277999565005302,
+      "contextBuilderMs": 0.01810499932616949,
+      "generationMs": 2108.004460000433,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3281.9898319998756
+    },
+    "judge": {
+      "questionId": "q420",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le rôle du Conseil national : tenue, sous sa responsabilité et à ses frais, d’un fichier national automatisé recensant les faillites personnelles et interdictions de gérer afin de lutter contre les fraudes, prévenir certaines infractions et faciliter l’exécution des interdictions. Elle omet toutefois entièrement les peines criminelles applicables aux personnes physiques, qui constituent une partie essentielle de la question. Cette omission est explicitement justifiée par l’absence de ces peines dans le contexte, et toutes les affirmations formulées sont bien étayées par ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour la première partie : elle établit la mise en œuvre, sous la responsabilité et aux frais du Conseil national, du fichier national des interdits de gérer, ses finalités de lutte contre les fraudes, de prévention de certaines infractions et d'exécution des interdictions, ainsi que les mesures inscrites. Aucune source ne fournit les peines criminelles demandées, mais la réponse n'en affirme aucune et constate explicitement cette absence du contexte, ce qui est supporté par les sources fournies. La source 2 est seulement contextuelle et n'apporte pas d'élément déterminant."
+    }
+  },
+  "routing": {
+    "answer": "Le Conseil national contribue à la lutte contre les fraudes en mettant en œuvre un fichier national automatisé des interdits de gérer. Ce fichier :\n\n- recense les faillites personnelles et les interdictions de diriger, gérer, administrer ou contrôler certaines entreprises ou personnes morales ;\n- mentionne les décisions juridictionnelles ayant prononcé ces mesures, lorsqu’elles sont passées en force de chose jugée ;\n- vise également à prévenir les infractions prévues aux articles 434-40-1 du code pénal et L. 654-15 du code de commerce ;\n- favorise l’exécution des interdictions de gérer.\n\nLa tenue de ce fichier constitue une mission de service public, assurée par le Conseil national à ses frais et sous sa responsabilité.\n\nLe contexte fourni ne précise pas quelles peines criminelles peuvent être encourues par les personnes physiques. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L128-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L741-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1290.3789919996634,
+      "routingCalls": 1,
+      "embeddingMs": 197.8186280000955,
+      "vectorSearchMs": 280.80554800014943,
+      "jinaRerankingMs": 309.82283200044185,
+      "mappingMs": 0.022943000309169292,
+      "totalMs": 2078.907236000523,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010763999074697495,
+      "contextBuilderMs": 0.017854999750852585,
+      "generationMs": 2549.9459189996123,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4628.889338999987
+    },
+    "judge": {
+      "questionId": "q420",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement, au regard du contexte, le fichier national automatisé des interdits de gérer et ses finalités de lutte contre la fraude, de prévention d'infractions et d'exécution des interdictions. Elle ne répond toutefois pas à la seconde partie essentielle de la question sur les peines criminelles encourues par les personnes physiques, alors qu'une réponse était attendue. Toutes les affirmations formulées sur le rôle du Conseil national sont soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L128-1 est directement pertinente et étaye précisément le rôle du Conseil national : fichier automatisé, catégories inscrites, décisions passées en force de chose jugée, prévention des infractions citées, exécution des interdictions et mission de service public. En revanche, aucune source ne traite des peines criminelles encourues par les personnes physiques, qui constituent une partie importante de la question. Les affirmations effectivement formulées dans la réponse générée sont néanmoins toutes soutenues par la source, y compris le constat que le contexte ne fournit pas ces peines."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q322",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L413-1, sont interdites les actions suivantes :\n\n1. Falsifier des produits destinés à l’alimentation humaine ou animale, ainsi que des boissons et produits agricoles ou naturels destinés à être vendus ;\n2. Exposer, mettre en vente ou vendre ces produits en sachant qu’ils sont falsifiés, corrompus ou toxiques ;\n3. Exposer, mettre en vente ou vendre, en connaissance de leur destination, des produits, objets ou appareils permettant de falsifier ces produits ;\n4. Inciter à l’utilisation de ces produits, objets ou appareils au moyen notamment de brochures, circulaires, prospectus, affiches, annonces ou instructions.\n\nL’infraction est constituée même si l’acheteur ou le consommateur connaît la falsification nuisible.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L413-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.0495210001245,
+      "vectorSearchMs": 891.704769000411,
+      "jinaRerankingMs": 317.21984999999404,
+      "mappingMs": 0.07326999958604574,
+      "totalMs": 1460.0793899996206,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014152999967336655,
+      "contextBuilderMs": 0.019373999908566475,
+      "generationMs": 1661.7485859999433,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3121.8703429996967
+    },
+    "judge": {
+      "questionId": "q322",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les quatre interdictions de l’article L413-1 et mentionne correctement que l’infraction demeure constituée lorsque l’acheteur ou le consommateur connaît la falsification nuisible. Toutes les affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement les quatre interdictions de l’article L. 413-1 ainsi que la précision selon laquelle l’infraction reste constituée si l’acheteur ou le consommateur connaît la falsification nuisible. Elle couvre donc toutes les affirmations importantes de la réponse générée. La source 2, relative aux sanctions, est complémentaire mais non nécessaire à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L413-1, il est interdit :\n\n1. De falsifier des produits destinés à l’alimentation humaine ou animale, ainsi que les boissons et produits agricoles ou naturels destinés à être vendus ;\n2. D’exposer, de mettre en vente ou de vendre ces produits en sachant qu’ils sont falsifiés, corrompus ou toxiques ;\n3. D’exposer, de mettre en vente ou de vendre, en connaissant leur destination, des produits, objets ou appareils permettant de falsifier ces produits ;\n4. D’inciter à l’utilisation de ces produits, objets ou appareils par des brochures, circulaires, prospectus, affiches, annonces ou instructions quelconques.\n\nL’infraction est constituée même si l’acheteur ou le consommateur connaît la falsification nuisible.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L413-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1234.888585999608,
+      "routingCalls": 1,
+      "embeddingMs": 249.95475899986923,
+      "vectorSearchMs": 57.211005999706686,
+      "jinaRerankingMs": 271.13972599990666,
+      "mappingMs": 0.039002999663352966,
+      "totalMs": 1813.2642099997029,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019194000400602818,
+      "contextBuilderMs": 0.02604799997061491,
+      "generationMs": 1629.0164470002055,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3442.3408740004525
+    },
+    "judge": {
+      "questionId": "q322",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les quatre interdictions prévues par l’article L413-1 et ajoute correctement la règle selon laquelle l’infraction demeure constituée lorsque l’acheteur ou le consommateur connaît la falsification nuisible. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement les quatre interdictions de l’article L413-1 ainsi que la précision sur la connaissance de la falsification nuisible par l’acheteur ou le consommateur. Elle couvre donc toutes les affirmations importantes de la réponse générée. La source 2 est accessoire, mais demeure liée à l’article en précisant les sanctions."
+    }
+  },
+  "failureStage": "none"
+}

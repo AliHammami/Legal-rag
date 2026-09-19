@@ -1,0 +1,103 @@
+{
+  "questionId": "q327",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les modalités d’application sont fixées par décret en Conseil d’État.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L433-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 272.34672299958766,
+      "vectorSearchMs": 794.3006180003285,
+      "jinaRerankingMs": 232.5379200000316,
+      "mappingMs": 0.02833699993789196,
+      "totalMs": 1299.2489090003073,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011818000115454197,
+      "contextBuilderMs": 0.008016000501811504,
+      "generationMs": 962.1546390000731,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2261.4325350001454
+    },
+    "judge": {
+      "questionId": "q327",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle figurant dans le contexte et répond intégralement à la question : les modalités sont fixées par décret en Conseil d’État."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l'article L. 433-10 et énonce expressément que les modalités d'application des articles L. 433-3 à L. 433-7 sont fixées par décret en Conseil d'État. Elle est exactement pertinente et couvre intégralement l'affirmation de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas les articles L. 433-3 à L. 433-7. Il ne permet donc pas de déterminer quelle autorité fixe leurs modalités d’application.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L121-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L562-15"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L515-12"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L225-5"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L561-50"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1155.0418119998649,
+      "routingCalls": 1,
+      "embeddingMs": 256.0044700000435,
+      "vectorSearchMs": 178.63507300056517,
+      "jinaRerankingMs": 267.5692039998248,
+      "mappingMs": 0.050188000313937664,
+      "totalMs": 1857.348158000037,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02440000046044588,
+      "contextBuilderMs": 0.03356300015002489,
+      "generationMs": 1566.2521919999272,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3423.6707020001486
+    },
+    "judge": {
+      "questionId": "q327",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de répondre alors qu'une réponse était attendue : les modalités d'application sont fixées par décret en Conseil d'Etat. Son constat sur l'absence des articles spécifiquement visés est fidèle au contexte fourni, donc l'abstention est bien fondée sur ce contexte, mais elle est incorrecte et ne satisfait pas la question au regard de la référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 3,
+      "explanation": "Aucune source ne porte sur les articles L. 433-3 à L. 433-7 visés par la question. Elles concernent d'autres articles et d'autres sections ou chapitres, même si elles mentionnent toutes un décret en Conseil d'Etat. Elles sont donc seulement analogiquement pertinentes et ne permettent pas de répondre directement à la question. En revanche, elles sont cohérentes avec le constat de la réponse générée selon lequel les articles spécifiquement visés ne figurent pas dans le contexte ; elles couvrent ainsi largement, sans l'établir textuellement pour les articles demandés, le motif de l'abstention."
+    }
+  },
+  "failureStage": "generation"
+}

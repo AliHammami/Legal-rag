@@ -1,0 +1,95 @@
+{
+  "questionId": "q429",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Pour conclure un accord, celui-ci doit obligatoirement être établi par écrit, sous peine de nullité.\n\nDans le cas particulier prévu à l’article D3313-7-1, la demande de renégociation doit être formalisée par la production de l’un des documents mentionnés au 3° de l’article D3345-1.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3313-7-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 366.08620799984783,
+      "vectorSearchMs": 600.4959530001506,
+      "jinaRerankingMs": 310.00485800020397,
+      "mappingMs": 0.020270999521017075,
+      "totalMs": 1276.6345469998196,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010216999799013138,
+      "contextBuilderMs": 0.01258500013500452,
+      "generationMs": 1818.4340249998495,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3095.1004470000044
+    },
+    "judge": {
+      "questionId": "q429",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse s’appuie sur les extraits fournis : l’article L. 2231-3 impose un écrit à peine de nullité pour la convention ou l’accord, et l’article D. 3313-7-1 prévoit bien une formalisation spécifique de la demande de renégociation. Toutefois, la question est trop générale et ne précise ni le type d’accord ni le régime juridique applicable ; la réponse généralise donc indûment ces règles particulières à tout accord. Le cas appelait une abstention explicite faute de périmètre suffisant."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "La source L2231-3 est directement pertinente pour l'affirmation selon laquelle une convention ou un accord doit être écrit à peine de nullité. La source D3313-7-1 est pertinente pour le cas particulier de la demande de renégociation, mais elle ne concerne ce point que lorsque l'accord relève de la modalité visée à l'article L. 3312-5, I, 4°, condition que la réponse ne mentionne pas. Les sources couvrent donc largement les deux énoncés formulés, mais ne permettent pas de généraliser ces formalités à tout « accord » au sens de la question, trop indéterminée."
+    }
+  },
+  "routing": {
+    "answer": "Pour être valable, la convention ou l’accord doit obligatoirement être établi par écrit, à peine de nullité.\n\nSi l’accord est conclu selon la modalité prévue au 4° du I de l’article L. 3312-5, la demande de renégociation doit en outre être formalisée par la production de l’un des documents mentionnés au 3° de l’article D. 3345-1.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3313-7-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1327.6888380004093,
+      "routingCalls": 1,
+      "embeddingMs": 194.40751499962062,
+      "vectorSearchMs": 630.7881049998105,
+      "jinaRerankingMs": 306.8082519993186,
+      "mappingMs": 0.02133799996227026,
+      "totalMs": 2459.7421770002693,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011194000020623207,
+      "contextBuilderMs": 0.01322100032120943,
+      "generationMs": 1650.4829679997638,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4110.287616000511
+    },
+    "judge": {
+      "questionId": "q429",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reprend correctement les deux éléments présents dans le contexte, mais elle répond de façon affirmative à une question trop générale et hors périmètre sans préciser le régime juridique concerné. Une abstention ou une demande de précision était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources soutiennent directement les deux affirmations de la réponse générée : l'exigence d'un acte écrit à peine de nullité et, dans le cas spécifique visé par l'article L. 3312-5, la formalisation de la demande de renégociation. Elles sont toutefois seulement partiellement pertinentes pour la question très générale sur les formalités nécessaires à la conclusion d'un accord, car elles relèvent de régimes distincts et ne permettent pas de déterminer le champ d'application approprié ni de répondre de manière générale. Elles ne justifient pas non plus l'absence d'abstention attendue."
+    }
+  },
+  "failureStage": "abstention"
+}

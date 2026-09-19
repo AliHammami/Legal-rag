@@ -1,0 +1,95 @@
+{
+  "questionId": "q190",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 239-1, peuvent être données à bail les **actions de sociétés par actions** qui sont :\n\n- **nominatives** ;\n- **non négociables sur un marché réglementé** ;\n- **non inscrites aux opérations d’un dépositaire central** ;\n- **non soumises** à une obligation de conservation ou à des délais d’indisponibilité prévus par les textes visés.\n\nLa location doit être prévue par les statuts et consentie au profit d’une **personne physique**. Certaines actions sont toutefois exclues, notamment celles détenues dans le cadre d’un régime d’exonération fiscale ou inscrites à l’actif de certains fonds ou sociétés d’investissement.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L239-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 198.75082099996507,
+      "vectorSearchMs": 603.6898070001043,
+      "jinaRerankingMs": 548.72843700042,
+      "mappingMs": 0.03304699994623661,
+      "totalMs": 1351.2291319998913,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011473000049591064,
+      "contextBuilderMs": 0.013401999603956938,
+      "generationMs": 1923.9306399999186,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3275.2035610000603
+    },
+    "judge": {
+      "questionId": "q190",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les actions de sociétés par actions pouvant être données à bail et expose fidèlement leurs conditions spécifiques (nominatives, non cotées sur marché réglementé, non inscrites auprès d'un dépositaire central et non soumises à certaines obligations de conservation ou indisponibilités). Elle mentionne aussi correctement la possibilité statutaire, le bénéficiaire personne physique et les exclusions. Elle omet toutefois de dire explicitement que les parts sociales de SARL soumises à l'impôt sur les sociétés peuvent également être données à bail, élément central de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 239-1 et est donc parfaitement pertinente. Elle étaye toutes les affirmations de la réponse générée : conditions propres aux actions louables (titres nominatifs, non négociables sur marché réglementé, non inscrits aux opérations d’un dépositaire central et non soumis aux obligations ou délais visés), exigence statutaire, location au profit d’une personne physique et principales exclusions fiscales ou tenant à certains véhicules d’investissement. La source 1 est accessoire mais cohérente avec le sujet."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 239-1 du code de commerce, peuvent être données à bail :\n\n- les actions de sociétés par actions ;\n- sous certaines conditions, les parts sociales de SARL soumises à l’impôt sur les sociétés, de plein droit ou sur option.\n\nLa location d’actions ne peut concerner que des titres :\n\n- nominatifs ;\n- non négociables sur un marché réglementé ;\n- non inscrits aux opérations d’un dépositaire central ;\n- non soumis à une obligation de conservation ou à des délais d’indisponibilité prévus par la loi.\n\nSont notamment exclus les titres détenus dans certains cadres fiscaux ou d’investissement prévus aux 1° à 3° de l’article L. 239-1.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R239-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L239-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1113.8594969999976,
+      "routingCalls": 1,
+      "embeddingMs": 179.73636600002646,
+      "vectorSearchMs": 165.5123369996436,
+      "jinaRerankingMs": 574.3555039996281,
+      "mappingMs": 0.03030400024726987,
+      "totalMs": 2033.5255689998157,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010159000288695097,
+      "contextBuilderMs": 0.019896000158041716,
+      "generationMs": 1862.6685079997405,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3896.231654000003
+    },
+    "judge": {
+      "questionId": "q190",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les actions de sociétés par actions et les parts sociales de SARL soumises à l’impôt sur les sociétés, et précise les principales conditions et exclusions prévues par l’article L. 239-1. Toutes les affirmations sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 239-1 et couvre l’ensemble des affirmations importantes : catégories de titres pouvant être donnés à bail, condition relative à l’impôt sur les sociétés, exigences propres aux actions louables et exclusions énumérées aux 1° à 3°. La source 1 est périphérique, mais n’altère pas la pertinence ni la couverture globale."
+    }
+  },
+  "failureStage": "none"
+}

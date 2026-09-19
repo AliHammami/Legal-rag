@@ -1,0 +1,103 @@
+{
+  "questionId": "q479",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les règles applicables aux permis de construire en zone N (zone naturelle et forestière).\n\nIl indique seulement que :\n\n- certaines demandes de permis de construire relatives à des projets commerciaux de 300 à 1 000 m² peuvent relever de la procédure prévue à l’article L. 752-4 ;\n- lorsqu’un projet nécessite un permis de construire, une nouvelle demande doit être déposée selon les articles R. 423-2 et suivants du code de l’urbanisme ;\n- des règles de distance peuvent s’appliquer aux vues et ouvertures entre propriétés voisines.\n\nIl n’est donc pas possible de déterminer, à partir du seul contexte, les règles spécifiques de constructibilité en zone N.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-43-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 153.5093830000842,
+      "vectorSearchMs": 628.4536620000144,
+      "jinaRerankingMs": 311.97288399992976,
+      "mappingMs": 0.027683000080287457,
+      "totalMs": 1093.9924190000165,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012635000050067902,
+      "contextBuilderMs": 0.022784999920986593,
+      "generationMs": 2076.5139960000524,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3170.5500850001117
+    },
+    "judge": {
+      "questionId": "q479",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas de déterminer les règles spécifiques de constructibilité en zone N. Les éléments secondaires qu’elle cite sont fidèlement tirés des trois sources fournies et sont clairement présentés comme insuffisants pour répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne traitent pas des règles spécifiques de constructibilité en zone N, mais elles sont pertinentes pour justifier l’abstention : elles portent uniquement sur une procédure commerciale particulière, le dépôt d’une nouvelle demande de permis dans ce cadre et les vues entre voisins. Elles permettent donc de constater que le contexte ne fournit pas les règles demandées. Les trois éléments factuels mentionnés dans la réponse sont couverts par les sources correspondantes, et la conclusion d’insuffisance du contexte est supportée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les règles applicables au permis de construire en zone N.\n\nIl traite uniquement :\n- de certaines demandes de permis concernant des magasins ou ensembles commerciaux (article R. 752-21) ;\n- des vues sur la propriété voisine (article 678) ;\n- de la transmission d’une nouvelle demande à la Commission nationale d’aménagement commercial (article R. 752-43-3).\n\nAucune règle spécifique aux constructions en zone N n’est mentionnée.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-43-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1002.5892519999761,
+      "routingCalls": 1,
+      "embeddingMs": 159.5311399999773,
+      "vectorSearchMs": 574.8466659999685,
+      "jinaRerankingMs": 332.94952700007707,
+      "mappingMs": 0.025125999934971333,
+      "totalMs": 2069.9777569998987,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010270999977365136,
+      "contextBuilderMs": 0.014271999942138791,
+      "generationMs": 1615.558727000025,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3685.570764999953
+    },
+    "judge": {
+      "questionId": "q479",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse abstient correctement : le contexte ne contient aucune règle relative aux permis de construire en zone N. Les trois sources citées concernent respectivement l’aménagement commercial, les vues sur le fonds voisin et la transmission d’une demande à la CNAC, sans traiter de la zone N."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont hors du champ des règles de permis de construire en zone N, mais elles sont pertinentes pour justifier l’abstention : elles portent respectivement sur une procédure liée à des projets commerciaux, les vues sur la propriété voisine et la transmission d’une demande à la CNAC. Elles couvrent les constats de la réponse selon lesquels le contexte ne contient aucune règle spécifique à la zone N."
+    }
+  },
+  "failureStage": "none"
+}

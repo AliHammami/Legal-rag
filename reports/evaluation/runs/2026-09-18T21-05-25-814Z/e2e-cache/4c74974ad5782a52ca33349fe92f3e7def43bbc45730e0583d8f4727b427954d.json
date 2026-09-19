@@ -1,0 +1,91 @@
+{
+  "questionId": "q280",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 464-2, sont punis les membres des organes d’administration, de direction et de surveillance, ainsi que les dirigeants, salariés et préposés des entreprises de marché, qui violent le secret professionnel institué à l’article L. 421-8. Ils encourent les peines prévues à l’article 226-13 du Code pénal, sous réserve de l’article 226-14.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L464-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L464-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.66347599960864,
+      "vectorSearchMs": 617.8954290002584,
+      "jinaRerankingMs": 261.4595969999209,
+      "mappingMs": 0.041814000345766544,
+      "totalMs": 1102.127119999379,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017649000510573387,
+      "contextBuilderMs": 0.0726270005106926,
+      "generationMs": 1457.900446999818,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2560.1289500007406
+    },
+    "judge": {
+      "questionId": "q280",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les catégories de personnes visées par l’article L. 464-2, la violation concernée, ainsi que le renvoi aux peines de l’article 226-13 et la réserve de l’article 226-14. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 464-2 et énumère explicitement les membres des organes d’administration, de direction et de surveillance, les dirigeants, salariés et préposés des entreprises de marché visés, ainsi que le renvoi aux articles 226-13 et 226-14 du code pénal. Elle couvre donc toutes les affirmations importantes de la réponse générée. La source 2 est non nécessaire mais ne nuit pas à l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de répondre précisément à la question concernant l’article L. 421-8 et l’article L. 464-2.\n\nIl indique seulement que la divulgation d’informations confidentielles par l’une des parties est punie des peines prévues à l’article 226-13 du Code pénal, et que le secret professionnel s’impose aux membres du collège et aux agents de l’Autorité de la concurrence.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L463-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 7195.002591999248,
+      "routingCalls": 1,
+      "embeddingMs": 193.4542950000614,
+      "vectorSearchMs": 235.7281170003116,
+      "jinaRerankingMs": 257.4687980003655,
+      "mappingMs": 0.03392900060862303,
+      "totalMs": 7881.717732999474,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010197999887168407,
+      "contextBuilderMs": 0.008275999687612057,
+      "generationMs": 2151.322274000384,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 10033.065462999977
+    },
+    "judge": {
+      "questionId": "q280",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question : elle n'identifie pas les personnes punies au titre de l'article L. 464-2, alors que la référence vise les membres des organes d'administration, de direction et de surveillance, dirigeants, salariés et préposés des entreprises de marché. Elle constitue donc une abstention alors qu'une réponse était attendue. Ses affirmations sur le contenu du contexte fourni (article L. 463-6, divulgation punie selon l'article 226-13 et secret applicable aux membres du collège et agents de l'Autorité) sont fidèlement supportées par ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source porte sur l'article L. 463-6, et non sur les articles L. 421-8 et L. 464-2 demandés. Elle est donc insuffisante pour identifier les personnes punies et n'est que marginalement pertinente, en ce qu'elle concerne aussi le secret professionnel. En revanche, elle couvre les constats effectivement formulés par la réponse générée : divulgation punie par renvoi à l'article 226-13 et secret professionnel applicable aux membres du collège et aux agents de l'Autorité de la concurrence."
+    }
+  },
+  "failureStage": "generation"
+}

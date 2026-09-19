@@ -1,0 +1,87 @@
+{
+  "questionId": "q180",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L225-1 du Code de commerce, une société anonyme :\n\n- a un capital divisé en actions ;\n- est constituée entre deux associés ou plus ;\n- comprend des associés dont la responsabilité est limitée au montant de leurs apports, puisqu’ils ne supportent les pertes qu’à concurrence de ceux-ci.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.89265199983492,
+      "vectorSearchMs": 635.5538820000365,
+      "jinaRerankingMs": 531.0607580002397,
+      "mappingMs": 0.05510300025343895,
+      "totalMs": 1373.598476999905,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014828000217676163,
+      "contextBuilderMs": 0.011285000015050173,
+      "generationMs": 1383.9452019999735,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2757.5774929998443
+    },
+    "judge": {
+      "questionId": "q180",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois caractéristiques prévues par l’article L225-1 : capital divisé en actions, constitution entre deux associés ou plus, et limitation de la contribution aux pertes au montant des apports. Ces éléments sont tous explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L225-1 du Code de commerce et énonce expressément les trois caractéristiques demandées : capital divisé en actions, constitution entre deux associés ou plus, et pertes supportées à concurrence des apports. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L225-1 du Code de commerce, une société anonyme :\n\n- a un capital divisé en actions ;\n- est constituée entre deux associés ou plus ;\n- prévoit que les associés ne supportent les pertes qu’à concurrence de leurs apports.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 699.3913259999827,
+      "routingCalls": 1,
+      "embeddingMs": 223.77454400015995,
+      "vectorSearchMs": 167.77683700015768,
+      "jinaRerankingMs": 521.4880249998532,
+      "mappingMs": 0.036580999847501516,
+      "totalMs": 1612.4927520002238,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010256000328809023,
+      "contextBuilderMs": 0.010937999933958054,
+      "generationMs": 1050.3111450001597,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2662.8325579999946
+    },
+    "judge": {
+      "questionId": "q180",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois caractéristiques énoncées par l’article L225-1 et par la référence : capital divisé en actions, au moins deux associés, et responsabilité des pertes limitée aux apports. Toutes les affirmations sont explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L225-1 et énonce explicitement les trois caractéristiques demandées et reprises dans la réponse générée : capital divisé en actions, constitution entre deux associés ou plus, et pertes supportées à concurrence des apports."
+    }
+  },
+  "failureStage": "none"
+}

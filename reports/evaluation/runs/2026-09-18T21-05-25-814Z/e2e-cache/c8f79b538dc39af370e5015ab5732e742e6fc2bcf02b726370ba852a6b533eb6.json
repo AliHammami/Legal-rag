@@ -1,0 +1,103 @@
+{
+  "questionId": "q431",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui. D’après le contexte, une entreprise peut être tenue responsable des actes de ses représentants :\n\n- l’employeur est civilement responsable des condamnations prononcées contre ses directeurs, gérants ou délégataires ;\n- l’entrepreneur répond des actes des personnes qu’il emploie ;\n- lorsque le représentant agit dans les limites de ses pouvoirs, au nom et pour le compte de l’entreprise, celle-ci est seule tenue de l’engagement contracté.\n\nEn revanche, si le représentant agit pour le compte de l’entreprise mais contracte en son propre nom, il est seul engagé envers le cocontractant. Les personnes exerçant de fait la direction ou la gestion peuvent, quant à elles, être soumises aux mêmes obligations et sanctions que les représentants légaux.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4741-7"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-100"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1797"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1154"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 804.1354440003633,
+      "vectorSearchMs": 688.9775189999491,
+      "jinaRerankingMs": 241.30573000013828,
+      "mappingMs": 0.03823599964380264,
+      "totalMs": 1734.4988649999723,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018955999985337257,
+      "contextBuilderMs": 0.030347999185323715,
+      "generationMs": 2136.81298100017,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3871.3753339992836
+    },
+    "judge": {
+      "questionId": "q431",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse formule une réponse nuancée et ses affirmations sont fidèlement étayées par les extraits fournis, notamment en matière de responsabilité civile, de mandat et d'actes des préposés. Toutefois, la question est générale et le contexte ne permet pas de répondre de façon fiable à une éventuelle responsabilité de l'entreprise dans tous les régimes, notamment pénal. Une abstention était attendue ; le modèle répond néanmoins de manière affirmative."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les extraits sont directement pertinents pour certains régimes précis : responsabilité civile de l’employeur, faits des personnes employées, représentation contractuelle et dirigeants de fait. Ils ne permettent toutefois pas de répondre de manière générale à la question, notamment quant à une éventuelle responsabilité pénale de l’entreprise ou aux conditions générales de responsabilité des personnes morales ; ils étaient donc insuffisants pour lever l’abstention attendue. En revanche, toutes les affirmations concrètes de la réponse générée sont fidèlement couvertes par les quatre extraits cités."
+    }
+  },
+  "routing": {
+    "answer": "Oui. D’après l’article 1797, l’entrepreneur répond du fait des personnes qu’il emploie.\n\nEn outre, selon l’article 1154, lorsque le représentant agit dans la limite de ses pouvoirs, au nom et pour le compte de l’entreprise représentée, celle-ci est seule tenue de l’engagement contracté. En revanche, s’il agit pour autrui mais contracte en son propre nom, il est seul engagé envers le cocontractant.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1797"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1154"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1746.4278370002285,
+      "routingCalls": 1,
+      "embeddingMs": 211.12946799956262,
+      "vectorSearchMs": 121.18909200001508,
+      "jinaRerankingMs": 260.0865869997069,
+      "mappingMs": 0.021359000355005264,
+      "totalMs": 2338.910287000239,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012528999708592892,
+      "contextBuilderMs": 0.018643999472260475,
+      "generationMs": 1423.3632730003446,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3762.317402999848
+    },
+    "judge": {
+      "questionId": "q431",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse apporte des règles de représentation contractuelle et de responsabilité de l’entrepreneur envers ses employés, mais elle répond de manière trop générale à une question qui, dans le cadre annoncé du Code pénal, ne pouvait pas être tranchée de façon fiable avec ce seul contexte. Les affirmations formulées sont néanmoins fidèlement supportées par les deux extraits fournis. Comme une abstention était attendue, le fait de répondre affirmativement rend l’abstention incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les règles civiles qu’invoque la réponse : responsabilité de l’entrepreneur du fait de ses employés (art. 1797) et effets de la représentation contractuelle (art. 1154). Elles ne sont toutefois que partiellement pertinentes pour la question générale, formulée dans le cadre d’un système portant sur le Code pénal, et ne permettent pas de trancher une éventuelle responsabilité pénale de l’entreprise. Toutes les affirmations substantielles de la réponse générée sont néanmoins explicitement couvertes par les extraits fournis."
+    }
+  },
+  "failureStage": "abstention"
+}

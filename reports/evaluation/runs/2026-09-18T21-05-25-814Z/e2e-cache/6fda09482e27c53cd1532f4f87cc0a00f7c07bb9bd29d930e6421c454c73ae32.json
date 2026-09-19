@@ -1,0 +1,111 @@
+{
+  "questionId": "q427",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les délais dépendent de la nature de l’action :\n\n- **Contrat de travail** :\n  - action relative à l’exécution du contrat : **2 ans** à compter du jour où le titulaire connaît ou aurait dû connaître les faits ;\n  - action relative à la rupture : **12 mois** à compter de la notification de la rupture ;\n  - exceptions : notamment les actions en paiement ou répétition du salaire, les actions fondées sur les discriminations ou le harcèlement, ainsi que les actions soumises à des délais spéciaux.\n\n- **Contrat de transport** :\n  - actions pour avaries, pertes ou retards : **1 an** ;\n  - autres actions liées au contrat de transport : **1 an** ;\n  - action récursoire : **1 mois** à compter de l’exercice de l’action contre le garanti ;\n  - pour un transport effectué pour l’État, le délai court à compter de la notification de la décision ministérielle définitive.\n\n- **Mineurs et majeurs protégés** :\n  - à l’égard d’un mineur : le délai court à sa majorité ou à son émancipation ;\n  - à l’égard d’un majeur protégé : il court à compter du moment où il a connaissance de l’acte alors qu’il est en mesure de le refaire valablement ;\n  - pour les héritiers, il court à compter du décès lorsque la prescription n’avait pas déjà commencé.\n\n- **Médiation, conciliation ou procédure participative** :\n  - la prescription est suspendue pendant la procédure ;\n  - elle recommence ensuite pour une durée qui ne peut être inférieure à **6 mois**.\n\nLe contexte ne permet pas de déterminer un délai unique sans connaître la nature précise de l’action concernée.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1471-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L133-6"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1152"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2238"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 176.91941899992526,
+      "vectorSearchMs": 693.6450009997934,
+      "jinaRerankingMs": 294.64491599984467,
+      "mappingMs": 0.03185399994254112,
+      "totalMs": 1165.275515999645,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015684000216424465,
+      "contextBuilderMs": 0.06711999978870153,
+      "generationMs": 3495.8258159998804,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4661.218101000413
+    },
+    "judge": {
+      "questionId": "q427",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les délais et règles de point de départ présents dans le contexte, tout en précisant qu’aucun délai unique ne peut être déterminé sans identifier la nature de l’action. Elle omet toutefois certaines précisions des sources, notamment l’exception relative au dommage corporel en droit du travail et certains points de départ détaillés en matière de transport. Toutes les affirmations importantes sont néanmoins appuyées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les différents régimes effectivement évoqués (contrat de travail, transport, actes de mineurs ou majeurs protégés, suspension par médiation/conciliation/procédure participative). Elles permettent aussi de justifier qu’aucun délai unique ne peut être donné sans identifier l’action concernée, puisqu’elles illustrent plusieurs délais et points de départ distincts. Elles ne couvrent toutefois pas de façon générale l’ensemble des prescriptions potentiellement applicables à une question aussi indéterminée. Les affirmations importantes de la réponse générée sont néanmoins toutes appuyées par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Les délais de prescription dépendent de la nature de l’action :\n\n- **Contrat de travail** :\n  - exécution du contrat : **2 ans** à compter du jour où le titulaire a connu ou aurait dû connaître les faits ;\n  - rupture du contrat : **12 mois** à compter de la notification de la rupture ;\n  - paiement ou répétition du salaire : le délai prévu par les dispositions applicables n’est pas précisé dans le contexte ;\n  - dommages corporels liés au travail et actions fondées sur les articles L. 1132-1, L. 1152-1 et L. 1153-1 : les délais de deux ans et douze mois ne s’appliquent pas.\n\n- **Contrat de transport** :\n  - actions pour avaries, pertes ou retards : **1 an** ;\n  - autres actions relatives au contrat de transport : **1 an** ;\n  - actions récursoires : **1 mois**, à compter de l’exercice de l’action contre le garanti.\n\n- **Suspension par médiation ou conciliation** :\n  - la prescription est suspendue pendant la procédure ;\n  - elle recommence ensuite à courir pour une durée qui ne peut être inférieure à **6 mois**.\n\n- **Mineur ou majeur protégé** :\n  - pour un mineur, le délai court à compter de la majorité ou de l’émancipation ;\n  - pour un majeur protégé, à compter du moment où il a connaissance de l’acte alors qu’il peut valablement agir.\n\nLe contexte ne permet pas de déterminer un délai unique sans connaître la nature précise de l’action concernée.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1471-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L133-6"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1152"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2238"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.513568000868,
+      "routingCalls": 1,
+      "embeddingMs": 194.49727599974722,
+      "vectorSearchMs": 671.6749080000445,
+      "jinaRerankingMs": 272.63724200055003,
+      "mappingMs": 0.02429400011897087,
+      "totalMs": 2060.405495000072,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01000600028783083,
+      "contextBuilderMs": 0.02152199950069189,
+      "generationMs": 3367.334630999714,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5427.779249000363
+    },
+    "judge": {
+      "questionId": "q427",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les principaux délais figurant dans le contexte et indique à juste titre qu’aucun délai unique ne peut être donné sans préciser l’action concernée. Elle omet toutefois certains éléments contextuels de computation et d’exception (notamment les points de départ détaillés en matière de transport, le cas des transports pour l’État et celui des héritiers). Elle est bien fondée sur le contexte fourni. Toutefois, l’abstention était attendue : la question, non contextualisée et relevant du périmètre pénal annoncé, ne permettait pas de répondre de façon fiable par une liste de régimes civils et sociaux hétérogènes."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont pertinentes pour certains régimes très spécifiques de prescription (contrat de travail, transport, médiation/conciliation et actes concernant mineurs ou majeurs protégés), mais elles ne permettent pas de répondre de manière générale à une question non contextualisée sur les délais applicables. Elles montrent au contraire que les délais varient selon l’action concernée, sans fournir de régime unique. Les affirmations substantielles de la réponse générée sont presque toutes directement étayées par les extraits : délais de deux ans et douze mois en droit du travail, exceptions, délais d’un an et d’un mois en transport, suspension et délai minimal de six mois, ainsi que les règles citées pour mineur et majeur protégé."
+    }
+  },
+  "failureStage": "abstention"
+}

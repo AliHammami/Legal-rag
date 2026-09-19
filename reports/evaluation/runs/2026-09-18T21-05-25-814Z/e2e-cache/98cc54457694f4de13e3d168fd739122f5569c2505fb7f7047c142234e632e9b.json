@@ -1,0 +1,99 @@
+{
+  "questionId": "q365",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’altération ou de faux dans un acte de l’état civil, les parties peuvent demander des **dommages-intérêts**. Ces recours s’exercent **sans préjudice des peines prévues par le Code pénal**.\n\nConcernant les protêts, les notaires et les huissiers doivent :\n\n- **laisser une copie exacte** du protêt ;\n- transmettre les copies requises au greffier du tribunal compétent, soit **contre récépissé**, soit par **lettre recommandée avec accusé de réception** ;\n- accomplir cette formalité **dans les quinze jours de l’acte**.\n\nSelon les textes cités, le nombre de copies varie : deux copies pour certains protêts, dont une destinée au parquet, et, selon l’article R. 511-2, deux copies pour les lettres de change acceptées ou billets à ordre et trois copies pour les chèques. Le non-respect de ces obligations peut entraîner la **destitution**, les **dépens** et des **dommages-intérêts envers les parties**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-64"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-55"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "52"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R511-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.26966099999845,
+      "vectorSearchMs": 993.0219299998134,
+      "jinaRerankingMs": 282.34084099996835,
+      "mappingMs": 0.02712199930101633,
+      "totalMs": 1470.7043899996206,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012740999460220337,
+      "contextBuilderMs": 0.025790000334382057,
+      "generationMs": 3360.4099709996954,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4831.167364999652
+    },
+    "judge": {
+      "questionId": "q365",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement le droit à dommages-intérêts sans préjudice des peines pénales en cas d’altération ou de faux d’un acte d’état civil. Elle décrit également les obligations de copie et de transmission des protêts, le délai de quinze jours et les sanctions encourues. Les précisions sur les modalités et le nombre de copies sont soutenues par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l'article 52 couvre les dommages-intérêts et le maintien des peines pénales en cas d'altération ou de faux d'état civil ; les articles L131-64, L511-55 et R511-2 couvrent les obligations de conservation et de remise ou d'envoi des copies de protêts, les destinataires, les délais, les modalités, le nombre de copies selon les cas et les sanctions. Elles soutiennent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne précise pas les recours possibles en cas d’altération d’un acte de l’état civil. Il ne permet donc pas de répondre sur ce point.\n\nConcernant les protêts, les notaires doivent :\n\n- en laisser une copie exacte ;\n- remettre contre récépissé au greffier compétent, ou lui adresser par lettre recommandée avec accusé de réception, une copie exacte des protêts faute de paiement des traites acceptées et des billets à ordre ;\n- accomplir cette formalité dans la quinzaine de l’acte.\n\nLe non-respect de ces obligations peut entraîner la destitution, ainsi que des dépens et des dommages-intérêts envers les parties.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-55"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1381.1363409999758,
+      "routingCalls": 1,
+      "embeddingMs": 291.50770700071007,
+      "vectorSearchMs": 570.9179090000689,
+      "jinaRerankingMs": 295.8844460006803,
+      "mappingMs": 0.02501599956303835,
+      "totalMs": 2539.504319999367,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010077999904751778,
+      "contextBuilderMs": 0.008655999787151814,
+      "generationMs": 1862.5228669997305,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.052612999454
+    },
+    "judge": {
+      "questionId": "q365",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les obligations des notaires relatives aux protêts, y compris les sanctions et le délai de quinzaine. En revanche, elle ne fournit pas le recours essentiel relatif à l’altération d’un acte d’état civil (dommages-intérêts sans préjudice des peines pénales), ce qui la rend partielle au regard de la question. Son abstention sur ce premier point est justifiée par l’absence de ce sujet dans le contexte, tandis que les affirmations sur les protêts sont entièrement étayées par celui-ci."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour les obligations des notaires relatives aux protêts (copie exacte, dépôt ou envoi au greffier, délai de quinzaine et sanctions). Elle ne traite toutefois pas des recours en cas d’altération d’un acte d’état civil, de sorte qu’elle ne permet pas de répondre entièrement à la question. Elle permet en revanche d’étayer le constat d’abstention de la réponse sur ce point, puisque ce sujet n’y figure pas. Toutes les affirmations positives formulées sur les protêts sont couvertes par la source."
+    }
+  },
+  "failureStage": "generation"
+}

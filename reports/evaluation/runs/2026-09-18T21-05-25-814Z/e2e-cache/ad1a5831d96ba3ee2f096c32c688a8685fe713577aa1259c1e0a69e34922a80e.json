@@ -1,0 +1,103 @@
+{
+  "questionId": "q490",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les conditions générales de délivrance d’un permis de conduire.\n\nIl indique seulement que, pour bénéficier du financement CPF d’une préparation au permis, le titulaire :\n\n- ne doit pas faire l’objet d’une suspension de permis ni d’une interdiction de solliciter un permis ;\n- ne doit pas disposer d’un permis en cours de validité sur le territoire national, pour certains permis du groupe léger autres que le permis BE.\n\nCes éléments concernent l’éligibilité au financement, et non les conditions générales de délivrance du permis.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6323-8"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R712-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6323-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.37390600005165,
+      "vectorSearchMs": 609.3088299999945,
+      "jinaRerankingMs": 286.0699950000271,
+      "mappingMs": 0.02796700003091246,
+      "totalMs": 1088.8142520000692,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010630999924615026,
+      "contextBuilderMs": 0.020477000041864812,
+      "generationMs": 1833.380557000055,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2922.2850669999607
+    },
+    "judge": {
+      "questionId": "q490",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le contexte ne permet pas de répondre aux conditions générales de délivrance du permis. Elle distingue précisément les seules conditions documentées, qui concernent l’éligibilité au financement CPF d’une préparation au permis, et non sa délivrance. Toutes les précisions données sont étayées par l’article D6323-8 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source D. 6323-8 est pertinente pour justifier l’abstention : elle traite explicitement des conditions d’éligibilité au financement CPF de la préparation au permis, non des conditions générales de délivrance du permis. Elle couvre les deux conditions citées (absence de suspension ou d’interdiction de solliciter un permis, et absence de permis valide pour certains permis du groupe léger hors BE) ainsi que la distinction opérée par la réponse. Les autres sources ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne précise pas les conditions générales de délivrance d’un permis de conduire.\n\nIl indique seulement, pour bénéficier du financement CPF d’une préparation au permis, que :\n\n- l’obtention du permis doit contribuer à un projet professionnel ou à la sécurisation du parcours professionnel ;\n- le titulaire ne doit pas faire l’objet d’une suspension de permis ni d’une interdiction de solliciter un permis ;\n- pour certains permis du groupe léger, il ne doit pas déjà disposer d’un permis valide en France ;\n- la formation doit être dispensée par un établissement agréé, déclaré et certifié.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6323-8"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R712-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6323-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 892.8951930000912,
+      "routingCalls": 1,
+      "embeddingMs": 197.90432099997997,
+      "vectorSearchMs": 565.1285800000187,
+      "jinaRerankingMs": 293.5009469999932,
+      "mappingMs": 0.03409299999475479,
+      "totalMs": 1949.490278000012,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011770999990403652,
+      "contextBuilderMs": 0.021524999989196658,
+      "generationMs": 2315.169491000008,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4264.700613999972
+    },
+    "judge": {
+      "questionId": "q490",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique clairement que le contexte ne permet pas de déterminer les conditions générales de délivrance d’un permis de conduire. Elle distingue à juste titre les seules conditions relatives au financement CPF de la préparation au permis et les restitue fidèlement à partir du contexte, sans les présenter comme des conditions générales de délivrance."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources D6323-8 sont directement pertinentes pour justifier l’abstention sur les conditions générales de délivrance : elles portent uniquement sur l’éligibilité et le financement CPF de la préparation au permis, non sur la délivrance générale du permis. Elles couvrent l’ensemble des conditions CPF énoncées dans la réponse (projet professionnel, absence de suspension ou d’interdiction, absence de permis valide pour certains permis du groupe léger, et exigences applicables à l’établissement de formation)."
+    }
+  },
+  "failureStage": "none"
+}

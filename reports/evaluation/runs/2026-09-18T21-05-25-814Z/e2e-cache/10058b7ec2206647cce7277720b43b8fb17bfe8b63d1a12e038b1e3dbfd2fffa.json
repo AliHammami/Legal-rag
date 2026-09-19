@@ -1,0 +1,103 @@
+{
+  "questionId": "q159",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L2231-1, une convention ou un accord est conclu entre :\n\n- une ou plusieurs organisations syndicales de salariés représentatives dans son champ d’application ;\n- et une ou plusieurs organisations syndicales d’employeurs, une autre association d’employeurs, ou un ou plusieurs employeurs pris individuellement.\n\nLes associations d’employeurs constituées conformément à la loi du 1er juillet 1901 et compétentes pour négocier sont assimilées aux organisations syndicales pour les attributions prévues par le titre concerné.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-7-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.60576299997047,
+      "vectorSearchMs": 608.9135710000992,
+      "jinaRerankingMs": 573.0348470001481,
+      "mappingMs": 0.035087999887764454,
+      "totalMs": 1377.6200109999627,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013558000326156616,
+      "contextBuilderMs": 0.018788999877870083,
+      "generationMs": 1632.849305999931,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3010.511562000029
+    },
+    "judge": {
+      "questionId": "q159",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les deux parties habilitées à conclure une convention ou un accord selon l'article L2231-1 et mentionne correctement le régime d'assimilation des associations d'employeurs constituées sous la loi de 1901. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 2231-1 et répond intégralement à la question : organisations syndicales de salariés représentatives d'une part, et organisations syndicales ou autres associations d'employeurs, ou employeurs individuels d'autre part. Elle couvre aussi explicitement l'assimilation des associations d'employeurs régies par la loi du 1er juillet 1901. La source 1 est connexe sur l'habilitation des représentants à contracter, tandis que la source 3 n'est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L2231-1, une convention ou un accord est conclu entre :\n\n- **une ou plusieurs organisations syndicales de salariés représentatives** dans son champ d’application ;\n- et **une ou plusieurs organisations syndicales d’employeurs**, **toute autre association d’employeurs**, ou **un ou plusieurs employeurs pris individuellement**.\n\nLes associations d’employeurs constituées conformément à la loi du 1er juillet 1901 et compétentes pour négocier sont assimilées aux organisations syndicales pour les attributions prévues par le titre concerné.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-7-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 816.9275059998035,
+      "routingCalls": 1,
+      "embeddingMs": 169.46012900024652,
+      "vectorSearchMs": 238.01704300008714,
+      "jinaRerankingMs": 490.03037100005895,
+      "mappingMs": 0.03364499984309077,
+      "totalMs": 1714.5079179997556,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01132400007918477,
+      "contextBuilderMs": 0.01687399996444583,
+      "generationMs": 1664.160155000165,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3378.7043620003387
+    },
+    "judge": {
+      "questionId": "q159",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux catégories de parties prévues par l’article L2231-1 et mentionne correctement le régime d’assimilation des associations d’employeurs régies par la loi de 1901 compétentes pour négocier. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 2231-1 et couvre l'ensemble des catégories de parties habilitées à conclure une convention ou un accord, ainsi que l'assimilation des associations d'employeurs régies par la loi de 1901 compétentes pour négocier. La source 1 est complémentaire sur l'habilitation des représentants à contracter, mais n'est pas nécessaire à la réponse ; la source 3 est hors du champ précis de la question."
+    }
+  },
+  "failureStage": "none"
+}

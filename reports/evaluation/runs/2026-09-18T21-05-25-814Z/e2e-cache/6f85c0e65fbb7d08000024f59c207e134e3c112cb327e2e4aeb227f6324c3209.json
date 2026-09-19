@@ -1,0 +1,111 @@
+{
+  "questionId": "q385",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les deux séries de règles portent sur des obligations distinctes :\n\n- **Les fournisseurs de places de marché en ligne** doivent fournir une information loyale, claire et transparente sur leurs conditions générales d’utilisation, les modalités et principaux paramètres de classement, ainsi que, le cas échéant, les relations ou rémunérations influençant ce classement (articles L. 111-7 et D. 111-8).\n- **Les restrictions du code du travail** interdisent, les jours où l’emploi de salariés est interdit dans les exploitations commerciales, d’exploiter également une activité industrielle, commerciale ou artisanale dans les lieux de vente ouverts au public, y compris pour certaines coopératives et associations (article L. 3134-11).\n\nLe contexte ne prévoit aucune articulation spécifique entre ces obligations. Le respect des obligations d’information relatives à une place de marché en ligne ne dispense donc pas du respect des interdictions concernant l’emploi des salariés et l’exploitation des lieux de vente les jours concernés. Inversement, ces restrictions ne suppriment pas les obligations de transparence pesant sur la plateforme.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3134-11"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L133-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 155.1737470002845,
+      "vectorSearchMs": 856.1848419997841,
+      "jinaRerankingMs": 336.1923009995371,
+      "mappingMs": 0.037515999749302864,
+      "totalMs": 1347.6225950000808,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020253999158740044,
+      "contextBuilderMs": 0.15289799962192774,
+      "generationMs": 2947.684488000348,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4295.492452999577
+    },
+    "judge": {
+      "questionId": "q385",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les obligations de transparence des places de marché (conditions d’utilisation, paramètres de classement et liens ou rémunérations influents) et les interdictions d’exploitation dans les lieux de vente au public lorsque l’emploi de salariés est prohibé. Elle explique de façon juste qu’aucune dérogation ou articulation spéciale n’est prévue par les extraits : les deux régimes se cumulent. Les affirmations importantes sont directement étayées par les articles L. 111-7, D. 111-8 et L. 3134-11 fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources L. 111-7 et D. 111-8 couvrent directement les obligations d’information des places de marché, notamment les conditions d’utilisation, les paramètres de classement et les éléments susceptibles de l’influencer. La source L. 3134-11 couvre directement l’interdiction d’exploitation dans les lieux de vente au public lorsque l’emploi de salariés est prohibé au titre des articles L. 3134-4 à L. 3134-9. Elles permettent donc de distinguer les deux régimes et d’étayer leur application cumulative, sans qu’une dérogation réciproque soit indiquée dans les extraits."
+    }
+  },
+  "routing": {
+    "answer": "Ces obligations relèvent de deux régimes distincts :\n\n- **Information des consommateurs** : l’article L. 111-7 impose aux fournisseurs de places de marché en ligne une information loyale, claire et transparente sur les conditions d’utilisation, les modalités et principaux paramètres de classement, ainsi que sur certains liens contractuels ou rémunérations influençant ce classement. L’article D. 111-8 précise notamment que ces informations doivent être accessibles directement depuis toutes les pages du site.\n- **Emploi les jours fériés** : l’article L. 3134-11 interdit, lorsque l’emploi de salariés est lui-même interdit en application des articles L. 3134-4 à L. 3134-9, de procéder durant ces jours à une exploitation industrielle, commerciale ou artisanale dans les lieux de vente au public. Cette règle s’étend aux activités commerciales des coopératives et associations de consommation.\n\nLe contexte ne prévoit **aucune articulation spécifique** entre ces obligations d’information en ligne et ces restrictions du code du travail. Le respect des obligations de transparence relatives au classement ou aux conditions d’utilisation ne dispense donc pas, d’après les textes fournis, du respect des interdictions concernant l’exploitation commerciale les jours concernés. Inversement, ces interdictions ne semblent pas supprimer les obligations d’information applicables à la place de marché en ligne.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3134-11"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L133-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1255.1941539999098,
+      "routingCalls": 1,
+      "embeddingMs": 209.34617799986154,
+      "vectorSearchMs": 465.7345869997516,
+      "jinaRerankingMs": 331.1951999999583,
+      "mappingMs": 0.03777500055730343,
+      "totalMs": 2261.534742999822,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012751000002026558,
+      "contextBuilderMs": 0.02902300003916025,
+      "generationMs": 3383.9809639994055,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5645.566241999157
+    },
+    "judge": {
+      "questionId": "q385",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les deux régimes et explique qu’aucune articulation spécifique n’est établie par les textes fournis. Elle restitue fidèlement les obligations d’information de l’article L. 111-7 et les précisions d’accessibilité de l’article D. 111-8, ainsi que l’interdiction d’exploitation dans les lieux de vente au public prévue par l’article L. 3134-11 lorsque l’emploi de salariés est interdit. La conclusion selon laquelle les obligations demeurent cumulatives est une inférence raisonnable et prudente à partir du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les deux régimes évoqués : L. 111-7 et D. 111-8 couvrent les obligations d’information et d’accessibilité des informations de classement, tandis que L. 3134-11 couvre l’interdiction d’exploitation dans les lieux de vente au public lorsque l’emploi de salariés est interdit. Les articles L. 3134-4 à L. 3134-9, auxquels L. 3134-11 renvoie, ne sont toutefois pas fournis : les conditions précises des interdictions d’emploi ne peuvent donc pas être établies en détail. Les affirmations importantes effectivement formulées dans la réponse sont néanmoins couvertes, y compris la conclusion prudente d’absence d’articulation spécifique dans les textes fournis."
+    }
+  },
+  "failureStage": "none"
+}

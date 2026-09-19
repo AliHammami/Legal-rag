@@ -1,0 +1,99 @@
+{
+  "questionId": "q157",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas l’article L2221-1. Il ne permet donc pas de déterminer l’objet principal du livre auquel cet article se rapporte.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 233.4992229999043,
+      "vectorSearchMs": 626.5025279996917,
+      "jinaRerankingMs": 473.79306800011545,
+      "mappingMs": 0.032048999797552824,
+      "totalMs": 1333.8543050000444,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010753999929875135,
+      "contextBuilderMs": 0.011919999960809946,
+      "generationMs": 1531.195313999895,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2865.08044099994
+    },
+    "judge": {
+      "questionId": "q157",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas l’objet principal demandé et s’abstient alors qu’une réponse était attendue. Son constat selon lequel le contexte ne contient pas l’article L2221-1 est exact et son refus est donc fondé sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les extraits portent sur les règles d’ordre public et la négociation collective, mais ils ne reproduisent pas l’article L2221-1 ni ne définissent l’objet du livre visé par cet article. Ils sont donc seulement partiellement pertinents pour la question directe. En revanche, ils permettent de constater que le contexte fourni ne contient que les articles L3111-3 et R3111-1, et non L2221-1 : l’abstention formulée et le constat d’impossibilité qui l’accompagne sont ainsi couverts."
+    }
+  },
+  "routing": {
+    "answer": "L’objet principal de ce livre est de déterminer les relations collectives entre employeurs et salariés. Il fixe notamment les règles d’exercice du droit des salariés à la négociation collective concernant leurs conditions d’emploi, de formation professionnelle et de travail, ainsi que leurs garanties sociales.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1339.518133000005,
+      "routingCalls": 1,
+      "embeddingMs": 178.1151219997555,
+      "vectorSearchMs": 319.8655050001107,
+      "jinaRerankingMs": 460.09693499980494,
+      "mappingMs": 0.029032999649643898,
+      "totalMs": 2297.6719999997877,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009604000020772219,
+      "contextBuilderMs": 0.015993000008165836,
+      "generationMs": 1067.2929920000024,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3364.9978019995615
+    },
+    "judge": {
+      "questionId": "q157",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’objet du livre et les éléments relatifs à la négociation collective (conditions d’emploi, formation professionnelle, travail et garanties sociales). Toutes les affirmations sont directement étayées par l’article L2221-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L2221-1) est directement pertinente : elle énonce précisément l'objet du livre et les règles relatives au droit à la négociation collective. Elle couvre l'ensemble des affirmations importantes de la réponse générée. Les sources 2 et 3 sont non nécessaires mais n'affectent pas cette couverture."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q123",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le salarié ne peut pas être contraint de quitter son logement :\n\n- avant l’expiration d’un délai minimum fixé par décret en Conseil d’État ;\n- ou sans le versement d’une indemnité.\n\nCette indemnité correspond au montant du loyer trimestriel d’un logement équivalent à celui qu’il occupe, augmenté de la valeur des avantages en nature qu’il perçoit.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.12140999990515,
+      "vectorSearchMs": 630.8701819998678,
+      "jinaRerankingMs": 515.9063299999107,
+      "mappingMs": 0.04329099995084107,
+      "totalMs": 1381.9819579999894,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013990000123158097,
+      "contextBuilderMs": 0.010876999935135245,
+      "generationMs": 1276.0619750001933,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2658.081361999968
+    },
+    "judge": {
+      "questionId": "q123",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux garanties prévues : maintien dans le logement jusqu’au délai minimal fixé par décret en Conseil d’État ou versement d’une indemnité, dont elle décrit correctement le montant. Toutes les affirmations sont directement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la règle applicable au salarié dont le contrat est rompu à l’initiative de l’employeur : maintien dans le logement jusqu’au délai réglementaire ou indemnité, ainsi que le mode de calcul de cette indemnité. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le salarié ne peut pas être obligé de quitter son logement immédiatement. Il bénéficie :\n\n- d’un délai minimum avant de devoir le libérer, délai fixé par décret en Conseil d’État ;\n- ou, à défaut, du paiement d’une indemnité.\n\nCette indemnité correspond au montant du loyer trimestriel d’un logement équivalent à celui qu’il occupe, augmenté de la valeur des avantages en nature qu’il perçoit.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1986.9894850000273,
+      "routingCalls": 1,
+      "embeddingMs": 420.4431329998188,
+      "vectorSearchMs": 276.83952199993655,
+      "jinaRerankingMs": 513.65972399991,
+      "mappingMs": 0.028108000056818128,
+      "totalMs": 3197.9958059999626,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011094999965280294,
+      "contextBuilderMs": 0.008174000075086951,
+      "generationMs": 1348.325019000098,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4546.347625999944
+    },
+    "judge": {
+      "questionId": "q123",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux garanties prévues : un délai minimum fixé par décret en Conseil d’État avant de quitter le logement, ou le paiement d’une indemnité. Elle décrit correctement le calcul de cette indemnité, fondé sur la location trimestrielle d’un logement équivalent et les avantages en nature perçus. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L7212-1 est directement pertinente : elle traite précisément du salarié dont le contrat est rompu à l’initiative de l’employeur et de son obligation de quitter son logement. Elle couvre l’ensemble des affirmations importantes de la réponse générée, notamment le délai minimum fixé par décret en Conseil d’État, l’alternative de l’indemnité et le mode de calcul de celle-ci (location trimestrielle d’un logement équivalent et avantages en nature)."
+    }
+  },
+  "failureStage": "none"
+}

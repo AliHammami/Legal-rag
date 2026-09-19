@@ -1,0 +1,87 @@
+{
+  "questionId": "q211",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Malgré l’interdiction générale, l’offre au public de droits de membre d’un groupement européen d’intérêt économique est autorisée si elle présente les caractéristiques d’une offre définie :\n\n- au **1° de l’article L. 411-2 du Code monétaire et financier**, ou\n- au **3° du même article**.\n\nLe contexte ne précise pas le contenu de ces deux catégories d’offres. À défaut de remplir l’une de ces conditions, les contrats conclus ou les droits créés sont nuls.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 215.24867000011727,
+      "vectorSearchMs": 587.432973000221,
+      "jinaRerankingMs": 542.5604789997451,
+      "mappingMs": 0.040622999891638756,
+      "totalMs": 1345.3209720002487,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01830499991774559,
+      "contextBuilderMs": 0.010611999779939651,
+      "generationMs": 2134.814057999756,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3480.175714999903
+    },
+    "judge": {
+      "questionId": "q211",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions alternatives prévues par l’article L253-1 : l’offre doit répondre aux caractéristiques d’une offre définie au 1° ou au 3° de l’article L. 411-2 du code monétaire et financier. La précision sur la nullité en l’absence de cette exception est également conforme au contexte, et l’absence de détail sur les catégories visées est explicitement et correctement signalée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 253-1 énonce l’interdiction générale, l’exception lorsque l’offre répond aux caractéristiques du 1° ou du 3° de l’article L. 411-2 du code monétaire et financier, ainsi que la nullité attachée à l’interdiction. Elle couvre donc toutes les affirmations importantes de la réponse générée, y compris le constat que le contenu détaillé de ces catégories n’est pas fourni dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "L’offre au public est autorisée si elle répond aux caractéristiques des offres définies :\n\n- au **1° de l’article L. 411-2 du Code monétaire et financier**, ou\n- au **3° de l’article L. 411-2 du même Code**.\n\nLe contexte ne précise pas quelles sont concrètement les caractéristiques de ces offres.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4199.027617999818,
+      "routingCalls": 1,
+      "embeddingMs": 244.44701200025156,
+      "vectorSearchMs": 364.09754899982363,
+      "jinaRerankingMs": 561.7868610001169,
+      "mappingMs": 0.024449000135064125,
+      "totalMs": 5369.535434000194,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010077999904751778,
+      "contextBuilderMs": 0.00841199979186058,
+      "generationMs": 1287.123673999682,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6656.685373999644
+    },
+    "judge": {
+      "questionId": "q211",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux exceptions prévues par l’article L253-1, renvoyant aux offres définies aux 1° ou 3° de l’article L. 411-2 du code monétaire et financier. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 253-1, qui énonce l'interdiction générale puis l'exception exacte : l'offre est autorisée lorsqu'elle répond aux caractéristiques des offres définies aux 1° ou 3° de l'article L. 411-2 du code monétaire et financier. Elle couvre également le constat de la réponse selon lequel le contexte ne détaille pas ces caractéristiques."
+    }
+  },
+  "failureStage": "none"
+}

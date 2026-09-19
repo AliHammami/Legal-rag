@@ -1,0 +1,103 @@
+{
+  "questionId": "q335",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 622-1, une association peut agir en réparation au nom de plusieurs consommateurs si :\n\n- les consommateurs sont **identifiés** ;\n- ils ont subi des **préjudices individuels** ;\n- ces préjudices ont été causés par **le même professionnel** ;\n- les préjudices ont une **origine commune** ;\n- l’association est **agréée et reconnue représentative au niveau national** conformément à l’article L. 811-1 ;\n- elle a reçu un **mandat d’au moins deux consommateurs concernés**.\n\nElle peut alors agir en leur nom devant toute juridiction.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L622-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R622-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 174.5822029998526,
+      "vectorSearchMs": 1048.3127840002999,
+      "jinaRerankingMs": 261.02303399983793,
+      "mappingMs": 0.04362799972295761,
+      "totalMs": 1484.0203240001574,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014462999999523163,
+      "contextBuilderMs": 0.02054599951952696,
+      "generationMs": 2024.4998960001394,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3508.5823820000514
+    },
+    "judge": {
+      "questionId": "q335",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de l’article L. 622-1 : consommateurs identifiés, préjudices individuels causés par le même professionnel et d’origine commune, association agréée et représentative au niveau national, mandat d’au moins deux consommateurs, et action possible devant toute juridiction. Tous ces éléments sont explicitement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 622-1 et énonce toutes les conditions reprises dans la réponse : consommateurs identifiés, préjudices individuels, même professionnel, origine commune, association agréée et représentative au niveau national selon L. 811-1, mandat d’au moins deux consommateurs et action devant toute juridiction. La source 2 confirme le mécanisme du mandat, sans être nécessaire. Les affirmations importantes sont toutes couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 622-1, une association peut agir en réparation au nom de plusieurs consommateurs si :\n\n- les consommateurs sont **identifiés** ;\n- ils ont subi des **préjudices individuels** ;\n- ces préjudices ont été causés par **le même professionnel** ;\n- ils ont une **origine commune** ;\n- l’association est **agréée et reconnue représentative au niveau national** conformément à l’article L. 811-1 ;\n- elle a reçu mandat d’agir d’**au moins deux des consommateurs concernés**.\n\nElle peut alors agir devant **toute juridiction** au nom de ces consommateurs.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L622-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R622-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1047.1148230005056,
+      "routingCalls": 1,
+      "embeddingMs": 193.4708239994943,
+      "vectorSearchMs": 51.14752800017595,
+      "jinaRerankingMs": 251.35115099977702,
+      "mappingMs": 0.02566900011152029,
+      "totalMs": 1543.1550190001726,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009618999436497688,
+      "contextBuilderMs": 0.019531000405550003,
+      "generationMs": 1957.970786000602,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3501.162750000134
+    },
+    "judge": {
+      "questionId": "q335",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de l’article L. 622-1 : consommateurs identifiés, préjudices individuels causés par un même professionnel et ayant une origine commune, association agréée et représentative au niveau national, mandat d’au moins deux consommateurs, et action possible devant toute juridiction. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 622-1 et couvre l’ensemble des conditions et de la conséquence juridique exposées : consommateurs identifiés, préjudices individuels causés par un même professionnel et d’origine commune, association agréée et représentative au niveau national au titre de L. 811-1, mandat d’au moins deux consommateurs et action devant toute juridiction. La source 2 est également cohérente et confirme le mécanisme du mandat."
+    }
+  },
+  "failureStage": "none"
+}

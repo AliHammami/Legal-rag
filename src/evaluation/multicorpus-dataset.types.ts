@@ -1,3 +1,7 @@
+import type { GoldArticle } from './gold-article.js';
+
+export type { GoldArticle };
+
 export type MulticorpusDifficulty = 'easy' | 'medium' | 'hard';
 
 export type MulticorpusQuestionType =
@@ -10,11 +14,11 @@ export interface LegalMulticorpusEvaluationQuestion {
   id: string;
   question: string;
   goldCorpusIds: string[];
-  goldArticles: string[];
+  goldArticles: GoldArticle[];
   referenceAnswer: string;
   difficulty: MulticorpusDifficulty;
   questionType: MulticorpusQuestionType;
-  sourceArticles?: string[];
+  sourceArticles?: GoldArticle[];
 }
 
 export interface MulticorpusDatasetQuotas {
@@ -25,19 +29,19 @@ export interface MulticorpusDatasetQuotas {
 }
 
 export const MULTICORPUS_DATASET_QUOTAS: MulticorpusDatasetQuotas = {
-  singleCorpus: 350,
-  multiCorpus: 75,
+  singleCorpus: 362,
+  multiCorpus: 63,
   ambiguous: 40,
   outOfScope: 35,
 };
 
 export const MULTICORPUS_SINGLE_CORPUS_QUOTAS: Record<string, number> = {
   'code-penal': 58,
-  'code-civil': 58,
-  'code-du-travail': 58,
-  'code-du-commerce': 58,
-  'code-monetaire-et-financier': 59,
-  'code-de-la-consommation': 59,
+  'code-civil': 60,
+  'code-du-travail': 61,
+  'code-du-commerce': 63,
+  'code-monetaire-et-financier': 60,
+  'code-de-la-consommation': 60,
 };
 
 export const MULTICORPUS_DIFFICULTY_TARGETS: Record<MulticorpusDifficulty, number> = {

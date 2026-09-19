@@ -1,0 +1,1094 @@
+{
+  "metadata": {
+    "datasetVersion": "legal-multicorpus-v2-gold-articles",
+    "datasetPath": "data/evaluation/legal-multicorpus.questions.json",
+    "timestamp": "2026-09-18T20-42-33-922Z",
+    "evaluatorVersion": "1.0.0",
+    "modelConfiguration": {
+      "embeddingModel": "text-embedding-3-large",
+      "rerankerModel": "jina-reranker-v3.5",
+      "generationModel": "gpt-5.6-luna",
+      "routingModel": "gpt-5.6-luna",
+      "judgeModel": "gpt-5.6-terra",
+      "retrievalTopK": 20,
+      "rerankTopK": 5,
+      "relativeScoreThreshold": 0.4,
+      "routingEnabled": true
+    },
+    "evaluationConcurrency": 3,
+    "jinaConcurrency": 2,
+    "questionCount": 5,
+    "limit": 5
+  },
+  "routing": {
+    "summary": {
+      "exactMatchRate": 1,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "ambiguousEmptyPredictionRate": 0,
+      "outOfScopeEmptyPredictionRate": 0,
+      "averageLatencyMs": 2295.2266451999994
+    },
+    "breakdown": [
+      {
+        "label": "single-corpus",
+        "count": 5,
+        "metrics": {
+          "exactMatch": 1,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        }
+      },
+      {
+        "label": "easy",
+        "count": 5,
+        "metrics": {
+          "exactMatch": 1,
+          "f1": 1
+        }
+      },
+      {
+        "label": "code-penal",
+        "count": 5,
+        "metrics": {
+          "exactMatch": 1,
+          "f1": 1
+        }
+      }
+    ],
+    "results": [
+      {
+        "questionId": "q001",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 3254.0014249999986,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q002",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 2945.3137880000013,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q003",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 3206.586776,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q004",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 1092.7488299999986,
+        "fallbackToGlobal": false
+      },
+      {
+        "questionId": "q005",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldCorpusIds": [
+          "code-penal"
+        ],
+        "predictedCorpusIds": [
+          "code-penal"
+        ],
+        "exactMatch": true,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "latencyMs": 977.4824069999995,
+        "fallbackToGlobal": false
+      }
+    ]
+  },
+  "retrieval": {
+    "summary": {
+      "global": {
+        "recallAt5": 0.6,
+        "recallAt10": 0.6,
+        "recallAt20": 0.8,
+        "mrr": 0.5181818181818182
+      },
+      "routed": {
+        "recallAt5": 0.6,
+        "recallAt10": 0.6,
+        "recallAt20": 0.8,
+        "mrr": 0.5181818181818182
+      }
+    },
+    "breakdown": [
+      {
+        "label": "single-corpus",
+        "count": 5,
+        "metrics": {
+          "globalRecallAt5": 0.6,
+          "routedRecallAt5": 0.6,
+          "globalMrr": 0.5181818181818182,
+          "routedMrr": 0.5181818181818182
+        }
+      },
+      {
+        "label": "easy",
+        "count": 5,
+        "metrics": {
+          "globalRecallAt5": 0.6,
+          "routedRecallAt5": 0.6
+        }
+      }
+    ],
+    "results": [
+      {
+        "questionId": "q001",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-1"
+          }
+        ],
+        "global": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "routed": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "latencyMs": {
+          "global": 3281.711890999999,
+          "routed": 1676.8799880000006
+        }
+      },
+      {
+        "questionId": "q002",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "223-1"
+          }
+        ],
+        "global": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 0,
+          "mrr": 0
+        },
+        "routed": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 0,
+          "mrr": 0
+        },
+        "latencyMs": {
+          "global": 2461.9504880000004,
+          "routed": 1210.7560940000003
+        }
+      },
+      {
+        "questionId": "q003",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "224-1"
+          }
+        ],
+        "global": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 0.5
+        },
+        "routed": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 0.5
+        },
+        "latencyMs": {
+          "global": 3303.044023999999,
+          "routed": 1362.2715690000005
+        }
+      },
+      {
+        "questionId": "q004",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-1"
+          }
+        ],
+        "global": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 1,
+          "mrr": 0.09090909090909091
+        },
+        "routed": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 1,
+          "mrr": 0.09090909090909091
+        },
+        "latencyMs": {
+          "global": 1395.2583169999998,
+          "routed": 1303.9646009999997
+        }
+      },
+      {
+        "questionId": "q005",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-12"
+          }
+        ],
+        "global": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "routed": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "latencyMs": {
+          "global": 1280.2652729999973,
+          "routed": 1388.5695919999998
+        }
+      }
+    ]
+  },
+  "reranking": {
+    "summary": {
+      "vectorTop5": {
+        "recallAt5": 0.6,
+        "recallAt10": 0.6,
+        "recallAt20": 0.6,
+        "mrr": 0.5
+      },
+      "jinaTop5": {
+        "recallAt5": 0.6,
+        "recallAt10": 0.6,
+        "recallAt20": 0.6,
+        "mrr": 0.35
+      },
+      "improved": 1,
+      "degraded": 2,
+      "unchanged": 2
+    },
+    "breakdown": [
+      {
+        "label": "single-corpus",
+        "count": 5,
+        "metrics": {
+          "vectorRecallAt5": 0.6,
+          "jinaRecallAt5": 0.6,
+          "vectorMrr": 0.5,
+          "jinaMrr": 0.35
+        }
+      }
+    ],
+    "results": [
+      {
+        "questionId": "q001",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "222-1"
+          }
+        ],
+        "vectorTop5": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "jinaTop5": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 0,
+          "mrr": 0
+        },
+        "rerankEffect": "degraded",
+        "latencyMs": 3106.54075
+      },
+      {
+        "questionId": "q002",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "223-1"
+          }
+        ],
+        "vectorTop5": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 0,
+          "mrr": 0
+        },
+        "jinaTop5": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 0,
+          "mrr": 0
+        },
+        "rerankEffect": "unchanged",
+        "latencyMs": 3062.697082999999
+      },
+      {
+        "questionId": "q003",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "224-1"
+          }
+        ],
+        "vectorTop5": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 0.5
+        },
+        "jinaTop5": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 0.25
+        },
+        "rerankEffect": "degraded",
+        "latencyMs": 3352.9541409999983
+      },
+      {
+        "questionId": "q004",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-1"
+          }
+        ],
+        "vectorTop5": {
+          "recallAt5": 0,
+          "recallAt10": 0,
+          "recallAt20": 0,
+          "mrr": 0
+        },
+        "jinaTop5": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 0.5
+        },
+        "rerankEffect": "improved",
+        "latencyMs": 2193.8854250000004
+      },
+      {
+        "questionId": "q005",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "goldArticles": [
+          {
+            "corpusId": "code-penal",
+            "articleNumber": "221-12"
+          }
+        ],
+        "vectorTop5": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "jinaTop5": {
+          "recallAt5": 1,
+          "recallAt10": 1,
+          "recallAt20": 1,
+          "mrr": 1
+        },
+        "rerankEffect": "unchanged",
+        "latencyMs": 2194.3043499999985
+      }
+    ]
+  },
+  "e2e": {
+    "summary": {
+      "baseline": {
+        "correctness": 2,
+        "completeness": 1.8,
+        "groundedness": 4,
+        "abstention": 0.4,
+        "sourceRelevance": 2.8,
+        "sourceCoverage": 4
+      },
+      "routing": {
+        "correctness": 1.6,
+        "completeness": 1.8,
+        "groundedness": 4,
+        "abstention": 0.4,
+        "sourceRelevance": 2.6,
+        "sourceCoverage": 3.8
+      }
+    },
+    "rerankFallbacks": 0,
+    "rerankPipelineRuns": 10,
+    "latency": {
+      "baseline": {
+        "average": 4015.9670644000007,
+        "p50": 4089.9409199999973,
+        "p95": 5292.098826000001
+      },
+      "routing": {
+        "average": 3290.1709111999967,
+        "p50": 3344.8878549999936,
+        "p95": 4041.7791089999955
+      },
+      "routingStage": {
+        "average": 829.4299112000008,
+        "p50": 806.2079430000013,
+        "p95": 1055.8334509999986
+      },
+      "embedding": {
+        "average": 215.28359240000137,
+        "p50": 208.48931299999822,
+        "p95": 238.66433300000062
+      },
+      "retrieval": {
+        "average": 83.90730360000161,
+        "p50": 72.26695299999847,
+        "p95": 141.28665000000183
+      },
+      "reranking": {
+        "average": 478.02114740000104,
+        "p50": 560.241958999999,
+        "p95": 586.5101520000026
+      },
+      "generation": {
+        "average": 1683.0833828000002,
+        "p50": 1869.462977999996,
+        "p95": 2406.8473830000003
+      }
+    },
+    "breakdown": [
+      {
+        "label": "single-corpus",
+        "count": 5,
+        "metrics": {
+          "baselineCorrectness": 2,
+          "routingCorrectness": 1.6
+        }
+      }
+    ],
+    "results": [
+      {
+        "questionId": "q001",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "expectedAbstention": false,
+        "baseline": {
+          "answer": "Le contexte ne précise pas la peine de base prévue par l’article 222-1. Il indique seulement les peines aggravées applicables selon les circonstances, pouvant aller de vingt ans de réclusion criminelle à la réclusion criminelle à perpétuité.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-4"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-3"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-5"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-3"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-6"
+            }
+          ],
+          "profiling": {
+            "routingMs": 0,
+            "routingCalls": 0,
+            "embeddingMs": 259.252203,
+            "vectorSearchMs": 2078.6016370000034,
+            "jinaRerankingMs": 309.7372319999995,
+            "mappingMs": 0.033206000000063796,
+            "totalMs": 2647.8366260000003,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.37224200000127894,
+            "contextBuilderMs": 0.23378800000136835,
+            "generationMs": 1934.9239860000016,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 4583.701788999999
+          },
+          "judge": {
+            "questionId": "q001",
+            "correctness": 2,
+            "completeness": 1,
+            "groundedness": 4,
+            "abstentionCorrect": false,
+            "explanation": "La réponse ne donne pas la peine de base demandée (quinze ans de réclusion criminelle), mais elle indique correctement que le contexte fourni ne contient pas l’article 222-1 ni cette peine de base. Les affirmations sur les peines aggravées de vingt ans à la perpétuité sont étayées par les articles 222-3 à 222-6 du contexte. Toutefois, puisque l’abstention n’était pas attendue et que la réponse ne répond pas à la question malgré une réponse possible, l’abstention est incorrecte."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 2,
+            "sourceCoverage": 4,
+            "explanation": "Les sources portent bien sur l’infraction définie à l’article 222-1, mais uniquement à travers ses aggravations (vingt ans, trente ans ou perpétuité) et ne fournissent pas la peine de base demandée à l’article 222-1. Elles sont donc seulement partiellement pertinentes pour la question directe. En revanche, elles couvrent les affirmations de la réponse générée : elles établissent des peines aggravées selon les circonstances, allant de vingt ans de réclusion criminelle (art. 222-3) à la perpétuité en cas de décès sans intention de le donner (art. 222-6), tandis que l’absence de la peine de base dans le contexte fourni est conforme au corpus présenté."
+          }
+        },
+        "routing": {
+          "answer": "Le contexte ne précise pas la peine de base prévue par l’article 222-1.\n\nIl indique toutefois que la peine peut être :\n\n- **20 ans de réclusion criminelle** dans les cas de l’article 222-3 ;\n- **30 ans de réclusion criminelle** dans certains cas aggravés ou si les faits ont entraîné une mutilation ou une infirmité permanente ;\n- **la réclusion criminelle à perpétuité** si les tortures ont entraîné la mort de la victime sans intention de la donner.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-4"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-3"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-5"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-3"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "222-6"
+            }
+          ],
+          "profiling": {
+            "routingMs": 698.2832090000011,
+            "routingCalls": 1,
+            "embeddingMs": 208.48931299999822,
+            "vectorSearchMs": 141.28665000000183,
+            "jinaRerankingMs": 586.5101520000026,
+            "mappingMs": 0.14638900000136346,
+            "totalMs": 1634.822168000006,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.017786999997042585,
+            "contextBuilderMs": 0.0628839999990305,
+            "generationMs": 2406.8473830000003,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 4041.7791089999955
+          },
+          "judge": {
+            "questionId": "q001",
+            "correctness": 0,
+            "completeness": 1,
+            "groundedness": 4,
+            "abstentionCorrect": false,
+            "explanation": "La réponse ne fournit pas la peine de base demandée par l'article 222-1, qui est de quinze ans de réclusion criminelle. Elle décrit correctement des peines aggravées figurant dans le contexte et signale explicitement que la peine de base n'y est pas précisée. Toutefois, puisque l'abstention n'était pas attendue et qu'elle ne répond pas à la question, l'abstention est incorrecte. Ses affirmations sur les circonstances aggravées sont supportées par le contexte."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 2,
+            "sourceCoverage": 4,
+            "explanation": "Les sources portent directement sur les aggravations de l’infraction définie à l’article 222-1, mais ne fournissent pas le texte de cet article ni la peine de base demandée (quinze ans). Elles sont donc seulement partiellement pertinentes pour répondre à la question. En revanche, elles couvrent les affirmations de la réponse générée : vingt ans selon l’article 222-3, trente ans dans les hypothèses des articles 222-3, 222-4 ou 222-5, et perpétuité en cas de mort sans intention de la donner selon l’article 222-6. L’absence, dans les extraits, de la peine de base de l’article 222-1 est également cohérente avec son constat."
+          }
+        },
+        "failureStage": "generation"
+      },
+      {
+        "questionId": "q002",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "expectedAbstention": false,
+        "baseline": {
+          "answer": "Le contexte fourni ne permet pas de répondre. Il ne contient pas le texte de l’article 223-1 ni les éléments constitutifs de l’infraction punie d’un an d’emprisonnement et de 15 000 euros d’amende. Il mentionne seulement d’autres infractions, punies d’un an d’emprisonnement et de 150 000 euros d’amende.",
+          "sources": [
+            {
+              "corpusId": "code-de-la-consommation",
+              "articleNumber": "L242-7-1"
+            },
+            {
+              "corpusId": "code-de-la-consommation",
+              "articleNumber": "L451-3"
+            }
+          ],
+          "profiling": {
+            "routingMs": 0,
+            "routingCalls": 0,
+            "embeddingMs": 376.9273240000002,
+            "vectorSearchMs": 2105.9615479999993,
+            "jinaRerankingMs": 197.65546399999948,
+            "mappingMs": 0.04539199999999255,
+            "totalMs": 2680.6965869999985,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.034747000001516426,
+            "contextBuilderMs": 0.03087700000105542,
+            "generationMs": 1409.1354269999974,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 4089.9409199999973
+          },
+          "judge": {
+            "questionId": "q002",
+            "correctness": 0,
+            "completeness": 0,
+            "groundedness": 4,
+            "abstentionCorrect": false,
+            "explanation": "La réponse ne fournit aucun des éléments constitutifs demandés par l'article 223-1 et ne répond donc pas à la question. Son constat sur l'absence du texte de l'article 223-1 dans le contexte est exact, de même que la mention des deux infractions contextuelles à un an d'emprisonnement et 150 000 euros d'amende. Toutefois, l'abstention était inattendue selon l'indicateur fourni."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 2,
+            "sourceCoverage": 4,
+            "explanation": "Les deux sources ne répondent pas directement à la question sur l’article 223-1 : elles portent sur d’autres articles et prévoient une amende de 150 000 euros, non de 15 000 euros. Elles sont toutefois pertinentes pour étayer le constat d’abstention selon lequel le contexte fourni ne contient que d’autres infractions assorties d’un an d’emprisonnement et de 150 000 euros d’amende, sans texte ni éléments constitutifs de l’article 223-1. Elles couvrent ainsi les affirmations factuelles importantes de la réponse générée."
+          }
+        },
+        "routing": {
+          "answer": "Le contexte fourni ne contient pas l’article 223-1. Il ne permet donc pas d’identifier les éléments constitutifs de l’infraction punie d’un an d’emprisonnement et de 15 000 euros d’amende.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "225-16-2"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "226-22-2"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "226-4-1"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "322-3"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "725-6"
+            }
+          ],
+          "profiling": {
+            "routingMs": 1055.8334509999986,
+            "routingCalls": 1,
+            "embeddingMs": 238.66433300000062,
+            "vectorSearchMs": 72.26695299999847,
+            "jinaRerankingMs": 560.241958999999,
+            "mappingMs": 0.037502999999560416,
+            "totalMs": 1927.1329390000028,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.020022999997308943,
+            "contextBuilderMs": 0.03427499999816064,
+            "generationMs": 1201.3115730000063,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 3128.5287279999975
+          },
+          "judge": {
+            "questionId": "q002",
+            "correctness": 0,
+            "completeness": 0,
+            "groundedness": 4,
+            "abstentionCorrect": false,
+            "explanation": "La réponse n’énonce aucun des éléments constitutifs demandés par la question et ne répond donc pas au fond. Elle est néanmoins entièrement fondée sur le contexte effectivement fourni, qui ne contient pas l’article 223-1. L’abstention est jugée incorrecte car EXPECTED ABSTENTION est false."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 1,
+            "sourceCoverage": 4,
+            "explanation": "Aucune source ne contient l’article 223-1 ni les éléments de l’infraction demandée. Elles sont donc très insuffisantes pour répondre directement au fond. En revanche, elles permettent de soutenir le constat précis de la réponse générée selon lequel le contexte fourni ne contient pas l’article 223-1 et ne permet pas d’identifier ses éléments constitutifs ; toutes les affirmations de cette abstention sont ainsi couvertes."
+          }
+        },
+        "failureStage": "generation"
+      },
+      {
+        "questionId": "q003",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "expectedAbstention": false,
+        "baseline": {
+          "answer": "Le contexte fourni ne reproduit pas l’article 224-1 ni les durées de séquestration auxquelles il associe des peines. Il ne permet donc pas de détailler les différences de peine selon la durée.\n\nIl indique seulement que, lorsque la libération volontaire intervient dans le délai prévu par le troisième alinéa de l’article 224-1, la peine peut être réduite à **dix ans d’emprisonnement**, sauf atteinte à l’intégrité physique de la victime.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "224-3"
+            }
+          ],
+          "profiling": {
+            "routingMs": 0,
+            "routingCalls": 0,
+            "embeddingMs": 631.072827,
+            "vectorSearchMs": 2033.9679529999994,
+            "jinaRerankingMs": 284.62202199999956,
+            "mappingMs": 0.034415999998600455,
+            "totalMs": 2949.820444000001,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.03934300000037183,
+            "contextBuilderMs": 0.014981999996962259,
+            "generationMs": 2342.1937959999996,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 5292.098826000001
+          },
+          "judge": {
+            "questionId": "q003",
+            "correctness": 0,
+            "completeness": 0,
+            "groundedness": 4,
+            "abstentionCorrect": false,
+            "explanation": "La réponse ne fournit pas les peines prévues par l'article 224-1 selon la durée de la séquestration : vingt ans de réclusion criminelle, avec réduction à cinq ans d'emprisonnement et 75 000 euros d'amende en cas de libération volontaire avant sept jours. Elle évoque à la place la règle distincte de l'article 224-3, applicable notamment lorsque plusieurs personnes sont séquestrées. Cette affirmation sur la peine de dix ans et son exception est bien étayée par le contexte fourni, mais elle ne répond pas à la question."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 2,
+            "sourceCoverage": 4,
+            "explanation": "La source porte sur l’article 224-3, et non sur le régime de peine directement prévu par l’article 224-1 selon la durée de séquestration. Elle est néanmoins partiellement pertinente puisqu’elle renvoie explicitement au délai du troisième alinéa de l’article 224-1 et mentionne une réduction à dix ans dans le cas particulier de l’article 224-3. Elle ne permet pas de déterminer les durées ni les peines demandées. En revanche, elle couvre les constats effectivement formulés dans la réponse générée : l’absence de reproduction de l’article 224-1 et de son délai précis dans le contexte, ainsi que la règle des dix ans et son exception liée à une atteinte à l’intégrité physique."
+          }
+        },
+        "routing": {
+          "answer": "Le contexte fourni ne reproduit pas l’article 224-1 ni son troisième alinéa. Il ne permet donc pas d’indiquer les peines prévues selon la durée de la séquestration.\n\nIl précise seulement que, lorsque plusieurs personnes sont détenues ou séquestrées, la peine est de **trente ans de réclusion criminelle**, avec une réduction à **dix ans d’emprisonnement** en cas de libération volontaire dans le délai prévu par l’article 224-1, sauf atteinte à l’intégrité physique d’une victime.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "224-3"
+            }
+          ],
+          "profiling": {
+            "routingMs": 806.2079430000013,
+            "routingCalls": 1,
+            "embeddingMs": 232.10212200000387,
+            "vectorSearchMs": 97.98655000000144,
+            "jinaRerankingMs": 399.5592870000037,
+            "mappingMs": 0.04663599999912549,
+            "totalMs": 1536.0027960000007,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.1476810000021942,
+            "contextBuilderMs": 0.020398000000568572,
+            "generationMs": 2115.0010889999976,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 3651.2093529999984
+          },
+          "judge": {
+            "questionId": "q003",
+            "correctness": 0,
+            "completeness": 0,
+            "groundedness": 4,
+            "abstentionCorrect": false,
+            "explanation": "La réponse ne fournit pas les peines prévues par l’article 224-1 selon la durée de la séquestration (vingt ans, ou cinq ans et 75 000 euros en cas de libération volontaire avant sept jours). Elle répond à la place avec le régime aggravé de l’article 224-3 concernant plusieurs victimes. Ses affirmations sur ce régime sont bien étayées par le contexte, mais elles ne répondent pas à la question et constituent une abstention alors qu’une réponse était attendue."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 2,
+            "sourceCoverage": 3,
+            "explanation": "La source est juridiquement liée à l’article 224-1, puisqu’elle renvoie explicitement à son troisième alinéa et traite de la libération volontaire, mais elle porte directement sur le régime aggravé de l’article 224-3 applicable à plusieurs personnes. Elle ne fournit ni la peine de droit commun de l’article 224-1 ni le délai de sept jours, ni l’amende. En revanche, elle couvre les affirmations effectivement formulées dans la réponse sur trente ans, la réduction à dix ans, la libération dans le délai prévu et l’exception liée aux atteintes à l’intégrité physique."
+          }
+        },
+        "failureStage": "generation"
+      },
+      {
+        "questionId": "q004",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "expectedAbstention": false,
+        "baseline": {
+          "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-4"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-1"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-3"
+            }
+          ],
+          "profiling": {
+            "routingMs": 0,
+            "routingCalls": 0,
+            "embeddingMs": 240.92371499999717,
+            "vectorSearchMs": 1241.4100829999952,
+            "jinaRerankingMs": 579.2074659999998,
+            "mappingMs": 0.043343999997887295,
+            "totalMs": 2061.6406149999966,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.024631000000226777,
+            "contextBuilderMs": 0.049917000003915746,
+            "generationMs": 993.4613890000037,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 3055.2090430000026
+          },
+          "judge": {
+            "questionId": "q004",
+            "correctness": 4,
+            "completeness": 4,
+            "groundedness": 4,
+            "abstentionCorrect": true,
+            "explanation": "La réponse reprend exactement la définition et la peine prévues à l’article 221-1, toutes deux explicitement présentes dans le contexte. Elle répond directement à la question sans abstention."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 4,
+            "sourceCoverage": 4,
+            "explanation": "La source 2 reproduit directement l’article 221-1 et établit explicitement tant la définition du meurtre (« donner volontairement la mort à autrui ») que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les affirmations de la réponse générée."
+          }
+        },
+        "routing": {
+          "answer": "Selon l’article 221-1, le meurtre est le fait de donner volontairement la mort à autrui. Il est puni de trente ans de réclusion criminelle.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-4"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-1"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-3"
+            }
+          ],
+          "profiling": {
+            "routingMs": 922.2188060000044,
+            "routingCalls": 1,
+            "embeddingMs": 206.86134100000345,
+            "vectorSearchMs": 53.360975000003236,
+            "jinaRerankingMs": 279.0285609999992,
+            "mappingMs": 0.030285000000731088,
+            "totalMs": 1461.5597909999997,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.01826200000505196,
+            "contextBuilderMs": 0.021335999997972976,
+            "generationMs": 822.7938910000012,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 2284.449510999999
+          },
+          "judge": {
+            "questionId": "q004",
+            "correctness": 4,
+            "completeness": 4,
+            "groundedness": 4,
+            "abstentionCorrect": true,
+            "explanation": "La réponse reprend exactement la définition et la peine prévues par l'article 221-1. Ces deux affirmations sont explicitement présentes dans le contexte (source 2), et la réponse répond directement à la question sans s'abstenir."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 4,
+            "sourceCoverage": 4,
+            "explanation": "La source 2 reproduit directement l'article 221-1 et énonce explicitement tant la définition du meurtre (« donner volontairement la mort à autrui ») que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les deux affirmations de la réponse générée."
+          }
+        },
+        "failureStage": "none"
+      },
+      {
+        "questionId": "q005",
+        "questionType": "single-corpus",
+        "difficulty": "easy",
+        "expectedAbstention": false,
+        "baseline": {
+          "answer": "Selon l’article 221-12, la disparition forcée consiste en :\n\n- l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne ;\n- dans des conditions la soustrayant à la protection de la loi ;\n- par des agents de l’État, ou par des personnes agissant avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État ;\n- lorsque ces actes sont suivis de la disparition de la personne et accompagnés soit du déni de la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nCette infraction est punie de la réclusion criminelle à perpétuité.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-12"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-14"
+            }
+          ],
+          "profiling": {
+            "routingMs": 0,
+            "routingCalls": 0,
+            "embeddingMs": 229.87761500000488,
+            "vectorSearchMs": 1105.4824600000065,
+            "jinaRerankingMs": 251.88183800000115,
+            "mappingMs": 0.04091799999878276,
+            "totalMs": 1587.3239780000004,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.023540999995020684,
+            "contextBuilderMs": 0.11994699999922886,
+            "generationMs": 1471.3842559999975,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 3058.8847440000027
+          },
+          "judge": {
+            "questionId": "q005",
+            "correctness": 4,
+            "completeness": 4,
+            "groundedness": 4,
+            "abstentionCorrect": true,
+            "explanation": "La réponse reprend fidèlement tous les éléments constitutifs de l'article 221-12 (privation de liberté, soustraction à la protection de la loi, implication ou acquiescement des autorités de l'État, disparition et déni ou dissimulation) ainsi que la peine de réclusion criminelle à perpétuité. Toutes les affirmations sont explicitement étayées par le contexte."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 4,
+            "sourceCoverage": 4,
+            "explanation": "La source 1 reproduit directement l'article 221-12 et contient l'ensemble des éléments constitutifs de la disparition forcée exposés dans la réponse, ainsi que la peine de réclusion criminelle à perpétuité. La source 2 est accessoire mais pertinente au régime des peines complémentaires du crime visé."
+          }
+        },
+        "routing": {
+          "answer": "Selon l’article 221-12, la disparition forcée consiste en l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne, dans des conditions la soustrayant à la protection de la loi, commise par des agents de l’État ou avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État.\n\nCes actes doivent être suivis de la disparition de la personne et accompagnés soit du refus de reconnaître la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nLa disparition forcée est punie de la réclusion criminelle à perpétuité.",
+          "sources": [
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-12"
+            },
+            {
+              "corpusId": "code-penal",
+              "articleNumber": "221-14"
+            }
+          ],
+          "profiling": {
+            "routingMs": 664.6061469999986,
+            "routingCalls": 1,
+            "embeddingMs": 190.30085300000064,
+            "vectorSearchMs": 54.6353900000031,
+            "jinaRerankingMs": 564.7657780000009,
+            "mappingMs": 0.05492700000468176,
+            "totalMs": 1474.4286839999986,
+            "embeddingCalls": 1,
+            "rerankingCalls": 1,
+            "retrievedCandidates": 20,
+            "rerankStatus": "success",
+            "contextFilteringMs": 0.029027000004134607,
+            "contextBuilderMs": 0.11995200000092154,
+            "generationMs": 1869.462977999996,
+            "generationCalls": 1,
+            "answerPipelineTotalMs": 3344.8878549999936
+          },
+          "judge": {
+            "questionId": "q005",
+            "correctness": 4,
+            "completeness": 4,
+            "groundedness": 4,
+            "abstentionCorrect": true,
+            "explanation": "La réponse reproduit fidèlement les éléments constitutifs de l'article 221-12 (privation de liberté par des agents de l'État ou avec l'accord des autorités, soustraction à la protection de la loi, disparition, déni ou dissimulation) et indique exactement la peine de réclusion criminelle à perpétuité. Toutes les affirmations essentielles sont explicitement étayées par le contexte."
+          },
+          "sourceJudge": {
+            "sourceRelevance": 4,
+            "sourceCoverage": 4,
+            "explanation": "La source 1 reproduit directement l'article 221-12 et couvre intégralement la définition de la disparition forcée (formes de privation de liberté, soustraction à la protection de la loi, implication ou acquiescement d'autorités de l'État, disparition, déni ou dissimulation) ainsi que la peine de réclusion criminelle à perpétuité. La source 2 est pertinente de façon accessoire sur les peines complémentaires, mais n'est pas nécessaire aux affirmations de la réponse."
+          }
+        },
+        "failureStage": "none"
+      }
+    ]
+  },
+  "errors": {
+    "byStage": {
+      "routing": 0,
+      "retrieval": 1,
+      "reranking": 2,
+      "generation": 0,
+      "abstention": 0,
+      "none": 2
+    },
+    "results": [
+      {
+        "questionId": "q001",
+        "failureStage": "reranking"
+      },
+      {
+        "questionId": "q002",
+        "failureStage": "retrieval"
+      },
+      {
+        "questionId": "q003",
+        "failureStage": "reranking"
+      },
+      {
+        "questionId": "q004",
+        "failureStage": "none"
+      },
+      {
+        "questionId": "q005",
+        "failureStage": "none"
+      }
+    ]
+  }
+}

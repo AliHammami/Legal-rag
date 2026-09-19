@@ -1,0 +1,95 @@
+{
+  "questionId": "q111",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 711 du Code civil, la propriété des biens s’acquiert et se transmet :\n\n- par succession ;\n- par donation entre vifs ;\n- par donation testamentaire ;\n- par l’effet des obligations.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "711"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "712"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 162.76517400005832,
+      "vectorSearchMs": 608.3446829998866,
+      "jinaRerankingMs": 538.8959980001673,
+      "mappingMs": 0.02904399996623397,
+      "totalMs": 1310.0643430000637,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012922000139951706,
+      "contextBuilderMs": 0.011979000177234411,
+      "generationMs": 1083.977772000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2394.07549800002
+    },
+    "judge": {
+      "questionId": "q111",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les quatre modes énoncés à l’article 711 : succession, donation entre vifs, donation testamentaire et effet des obligations. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l’article 711 visé par la question et étaye chacun des quatre modes mentionnés dans la réponse : succession, donation entre vifs, donation testamentaire et effet des obligations. La source 2 est non nécessaire mais ne nuit pas à la pertinence globale."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 711 du Code civil, la propriété des biens s’acquiert et se transmet :\n\n- par succession ;\n- par donation entre vifs ;\n- par donation testamentaire ;\n- par l’effet des obligations.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "711"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "712"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.1556280001532,
+      "routingCalls": 1,
+      "embeddingMs": 140.0442200000398,
+      "vectorSearchMs": 58.57700100005604,
+      "jinaRerankingMs": 496.7102779999841,
+      "mappingMs": 0.021004999987781048,
+      "totalMs": 1514.556162999943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009444999974220991,
+      "contextBuilderMs": 0.011135000037029386,
+      "generationMs": 941.3642619999591,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2455.947834999999
+    },
+    "judge": {
+      "questionId": "q111",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les quatre modes énoncés à l’article 711 : succession, donation entre vifs, donation testamentaire et effet des obligations. Tous sont explicitement supportés par le contexte et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 711 et énonce expressément tous les modes mentionnés dans la réponse : succession, donation entre vifs ou testamentaire, et effet des obligations. La source 2 est connexe mais non nécessaire. Les affirmations importantes de la réponse sont entièrement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

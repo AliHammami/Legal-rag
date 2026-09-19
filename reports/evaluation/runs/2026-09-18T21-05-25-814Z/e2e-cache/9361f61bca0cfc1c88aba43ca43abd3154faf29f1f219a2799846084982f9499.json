@@ -1,0 +1,87 @@
+{
+  "questionId": "q396",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les privilèges généraux s’exercent dans l’ordre prévu par l’article 2331 du Code civil.\n\nExceptions :\n- le privilège du Trésor public est classé selon les lois qui le concernent ;\n- le privilège des caisses de sécurité sociale vient au même rang que celui des salariés.\n\nLorsque plusieurs créanciers privilégiés occupent le même rang, ils sont payés par concurrence.\n\nLe contexte fourni ne contient aucune règle relative à l’application de la preuve en cas de discrimination selon le Code du travail. Il ne permet donc pas de répondre à cette partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 180.57608400005847,
+      "vectorSearchMs": 674.0427759997547,
+      "jinaRerankingMs": 320.4114199997857,
+      "mappingMs": 0.02723999973386526,
+      "totalMs": 1175.090442999266,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013665999285876751,
+      "contextBuilderMs": 0.009358000010251999,
+      "generationMs": 1894.0839299997315,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3069.207021999173
+    },
+    "judge": {
+      "questionId": "q396",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et complètement la règle de rang des privilèges généraux prévue à l’article 2332-2, y compris les exceptions et le paiement par concurrence. En revanche, elle ne répond pas à la partie relative à la preuve de la discrimination, alors que la référence attend l’aménagement de la charge de la preuve prévu par l’article L1134-1 du Code du travail. Les affirmations effectivement formulées sont toutes étayées par le contexte fourni, qui ne contient que l’article 2332-2. Toutefois, l’abstention sur la seconde partie rend la réponse incomplète alors qu’une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la première branche de la question : elle énonce l’ordre des privilèges généraux, les exceptions relatives au Trésor public et aux caisses de sécurité sociale, ainsi que le paiement par concurrence. Elle ne fournit toutefois aucune règle du Code du travail sur la preuve en matière de discrimination, ce qui la rend seulement partiellement pertinente au regard de la question complète. Toutes les affirmations effectivement formulées dans la réponse générée sont couvertes par le contenu disponible, y compris le constat qu’aucune règle relative à cette seconde branche ne figure dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Les privilèges généraux s’exercent dans l’ordre prévu par l’article 2331, avec deux exceptions :\n\n- le privilège du Trésor public, dont le rang est fixé par les lois qui le concernent ;\n- le privilège des caisses de sécurité sociale, qui vient au même rang que le privilège des salariés.\n\nLes créanciers bénéficiant du même rang sont payés par concurrence.\n\nLe contexte fourni ne contient aucune règle relative à la preuve en cas de discrimination selon le Code du travail. Il ne permet donc pas de répondre à cette partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 920.9148859996349,
+      "routingCalls": 1,
+      "embeddingMs": 199.73678100015968,
+      "vectorSearchMs": 360.4662979999557,
+      "jinaRerankingMs": 319.7711149994284,
+      "mappingMs": 0.031171000562608242,
+      "totalMs": 1800.9559180000797,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012153999879956245,
+      "contextBuilderMs": 0.009517999365925789,
+      "generationMs": 1856.8989810002968,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3657.8852869998664
+    },
+    "judge": {
+      "questionId": "q396",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément la hiérarchie des privilèges généraux prévue par l'article 2332-2 du Code civil. Elle ne fournit toutefois pas la règle de preuve applicable en matière de discrimination selon le Code du travail, qui constitue une partie essentielle de la question. Cette absence est cohérente avec le contexte effectivement fourni, limité au Code civil : les affirmations formulées sont donc pleinement fondées sur ce contexte. Néanmoins, alors qu'une réponse complète était attendue (EXPECTED ABSTENTION = false), le modèle s'abstient sur une partie substantielle de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 2332-2 du Code civil et est pleinement pertinente pour la hiérarchie des privilèges généraux : ordre de l’article 2331, exceptions du Trésor public et des caisses de sécurité sociale, et paiement par concurrence. En revanche, aucune source relative au Code du travail ou à la preuve de la discrimination n’est fournie, ce qui constitue une lacune importante au regard de la question complète. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes : les règles sur les privilèges le sont textuellement, et le constat que le contexte fourni ne contient pas de règle sur la discrimination est conforme à l’unique source disponible."
+    }
+  },
+  "failureStage": "generation"
+}

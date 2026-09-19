@@ -1,0 +1,87 @@
+{
+  "questionId": "q301",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L218-1, les parties à un contrat entre un professionnel et un consommateur ne peuvent pas :\n\n- modifier la durée de la prescription ;\n- ajouter des causes de suspension ou d’interruption de la prescription,\n\nmême si elles sont d’accord pour le faire.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L218-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 182.37393799982965,
+      "vectorSearchMs": 596.7630099998787,
+      "jinaRerankingMs": 274.27958200033754,
+      "mappingMs": 0.032394999638199806,
+      "totalMs": 1053.4861810002476,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01398799940943718,
+      "contextBuilderMs": 0.01040700078010559,
+      "generationMs": 1059.7125850003213,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2113.258503000252
+    },
+    "judge": {
+      "questionId": "q301",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux interdictions prévues par l’article L218-1 (modifier la durée de la prescription et ajouter des causes de suspension ou d’interruption), ainsi que leur caractère impératif même en cas d’accord des parties. Elle est intégralement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L218-1 et vise exactement les limitations demandées : interdiction de modifier la durée de la prescription et d’ajouter des causes de suspension ou d’interruption, y compris d’un commun accord. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L218-1, les parties ne peuvent pas, même d’un commun accord :\n\n- modifier la durée de la prescription ;\n- ajouter des causes de suspension ou d’interruption de la prescription.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L218-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.8289720006287,
+      "routingCalls": 1,
+      "embeddingMs": 200.73774600028992,
+      "vectorSearchMs": 45.27127700019628,
+      "jinaRerankingMs": 290.77847800031304,
+      "mappingMs": 0.022154000587761402,
+      "totalMs": 1560.6690520001575,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009127999655902386,
+      "contextBuilderMs": 0.008729999884963036,
+      "generationMs": 1143.8069320004433,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2704.5017729997635
+    },
+    "judge": {
+      "questionId": "q301",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux limitations prévues par l’article L218-1 : impossibilité de modifier la durée de la prescription et d’ajouter des causes de suspension ou d’interruption, même d’un commun accord. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L218-1 et énonce expressément les deux limitations mentionnées dans la réponse : l’interdiction, même d’un commun accord, de modifier la durée de la prescription et d’ajouter des causes de suspension ou d’interruption. Elle couvre intégralement les affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

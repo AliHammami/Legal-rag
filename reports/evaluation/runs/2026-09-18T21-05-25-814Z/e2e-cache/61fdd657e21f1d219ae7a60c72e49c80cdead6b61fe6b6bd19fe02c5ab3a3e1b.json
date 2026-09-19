@@ -1,0 +1,87 @@
+{
+  "questionId": "q050",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 711-1, les livres Ier à V du Code pénal sont applicables, sous réserve des adaptations prévues, dans les collectivités suivantes :\n\n- la Nouvelle-Calédonie ;\n- la Polynésie française ;\n- les îles Wallis et Futuna.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "711-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 186.0359569999855,
+      "vectorSearchMs": 605.707037000102,
+      "jinaRerankingMs": 569.3511250000447,
+      "mappingMs": 0.023613999946974218,
+      "totalMs": 1361.1472760000033,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009896000032313168,
+      "contextBuilderMs": 0.0076240000780671835,
+      "generationMs": 1605.4905159999616,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2966.6642440001015
+    },
+    "judge": {
+      "questionId": "q050",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les trois collectivités visées par l’article 711-1 (Nouvelle-Calédonie, Polynésie française et îles Wallis-et-Futuna) et mentionne correctement la réserve relative aux adaptations. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 711-1 dans la rédaction visée par la question et énumère expressément la Nouvelle-Calédonie, la Polynésie française et les îles Wallis et Futuna, avec la réserve des adaptations. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 711-1, les livres Ier à V du Code pénal sont applicables, sous réserve des adaptations prévues, en :\n\n- Nouvelle-Calédonie ;\n- Polynésie française ;\n- îles Wallis et Futuna.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "711-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.0373289999552,
+      "routingCalls": 1,
+      "embeddingMs": 205.22617500007618,
+      "vectorSearchMs": 54.18906699994113,
+      "jinaRerankingMs": 510.5831659999676,
+      "mappingMs": 0.022154000005684793,
+      "totalMs": 1692.0829980000854,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009068000013940036,
+      "contextBuilderMs": 0.010062000015750527,
+      "generationMs": 1409.2852199999616,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3101.3943170000566
+    },
+    "judge": {
+      "questionId": "q050",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les trois collectivités mentionnées à l’article 711-1 et précise correctement la réserve relative aux adaptations prévues. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 711-1 dans la rédaction visée par la question et énumère explicitement la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna, ainsi que la réserve relative aux adaptations prévues. Elle couvre donc l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

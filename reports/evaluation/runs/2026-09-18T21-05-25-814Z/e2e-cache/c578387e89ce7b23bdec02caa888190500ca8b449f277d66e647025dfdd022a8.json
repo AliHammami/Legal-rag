@@ -1,0 +1,87 @@
+{
+  "questionId": "q448",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "En cas de retard dans le paiement d’une obligation de somme d’argent, sont dus des intérêts au taux légal à compter de la mise en demeure. Le créancier n’a pas à justifier d’une perte. Si le retard lui cause, par mauvaise foi du débiteur, un préjudice distinct, il peut obtenir des dommages et intérêts supplémentaires.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1231-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 169.12993399999687,
+      "vectorSearchMs": 613.2382999999973,
+      "jinaRerankingMs": 278.39572100000805,
+      "mappingMs": 0.06148999999277294,
+      "totalMs": 1060.8697720000055,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01579400000628084,
+      "contextBuilderMs": 0.020737000013468787,
+      "generationMs": 1521.3607619999966,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2582.2786219999834
+    },
+    "judge": {
+      "questionId": "q448",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reprend fidèlement l'article 1231-6 fourni : intérêt au taux légal à compter de la mise en demeure, sans preuve d'une perte, et possibilité de dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant. Toutefois, l'abstention était attendue et la réponse apporte une réponse affirmative au lieu de signaler une insuffisance de périmètre ou de contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article 1231-6 traite précisément des intérêts dus en cas de retard de paiement d’une obligation de somme d’argent. Elle couvre l’ensemble des affirmations de la réponse générée : taux légal, point de départ à la mise en demeure, absence d’obligation de prouver une perte, et dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant."
+    }
+  },
+  "routing": {
+    "answer": "En cas de retard dans le paiement d’une somme d’argent, les intérêts dus correspondent à l’intérêt au taux légal, à compter de la mise en demeure. Le créancier n’a pas à justifier d’une perte.\n\nSi le débiteur a agi de mauvaise foi et a causé un préjudice indépendant du retard, des dommages et intérêts supplémentaires peuvent être accordés.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1231-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1075.403491999983,
+      "routingCalls": 1,
+      "embeddingMs": 187.5600459999987,
+      "vectorSearchMs": 607.2547260000138,
+      "jinaRerankingMs": 265.6512039999943,
+      "mappingMs": 0.026815999997779727,
+      "totalMs": 2135.9304669999983,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010867000004509464,
+      "contextBuilderMs": 0.007844000007025898,
+      "generationMs": 1396.359849999979,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3532.325211999996
+    },
+    "judge": {
+      "questionId": "q448",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reprend fidèlement les règles de l’article 1231-6 figurant dans le contexte : intérêt au taux légal à compter de la mise en demeure, sans preuve de perte, et possibilité de dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant. Toutefois, l’abstention était attendue et la réponse répond au fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique est directement pertinente : elle traite précisément des intérêts dus en cas de retard dans le paiement d'une obligation de somme d'argent. Elle couvre l'ensemble des affirmations importantes de la réponse générée, y compris le taux légal à compter de la mise en demeure, l'absence de nécessité de justifier une perte, et les dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant."
+    }
+  },
+  "failureStage": "abstention"
+}

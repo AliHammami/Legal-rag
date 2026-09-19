@@ -1,0 +1,119 @@
+{
+  "questionId": "q001",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne précise pas la peine de base prévue par l’article 222-1. Il indique seulement les peines aggravées applicables selon les circonstances, pouvant aller de vingt ans de réclusion criminelle à la réclusion criminelle à perpétuité.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-5"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 259.252203,
+      "vectorSearchMs": 2078.6016370000034,
+      "jinaRerankingMs": 309.7372319999995,
+      "mappingMs": 0.033206000000063796,
+      "totalMs": 2647.8366260000003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.37224200000127894,
+      "contextBuilderMs": 0.23378800000136835,
+      "generationMs": 1934.9239860000016,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4583.701788999999
+    },
+    "judge": {
+      "questionId": "q001",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne donne pas la peine de base demandée (quinze ans de réclusion criminelle), mais elle indique correctement que le contexte fourni ne contient pas l’article 222-1 ni cette peine de base. Les affirmations sur les peines aggravées de vingt ans à la perpétuité sont étayées par les articles 222-3 à 222-6 du contexte. Toutefois, puisque l’abstention n’était pas attendue et que la réponse ne répond pas à la question malgré une réponse possible, l’abstention est incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent bien sur l’infraction définie à l’article 222-1, mais uniquement à travers ses aggravations (vingt ans, trente ans ou perpétuité) et ne fournissent pas la peine de base demandée à l’article 222-1. Elles sont donc seulement partiellement pertinentes pour la question directe. En revanche, elles couvrent les affirmations de la réponse générée : elles établissent des peines aggravées selon les circonstances, allant de vingt ans de réclusion criminelle (art. 222-3) à la perpétuité en cas de décès sans intention de le donner (art. 222-6), tandis que l’absence de la peine de base dans le contexte fourni est conforme au corpus présenté."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne précise pas la peine de base prévue par l’article 222-1.\n\nIl indique toutefois que la peine peut être :\n\n- **20 ans de réclusion criminelle** dans les cas de l’article 222-3 ;\n- **30 ans de réclusion criminelle** dans certains cas aggravés ou si les faits ont entraîné une mutilation ou une infirmité permanente ;\n- **la réclusion criminelle à perpétuité** si les tortures ont entraîné la mort de la victime sans intention de la donner.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-5"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 698.2832090000011,
+      "routingCalls": 1,
+      "embeddingMs": 208.48931299999822,
+      "vectorSearchMs": 141.28665000000183,
+      "jinaRerankingMs": 586.5101520000026,
+      "mappingMs": 0.14638900000136346,
+      "totalMs": 1634.822168000006,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017786999997042585,
+      "contextBuilderMs": 0.0628839999990305,
+      "generationMs": 2406.8473830000003,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4041.7791089999955
+    },
+    "judge": {
+      "questionId": "q001",
+      "correctness": 0,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la peine de base demandée par l'article 222-1, qui est de quinze ans de réclusion criminelle. Elle décrit correctement des peines aggravées figurant dans le contexte et signale explicitement que la peine de base n'y est pas précisée. Toutefois, puisque l'abstention n'était pas attendue et qu'elle ne répond pas à la question, l'abstention est incorrecte. Ses affirmations sur les circonstances aggravées sont supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent directement sur les aggravations de l’infraction définie à l’article 222-1, mais ne fournissent pas le texte de cet article ni la peine de base demandée (quinze ans). Elles sont donc seulement partiellement pertinentes pour répondre à la question. En revanche, elles couvrent les affirmations de la réponse générée : vingt ans selon l’article 222-3, trente ans dans les hypothèses des articles 222-3, 222-4 ou 222-5, et perpétuité en cas de mort sans intention de la donner selon l’article 222-6. L’absence, dans les extraits, de la peine de base de l’article 222-1 est également cohérente avec son constat."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,119 @@
+{
+  "questionId": "q440",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La juridiction compétente dépend de la situation :\n\n- **Procédure concernant un commerçant ou un artisan** : le **tribunal de commerce**.\n- **Procédure concernant une personne qui n’est ni commerçante ni artisane** : le **tribunal judiciaire**.\n- **Litige relatif à la fixation du prix d’un bail révisé ou renouvelé** : le **président du tribunal judiciaire** du lieu où se situe l’immeuble.\n- **Autres contestations relatives au bail** : le **tribunal judiciaire** du lieu de situation de l’immeuble.\n- Pour l’application de la deuxième phrase de l’article L. 420-7, la **cour d’appel de Paris** est compétente.\n\nLe contexte ne précise toutefois pas la nature exacte du litige ; il ne permet donc pas de désigner une juridiction unique.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R420-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R145-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 548.5930410000001,
+      "vectorSearchMs": 866.7090680000001,
+      "jinaRerankingMs": 301.4832500000002,
+      "mappingMs": 0.26824200000010023,
+      "totalMs": 1717.6765429999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.21654299999954674,
+      "contextBuilderMs": 0.470459000000119,
+      "generationMs": 3167.153195,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4885.758498
+    },
+    "judge": {
+      "questionId": "q440",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question ne fournit aucun fait permettant d’identifier le régime juridique applicable. La réponse énumère des hypothèses issues du contexte et constate finalement qu’aucune juridiction unique ne peut être désignée, mais elle tente néanmoins de répondre au lieu de s’abstenir clairement. Les énoncés conditionnels sont globalement appuyés par les extraits fournis, mais ne permettent pas de répondre à la question telle qu’elle est posée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources présentent plusieurs règles de compétence dépendant de régimes et de faits distincts (procédure collective selon l’activité du débiteur, contestations de bail commercial, application de l’article L. 420-7). Elles ne permettent pas d’identifier une juridiction unique faute de précisions dans la question, mais elles sont suffisamment pertinentes pour illustrer que la compétence varie selon la nature du litige. Les affirmations conditionnelles de la réponse sont, dans l’ensemble, directement couvertes par les articles L. 621-2, R. 145-23 et R. 420-5 ; les annexes confirment en outre les juridictions désignées dans le cadre de l’article L. 420-7."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de déterminer une juridiction unique : cela dépend de la nature de la procédure.\n\n- **Procédure concernant une personne qui n’est ni commerçante ni artisane** : tribunal judiciaire de Paris, ou tribunal judiciaire dans le ressort du tribunal supérieur d’appel de Saint-Pierre.\n- **Procédure concernant une personne commerçante ou artisane** : tribunal de commerce de Paris, ou tribunal de commerce dans le ressort du tribunal supérieur d’appel de Saint-Pierre.\n- **Procédure collective** : tribunal de commerce si le débiteur exerce une activité commerciale ou artisanale ; tribunal judiciaire dans les autres cas.\n- **Fixation du prix d’un bail révisé ou renouvelé** : président du tribunal judiciaire du lieu de situation de l’immeuble.\n- **Autres contestations relatives au bail** : tribunal judiciaire du lieu de situation de l’immeuble.\n- **Pour l’application de la deuxième phrase de l’article L. 420-7** : cour d’appel de Paris.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R420-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R145-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1334.267176999998,
+      "routingCalls": 1,
+      "embeddingMs": 197.44633299999987,
+      "vectorSearchMs": 627.1741430000002,
+      "jinaRerankingMs": 291.02796699999817,
+      "mappingMs": 0.022358999998687068,
+      "totalMs": 2449.980671999998,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015598000001773471,
+      "contextBuilderMs": 0.05831000000034692,
+      "generationMs": 2891.405298999998,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5341.480814999999
+    },
+    "judge": {
+      "questionId": "q440",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question est insuffisamment précisée pour désigner une juridiction unique. La réponse le signale explicitement et fournit, de manière conditionnelle, les règles de compétence correspondant aux différentes hypothèses présentes dans le contexte. Ces affirmations sont toutes étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La question étant indéterminée sans précision sur la procédure concernée, les sources sont directement pertinentes pour justifier l'absence de juridiction unique et présenter les compétences conditionnelles. Les annexes 9-4 et 9-5 couvrent les procédures de l'article L. 420-7 selon la qualité de la personne, L. 621-2 la procédure collective, R. 145-23 les litiges de bail, et R. 420-5 la compétence de la cour d'appel de Paris. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

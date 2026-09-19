@@ -1,0 +1,103 @@
+{
+  "questionId": "q484",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’accès au barreau.\n\nIl mentionne uniquement des conditions relatives à l’accès au stage professionnel et à l’inscription sur la liste des mandataires judiciaires, notamment certains diplômes, conditions de nationalité, d’honorabilité et d’expérience.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R812-15"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L812-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.39629699999932,
+      "vectorSearchMs": 585.577646000078,
+      "jinaRerankingMs": 374.3877700000303,
+      "mappingMs": 0.031995999976061285,
+      "totalMs": 1155.4676610000897,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010397000005468726,
+      "contextBuilderMs": 0.02194700005929917,
+      "generationMs": 1605.3966469999868,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2760.908582000062
+    },
+    "judge": {
+      "questionId": "q484",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement de répondre aux conditions d'accès au barreau, qui ne sont pas couvertes par le contexte. Elle décrit correctement que les extraits concernent le stage professionnel et les mandataires judiciaires, non la profession d'avocat."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur l’accès au barreau, mais elles sont directement pertinentes pour justifier l’abstention : elles concernent explicitement l’examen et le stage des mandataires judiciaires ainsi que leur inscription sur une liste, avec des exigences de diplômes, nationalité, honorabilité et expérience. Elles couvrent donc les constats formulés par la réponse sur le périmètre insuffisant du contexte."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’accès au barreau.\n\nIl mentionne uniquement les conditions d’accès à l’examen d’entrée au stage professionnel et à l’inscription sur la liste des mandataires judiciaires, notamment certains diplômes, l’absence de condamnation ou de sanctions incompatibles, ainsi qu’une condition de nationalité.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R812-15"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L812-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 923.4255400000839,
+      "routingCalls": 1,
+      "embeddingMs": 189.91897200001404,
+      "vectorSearchMs": 599.8850950000342,
+      "jinaRerankingMs": 347.67606099997647,
+      "mappingMs": 0.08432599995285273,
+      "totalMs": 2061.0181390000507,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015075000002980232,
+      "contextBuilderMs": 0.022449000040069222,
+      "generationMs": 1729.3625440000324,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3790.43074900005
+    },
+    "judge": {
+      "questionId": "q484",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de fournir les conditions d’accès au barreau, car le contexte ne porte que sur les mandataires judiciaires et leur stage professionnel. Cette abstention est justifiée, et la description des thèmes effectivement présents dans le contexte est exacte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources portent sur l’accès au stage professionnel et l’inscription des mandataires judiciaires, non sur l’accès au barreau. Elles sont donc pertinentes pour justifier l’abstention et le constat de hors périmètre. Elles couvrent les affirmations de la réponse concernant les diplômes, les conditions d’honorabilité et de sanctions, la nationalité, ainsi que l’absence d’éléments relatifs au barreau."
+    }
+  },
+  "failureStage": "none"
+}

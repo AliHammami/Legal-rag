@@ -1,0 +1,95 @@
+{
+  "questionId": "q201",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 244-1, les articles suivants s’appliquent aux sociétés par actions simplifiées :\n\n- les articles **L. 242-1 à L. 242-6** ;\n- l’article **L. 242-8** ;\n- les articles **L. 242-17 à L. 242-24** ;\n- pour les commissaires aux comptes, les articles **L. 242-20, L. 821-8 et L. 821-9**.\n\nLes peines prévues pour le **président, les administrateurs ou les directeurs généraux des sociétés anonymes** sont applicables au **président et aux dirigeants des sociétés par actions simplifiées**. Le contexte ne précise toutefois pas la nature ni le montant de ces peines.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.01499099982902,
+      "vectorSearchMs": 615.276581000071,
+      "jinaRerankingMs": 526.6125219999813,
+      "mappingMs": 0.033125000074505806,
+      "totalMs": 1350.970863000024,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010570999700576067,
+      "contextBuilderMs": 0.016449000220745802,
+      "generationMs": 2433.939134999644,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3784.9453280000016
+    },
+    "judge": {
+      "questionId": "q201",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement les articles visés par L. 244-1 et indique correctement l’extension aux dirigeants de SAS des peines prévues pour les dirigeants de SA. Elle ajoute à juste titre le régime applicable aux commissaires aux comptes, également expressément prévu dans le contexte, et précise sans spéculer que la nature et le montant des peines ne sont pas fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énumère expressément les articles applicables aux SAS, précise l’application aux commissaires aux comptes et prévoit l’extension aux président et dirigeants de SAS des peines prévues pour les dirigeants de SA. Elle couvre également le constat selon lequel la nature et le montant des peines ne sont pas détaillés dans le contexte. La source 2 est complémentaire mais non nécessaire à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article **L. 244-1 du Code de commerce**, les articles suivants s’appliquent aux sociétés par actions simplifiées :\n\n- **L. 242-1 à L. 242-6** ;\n- **L. 242-8** ;\n- **L. 242-17 à L. 242-24** ;\n- **L. 242-20** ;\n- **L. 821-8 et L. 821-9**, pour les commissaires aux comptes.\n\nLes peines prévues pour le **président, les administrateurs et les directeurs généraux des sociétés anonymes** sont applicables au **président et aux dirigeants des sociétés par actions simplifiées**.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1893.683796999976,
+      "routingCalls": 1,
+      "embeddingMs": 221.50461299996823,
+      "vectorSearchMs": 173.29852499999106,
+      "jinaRerankingMs": 506.4908590000123,
+      "mappingMs": 0.02915700012817979,
+      "totalMs": 2795.039518999867,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013744999654591084,
+      "contextBuilderMs": 0.012284999713301659,
+      "generationMs": 1510.0929700001143,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4305.165986999869
+    },
+    "judge": {
+      "questionId": "q201",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les articles applicables aux SAS et la règle de transposition des peines aux président et dirigeants. Elle ajoute correctement, conformément au contexte, que L. 242-20, L. 821-8 et L. 821-9 concernent les commissaires aux comptes des SAS."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L. 244-1 est directement pertinente et couvre intégralement les articles applicables aux SAS ainsi que l'application des peines aux président et dirigeants. Elle couvre aussi précisément l'ajout concernant L. 242-20, L. 821-8 et L. 821-9, en précisant qu'ils visent les commissaires aux comptes. La source L. 244-4 est pertinente de manière complémentaire mais n'est pas nécessaire aux affirmations de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

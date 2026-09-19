@@ -1,0 +1,87 @@
+{
+  "questionId": "q379",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne reproduit ni le contenu de l’article 1891 ni le liminaire du Code de la consommation. Il ne permet donc pas de déterminer précisément quelle responsabilité le prêteur encourt lorsque l’emprunteur est un consommateur.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1898"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 166.424630000256,
+      "vectorSearchMs": 963.7855719998479,
+      "jinaRerankingMs": 307.27275499980897,
+      "mappingMs": 0.10569600015878677,
+      "totalMs": 1437.6266739992425,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01574699953198433,
+      "contextBuilderMs": 0.019562999717891216,
+      "generationMs": 1549.4063869994134,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2987.07746299915
+    },
+    "judge": {
+      "questionId": "q379",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de répondre alors que le contexte permet au moins d’indiquer que, dans le prêt de consommation, le prêteur est tenu de la responsabilité établie par l’article 1891 pour le prêt à usage. Elle omet également la définition du consommateur attendue. Son constat selon lequel le contenu de l’article 1891 et du liminaire n’est pas reproduit est exact, mais sa conclusion d’impossibilité de répondre est trop catégorique au regard de l’article 1898 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "La source reproduit directement l’article 1898 et permet d’établir que le prêteur, dans un prêt de consommation, est tenu de la responsabilité prévue à l’article 1891 pour le prêt à usage. Elle ne contient toutefois ni le texte de l’article 1891 ni le liminaire du code de la consommation. Elle soutient donc le constat de la réponse selon lequel ces contenus ne sont pas reproduits, mais ne justifie pas entièrement l’abstention, puisque l’article 1898 permet déjà de répondre partiellement sur la responsabilité encourue."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne reproduit pas l’article 1891 ni le liminaire du Code de la consommation. Il permet seulement d’affirmer que, dans un prêt de consommation, le prêteur est tenu de la responsabilité prévue par l’article 1891. La nature précise de cette responsabilité, notamment lorsque l’emprunteur est un consommateur, ne peut donc pas être déterminée à partir des éléments fournis.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1898"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1123.35513000004,
+      "routingCalls": 1,
+      "embeddingMs": 182.6655810000375,
+      "vectorSearchMs": 249.07323199976236,
+      "jinaRerankingMs": 320.6791400006041,
+      "mappingMs": 0.029582000337541103,
+      "totalMs": 1875.8411530004814,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010611999779939651,
+      "contextBuilderMs": 0.00993299949914217,
+      "generationMs": 1924.19974800013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3800.069431000389
+    },
+    "judge": {
+      "questionId": "q379",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, conformément au seul extrait fourni, que le prêteur est tenu de la responsabilité prévue par l’article 1891. Elle omet toutefois l’élément attendu du liminaire du code de la consommation, à savoir la définition du consommateur, et ne formule pas pleinement le lien demandé. Ses affirmations sont néanmoins strictement étayées par le contexte : celui-ci ne contient ni le texte de l’article 1891 ni le liminaire. Elle répond au moins partiellement à la question et ne constitue pas une abstention totale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1898 et établit explicitement que le prêteur, dans un prêt de consommation, est tenu de la responsabilité de l’article 1891. Elle ne fournit toutefois ni le contenu de l’article 1891 ni le liminaire du code de la consommation, de sorte qu’elle est insuffisante pour traiter intégralement la qualification de consommateur demandée. Elle couvre néanmoins les affirmations de la réponse générée : seule la règle de renvoi à l’article 1891 peut être affirmée et les textes absents ne permettent pas d’en préciser davantage la portée."
+    }
+  },
+  "failureStage": "generation"
+}

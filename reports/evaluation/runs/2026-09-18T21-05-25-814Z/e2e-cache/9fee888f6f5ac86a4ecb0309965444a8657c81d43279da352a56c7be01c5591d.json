@@ -1,0 +1,95 @@
+{
+  "questionId": "q101",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du chapitre s’appliquent à **toutes les sociétés civiles**.\n\nIl peut toutefois y être dérogé lorsqu’une société civile est soumise à un **statut légal particulier**, qui prévoit des règles spécifiques. Par ailleurs, les dispositions du chapitre s’appliquent à toutes les sociétés sauf dispositions contraires de la loi liées à leur **forme ou à leur objet**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1845"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1834"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 152.33757700002752,
+      "vectorSearchMs": 618.5524729997851,
+      "jinaRerankingMs": 487.4400700000115,
+      "mappingMs": 0.035887000150978565,
+      "totalMs": 1258.4192949999124,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010861000046133995,
+      "contextBuilderMs": 0.012034999905154109,
+      "generationMs": 1254.965571000008,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2513.41835599998
+    },
+    "judge": {
+      "questionId": "q101",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la règle principale et l’exception tenant au statut légal particulier de certaines sociétés civiles. Elle ajoute toutefois une formulation sur toutes les sociétés et les dispositions contraires liées à la forme ou à l’objet, issue d’un autre article : cette précision est supportée par le contexte mais est peu pertinente et peut créer une confusion sur le périmètre exact de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question : elle vise toutes les sociétés civiles et prévoit la dérogation par un statut légal particulier. La source 2 étaye également l’ajout de la réponse relatif aux dispositions légales contraires tenant à la forme ou à l’objet, même si cet ajout élargit le périmètre au-delà des seules sociétés civiles."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du chapitre s’appliquent à **toutes les sociétés civiles**.\n\nIl peut toutefois y être dérogé lorsqu’un **statut légal particulier**, applicable à certaines sociétés civiles, prévoit des règles différentes. Plus généralement, une dérogation peut résulter de la loi en raison de la **forme** ou de l’**objet** de la société.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1845"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1834"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1272.4389849998988,
+      "routingCalls": 1,
+      "embeddingMs": 200.40873699984513,
+      "vectorSearchMs": 61.02346399985254,
+      "jinaRerankingMs": 497.3468869999051,
+      "mappingMs": 0.05904500000178814,
+      "totalMs": 2031.305839000037,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015457999892532825,
+      "contextBuilderMs": 0.01796300010755658,
+      "generationMs": 1757.8491350000259,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3789.208398999879
+    },
+    "judge": {
+      "questionId": "q101",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la règle de l’article 1845 : application à toutes les sociétés civiles, sauf dérogation issue d’un statut légal particulier. La précision sur la forme ou l’objet est compatible avec le contexte, qui indique que le caractère civil dépend de l’absence d’attribution par la loi d’un autre caractère selon la forme, la nature ou l’objet."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en prévoyant l’application à toutes les sociétés civiles, sauf dérogation par un statut légal particulier. Elle couvre aussi la précision relative à la forme ou à l’objet, en indiquant que le caractère civil dépend de l’absence d’une qualification légale différente pour ces motifs. La source 2 appuie également la formulation générale sur les dérogations légales liées à la forme ou à l’objet."
+    }
+  },
+  "failureStage": "none"
+}

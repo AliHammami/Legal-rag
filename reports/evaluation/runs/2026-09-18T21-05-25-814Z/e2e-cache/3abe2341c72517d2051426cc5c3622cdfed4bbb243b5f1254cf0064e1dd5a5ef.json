@@ -1,0 +1,87 @@
+{
+  "questionId": "q262",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les montants maximaux des amendes administratives sont :\n\n- **Manquements au d du 3 et au 8 de l’article 5** du règlement (UE) n° 260/2012 :\n  - **3 000 €** pour une personne physique ;\n  - **15 000 €** pour une personne morale.\n\n- **Manquements aux articles 8 et 9** du même règlement :\n  - **75 000 €** pour une personne physique ;\n  - **375 000 €** pour une personne morale.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L362-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.13941900013015,
+      "vectorSearchMs": 711.1430480000563,
+      "jinaRerankingMs": 281.21753500029445,
+      "mappingMs": 0.04409400001168251,
+      "totalMs": 1201.622771000024,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01063700020313263,
+      "contextBuilderMs": 0.00892899977043271,
+      "generationMs": 1351.012872000225,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2552.667893999722
+    },
+    "judge": {
+      "questionId": "q262",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement les plafonds applicables aux deux catégories de manquements demandées, avec la distinction personnes physiques/personnes morales. Toutes les affirmations sont explicitement supportées par l'article L362-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L362-1 est directement pertinente : elle fixe expressément les plafonds des amendes administratives pour les manquements visés au règlement (UE) n° 260/2012. Elle couvre intégralement les quatre montants et les deux catégories de manquements énoncés dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les amendes administratives maximales sont les suivantes :\n\n- **Manquements au d du 3 et au 8 de l’article 5** du règlement :\n  - **3 000 €** pour une personne physique ;\n  - **15 000 €** pour une personne morale.\n\n- **Manquements aux articles 8 et 9** du règlement :\n  - **75 000 €** pour une personne physique ;\n  - **375 000 €** pour une personne morale.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L362-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 941.8712750002742,
+      "routingCalls": 1,
+      "embeddingMs": 240.748563000001,
+      "vectorSearchMs": 134.36307699978352,
+      "jinaRerankingMs": 325.44170599989593,
+      "mappingMs": 0.03506399970501661,
+      "totalMs": 1642.4927219999954,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009983999654650688,
+      "contextBuilderMs": 0.008875000290572643,
+      "generationMs": 1819.5025089997798,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3462.023344000336
+    },
+    "judge": {
+      "questionId": "q262",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux catégories de manquements visées et les quatre plafonds d’amende correspondants. Ces éléments sont explicitement établis par le contexte fourni. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L362-1 vise directement les manquements au règlement (UE) n° 260/2012 et énonce expressément les plafonds d’amende pour les personnes physiques et morales dans les deux catégories reprises par la réponse générée. Elle couvre l’ensemble des affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

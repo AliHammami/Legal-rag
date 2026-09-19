@@ -1,0 +1,95 @@
+{
+  "questionId": "q154",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article **L6261-2** prévoit que, dans les départements de la **Moselle, du Bas-Rhin et du Haut-Rhin**, les modalités particulières d’application du livre sur l’apprentissage sont déterminées par **décret en Conseil d’État**, afin de tenir compte des circonstances locales.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6522-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6261-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 190.0980199999176,
+      "vectorSearchMs": 620.1523040002212,
+      "jinaRerankingMs": 504.3634230000898,
+      "mappingMs": 0.04201199999079108,
+      "totalMs": 1314.691397999879,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01459799986332655,
+      "contextBuilderMs": 0.012543000280857086,
+      "generationMs": 2155.0685300002806,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3469.798446999863
+    },
+    "judge": {
+      "questionId": "q154",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’article L6261-2, les départements concernés et l’autorité compétente (un décret en Conseil d’État), conformément à la référence et explicitement au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle identifie l’article L6261-2, les départements concernés (Moselle, Bas-Rhin, Haut-Rhin), l’adaptation des modalités d’application et l’autorité compétente (décret en Conseil d’État), y compris le motif des circonstances locales. Elle couvre toutes les affirmations importantes de la réponse générée. La source 1 est moins pertinente pour le cas demandé mais ne nuit pas à la couverture."
+    }
+  },
+  "routing": {
+    "answer": "- **Article L. 6522-1** prévoit, pour certains territoires ultramarins, que les modalités particulières d’application du livre II relatif à l’apprentissage sont déterminées **par décret**.\n- **Article L. 6261-2** prévoit, pour la Moselle, le Bas-Rhin et le Haut-Rhin, que ces modalités sont déterminées **par décret en Conseil d’État**, afin de tenir compte des circonstances locales.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6522-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6261-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 920.579606000334,
+      "routingCalls": 1,
+      "embeddingMs": 199.41606099996716,
+      "vectorSearchMs": 243.5642639999278,
+      "jinaRerankingMs": 541.3806449999101,
+      "mappingMs": 0.02765099983662367,
+      "totalMs": 1904.9956959998235,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012577999848872423,
+      "contextBuilderMs": 0.011847000103443861,
+      "generationMs": 2141.2063239999115,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4046.2340739998035
+    },
+    "judge": {
+      "questionId": "q154",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l'article L. 6261-2 pour la Moselle, le Bas-Rhin et le Haut-Rhin, ainsi que la décision par décret en Conseil d'État afin de tenir compte des circonstances locales. La mention supplémentaire de l'article L. 6522-1 est exacte et intégralement étayée par le contexte, sans contredire la réponse attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : la source 2 répond précisément à la question sur la Moselle, le Bas-Rhin et le Haut-Rhin et le décret en Conseil d'État, tandis que la source 1 étaye correctement la précision additionnelle relative à certains territoires ultramarins. Toutes les affirmations importantes de la réponse générée sont couvertes par les extraits fournis."
+    }
+  },
+  "failureStage": "none"
+}

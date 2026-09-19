@@ -1,0 +1,95 @@
+{
+  "questionId": "q286",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La lettre de change est régie par les articles **L. 511-1 à L. 511-81 du Code de commerce**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L132-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.22917999979109,
+      "vectorSearchMs": 577.9779770001769,
+      "jinaRerankingMs": 267.0282930005342,
+      "mappingMs": 0.020484999753534794,
+      "totalMs": 1053.285251999274,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07748300023376942,
+      "contextBuilderMs": 0.009955999441444874,
+      "generationMs": 1063.3982370002195,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2116.7802140004933
+    },
+    "judge": {
+      "questionId": "q286",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la règle énoncée dans le contexte et la référence : la lettre de change est régie par les articles L. 511-1 à L. 511-81 du code de commerce."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L. 132-1 directement visé par la question et énonce expressément que la lettre de change est régie par les articles L. 511-1 à L. 511-81 du code de commerce. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas l’article **L. 132-1**. Il ne permet donc pas d’identifier les articles qu’il désigne comme régissant la lettre de change.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-29"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L512-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1302.7768129995093,
+      "routingCalls": 1,
+      "embeddingMs": 207.97797099966556,
+      "vectorSearchMs": 169.60763399954885,
+      "jinaRerankingMs": 256.04016000032425,
+      "mappingMs": 0.023378999903798103,
+      "totalMs": 1936.4501680005342,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01081099919974804,
+      "contextBuilderMs": 0.019030999392271042,
+      "generationMs": 1296.0537390001118,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3232.542469999753
+    },
+    "judge": {
+      "questionId": "q286",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la plage d’articles demandée (L. 511-1 à L. 511-81) et refuse de répondre alors qu’une réponse était attendue. Son constat sur l’absence de l’article L. 132-1 dans le contexte est exact et entièrement fondé sur ce contexte, mais il ne répond pas à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent directement sur la lettre de change (L. 511-1 et L. 511-29) et sur un renvoi à diverses dispositions relatives à celle-ci (L. 512-3). Elles ne reproduisent toutefois pas l'article L. 132-1 ni son renvoi complet, ce qui rend la réponse directe à la question insuffisamment étayée. En revanche, elles couvrent le constat central de la réponse générée : l'article L. 132-1 n'est pas présent dans le contexte fourni, de sorte que les articles précisément désignés par cet article ne peuvent pas être identifiés à partir des sources."
+    }
+  },
+  "failureStage": "generation"
+}

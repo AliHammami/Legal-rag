@@ -1,0 +1,111 @@
+{
+  "questionId": "q260",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article **L353-1** punit de **six mois d’emprisonnement et de 7 500 euros d’amende** les faits suivants :\n\n1. **Exercer le démarchage bancaire ou financier sans avoir obtenu une carte de démarchage**, lorsque l’activité est réalisée dans les conditions prévues à l’article L. 341-8 ;\n\n2. **Ne pas communiquer à la personne démarchée les informations et documents requis**, dans le cadre prévu au septième alinéa de l’article L. 341-1 ;\n\n3. **Ne pas respecter les règles relatives à la signature du contrat** prévues à l’article L. 341-14 ;\n\n4. **Ne pas permettre à la personne démarchée d’exercer son droit de rétractation**, sous réserve des dérogations prévues à l’article L. 341-16 ;\n\n5. **Recevoir des ordres ou des fonds avant l’expiration du délai de quarante-huit heures**, dans les conditions prévues au IV de l’article L. 341-16, pour la fourniture de certains services d’investissement ou concernant des instruments financiers.\n\nLe contexte fourni commence également un **6°**, mais son contenu est tronqué (« définie aux 8° ou… »). Il ne permet donc pas d’en exposer précisément le cas.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R353-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-61"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-41"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 244.0293229999952,
+      "vectorSearchMs": 608.2859229999594,
+      "jinaRerankingMs": 310.5330880000256,
+      "mappingMs": 0.029059999622404575,
+      "totalMs": 1162.9163529998623,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01003899984061718,
+      "contextBuilderMs": 0.025831999722868204,
+      "generationMs": 2829.5011829999276,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3992.4621580000967
+    },
+    "judge": {
+      "questionId": "q260",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les cinq cas entièrement visibles à l’article L353-1 et la peine commune de six mois d’emprisonnement et 7 500 euros d’amende. Elle signale explicitement que le 6° est tronqué dans le contexte, sans en inventer le contenu. La réponse est donc intégralement fondée sur le contexte, mais légèrement incomplète quant à l’ensemble potentiel des cas de l’article, en raison de ce 6° non accessible."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L353-1 et couvre la peine commune ainsi que les cinq cas détaillés dans la réponse. Elle montre aussi que le 6° est effectivement tronqué, ce qui étaye le constat d’impossibilité d’en préciser le contenu. Les autres sources ne sont pas nécessaires à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "L’article **L. 353-1** sanctionne de **six mois d’emprisonnement et 7 500 euros d’amende** les faits suivants :\n\n1. Exercer une activité de démarchage bancaire ou financier sans avoir obtenu la carte de démarchage requise lorsque l’activité est réalisée dans les conditions de l’article L. 341-8 ;\n\n2. Ne pas communiquer à la personne démarchée les informations et documents prévus par l’article L. 341-12 et l’avant-dernier alinéa de l’article L. 341-6, dans le cadre visé au septième alinéa de l’article L. 341-1 ;\n\n3. Ne pas respecter les règles relatives à la signature du contrat prévues par l’article L. 341-14 ;\n\n4. Ne pas permettre à la personne démarchée d’exercer son délai de rétractation prévu par l’article L. 341-16, sauf dérogations prévues par ce texte ;\n\n5. Recevoir des ordres ou des fonds avant l’expiration du délai de quarante-huit heures prévu à l’article L. 341-16, dans le cadre du démarchage portant sur certains services d’investissement ou instruments financiers.\n\nLe contexte fourni commence également le **6°**, mais il est incomplet. Il ne permet donc pas d’énumérer l’ensemble des cas prévus par l’article L. 353-1.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R353-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.4168859999627,
+      "routingCalls": 1,
+      "embeddingMs": 242.72179400036111,
+      "vectorSearchMs": 261.1488699996844,
+      "jinaRerankingMs": 316.4846900003031,
+      "mappingMs": 0.0653800000436604,
+      "totalMs": 1742.8886609999463,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02094199974089861,
+      "contextBuilderMs": 0.030230999924242496,
+      "generationMs": 3187.891172000207,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4930.839219999965
+    },
+    "judge": {
+      "questionId": "q260",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les cinq cas explicitement énumérés dans le contexte et la peine commune de six mois d’emprisonnement et 7 500 euros d’amende. Chaque affirmation importante est directement étayée par l’article L. 353-1 fourni. Elle signale à juste titre que le 6° est tronqué dans le contexte, sans inventer son contenu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 353-1 et couvre la peine commune ainsi que les cinq cas détaillés dans la réponse (carte de démarchage, informations/documents, signature, rétractation, réception d’ordres ou fonds avant 48 heures). Elle permet aussi d’étayer le constat que le 6° est tronqué dans l’extrait fourni. Les autres sources ne sont pas nécessaires à ces affirmations."
+    }
+  },
+  "failureStage": "none"
+}

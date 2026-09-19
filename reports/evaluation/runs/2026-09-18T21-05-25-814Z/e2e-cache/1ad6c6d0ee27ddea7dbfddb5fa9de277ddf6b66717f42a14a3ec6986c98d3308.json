@@ -1,0 +1,95 @@
+{
+  "questionId": "q257",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 317-1 du Code monétaire et financier :\n\n- **Agents habilités** : il s’agit notamment des agents de la Banque de France commissionnés par le ministre chargé de l’économie, ainsi que des agents mentionnés à l’article L. 511-21 du code de la consommation.\n- **Mission** : ils peuvent rechercher et constater, par procès-verbal, les infractions aux articles **L. 312-1-1, L. 312-1-2, L. 312-1-4-1, L. 314-12, L. 314-13 et L. 315-6 à L. 315-8** du Code monétaire et financier.\n- **Champ territorial et professionnel** : cette compétence s’étend également aux infractions commises en France par les agents et succursales de prestataires de services de paiement établis dans un autre État membre de l’Union européenne ou de l’Espace économique européen.\n- **Pouvoirs d’enquête** :\n  - accès à tous les locaux à usage professionnel ;\n  - demande de communication des livres et autres documents professionnels ;\n  - possibilité d’en prendre copie ;\n  - recueil de renseignements et justifications, sur convocation ou sur place.\n- **Conditions d’accès** : l’accès aux locaux ne peut avoir lieu qu’entre **8 heures et 20 heures**.\n- **Opposition du responsable des lieux** : en cas d’opposition, la visite nécessite l’autorisation du **procureur de la République du tribunal judiciaire** dans le ressort duquel se trouvent les locaux.\n- **Secret professionnel** : il ne peut pas être opposé à ces agents lorsqu’ils agissent dans le cadre de leurs pouvoirs.\n- **Procès-verbal** : lorsque les infractions sont pénalement sanctionnées, le procès-verbal est transmis au procureur de la République dans les **cinq jours** suivant son établissement. Dans tous les cas, une copie est remise à l’intéressé.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L317-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-21"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.7234550002031,
+      "vectorSearchMs": 620.9158290000632,
+      "jinaRerankingMs": 297.66944199986756,
+      "mappingMs": 0.028278999961912632,
+      "totalMs": 1118.3654899997637,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010805000085383654,
+      "contextBuilderMs": 0.019530000165104866,
+      "generationMs": 3458.38778299978,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4576.795020999853
+    },
+    "judge": {
+      "questionId": "q257",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les agents habilités, les infractions visées, l’extension aux agents et succursales de prestataires établis dans l’UE/EEE, les pouvoirs d’accès, de communication, de copie et de recueil d’informations, la plage horaire, l’autorisation du procureur en cas d’opposition, l’inopposabilité du secret professionnel et les règles de transmission/remise des procès-verbaux. Ces éléments sont tous explicitement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 317-1 et couvre l’ensemble des éléments importants de la réponse : catégories d’agents habilités, infractions visées, compétence concernant certains agents et succursales établis dans l’UE/EEE, accès aux locaux et horaires, communication et copie de documents, recueil de renseignements, autorisation du procureur en cas d’opposition, inopposabilité du secret professionnel, ainsi que transmission et remise des procès-verbaux. Les sources 2 et 3 sont secondaires, mais ne nuisent pas à la pertinence de l’ensemble."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 317-1 du Code monétaire et financier, les agents de la Banque de France commissionnés par le ministre chargé de l’économie :\n\n- sont habilités à rechercher et constater par procès-verbal les infractions aux articles énumérés par le texte, notamment ceux relatifs aux services de paiement et aux instruments de paiement ;\n- peuvent également constater ces infractions lorsqu’elles sont commises par des agents ou succursales françaises de prestataires de services de paiement établis dans un autre État membre de l’Union européenne ou partie à l’accord sur l’Espace économique européen ;\n- peuvent accéder à tous les locaux à usage professionnel, uniquement entre 8 heures et 20 heures ;\n- peuvent demander la communication des livres et de tout document professionnel, en prendre copie, et recueillir les renseignements et justifications nécessaires, sur place ou sur convocation ;\n- ne peuvent effectuer la visite en cas d’opposition du responsable des lieux qu’avec l’autorisation du procureur de la République du tribunal judiciaire dans le ressort duquel se trouvent les locaux ;\n- peuvent agir sans que le secret professionnel puisse leur être opposé dans le cadre de leurs pouvoirs légaux.\n\nLorsque les infractions sont pénalement sanctionnées, les procès-verbaux doivent être transmis au procureur de la République dans les cinq jours suivant leur établissement. Une copie du procès-verbal doit, dans tous les cas, être remise à l’intéressé.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L317-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1004.7513700001873,
+      "routingCalls": 1,
+      "embeddingMs": 236.99373000022024,
+      "vectorSearchMs": 179.27283899998292,
+      "jinaRerankingMs": 383.4398119999096,
+      "mappingMs": 0.03489500004798174,
+      "totalMs": 1804.5269309999421,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015387999825179577,
+      "contextBuilderMs": 0.009056000038981438,
+      "generationMs": 3105.6722840000875,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4910.2329890001565
+    },
+    "judge": {
+      "questionId": "q257",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les pouvoirs, limites et garanties prévus par l’article L. 317-1 : champ de compétence, extension aux agents et succursales de prestataires établis dans l’UE/EEE, accès aux locaux professionnels de 8 h à 20 h, communication et copie des documents, recueil de renseignements, autorisation du procureur en cas d’opposition, inopposabilité du secret professionnel, transmission des procès-verbaux pénalement sanctionnés sous cinq jours et remise d’une copie à l’intéressé. Tous ces éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 317-1 et est donc parfaitement pertinente. Elle couvre l’ensemble des affirmations substantielles de la réponse : qualité des agents, infractions visées et extension aux agents/succursales de prestataires UE/EEE, accès aux locaux professionnels entre 8 h et 20 h, communication et copie de documents, recueil de renseignements, autorisation du procureur en cas d’opposition, inopposabilité du secret professionnel, transmission des procès-verbaux sous cinq jours pour les infractions pénalement sanctionnées et remise d’une copie à l’intéressé."
+    }
+  },
+  "failureStage": "none"
+}

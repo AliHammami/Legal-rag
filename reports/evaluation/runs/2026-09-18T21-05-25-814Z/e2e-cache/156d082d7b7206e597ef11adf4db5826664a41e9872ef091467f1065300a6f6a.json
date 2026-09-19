@@ -1,0 +1,95 @@
+{
+  "questionId": "q403",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les deux articles encadrent des domaines distincts et complémentaires :\n\n- **Secret des affaires :** l’article L151-9 prévoit que le secret ne peut pas être opposé lorsque des salariés divulguent une information à leurs représentants dans le cadre de l’exercice légitime de leurs fonctions, à condition que cette divulgation soit **nécessaire** à cet exercice. Toutefois, l’information demeure protégée à l’égard des autres personnes qui en ont eu connaissance.\n\n- **Égalité professionnelle :** l’article L1142-4 autorise des mesures temporaires prises au seul bénéfice des femmes lorsqu’elles visent à établir l’égalité des chances et à remédier aux inégalités de fait. Ces mesures peuvent être prévues par des dispositions réglementaires, des conventions ou accords collectifs étendus, ou un plan pour l’égalité professionnelle.\n\nAinsi, une divulgation nécessaire du secret des affaires par des salariés à leurs représentants peut être protégée dans le cadre prévu par l’article L151-9. En revanche, l’article L1142-4 n’autorise pas, en lui-même, une divulgation de secrets : il encadre seulement les dispositifs spécifiques destinés à favoriser l’égalité professionnelle.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L151-9"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 217.06741399969906,
+      "vectorSearchMs": 636.0099050002173,
+      "jinaRerankingMs": 277.2716180002317,
+      "mappingMs": 0.01879699993878603,
+      "totalMs": 1130.3946719998494,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010873000137507915,
+      "contextBuilderMs": 0.012330000288784504,
+      "generationMs": 3070.061591000296,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4200.487528000027
+    },
+    "judge": {
+      "questionId": "q403",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les deux régimes : l’inopposabilité du secret en cas de divulgation nécessaire par les salariés à leurs représentants dans l’exercice légitime de leurs fonctions, avec maintien de la protection envers les tiers, et les mesures temporaires au seul bénéfice des femmes visant à corriger des inégalités de fait. Elle précise aussi, à juste titre, que l’article L1142-4 ne constitue pas une autorisation autonome de divulguer des secrets. Toutes les affirmations essentielles sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article L151-9 traite précisément de l'inopposabilité du secret des affaires lors d'une divulgation nécessaire par des salariés à leurs représentants dans l'exercice légitime de leurs fonctions, ainsi que du maintien de la protection envers les tiers ; l'article L1142-4 encadre les mesures temporaires au bénéfice des femmes et leurs modalités. Elles couvrent toutes les affirmations importantes de la réponse générée, y compris la précision selon laquelle L1142-4 porte sur l'égalité professionnelle et non sur une autorisation de divulguer des secrets."
+    }
+  },
+  "routing": {
+    "answer": "Les deux articles encadrent des domaines distincts et ne créent pas, à eux seuls, un lien direct entre la divulgation d’un secret des affaires et les mesures d’égalité professionnelle.\n\n- **Divulgation du secret des affaires** : selon l’article **L151-9 du code de commerce**, le secret n’est pas opposable lorsque des salariés le divulguent à leurs représentants dans le cadre de l’exercice légitime de leurs fonctions, à condition que cette divulgation soit **nécessaire** à cet exercice. L’information demeure toutefois protégée à l’égard des autres personnes qui en auraient connaissance.\n\n- **Égalité professionnelle** : l’article **L1142-4 du code du travail** autorise des mesures temporaires prises au seul bénéfice des femmes afin d’établir l’égalité des chances et de remédier aux inégalités de fait. Ces mesures peuvent résulter de dispositions réglementaires, de conventions ou accords collectifs étendus, ou d’un plan pour l’égalité professionnelle.\n\nAinsi, l’exercice des fonctions représentatives peut justifier une divulgation limitée et nécessaire d’informations protégées, tandis que les mesures favorisant l’égalité professionnelle doivent être mises en œuvre par les instruments prévus par l’article L1142-4. Le contexte ne permet pas d’affirmer que cet article autorise, en lui-même, la divulgation d’un secret des affaires.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L151-9"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 772.4238749993965,
+      "routingCalls": 1,
+      "embeddingMs": 232.4568699998781,
+      "vectorSearchMs": 443.66488299984485,
+      "jinaRerankingMs": 292.63892200030386,
+      "mappingMs": 0.06896599940955639,
+      "totalMs": 1741.2801899993792,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013643000274896622,
+      "contextBuilderMs": 0.014713999815285206,
+      "generationMs": 3319.3549299994484,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5060.670944999903
+    },
+    "judge": {
+      "questionId": "q403",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue justement les deux régimes et précise qu’ils n’établissent pas de lien direct. Elle restitue correctement la dérogation d’opposabilité du secret pour la divulgation nécessaire par les salariés à leurs représentants dans l’exercice légitime des fonctions de ces derniers, ainsi que le maintien de la protection envers les tiers. Elle décrit également correctement les mesures temporaires au bénéfice des femmes et leurs instruments de mise en œuvre. Elle omet seulement le cas distinct de l’obtention du secret dans le cadre du droit à l’information et à la consultation des salariés ou de leurs représentants."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement les articles visés par la question. La source 1 couvre la non-opposabilité du secret lors d’une divulgation par des salariés à leurs représentants, sous les conditions d’exercice légitime des fonctions et de nécessité, ainsi que le maintien de la protection envers les tiers. La source 2 couvre les mesures temporaires au bénéfice des femmes, leur finalité et les trois catégories d’instruments de mise en œuvre. Elles soutiennent donc l’ensemble des affirmations importantes de la réponse, y compris l’absence de lien normatif direct entre les deux régimes, qui résulte du champ distinct des textes fournis."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,99 @@
+{
+  "questionId": "q331",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le tribunal peut ordonner l’affichage et la diffusion du jugement, dans les conditions prévues à l’article 131-35 du Code pénal.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-16"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.1381270000711,
+      "vectorSearchMs": 779.9505249997601,
+      "jinaRerankingMs": 312.66414000000805,
+      "mappingMs": 0.22534900065511465,
+      "totalMs": 1311.018457999453,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02112700045108795,
+      "contextBuilderMs": 0.013563000597059727,
+      "generationMs": 1043.3279849998653,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2354.401944000274
+    },
+    "judge": {
+      "questionId": "q331",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la mesure prévue par l'article L. 451-16 et sa référence aux conditions de l'article 131-35 du code pénal. Elle répond directement à la question et est entièrement fondée sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 451-16, qui vise expressément les condamnations pour les faits punis aux articles L. 451-9 à L. 451-12 et prévoit l'affichage et la diffusion du jugement selon les conditions de l'article 131-35 du code pénal. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer quelle mesure supplémentaire le tribunal peut ordonner pour des faits punis par les articles L. 451-9 à L. 451-12. Ces articles ne sont pas reproduits dans les sources.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L572-16"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L572-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L573-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5799.8435939997435,
+      "routingCalls": 1,
+      "embeddingMs": 378.6084340000525,
+      "vectorSearchMs": 238.73584999982268,
+      "jinaRerankingMs": 313.6723410002887,
+      "mappingMs": 0.021575000137090683,
+      "totalMs": 6730.918388999999,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009897000156342983,
+      "contextBuilderMs": 0.01624399982392788,
+      "generationMs": 1828.835904999636,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8559.788337999955
+    },
+    "judge": {
+      "questionId": "q331",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de répondre alors que la mesure attendue est l'affichage et la diffusion du jugement selon l'article 131-35 du code pénal. Toutefois, son constat selon lequel les articles L. 451-9 à L. 451-12 ne figurent pas dans le contexte est exact : elle ne formule aucune affirmation non supportée par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne reproduisent pas les articles L. 451-9 à L. 451-12 et ne permettent donc pas d’établir directement la mesure applicable à ces faits. La source L. 573-10 mentionne une mesure analogue d’affichage ou diffusion selon l’article 131-35, mais pour un autre ensemble de délits, sans lien explicite avec les articles visés. En revanche, les sources couvrent le constat de la réponse générée selon lequel les articles L. 451-9 à L. 451-12 ne figurent pas dans le contexte fourni."
+    }
+  },
+  "failureStage": "generation"
+}

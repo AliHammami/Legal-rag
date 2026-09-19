@@ -1,0 +1,95 @@
+{
+  "questionId": "q170",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne contient pas le texte de l’article **L. 2262-1**. Il ne permet donc pas d’identifier précisément les personnes tenues de respecter l’application des conventions et accords.\n\nIl indique seulement que, selon l’article **L. 2262-4**, les organisations de salariés, les organisations ou groupements d’employeurs et les employeurs individuellement liés par une convention ou un accord doivent en assurer une exécution loyale.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2262-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 196.57399900024757,
+      "vectorSearchMs": 593.4481690004468,
+      "jinaRerankingMs": 526.1184329995885,
+      "mappingMs": 0.05921600013971329,
+      "totalMs": 1316.231461000163,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019166999962180853,
+      "contextBuilderMs": 0.03417700016871095,
+      "generationMs": 2020.2051639999263,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3336.4999350002035
+    },
+    "judge": {
+      "questionId": "q170",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’identifie pas les personnes tenues par l’article L. 2262-1, alors que la réponse attendue vise tous les signataires ou membres des organisations ou groupements signataires. Elle s’abstient au motif que cet article n’est pas dans le contexte, malgré l’absence d’abstention attendue. Les indications données sur l’article L. 2262-4 sont toutefois fidèles au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les sources portent sur le même régime des conventions et accords collectifs, mais aucune ne contient l’article L. 2262-1 ni n’énonce directement les personnes obligées par cet article. La source L. 2262-4 est pertinente pour l’information subsidiaire donnée dans la réponse, et la source L. 2261-3 concerne l’adhésion aux accords. Les affirmations effectivement formulées sur L. 2262-4 sont couvertes, tandis que l’impossibilité de répondre précisément à L. 2262-1 découle de l’absence de cet article dans les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne reproduit pas l’article **L. 2262-1** et ne permet donc pas de répondre précisément à la question.\n\nIl indique seulement, selon l’article **L. 2262-4**, que les organisations de salariés, les organisations ou groupements d’employeurs et les employeurs individuellement liés par une convention ou un accord doivent en assurer l’exécution loyale.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2262-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.2269180002622,
+      "routingCalls": 1,
+      "embeddingMs": 216.9147060001269,
+      "vectorSearchMs": 294.2190330000594,
+      "jinaRerankingMs": 508.50291799986735,
+      "mappingMs": 0.11940900003537536,
+      "totalMs": 2145.0133609999903,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.026982999872416258,
+      "contextBuilderMs": 0.017250999808311462,
+      "generationMs": 1745.0852640001103,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3890.155826999806
+    },
+    "judge": {
+      "questionId": "q170",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question portant sur l'article L. 2262-1 et ne fournit pas la règle attendue concernant les signataires ou membres des organisations ou groupements signataires. Elle refuse de répondre alors qu'une réponse était attendue. En revanche, ses précisions sur l'article L. 2262-4 sont fidèles au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne reproduit l’article L. 2262-1 demandé, de sorte qu’elles ne permettent pas de répondre directement à la question. La source L. 2262-4 est toutefois pertinente pour justifier le constat que le seul texte fourni porte sur une obligation d’exécution loyale distincte. Elle couvre fidèlement l’affirmation de la réponse concernant les organisations de salariés, les organisations ou groupements d’employeurs et les employeurs individuellement liés."
+    }
+  },
+  "failureStage": "generation"
+}

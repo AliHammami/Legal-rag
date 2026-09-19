@@ -1,0 +1,87 @@
+{
+  "questionId": "q003",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne reproduit pas l’article 224-1 et ne permet donc pas de déterminer les peines selon la durée de la séquestration.\n\nIl indique seulement que, lorsque plusieurs personnes sont détenues ou séquestrées, la peine est de **trente ans de réclusion criminelle**. Toutefois, si elles sont libérées volontairement dans le délai prévu au troisième alinéa de l’article 224-1, la peine est de **dix ans d’emprisonnement**, sauf atteinte à leur intégrité physique mentionnée à l’article 224-2.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "224-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 242.5997239999997,
+      "vectorSearchMs": 994.6850490000033,
+      "jinaRerankingMs": 1985.528836999998,
+      "mappingMs": 0.02860099999816157,
+      "totalMs": 3222.8820820000037,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.11667799999850104,
+      "contextBuilderMs": 0.012180999998236075,
+      "generationMs": 2945.854143000004,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6168.886276000001
+    },
+    "judge": {
+      "questionId": "q003",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’indique pas les peines prévues par l’article 224-1 selon la durée de la séquestration et refuse à tort de répondre alors qu’une réponse était attendue. Les informations supplémentaires sur l’article 224-3 sont correctement reprises et entièrement étayées par le contexte, mais elles ne répondent pas à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 2,
+      "explanation": "La source porte sur l’article 224-3 et non sur les peines de l’article 224-1 selon la durée de la séquestration. Elle étaye correctement les affirmations accessoires relatives à la pluralité de victimes, aux trente ans de réclusion et à la réduction à dix ans en cas de libération volontaire, mais elle ne couvre pas les peines pertinentes de vingt ans et de cinq ans prévues par l’article 224-1."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne reproduit pas l’article 224-1 ni son troisième alinéa. Il permet seulement d’indiquer que :\n\n- la séquestration de plusieurs personnes est punie de **trente ans de réclusion criminelle** ;\n- une libération volontaire dans le délai prévu par l’article 224-1 peut entraîner une peine de **dix ans d’emprisonnement**, sauf atteinte à l’intégrité physique visée à l’article 224-2.\n\nLes différences de peine selon la durée de la séquestration ne peuvent donc pas être déterminées intégralement à partir du contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "224-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1042.2826320000022,
+      "routingCalls": 1,
+      "embeddingMs": 240.1756150000001,
+      "vectorSearchMs": 40.38304100000096,
+      "jinaRerankingMs": 291.794415999997,
+      "mappingMs": 0.3591099999975995,
+      "totalMs": 1615.0495700000029,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02516299999842886,
+      "contextBuilderMs": 0.015132000000448897,
+      "generationMs": 2153.2880579999983,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3768.4039639999974
+    },
+    "judge": {
+      "questionId": "q003",
+      "correctness": 1,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’indique pas les peines demandées par l’article 224-1 selon la durée de séquestration (vingt ans, ou cinq ans d’emprisonnement et 75 000 euros d’amende en cas de libération volontaire avant sept jours). Elle fournit seulement des éléments relatifs à l’article 224-3, qui sont bien présents et correctement repris du contexte, mais ne répond pas à la question. Comme une réponse était attendue, le refus de déterminer la réponse rend l’abstention incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "La source est pertinente de façon indirecte : elle concerne l’infraction de l’article 224-1 et mentionne le délai de libération volontaire, mais elle ne fournit pas le troisième alinéa de l’article 224-1 ni les peines de vingt ans et de cinq ans demandées. Elle couvre toutefois les affirmations reprises dans la réponse sur la peine de trente ans en cas de pluralité de victimes et la peine de dix ans en cas de libération volontaire, ainsi que l’exception relative aux atteintes à l’intégrité physique."
+    }
+  },
+  "failureStage": "generation"
+}

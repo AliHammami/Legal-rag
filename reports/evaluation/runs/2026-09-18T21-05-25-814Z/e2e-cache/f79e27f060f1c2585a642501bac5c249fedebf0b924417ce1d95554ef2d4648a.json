@@ -1,0 +1,95 @@
+{
+  "questionId": "q143",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les contrats d’apprentissage conclus par les entreprises de travail temporaire se caractérisent par :\n\n- une formation répartie entre :\n  - l’entreprise de travail temporaire, dans le cadre des missions de travail temporaire ;\n  - un centre de formation d’apprentis ou une section d’apprentissage ;\n- une durée minimale de six mois pour chaque mission de travail temporaire, cette durée incluant le temps d’enseignement en centre de formation lié à la mission ;\n- un double encadrement : un maître d’apprentissage dans l’entreprise de travail temporaire et un autre dans l’entreprise utilisatrice ;\n- la mention, dans le contrat, du nom du maître d’apprentissage de l’entreprise de travail temporaire et de la durée de son expérience dans ce type d’entreprise.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6226-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R6226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.68436399986967,
+      "vectorSearchMs": 596.0997309996746,
+      "jinaRerankingMs": 553.0818890002556,
+      "mappingMs": 0.029953999910503626,
+      "totalMs": 1343.9272990003228,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011199000291526318,
+      "contextBuilderMs": 0.015710999723523855,
+      "generationMs": 1994.383355999831,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3338.3470060001127
+    },
+    "judge": {
+      "questionId": "q143",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement tous les éléments du contexte : formation partagée entre missions en entreprise et CFA/section d’apprentissage, durée minimale de six mois par mission incluant les enseignements afférents, double tutorat dans l’ETT et l’entreprise utilisatrice, ainsi que les mentions contractuelles relatives au maître d’apprentissage de l’ETT et à son expérience."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article L6226-1 couvre la formation alternée, la durée minimale de chaque mission incluant les enseignements afférents et le double tutorat ; l’article R6226-1 couvre les mentions relatives au maître d’apprentissage de l’entreprise de travail temporaire et à son expérience. Elles couvrent l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les contrats d’apprentissage conclus par une entreprise de travail temporaire se caractérisent par les éléments suivants :\n\n- **Formation partagée** : l’apprenti est formé pour partie dans le cadre de missions de travail temporaire en entreprise et pour partie dans un centre de formation d’apprentis ou une section d’apprentissage.\n- **Durée minimale des missions** : chaque mission effectuée dans le cadre de l’apprentissage doit durer au moins **six mois**. Le temps passé en centre de formation afférent à ces missions est inclus dans cette durée.\n- **Double tutorat** : la fonction tutorale est assurée par :\n  - un maître d’apprentissage dans l’entreprise de travail temporaire ;\n  - un maître d’apprentissage dans l’entreprise utilisatrice.\n- **Mentions obligatoires du contrat** : le contrat doit notamment préciser le nom du maître d’apprentissage désigné dans l’entreprise de travail temporaire ainsi que la durée de son expérience dans ce type d’entreprise.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6226-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R6226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 919.8190029999241,
+      "routingCalls": 1,
+      "embeddingMs": 212.40445700008422,
+      "vectorSearchMs": 243.59624300012365,
+      "jinaRerankingMs": 544.2700930000283,
+      "mappingMs": 0.023951000068336725,
+      "totalMs": 1920.160186999943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010172999929636717,
+      "contextBuilderMs": 0.012086000293493271,
+      "generationMs": 2484.618051999714,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4404.808211000171
+    },
+    "judge": {
+      "questionId": "q143",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments prévus par les articles fournis : formation alternant missions de travail temporaire et CFA/section d’apprentissage, durée minimale de six mois pour chaque mission avec prise en compte du temps d’enseignement afférent, double tutorat dans l’ETT et l’entreprise utilisatrice, ainsi que les mentions contractuelles relatives au maître d’apprentissage de l’ETT et à son expérience. Elle répond directement à la question et est entièrement fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article L. 6226-1 couvre la formation partagée entre missions et CFA/section, la durée minimale de six mois avec inclusion des enseignements afférents, ainsi que le double tutorat ; l'article R. 6226-1 couvre les mentions contractuelles relatives au maître d'apprentissage de l'entreprise de travail temporaire et à son expérience. Elles couvrent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

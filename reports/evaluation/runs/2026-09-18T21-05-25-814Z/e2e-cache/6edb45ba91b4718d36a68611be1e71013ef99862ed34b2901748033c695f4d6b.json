@@ -1,0 +1,87 @@
+{
+  "questionId": "q361",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La formation peut être organisée :\n\n1. par des centres spécialisés directement rattachés aux organisations syndicales représentatives ;\n2. par des instituts internes aux universités ;\n3. par d’autres organismes, lorsque leur spécialisation est assurée totalement ou partiellement en accord avec des organisations syndicales.\n\nPour bénéficier des dispositions de l’article L. 2145-3, ces derniers organismes doivent être agréés par le ministre chargé du travail.\n\nLe contexte fourni ne précise pas la responsabilité des membres des organes de direction des associations impliquées.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.85567300021648,
+      "vectorSearchMs": 1299.297582000494,
+      "jinaRerankingMs": 339.02929999958724,
+      "mappingMs": 0.05036399979144335,
+      "totalMs": 1887.3146190000698,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01994700077921152,
+      "contextBuilderMs": 0.013047999702394009,
+      "generationMs": 2070.4235150003806,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3957.7848030002788
+    },
+    "judge": {
+      "questionId": "q361",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les modalités de formation prévues par l’article L. 2145-2 : centres rattachés aux organisations syndicales représentatives, instituts universitaires et organismes agréés sous conditions. En revanche, elle ne répond pas au volet relatif à la responsabilité des membres des organes dirigeants des associations, alors que cet élément est attendu par la question et figure dans la référence. Cette omission est néanmoins justifiée au regard du contexte effectivement fourni, qui ne contient aucune information sur cette responsabilité ; l’affirmation de l’absence de précision dans le contexte est donc fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L2145-2 est directement pertinente et couvre précisément le volet relatif à l’organisation de la formation syndicale, mais aucune source ne traite de la responsabilité des membres des organes de direction des associations, qui constitue une partie importante de la question. En revanche, toutes les affirmations de la réponse générée sont couvertes : les trois modalités de formation et la condition d’agrément y figurent, et le constat selon lequel le contexte fourni ne précise pas cette responsabilité est exact au regard de l’unique source fournie."
+    }
+  },
+  "routing": {
+    "answer": "La formation peut être assurée :\n\n1. par des centres spécialisés directement rattachés aux organisations syndicales représentatives ;\n2. par des instituts internes aux universités ;\n3. par des organismes dont la spécialisation est assurée totalement ou partiellement en accord avec des organisations syndicales, à condition qu’ils aient reçu l’agrément du ministre chargé du travail pour bénéficier de l’article L. 2145-3.\n\nLe contexte fourni ne précise pas la responsabilité des membres des organes de direction des associations impliquées.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1501.803167000413,
+      "routingCalls": 1,
+      "embeddingMs": 723.2458300003782,
+      "vectorSearchMs": 639.7253019995987,
+      "jinaRerankingMs": 279.41747700050473,
+      "mappingMs": 0.047110999934375286,
+      "totalMs": 3144.278273000382,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01749399956315756,
+      "contextBuilderMs": 0.01710899919271469,
+      "generationMs": 1846.533607000485,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4990.87383300066
+    },
+    "judge": {
+      "questionId": "q361",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les trois modalités de formation prévues par l’article L. 2145-2, y compris la condition d’agrément ministériel pour les organismes concernés. Elle ne répond toutefois pas au volet relatif à la responsabilité des membres des organes dirigeants des associations, qui est un élément essentiel de la question et de la référence. Cette omission est néanmoins explicitement justifiée par l’absence de toute information sur ce point dans le contexte fourni ; les affirmations formulées sont donc entièrement fondées sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L2145-2 est directement pertinente et couvre précisément les modalités de formation exposées : centres rattachés aux organisations syndicales représentatives, instituts internes aux universités et organismes spécialisés agréés par le ministre chargé du travail. Elle ne traite toutefois pas de la responsabilité des membres des organes de direction des associations, qui constitue un volet important de la question. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes par la source, y compris le constat que le contexte fourni ne précise pas cette responsabilité."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,119 @@
+{
+  "questionId": "q414",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon le code de la consommation, le manquement aux obligations d’information précontractuelle est sanctionné par une amende administrative :\n\n- **15 000 € maximum** pour une personne physique et **75 000 €** pour une personne morale lorsque le manquement concerne le **5° de l’article L. 111-1** ;\n- **3 000 € maximum** pour une personne physique et **15 000 €** pour une personne morale lorsqu’il concerne les **1° à 4° et 6° de l’article L. 111-1**, ainsi que les articles **L. 111-2 et L. 111-3**.\n\nL’amende est prononcée selon les conditions prévues au **chapitre II du titre II du livre V**.\n\nLe contexte fourni mentionne également, dans le code du commerce, une amende pouvant atteindre **3 000 € pour une personne physique et 15 000 € pour une personne morale** pour certains manquements aux obligations d’information des articles **L. 616-1 et L. 616-2**. En revanche, il ne précise pas la sanction applicable aux **indications inexactes données pour l’immatriculation** ; cette complémentation ne peut donc pas être déterminée à partir des éléments fournis.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.41581999976188,
+      "vectorSearchMs": 620.7798029994592,
+      "jinaRerankingMs": 247.0467659998685,
+      "mappingMs": 0.043479000218212605,
+      "totalMs": 1045.316753000021,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017709000036120415,
+      "contextBuilderMs": 0.03325100056827068,
+      "generationMs": 3439.876404000446,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4485.256949000061
+    },
+    "judge": {
+      "questionId": "q414",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement, et avec une distinction plus précise, les plafonds d’amende prévus par les articles du code de la consommation présents dans le contexte. Elle ne fournit toutefois pas la sanction du code de commerce attendue pour les indications inexactes ou incomplètes données de mauvaise foi lors de l’immatriculation (4 500 euros et six mois d’emprisonnement), de sorte qu’elle ne répond que partiellement à la question. Son constat selon lequel cette sanction n’est pas déterminable à partir du contexte est fondé : le contexte ne contient pas la disposition correspondante. Toutes ses affirmations substantielles sont supportées par les extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources couvrent directement les deux régimes d’amende administrative du code de la consommation invoqués dans la réponse (articles L. 131-1 et L. 131-1-1), ainsi que la règle relative aux articles L. 616-1 et L. 616-2. Elles ne contiennent toutefois aucune disposition du code de commerce sur les indications inexactes ou incomplètes fournies de mauvaise foi lors de l’immatriculation : une source importante manque donc pour répondre entièrement à la question. Toutes les affirmations substantielles de la réponse générée sont néanmoins étayées par les extraits, y compris le constat prudent que la sanction d’immatriculation ne peut être déterminée à partir du contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Selon le code de la consommation, le manquement aux obligations d’information précontractuelle mentionnées au **5° de l’article L. 111-1** est passible d’une amende administrative pouvant atteindre :\n\n- **15 000 € pour une personne physique** ;\n- **75 000 € pour une personne morale**.\n\nCette amende est prononcée selon les conditions prévues au chapitre II du titre II du livre V.\n\nLe contexte fourni ne contient toutefois aucune disposition du code du commerce relative aux **indications inexactes données pour l’immatriculation**. Il ne permet donc pas de préciser la sanction complémentaire applicable dans ce cas.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1023.2344069993123,
+      "routingCalls": 1,
+      "embeddingMs": 216.75538900028914,
+      "vectorSearchMs": 300.8278890000656,
+      "jinaRerankingMs": 233.60613099951297,
+      "mappingMs": 0.0679320003837347,
+      "totalMs": 1774.5183149995282,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01451099943369627,
+      "contextBuilderMs": 0.02840700000524521,
+      "generationMs": 2629.8059660000727,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4404.3750679995865
+    },
+    "judge": {
+      "questionId": "q414",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse applique le barème de 15 000 € / 75 000 €, qui concerne spécifiquement le 5° de l'article L. 111-1, alors que la réponse attendue vise le barème de 3 000 € / 15 000 € applicable aux obligations visées aux 1° à 4° et 6° ainsi qu'aux articles L. 111-2 et L. 111-3. Elle n'indique pas non plus la sanction du code de commerce demandée (4 500 € d'amende et six mois d'emprisonnement). En revanche, les affirmations qu'elle formule sur le 5° sont entièrement étayées par le contexte, et son constat de l'absence de disposition du code de commerce dans ce contexte est fondé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources du code de la consommation sont pertinentes pour la première partie : la source 3 vise le barème attendu de 3 000 € / 15 000 €, tandis que la source 1 étaye précisément le barème de 15 000 € / 75 000 € invoqué par la réponse pour le seul 5° de l’article L. 111-1. En revanche, aucune source ne porte sur la disposition du code de commerce relative aux déclarations inexactes ou incomplètes pour l’immatriculation : elles sont donc insuffisantes pour répondre complètement à la question. Toutes les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes par la source 1, y compris les conditions de prononcé, et le constat selon lequel le contexte ne contient pas la disposition commerciale demandée est conforme aux sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,119 @@
+{
+  "questionId": "q017",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 322-1 prévoit **deux ans d’emprisonnement et 30 000 euros d’amende** lorsque la destruction d’un bien appartenant à autrui n’a pas causé qu’un dommage léger.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R635-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-4-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R631-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 175.66606700001284,
+      "vectorSearchMs": 588.0686939999578,
+      "jinaRerankingMs": 554.0596219999716,
+      "mappingMs": 0.04166099999565631,
+      "totalMs": 1317.8788519999944,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011323000013362616,
+      "contextBuilderMs": 0.026351000007707626,
+      "generationMs": 1101.3565609999932,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2419.2918219999992
+    },
+    "judge": {
+      "questionId": "q017",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues par l'article 322-1 I pour la destruction, dégradation ou détérioration d'un bien d'autrui hors dommage léger : deux ans d'emprisonnement et 30 000 euros d'amende. Elle est directement étayée par la source 5 et répond à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 reproduit directement l'article 322-1 I et énonce précisément la peine de deux ans d'emprisonnement et 30 000 euros d'amende, applicable sauf dommage léger. Elle est pleinement pertinente et couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article 322-1 prévoit **deux ans d’emprisonnement et 30 000 euros d’amende** lorsque la destruction d’un bien appartenant à autrui n’a pas causé qu’un dommage léger.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R635-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-4-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R631-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 847.1063829999766,
+      "routingCalls": 1,
+      "embeddingMs": 152.0148990000016,
+      "vectorSearchMs": 30.180884999979753,
+      "jinaRerankingMs": 542.3393919999944,
+      "mappingMs": 0.035195000004023314,
+      "totalMs": 1571.707098999992,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013541000022087246,
+      "contextBuilderMs": 0.02516200003447011,
+      "generationMs": 1017.5742909999681,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2589.3303250000463
+    },
+    "judge": {
+      "questionId": "q017",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement les deux peines prévues par l’article 322-1 I pour une destruction, dégradation ou détérioration n’ayant pas entraîné seulement un dommage léger. Ces montants sont explicitement confirmés par la source 5 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 reproduit directement l'article 322-1 I et énonce explicitement la peine de deux ans d'emprisonnement et 30 000 euros d'amende, applicable sauf dommage léger. Elle est parfaitement pertinente et couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

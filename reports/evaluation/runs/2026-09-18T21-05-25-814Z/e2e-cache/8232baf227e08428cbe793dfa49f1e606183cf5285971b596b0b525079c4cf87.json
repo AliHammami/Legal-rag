@@ -1,0 +1,103 @@
+{
+  "questionId": "q435",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les obligations du professionnel sont les suivantes :\n\n- **Exécuter correctement le contrat conclu à distance**, y compris lorsque cette exécution est confiée à d’autres prestataires.\n- **S’abstenir d’utiliser certains contenus** fournis ou créés par le consommateur dans le cadre d’un contenu ou service numérique, sauf exceptions prévues par l’article L224-25-22.\n- **Respecter les règles applicables aux données personnelles**, notamment le règlement (UE) 2016/679 et la loi du 6 janvier 1978.\n- **Prouver qu’il a respecté ses obligations d’information** prévues par la section concernée.\n\nLe professionnel est en outre responsable de plein droit de la bonne exécution du contrat, sauf s’il prouve que l’inexécution résulte du consommateur, d’un tiers imprévisible et insurmontable, ou d’un cas de force majeure.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-15"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 234.4959880001843,
+      "vectorSearchMs": 678.7706009997055,
+      "jinaRerankingMs": 268.55288799945265,
+      "mappingMs": 0.019123000092804432,
+      "totalMs": 1181.8676080005243,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009770999662578106,
+      "contextBuilderMs": 0.014448000118136406,
+      "generationMs": 2400.521517000161,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3582.422090999782
+    },
+    "judge": {
+      "questionId": "q435",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse tente de répondre alors que la question est trop générale et qu’une abstention était attendue. Les éléments énumérés sont néanmoins effectivement appuyés par les extraits de contexte (responsabilité d’exécution, contenu numérique, données personnelles et charge de la preuve), mais ils concernent des régimes distincts et ne permettent pas d’identifier de façon fiable les obligations du professionnel sans préciser le champ visé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont juridiquement pertinentes pour les obligations spécifiques énoncées dans la réponse (exécution d’un contrat à distance, contenus/services numériques et charge de la preuve des obligations d’information), mais elles relèvent de régimes distincts et ne permettent pas de répondre de manière générale à une question non contextualisée sur « le professionnel ». Elles auraient surtout pu justifier une abstention au regard de l’absence de périmètre. En revanche, toutes les affirmations importantes de la réponse générée sont directement couvertes : responsabilité de plein droit et causes d’exonération (L221-15), abstention d’utilisation des contenus et données personnelles (L224-25-22), et charge de la preuve des obligations d’information (L221-7)."
+    }
+  },
+  "routing": {
+    "answer": "D’après le contexte fourni, le professionnel doit :\n\n- assurer la bonne exécution des obligations du contrat conclu à distance, y compris lorsque l’exécution est confiée à d’autres prestataires ;\n- s’abstenir d’utiliser les contenus fournis ou créés par le consommateur dans le cadre d’un contenu ou service numérique, sauf dans les cas prévus par l’article L224-25-22 ;\n- respecter les obligations relatives aux données à caractère personnel prévues par le règlement européen n° 2016/679 et la loi Informatique et Libertés ;\n- supporter la charge de prouver qu’il a respecté les obligations d’information prévues par la section concernée.\n\nIl peut toutefois s’exonérer de tout ou partie de sa responsabilité contractuelle dans les cas mentionnés à l’article L221-15, notamment en cas de faute du consommateur, de fait imprévisible et insurmontable d’un tiers ou de force majeure.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-15"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.9412670005113,
+      "routingCalls": 1,
+      "embeddingMs": 250.11329100001603,
+      "vectorSearchMs": 618.503208999522,
+      "jinaRerankingMs": 294.51788599975407,
+      "mappingMs": 0.01993199996650219,
+      "totalMs": 2085.1230229996145,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0107829999178648,
+      "contextBuilderMs": 0.01476099994033575,
+      "generationMs": 2500.336818999611,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4585.4932610001415
+    },
+    "judge": {
+      "questionId": "q435",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale et devait donner lieu à une abstention, comme l’indique l’attendu. La réponse tente néanmoins de fournir une liste d’obligations issues de dispositions de droit de la consommation, sans pouvoir établir qu’elles répondent à la question non contextualisée. Les affirmations formulées sont toutefois étayées par les extraits fournis : responsabilité de l’exécution, restrictions sur l’utilisation de certains contenus, obligations relatives aux données personnelles, charge de la preuve de l’information et causes d’exonération."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent bien sur certaines obligations précises d’un professionnel dans des régimes de droit de la consommation (contrat à distance, contenu/service numérique et obligations d’information). Elles ne permettent toutefois pas de répondre de manière générale à une question non contextualisée sur les obligations du « professionnel », ni de délimiter le champ applicable, ce qui rendait l’abstention attendue. En revanche, toutes les affirmations concrètes de la réponse générée sont étayées par les extraits : responsabilité de l’exécution et causes d’exonération (L221-15), restriction d’usage des contenus et obligations relatives aux données personnelles (L224-25-22), et charge de la preuve des obligations d’information (L221-7)."
+    }
+  },
+  "failureStage": "abstention"
+}

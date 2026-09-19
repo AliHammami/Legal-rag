@@ -1,0 +1,87 @@
+{
+  "questionId": "q374",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni permet seulement d’identifier l’article **R. 127-1 du Code de commerce**, qui précise le contenu obligatoire du contrat d’appui au projet d’entreprise, notamment les engagements des parties et les moyens mis à disposition.\n\nIl ne contient aucune information suffisante pour identifier les articles du **Code monétaire et financier** relatifs aux droits de remboursement dans le cadre des opérations de paiement.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.96630400046706,
+      "vectorSearchMs": 705.784126999788,
+      "jinaRerankingMs": 341.5548609998077,
+      "mappingMs": 0.07790699973702431,
+      "totalMs": 1267.4853139994666,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014295000582933426,
+      "contextBuilderMs": 0.01096699945628643,
+      "generationMs": 2194.93653600011,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3462.45940099936
+    },
+    "judge": {
+      "questionId": "q374",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, à partir du contexte, l'article R. 127-1 du code de commerce et certains de ses éléments. Cependant, elle ne fournit pas les articles demandés par la question et attendus par la référence, soit L. 127-5 du code de commerce et L. 133-25-2 du code monétaire et financier. Elle est néanmoins entièrement fondée sur le contexte disponible, qui ne contient effectivement aucune disposition du code monétaire et financier."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 127-1 du code de commerce est directement liée au contrat d’appui au projet d’entreprise et permet d’établir son contenu obligatoire. Elle est toutefois insuffisante pour répondre entièrement à la question, car elle ne contient ni l’article L. 127-5 attendu ni aucune disposition du code monétaire et financier relative au remboursement des opérations de paiement. En revanche, elle couvre les affirmations effectivement formulées dans la réponse générée sur R. 127-1, et le corpus fourni ne contient effectivement aucune information sur le code monétaire et financier."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas d’identifier les articles du Code de commerce et du Code monétaire et financier relatifs :\n\n- aux conditions spécifiques des contrats d’appui au projet d’entreprise ;\n- aux droits de remboursement dans le cadre des opérations de paiement.\n\nIl mentionne uniquement l’article **R. 127-1**, qui précise le contenu du contrat d’appui au projet d’entreprise.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1127.9022399997339,
+      "routingCalls": 1,
+      "embeddingMs": 184.7422589994967,
+      "vectorSearchMs": 467.38150100037456,
+      "jinaRerankingMs": 296.12538000009954,
+      "mappingMs": 0.024105999618768692,
+      "totalMs": 2076.2141000004485,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01033599954098463,
+      "contextBuilderMs": 0.008389000780880451,
+      "generationMs": 1633.118464000523,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3709.358822000213
+    },
+    "judge": {
+      "questionId": "q374",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’identifie pas les articles attendus, L. 127-5 du code de commerce et L. 133-25-2 du code monétaire et financier, ni leurs règles respectives. Elle se limite à constater que le contexte ne contient que l’article R. 127-1, ce qui est exact et pleinement fondé par le contexte, mais constitue une abstention alors qu’une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 2,
+      "explanation": "La source R. 127-1 est pertinente pour le volet relatif au contrat d’appui au projet d’entreprise : elle décrit plusieurs conditions et mentions obligatoires du contrat. En revanche, elle ne couvre pas le volet relatif aux droits de remboursement dans les opérations de paiement, ni les articles expressément demandés/attendus. La réponse générée est toutefois correctement étayée lorsqu’elle indique que le contexte ne fournit que R. 127-1 et ne permet pas d’identifier l’article du code monétaire et financier ; son constat sur le contenu limité du contexte est donc couvert, mais elle ne répond pas aux affirmations essentielles attendues par la question."
+    }
+  },
+  "failureStage": "generation"
+}

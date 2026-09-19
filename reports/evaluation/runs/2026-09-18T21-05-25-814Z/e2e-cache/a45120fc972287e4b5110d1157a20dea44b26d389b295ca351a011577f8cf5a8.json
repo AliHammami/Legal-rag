@@ -1,0 +1,103 @@
+{
+  "questionId": "q487",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas de déterminer les règles spécifiques de l’élection présidentielle.\n\nIl indique seulement que :\n\n- les règles des articles L. 10 et L. 67 du Code électoral s’appliquent aux opérations électorales ;\n- les déclarations de candidature doivent être déposées ou envoyées dans les délais prévus, notamment auprès du président du Conseil national ;\n- pour une élection par listes, les sièges sont attribués au quotient électoral puis, le cas échéant, à la plus forte moyenne.\n\nAucune règle complète concernant l’élection du président, notamment le mode de scrutin, les conditions d’éligibilité ou la majorité requise, ne figure dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2122-10-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R741-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 8-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 325.9236619999865,
+      "vectorSearchMs": 584.7564489999786,
+      "jinaRerankingMs": 277.36062399996445,
+      "mappingMs": 0.03394200000911951,
+      "totalMs": 1188.1164949999657,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009964999975636601,
+      "contextBuilderMs": 0.02055699995253235,
+      "generationMs": 2359.168035999988,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3547.3262770000147
+    },
+    "judge": {
+      "questionId": "q487",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne contient pas les règles propres à l’élection présidentielle et s’abstient donc de fournir des règles non étayées. Les éléments secondaires qu’elle résume sont bien présents dans le contexte et sont explicitement présentés comme insuffisants pour répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur les règles propres à l’élection présidentielle, mais elles sont suffisantes pour justifier l’abstention : elles traitent seulement de règles électorales générales, de candidatures auprès du président du Conseil national et d’un scrutin de liste. Elles montrent ainsi que le contexte fourni ne permet pas d’établir le mode de scrutin présidentiel, l’éligibilité ou la majorité requise. Les trois éléments factuels résumés dans la réponse sont explicitement couverts par les sources, et le constat d’insuffisance du contexte est cohérent avec leur contenu."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de déterminer les règles propres à une élection présidentielle.\n\nIl indique seulement que :\n\n- les règles des articles L. 10 et L. 67 du code électoral s’appliquent aux opérations électorales ;\n- les déclarations de candidature doivent être remises ou envoyées au plus tard un mois avant l’ouverture du scrutin ;\n- les bulletins de vote doivent être adressés aux électeurs au plus tard quinze jours avant l’ouverture du scrutin ;\n- pour certaines élections de listes, les sièges sont attribués au quotient électoral puis à la plus forte moyenne.\n\nCes éléments ne décrivent pas le mode d’élection, les conditions de candidature ou le déroulement spécifique d’une élection présidentielle.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2122-10-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R741-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 8-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 906.2249989999691,
+      "routingCalls": 1,
+      "embeddingMs": 172.26015800004825,
+      "vectorSearchMs": 666.1666890000924,
+      "jinaRerankingMs": 276.881418999983,
+      "mappingMs": 0.03399000002536923,
+      "totalMs": 2021.61560800008,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010943999979645014,
+      "contextBuilderMs": 0.02060299995355308,
+      "generationMs": 2479.460283000022,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4501.115543999942
+    },
+    "judge": {
+      "questionId": "q487",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse constate correctement que le contexte ne permet pas d'établir les règles propres à l'élection présidentielle. Les précisions données sont fidèlement tirées des sources et sont explicitement présentées comme insuffisantes et relatives à d'autres scrutins, sans extrapolation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur l’élection présidentielle : elles concernent des opérations électorales générales, une élection organisée par un Conseil national et un scrutin de listes. Elles sont donc insuffisantes pour répondre directement à la question, mais pertinentes et suffisantes pour justifier l’abstention constatant l’absence de règles présidentielles dans le contexte. Tous les éléments factuels cités dans la réponse sont repris des sources, et la conclusion d’insuffisance est cohérente avec leur contenu."
+    }
+  },
+  "failureStage": "none"
+}

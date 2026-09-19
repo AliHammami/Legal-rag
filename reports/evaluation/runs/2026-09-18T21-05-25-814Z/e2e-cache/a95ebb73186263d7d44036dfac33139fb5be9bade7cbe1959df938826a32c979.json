@@ -1,0 +1,87 @@
+{
+  "questionId": "q041",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les éléments constitutifs sont :\n\n- **Un élément matériel** : pratiquer ou faire pratiquer sur une personne une recherche impliquant la personne humaine ;\n- **Un élément légal tenant à l’absence de consentement** : le consentement n’a pas été recueilli ;\n- **Le consentement requis** doit être **libre, éclairé et exprès**, donné par l’intéressé, les titulaires de l’autorité parentale ou le tuteur.\n\nL’infraction est punie de **trois ans d’emprisonnement et de 45 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "723-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.27224700001534,
+      "vectorSearchMs": 622.2859979999484,
+      "jinaRerankingMs": 772.7955760000041,
+      "mappingMs": 0.025467999977990985,
+      "totalMs": 1588.415004999959,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010098000057041645,
+      "contextBuilderMs": 0.00798300001770258,
+      "generationMs": 2059.9063150000293,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3648.351668999996
+    },
+    "judge": {
+      "questionId": "q041",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l’acte matériel (pratiquer ou faire pratiquer une recherche impliquant la personne humaine) et l’absence du consentement requis, en précisant correctement ses caractères et les personnes habilitées à le donner. La peine ajoutée est exacte et expressément présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le premier alinéa de l’article 223-8. Elle couvre l’acte matériel, l’absence de recueil du consentement, les qualités exigées de ce consentement, les personnes concernées et la peine mentionnée dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les éléments constitutifs de l’infraction sont :\n\n- **Un acte matériel** : pratiquer ou faire pratiquer une recherche impliquant la personne humaine sur une personne ;\n- **L’absence de consentement requis** : le consentement libre, éclairé et exprès n’a pas été recueilli auprès :\n  - de l’intéressé ;\n  - des titulaires de l’autorité parentale ;\n  - ou du tuteur.\n\nLa peine prévue est de **trois ans d’emprisonnement et 45 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "723-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1105.2947810000041,
+      "routingCalls": 1,
+      "embeddingMs": 178.33699600002728,
+      "vectorSearchMs": 39.293007000000216,
+      "jinaRerankingMs": 529.2261919999728,
+      "mappingMs": 0.09933200001250952,
+      "totalMs": 1852.299224999966,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012491000001318753,
+      "contextBuilderMs": 0.00904199993237853,
+      "generationMs": 1926.7712710000342,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3779.100804000045
+    },
+    "judge": {
+      "questionId": "q041",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l'acte matériel et l'absence de recueil du consentement libre, éclairé et exprès des personnes visées. La mention supplémentaire de la peine est correcte et explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le premier alinéa de l’article 223-8. Elle couvre l’acte matériel (pratiquer ou faire pratiquer une recherche impliquant la personne humaine), l’absence de consentement libre, éclairé et exprès des personnes visées, ainsi que la peine de trois ans d’emprisonnement et 45 000 euros d’amende mentionnée dans la réponse."
+    }
+  },
+  "failureStage": "none"
+}

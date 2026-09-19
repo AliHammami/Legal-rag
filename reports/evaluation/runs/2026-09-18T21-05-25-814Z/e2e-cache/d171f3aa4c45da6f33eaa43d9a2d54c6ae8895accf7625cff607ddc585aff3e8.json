@@ -1,0 +1,103 @@
+{
+  "questionId": "q075",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 901 du Code civil, deux conditions sont nécessaires :\n\n- l’auteur de la libéralité doit être sain d’esprit ;\n- son consentement ne doit pas être vicié par l’erreur, le dol ou la violence.\n\nÀ défaut, la libéralité est nulle.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "901"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1078-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 205.54701200011186,
+      "vectorSearchMs": 563.7048440000508,
+      "jinaRerankingMs": 528.8287569999229,
+      "mappingMs": 0.032909000059589744,
+      "totalMs": 1298.1472850001883,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010660999920219183,
+      "contextBuilderMs": 0.01686100009828806,
+      "generationMs": 1151.1166560000274,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2449.300738999853
+    },
+    "judge": {
+      "questionId": "q075",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article 901 : la santé d’esprit du disposant et l’absence de vice du consentement (erreur, dol ou violence), ainsi que la sanction de nullité. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 901 du code civil et répond exactement à la question. Elle couvre intégralement les deux conditions énoncées dans la réponse (être sain d'esprit et absence d'erreur, de dol ou de violence) ainsi que la nullité en cas de vice du consentement. Les autres sources sont accessoires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 901 du code civil, une libéralité est valable si :\n\n- son auteur est sain d’esprit ;\n- son consentement n’a pas été vicié par l’erreur, le dol ou la violence.\n\nÀ défaut, la libéralité est nulle.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "901"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1078-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 920.5579800000414,
+      "routingCalls": 1,
+      "embeddingMs": 163.75995600013994,
+      "vectorSearchMs": 57.05980599997565,
+      "jinaRerankingMs": 486.5190390001517,
+      "mappingMs": 0.03875600011087954,
+      "totalMs": 1627.9613789999858,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012838999973610044,
+      "contextBuilderMs": 0.017152999993413687,
+      "generationMs": 1031.380676999921,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2659.380082000047
+    },
+    "judge": {
+      "questionId": "q075",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article 901 : être sain d’esprit et disposer d’un consentement non vicié par l’erreur, le dol ou la violence. Elle indique correctement la nullité en cas de vice du consentement. Toutes les affirmations sont directement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 901 du code civil et énonce exactement les conditions citées dans la réponse : être sain d'esprit et ne pas avoir un consentement vicié par l'erreur, le dol ou la violence, avec la sanction de nullité. Les autres sources sont accessoires."
+    }
+  },
+  "failureStage": "none"
+}

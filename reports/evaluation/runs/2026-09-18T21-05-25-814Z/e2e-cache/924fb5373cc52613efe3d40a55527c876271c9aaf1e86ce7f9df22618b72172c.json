@@ -1,0 +1,95 @@
+{
+  "questionId": "q113",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 1387 permet aux époux d’organiser librement leurs rapports patrimoniaux par des conventions spéciales, la loi ne s’appliquant qu’à défaut de telles conventions.\n\nCette liberté est toutefois encadrée par deux limites : les conventions ne doivent être contraires ni aux bonnes mœurs ni aux dispositions légales applicables. L’article 1497 précise notamment qu’elles peuvent modifier la communauté légale, mais seulement dans le respect des articles 1387, 1388 et 1389.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1387"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1497"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 197.70229199994355,
+      "vectorSearchMs": 570.8540870000143,
+      "jinaRerankingMs": 493.55903599993326,
+      "mappingMs": 0.031340999994426966,
+      "totalMs": 1262.1912549999543,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010462000034749508,
+      "contextBuilderMs": 0.014446999877691269,
+      "generationMs": 1546.0628899999429,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2808.2925939999986
+    },
+    "judge": {
+      "questionId": "q113",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le principe de subsidiarité de la loi en l’absence de conventions spéciales et les deux limites prévues par l’article 1387. La précision sur l’article 1497 est exacte et explicitement soutenue par le contexte ; elle complète utilement sans contredire la réponse attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 1387 et couvre le principe selon lequel la loi ne s’applique qu’à défaut de conventions spéciales, ainsi que les limites tenant aux bonnes mœurs et aux dispositions légales. La source 2 soutient précisément l’ajout relatif à l’article 1497, concernant la modification conventionnelle de la communauté légale dans le respect des articles 1387, 1388 et 1389."
+    }
+  },
+  "routing": {
+    "answer": "L’article 1387 prévoit que la loi ne s’applique aux biens des époux qu’à défaut de conventions spéciales. Les époux peuvent donc organiser librement leur association conjugale, à condition que leurs conventions :\n\n- ne soient pas contraires aux bonnes mœurs ;\n- respectent les dispositions légales applicables.\n\nL’article 1497 illustre cette liberté en permettant notamment de modifier la communauté légale, sous réserve du respect des articles 1387 à 1389.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1387"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1497"
+      }
+    ],
+    "profiling": {
+      "routingMs": 818.4582899999805,
+      "routingCalls": 1,
+      "embeddingMs": 170.3833600000944,
+      "vectorSearchMs": 72.04826600011438,
+      "jinaRerankingMs": 492.16360699990764,
+      "mappingMs": 0.03574700001627207,
+      "totalMs": 1553.1203799999785,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016231999965384603,
+      "contextBuilderMs": 0.012783000012859702,
+      "generationMs": 1517.7750850000884,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3070.9342790001538
+    },
+    "judge": {
+      "questionId": "q113",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la règle de supplétivité de la loi et la liberté conventionnelle des époux, limitée par les bonnes mœurs et les dispositions légales applicables. La mention de l’article 1497 est exacte et explicitement soutenue par le contexte ; elle constitue une illustration pertinente sans altérer la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 1387 et couvre la règle de subsidiarité de la loi ainsi que les limites tenant aux bonnes mœurs et aux dispositions légales suivantes. La source 2 est une illustration directement pertinente de la liberté de modifier la communauté légale par contrat de mariage, sous réserve notamment de l’article 1387, et couvre la référence additionnelle faite dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

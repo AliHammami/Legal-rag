@@ -1,0 +1,107 @@
+{
+  "questionId": "q347",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le débiteur doit saisir la commission de surendettement des particuliers en adressant ou en remettant sa demande au secrétariat de la commission compétente.\n\nDans cette demande, il doit solliciter le traitement de sa situation de surendettement et déclarer les éléments actifs et passifs de son patrimoine.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R681-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.04571299999952,
+      "vectorSearchMs": 938.6531350007281,
+      "jinaRerankingMs": 403.04759800061584,
+      "mappingMs": 0.04087700042873621,
+      "totalMs": 1564.8334719995037,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012683000415563583,
+      "contextBuilderMs": 0.019189000129699707,
+      "generationMs": 1238.7035320000723,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2803.620699999854
+    },
+    "judge": {
+      "questionId": "q347",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le débiteur saisit la commission de surendettement par une demande, remise ou adressée à son secrétariat, et qu'il doit y déclarer les éléments actifs et passifs de son patrimoine. Ces éléments sont explicitement soutenus par les articles R721-1 et L721-1 fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources R721-1 et L721-1 sont directement pertinentes : elles prévoient respectivement l’adresse ou la remise de la demande au secrétariat de la commission, et la saisine de la commission par une demande déclarant les éléments actifs et passifs du patrimoine. Elles couvrent l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le débiteur doit saisir la commission de surendettement des particuliers en déposant ou en remettant sa demande au secrétariat de la commission. Cette demande doit déclarer les éléments actifs et passifs de son patrimoine.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 954.7761629996821,
+      "routingCalls": 1,
+      "embeddingMs": 169.3951099999249,
+      "vectorSearchMs": 89.02167600020766,
+      "jinaRerankingMs": 261.2133599994704,
+      "mappingMs": 0.7765300003811717,
+      "totalMs": 1475.224224999547,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.023377000354230404,
+      "contextBuilderMs": 0.030949000269174576,
+      "generationMs": 1329.5731949992478,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2804.86621700041
+    },
+    "judge": {
+      "questionId": "q347",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le débiteur saisit la commission de surendettement en adressant ou remettant sa demande à son secrétariat, et qu'il doit déclarer les éléments actifs et passifs de son patrimoine. Ces éléments sont explicitement supportés par les articles R721-1 et L721-1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les articles L721-1 et R721-1 sont directement pertinents : ils prévoient la saisine de la commission par le débiteur, la déclaration des éléments actifs et passifs du patrimoine, ainsi que l'adresse ou la remise de la demande au secrétariat. Ils couvrent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

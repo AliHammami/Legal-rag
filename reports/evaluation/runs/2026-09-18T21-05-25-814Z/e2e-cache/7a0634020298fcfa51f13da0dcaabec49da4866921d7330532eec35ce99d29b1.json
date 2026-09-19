@@ -1,0 +1,95 @@
+{
+  "questionId": "q313",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le prêteur est tenu de maintenir les conditions de l’offre pendant **au moins trente jours à compter de son émission**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 376.2329909997061,
+      "vectorSearchMs": 705.0469599999487,
+      "jinaRerankingMs": 265.94367299973965,
+      "mappingMs": 0.03638199996203184,
+      "totalMs": 1347.328169000335,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012325999327003956,
+      "contextBuilderMs": 0.015282999724149704,
+      "generationMs": 1052.489716000855,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2399.8637030003592
+    },
+    "judge": {
+      "questionId": "q313",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle applicable énoncée par la référence et par l'article L315-10 fourni : maintien des conditions pendant au moins trente jours à compter de l'émission. Elle répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L315-10) est directement pertinente et énonce exactement la règle reprise dans la réponse : maintien des conditions pendant une durée minimale de trente jours à compter de l'émission. La source 2 contient une règle proche mais avec un point de départ différent ; elle n'est pas nécessaire à la couverture de l'affirmation générée."
+    }
+  },
+  "routing": {
+    "answer": "Le prêteur est tenu de maintenir les conditions de l’offre pendant une durée minimale de **trente jours** à compter de sa remise.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1508.3299650000408,
+      "routingCalls": 1,
+      "embeddingMs": 240.88323599938303,
+      "vectorSearchMs": 89.92122699972242,
+      "jinaRerankingMs": 264.2376290000975,
+      "mappingMs": 0.025177999399602413,
+      "totalMs": 2103.4268569992855,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010954000055789948,
+      "contextBuilderMs": 0.015931000001728535,
+      "generationMs": 1091.0471759997308,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3194.511698000133
+    },
+    "judge": {
+      "questionId": "q313",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La durée minimale de trente jours est correcte. Toutefois, la réponse fait courir ce délai à compter de la remise, alors que l’article L315-10 du contexte et la référence indiquent qu’il court à compter de l’émission de l’offre. Cette imprécision est mineure mais affecte l’ancrage temporel exact."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "Les deux sources sont directement pertinentes : elles prévoient une durée minimale de trente jours de maintien des conditions de l’offre. La réponse est couverte sur la durée, mais elle indique que le délai court à compter de la remise ; la source L315-10 le fait courir à compter de l’émission, tandis que L313-34 vise la réception par l’emprunteur. Les sources ne soutiennent donc pas exactement ce point de départ tel qu’énoncé."
+    }
+  },
+  "failureStage": "none"
+}

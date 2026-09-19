@@ -1,0 +1,95 @@
+{
+  "questionId": "q176",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après l’article L223-1, l’associé unique est la personne qui institue seule la société à responsabilité limitée. Il exerce les pouvoirs normalement dévolus à l’assemblée des associés.\n\nLe texte ne prévoit pas de condition particulière de nomination. Il précise seulement que, lorsque l’associé unique est une personne physique qui assume personnellement la gérance, des statuts types et des formalités de publicité allégées peuvent s’appliquer.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-31"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.92988499999046,
+      "vectorSearchMs": 613.53371099988,
+      "jinaRerankingMs": 507.5951930000447,
+      "mappingMs": 0.04220700031146407,
+      "totalMs": 1352.1329029998742,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013054999988526106,
+      "contextBuilderMs": 0.02346300007775426,
+      "generationMs": 1924.653076000046,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3276.844144000206
+    },
+    "judge": {
+      "questionId": "q176",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’associé unique et son exercice des pouvoirs de l’assemblée. Elle indique aussi correctement le cas de l’associé unique personne physique assumant personnellement la gérance. Elle reste toutefois imprécise sur la règle essentielle selon laquelle les statuts types s’appliquent par défaut, sauf production de statuts différents lors de la demande d’immatriculation. Toutes les affirmations sont appuyées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle définit l’associé unique, lui attribue les pouvoirs de l’assemblée et prévoit le régime des statuts types ainsi que les formalités de publicité allégées lorsque l’associé unique personne physique assure personnellement la gérance. Elle couvre les affirmations de la réponse générée, y compris l’absence de condition particulière de « nomination » explicitement prévue par l’article. La source 2 est complémentaire mais non nécessaire aux affirmations formulées."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’article L. 223-1, une SARL peut être constituée par une seule personne. Dans ce cas, cette personne est appelée « associé unique » et exerce les pouvoirs normalement dévolus à l’assemblée des associés.\n\nLe texte ne prévoit pas de conditions particulières de nomination de l’associé unique. Il précise seulement que, lorsque celui-ci est une personne physique et assume personnellement la gérance, des statuts types et des formalités de publicité allégées peuvent s’appliquer.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-31"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1050.9784470000304,
+      "routingCalls": 1,
+      "embeddingMs": 235.8092590002343,
+      "vectorSearchMs": 162.95663999998942,
+      "jinaRerankingMs": 551.8824200001545,
+      "mappingMs": 0.024892999790608883,
+      "totalMs": 2001.6786400000565,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009705999866127968,
+      "contextBuilderMs": 0.013014000374823809,
+      "generationMs": 1989.679928000085,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3991.391433000099
+    },
+    "judge": {
+      "questionId": "q176",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement qu’en présence d’une seule personne celle-ci est l’associé unique et exerce les pouvoirs de l’assemblée. Elle mentionne aussi le cas de l’associé unique personne physique assurant personnellement la gérance, avec statuts types et publicité allégée. Elle est toutefois moins précise que l’article : les statuts types s’appliquent par défaut, sauf production de statuts différents lors de la demande d’immatriculation. Toutes les affirmations importantes sont compatibles avec le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 223-1 et couvre toutes les affirmations importantes de la réponse : constitution par une seule personne, qualification d’associé unique, exercice des pouvoirs de l’assemblée, régime des statuts types lorsque l’associé unique personne physique assure personnellement la gérance, possibilité de statuts différents à l’immatriculation et formalités de publicité allégées. La source 2 est secondaire mais cohérente avec l’exercice de pouvoirs par l’associé unique."
+    }
+  },
+  "failureStage": "none"
+}

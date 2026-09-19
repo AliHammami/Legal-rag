@@ -1,0 +1,87 @@
+{
+  "questionId": "q139",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’employeur détermine le centre de formation d’apprentis où l’apprenti sera inscrit. Ce choix est formalisé dans le contrat d’apprentissage.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 227.03217800008133,
+      "vectorSearchMs": 658.004300000146,
+      "jinaRerankingMs": 528.7639419999905,
+      "mappingMs": 0.037785000167787075,
+      "totalMs": 1413.8717509999406,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.026193000143393874,
+      "contextBuilderMs": 0.021530999802052975,
+      "generationMs": 994.8311109999195,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2408.8505049999803
+    },
+    "judge": {
+      "questionId": "q139",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l'employeur comme décideur et indique que le choix est formalisé dans le contrat d'apprentissage. Ces deux éléments sont explicitement soutenus par le contexte et correspondent à la référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L6223-2 est directement pertinente : elle indique explicitement que l'employeur inscrit l'apprenti dans le CFA correspondant à la formation prévue et que le choix du centre est précisé dans le contrat d'apprentissage. Elle couvre intégralement les deux affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le centre de formation d’apprentis est déterminé par l’employeur, qui y inscrit l’apprenti. Le choix du centre est formalisé dans le contrat d’apprentissage.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1097.455917000072,
+      "routingCalls": 1,
+      "embeddingMs": 177.4491810000036,
+      "vectorSearchMs": 226.81741299992427,
+      "jinaRerankingMs": 511.68221900006756,
+      "mappingMs": 0.11173600004985929,
+      "totalMs": 2013.5445470002014,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015261000022292137,
+      "contextBuilderMs": 0.010319000110030174,
+      "generationMs": 1105.164221999934,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3118.74197000009
+    },
+    "judge": {
+      "questionId": "q139",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux éléments de l’article fourni : l’employeur détermine/choisit le CFA en y inscrivant l’apprenti, et ce choix est précisé dans le contrat d’apprentissage. Elle répond directement et complètement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "L’article L6223-2 est directement pertinent : il indique que l’employeur inscrit l’apprenti dans le CFA correspondant à la formation prévue et que le choix du CFA est précisé dans le contrat d’apprentissage. Il couvre entièrement les deux affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

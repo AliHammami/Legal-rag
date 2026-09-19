@@ -1,0 +1,87 @@
+{
+  "questionId": "q091",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1253, la responsabilité de plein droit n’est pas engagée lorsque :\n\n- le trouble anormal provient d’une activité antérieure :\n  - à l’acte transférant la propriété ;\n  - ou à l’acte octroyant la jouissance du bien ;\n  - ou, en l’absence d’acte, à la date d’entrée en possession du bien par la personne lésée ;\n- cette activité est conforme aux lois et règlements ;\n- elle s’est poursuivie dans les mêmes conditions, ou dans des conditions nouvelles qui n’ont pas entraîné d’aggravation du trouble anormal.\n\nCette règle s’applique sous réserve de l’article L. 311-1-1 du code rural et de la pêche maritime, dont le contenu n’est pas fourni.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1253"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.68945099995472,
+      "vectorSearchMs": 584.9452099998016,
+      "jinaRerankingMs": 745.8132070000283,
+      "mappingMs": 0.02711899997666478,
+      "totalMs": 1520.5143649999518,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009817000012844801,
+      "contextBuilderMs": 0.007372999796643853,
+      "generationMs": 2358.5883299999405,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3879.1281179999933
+    },
+    "judge": {
+      "questionId": "q091",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement toutes les conditions prévues par l’article 1253 : antériorité de l’activité par rapport au transfert, à l’octroi de jouissance ou, sans acte, à l’entrée en possession ; conformité aux lois et règlements ; poursuite sans aggravation du trouble. La réserve relative à l’article L. 311-1-1 est également correctement signalée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1253 et énonce l’ensemble des conditions de non-engagement de la responsabilité : antériorité de l’activité, y compris le cas d’absence d’acte et de l’entrée en possession, conformité aux lois et règlements, et absence d’aggravation du trouble malgré la poursuite de l’activité. Elle couvre également la réserve relative à l’article L. 311-1-1 du code rural et de la pêche maritime."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1253, la responsabilité de plein droit n’est pas engagée lorsque :\n\n- le trouble anormal provient d’une activité antérieure :\n  - à l’acte transférant la propriété ou accordant la jouissance du bien ; ou\n  - à défaut d’acte, à l’entrée en possession du bien par la personne lésée ;\n- cette activité est conforme aux lois et règlements ;\n- elle s’est poursuivie dans les mêmes conditions, ou dans de nouvelles conditions qui n’ont pas aggravé le trouble anormal.\n\nCette exception s’applique sous réserve de l’article L. 311-1-1 du code rural et de la pêche maritime.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1253"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.367251999909,
+      "routingCalls": 1,
+      "embeddingMs": 179.8418590000365,
+      "vectorSearchMs": 55.890344000188634,
+      "jinaRerankingMs": 491.20269199996255,
+      "mappingMs": 0.0846019999589771,
+      "totalMs": 1853.4143489999697,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01336099999025464,
+      "contextBuilderMs": 0.009126000106334686,
+      "generationMs": 1935.2472570000682,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3788.697993000038
+    },
+    "judge": {
+      "questionId": "q091",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les conditions cumulatives de l’exception prévue à l’article 1253 : antériorité de l’activité par rapport au transfert ou à l’entrée en possession à défaut d’acte, conformité aux lois et règlements, et absence d’aggravation du trouble malgré la poursuite de l’activité. La réserve relative à l’article L. 311-1-1 du code rural est également correctement mentionnée. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1253 et énonce précisément l’exception à la responsabilité de plein droit : antériorité de l’activité, y compris le cas de l’entrée en possession à défaut d’acte, conformité aux lois et règlements, poursuite sans aggravation du trouble, ainsi que la réserve relative à l’article L. 311-1-1 du code rural et de la pêche maritime. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -61,8 +61,11 @@ export class E2EJudgeService {
       }
 
       if (error instanceof Error) {
+        const detail = error.message.trim();
         throw new EvaluationError(
-          `Judge request failed for question ${input.questionId}`,
+          detail.length > 0
+            ? `Judge request failed for question ${input.questionId}: ${detail}`
+            : `Judge request failed for question ${input.questionId}`,
           'JUDGE_API_ERROR',
           error,
         );

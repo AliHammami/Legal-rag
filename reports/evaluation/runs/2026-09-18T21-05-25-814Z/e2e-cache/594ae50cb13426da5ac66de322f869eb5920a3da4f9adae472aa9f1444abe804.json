@@ -1,0 +1,87 @@
+{
+  "questionId": "q023",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 314-1, l’abus de confiance suppose :\n\n- la remise à une personne de fonds, de valeurs ou d’un bien quelconque ;\n- l’acceptation de cette remise avec obligation de les rendre, de les représenter ou d’en faire un usage déterminé ;\n- le détournement de ces biens par cette personne ;\n- un préjudice subi par autrui du fait de ce détournement.\n\nL’infraction est punie de cinq ans d’emprisonnement et de 375 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 204.73714500002097,
+      "vectorSearchMs": 566.1407890000264,
+      "jinaRerankingMs": 493.85223199997563,
+      "mappingMs": 0.034279000014066696,
+      "totalMs": 1264.7938480000012,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07670599996345118,
+      "contextBuilderMs": 0.009644000034313649,
+      "generationMs": 1808.4405430000043,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3073.3331860000035
+    },
+    "judge": {
+      "questionId": "q023",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les éléments constitutifs énoncés par l’article 314-1 : remise et acceptation de fonds, valeurs ou bien, obligation de restitution/représentation/usage déterminé, détournement et préjudice d’autrui. La peine ajoutée est également explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 314-1 et énonce tous les éléments mentionnés dans la réponse : remise et acceptation de fonds, valeurs ou bien avec obligation de restitution, représentation ou usage déterminé, détournement au préjudice d’autrui, ainsi que la peine de cinq ans d’emprisonnement et 375 000 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 314-1, l’abus de confiance est caractérisé lorsque :\n\n- une personne s’est vu remettre des fonds, des valeurs ou un bien quelconque ;\n- elle les a acceptés à charge de les rendre, de les représenter ou d’en faire un usage déterminé ;\n- elle les détourne ;\n- ce détournement cause un préjudice à autrui.\n\nL’infraction est punie de cinq ans d’emprisonnement et de 375 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.6911130000371,
+      "routingCalls": 1,
+      "embeddingMs": 157.41300100000808,
+      "vectorSearchMs": 27.461277000023983,
+      "jinaRerankingMs": 525.6684269999969,
+      "mappingMs": 0.0287489999900572,
+      "totalMs": 1530.2917780000134,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010272999992594123,
+      "contextBuilderMs": 0.010645999980624765,
+      "generationMs": 1951.9910640000016,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3482.312641000026
+    },
+    "judge": {
+      "questionId": "q023",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les éléments constitutifs prévus par l’article 314-1 : remise de fonds, valeurs ou bien, acceptation avec obligation de restitution, représentation ou usage déterminé, détournement et préjudice à autrui. La mention de la peine est exacte et explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 314-1 et énonce tous les éléments mentionnés dans la réponse : remise et acceptation de fonds, valeurs ou bien avec obligation de restitution, représentation ou usage déterminé, détournement et préjudice à autrui. Elle couvre également exactement la peine indiquée."
+    }
+  },
+  "failureStage": "none"
+}

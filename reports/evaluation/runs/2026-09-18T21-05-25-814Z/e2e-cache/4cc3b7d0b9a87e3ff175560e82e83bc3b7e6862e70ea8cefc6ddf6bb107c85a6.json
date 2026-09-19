@@ -1,0 +1,91 @@
+{
+  "questionId": "q373",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le fournisseur qui se prévaut d’une offre de coffre-fort numérique et ne respecte pas les obligations prévues par l’article L. 103 du Code des postes et des communications électroniques est passible des sanctions prévues aux articles L. 132-2 et L. 132-3 du Code de la consommation.\n\nLe contexte fourni ne précise ni la nature exacte de ces sanctions, ni les éventuelles interdictions pouvant être prononcées à l’encontre d’un condamné dans un contexte pénal. Il ne permet donc pas d’établir un lien plus précis entre le manquement du fournisseur et de telles interdictions.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L122-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 227.75933800078928,
+      "vectorSearchMs": 927.1319360006601,
+      "jinaRerankingMs": 295.43728499952704,
+      "mappingMs": 0.12191400025039911,
+      "totalMs": 1450.4872289998457,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01656900066882372,
+      "contextBuilderMs": 0.010933000594377518,
+      "generationMs": 2022.2972049992532,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3472.8353550005704
+    },
+    "judge": {
+      "questionId": "q373",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la conséquence prévue pour le fournisseur : le renvoi aux sanctions des articles L. 132-2 et L. 132-3 du code de la consommation. Elle ne traite toutefois pas le volet pénal attendu relatif aux interdictions susceptibles d’être prononcées contre un condamné, notamment l’interdiction de se rapprocher de la victime et les mesures de contrôle associées. Cette omission est cohérente avec le contexte effectivement fourni, qui ne contient que l’article L. 122-22 ; les affirmations de la réponse sont donc entièrement fondées sur ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source L122-22 est directement pertinente pour la conséquence juridique applicable au fournisseur de coffre-fort numérique : elle prévoit le renvoi aux sanctions des articles L.132-2 et L.132-3 en cas de manquement aux obligations visées. Elle ne fournit aucune information sur la nature de ces sanctions ni sur les interdictions pénales visant un condamné ; elle permet donc de soutenir le constat prudent de la réponse selon lequel le contexte ne permet pas de préciser ces éléments ou d'établir un lien entre eux."
+    }
+  },
+  "routing": {
+    "answer": "D’après le contexte, ces conséquences concernent les fournisseurs de services de plateforme en ligne visés par l’article 131-35-1.\n\n- Le tribunal peut suspendre les comptes utilisés pour commettre l’infraction pendant six mois au maximum, ou un an en cas de récidive légale.\n- Le condamné ne peut alors ni utiliser les comptes suspendus, ni créer de nouveaux comptes sur les mêmes services.\n- La décision est signifiée au fournisseur, qui doit bloquer les comptes concernés. Il peut également prendre des mesures nécessaires et proportionnées pour bloquer d’autres comptes du condamné et empêcher la création de nouveaux comptes.\n- Le fournisseur qui ne bloque pas les comptes faisant l’objet d’une suspension encourt une amende de **75 000 euros**.\n\nLe contexte ne permet toutefois pas de déterminer si un fournisseur de coffre-fort numérique constitue juridiquement un « fournisseur de services de plateforme en ligne » au sens du texte. Il ne permet donc pas de confirmer que ces obligations et cette sanction lui sont applicables.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-42-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-35-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2144.4302080003545,
+      "routingCalls": 1,
+      "embeddingMs": 180.19774099998176,
+      "vectorSearchMs": 68.51386000029743,
+      "jinaRerankingMs": 347.9340249998495,
+      "mappingMs": 0.03231099992990494,
+      "totalMs": 2741.1376310000196,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013597999699413776,
+      "contextBuilderMs": 0.015508000738918781,
+      "generationMs": 3202.9589879997075,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5944.133491000161
+    },
+    "judge": {
+      "questionId": "q373",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le régime de l’article 131-35-1 relatif aux fournisseurs de services de plateforme en ligne et à la suspension de comptes, mais elle ne répond pas au régime applicable au fournisseur de coffre-fort numérique attendu par la question et la référence (notamment l’article L122-22 du code de la consommation et les sanctions associées). Elle ne traite pas non plus l’interdiction de rapprochement évoquée dans la référence. En revanche, toutes les affirmations factuelles qu’elle formule sont directement étayées par le contexte fourni, et elle signale justement que l’applicabilité de ce régime à un coffre-fort numérique ne peut être établie sur ce seul contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente pour le régime que la réponse décrit : suspension des comptes de plateformes en ligne, interdictions visant le condamné, obligation de blocage du fournisseur et amende de 75 000 euros. Elle ne permet toutefois pas d’établir le régime propre aux fournisseurs de coffre-fort numérique ni les sanctions de droit de la consommation évoquées par la question. Toutes les affirmations substantielles de la réponse générée sont néanmoins couvertes par l’article 131-35-1, y compris la réserve selon laquelle l’assimilation d’un coffre-fort numérique à une plateforme en ligne n’est pas démontrée par le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

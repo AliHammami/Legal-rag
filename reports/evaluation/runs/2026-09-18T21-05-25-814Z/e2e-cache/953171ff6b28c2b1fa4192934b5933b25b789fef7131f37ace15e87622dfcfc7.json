@@ -1,0 +1,95 @@
+{
+  "questionId": "q378",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 133-33 fourni, avant le terme du contrat, la demande de remboursement de monnaie électronique est possible :\n\n- hors cas de résiliation du contrat ;\n- pour la totalité ou seulement une partie de la monnaie électronique détenue.\n\nLe contexte fourni ne contient aucune information sur les sanctions prévues par le Code pénal en cas d’homicide involontaire. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-33"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-35"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.28927700035274,
+      "vectorSearchMs": 1008.2300730003044,
+      "jinaRerankingMs": 294.96414199937135,
+      "mappingMs": 0.03129599988460541,
+      "totalMs": 1490.632176999934,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012331999838352203,
+      "contextBuilderMs": 0.015103999525308609,
+      "generationMs": 1898.3506139991805,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3389.0519949998707
+    },
+    "judge": {
+      "questionId": "q378",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les conditions de remboursement avant terme prévues à l’article L. 133-33 : hors résiliation et pour tout ou partie de la monnaie détenue. Elle ne fournit toutefois pas les sanctions pour homicide involontaire attendues (trois ans et 45 000 euros, portés à cinq ans et 75 000 euros en cas de violation manifestement délibérée), ce qui la rend incomplète au regard de la question et de la référence. Son refus de répondre à cette seconde partie est entièrement justifié par le contexte, qui ne contient aucun extrait de l’article 221-6 du code pénal. Elle répond néanmoins effectivement à la partie répondable de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et suffit à étayer les deux conditions de remboursement avant terme énoncées. Aucune source ne traite de l’homicide involontaire ou de ses sanctions, mais les sources fournies permettent de constater que ce point n’est pas documenté dans le contexte. La réponse générée s’abstient explicitement sur cette seconde partie sans avancer de sanction non sourcée : toutes ses affirmations importantes sont donc couvertes par les sources ou par leur absence de contenu pertinent."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 133-33 du Code monétaire et financier, avant le terme prévu au contrat, et hors résiliation de celui-ci, la demande de remboursement peut porter :\n\n- soit sur la totalité de la monnaie électronique détenue ;\n- soit sur une partie seulement.\n\nLe contexte précise également qu’après le terme, dans certaines conditions concernant un établissement exerçant une activité hybride, le remboursement peut être total.\n\nEn revanche, le contexte fourni ne contient aucune information sur les sanctions prévues par le Code pénal en cas d’homicide involontaire. Il ne permet donc pas de répondre à cette partie de la question.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-33"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-35"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1117.3366430001333,
+      "routingCalls": 1,
+      "embeddingMs": 208.5703100003302,
+      "vectorSearchMs": 395.78744599968195,
+      "jinaRerankingMs": 287.611417000182,
+      "mappingMs": 0.050958000123500824,
+      "totalMs": 2009.3883750000969,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01986700017005205,
+      "contextBuilderMs": 0.01742000039666891,
+      "generationMs": 2093.9544000001624,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4103.3888579998165
+    },
+    "judge": {
+      "questionId": "q378",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément les conditions de remboursement avant terme prévues par l’article L. 133-33 : hors résiliation, pour tout ou partie de la monnaie électronique détenue. Elle ne fournit toutefois pas les sanctions pénales de l’homicide involontaire, qui constituent une partie essentielle de la question. Son constat selon lequel le contexte ne contient pas cette information est entièrement fondé : les deux extraits fournis ne concernent que le remboursement de monnaie électronique."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre précisément les conditions du remboursement avant terme. La source 2 est pertinente pour la précision additionnelle formulée sur le remboursement après terme dans le cas d’une activité hybride. Aucune source ne traite de l’homicide involontaire, mais les sources fournies permettent bien d’étayer le constat de la réponse selon lequel le contexte ne contient aucune information sur les sanctions pénales. La couverture de toutes les affirmations effectivement formulées est donc complète, bien que l’ensemble des sources soit insuffisant pour répondre intégralement à la question initiale."
+    }
+  },
+  "failureStage": "generation"
+}

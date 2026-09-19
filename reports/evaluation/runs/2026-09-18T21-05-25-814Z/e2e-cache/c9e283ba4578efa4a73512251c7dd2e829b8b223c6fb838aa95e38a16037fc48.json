@@ -1,0 +1,119 @@
+{
+  "questionId": "q495",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après le contexte fourni, les principales règles sont les suivantes :\n\n- **Sécurité des traitements** : le responsable doit mettre en œuvre les mesures prescrites par le RGPD, notamment ses articles 24, 25, 30 et 32. Le non-respect peut être puni de **cinq ans d’emprisonnement et de 300 000 euros d’amende** (article 226-17 du Code pénal).\n- **Minimisation des données** : l’exercice du droit de communication doit respecter le principe de minimisation des données prévu à l’article 5 du RGPD.\n- **Information des personnes** : elles doivent notamment être informées de l’identité du responsable du traitement, des finalités, du caractère obligatoire ou facultatif des réponses, des destinataires, de leurs droits et des éventuels transferts hors de l’Union européenne.\n- **Droits d’accès et d’information** : toute personne peut demander la confirmation qu’un traitement concerne ses données, obtenir des informations sur ce traitement et recevoir une copie de ses données.\n- **Droit à la rectification** : les données inexactes doivent pouvoir être rectifiées et les données incomplètes complétées.\n- **Respect des demandes des personnes** : le responsable qui ne répond pas à certaines demandes relatives à ces droits s’expose à une amende de **5e classe**.\n- **Durée de conservation** : dans le cas particulier des données relatives aux propriétaires de titres, elles ne peuvent être conservées que pendant douze mois après la connaissance de la perte de cette qualité.\n\nLe contexte ne permet pas de présenter de manière exhaustive l’ensemble des règles du RGPD.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-17"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-3-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5312-13-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 153.53217400005087,
+      "vectorSearchMs": 592.9971650000662,
+      "jinaRerankingMs": 308.45435100002214,
+      "mappingMs": 0.02512100012972951,
+      "totalMs": 1055.042005999945,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01120799989439547,
+      "contextBuilderMs": 0.019342999905347824,
+      "generationMs": 2871.7818310000002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3926.8788829999976
+    },
+    "judge": {
+      "questionId": "q495",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse fournit plusieurs éléments exacts et généralement tirés du contexte, mais répond malgré l’insuffisance du contexte à une question très générale sur l’ensemble des règles du RGPD. Elle présente ainsi des règles sectorielles ou des sanctions du droit pénal français comme des règles principales du RGPD, et généralise notamment le droit de rectification alors que le passage fourni le limite au cas des propriétaires de titres personnes morales. La réserve finale sur l’absence d’exhaustivité ne constitue pas une abstention claire, puisqu’une réponse de fond est tout de même donnée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les sources portent bien sur des obligations et droits relatifs aux données personnelles (sécurité, minimisation, information, accès, rectification) ainsi que sur des sanctions françaises. Elles ne constituent toutefois pas un corpus directement suffisant pour répondre de façon générale aux règles du RGPD : plusieurs extraits sont sectoriels ou pénaux et ne couvrent qu’une partie du règlement. Elles auraient pu justifier une abstention fondée sur le caractère lacunaire et dispersé du contexte. Les principales affirmations de la réponse sont globalement rattachables aux extraits fournis, notamment les sanctions, l’information, l’accès et la conservation spécifique. La généralisation du droit à la rectification n’est cependant pas pleinement couverte, la source correspondante le limitant au cas des propriétaires de titres personnes morales."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne permet pas de présenter l’ensemble des règles du RGPD. Il permet toutefois d’identifier les obligations suivantes :\n\n- **Sécurité et conformité du traitement** : le responsable doit mettre en œuvre les mesures prescrites par les articles 24, 25, 30 et 32 du RGPD. Le non-respect est puni de **cinq ans d’emprisonnement et de 300 000 euros d’amende** (article 226-17 du Code pénal).\n- **Minimisation des données** : l’exercice du droit de communication doit respecter le principe de minimisation des données prévu à l’article 5 du RGPD.\n- **Information des personnes** : lorsque la loi l’exige, la personne doit notamment être informée de l’identité du responsable, de la finalité du traitement, du caractère obligatoire ou facultatif des réponses, des destinataires, de ses droits et des éventuels transferts hors de l’Union européenne.\n- **Droits d’accès et d’information** : la personne peut demander la confirmation qu’un traitement existe, connaître ses finalités, les catégories de données et les destinataires, obtenir une copie de ses données et recevoir les informations disponibles sur leur origine.\n- **Droits de rectification et de contestation** : les données inexactes doivent pouvoir être rectifiées et les données incomplètes complétées. La personne doit aussi pouvoir connaître et contester la logique d’un traitement automatisé produisant des effets juridiques à son égard.\n- **Réponse aux demandes** : le défaut de réponse à ces demandes ou le refus de délivrer une copie des données est puni de l’amende prévue pour les contraventions de la 5e classe.\n- **Conservation limitée** : dans le régime particulier cité concernant les propriétaires de titres, les données ne peuvent être conservées que douze mois après la connaissance de la perte de cette qualité.\n\nCes éléments ne constituent pas une présentation exhaustive de toutes les règles du RGPD.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-17"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-3-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5312-13-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 988.5475260000676,
+      "routingCalls": 1,
+      "embeddingMs": 202.28446800005622,
+      "vectorSearchMs": 635.6764980000444,
+      "jinaRerankingMs": 301.6201880001463,
+      "mappingMs": 0.028189000207930803,
+      "totalMs": 2128.2076769999694,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011169999837875366,
+      "contextBuilderMs": 0.03626500000245869,
+      "generationMs": 3219.5732109998353,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5347.836366999894
+    },
+    "judge": {
+      "questionId": "q495",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique explicitement que le contexte ne permet pas une présentation exhaustive des règles du RGPD et limite ses affirmations aux éléments disponibles. Les éléments cités sont globalement exacts et largement tirés des extraits. Toutefois, elle ne couvre pas les règles générales essentielles du RGPD, ce qui est cohérent avec son abstention partielle. Certaines formulations généralisent des dispositions contextuelles ou sectorielles, notamment la rectification et la conservation de douze mois, cette dernière étant bien présentée comme relevant d’un régime particulier."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "Les sources sont directement liées à plusieurs obligations et sanctions relatives aux données personnelles et au RGPD (mesures de traitement, minimisation, information, accès, copie, logique automatisée, conservation sectorielle). Elles sont toutefois insuffisantes pour présenter l’ensemble des règles générales du RGPD, ce qui soutient l’abstention partielle. La plupart des affirmations de la réponse sont étayées par les extraits. Certaines formulations généralisent cependant des dispositions contextualisées : la rectification figurant dans la source sur les propriétaires de titres concerne ce régime particulier et la conservation de douze mois est également expressément sectorielle, ce que la réponse précise pour cette dernière."
+    }
+  },
+  "failureStage": "none"
+}
