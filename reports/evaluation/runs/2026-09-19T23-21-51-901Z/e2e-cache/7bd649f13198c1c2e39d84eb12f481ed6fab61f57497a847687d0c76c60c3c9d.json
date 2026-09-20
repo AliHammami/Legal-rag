@@ -1,0 +1,103 @@
+{
+  "questionId": "q167",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L2253-5 du Code du travail prévoit que, lorsqu’un accord conclu dans tout ou partie d’un groupe le stipule expressément, ses dispositions remplacent celles ayant le même objet prévues par les conventions ou accords conclus antérieurement ou postérieurement dans les entreprises ou établissements compris dans son périmètre. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 228.54871999984607,
+      "vectorSearchMs": 629.5451009999961,
+      "jinaRerankingMs": 544.8541010003537,
+      "mappingMs": 0.035270999651402235,
+      "totalMs": 1403.010350999888,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011704000178724527,
+      "contextBuilderMs": 0.02430799975991249,
+      "generationMs": 1333.966628999915,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2737.0214740000665
+    },
+    "judge": {
+      "questionId": "q167",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article L2253-5 : la substitution est conditionnée à une stipulation expresse de l’accord de groupe et vise les stipulations ayant le même objet des accords antérieurs ou postérieurs, dans les entreprises ou établissements relevant de son périmètre. Elle est entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement la règle prévue à l’article L2253-5 du Code du travail. Elle est parfaitement pertinente et couvre toutes les affirmations importantes de la réponse : accord conclu dans tout ou partie d’un groupe, condition d’une prévision expresse, substitution des stipulations ayant le même objet, accords antérieurs ou postérieurs, et entreprises ou établissements inclus dans le périmètre de l’accord."
+    }
+  },
+  "routing": {
+    "answer": "L’article L2253-5 du Code du travail prévoit que, **si l’accord de groupe le prévoit expressément**, ses stipulations se substituent à celles, ayant le même objet, des conventions ou accords conclus **avant ou après** dans les entreprises ou établissements compris dans son périmètre. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.6455769999884,
+      "routingCalls": 1,
+      "embeddingMs": 361.89616699982435,
+      "vectorSearchMs": 227.35951400035992,
+      "jinaRerankingMs": 534.0401699999347,
+      "mappingMs": 0.08554199989885092,
+      "totalMs": 2046.0512760002166,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010386999696493149,
+      "contextBuilderMs": 0.019916999619454145,
+      "generationMs": 1125.8717379998416,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3171.9610529998317
+    },
+    "judge": {
+      "questionId": "q167",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement la règle de l’article L2253-5 : la substitution est conditionnée à une prévision expresse de l’accord de groupe, concerne les stipulations de même objet et s’applique aux accords ou conventions antérieurs comme postérieurs dans les entreprises ou établissements compris dans son périmètre. Toutes ces affirmations sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est exactement l’article L2253-5 visé par la question et énonce directement la condition de prévision expresse, la substitution des stipulations ayant le même objet, l’application aux accords ou conventions antérieurs et postérieurs, ainsi que le périmètre des entreprises ou établissements concernés. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

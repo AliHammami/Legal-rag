@@ -1,0 +1,119 @@
+{
+  "questionId": "q001",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les extraits fournis ne précisent pas la peine de base prévue par l’article 222-1 du Code pénal.\n\nIls indiquent toutefois que l’infraction définie à cet article est punie :\n\n- de **20 ans de réclusion criminelle** dans certains cas aggravés, notamment lorsqu’elle est commise sur un mineur de quinze ans ou une personne particulièrement vulnérable [Sources 2 et 4] ;\n- de **30 ans de réclusion criminelle** lorsqu’elle est commise en bande organisée ou de manière habituelle dans certaines circonstances [Source 1], ou lorsqu’elle entraîne une mutilation ou une infirmité permanente [Source 3] ;\n- de la **réclusion criminelle à perpétuité** lorsqu’elle entraîne la mort de la victime sans intention de la donner [Source 5].\n\nAinsi, la peine exacte hors circonstance aggravante ne peut pas être déterminée à partir des sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-5"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 3337.7482929999996,
+      "vectorSearchMs": 755.9604949999994,
+      "jinaRerankingMs": 987.1096319999997,
+      "mappingMs": 0.187923999999839,
+      "totalMs": 5081.531238,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.1765529999993305,
+      "contextBuilderMs": 0.24418799999875773,
+      "generationMs": 3715.489888,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8797.714887
+    },
+    "judge": {
+      "questionId": "q001",
+      "correctness": 0,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne donne pas la peine de base demandée, qui est de quinze ans de réclusion criminelle selon l’article 222-1. Elle décrit correctement des peines aggravées figurant dans le contexte et constate à juste titre que la peine de base n’y est pas reproduite, mais cela ne répond pas à la question attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent toutes sur les conséquences aggravées de l’infraction définie à l’article 222-1 et sont donc liées au sujet, mais elles ne reproduisent pas l’article 222-1 ni sa peine de base, qui est précisément demandée. Elles sont dès lors insuffisantes pour répondre directement à la question. En revanche, elles couvrent les affirmations de la réponse générée relatives aux peines aggravées de 20 ans, 30 ans et à la perpétuité, ainsi que le constat que la peine de base n’est pas indiquée dans les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Les extraits fournis ne contiennent pas le texte de l’**article 222-1 du Code pénal**, qui définit l’infraction et fixe vraisemblablement sa peine de base. Il n’est donc pas possible de déterminer cette peine avec certitude à partir du seul contexte.\n\nEn revanche, lorsque les circonstances aggravantes sont réunies, la peine peut être :\n\n- **20 ans de réclusion criminelle**, notamment si les faits sont commis sur un mineur de quinze ans ou une personne particulièrement vulnérable (**article 222-3 du Code pénal** [Sources 2 et 4]) ;\n- **30 ans de réclusion criminelle**, notamment en cas de bande organisée ou de manière habituelle sur certaines victimes (**article 222-4 du Code pénal** [Source 1]), ou lorsque les tortures ont entraîné une mutilation ou une infirmité permanente (**article 222-5 du Code pénal** [Source 3]) ;\n- **la réclusion criminelle à perpétuité** si elles ont entraîné la mort de la victime sans intention de la donner (**article 222-6 du Code pénal** [Source 5]).\n\nLa peine de base prévue par l’article 222-1 ne peut pas être précisée, car son contenu n’est pas fourni.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-5"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1350.041534,
+      "routingCalls": 1,
+      "embeddingMs": 1150.881763999998,
+      "vectorSearchMs": 91.4738870000001,
+      "jinaRerankingMs": 548.6184360000007,
+      "mappingMs": 0.018302000000403496,
+      "totalMs": 3141.117269999999,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01835199999914039,
+      "contextBuilderMs": 0.06522399999812478,
+      "generationMs": 3708.846775000002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6850.067812000001
+    },
+    "judge": {
+      "questionId": "q001",
+      "correctness": 0,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne donne pas la peine de base demandée à l'article 222-1, qui est de quinze ans de réclusion criminelle, et se concentre sur des circonstances aggravantes hors de la question. Les peines aggravées qu'elle mentionne sont néanmoins étayées par le contexte fourni. Elle s'abstient de répondre alors qu'une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne contiennent pas l'article 222-1 ni sa peine de base, directement demandée ; elles sont donc insuffisantes pour répondre pleinement à la question. Elles sont toutefois pertinentes pour établir les peines aggravées des articles 222-3 à 222-6 et pour constater que le contenu exact de l'article 222-1 n'est pas fourni. Toutes les affirmations factuelles importantes de la réponse générée sur les peines de 20 ans, 30 ans et la perpétuité sont couvertes par les extraits cités, de même que le constat d'absence du texte de l'article 222-1."
+    }
+  },
+  "failureStage": "generation"
+}

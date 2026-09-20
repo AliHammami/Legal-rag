@@ -1,0 +1,91 @@
+{
+  "questionId": "q203",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L249-1 du Code de commerce**, les personnes physiques condamnées pour les infractions des chapitres Ier à VIII peuvent se voir infliger, à titre de peines complémentaires :\n\n- l’interdiction d’exercer une **fonction publique** ;\n- l’interdiction d’exercer l’**activité professionnelle ou sociale** dans le cadre de laquelle l’infraction a été commise ;\n- l’interdiction d’exercer une **profession commerciale ou industrielle** ;\n- l’interdiction de **diriger, administrer, gérer ou contrôler**, directement ou indirectement, pour son propre compte ou pour le compte d’autrui :\n  - une entreprise commerciale ou industrielle ;\n  - ou une société commerciale.\n\nCes interdictions sont prononcées selon les modalités de l’article 131-27 du Code pénal et peuvent être **cumulées**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L249-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.2072059996426,
+      "vectorSearchMs": 617.9449040000327,
+      "jinaRerankingMs": 636.6440910003148,
+      "mappingMs": 0.024027999956160784,
+      "totalMs": 1468.8898499999195,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010500000324100256,
+      "contextBuilderMs": 0.014913999941200018,
+      "generationMs": 2420.452080000192,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3889.375789999962
+    },
+    "judge": {
+      "questionId": "q203",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement toutes les interdictions prévues par l’article L249-1 : fonction publique, activité professionnelle ou sociale liée à l’infraction, profession commerciale ou industrielle, ainsi que direction, administration, gestion ou contrôle d’une entreprise ou société commerciale. Elle précise correctement les modalités de l’article 131-27 et le caractère cumulatif. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L249-1 visé par la question. Elle énonce toutes les interdictions reprises dans la réponse, y compris l’exercice d’une fonction publique, l’activité professionnelle ou sociale liée à l’infraction, la profession commerciale ou industrielle, ainsi que la direction, l’administration, la gestion ou le contrôle direct ou indirect d’une entreprise ou société commerciale. Elle couvre aussi le renvoi à l’article 131-27 et le caractère cumulatif. La source 2 est superflue mais ne nuit pas à la pertinence ni à la couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L249-1 du Code de commerce**, les personnes physiques coupables des infractions concernées peuvent se voir infliger, à titre de peines complémentaires :\n\n- l’interdiction d’exercer une fonction publique ;\n- l’interdiction d’exercer l’activité professionnelle ou sociale dans le cadre de laquelle l’infraction a été commise ;\n- l’interdiction d’exercer une profession commerciale ou industrielle ;\n- l’interdiction de diriger, administrer, gérer ou contrôler, directement ou indirectement, une entreprise commerciale ou industrielle ou une société commerciale, pour son propre compte ou pour le compte d’autrui.\n\nCes interdictions peuvent être prononcées cumulativement, selon les modalités prévues par l’article 131-27 du Code pénal. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L249-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4098.2600579997525,
+      "routingCalls": 1,
+      "embeddingMs": 178.1293810000643,
+      "vectorSearchMs": 221.28619799995795,
+      "jinaRerankingMs": 554.5466020000167,
+      "mappingMs": 0.02459800010547042,
+      "totalMs": 5052.272160999943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009706000331789255,
+      "contextBuilderMs": 0.00989300012588501,
+      "generationMs": 1809.4518269998953,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6861.752529999707
+    },
+    "judge": {
+      "questionId": "q203",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement les interdictions prévues par l'article L249-1, y compris l'interdiction liée à l'activité professionnelle ou sociale, les activités commerciales ou industrielles, et la direction, administration, gestion ou contrôle d'une entreprise ou société commerciale. Elle précise correctement leur caractère cumulatif et le renvoi à l'article 131-27. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L249-1 visé par la question. Elle énumère toutes les interdictions reprises dans la réponse, précise qu'elles s'appliquent aux personnes physiques coupables d'infractions des chapitres Ier à VIII, renvoie aux modalités de l'article 131-27 du Code pénal et indique expressément que ces interdictions peuvent être prononcées cumulativement."
+    }
+  },
+  "failureStage": "none"
+}

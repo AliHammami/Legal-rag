@@ -1,0 +1,95 @@
+{
+  "questionId": "q223",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L341-1 du Code de commerce vise des contrats conclus avec :\n\n- une **personne physique** ; ou\n- une **personne morale de droit privé regroupant des commerçants**, à l’exclusion de celles mentionnées aux chapitres V et VI du titre II.\n\nLa phrase étant incomplète dans l’extrait fourni, il n’est pas possible de préciser davantage le champ d’application. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L341-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L654-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 217.91779100010172,
+      "vectorSearchMs": 572.5451370002702,
+      "jinaRerankingMs": 529.7238620002754,
+      "mappingMs": 0.023498999886214733,
+      "totalMs": 1320.2345210001804,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009928000159561634,
+      "contextBuilderMs": 0.014194999821484089,
+      "generationMs": 2360.756897999905,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3681.0231320001185
+    },
+    "judge": {
+      "questionId": "q223",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les personnes visées : une personne physique ou une personne morale de droit privé regroupant des commerçants, à l’exclusion de celles mentionnées aux chapitres V et VI du titre II. Ces éléments sont directement présents dans le contexte fourni. La précision sur le caractère tronqué de l’extrait n’empêche pas de répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit le segment de l’article L341-1 identifiant les cocontractants, soit une personne physique ou une personne morale de droit privé regroupant des commerçants, avec l’exclusion mentionnée. Elle couvre les affirmations substantielles de la réponse, y compris le constat que l’extrait est tronqué. La source 2 est hors sujet mais n’est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’extrait fourni de l’**article L341-1 du Code de commerce**, l’ensemble des contrats concerne, d’une part :\n\n- **une personne physique** ; ou\n- **une personne morale de droit privé regroupant des commerçants**,\n\nà l’exclusion de celles mentionnées aux **chapitres V et VI du titre II**.\n\nL’extrait étant incomplet, il ne permet pas de préciser l’ensemble des parties visées par les contrats. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L341-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L654-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2874.84355899971,
+      "routingCalls": 1,
+      "embeddingMs": 511.7730710003525,
+      "vectorSearchMs": 616.6318239998072,
+      "jinaRerankingMs": 552.7576379999518,
+      "mappingMs": 0.03685000026598573,
+      "totalMs": 4556.073826000094,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00993099994957447,
+      "contextBuilderMs": 0.017115999944508076,
+      "generationMs": 2612.2500459998846,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7168.359170999844
+    },
+    "judge": {
+      "questionId": "q223",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les personnes visées : une personne physique ou une personne morale de droit privé regroupant des commerçants, à l’exclusion de celles relevant des chapitres V et VI du titre II. Ces éléments sont explicitement présents dans le contexte. La réserve sur l’extrait incomplet est prudente et n’empêche pas de répondre à la question posée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement le passage pertinent de l’article L341-1 : elle vise une personne physique ou une personne morale de droit privé regroupant des commerçants, avec l’exclusion relative aux chapitres V et VI du titre II. Elle couvre donc les affirmations substantielles de la réponse, y compris le caractère tronqué de l’extrait. La source 2 est sans pertinence ici, mais n’est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q429",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Pour conclure une convention ou un accord, il faut respecter la formalité essentielle suivante :\n\n- **L’accord doit être établi par écrit**, à peine de nullité, conformément à l’**article L. 2231-3 du Code du travail** [Source 2].\n\nLe contexte fourni ne permet pas de préciser les autres formalités éventuellement requises selon la nature de l’accord. À titre particulier, lorsqu’un accord est conclu selon la modalité prévue au 4° du I de l’article L. 3312-5, la demande de renégociation doit être formalisée par l’un des documents mentionnés au 3° de l’article D. 3345-1 du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3313-7-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.80308400001377,
+      "vectorSearchMs": 601.6803329996765,
+      "jinaRerankingMs": 546.2123370002955,
+      "mappingMs": 0.023509999737143517,
+      "totalMs": 1359.7399509996176,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011249999515712261,
+      "contextBuilderMs": 0.017419000156223774,
+      "generationMs": 2325.2701719999313,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3685.0470230001956
+    },
+    "judge": {
+      "questionId": "q429",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse apporte une règle limitée aux conventions ou accords relevant de l’article L. 2231-3 du Code du travail, alors que la question est générale et ne permet pas d’identifier le type d’accord concerné. Elle ne s’abstient donc pas réellement malgré l’insuffisance de contexte attendue. Les affirmations formulées sont toutefois directement étayées par les deux extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La question est générale et appelle une abstention faute de précision sur le type d’accord. La source 2 est directement pertinente pour la formalité d’écrit des conventions ou accords visés, mais ne permet pas d’en faire une exigence universelle. La source 1 ne concerne qu’un cas très particulier de renégociation lié à un dispositif identifié. Elles sont donc insuffisantes pour répondre globalement, mais elles étayent bien les affirmations effectivement formulées dans la réponse : écrit à peine de nullité et formalisation de la demande de renégociation dans le cas précisé."
+    }
+  },
+  "routing": {
+    "answer": "Pour conclure un accord, il faut respecter la formalité suivante :\n\n- **L’accord doit être établi par écrit** ; à défaut, il est **nul**, conformément à l’**article L. 2231-3 du Code du travail** [Source 2].\n\nLe contexte ne fournit pas d’autres formalités générales de conclusion. Il précise seulement que, dans un cas particulier, une **demande de renégociation** doit être formalisée par l’un des documents visés à l’article D. 3345-1, 3° [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3313-7-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1069.097105000168,
+      "routingCalls": 1,
+      "embeddingMs": 191.2779350001365,
+      "vectorSearchMs": 683.2501260004938,
+      "jinaRerankingMs": 540.2177449995652,
+      "mappingMs": 0.023496000096201897,
+      "totalMs": 2483.8917569993064,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010662000626325607,
+      "contextBuilderMs": 0.018931999802589417,
+      "generationMs": 1882.261822999455,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4366.194600999355
+    },
+    "judge": {
+      "questionId": "q429",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse apporte une règle réelle du Code du travail relative aux conventions ou accords, mais elle présuppose sans fondement que la question vise ce type d'accord. La question étant générale et le contexte trop limité pour donner une réponse fiable et complète sur les formalités applicables, une abstention était attendue. Les affirmations formulées sont néanmoins directement étayées par les deux extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La question est générale et appelle une abstention : les sources ne permettent pas d’identifier le type d’accord concerné ni d’énoncer les formalités applicables de manière générale. Toutefois, la source 2 est directement pertinente pour l’affirmation conditionnellement formulée sur une convention ou un accord relevant de l’article L. 2231-3, et la source 1 est pertinente pour le cas particulier de renégociation. Toutes les affirmations importantes de la réponse générée sont explicitement soutenues par ces extraits."
+    }
+  },
+  "failureStage": "abstention"
+}

@@ -1,0 +1,99 @@
+{
+  "questionId": "q093",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 1101 du Code civil définit le contrat comme un **accord de volontés** entre au moins deux personnes. Sa nature juridique est donc celle d’un acte fondé sur la rencontre des volontés des parties, ayant pour objet de :\n\n- créer des obligations ;\n- modifier des obligations existantes ;\n- transmettre des obligations ;\n- ou éteindre des obligations.  \n[Article 1101 du Code civil — Source 1]\n\nLes effets du contrat sont en principe **relatifs aux parties** : il ne crée d’obligations qu’entre celles qui l’ont conclu. En conséquence, les tiers ne peuvent normalement ni demander l’exécution du contrat ni être contraints de l’exécuter, sous réserve des exceptions prévues par la loi. [Article 1199 du Code civil — Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1101"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1199"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.17095699999481,
+      "vectorSearchMs": 568.5282529999968,
+      "jinaRerankingMs": 482.9653910000343,
+      "mappingMs": 0.045784000074490905,
+      "totalMs": 1294.7707609999925,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013499999884516,
+      "contextBuilderMs": 0.0525350000243634,
+      "generationMs": 2339.3215149999596,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3634.1693680000026
+    },
+    "judge": {
+      "questionId": "q093",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l’article 1101 (accord de volontés entre deux ou plusieurs personnes visant à créer, modifier, transmettre ou éteindre des obligations) et explique les effets obligatoires entre les parties, conformément à l’article 1199. Toutes les affirmations importantes sont directement étayées par les deux extraits de contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la définition et les quatre effets possibles du contrat visés à l’article 1101. La source 2 est directement pertinente pour l’affirmation complémentaire sur l’effet relatif du contrat : obligations entre les parties et absence, en principe, de droit ou de contrainte pour les tiers. Toutes les affirmations importantes de la réponse sont étayées."
+    }
+  },
+  "routing": {
+    "answer": "L’**article 1101 du Code civil** définit le contrat comme un **accord de volontés** entre au moins deux personnes. Il s’agit donc d’un acte juridique fondé sur le consentement des parties, ayant pour objet de **créer, modifier, transmettre ou éteindre des obligations** [Source 1].\n\nSes effets sont principalement les suivants :\n\n- Le contrat fait naître des obligations pour les parties, conformément à ce qu’elles ont convenu.\n- Ces obligations ne se limitent pas aux stipulations expressément prévues : selon l’**article 1194 du Code civil**, le contrat oblige également à toutes les suites que lui donnent **l’équité, l’usage ou la loi** [Source 3].\n- En principe, le contrat ne produit d’obligations qu’entre les parties. Les tiers ne peuvent ni en demander l’exécution ni être contraints de l’exécuter, conformément à l’**article 1199 du Code civil** [Source 2].\n\nAinsi, le contrat est à la fois un accord de volontés et une source d’obligations juridiquement contraignantes pour ceux qui y sont parties, dans les limites de son contenu exprès et de ses conséquences résultant de l’équité, de l’usage ou de la loi.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1101"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1199"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1194"
+      }
+    ],
+    "profiling": {
+      "routingMs": 923.2166820000857,
+      "routingCalls": 1,
+      "embeddingMs": 190.01038900017738,
+      "vectorSearchMs": 61.3801140000578,
+      "jinaRerankingMs": 486.3960270001553,
+      "mappingMs": 0.024942000163719058,
+      "totalMs": 1661.0545660001226,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01143199997022748,
+      "contextBuilderMs": 0.01699699996970594,
+      "generationMs": 3038.868088999996,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4699.960100000026
+    },
+    "judge": {
+      "questionId": "q093",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l'article 1101 (accord de volontés entre deux ou plusieurs personnes destiné à créer, modifier, transmettre ou éteindre des obligations) et explique adéquatement ses effets obligatoires. Les précisions sur les suites résultant de l'équité, de l'usage ou de la loi (art. 1194) et sur l'effet relatif à l'égard des tiers (art. 1199) sont correctes, pertinentes et explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l’article 1101 définit la nature du contrat, l’article 1194 précise l’étendue de sa force obligatoire et l’article 1199 son effet relatif entre les parties. Elles couvrent toutes les affirmations importantes de la réponse, y compris la définition, la création/modification/transmission/extinction des obligations, les suites issues de l’équité, de l’usage ou de la loi, et l’absence d’obligation ou de droit à exécution des tiers."
+    }
+  },
+  "failureStage": "none"
+}

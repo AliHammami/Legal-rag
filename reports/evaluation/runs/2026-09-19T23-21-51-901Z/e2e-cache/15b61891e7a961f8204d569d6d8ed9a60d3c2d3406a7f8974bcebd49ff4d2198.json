@@ -1,0 +1,103 @@
+{
+  "questionId": "q152",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La finalité principale de la taxe d’apprentissage est de **favoriser l’égal accès à l’apprentissage et de contribuer au financement des actions de développement de l’apprentissage** — **Article L6241-1 du Code du travail** [Source 1].\n\nElle finance notamment l’apprentissage, la part principale étant destinée à son financement — **Article L6241-2 du Code du travail** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6241-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6241-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 250.9888450000435,
+      "vectorSearchMs": 630.4986049998552,
+      "jinaRerankingMs": 855.2167730000801,
+      "mappingMs": 0.03584000002592802,
+      "totalMs": 1736.76393799996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012255999725311995,
+      "contextBuilderMs": 0.021972000133246183,
+      "generationMs": 1329.2891029999591,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3066.096710000187
+    },
+    "judge": {
+      "questionId": "q152",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la finalité énoncée à l’article L. 6241-1 : favoriser l’égal accès à l’apprentissage et financer des actions de développement de l’apprentissage. La précision sur la part principale finançant l’apprentissage est également explicitement étayée par l’article L. 6241-2. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 énonce directement et intégralement la finalité principale de la taxe d’apprentissage reprise dans la réponse. La source 2 étaye explicitement l’affirmation complémentaire selon laquelle sa part principale est destinée au financement de l’apprentissage. Les affirmations importantes de la réponse sont donc couvertes par des sources directement pertinentes."
+    }
+  },
+  "routing": {
+    "answer": "La finalité principale de la taxe d’apprentissage est de **favoriser l’égal accès à l’apprentissage et de contribuer au financement des actions de développement de l’apprentissage**. Elle participe notamment au financement de l’apprentissage par sa part principale [Source 1 ; Source 2].\n\nL’apprentissage vise lui-même à favoriser l’insertion professionnelle et l’obtention d’une qualification professionnelle [Source 3 — Article L6211-1 du Code du travail].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6241-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6241-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2240.0943960002623,
+      "routingCalls": 1,
+      "embeddingMs": 224.62424700008705,
+      "vectorSearchMs": 229.13090900005773,
+      "jinaRerankingMs": 593.0170450001024,
+      "mappingMs": 0.031039000023156404,
+      "totalMs": 3286.923880999908,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00993099994957447,
+      "contextBuilderMs": 0.02123699989169836,
+      "generationMs": 1616.6428370000795,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4903.606179000344
+    },
+    "judge": {
+      "questionId": "q152",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la finalité prévue à l'article L. 6241-1 : favoriser l'égal accès à l'apprentissage et contribuer au financement d'actions de développement de l'apprentissage. La précision sur la part principale est soutenue par la source 2, et l'information additionnelle sur l'objet de l'apprentissage est correctement soutenue par la source 3, sans contredire la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement et explicitement à la question en énonçant les deux finalités de la taxe d’apprentissage. La source 2 est pertinente pour la précision relative au financement de l’apprentissage par la part principale. La source 3 couvre l’information additionnelle sur l’objet de l’apprentissage (insertion professionnelle et qualification). Toutes les affirmations importantes de la réponse sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

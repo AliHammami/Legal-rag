@@ -1,0 +1,87 @@
+{
+  "questionId": "q353",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient aucune disposition relative aux obligations d’une personne concernant son concours à la justice. Il n’est donc pas possible de répondre à cette partie.\n\nEn revanche, selon l’**article L1237-3 du Code du travail**, le nouvel employeur est solidairement responsable du dommage causé à l’ancien employeur lorsque le salarié a rompu abusivement son contrat et qu’il conclut un nouveau contrat de travail, dans l’un des cas suivants [Source 1] :\n\n1. Le nouvel employeur est intervenu dans la rupture du contrat précédent ;\n2. Il a engagé un salarié dont il savait qu’il était encore lié par un contrat de travail ;\n3. Il a continué à employer le salarié après avoir appris qu’il était toujours lié à un autre employeur.\n\nDans ce troisième cas, la responsabilité du nouvel employeur n’est pas engagée si, au moment où il a été informé, le contrat abusivement rompu avait déjà pris fin :  \n- pour un contrat à durée déterminée, par l’arrivée du terme ;  \n- pour un contrat à durée indéterminée, par l’expiration du préavis ou après l’écoulement d’un délai de quinze jours depuis la rupture [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 191.70346399955451,
+      "vectorSearchMs": 628.3261020006612,
+      "jinaRerankingMs": 559.1967169996351,
+      "mappingMs": 0.03658000007271767,
+      "totalMs": 1379.289632000029,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009924999438226223,
+      "contextBuilderMs": 0.011920999735593796,
+      "generationMs": 2716.1763340001926,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4095.496305999346
+    },
+    "judge": {
+      "questionId": "q353",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon détaillée les conditions de responsabilité solidaire prévues par l’article L1237-3, y compris l’exception relative à l’expiration du contrat, toutes explicitement présentes dans le contexte. En revanche, elle ne répond pas à la première partie de la question sur l’obligation de concours à la justice, alors que la réponse attendue est l’obligation de collaborer à la justice sous peine d’astreinte ou d’amende civile. Ses affirmations sur la seconde partie sont intégralement fondées sur le contexte, mais l’abstention sur une partie essentielle rend la réponse incomplète alors qu’une réponse complète était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la seconde partie de la question et reproduit les trois hypothèses de responsabilité solidaire, ainsi que l’exception liée à l’expiration du contrat. Elle ne contient en revanche aucune disposition sur le concours à la justice, de sorte qu’une source importante manque pour répondre intégralement à la question. Les affirmations effectivement formulées dans la réponse générée sur l’article L1237-3 sont toutes couvertes par la source, et le constat d’absence de disposition relative au concours à la justice correspond au périmètre du contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient aucune disposition relative aux obligations d’une personne concernant son concours à la justice. Il ne permet donc pas de répondre à cette première partie.\n\nS’agissant du nouvel employeur, **l’article L1237-3 du Code du travail** prévoit une responsabilité solidaire lorsque le salarié a rompu abusivement son contrat puis conclut un nouveau contrat de travail. Cette responsabilité est engagée dans les cas suivants :\n\n1. **Le nouvel employeur est intervenu dans la rupture** du contrat précédent ;\n2. **Il a engagé le salarié en sachant** que celui-ci était encore lié par un contrat de travail ;\n3. **Il a continué à l’employer après avoir appris** qu’il était encore lié à un autre employeur.\n\nDans ce troisième cas, la responsabilité n’est toutefois pas engagée si, au moment où le nouvel employeur a été averti, le contrat abusivement rompu avait déjà pris fin : par l’arrivée du terme pour un contrat à durée déterminée, par l’expiration du préavis pour un contrat à durée indéterminée, ou après l’écoulement d’un délai de quinze jours depuis la rupture. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2356.663092999719,
+      "routingCalls": 1,
+      "embeddingMs": 176.65659399982542,
+      "vectorSearchMs": 373.56362899951637,
+      "jinaRerankingMs": 532.4985579997301,
+      "mappingMs": 0.027905000373721123,
+      "totalMs": 3439.4379829997197,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.08242900017648935,
+      "contextBuilderMs": 0.017849000170826912,
+      "generationMs": 2396.7647339999676,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5836.313048000447
+    },
+    "judge": {
+      "questionId": "q353",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon détaillée les conditions de responsabilité solidaire du nouvel employeur prévues par l'article L1237-3, y compris l'exception applicable au troisième cas. En revanche, elle ne répond pas à la première partie relative à l'obligation de concours à la justice, alors que la référence attend l'article 10 du code civil. Cette omission réduit fortement la correction et la complétude globales. Toutes les affirmations positives formulées sont directement étayées par le contexte fourni, et l'absence de disposition sur le concours à la justice dans ce contexte est correctement constatée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour la seconde partie de la question : elle reproduit l'article L1237-3 et couvre les trois cas de responsabilité solidaire ainsi que l'exception applicable au troisième cas. Elle ne fournit en revanche aucune disposition sur le concours à la justice, qui constitue une partie importante de la question. Toutefois, elle permet de soutenir le constat limité de la réponse selon lequel le contexte fourni ne contient pas cette disposition. Toutes les affirmations substantielles formulées dans la réponse sur le nouvel employeur sont couvertes par la source."
+    }
+  },
+  "failureStage": "generation"
+}

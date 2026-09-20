@@ -1,0 +1,119 @@
+{
+  "questionId": "q471",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles d’urbanisme applicables à une extension de maison.\n\nElles concernent principalement :\n\n- les projets de création ou d’extension d’un **magasin de commerce de détail ou d’un ensemble commercial** d’une surface de vente comprise entre 300 et 1 000 m², dans certaines communes ou en cas d’artificialisation des sols — **Article R. 752-21 du Code de commerce** [Source 1] ;\n- le dépôt des demandes de permis de construire relatives à des **projets commerciaux** — **Article R. 752-9 du Code de commerce** [Source 5] ;\n- les distances à respecter pour les fenêtres, balcons ou vues donnant sur le fonds voisin : une distance de **19 décimètres** est prévue, sauf servitude de passage empêchant les constructions — **Article 678 du Code civil** [Source 2] ;\n- les obligations particulières concernant les bâtiments à usage professionnel — **Article L. 4744-1 du Code du travail** [Source 4].\n\nAucune source ne précise notamment si une extension de maison nécessite une déclaration préalable ou un permis de construire, ni les règles de surface, d’emprise au sol, de hauteur ou de respect du PLU. Ces éléments ne peuvent donc pas être déduits du contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A761-14"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4744-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 263.9937490001321,
+      "vectorSearchMs": 567.3460779991001,
+      "jinaRerankingMs": 547.4254600014538,
+      "mappingMs": 0.025529000908136368,
+      "totalMs": 1378.8112540002912,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013585001230239868,
+      "contextBuilderMs": 0.031043998897075653,
+      "generationMs": 3031.323722001165,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4410.1893140003085
+    },
+    "judge": {
+      "questionId": "q471",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement de répondre sur les règles d'urbanisme applicables à une extension de maison, ce qui est approprié compte tenu du contexte. Elle explique correctement que les sources portent sur des projets commerciaux, les vues sur le fonds voisin et des bâtiments professionnels, sans fournir les règles générales d'urbanisme résidentiel (PLU, déclaration préalable, permis de construire, seuils de surface, hauteur ou emprise). Les affirmations sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur les règles générales d’urbanisme applicables à une extension de maison individuelle : elles concernent surtout des projets commerciaux ou des bâtiments professionnels. Elles permettent donc de constater que le contexte est insuffisant pour répondre directement à la question et justifient l’abstention. L’article 678 du Code civil traite bien des vues et distances avec le voisin, mais ne fournit pas le régime d’autorisation d’urbanisme recherché. Les caractérisations faites dans la réponse concernant les sources citées sont fidèles à leur contenu, et l’absence d’éléments sur déclaration préalable, permis, seuils, emprise, hauteur ou PLU est cohérente avec le corpus fourni."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles générales d’urbanisme applicables à l’extension d’une maison : elles ne précisent notamment ni les seuils de surface, ni les règles du PLU, ni les formalités de déclaration préalable ou de permis de construire.\n\nElles permettent seulement d’indiquer que :\n\n- La procédure prévue pour certains projets commerciaux concerne les magasins de commerce de détail ou ensembles commerciaux, et non les extensions ordinaires de maisons. Elle vise notamment certains projets d’une surface de vente comprise entre 300 et 1 000 m² [Source 1 — Article R. 752-21 du Code de commerce].\n- Lorsqu’un projet nécessite un permis de construire, la demande doit être déposée avec son dossier conformément aux règles du Code de l’urbanisme, puis transmise au secrétariat de la commission départementale dans les conditions indiquées [Source 5 — Article R. 752-9 du Code de commerce]. Cette disposition concerne toutefois le cadre commercial visé par cet article.\n- Une extension comportant des fenêtres, balcons ou autres saillies donnant directement sur le terrain voisin doit respecter une distance minimale de 19 décimètres entre le mur concerné et la propriété voisine, sauf existence d’une servitude de passage empêchant la construction [Source 2 — Article 678 du Code civil].\n\nAinsi, pour répondre précisément à la question, il faudrait au minimum connaître la commune, la surface et la nature de l’extension ainsi que les règles du document d’urbanisme local. Ces éléments ne figurent pas dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A761-14"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4744-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.3477209992707,
+      "routingCalls": 1,
+      "embeddingMs": 213.4234549999237,
+      "vectorSearchMs": 659.307614998892,
+      "jinaRerankingMs": 558.8238139990717,
+      "mappingMs": 0.038492001593112946,
+      "totalMs": 2455.964789999649,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.10370500013232231,
+      "contextBuilderMs": 0.054766999557614326,
+      "generationMs": 3137.980874000117,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5594.114625999704
+    },
+    "judge": {
+      "questionId": "q471",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne permet pas de déterminer les règles d’urbanisme applicables à une extension de maison. Elle distingue à juste titre les dispositions commerciales, non pertinentes pour une extension résidentielle ordinaire, et mentionne uniquement la règle de distance civile effectivement présente dans le contexte. Les affirmations sont soutenues par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne fournissent pas les règles générales d’urbanisme applicables à une extension de maison, mais elles sont suffisamment pertinentes pour justifier l’abstention : les articles R. 752-21 et R. 752-9 concernent un cadre de projets commerciaux, tandis que l’article 678 du Code civil apporte uniquement une règle ponctuelle relative aux vues sur le fonds voisin. La réponse décrit fidèlement ce périmètre limité et ne prétend pas en déduire les seuils, formalités ou règles locales absents du contexte. Les affirmations importantes sur le champ commercial, le dépôt d’une demande de permis dans ce cadre et la distance de dix-neuf décimètres sont couvertes par les sources citées."
+    }
+  },
+  "failureStage": "none"
+}

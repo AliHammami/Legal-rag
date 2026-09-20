@@ -1,0 +1,99 @@
+{
+  "questionId": "q249",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L343-1 du Code monétaire et financier, la fourniture à distance de services financiers à un consommateur est régie par :\n\n- les articles **L. 222-1 à L. 222-18** du Code de la consommation ;\n- l’article **L. 232-4** du Code de la consommation ;\n- l’article **L. 242-15** du Code de la consommation.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L343-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.76789200026542,
+      "vectorSearchMs": 646.8194829998538,
+      "jinaRerankingMs": 549.7831770004705,
+      "mappingMs": 0.021881000138819218,
+      "totalMs": 1406.4171080002561,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010765000246465206,
+      "contextBuilderMs": 0.010994000360369682,
+      "generationMs": 1252.7137040002272,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2659.160657000728
+    },
+    "judge": {
+      "questionId": "q249",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois renvois prévus par l’article L. 343-1 : L. 222-1 à L. 222-18, L. 232-4 et L. 242-15 du code de la consommation. Toutes les affirmations sont directement étayées par le contexte et la question reçoit une réponse complète."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 343-1 et énumère exactement les articles du code de la consommation cités dans la réponse générée : L. 222-1 à L. 222-18, L. 232-4 et L. 242-15. Elle est donc parfaitement pertinente et couvre l’ensemble des affirmations importantes."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas le texte de l’**article L343-1** : il ne permet donc pas d’identifier avec certitude l’ensemble des articles auxquels cet article renvoie.\n\nLes dispositions fournies relatives à la fourniture à distance de services financiers sont notamment :\n\n- **Article L222-6 du Code de la consommation** : transmission des conditions contractuelles et des informations précontractuelles sur support durable [Source 4] ;\n- **Article R222-1 du Code de la consommation** : informations à fournir au consommateur, notamment sur les risques, la durée de validité des informations et le droit de rétractation [Source 3] ;\n- **Article L222-16 du Code de la consommation** : règles applicables aux techniques de communication à distance utilisées pour commercialiser des services financiers [Source 1] ;\n- **Article L314-31 du Code de la consommation** : exclusion de certaines dispositions pour les contrats à distance portant sur des services financiers régis par le chapitre II du titre II du livre II [Source 2].\n\nPour répondre précisément à la question « selon l’article L343-1 », il faudrait disposer du texte de cet article ou de la liste des articles auxquels il renvoie.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L222-16"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-31"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R222-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1513.0619270000607,
+      "routingCalls": 1,
+      "embeddingMs": 257.82091400027275,
+      "vectorSearchMs": 46.93307999987155,
+      "jinaRerankingMs": 627.3178120004013,
+      "mappingMs": 0.0823219995945692,
+      "totalMs": 2445.2729619992897,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05374700017273426,
+      "contextBuilderMs": 0.08807099983096123,
+      "generationMs": 3628.80208399985,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6074.234805000015
+    },
+    "judge": {
+      "questionId": "q249",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’identifie pas la liste demandée par l’article L. 343-1 (L. 222-1 à L. 222-18, L. 232-4 et L. 242-15) et se limite à citer quelques dispositions connexes, dont seulement certaines appartiennent à cette plage. Elle est néanmoins factuellement étayée par le contexte fourni pour les descriptions des articles cités et constate correctement que le texte de L. 343-1 n’y figure pas. Toutefois, alors qu’une réponse était attendue, elle s’abstient de répondre précisément à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent majoritairement sur la fourniture à distance de services financiers et étayent des dispositions connexes (L. 222-6, L. 222-16, R. 222-1), mais elles ne contiennent pas l’article L. 343-1 ni sa liste complète de renvois. Elles sont donc seulement partiellement suffisantes pour répondre à la question précise. En revanche, elles couvrent les affirmations effectivement formulées dans la réponse générée : le contenu des articles cités est repris de manière conforme, et l’absence du texte de L. 343-1 dans le contexte justifie le constat d’impossibilité d’identifier avec certitude tous ses renvois."
+    }
+  },
+  "failureStage": "generation"
+}

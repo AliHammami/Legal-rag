@@ -1,0 +1,103 @@
+{
+  "questionId": "q423",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de **refus de paiement d’un chèque par le tiré au motif d’une opposition du tireur**, lorsque ce refus intervient en dehors des cas légalement prévus, **aucune peine d’emprisonnement n’est prévue** par le texte fourni.\n\nLa sanction applicable est une **amende de 6 000 euros**, prévue par l’**article L. 163-1 du Code monétaire et financier** [Source 1].\n\nÀ titre distinct, certaines infractions liées à l’émission ou au maintien d’un chèque irrégulier sont punies de **cinq ans d’emprisonnement et de 375 000 euros d’amende** (articles **L. 163-2** et **L. 163-7 du Code monétaire et financier**) [Sources 2 et 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.38017700053751,
+      "vectorSearchMs": 628.8118739994243,
+      "jinaRerankingMs": 544.4098819997162,
+      "mappingMs": 0.04727800004184246,
+      "totalMs": 1384.6927209999412,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018877999857068062,
+      "contextBuilderMs": 0.03231400065124035,
+      "generationMs": 2914.883082999848,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4299.638330000453
+    },
+    "judge": {
+      "questionId": "q423",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, au regard de l’article L. 163-1 fourni, l’amende de 6 000 euros et l’absence de peine d’emprisonnement attachée à cette infraction précise. Elle est entièrement fondée sur les sources, y compris lorsqu’elle mentionne les peines de cinq ans applicables à d’autres infractions relatives aux chèques. Toutefois, elle ne répond pas à l’élément attendu par la référence relatif au maximum de dix ans selon l’échelle des peines du Code pénal et ajoute des développements sur des infractions distinctes, ce qui rend la réponse partiellement divergente et incomplète vis-à-vis de la question telle qu’attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l’article L. 163-1 vise précisément le refus de paiement par le tiré sur opposition irrégulière et fixe l’amende de 6 000 euros. Les articles L. 163-2 et L. 163-7 étayent la précision distincte relative à d’autres infractions concernant les chèques, punies de cinq ans d’emprisonnement et 375 000 euros d’amende. Toutes les affirmations juridiques importantes de la réponse sont ainsi couvertes par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "En droit monétaire et financier :\n\n- **Le refus de paiement d’un chèque par le tiré**, lorsque le refus est fondé sur une opposition du tireur en dehors des cas autorisés, est puni d’une **amende de 6 000 €**. Le texte ne prévoit **aucune peine d’emprisonnement** pour ce seul comportement — **Article L. 163-1 du Code monétaire et financier [Source 1]**.\n- Certaines infractions liées au chèque — notamment le retrait de la provision, la défense faite au tiré de payer, ou l’émission malgré une interdiction — sont punies au maximum de **cinq ans d’emprisonnement** et de **375 000 € d’amende** — **Articles L. 163-2 et L. 163-7 du Code monétaire et financier [Sources 2 et 3]**.\n\nAinsi, pour le **refus de paiement visé par l’article L. 163-1**, la sanction pécuniaire est de **6 000 €**, sans emprisonnement prévu.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1229.3043400002643,
+      "routingCalls": 1,
+      "embeddingMs": 179.0962249999866,
+      "vectorSearchMs": 222.7961399992928,
+      "jinaRerankingMs": 546.5403579995036,
+      "mappingMs": 0.02698000054806471,
+      "totalMs": 2177.789534999989,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013498000800609589,
+      "contextBuilderMs": 0.0204689996317029,
+      "generationMs": 2737.569829999469,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4915.401252999902
+    },
+    "judge": {
+      "questionId": "q423",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, au regard du contexte, l’amende de 6 000 € prévue par l’article L. 163-1 pour le refus de paiement par le tiré hors cas autorisés, ainsi que l’absence d’emprisonnement explicitement prévu pour ce seul fait. Elle mentionne aussi correctement les peines de cinq ans et 375 000 € pour des infractions connexes des articles L. 163-2 et L. 163-7. Toutefois, elle ne répond pas à l’élément de la référence relatif à des peines d’emprisonnement pouvant aller jusqu’à dix ans selon le code pénal, et substitue des infractions connexes à cette réponse. Toutes ses affirmations importantes sont néanmoins étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour la sanction de 6 000 € applicable au refus de paiement par le tiré (L. 163-1) et pour les peines de cinq ans et 375 000 € relatives aux infractions connexes (L. 163-2 et L. 163-7). Elles ne couvrent toutefois pas une éventuelle échelle de peines relevant du code pénal ni une peine de dix ans. Toutes les affirmations importantes effectivement formulées dans la réponse générée sont néanmoins étayées par les textes fournis, y compris l’absence de peine d’emprisonnement dans la rédaction de L. 163-1."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q377",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L1222-10 du Code du travail [Source 1]**, l’employeur doit, à l’égard du salarié en télétravail :\n\n1. **Informer le salarié** de toute restriction concernant l’utilisation des équipements, outils informatiques ou services de communication électronique, ainsi que des sanctions encourues en cas de non-respect ;\n2. **Accorder une priorité** au salarié pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences, et l’informer de la disponibilité de tels postes ;\n3. **Organiser chaque année un entretien** portant notamment sur ses conditions d’activité et sa charge de travail.\n\nLe contexte fourni ne contient aucune disposition du **Code pénal** relative aux conditions d’acquisition de la réhabilitation d’une personne condamnée. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 319.4713300000876,
+      "vectorSearchMs": 692.0096240006387,
+      "jinaRerankingMs": 583.7323690000921,
+      "mappingMs": 0.06924000009894371,
+      "totalMs": 1595.3091409998015,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019403000362217426,
+      "contextBuilderMs": 0.016605000011622906,
+      "generationMs": 2295.6092519992962,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3890.9646969996393
+    },
+    "judge": {
+      "questionId": "q377",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue exactement les trois obligations de l'article L1222-10 figurant dans le contexte. Elle ne fournit toutefois pas la règle demandée sur la réhabilitation de plein droit (délais selon la peine et doublement en récidive), de sorte qu'elle ne répond qu'à une partie de la question. Toutes les affirmations formulées, y compris l'absence de disposition pénale dans le contexte, sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 2,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les trois obligations de l’employeur en télétravail énoncées dans la réponse. En revanche, elle ne porte pas sur la réhabilitation pénale : elle peut étayer le constat que le contexte fourni ne contient pas cette règle, mais elle ne permet pas de répondre au second volet de la question, alors qu’une abstention globale n’était pas attendue."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L1222-10 du Code du travail** [Source 1], l’employeur doit, envers le salarié en télétravail :\n\n1. **L’informer** des restrictions applicables à l’usage des équipements, outils informatiques ou services de communication électronique, ainsi que des sanctions encourues en cas de non-respect ;\n2. **Lui accorder une priorité** pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences, et l’informer de la disponibilité de tels postes ;\n3. **Organiser chaque année un entretien** portant notamment sur ses conditions d’activité et sa charge de travail.\n\nEn revanche, le contexte fourni ne contient **aucune disposition du Code pénal relative à la réhabilitation d’une personne condamnée**. Il ne permet donc pas de déterminer comment cette réhabilitation est acquise.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1198.3341289991513,
+      "routingCalls": 1,
+      "embeddingMs": 177.5977950002998,
+      "vectorSearchMs": 304.78769700042903,
+      "jinaRerankingMs": 605.8770840000361,
+      "mappingMs": 0.023659000173211098,
+      "totalMs": 2286.6425139997154,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009858000092208385,
+      "contextBuilderMs": 0.010664000175893307,
+      "generationMs": 2014.7850009994581,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4301.456032999791
+    },
+    "judge": {
+      "questionId": "q377",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les trois obligations prévues à l’article L1222-10 du code du travail. Elle ne répond toutefois pas au second volet sur les modalités de la réhabilitation de plein droit au sens de l’article 133-13 du code pénal, qui constitue une omission essentielle au regard de la question et de la référence. Cette omission est néanmoins justifiée par le contexte effectivement fourni, qui ne contient que l’article du code du travail : les affirmations produites sont donc entièrement fondées sur ce contexte. La réponse ne constitue pas une abstention globale, puisqu’elle répond effectivement au premier volet et signale explicitement la limite documentaire pour le second."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le volet télétravail et reproduit exactement les trois obligations invoquées. Elle ne traite pas de la réhabilitation pénale, donc elle est insuffisante pour répondre positivement au second volet de la question. Toutefois, la réponse s'abstient explicitement sur ce volet en constatant que le contexte fourni ne contient aucune disposition pénale, constat compatible avec l'unique source fournie. Toutes les affirmations effectivement formulées dans la réponse sont ainsi couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

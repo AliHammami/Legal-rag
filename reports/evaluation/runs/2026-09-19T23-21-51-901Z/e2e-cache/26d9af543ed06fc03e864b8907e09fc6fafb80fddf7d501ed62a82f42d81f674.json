@@ -1,0 +1,103 @@
+{
+  "questionId": "q246",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le service connexe relatif à la fourniture de crédits ou de prêts est :\n\n- **L’octroi de crédits ou de prêts à un investisseur**, afin de lui permettre d’effectuer une transaction portant sur :\n  - un **instrument financier** ; ou\n  - une **unité mentionnée à l’article L. 229-7 du Code de l’environnement**,\n\n  lorsque l’entreprise qui accorde le crédit ou le prêt **intervient dans cette transaction**.\n\nIl s’agit du **2° de l’article L. 321-2 du Code monétaire et financier** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L321-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L531-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.29008900001645,
+      "vectorSearchMs": 659.513806999661,
+      "jinaRerankingMs": 614.0838160002604,
+      "mappingMs": 0.17607799917459488,
+      "totalMs": 1484.0965329995379,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.022250999696552753,
+      "contextBuilderMs": 0.037013000808656216,
+      "generationMs": 2170.517637000419,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3654.6826649997383
+    },
+    "judge": {
+      "questionId": "q246",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement le 2° de l’article L. 321-2 : octroi de crédits ou prêts à un investisseur, en vue d’une transaction sur un instrument financier ou une unité de l’article L. 229-7 du code de l’environnement, avec intervention de l’entreprise prêteuse dans la transaction. Tous ces éléments sont explicitement présents dans le contexte. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 321-2 et son 2°, précisément visé par la question. Elle couvre intégralement les éléments affirmés dans la réponse : octroi de crédits ou prêts, bénéficiaire investisseur, finalité de transaction, instruments financiers ou unités de l'article L. 229-7 du code de l'environnement, et intervention de l'entreprise prêteuse dans la transaction. Les sources 2 et 3 sont accessoires mais cohérentes avec cette qualification."
+    }
+  },
+  "routing": {
+    "answer": "Le service connexe relatif aux crédits ou prêts est :\n\n- **L’octroi de crédits ou de prêts à un investisseur** afin de lui permettre d’effectuer une transaction portant sur :\n  - un **instrument financier**, ou\n  - une **unité mentionnée à l’article L. 229-7 du Code de l’environnement**,\n\n  à condition que l’entreprise qui accorde le crédit ou le prêt **intervienne dans la transaction**.\n\nCette définition figure au **2° de l’article L. 321-2 du Code monétaire et financier** [Source 1]. En outre, l’octroi de tels crédits ou prêts est expressément distingué des autres services connexes dans l’**article L. 533-13, III du Code monétaire et financier** [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L321-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L531-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1475.6659740004689,
+      "routingCalls": 1,
+      "embeddingMs": 214.7133719995618,
+      "vectorSearchMs": 118.2738699996844,
+      "jinaRerankingMs": 585.8504289994016,
+      "mappingMs": 0.08181900065392256,
+      "totalMs": 2394.611348999664,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013775000348687172,
+      "contextBuilderMs": 0.028686000034213066,
+      "generationMs": 2521.337954999879,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4916.001218000427
+    },
+    "judge": {
+      "questionId": "q246",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement le service visé au 2° de l’article L. 321-2 : octroi de crédits ou prêts à un investisseur pour une transaction sur un instrument financier ou une unité de l’article L. 229-7, avec intervention de l’entreprise prêteuse dans la transaction. Les affirmations, y compris les renvois aux sources 1 et 3, sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et reproduit exactement le 2° de l’article L. 321-2, qui répond à la question. Elle couvre l’ensemble des éléments substantiels de la réponse : crédits ou prêts, bénéficiaire investisseur, finalité de transaction, instruments financiers ou unité de l’article L. 229-7 du code de l’environnement, et intervention de l’entreprise prêteuse dans la transaction. La source 3 est également pertinente pour l’affirmation additionnelle selon laquelle cet octroi est distingué dans l’article L. 533-13, III."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q195",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les salariés d’une société à responsabilité limitée doivent être informés lorsque les conditions suivantes sont réunies :\n\n- la société n’est pas tenue de mettre en place un comité social et économique exerçant les attributions visées au deuxième alinéa de l’article L. 2312-1 du Code du travail ;\n- le propriétaire envisage de vendre une participation représentant **plus de 50 % des parts sociales** ;\n- l’information intervient **au plus tard un mois avant la vente**, afin de permettre aux salariés de présenter une offre d’achat.\n\nLorsque le propriétaire n’est pas le chef d’entreprise, il informe celui-ci, qui doit ensuite notifier sans délai les salariés et leur indiquer qu’ils peuvent présenter une offre. Si la participation appartient au chef d’entreprise, celui-ci informe directement les salariés, et le délai d’un mois court à compter de cette notification. [Source 1]\n\nLa vente peut toutefois avoir lieu avant l’expiration du délai si chaque salarié a indiqué ne pas vouloir présenter d’offre d’achat. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L23-10-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.0380919999443,
+      "vectorSearchMs": 609.5725220004097,
+      "jinaRerankingMs": 669.1450780001469,
+      "mappingMs": 0.02532299980521202,
+      "totalMs": 1508.8133600000292,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010613000020384789,
+      "contextBuilderMs": 0.01041000010445714,
+      "generationMs": 2447.6600069999695,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3956.5027510002255
+    },
+    "judge": {
+      "questionId": "q195",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le champ d’application (absence d’obligation de CSE doté des attributions visées), la cession envisagée de plus de 50 % des parts sociales d’une SARL, et l’information au plus tard un mois avant la vente afin de permettre une offre d’achat. Elle décrit aussi correctement les modalités selon que le propriétaire est ou non le chef d’entreprise, ainsi que l’exception permettant une vente anticipée si tous les salariés renoncent à présenter une offre. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 23-10-1 applicable aux SARL et vise précisément les conditions d’information des salariés avant la vente d’une participation majoritaire. Elle couvre l’absence de CSE concerné, le seuil de plus de 50 % des parts sociales, le délai d’un mois et la finalité de présentation d’une offre, ainsi que les modalités selon que le propriétaire est ou non le chef d’entreprise et l’exception de vente anticipée en cas de renonciation de tous les salariés."
+    }
+  },
+  "routing": {
+    "answer": "Les salariés doivent être informés lorsque les conditions suivantes sont réunies :\n\n- la société est une **société à responsabilité limitée** ;\n- elle n’est pas soumise à l’obligation de mettre en place un **comité social et économique** exerçant les attributions visées au deuxième alinéa de l’article L. 2312-1 du Code du travail ;\n- le propriétaire envisage de vendre une participation représentant **plus de 50 % des parts sociales**.\n\nL’information doit être donnée **au plus tard un mois avant la vente**, afin de permettre aux salariés de présenter une offre d’achat de cette participation. **Article L. 23-10-1 du Code de commerce [Source 1]**\n\nSi le propriétaire n’est pas le chef d’entreprise, il informe ce dernier, qui doit notifier sans délai l’information aux salariés. Le délai d’un mois court alors à compter de cette notification. Si la participation appartient au chef d’entreprise, celui-ci informe directement les salariés et le délai court à compter de cette information.\n\nLa vente peut toutefois intervenir avant l’expiration du mois si chaque salarié a indiqué qu’il ne présenterait pas d’offre.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L23-10-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1777.1896170000546,
+      "routingCalls": 1,
+      "embeddingMs": 240.26449100021273,
+      "vectorSearchMs": 264.00780199980363,
+      "jinaRerankingMs": 662.8865220001899,
+      "mappingMs": 0.0255730003118515,
+      "totalMs": 2944.4015329997055,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012196999974548817,
+      "contextBuilderMs": 0.014425000175833702,
+      "generationMs": 3132.573919000104,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6077.012675999664
+    },
+    "judge": {
+      "questionId": "q195",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les conditions applicables à une SARL : absence d’obligation de CSE avec les attributions visées, projet de vente de plus de 50 % des parts sociales, information au plus tard un mois avant la vente afin de permettre une offre des salariés. Les précisions sur les modalités de notification selon l’identité du propriétaire et sur la possibilité de vendre avant le délai en cas de renonciation de tous les salariés sont également exactes et explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L. 23-10-1 du Code de commerce, directement applicable à la vente d'une participation majoritaire dans une SARL. Elle couvre l'ensemble des affirmations importantes : condition relative à l'absence d'obligation de CSE, vente de plus de 50 % des parts, délai d'information d'un mois et finalité de l'information, modalités selon que le propriétaire est ou non le chef d'entreprise, ainsi que la possibilité d'une vente anticipée en cas de renonciation de tous les salariés."
+    }
+  },
+  "failureStage": "none"
+}

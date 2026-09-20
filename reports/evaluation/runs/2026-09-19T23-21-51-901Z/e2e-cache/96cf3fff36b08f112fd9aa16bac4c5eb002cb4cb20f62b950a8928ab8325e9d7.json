@@ -1,0 +1,95 @@
+{
+  "questionId": "q355",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Sanctions pouvant remplacer l’emprisonnement\n\nLorsqu’un délit est puni d’une peine d’emprisonnement, le tribunal peut prononcer, à la place de celle-ci, une ou plusieurs peines privatives ou restrictives de liberté, notamment :\n\n- la suspension du permis de conduire pendant cinq ans au plus, éventuellement limitée à la conduite professionnelle ;\n- l’interdiction de conduire certains véhicules pendant cinq ans au plus ;\n- l’annulation du permis de conduire, avec interdiction d’en demander un nouveau pendant cinq ans au plus ;\n- la confiscation d’un ou plusieurs véhicules ;\n- l’immobilisation d’un ou plusieurs véhicules pendant un an au plus ;\n- l’interdiction de conduire un véhicule non équipé d’un dispositif homologué d’antidémarrage par éthylotest électronique, pendant cinq ans au plus ;\n- l’interdiction de détenir ou de porter une arme soumise à autorisation, pendant cinq ans au plus ;\n- la confiscation d’une ou plusieurs armes ;\n- le retrait du permis de chasser, avec interdiction d’en solliciter un nouveau pendant cinq ans au plus.\n\nCes sanctions peuvent être prononcées par la juridiction à la place de l’emprisonnement [Article 131-6 du Code pénal, Source 2].\n\n### Célébration du mariage avant la mainlevée de l’opposition\n\nEn cas d’opposition au mariage, l’officier d’état civil ne peut pas célébrer le mariage tant que la mainlevée de l’opposition ne lui a pas été remise.\n\nS’il célèbre néanmoins le mariage, il encourt une amende de **3 000 euros**, ainsi que le paiement de **dommages-intérêts** [Article 68 du Code civil, Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "68"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 411.60889899916947,
+      "vectorSearchMs": 593.9845460001379,
+      "jinaRerankingMs": 603.9197100000456,
+      "mappingMs": 0.030287999659776688,
+      "totalMs": 1609.5770049998537,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013532000593841076,
+      "contextBuilderMs": 0.07734000030905008,
+      "generationMs": 3202.9822549996898,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4812.658100999892
+    },
+    "judge": {
+      "questionId": "q355",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement les peines privatives ou restrictives de liberté prévues par l’article 131-6 du code pénal, avec leurs durées et principales modalités, et indique correctement qu’elles peuvent être prononcées à la place de l’emprisonnement. Elle restitue également exactement la règle de l’article 68 du code civil : absence de célébration avant remise de la mainlevée, sous peine de 3 000 euros d’amende et de dommages-intérêts. Toutes les affirmations importantes sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et énumère les peines privatives ou restrictives de liberté pouvant être prononcées à la place de l’emprisonnement, avec les durées et modalités reprises dans la réponse. La source 1 répond directement à la conséquence de la célébration malgré une opposition avant remise de la mainlevée : amende de 3 000 euros et dommages-intérêts. Toutes les affirmations importantes de la réponse sont couvertes par les sources."
+    }
+  },
+  "routing": {
+    "answer": "### 1. Sanctions pouvant remplacer l’emprisonnement\n\nLorsqu’un délit est puni d’une peine d’emprisonnement, la juridiction peut prononcer, à la place de celle-ci, une ou plusieurs peines privatives ou restrictives de liberté prévues par l’**article 131-6 du Code pénal** [Source 2] :\n\n- la suspension du permis de conduire pendant cinq ans au plus ;\n- l’interdiction de conduire certains véhicules pendant cinq ans au plus ;\n- l’annulation du permis de conduire, avec interdiction d’en demander un nouveau pendant cinq ans au plus ;\n- la confiscation d’un ou plusieurs véhicules appartenant au condamné ;\n- l’immobilisation d’un ou plusieurs véhicules pendant un an au plus ;\n- l’interdiction de conduire un véhicule non équipé d’un dispositif homologué d’anti-démarrage par éthylotest électronique, pendant cinq ans au plus ;\n- l’interdiction de détenir ou de porter une arme soumise à autorisation, pendant cinq ans au plus ;\n- la confiscation d’une ou plusieurs armes ;\n- le retrait du permis de chasser, avec interdiction d’en demander un nouveau pendant cinq ans au plus.\n\n### 2. Célébration du mariage avant la mainlevée de l’opposition\n\nEn cas d’opposition au mariage, l’officier d’état civil ne peut pas célébrer le mariage tant que la mainlevée ne lui a pas été remise. S’il célèbre néanmoins le mariage, il encourt :\n\n- **3 000 euros d’amende** ;\n- ainsi que le paiement de **dommages-intérêts**.\n\nCes conséquences sont prévues par l’**article 68 du Code civil** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "68"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1855.8708920003846,
+      "routingCalls": 1,
+      "embeddingMs": 244.16152699943632,
+      "vectorSearchMs": 125.4317300003022,
+      "jinaRerankingMs": 612.9791919998825,
+      "mappingMs": 0.030245999805629253,
+      "totalMs": 2838.52709900029,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014897000044584274,
+      "contextBuilderMs": 0.017638999968767166,
+      "generationMs": 3318.075966999866,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6156.642437000759
+    },
+    "judge": {
+      "questionId": "q355",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement les neuf catégories de peines alternatives à l’emprisonnement prévues par l’article 131-6, avec leurs principales durées, ainsi que l’interdiction de célébrer le mariage avant remise de la mainlevée et les sanctions de 3 000 euros d’amende et dommages-intérêts prévues par l’article 68 du code civil. Les affirmations sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article 131-6 couvre précisément les peines privatives ou restrictives de liberté substituables à l’emprisonnement pour un délit, et l’article 68 couvre l’interdiction de célébrer un mariage avant remise de la mainlevée ainsi que l’amende et les dommages-intérêts. Elles étayent l’ensemble des affirmations importantes de la réponse, y compris les catégories de peines et leurs durées maximales indiquées."
+    }
+  },
+  "failureStage": "none"
+}

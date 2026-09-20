@@ -1,0 +1,111 @@
+{
+  "questionId": "q245",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le prestataire de services d’investissement doit veiller à rendre accessibles, conformément à l’article L. 412-13 du code de la consommation :\n\n- les services d’investissement énumérés aux **1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 du Code monétaire et financier** qu’il fournit à sa clientèle (**Article L323-1 du Code monétaire et financier [Source 1]**) ;\n- **l’ensemble des opérations nécessaires à la réalisation, à la gestion et à la résiliation** des services définis aux articles L. 321-1 et L. 321-2 (**Article L323-2 du Code monétaire et financier [Source 2]**).\n\nLes extraits fournis ne précisent pas le contenu exact des services correspondant aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L323-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L323-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L311-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 241.72396600060165,
+      "vectorSearchMs": 676.8616899996996,
+      "jinaRerankingMs": 645.7907460005954,
+      "mappingMs": 0.04932300001382828,
+      "totalMs": 1564.4511099997908,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017884000204503536,
+      "contextBuilderMs": 0.03538700006902218,
+      "generationMs": 2735.6344140004367,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4300.147978999652
+    },
+    "judge": {
+      "questionId": "q245",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les services énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 fournis à la clientèle, qui constituent l’élément attendu. Elle ajoute toutefois les opérations nécessaires à la réalisation, la gestion et la résiliation, lesquelles relèvent de l’article L. 323-2 et dépassent légèrement le périmètre précis de la question. Cette addition reste explicitement et correctement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question et couvre l’affirmation principale : les services énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 fournis à la clientèle doivent respecter les exigences d’accessibilité. La source 2 est également directement pertinente pour l’affirmation additionnelle relative aux opérations nécessaires à la réalisation, la gestion et la résiliation de ces services. Les deux affirmations substantielles de la réponse sont donc explicitement étayées."
+    }
+  },
+  "routing": {
+    "answer": "Le prestataire de services d’investissement doit veiller à rendre accessibles les **services d’investissement énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 du Code monétaire et financier**. Ces services figurent parmi les services bancaires et financiers fournis aux consommateurs soumis aux exigences d’accessibilité de l’article L. 412-13 du Code de la consommation [Source 5].\n\nIl doit notamment les concevoir et les fournir conformément aux exigences applicables en matière d’accessibilité [Article D412-57 du Code de la consommation, Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D412-57"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "annexe-D412-57"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-32"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D412-58"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D412-50"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1582.4590590000153,
+      "routingCalls": 1,
+      "embeddingMs": 213.4312319997698,
+      "vectorSearchMs": 123.39090299978852,
+      "jinaRerankingMs": 610.2678220001981,
+      "mappingMs": 0.030328999273478985,
+      "totalMs": 2529.6221240004525,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06124300044029951,
+      "contextBuilderMs": 0.04626299999654293,
+      "generationMs": 2534.2242509992793,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5063.961721999571
+    },
+    "judge": {
+      "questionId": "q245",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les services d’investissement visés : ceux énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 du code monétaire et financier. Cette identification est expressément étayée par le contexte (D. 412-50). La précision sur l’obligation de conception et de fourniture accessibles est également soutenue par l’article D. 412-57."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 vise directement les services d’investissement énumérés aux 1°, 2°, 4° et 5° des articles L. 321-1 et L. 321-2 du code monétaire et financier, ce qui répond précisément à la question. La source 1 couvre l’affirmation complémentaire selon laquelle le prestataire doit concevoir et fournir les services conformément aux exigences d’accessibilité. Toutes les affirmations importantes de la réponse sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

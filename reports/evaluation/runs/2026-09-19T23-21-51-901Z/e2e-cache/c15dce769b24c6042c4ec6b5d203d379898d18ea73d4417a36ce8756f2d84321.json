@@ -1,0 +1,103 @@
+{
+  "questionId": "q160",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L2242-1 du Code du travail**, l’employeur doit engager **au moins une fois tous les quatre ans** :\n\n1. **Une négociation sur la rémunération**, notamment les salaires effectifs, le temps de travail et le partage de la valeur ajoutée dans l’entreprise ;\n2. **Une négociation sur l’égalité professionnelle entre les femmes et les hommes**, portant notamment sur les mesures visant à supprimer les écarts de rémunération, ainsi que sur la qualité de vie et des conditions de travail. [Source 1]\n\nDans les entreprises d’au moins 300 salariés, une négociation supplémentaire sur l’emploi, le travail et l’amélioration des conditions de travail des salariés expérimentés doit également être engagée au moins tous les quatre ans. [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-2-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 252.92135199997574,
+      "vectorSearchMs": 592.1359550002962,
+      "jinaRerankingMs": 730.8774140002206,
+      "mappingMs": 0.0252080000936985,
+      "totalMs": 1575.9877969999798,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01196100004017353,
+      "contextBuilderMs": 0.02193099958822131,
+      "generationMs": 1734.0719990003854,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3310.102576999925
+    },
+    "judge": {
+      "questionId": "q160",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux négociations quadriennales prévues par l'article L2242-1 : rémunération et égalité professionnelle/QVCT. Elle ajoute à juste titre la négociation applicable aux entreprises d'au moins 300 salariés sur les salariés expérimentés, explicitement prévue par le contexte (article L2242-2-1). Toutes les affirmations importantes sont soutenues par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L2242-1 et couvre les deux négociations quadriennales exposées. La source 3 couvre directement l'ajout relatif aux entreprises d'au moins 300 salariés et aux salariés expérimentés. Les sources sont donc directement pertinentes et couvrent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 2242-1 du Code du travail, l’employeur doit engager **au moins une fois tous les quatre ans** :\n\n1. Une négociation sur **la rémunération**, notamment les salaires effectifs, **le temps de travail** et **le partage de la valeur ajoutée** dans l’entreprise ;\n2. Une négociation sur **l’égalité professionnelle entre les femmes et les hommes**, notamment les mesures visant à supprimer les écarts de rémunération, ainsi que sur **la qualité de vie et des conditions de travail**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-2-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 817.9425599998794,
+      "routingCalls": 1,
+      "embeddingMs": 264.0495050000027,
+      "vectorSearchMs": 222.17645200015977,
+      "jinaRerankingMs": 537.4999540001154,
+      "mappingMs": 0.02801500027999282,
+      "totalMs": 1841.7230499996804,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010061000008136034,
+      "contextBuilderMs": 0.022065999917685986,
+      "generationMs": 2050.4564499999397,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3892.223985000048
+    },
+    "judge": {
+      "questionId": "q160",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les deux négociations prévues par l’article L. 2242-1, leur périodicité quadriennale et leurs principaux objets. Toutes les affirmations sont explicitement étayées par la source 1 du contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 2242-1 et énonce précisément les deux négociations quadriennales ainsi que leurs objets. Elle couvre l’ensemble des affirmations importantes de la réponse générée : champ des entreprises concernées, périodicité, rémunération (salaires effectifs, temps de travail, partage de la valeur ajoutée), égalité professionnelle, suppression des écarts de rémunération et qualité de vie et conditions de travail."
+    }
+  },
+  "failureStage": "none"
+}

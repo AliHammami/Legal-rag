@@ -1,0 +1,87 @@
+{
+  "questionId": "q422",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’atteinte ou de tentative d’atteinte à l’exercice régulier des fonctions de médiateur, les peines applicables sont :\n\n- **un an d’emprisonnement** ;\n- **une amende de 3 750 euros**.\n\nCes sanctions sont prévues par **l’article L. 1155-1 du Code du travail** [Source 1]. Le contexte fourni ne permet pas d’identifier d’autres peines distinctes au titre du droit pénal ou du droit du travail.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1155-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.3768829992041,
+      "vectorSearchMs": 733.3136059995741,
+      "jinaRerankingMs": 556.3522060001269,
+      "mappingMs": 0.02421300020068884,
+      "totalMs": 1477.092747000046,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011211000382900238,
+      "contextBuilderMs": 0.01623199973255396,
+      "generationMs": 1899.6842400003225,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3376.8138140002266
+    },
+    "judge": {
+      "questionId": "q422",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement les sanctions spécifiques prévues par l’article L. 1155-1 du Code du travail : un an d’emprisonnement et 3 750 euros d’amende. Elle omet toutefois les éléments relatifs aux peines correctionnelles applicables en droit pénal aux personnes physiques (notamment les formes possibles d’emprisonnement, détention à domicile sous surveillance électronique, TIG, peines restrictives de droits ou complémentaires), attendus par la référence. Toutes les affirmations formulées sont directement étayées par le seul contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle vise exactement l’atteinte ou la tentative d’atteinte à l’exercice régulier des fonctions de médiateur et énonce les deux peines mentionnées dans la réponse (un an d’emprisonnement et 3 750 euros d’amende), ainsi que leur fondement, l’article L. 1155-1 du Code du travail. Elle couvre également le constat selon lequel le contexte fourni n’identifie pas d’autres peines distinctes."
+    }
+  },
+  "routing": {
+    "answer": "L’atteinte ou la tentative d’atteinte à l’exercice régulier des fonctions de médiateur constitue une infraction pénale.\n\nLes peines applicables sont :\n\n- **un an d’emprisonnement** ;\n- **une amende de 3 750 euros**.\n\nCes sanctions sont prévues par **l’article L. 1155-1 du Code du travail** [Source 1]. Le contexte fourni ne mentionne pas de sanction distincte au titre du droit du travail.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1155-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1638.5388500001281,
+      "routingCalls": 1,
+      "embeddingMs": 200.5977619998157,
+      "vectorSearchMs": 340.74824899993837,
+      "jinaRerankingMs": 556.4831819999963,
+      "mappingMs": 0.016940000467002392,
+      "totalMs": 2736.406268999912,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009686999954283237,
+      "contextBuilderMs": 0.015635999850928783,
+      "generationMs": 1769.2262289999053,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4505.667158000171
+    },
+    "judge": {
+      "questionId": "q422",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement les peines spécifiques prévues par l’article L. 1155-1 du Code du travail : un an d’emprisonnement et 3 750 euros d’amende, conformément au contexte. Elle est toutefois incomplète au regard de la référence, qui attend aussi l’évocation des catégories de peines correctionnelles applicables aux personnes physiques en droit pénal (notamment détention à domicile sous surveillance électronique, TIG, peines restrictives de droits ou complémentaires)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle vise expressément l’atteinte, ou la tentative d’atteinte, à l’exercice régulier des fonctions de médiateur et énonce les deux peines mentionnées dans la réponse (un an d’emprisonnement et 3 750 euros d’amende). Elle couvre également l’attribution de ces sanctions à l’article L. 1155-1 du Code du travail. L’affirmation selon laquelle le contexte ne mentionne pas de sanction distincte est compatible avec l’unique source fournie."
+    }
+  },
+  "failureStage": "generation"
+}

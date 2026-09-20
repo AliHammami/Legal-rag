@@ -1,0 +1,119 @@
+{
+  "questionId": "q214",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L225-52 du Code de commerce**, lors de l’ouverture d’une procédure de redressement ou de liquidation judiciaire, les personnes visées par les dispositions applicables :\n\n- **peuvent être tenues responsables du passif social** ;\n- **peuvent être soumises à des interdictions et déchéances**.\n\nCes conséquences s’appliquent **dans les conditions prévues par les dispositions des titres III et IV du livre VI du Code de commerce**. Elles ne résultent donc pas automatiquement de l’ouverture de la procédure : le texte indique qu’elles « peuvent » être prononcées. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-93"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-52"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-24"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-256"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-255"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.37801000010222,
+      "vectorSearchMs": 677.5421000001952,
+      "jinaRerankingMs": 578.0245020003058,
+      "mappingMs": 0.03460399992763996,
+      "totalMs": 1507.0046830000356,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014428999740630388,
+      "contextBuilderMs": 0.024265999905765057,
+      "generationMs": 2484.7636020001955,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3991.814110999927
+    },
+    "judge": {
+      "questionId": "q214",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conséquences prévues par l’article L225-52 : responsabilité possible du passif social et soumission aux interdictions et déchéances dans les conditions des titres III et IV du livre VI. La précision selon laquelle ces mesures ne sont pas automatiques est cohérente avec le terme « peuvent » et avec le renvoi aux conditions prévues par ces dispositions. Toutes les affirmations importantes sont directement étayées par la source 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L225-52 visé par la question. Elle étaye les deux conséquences mentionnées (responsabilité possible du passif social et interdictions/déchéances), le renvoi aux conditions des titres III et IV du livre VI, ainsi que la formulation non automatique déduite de « peuvent »."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L225-52 du Code de commerce, lors de l’ouverture d’une procédure de redressement ou de liquidation judiciaire, les personnes visées peuvent :\n\n- être déclarées responsables du passif social ;\n- être soumises à des interdictions et à des déchéances.\n\nCes mesures s’appliquent dans les conditions prévues par les dispositions des titres III et IV du livre VI du Code de commerce relatives à ces procédures [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-93"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-52"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-24"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-256"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-255"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2044.2779720001854,
+      "routingCalls": 1,
+      "embeddingMs": 223.73554700007662,
+      "vectorSearchMs": 169.64077299972996,
+      "jinaRerankingMs": 563.8064939999022,
+      "mappingMs": 0.02512799995020032,
+      "totalMs": 3001.5162740000524,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01170899998396635,
+      "contextBuilderMs": 0.0220230002887547,
+      "generationMs": 2114.4037409997545,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5115.961583999917
+    },
+    "judge": {
+      "questionId": "q214",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conséquences prévues par l'article L225-52 : responsabilité du passif social et soumission aux interdictions et déchéances, dans les conditions des titres III et IV du livre VI. Ces affirmations sont directement étayées par la source 2 du contexte. Elle répond à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est exactement l’article L225-52 visé par la question. Elle énonce directement la responsabilité possible du passif social ainsi que la soumission aux interdictions et déchéances, dans les conditions prévues aux titres III et IV du livre VI. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

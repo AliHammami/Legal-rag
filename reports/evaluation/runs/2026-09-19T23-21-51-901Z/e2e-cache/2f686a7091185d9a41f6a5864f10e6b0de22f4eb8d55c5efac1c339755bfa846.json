@@ -1,0 +1,87 @@
+{
+  "questionId": "q261",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L351-1 prévoit deux types de sanctions :\n\n- **Amende fiscale de 75 euros** :\n  - en cas de méconnaissance des obligations prévues aux premier, deuxième, troisième et dernier alinéas du II de l’article L. 312-1-1 du Code monétaire et financier ;\n  - ainsi que des obligations de l’article L. 314-12 et du III de l’article L. 314-13, **lorsque le client est une personne physique agissant pour des besoins non professionnels**.  \n  Cette amende est prononcée et recouvrée selon les règles applicables à la TVA. [Source 1]\n\n- **Amende correspondant à une contravention de cinquième classe** :\n  - en cas de méconnaissance des obligations prévues aux I et IV de l’article L. 312-1-1 ;\n  - au I de l’article L. 314-13 ;\n  - au IV de l’article L. 314-13, **lorsque le client est une personne physique agissant pour des besoins non professionnels** ;\n  - ainsi qu’aux articles L. 315-5 à L. 315-8, ou des interdictions prévues au I de l’article L. 312-1-2. [Source 1]\n\nAinsi, la qualité de personne physique agissant pour des besoins non professionnels conditionne expressément l’application des sanctions concernant les articles **L. 314-12 et L. 314-13**. Pour les articles **L. 312-1-1** et **L. 315-5 à L. 315-8**, l’extrait ne prévoit pas de distinction selon la qualité du client. L’extrait ne précise pas le montant de l’amende de cinquième classe.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L351-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 236.20297699980438,
+      "vectorSearchMs": 616.4474860001355,
+      "jinaRerankingMs": 503.67983100004494,
+      "mappingMs": 0.02855299971997738,
+      "totalMs": 1356.3854890000075,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013218999840319157,
+      "contextBuilderMs": 0.06402199994772673,
+      "generationMs": 5217.456737999804,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6573.952778999694
+    },
+    "judge": {
+      "questionId": "q261",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux régimes de sanction et la portée des conditions tenant au client personne physique agissant à des fins non professionnelles. Elle distingue correctement les obligations visées par l’amende fiscale de 75 euros de celles relevant de la contravention de cinquième classe, et précise à juste titre que les articles L. 315-5 à L. 315-8 ne sont pas assortis, dans l’extrait, d’une condition liée à la qualité du client. Toutes les affirmations importantes sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 351-1 visé par la question. Elle détaille explicitement les deux sanctions, les obligations concernées, les cas où la condition de client personne physique agissant pour des besoins non professionnels s’applique, ainsi que les modalités de prononcé et de recouvrement de l’amende fiscale. Toutes les affirmations importantes de la réponse générée sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "L’article L351-1 prévoit deux types de sanctions :\n\n- **Amende fiscale de 75 €** : en cas de méconnaissance des obligations prévues aux premier, deuxième, troisième et dernier alinéas du II de l’article L. 312-1-1. Cette sanction s’applique également aux obligations des articles **L. 314-12** et **L. 314-13, III**, lorsque le client est une **personne physique agissant pour des besoins non professionnels**. Elle est prononcée et recouvrée selon les règles applicables à la TVA. [Source 1]\n\n- **Amende pénale correspondant à une contravention de cinquième classe** : elle sanctionne la méconnaissance :\n  - des obligations prévues aux I et IV de l’article L. 312-1-1 ;\n  - du I de l’article L. 314-13 ;\n  - du IV de l’article L. 314-13 lorsque le client est une personne physique agissant pour des besoins non professionnels ;\n  - des articles **L. 315-5 à L. 315-8**, sans distinction liée à la qualité du client ;\n  - ainsi que des interdictions prévues au I de l’article L. 312-1-2. [Source 1]\n\nAinsi, le texte vise expressément le client **personne physique agissant pour des besoins non professionnels** pour certaines obligations des articles L. 314-12 et L. 314-13. Pour les articles L. 315-5 à L. 315-8, il prévoit directement une contravention de cinquième classe, sans distinction précisée selon que le client agit ou non à titre personnel.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L351-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3879.1904990002513,
+      "routingCalls": 1,
+      "embeddingMs": 243.84298899956048,
+      "vectorSearchMs": 195.6387090003118,
+      "jinaRerankingMs": 608.8290459997952,
+      "mappingMs": 0.0747450003400445,
+      "totalMs": 4927.6006549997255,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010262000374495983,
+      "contextBuilderMs": 0.013888000510632992,
+      "generationMs": 4392.9043150004,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9320.537355999462
+    },
+    "judge": {
+      "questionId": "q261",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit fidèlement les deux régimes de l’article L. 351-1 : amende fiscale de 75 € pour les manquements visés, notamment ceux des articles L. 314-12 et L. 314-13, III, lorsque le client est une personne physique agissant à des fins non professionnelles ; et amende de cinquième classe pour les autres manquements listés, dont ceux des articles L. 315-5 à L. 315-8 sans distinction tenant à la qualité du client. Les précisions ajoutées sont toutes explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 351-1, objet exact de la question. Elle permet d’établir les deux régimes de sanction, les obligations respectivement visées, la condition tenant au client personne physique agissant pour des besoins non professionnels pour L. 314-12, L. 314-13 III et L. 314-13 IV, ainsi que l’absence de cette condition pour les articles L. 315-5 à L. 315-8. Elle couvre également les précisions sur le recouvrement de l’amende fiscale et les autres dispositions citées dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

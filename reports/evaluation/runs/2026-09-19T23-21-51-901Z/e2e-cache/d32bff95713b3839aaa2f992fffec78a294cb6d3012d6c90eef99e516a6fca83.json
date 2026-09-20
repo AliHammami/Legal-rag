@@ -1,0 +1,111 @@
+{
+  "questionId": "q430",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte mentionne plusieurs procédures. Les droits du demandeur varient selon la procédure concernée :\n\n- **Modification de la mention du sexe à l’état civil** : le demandeur peut saisir le tribunal judiciaire, faire état de son consentement libre et éclairé et produire toutes les preuves utiles. L’absence de traitement médical, d’opération ou de stérilisation ne peut justifier un refus. Si les conditions légales sont remplies, le tribunal ordonne la modification du sexe et, le cas échéant, des prénoms dans les actes d’état civil — **Article 61-6 du Code civil [Source 1]**.\n\n- **Procédure devant la commission des sanctions de l’Autorité des marchés financiers** : le demandeur peut être assisté ou représenté par la personne de son choix et présenter ses observations. Il peut également demander que la séance soit publique, sous réserve de l’acceptation du président de la commission — **Article R621-41-4 du Code monétaire et financier [Source 2]**.\n\n- **Procédure devant le bureau de jugement prud’homal** : si le demandeur ne comparaît pas sans motif légitime, les conséquences prévues par l’article 468 du Code de procédure civile s’appliquent. Si la caducité est ensuite rapportée, il doit être informé de la nouvelle audience — **Article R1454-21 du Code du travail [Source 3]**.\n\n- **Demande en revendication d’un bien** : le demandeur peut adresser sa demande à l’administrateur ou, à défaut, au débiteur, et en transmettre une copie au mandataire judiciaire. En l’absence d’acquiescement dans le délai prévu, il peut saisir le juge-commissaire, sous peine de forclusion. Il bénéficie également du recueil des observations des parties intéressées, et sa demande vaut de plein droit demande en restitution — **Article R624-13 du Code de commerce [Source 4]**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R621-41-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1454-21"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R624-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.189931999892,
+      "vectorSearchMs": 632.2018800005317,
+      "jinaRerankingMs": 543.6080410005525,
+      "mappingMs": 0.038018000312149525,
+      "totalMs": 1394.0644480008632,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014380000531673431,
+      "contextBuilderMs": 0.04107800032943487,
+      "generationMs": 4303.1495050005615,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5697.291310000233
+    },
+    "judge": {
+      "questionId": "q430",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question ne précise pas quelle procédure est visée et le contexte juxtapose quatre procédures distinctes. La réponse restitue de façon globalement fidèle les règles pertinentes pour chacune, mais elle répond malgré cette ambiguïté au lieu d’indiquer qu’une identification de la procédure est nécessaire. Elle est donc insuffisamment adaptée à la question telle que posée, tout en étant factuellement et textuellement bien étayée par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent toutes sur des procédures distinctes dans lesquelles intervient un « demandeur » et permettent de constater que la question, faute d’identifier la procédure visée, ne peut recevoir une réponse unique. Elles sont donc globalement pertinentes, quoique non ciblées sur une procédure déterminée. Elles couvrent très largement les affirmations de la réponse : saisine, consentement et preuves en matière d’état civil ; assistance, observations et publicité devant l’AMF ; non-comparution et information sur une nouvelle audience en matière prud’homale ; modalités, délais, saisine et restitution pour la revendication d’un bien. L’évocation de l’article 468 n’en détaille pas les conséquences, mais la réponse se limite correctement à renvoyer aux conséquences prévues par cet article."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte mentionne plusieurs procédures. Les droits du demandeur varient selon le code concerné :\n\n- **Modification de la mention du sexe dans l’état civil** : le demandeur peut saisir le tribunal judiciaire, faire valoir son consentement libre et éclairé et produire tout élément de preuve. L’absence de traitement médical, d’opération ou de stérilisation ne peut justifier un refus. Si les conditions légales sont remplies, le tribunal ordonne la modification du sexe et, le cas échéant, des prénoms dans les actes d’état civil. **Article 61-6 du Code civil [Source 1].**\n\n- **Procédure devant la commission des sanctions de l’AMF** : le demandeur est convoqué et peut être assisté ou représenté par la personne de son choix. Il peut présenter des observations. La séance n’est pas publique, sauf s’il demande qu’elle le soit et que le président accepte. **Article R. 621-41-4 du Code monétaire et financier [Source 2].**\n\n- **Procédure devant le bureau de jugement prud’homal** : le texte fourni ne détaille pas de droits particuliers du demandeur ; il prévoit surtout les conséquences de son absence injustifiée, notamment l’application de l’article 468 du Code de procédure civile. **Article R. 1454-21 du Code du travail [Source 3].**\n\n- **Demande en revendication d’un bien** : le demandeur peut adresser sa demande à l’administrateur ou, à défaut, au débiteur, en envoyer une copie au mandataire judiciaire, puis saisir le juge-commissaire en l’absence d’acquiescement dans les délais. Il bénéficie de l’examen de ses observations par le juge-commissaire, et sa demande vaut également demande en restitution. **Article R. 624-13 du Code de commerce [Source 4].**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R621-41-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1454-21"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R624-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1033.5696839988232,
+      "routingCalls": 1,
+      "embeddingMs": 418.46307500079274,
+      "vectorSearchMs": 654.5765739995986,
+      "jinaRerankingMs": 525.0605279989541,
+      "mappingMs": 0.025446001440286636,
+      "totalMs": 2631.725597001612,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010753000155091286,
+      "contextBuilderMs": 0.02665499970316887,
+      "generationMs": 4050.225470000878,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6681.997639000416
+    },
+    "judge": {
+      "questionId": "q430",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question ne précise pas quelle procédure est visée, alors que le contexte en contient plusieurs. La réponse relève cette ambiguïté mais répond néanmoins en énumérant des droits pour chacune, au lieu d’indiquer clairement qu’une réponse fiable nécessite la procédure concernée. Ses affirmations sont toutefois globalement fidèles et directement étayées par les quatre extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les quatre sources portent sur des procédures distinctes et ne permettent pas d’identifier laquelle est visée par la question, ce qui est pertinent pour constater l’ambiguïté justifiant une abstention ou une demande de précision. Elles sont en outre directement pertinentes pour les différentes procédures que la réponse a néanmoins énumérées. Les affirmations importantes de cette énumération sont couvertes par les extraits : modalités de la demande de modification de l’état civil, garanties procédurales devant la commission des sanctions, conséquences de l’absence prud’homale, et étapes de la revendication d’un bien."
+    }
+  },
+  "failureStage": "abstention"
+}

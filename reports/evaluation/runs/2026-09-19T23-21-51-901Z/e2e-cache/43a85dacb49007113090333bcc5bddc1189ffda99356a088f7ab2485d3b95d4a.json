@@ -1,0 +1,95 @@
+{
+  "questionId": "q200",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 243-1 du Code de commerce**, les articles **L. 242-1 à L. 242-29** s’appliquent aux **sociétés en commandite par actions**.\n\nLes peines prévues pour les **présidents, administrateurs et directeurs généraux des sociétés anonymes** sont également applicables aux **gérants des sociétés en commandite par actions**, dans la mesure où elles concernent leurs attributions. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L243-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L246-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 287.67343699978665,
+      "vectorSearchMs": 562.1616190001369,
+      "jinaRerankingMs": 515.2381519996561,
+      "mappingMs": 0.03212400013580918,
+      "totalMs": 1365.1303560002707,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010141000151634216,
+      "contextBuilderMs": 0.01667100004851818,
+      "generationMs": 2626.652354999911,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3991.816963999998
+    },
+    "judge": {
+      "questionId": "q200",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d’application des articles L. 242-1 à L. 242-29 et précise correctement que les peines applicables aux dirigeants de sociétés anonymes s’appliquent aux gérants des sociétés en commandite par actions, dans la limite de leurs attributions. Ces éléments sont explicitement contenus dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, article L. 243-1, est directement pertinente : elle énonce expressément que les articles L. 242-1 à L. 242-29 s'appliquent aux sociétés en commandite par actions et que les peines visant les présidents, administrateurs ou directeurs généraux de sociétés anonymes s'appliquent aux gérants, concernant leurs attributions. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les articles **L. 242-1 à L. 242-29 du Code de commerce** s’appliquent aux **sociétés en commandite par actions** [Source 1].\n\nSelon l’**article L. 243-1 du Code de commerce**, les peines prévues pour les **présidents, administrateurs et directeurs généraux des sociétés anonymes** sont également applicables aux **gérants des sociétés en commandite par actions**, dans la mesure de leurs attributions [Source 1].\n\nLe contexte ne détaille toutefois pas la nature précise de ces peines.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L243-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L246-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2142.028626000043,
+      "routingCalls": 1,
+      "embeddingMs": 192.56443499960005,
+      "vectorSearchMs": 169.36540400004014,
+      "jinaRerankingMs": 515.0473250001669,
+      "mappingMs": 0.032356000039726496,
+      "totalMs": 3019.0668069999665,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010400000028312206,
+      "contextBuilderMs": 0.01742100017145276,
+      "generationMs": 3014.7843829998747,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6033.888216999825
+    },
+    "judge": {
+      "questionId": "q200",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d’application des articles L. 242-1 à L. 242-29 et l’extension aux gérants, pour leurs attributions, des peines prévues pour les dirigeants de sociétés anonymes. Toutes ces affirmations, y compris l’absence de détail sur la nature des peines dans le contexte, sont directement étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle répond expressément aux deux volets de la question, en visant les sociétés en commandite par actions et l'applicabilité aux gérants, dans leurs attributions, des peines prévues pour les dirigeants de sociétés anonymes. Elle couvre également l'affirmation selon laquelle le contexte ne précise pas la nature détaillée de ces peines. La source 2 est complémentaire mais non nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

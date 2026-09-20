@@ -1,0 +1,87 @@
+{
+  "questionId": "q315",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article R452-1 du Code de la consommation**, sont interdits, lorsqu’ils concernent des produits dont l’importation est prohibée en méconnaissance de l’**article L422-2 du Code de la consommation** :\n\n- la détention en vue de la vente ;\n- la détention en vue d’une distribution gratuite ;\n- la mise en vente ;\n- la vente ;\n- la distribution gratuite.\n\nLe contenu précis de l’interdiction d’importation prévue par l’article L422-2 n’est toutefois pas fourni dans le contexte. Ces faits sont punis d’une amende de 5e classe et peuvent entraîner la confiscation des produits ou des objets ayant servi à l’infraction [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R452-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.79727100022137,
+      "vectorSearchMs": 669.5662260008976,
+      "jinaRerankingMs": 558.3487369995564,
+      "mappingMs": 0.1332270000129938,
+      "totalMs": 1476.9034149991348,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013296999968588352,
+      "contextBuilderMs": 0.011524999514222145,
+      "generationMs": 2431.3988700006157,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3908.3401800002903
+    },
+    "judge": {
+      "questionId": "q315",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, à partir de l’article R452-1, les actes visés (détention en vue de la vente ou d’une distribution gratuite, mise en vente, vente et distribution gratuite). Elle ne donne toutefois pas le contenu essentiel de l’article L422-2 attendu : les produits concernés sont ceux dont l’importation est prohibée par des décisions applicables de la Commission européenne en matière de contrôles vétérinaires, ou non conformes à leurs prescriptions. Les sanctions ajoutées sont bien étayées par le contexte, mais sont périphériques à la question. Toutes les affirmations importantes de la réponse sont supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source R452-1 est directement liée à l’article L422-2 et énumère précisément les comportements interdits ou réprimés : détention en vue de la vente ou de la distribution gratuite, mise en vente, vente et distribution gratuite de produits dont l’importation est prohibée. Elle couvre également les sanctions mentionnées dans la réponse. Elle ne reproduit pas le contenu matériel de l’interdiction d’importation de l’article L422-2, mais la réponse signale explicitement cette absence de contexte plutôt que de l’affirmer."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article R452-1 du Code de la consommation**, sont interdits, lorsqu’ils concernent des produits dont l’importation est prohibée en méconnaissance de l’article L422-2 :\n\n- la détention en vue de la vente ou de la distribution gratuite ;\n- la mise en vente ;\n- la vente ;\n- la distribution gratuite.\n\nCes faits sont punis d’une amende prévue pour les contraventions de 5e classe. La confiscation du produit ou de la chose ayant servi à commettre l’infraction peut également être prononcée [Source 1].\n\nLe contenu précis de l’interdiction d’importation prévue par l’article L422-2 n’est pas fourni dans le contexte.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R452-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2353.2671320000663,
+      "routingCalls": 1,
+      "embeddingMs": 214.03985199984163,
+      "vectorSearchMs": 119.8678790004924,
+      "jinaRerankingMs": 555.1443689996377,
+      "mappingMs": 0.09301500022411346,
+      "totalMs": 3242.4395220000297,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014403000473976135,
+      "contextBuilderMs": 0.02003300003707409,
+      "generationMs": 2593.169135999866,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5835.650653999299
+    },
+    "judge": {
+      "questionId": "q315",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, à partir de l’article R. 452-1, les actes interdits concernant des produits dont l’importation est prohibée : détention en vue de la vente ou de la distribution gratuite, mise en vente, vente et distribution gratuite. Elle ne donne toutefois pas l’élément central attendu sur le champ de l’article L. 422-2, à savoir les produits visés par les décisions de la Commission européenne applicables aux contrôles vétérinaires ou non conformes à leurs prescriptions. Les peines et la confiscation sont exactes mais périphériques. Toutes les affirmations juridiques importantes de la réponse sont bien étayées par le contexte fourni, qui ne contenait que l’article R. 452-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 452-1 est directement pertinente pour identifier les actes prohibés à l’égard des produits dont l’importation est interdite en méconnaissance de L. 422-2 : détention en vue de la vente ou de la distribution gratuite, mise en vente, vente et distribution gratuite. Elle couvre également les sanctions et la confiscation mentionnées. Elle ne permet toutefois pas de préciser le contenu matériel de l’interdiction d’importation posée par L. 422-2, ce que la réponse signale explicitement."
+    }
+  },
+  "failureStage": "generation"
+}

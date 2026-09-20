@@ -1,0 +1,103 @@
+{
+  "questionId": "q408",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du Code du travail relatives au plan d’épargne d’entreprise s’appliquent au **plan d’épargne retraite d’entreprise collectif**, sous réserve des règles particulières prévues par le chapitre concerné. Toutefois, cette application exclut les articles **L. 3332-10** et **L. 3332-18 à L. 3332-28** du Code du travail, conformément à l’**article L. 224-13 du Code monétaire et financier** [Source 1].\n\nPlus largement, pour le plan d’épargne pour la retraite collectif, sont notamment applicables les règles du plan d’épargne d’entreprise concernant les versements, la composition et la gestion du plan, l’évaluation des titres, l’indisponibilité des sommes ainsi que les régimes social et fiscal, en application de l’**article R. 3334-1 du Code du travail** [Source 3]. L’**article L. 3334-1 du Code du travail** prévoit également cette application, sous réserve des dispositions particulières du chapitre et des articles L. 3332-18 à L. 3332-24 [Source 4].\n\nEn revanche, les sources fournies ne contiennent aucune disposition relative aux **sanctions pénales applicables à la négligence d’un conducteur de véhicule terrestre à moteur causant une incapacité de travail inférieure ou égale à trois mois**. Il n’est donc pas possible de déterminer ces sanctions à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-13"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R222-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3334-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3334-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 513.9244720004499,
+      "vectorSearchMs": 672.362865999341,
+      "jinaRerankingMs": 552.7526030000299,
+      "mappingMs": 0.021570000797510147,
+      "totalMs": 1739.0844689998776,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009995000436902046,
+      "contextBuilderMs": 0.02382999937981367,
+      "generationMs": 3176.293591999449,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4915.420219999738
+    },
+    "judge": {
+      "questionId": "q408",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La première partie est correcte : elle restitue fidèlement l'application des règles du plan d'épargne d'entreprise au plan d'épargne retraite d'entreprise collectif et les exclusions prévues à l'article L. 224-13 du code monétaire et financier. En revanche, la réponse ne fournit pas la sanction demandée pour les violences involontaires commises par un conducteur avec une ITT inférieure ou égale à trois mois (deux ans d'emprisonnement et 30 000 euros d'amende), ce qui rend la réponse incomplète et seulement partiellement correcte. Son refus sur ce point est néanmoins entièrement fondé au regard du contexte effectivement fourni, qui ne contient aucune disposition pénale. L'abstention n'était pas attendue pour ce cas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour la partie relative au plan d’épargne retraite d’entreprise collectif : l’article L. 224-13 couvre l’applicabilité des règles du plan d’épargne d’entreprise et les exclusions citées, et les articles R. 3334-1 et L. 3334-1 couvrent les précisions complémentaires. En revanche, aucune source ne traite des sanctions pénales liées au conducteur d’un véhicule terrestre à moteur et à l’ITT inférieure ou égale à trois mois, ce qui constitue une lacune importante au regard de la question. Les affirmations effectivement formulées dans la réponse générée sont toutefois couvertes : les règles citées sont fidèles aux sources, et le constat selon lequel le contexte fourni ne contient pas de disposition pénale est exact."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du Code du travail s’appliquent au plan d’épargne pour la retraite collectif (PER collectif) par renvoi aux règles du plan d’épargne d’entreprise :\n\n- **Article L3334-1 du Code du travail** : les dispositions relatives au plan d’épargne d’entreprise sont applicables au PER collectif, sous réserve des règles particulières du chapitre concerné et des articles L. 3332-18 à L. 3332-24 [Source 1].\n- **Article R3334-1 du Code du travail** : cette application concerne notamment les règles relatives aux versements, à la composition et à la gestion du plan, à l’évaluation des titres, à l’indisponibilité des sommes ainsi qu’au régime social et fiscal, par renvoi aux articles R. 3332-9 à R. 3332-23 et R. 3332-30 à R. 3332-32 [Source 2].\n\nEn revanche, les sources fournies ne contiennent aucune disposition relative aux **sanctions pénales applicables à la négligence d’un conducteur de véhicule terrestre à moteur ayant causé une incapacité de travail inférieure ou égale à trois mois**. Il n’est donc pas possible de déterminer ces sanctions à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3334-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3334-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2770.5404769992456,
+      "routingCalls": 1,
+      "embeddingMs": 200.61479000002146,
+      "vectorSearchMs": 301.79488399997354,
+      "jinaRerankingMs": 594.8734590001404,
+      "mappingMs": 0.022405999712646008,
+      "totalMs": 3867.8829219993204,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01141900010406971,
+      "contextBuilderMs": 0.0259790001437068,
+      "generationMs": 2584.9536159997806,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6452.881394000724
+    },
+    "judge": {
+      "questionId": "q408",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les renvois du code du travail présents dans le contexte, notamment l'application des règles du plan d'épargne d'entreprise et les matières réglementaires concernées. Toutefois, elle ne fournit pas la sanction pénale demandée : deux ans d'emprisonnement et 30 000 euros d'amende en cas d'ITT inférieure ou égale à trois mois. Elle est donc incomplète et seulement partiellement correcte au regard de la question globale. Ses affirmations sont néanmoins entièrement étayées par le contexte fourni, qui ne contient effectivement aucune disposition pénale. L'abstention partielle sur le second volet n'est pas considérée correcte puisque l'abstention n'était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour le premier volet relatif au PER collectif : elles établissent le renvoi aux règles du plan d’épargne d’entreprise et précisent les matières réglementaires concernées. En revanche, aucune source ne porte sur l’infraction ou les sanctions pénales liées au conducteur d’un véhicule terrestre à moteur, ce qui rend l’ensemble insuffisant pour répondre à la question composée. Les affirmations effectivement formulées dans la réponse générée sont toutefois couvertes : les renvois cités correspondent aux sources, et celles-ci ne contiennent effectivement aucune règle pénale sur le second volet."
+    }
+  },
+  "failureStage": "generation"
+}

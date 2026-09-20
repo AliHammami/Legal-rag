@@ -1,0 +1,87 @@
+{
+  "questionId": "q337",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour une personne physique, le manquement est passible d’une amende administrative pouvant atteindre **3 000 euros**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 176.95318299997598,
+      "vectorSearchMs": 612.1093480000272,
+      "jinaRerankingMs": 495.95828500017524,
+      "mappingMs": 0.02246199920773506,
+      "totalMs": 1285.0687800003216,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009701999835669994,
+      "contextBuilderMs": 0.01079500000923872,
+      "generationMs": 1479.0232870001346,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2764.120139999315
+    },
+    "judge": {
+      "questionId": "q337",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement l’amende administrative maximale de 3 000 euros applicable à une personne physique. Cette information est explicitement étayée par le contexte (article L641-1) et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L. 641-1) répond directement à la question : elle vise explicitement les manquements aux obligations d'information des articles L. 616-1 et L. 616-2 et fixe, pour une personne physique, une amende administrative maximale de 3 000 euros. Elle couvre entièrement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Pour une personne physique, le manquement est passible d’une **amende administrative pouvant atteindre 3 000 euros**.  \n**Article L. 641-1 du Code de la consommation [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1542.7073770007119,
+      "routingCalls": 1,
+      "embeddingMs": 217.0556510007009,
+      "vectorSearchMs": 46.13843899965286,
+      "jinaRerankingMs": 518.021135000512,
+      "mappingMs": 0.04594200011342764,
+      "totalMs": 2324.0023199999705,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01377199962735176,
+      "contextBuilderMs": 0.02032800018787384,
+      "generationMs": 1073.6432210002095,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3397.688353999518
+    },
+    "judge": {
+      "questionId": "q337",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement la sanction applicable à une personne physique, soit une amende administrative plafonnée à 3 000 euros. Cette affirmation est explicitement étayée par le contexte fourni (article L. 641-1 du Code de la consommation)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 641-1 vise expressément les manquements aux obligations d’information des articles L. 616-1 et L. 616-2. Elle couvre intégralement l’affirmation de la réponse, en prévoyant une amende administrative ne pouvant excéder 3 000 euros pour une personne physique."
+    }
+  },
+  "failureStage": "none"
+}

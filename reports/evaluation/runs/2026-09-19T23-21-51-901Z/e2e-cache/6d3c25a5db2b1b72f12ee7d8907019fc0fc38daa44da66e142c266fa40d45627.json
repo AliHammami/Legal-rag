@@ -1,0 +1,87 @@
+{
+  "questionId": "q259",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les membres du directoire ou du conseil de surveillance du fonds de garantie des déposants qui violent le secret professionnel sont passibles des peines prévues à l’article 226-13 du Code pénal, conformément à l’article L. 352-1 du Code monétaire et financier [Source 1].\n\nLe contenu précis de ces peines n’est pas indiqué dans l’extrait fourni.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L352-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.19764899928123,
+      "vectorSearchMs": 587.1474099997431,
+      "jinaRerankingMs": 668.347455999814,
+      "mappingMs": 0.024191999807953835,
+      "totalMs": 1474.7395160002634,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012922000139951706,
+      "contextBuilderMs": 0.01006499957293272,
+      "generationMs": 1509.0468210000545,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2983.8189599998295
+    },
+    "judge": {
+      "questionId": "q259",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement la sanction prévue : les peines de l’article 226-13 du Code pénal. Cette affirmation est explicitement soutenue par le contexte (article L. 352-1 du Code monétaire et financier). La précision selon laquelle le détail des peines n’est pas dans l’extrait est également exacte et ne constitue pas une abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 352-1 vise expressément les membres du directoire ou du conseil de surveillance du fonds de garantie des déposants et prévoit, en cas de violation du secret professionnel, les peines de l’article 226-13 du code pénal. Elle couvre également le constat que le détail de ces peines n’est pas reproduit dans l’extrait."
+    }
+  },
+  "routing": {
+    "answer": "Les membres du directoire ou du conseil de surveillance du fonds de garantie des déposants qui violent le secret professionnel sont **passibles des peines prévues à l’article 226-13 du Code pénal**, conformément à l’article L. 352-1 du Code monétaire et financier [Source 1].\n\nLe contenu précis de ces peines n’est pas reproduit dans la source fournie.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L352-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1583.3661409998313,
+      "routingCalls": 1,
+      "embeddingMs": 372.10475699976087,
+      "vectorSearchMs": 131.6384089998901,
+      "jinaRerankingMs": 535.5508889993653,
+      "mappingMs": 0.03856300003826618,
+      "totalMs": 2622.7277969997376,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011559000238776207,
+      "contextBuilderMs": 0.010277999565005302,
+      "generationMs": 2135.1950120003894,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4757.954148000106
+    },
+    "judge": {
+      "questionId": "q259",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la sanction prévue : les peines de l’article 226-13 du code pénal. Elle est directement et entièrement étayée par le contexte (article L. 352-1 du Code monétaire et financier). La précision selon laquelle le contenu des peines n’est pas reproduit dans la source est également exacte au regard du contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 352-1 vise expressément les membres du directoire ou du conseil de surveillance du fonds de garantie des déposants et prévoit, en cas de violation du secret professionnel, les peines de l’article 226-13 du code pénal. Elle couvre intégralement l’affirmation principale de la réponse. Elle permet aussi de constater que le détail matériel des peines de l’article 226-13 n’est pas reproduit dans l’extrait fourni."
+    }
+  },
+  "failureStage": "none"
+}

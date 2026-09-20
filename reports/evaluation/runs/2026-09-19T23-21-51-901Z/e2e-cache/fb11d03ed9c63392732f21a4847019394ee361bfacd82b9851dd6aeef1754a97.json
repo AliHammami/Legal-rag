@@ -1,0 +1,95 @@
+{
+  "questionId": "q407",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans les entreprises d’au moins cinquante salariés, l’employeur doit :\n\n- publier chaque année l’ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes ainsi qu’aux actions mises en œuvre pour les supprimer ;  \n- respecter les modalités et la méthodologie fixées par décret ;  \n- rendre publics ces indicateurs sur le site internet du ministère chargé du travail, dans les conditions déterminées par décret.  \n\nCes obligations résultent de l’**article L. 1142-8 du Code du travail** [Source 1].\n\nEn cas d’absence de publication, une pénalité peut être appliquée dans les conditions prévues par décret. Son montant peut atteindre **1 % des rémunérations et gains** versés pendant les périodes concernées ; il est fixé par l’autorité administrative en tenant notamment compte des efforts de l’entreprise et des motifs de sa défaillance (**article L. 2242-8 du Code du travail**) [Source 2].\n\nEn revanche, les sources fournies ne contiennent aucune disposition relative aux **sanctions pénales applicables en cas de violation délibérée des règles de sécurité ayant entraîné une incapacité de travail**. Il n’est donc pas possible de déterminer ces sanctions à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.22963700070977,
+      "vectorSearchMs": 686.0001750001684,
+      "jinaRerankingMs": 584.668072999455,
+      "mappingMs": 0.033126999624073505,
+      "totalMs": 1476.9555829996243,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011931000277400017,
+      "contextBuilderMs": 0.029380000196397305,
+      "generationMs": 2926.0005319993943,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4403.005420000292
+    },
+    "judge": {
+      "questionId": "q407",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement et précisément les obligations annuelles de publication prévues par l'article L. 1142-8, ainsi que la pénalité administrative liée à l'absence de publication, laquelle est bien étayée par le contexte. En revanche, elle ne répond pas à la seconde partie de la question : la sanction pénale attendue est d'un an d'emprisonnement et de 15 000 euros d'amende pour une ITT inférieure ou égale à trois mois en cas de violation manifestement délibérée. Son refus est fondé au regard du seul contexte fourni, qui ne contient pas cette règle pénale, mais l'expected abstention est false et la réponse ne répond donc pas entièrement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre exactement les obligations de publication dans les entreprises d’au moins cinquante salariés. La source 2 est pertinente pour la précision additionnelle sur la pénalité administrative en cas d’absence de publication. En revanche, aucune source ne porte sur l’infraction pénale de violation délibérée d’une obligation de sécurité ayant causé une incapacité de travail : les sources sont donc insuffisantes pour répondre entièrement à la question. Toutes les affirmations effectivement formulées dans la réponse générée, y compris le constat que le contexte ne contient pas la sanction pénale demandée, sont étayées par le contenu ou l’absence de contenu des sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Dans les entreprises d’au moins 50 salariés, l’employeur doit :\n\n- publier chaque année l’ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes ainsi que les actions mises en œuvre pour les supprimer, selon les modalités et la méthodologie fixées par décret ;\n- rendre publics ces indicateurs sur le site internet du ministère chargé du travail, dans les conditions déterminées par décret.\n\nCes obligations résultent de l’**article L. 1142-8 du Code du travail** [Source 1].\n\nEn cas d’absence de publication, une pénalité peut être appliquée dans les conditions prévues par décret. Son montant peut atteindre **1 % des rémunérations et gains** versés pendant les périodes concernées, et est fixé par l’autorité administrative en fonction notamment des efforts de l’entreprise et des motifs de sa défaillance, conformément à l’**article L. 2242-8 du Code du travail** [Source 2].\n\nEn revanche, les sources fournies ne contiennent aucune disposition relative aux **sanctions pénales applicables en cas de violation délibérée des règles de sécurité entraînant une incapacité de travail**. Il n’est donc pas possible de répondre à cette partie sur la base du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1635.665455000475,
+      "routingCalls": 1,
+      "embeddingMs": 224.39654199965298,
+      "vectorSearchMs": 322.1900840001181,
+      "jinaRerankingMs": 562.1778849996626,
+      "mappingMs": 0.04489099979400635,
+      "totalMs": 2744.5020960001275,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014778000302612782,
+      "contextBuilderMs": 0.028152000159025192,
+      "generationMs": 2680.5715990001336,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5425.127918999642
+    },
+    "judge": {
+      "questionId": "q407",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon complète les obligations de publication prévues par l’article L. 1142-8, ainsi que la pénalité administrative liée à l’absence de publication, laquelle est bien supportée par le contexte. En revanche, elle ne répond pas à la seconde partie essentielle de la question : la peine d’un an d’emprisonnement et 15 000 euros d’amende pour violation manifestement délibérée ayant causé une ITT inférieure ou égale à trois mois. Son refus sur ce point est fondé au regard du seul contexte fourni, mais rend la réponse incomplète et ne correspond pas à l’absence d’abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les obligations de publication dans les entreprises d’au moins cinquante salariés (source 1) et pour la pénalité administrative liée notamment à l’absence de publication (source 2). Elles ne fournissent toutefois aucune source sur la sanction pénale demandée en cas de violation délibérée d’une obligation de sécurité avec incapacité de travail : elles sont donc insuffisantes pour couvrir intégralement la question. En revanche, elles couvrent les affirmations effectivement formulées dans la réponse générée : les obligations, les caractéristiques de la pénalité administrative, et le constat qu’aucune disposition pénale pertinente ne figure dans le contexte fourni."
+    }
+  },
+  "failureStage": "generation"
+}

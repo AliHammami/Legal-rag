@@ -1,0 +1,99 @@
+{
+  "questionId": "q317",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L421-2 du Code de la consommation**, les produits destinés aux consommateurs doivent respecter le **règlement (UE) 2023/988 du 10 mai 2023**, relatif à la sécurité générale des produits [Source 1].\n\nCe règlement modifie le règlement (UE) n° 1025/2012 et la directive (UE) 2020/1828, et abroge les directives 2001/95/CE et 87/357/CEE.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L421-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R412-43-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.59082499984652,
+      "vectorSearchMs": 617.2690770002082,
+      "jinaRerankingMs": 577.5601530000567,
+      "mappingMs": 0.07090499997138977,
+      "totalMs": 1425.516451000236,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016673999838531017,
+      "contextBuilderMs": 0.02522999979555607,
+      "generationMs": 1469.3667619992048,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2894.9338789992034
+    },
+    "judge": {
+      "questionId": "q317",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le règlement (UE) 2023/988 du 10 mai 2023 et mentionne correctement les actes qu’il modifie et abroge. Toutes ces informations figurent explicitement dans le contexte fourni. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L421-2 et identifie expressément le règlement (UE) 2023/988 du 10 mai 2023, son objet, les actes qu’il modifie et les directives qu’il abroge. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée. Les sources 2 et 3 ne sont pas nécessaires à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L421-2 du Code de la consommation, les produits destinés aux consommateurs doivent respecter :\n\n- le **règlement (UE) 2023/988 du 10 mai 2023 relatif à la sécurité générale des produits** ;\n- ce règlement modifie notamment le **règlement (UE) n° 1025/2012** [Source 1].\n\nLes directives mentionnées dans l’article ne sont pas des règlements européens.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L421-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1340.146981999278,
+      "routingCalls": 1,
+      "embeddingMs": 764.332480000332,
+      "vectorSearchMs": 63.30332500021905,
+      "jinaRerankingMs": 544.5360709996894,
+      "mappingMs": 0.031314000487327576,
+      "totalMs": 2712.3845819998533,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010235999710857868,
+      "contextBuilderMs": 0.017973999492824078,
+      "generationMs": 2356.533186000772,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5068.95659000054
+    },
+    "judge": {
+      "questionId": "q317",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le règlement (UE) 2023/988 du 10 mai 2023, seul règlement que les produits doivent respecter au titre de l’article L421-2. Elle précise à juste titre que le règlement n° 1025/2012 est mentionné comme acte modifié et que les autres actes cités sont des directives, non des règlements. Ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L421-2 et identifie expressément le règlement (UE) 2023/988 comme le texte dont les produits doivent respecter les dispositions. Elle mentionne aussi explicitement que ce règlement modifie le règlement (UE) n° 1025/2012 et une directive, tout en abrogeant deux directives, ce qui couvre les précisions apportées dans la réponse. La source 2 est redondante mais cohérente."
+    }
+  },
+  "failureStage": "none"
+}

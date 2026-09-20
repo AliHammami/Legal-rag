@@ -1,0 +1,115 @@
+{
+  "questionId": "q008",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’extrait disponible de l’**article 226-1 du Code pénal**, l’atteinte à l’intimité de la vie privée comporte les éléments suivants :\n\n- **Un élément matériel** : porter atteinte à l’intimité de la vie privée d’autrui **au moyen de n’importe quel procédé**, notamment en **captant, enregistrant ou transmettant**, sans le consentement de leur auteur, des paroles — l’extrait s’interrompant avant de préciser les conditions complètes [Source 2].\n- **Un élément intentionnel** : l’acte doit être accompli **volontairement** [Source 2].\n- **L’absence de consentement** de la personne concernée pour la captation, l’enregistrement ou la transmission [Source 2].\n\nL’extrait fourni étant incomplet, il ne permet pas d’énumérer de manière exhaustive tous les comportements visés par l’article 226-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-33-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.47161400000914,
+      "vectorSearchMs": 743.9588290000102,
+      "jinaRerankingMs": 629.0685750000121,
+      "mappingMs": 0.0308249999943655,
+      "totalMs": 1608.5670109999774,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012048000004142523,
+      "contextBuilderMs": 0.03776599999400787,
+      "generationMs": 2688.1522330000007,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4296.78070600002
+    },
+    "judge": {
+      "questionId": "q008",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, à partir de l’extrait disponible, le procédé matériel de captation, enregistrement ou transmission de paroles, le caractère volontaire et l’absence de consentement de leur auteur. Elle signale à juste titre que l’extrait est tronqué et ne permet pas une énumération exhaustive des autres comportements prévus par l’article. Toutes les affirmations importantes sont directement appuyées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit l’amorce de l’article 226-1 et étaye le caractère volontaire, l’atteinte à la vie privée d’autrui par un procédé quelconque, ainsi que la captation, l’enregistrement ou la transmission de paroles sans consentement. Son caractère tronqué justifie également l’affirmation selon laquelle tous les comportements de l’article ne peuvent pas être énumérés exhaustivement. Les autres sources ne sont pas nécessaires aux affirmations de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’extrait fourni de **l’article 226-1 du Code pénal [Source 2]**, l’atteinte à l’intimité de la vie privée suppose au moins :\n\n- **un acte matériel** réalisé « au moyen d’un procédé quelconque » ;\n- **un élément intentionnel** : l’auteur doit agir volontairement ;\n- **une atteinte à l’intimité de la vie privée d’autrui** ;\n- s’agissant des paroles mentionnées au 1° de l’article, le fait de les **capter, enregistrer ou transmettre sans le consentement de leur auteur**.\n\nL’extrait de l’article 226-1 étant tronqué, il ne permet pas d’énumérer de manière exhaustive tous les actes et conditions prévus par cet article. L’article 226-2 du Code pénal [Source 1] réprime, quant à lui, la conservation, la divulgation ou l’utilisation d’un enregistrement ou document obtenu au moyen de l’un des actes visés par l’article 226-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-3-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 837.5464539999957,
+      "routingCalls": 1,
+      "embeddingMs": 266.20941300000413,
+      "vectorSearchMs": 90.81582600000547,
+      "jinaRerankingMs": 550.8784030000097,
+      "mappingMs": 0.03236400001333095,
+      "totalMs": 1745.5579839999846,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07063600001856685,
+      "contextBuilderMs": 0.02806300000520423,
+      "generationMs": 3383.774868999986,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5129.44181400002
+    },
+    "judge": {
+      "questionId": "q008",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le procédé quelconque, le caractère volontaire, l’atteinte à la vie privée d’autrui et, pour les paroles visées au 1°, leur captation, enregistrement ou transmission sans consentement. Ces éléments sont directement étayés par le contexte. La réserve sur le caractère tronqué de l’extrait est justifiée et l’évocation de l’article 226-2 est exacte et supportée, sans empêcher une réponse effective à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et étaye les éléments constitutifs explicitement énoncés : procédé quelconque, caractère volontaire, atteinte à l’intimité de la vie privée d’autrui, et pour les paroles, captation, enregistrement ou transmission sans consentement. Son caractère tronqué justifie la réserve sur l’impossibilité d’une énumération exhaustive. La source 1 est pertinente pour l’affirmation distincte relative à l’article 226-2, qu’elle couvre directement."
+    }
+  },
+  "failureStage": "none"
+}

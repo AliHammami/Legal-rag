@@ -1,0 +1,87 @@
+{
+  "questionId": "q027",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 411-1 du Code pénal distingue :\n\n- **La trahison** lorsque les faits sont commis par **un Français ou un militaire au service de la France** ;\n- **L’espionnage** lorsque ces mêmes faits sont commis par **toute autre personne**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "411-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.5901549999835,
+      "vectorSearchMs": 672.4858600000152,
+      "jinaRerankingMs": 513.2204410000122,
+      "mappingMs": 0.03697600000305101,
+      "totalMs": 1404.3611630000523,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01131500001065433,
+      "contextBuilderMs": 0.016857000009622425,
+      "generationMs": 1238.5035340000177,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2642.901195000042
+    },
+    "judge": {
+      "questionId": "q027",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la distinction posée par l'article 411-1 : trahison pour un Français ou un militaire au service de la France, espionnage pour toute autre personne. Tous les éléments sont explicitement présents dans le contexte et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 411-1 et énonce expressément la distinction demandée selon la qualité de l’auteur : trahison pour un Français ou un militaire au service de la France, espionnage pour toute autre personne. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’article 411-1 du Code pénal distingue :\n\n- la **trahison**, lorsque les faits des articles 411-2 à 411-11 sont commis par un **Français ou un militaire au service de la France** ;\n- l’**espionnage**, lorsque ces mêmes faits sont commis par **toute autre personne**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "411-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 860.3211320000119,
+      "routingCalls": 1,
+      "embeddingMs": 251.404545999947,
+      "vectorSearchMs": 84.34813399997074,
+      "jinaRerankingMs": 526.7417720000958,
+      "mappingMs": 0.023545000003650784,
+      "totalMs": 1722.8683700000402,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009826999972574413,
+      "contextBuilderMs": 0.010168000007979572,
+      "generationMs": 1454.426381999976,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3177.322538999957
+    },
+    "judge": {
+      "questionId": "q027",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la distinction prévue par l’article 411-1 : trahison pour un Français ou un militaire au service de la France, espionnage pour toute autre personne. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 411-1 et énonce exactement la distinction demandée selon la qualité de l'auteur : trahison pour un Français ou un militaire au service de la France, espionnage pour toute autre personne. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

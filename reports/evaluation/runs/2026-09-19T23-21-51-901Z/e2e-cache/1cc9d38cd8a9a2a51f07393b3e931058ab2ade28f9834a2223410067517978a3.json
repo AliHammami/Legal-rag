@@ -1,0 +1,87 @@
+{
+  "questionId": "q211",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’offre au public portant sur les droits de membre d’un **groupement européen d’intérêt économique (GEIE)** est autorisée uniquement si elle présente les caractéristiques d’une offre définie :\n\n- au **1° de l’article L. 411-2 du Code monétaire et financier** ; ou\n- au **3° du même article**.\n\nC’est l’exception prévue par le second alinéa de l’**article L. 253-1 du Code de commerce** [Source 1]. Le contenu de ces deux catégories d’offres n’étant pas fourni dans le contexte, il n’est pas possible d’en préciser davantage les conditions.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 276.0068659996614,
+      "vectorSearchMs": 601.7106910003349,
+      "jinaRerankingMs": 546.3202440002933,
+      "mappingMs": 0.05057600000873208,
+      "totalMs": 1424.1363479997963,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014459000434726477,
+      "contextBuilderMs": 0.01411100011318922,
+      "generationMs": 2363.2961309999228,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3787.4694099999033
+    },
+    "judge": {
+      "questionId": "q211",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l’exception prévue par le second alinéa de l’article L. 253-1 : l’offre est autorisée lorsqu’elle présente les caractéristiques d’une offre définie au 1° ou au 3° de l’article L. 411-2 du code monétaire et financier. Toutes les affirmations juridiques importantes sont explicitement supportées par le contexte. La précision selon laquelle le contenu de ces catégories n’est pas fourni est également justifiée par le contexte disponible."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 253-1 du code de commerce, y compris l’interdiction générale et son exception : l’offre est autorisée lorsqu’elle répond aux caractéristiques des offres définies au 1° ou au 3° de l’article L. 411-2 du code monétaire et financier. Elle couvre donc toutes les affirmations juridiques essentielles de la réponse, ainsi que le constat selon lequel le détail de ces catégories n’est pas présent dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Malgré l’interdiction générale, l’offre au public portant sur les droits de membre d’un **groupement européen d’intérêt économique** est autorisée si elle présente les caractéristiques d’une offre définie :\n\n- au **1° de l’article L. 411-2 du Code monétaire et financier** ; ou\n- au **3° du même article**.\n\nCette dérogation est prévue par l’**article L. 253-1 du Code de commerce** [Source 1]. Le contenu des 1° et 3° de l’article L. 411-2 n’étant pas fourni, il n’est pas possible de préciser davantage ces caractéristiques à partir du contexte disponible. À défaut, les contrats conclus ou les droits créés sont frappés de nullité [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4401.087123999838,
+      "routingCalls": 1,
+      "embeddingMs": 284.26625799993053,
+      "vectorSearchMs": 220.47753100004047,
+      "jinaRerankingMs": 546.4280130001716,
+      "mappingMs": 0.023087999783456326,
+      "totalMs": 5452.308776999824,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009955999907106161,
+      "contextBuilderMs": 0.01078899996355176,
+      "generationMs": 3044.55348100001,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8496.891073000152
+    },
+    "judge": {
+      "questionId": "q211",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions alternatives prévues par l’article L. 253-1 : l’offre doit répondre aux caractéristiques définies au 1° ou au 3° de l’article L. 411-2 du code monétaire et financier. Ces affirmations, ainsi que la mention de la nullité en cas de violation de l’interdiction, sont directement étayées par le contexte. Elle répond donc effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 253-1, qui énonce l’interdiction, la dérogation applicable aux droits de membre d’un GIE ou d’un GEIE, et les deux conditions alternatives renvoyant aux 1° et 3° de l’article L. 411-2 du code monétaire et financier. Elle couvre également l’affirmation relative à la nullité des contrats ou droits créés en cas de méconnaissance de l’interdiction."
+    }
+  },
+  "failureStage": "none"
+}

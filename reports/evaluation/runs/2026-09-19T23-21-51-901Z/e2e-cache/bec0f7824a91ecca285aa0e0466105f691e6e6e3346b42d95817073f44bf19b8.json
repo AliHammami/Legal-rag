@@ -1,0 +1,87 @@
+{
+  "questionId": "q056",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La personne est exemptée de peine si, après avoir averti l’autorité administrative ou judiciaire, elle a permis :\n\n- d’éviter la réalisation de l’infraction ; et\n- le cas échéant, d’identifier les autres coupables.\n\n**Article 422-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 788.1110340000596,
+      "vectorSearchMs": 576.2178259999491,
+      "jinaRerankingMs": 520.0966429999098,
+      "mappingMs": 0.0326900000218302,
+      "totalMs": 1884.487228000071,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009765999973751605,
+      "contextBuilderMs": 0.01043500006198883,
+      "generationMs": 1082.1535849999636,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2966.669652999961
+    },
+    "judge": {
+      "questionId": "q056",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux conditions prévues par l’article 422-1 : l’avertissement de l’autorité administrative ou judiciaire doit avoir permis d’éviter la réalisation de l’infraction et, le cas échéant, d’identifier les autres coupables. Elle est entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 422-1 du Code pénal et énonce exactement la condition demandée. Elle couvre l’ensemble des affirmations importantes de la réponse : l’avertissement de l’autorité administrative ou judiciaire, l’évitement de la réalisation de l’infraction et l’identification éventuelle des autres coupables."
+    }
+  },
+  "routing": {
+    "answer": "La personne doit avoir **averti l’autorité administrative ou judiciaire**, et cet avertissement doit avoir permis **d’éviter la réalisation de l’infraction** et, le cas échéant, **d’identifier les autres coupables**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 757.3092150000157,
+      "routingCalls": 1,
+      "embeddingMs": 205.92269499995746,
+      "vectorSearchMs": 34.823914000066,
+      "jinaRerankingMs": 506.9339110000292,
+      "mappingMs": 0.020444000023417175,
+      "totalMs": 1505.0620190000627,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009408000041730702,
+      "contextBuilderMs": 0.010119999991729856,
+      "generationMs": 1158.3701519999886,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2663.4740030000685
+    },
+    "judge": {
+      "questionId": "q056",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions prévues par l’article 422-1 : avertissement de l’autorité administrative ou judiciaire, permettant d’éviter la réalisation de l’infraction et d’identifier éventuellement les autres coupables. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 422-1 et énonce exactement la condition d'exemption de peine visée par la question : avertissement de l'autorité administrative ou judiciaire ayant permis d'éviter la réalisation de l'infraction et, le cas échéant, d'identifier les autres coupables. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q294",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article L. 212-2 du Code de la consommation**, les dispositions de l’article **L. 212-1** sont étendues aux **contrats conclus entre des professionnels et des non-professionnels**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L212-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L743-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R212-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 233.7852460006252,
+      "vectorSearchMs": 652.8302459996194,
+      "jinaRerankingMs": 573.4270839998499,
+      "mappingMs": 0.02366300020366907,
+      "totalMs": 1460.0931359995157,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010199999436736107,
+      "contextBuilderMs": 0.017513999715447426,
+      "generationMs": 1031.101529999636,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2491.231412000023
+    },
+    "judge": {
+      "questionId": "q294",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l’extension prévue par l’article L. 212-2 : les contrats conclus entre des professionnels et des non-professionnels. Cette affirmation est explicitement étayée par la source 1 du contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit explicitement l'article L. 212-2 et indique que les dispositions de l'article L. 212-1 s'appliquent également aux contrats conclus entre des professionnels et des non-professionnels. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 212-2 du Code de la consommation, les dispositions de l’article L. 212-1 sont étendues aux contrats conclus entre des **professionnels et des non-professionnels**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L212-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L743-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R212-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2957.4534390000626,
+      "routingCalls": 1,
+      "embeddingMs": 217.2098920000717,
+      "vectorSearchMs": 579.7559730000794,
+      "jinaRerankingMs": 842.9279190003872,
+      "mappingMs": 0.02553000021725893,
+      "totalMs": 4597.399373999797,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011789999902248383,
+      "contextBuilderMs": 0.024148999713361263,
+      "generationMs": 1086.5308740008622,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5683.973695999943
+    },
+    "judge": {
+      "questionId": "q294",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse correspond exactement à l'article L. 212-2 cité dans le contexte et à la référence : l'extension vise les contrats conclus entre professionnels et non-professionnels."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 212-2 et répond exactement à la question. Elle couvre intégralement l'affirmation de la réponse générée selon laquelle l'article L. 212-1 est applicable aux contrats conclus entre professionnels et non-professionnels."
+    }
+  },
+  "failureStage": "none"
+}

@@ -21,7 +21,7 @@ function makeSuccessResult(
     goldArticles: expectedAbstention ? [] : ['122-5'],
     referenceAnswer: expectedAbstention ? null : 'Référence',
     generatedAnswer: 'Réponse générée',
-    context: `[Source 1 — Article 122-5 — chunk 0]\nContenu.`,
+    context: `[Source 1 — Code pénal — Article 122-5 — chunk 0]\nContenu.`,
     retrievedChunks: [],
     rerankedChunks: [],
     filteredContextChunks: [],

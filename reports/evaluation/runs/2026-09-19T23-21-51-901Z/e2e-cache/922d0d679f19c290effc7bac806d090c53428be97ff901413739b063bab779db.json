@@ -1,0 +1,87 @@
+{
+  "questionId": "q352",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En référé, le juge peut ordonner **toute mesure destinée à faire cesser l’atteinte à la présomption d’innocence**, notamment :\n\n- l’insertion d’une rectification ;\n- la diffusion d’un communiqué ;\n- aux frais de la personne physique ou morale responsable.\n\nCes mesures peuvent être prononcées **même avant toute condamnation** et **sans préjudice de la réparation du dommage subi** — Article 9-1 du Code civil [Source 1].\n\nEn revanche, le contexte fourni ne contient aucune disposition relative aux **obligations d’un commerçant non immatriculé**. Il n’est donc pas possible de répondre à cette seconde partie à partir des sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 389.9174939999357,
+      "vectorSearchMs": 731.5375800002366,
+      "jinaRerankingMs": 566.6079810000956,
+      "mappingMs": 0.027594000101089478,
+      "totalMs": 1688.12307699956,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01042999979108572,
+      "contextBuilderMs": 0.019121999852359295,
+      "generationMs": 2459.1254749996588,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4147.287202999927
+    },
+    "judge": {
+      "questionId": "q352",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse expose correctement et précisément les mesures de référé prévues par l’article 9-1 du code civil, y compris les exemples, les frais à la charge du responsable et le caractère sans préjudice des dommages-intérêts. En revanche, elle ne répond pas au second volet : une personne non immatriculée ne peut se prévaloir de la qualité de commerçant envers les tiers ou administrations, tout en restant soumise aux obligations et responsabilités attachées à cette qualité. Toutes les affirmations effectivement formulées sont entièrement étayées par le seul contexte fourni, qui ne contient effectivement aucune source sur le commerçant non immatriculé. Toutefois, l’attendu ne prévoyait pas d’abstention et la réponse laisse une partie substantielle de la question sans réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour le premier volet : elle prévoit les mesures de référé, notamment rectification ou communiqué, aux frais du responsable, avant toute condamnation et sans préjudice de la réparation. Elle ne contient toutefois aucune disposition sur le commerçant non immatriculé, de sorte qu'elle est insuffisante pour répondre intégralement à la question. Les affirmations effectivement formulées dans la réponse générée sont toutes étayées par la source, y compris le constat que le contexte fourni ne permet pas de traiter le second volet."
+    }
+  },
+  "routing": {
+    "answer": "En référé, le juge peut ordonner **toute mesure destinée à faire cesser l’atteinte à la présomption d’innocence**, notamment :\n\n- l’insertion d’une rectification ;\n- la diffusion d’un communiqué.\n\nCes mesures peuvent être ordonnées **aux frais de la personne physique ou morale responsable**, sans préjudice de la réparation du dommage subi. **Article 9-1 du Code civil [Source 1].**\n\nEn revanche, le contexte fourni ne contient aucune disposition relative aux **obligations d’un commerçant non immatriculé**. Il n’est donc pas possible de répondre précisément à cette seconde question à partir des sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2046.4190309997648,
+      "routingCalls": 1,
+      "embeddingMs": 220.5434610005468,
+      "vectorSearchMs": 284.1827140003443,
+      "jinaRerankingMs": 559.9279310004786,
+      "mappingMs": 0.04097899980843067,
+      "totalMs": 3111.1646270006895,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011303000152111053,
+      "contextBuilderMs": 0.010865999385714531,
+      "generationMs": 2112.203393000178,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5223.397721000016
+    },
+    "judge": {
+      "questionId": "q352",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement les mesures de référé prévues par l’article 9-1 du code civil, y compris la rectification, le communiqué, les frais à la charge du responsable et le maintien possible d’une réparation du dommage. Elle ne répond toutefois pas au second volet relatif au commerçant non immatriculé, alors que la réponse attendue mentionne l’impossibilité de se prévaloir de la qualité de commerçant tout en restant soumis aux responsabilités correspondantes. Toutes les affirmations formulées sont bien étayées par le seul contexte fourni, qui ne contient effectivement aucune règle sur l’immatriculation des commerçants."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour le premier volet : elle énonce les mesures pouvant être prescrites en référé pour faire cesser une atteinte à la présomption d’innocence, notamment la rectification et le communiqué, aux frais du responsable et sans préjudice de la réparation. Elle ne couvre toutefois pas le second volet sur le commerçant non immatriculé, faute de source relative au code de commerce. Toutes les affirmations effectivement formulées dans la réponse générée sont néanmoins étayées par la source ou par l’absence, dans le contexte fourni, de disposition sur ce second sujet."
+    }
+  },
+  "failureStage": "generation"
+}

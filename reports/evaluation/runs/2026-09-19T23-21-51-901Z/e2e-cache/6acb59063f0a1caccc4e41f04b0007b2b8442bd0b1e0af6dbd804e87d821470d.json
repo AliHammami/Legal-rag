@@ -1,0 +1,103 @@
+{
+  "questionId": "q070",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un **bien meuble par sa nature** est un bien **qui peut être transporté d’un lieu à un autre**, conformément à l’**article 528 du Code civil** [Source 2].\n\nPlus généralement, les biens sont meubles soit **par leur nature**, soit **par la détermination de la loi**, selon l’**article 527 du Code civil** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "527"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "528"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "535"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 256.9442809999455,
+      "vectorSearchMs": 620.5758930000011,
+      "jinaRerankingMs": 501.65478500002064,
+      "mappingMs": 0.029423000058159232,
+      "totalMs": 1379.2296499998774,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010966000147163868,
+      "contextBuilderMs": 0.01967600011266768,
+      "generationMs": 1179.1785560001153,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2558.4640329999384
+    },
+    "judge": {
+      "questionId": "q070",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la définition attendue : un bien meuble par sa nature peut être transporté d’un lieu à un autre. Cette affirmation est explicitement supportée par l’article 528 fourni. Le complément sur la distinction entre meubles par nature et par détermination de la loi est exact et directement supporté par l’article 527."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 énonce directement la définition demandée et couvre l'affirmation principale. La source 1 est pertinente pour le complément sur les deux catégories de biens meubles et couvre cette affirmation. Les sources sont donc directement ciblées et couvrent toutes les affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 528 du Code civil**, sont des **biens meubles par leur nature** les biens **qui peuvent se transporter d’un lieu à un autre** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "527"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "528"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "535"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1230.3462620000355,
+      "routingCalls": 1,
+      "embeddingMs": 227.2012190001551,
+      "vectorSearchMs": 73.39098099991679,
+      "jinaRerankingMs": 480.69798499997705,
+      "mappingMs": 0.033933999948203564,
+      "totalMs": 2011.6993230001535,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013706000056117773,
+      "contextBuilderMs": 0.015970999840646982,
+      "generationMs": 1062.4834680000786,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3074.220160999801
+    },
+    "judge": {
+      "questionId": "q070",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l’article 528, explicitement présent dans le contexte : les biens meubles par leur nature sont ceux qui peuvent se transporter d’un lieu à un autre."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article 528) est directement pertinente et énonce exactement la définition demandée. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

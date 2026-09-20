@@ -1,0 +1,119 @@
+{
+  "questionId": "q463",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les conséquences dépendent de la nature du défaut de paiement.\n\n### 1. Défaut de provision d’un chèque\n\nLe banquier peut refuser le paiement après avoir informé le titulaire du compte des conséquences du défaut de provision. Il doit alors lui demander de restituer les formules de chèques et de ne plus émettre de chèques, sauf ceux permettant exclusivement un retrait auprès du banquier tiré ou les chèques certifiés. Les mandataires du titulaire doivent également être informés. [Source 1]\n\nLe titulaire peut toutefois retrouver le droit d’émettre des chèques s’il règle le chèque impayé ou constitue une provision suffisante et disponible. [Source 1]\n\nÀ défaut de paiement :\n\n- un certificat de non-paiement peut être délivré après trente jours ;\n- sa notification ou sa signification vaut commandement de payer ;\n- si le paiement du chèque et des frais n’est pas justifié dans les quinze jours, l’huissier délivre un titre exécutoire, sans autre acte de procédure ni frais. [Source 1]\n\n### 2. Défaut de paiement d’un emprunteur\n\nLe prêteur peut exiger le remboursement immédiat du capital restant dû, ainsi que les intérêts échus et non payés. Les sommes restant dues produisent ensuite des intérêts de retard au taux du prêt. [Sources 2 et 5]\n\nLe prêteur peut également réclamer une indemnité, dont le montant est limité par un barème fixé par décret et, selon les textes concernés, ne peut excéder le plafond applicable. [Sources 2, 3 et 5]\n\n### 3. Retard de paiement entre professionnels\n\nLe non-respect des délais de paiement peut entraîner une amende administrative pouvant atteindre :\n\n- 75 000 € pour une personne physique ;\n- 2 000 000 € pour une personne morale.\n\nEn cas de réitération dans un délai de deux ans, ces montants peuvent être portés respectivement à 150 000 € et 4 000 000 €. [Source 4]\n\nSont également interdites les clauses ou pratiques ayant pour effet de retarder abusivement le point de départ des délais de paiement. [Source 4]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-73"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-39"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-16"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-51"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.53775800019503,
+      "vectorSearchMs": 631.7218519989401,
+      "jinaRerankingMs": 539.2028040010482,
+      "mappingMs": 0.02590700052678585,
+      "totalMs": 1364.5097349993885,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01081799902021885,
+      "contextBuilderMs": 0.030499998480081558,
+      "generationMs": 4005.85667799972,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5370.415459999815
+    },
+    "judge": {
+      "questionId": "q463",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse présente correctement les conséquences dans plusieurs hypothèses précises (chèque sans provision, défaillance d'emprunteur, retards entre professionnels), conformément aux extraits fournis. Toutefois, la question est trop générale et ne précise ni le type de paiement ni le cadre juridique ; une réponse fiable et générale ne pouvait donc pas être apportée à partir de ce contexte. Le modèle aurait dû signaler cette ambiguïté plutôt que sélectionner et développer plusieurs régimes particuliers."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les trois régimes particuliers traités (chèque sans provision, défaillance dans certains crédits, retards de paiement entre professionnels), mais elles ne permettent pas de répondre de manière générale à une question non précisée sur le « défaut de paiement ». Dans le cadre d’une abstention attendue, elles illustrent l’existence de conséquences variables selon le régime, sans constituer une base exhaustive. En revanche, les affirmations importantes effectivement formulées dans la réponse sont toutes, ou presque toutes, explicitement soutenues par les extraits cités : injonction et certificat de non-paiement pour le chèque, exigibilité anticipée/intérêts/indemnité pour l’emprunteur, et plafonds d’amendes ainsi que pratiques interdites entre professionnels."
+    }
+  },
+  "routing": {
+    "answer": "Les conséquences dépendent de la nature du défaut de paiement :\n\n- **Chèque sans provision** : la banque peut refuser le paiement après avoir informé le titulaire du compte. Elle lui enjoint de restituer ses formules de chèques et de ne plus émettre de chèques, sauf exceptions prévues par le texte. Cette interdiction prend fin si le montant du chèque est réglé ou si une provision suffisante et disponible est constituée. [Source 1]  \n  Après certains délais, un **certificat de non-paiement** peut être délivré. Sa notification ou sa signification vaut commandement de payer. À défaut de paiement dans les quinze jours, l’huissier de justice délivre un **titre exécutoire**. [Source 1 — Article L131-73 du Code monétaire et financier]\n\n- **Défaut de remboursement d’un crédit** : le prêteur peut exiger immédiatement le remboursement du capital restant dû, augmenté des intérêts échus et impayés. Les sommes dues continuent ensuite à produire des intérêts de retard au taux du prêt. Une indemnité peut également être demandée, dans la limite d’un barème réglementaire. [Source 2 — Article L312-39 du Code de la consommation ; Source 5 — Article L313-51 du Code de la consommation]\n\n- **Demande de résolution du contrat de crédit** : le prêteur peut réclamer immédiatement le capital versé ou restant dû ainsi que les intérêts échus, avec des intérêts de retard et, sous conditions, une indemnité plafonnée par un barème. [Source 3 — Article L315-23 du Code de la consommation]\n\n- **Retard de paiement entre professionnels** : le non-respect des délais de paiement ou de certaines obligations relatives aux pénalités de retard peut entraîner une amende administrative pouvant aller jusqu’à **75 000 € pour une personne physique** et **2 000 000 € pour une personne morale**. Ces montants sont augmentés en cas de réitération dans les deux ans. [Source 4 — Article L441-16 du Code de commerce]\n\nLe contexte ne permet pas de déterminer quelle situation précise vous concerne.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-73"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-39"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-16"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-51"
+      }
+    ],
+    "profiling": {
+      "routingMs": 775.7178450003266,
+      "routingCalls": 1,
+      "embeddingMs": 206.65937300026417,
+      "vectorSearchMs": 677.4950820002705,
+      "jinaRerankingMs": 526.7657739985734,
+      "mappingMs": 0.0558059997856617,
+      "totalMs": 2186.720244999975,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01935800164937973,
+      "contextBuilderMs": 0.044607000425457954,
+      "generationMs": 3905.047963999212,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6091.8469079993665
+    },
+    "judge": {
+      "questionId": "q463",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement plusieurs conséquences possibles selon des hypothèses distinctes (chèque sans provision, défaillance de crédit, retards entre professionnels), mais la question est trop indéterminée pour qu'une réponse fiable puisse être donnée sans préciser le type de paiement concerné. Toutes les affirmations essentielles sont étayées par le contexte fourni. Elle ne s'abstient toutefois pas réellement : malgré sa réserve finale, elle fournit des conséquences juridiques concrètes alors qu'une abstention était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les hypothèses traitées dans la réponse (chèque sans provision, défaillance d’emprunteur, résolution d’un crédit et retards de paiement entre professionnels). Elles illustrent aussi que les conséquences varient selon la nature du paiement, ce qui est cohérent avec le caractère indéterminé de la question. Elles ne permettent toutefois pas de couvrir exhaustivement toutes les formes possibles de défaut de paiement. Toutes les conséquences juridiques concrètes énoncées dans la réponse sont étayées par les extraits fournis, y compris les seuils d’amende et les mécanismes de recouvrement du chèque impayé."
+    }
+  },
+  "failureStage": "abstention"
+}

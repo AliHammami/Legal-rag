@@ -1,0 +1,95 @@
+{
+  "questionId": "q436",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui. Les vices du consentement constituent une cause de nullité relative du contrat, conformément à l’article 1131 du Code civil [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1131"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 337.24513999931514,
+      "vectorSearchMs": 654.4931189995259,
+      "jinaRerankingMs": 494.6514699999243,
+      "mappingMs": 0.018439000472426414,
+      "totalMs": 1486.472397999838,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009736999869346619,
+      "contextBuilderMs": 0.02555200085043907,
+      "generationMs": 966.7109209988266,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2453.226839998737
+    },
+    "judge": {
+      "questionId": "q436",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse est juridiquement correcte, complète et directement étayée par l’article 1131 du Code civil fourni dans le contexte. Toutefois, une abstention était attendue : le modèle a répondu sur le fond au lieu d’indiquer que la question était hors périmètre ou ne pouvait être traitée de manière fiable dans le cadre attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle énonce explicitement que les vices du consentement constituent une cause de nullité relative du contrat. Elle couvre intégralement l'affirmation de la réponse générée. La source 1 est accessoire mais non contradictoire."
+    }
+  },
+  "routing": {
+    "answer": "Oui. Les vices du consentement constituent une cause de nullité relative du contrat, conformément à l’article 1131 du Code civil [Source 2].\n\nCette annulation ne relève toutefois pas de la simple révocation du contrat : les contrats ne peuvent être modifiés ou révoqués que par consentement mutuel des parties ou dans les cas prévus par la loi, selon l’article 1193 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1131"
+      }
+    ],
+    "profiling": {
+      "routingMs": 709.9066429995,
+      "routingCalls": 1,
+      "embeddingMs": 209.16076599992812,
+      "vectorSearchMs": 76.28211499936879,
+      "jinaRerankingMs": 479.0425629988313,
+      "mappingMs": 0.018772000446915627,
+      "totalMs": 1474.4343170002103,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009824000298976898,
+      "contextBuilderMs": 0.015298999845981598,
+      "generationMs": 1143.6741409990937,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2618.1466099992394
+    },
+    "judge": {
+      "questionId": "q436",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse répond correctement : l’article 1131 du Code civil, présent dans le contexte, qualifie les vices du consentement de cause de nullité relative. La précision sur la révocation et l’article 1193 est également exacte et étayée par le contexte, bien qu’elle soit secondaire. Toutefois, l’abstention était attendue et la réponse a fourni une réponse de fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 répond directement à la question et couvre l'affirmation principale : les vices du consentement sont une cause de nullité relative. La source 1 est pertinente pour la précision distincte relative à la modification ou à la révocation du contrat et couvre cette affirmation. Malgré l'abstention attendue, les sources fournies permettent bien de répondre au fond et étayent les énoncés de la réponse générée."
+    }
+  },
+  "failureStage": "abstention"
+}

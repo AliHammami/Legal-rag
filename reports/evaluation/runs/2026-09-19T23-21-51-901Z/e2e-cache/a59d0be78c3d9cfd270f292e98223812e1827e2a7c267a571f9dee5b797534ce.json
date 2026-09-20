@@ -1,0 +1,87 @@
+{
+  "questionId": "q298",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le professionnel doit informer le consommateur **au plus tôt trois mois et au plus tard un mois avant le terme de la période permettant de refuser la reconduction** du contrat.\n\nCette information doit être adressée par écrit, par lettre nominative ou par courrier électronique dédié, conformément à l’**article L215-1 du Code de la consommation** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 258.8724509999156,
+      "vectorSearchMs": 624.125331999734,
+      "jinaRerankingMs": 565.5803620005026,
+      "mappingMs": 0.02383900061249733,
+      "totalMs": 1448.6308760000393,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010428999550640583,
+      "contextBuilderMs": 0.01030299998819828,
+      "generationMs": 1274.3937400002033,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2723.0549400001764
+    },
+    "judge": {
+      "questionId": "q298",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement la période prévue par l’article L215-1 : au plus tôt trois mois et au plus tard un mois avant le terme de la période autorisant le rejet de la reconduction. Elle mentionne aussi correctement la forme écrite de l’information. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L215-1 applicable et énonce explicitement la période demandée (« au plus tôt trois mois et au plus tard un mois avant le terme de la période autorisant le rejet de la reconduction »). Elle couvre également l’affirmation additionnelle de la réponse sur l’information écrite par lettre nominative ou courrier électronique dédié."
+    }
+  },
+  "routing": {
+    "answer": "Le professionnel doit informer le consommateur **au plus tôt trois mois et au plus tard un mois avant le terme de la période pendant laquelle le consommateur peut s’opposer à la reconduction** du contrat.\n\nL’information doit être adressée par écrit, dans des termes clairs et compréhensibles, et mentionner la date limite de non-reconduction dans un encadré apparent — **Article L215-1 du Code de la consommation [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1103.2040860000998,
+      "routingCalls": 1,
+      "embeddingMs": 184.6198630006984,
+      "vectorSearchMs": 45.02035899925977,
+      "jinaRerankingMs": 644.8781859995797,
+      "mappingMs": 0.024125000461935997,
+      "totalMs": 1977.7692409995943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009715000167489052,
+      "contextBuilderMs": 0.010865999385714531,
+      "generationMs": 1276.9986049998552,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3254.796117000282
+    },
+    "judge": {
+      "questionId": "q298",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la période prévue par l’article L215-1 : au plus tôt trois mois et au plus tard un mois avant le terme de la période autorisant le rejet de la reconduction. Les précisions additionnelles sur l’écrit, les termes clairs et l’encadré apparent sont également explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L215-1 applicable et énonce exactement le délai demandé : au plus tôt trois mois et au plus tard un mois avant le terme de la période autorisant le rejet de la reconduction. Elle couvre aussi les précisions ajoutées dans la réponse sur l’information écrite, les termes clairs et compréhensibles, ainsi que l’encadré apparent mentionnant la date limite."
+    }
+  },
+  "failureStage": "none"
+}

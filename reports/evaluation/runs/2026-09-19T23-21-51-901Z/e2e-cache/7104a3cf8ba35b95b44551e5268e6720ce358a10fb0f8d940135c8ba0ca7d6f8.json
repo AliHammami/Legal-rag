@@ -1,0 +1,119 @@
+{
+  "questionId": "q345",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L722-1 du Code de la consommation**, la commission doit :\n\n1. **Examiner la situation du débiteur** ;\n2. **Se prononcer sur la recevabilité de sa demande de traitement du surendettement**. [Source 3]\n\nAprès cette décision de recevabilité, elle peut notamment dresser l’état du passif du débiteur [Source 1] et orienter le dossier selon les mesures de traitement applicables [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L723-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R724-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.27159000001848,
+      "vectorSearchMs": 617.6905109994113,
+      "jinaRerankingMs": 1431.2086539994925,
+      "mappingMs": 0.02457399945706129,
+      "totalMs": 2257.2276559993625,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009870000183582306,
+      "contextBuilderMs": 0.022323000244796276,
+      "generationMs": 1807.1849970007315,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4064.453730999492
+    },
+    "judge": {
+      "questionId": "q345",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux obligations prévues par l'article L722-1 : examiner la situation du débiteur et statuer sur la recevabilité de la demande. Les précisions additionnelles sur l'état du passif et l'orientation sont également étayées respectivement par les sources 1 et 2, sans contredire la réponse attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l'article L722-1 et couvre exactement les deux démarches centrales affirmées : examen de la situation du débiteur et décision sur la recevabilité. Les précisions additionnelles sont également directement étayées : la source 1 prévoit l'établissement de l'état du passif après l'examen de recevabilité, et la source 2 prévoit la décision motivée d'orientation du dossier."
+    }
+  },
+  "routing": {
+    "answer": "À la réception d’une demande de traitement du surendettement, la commission doit **examiner la situation du débiteur**, puis **se prononcer sur la recevabilité de sa demande** — c’est-à-dire décider si la demande peut être admise à la procédure. **Article L722-1 du Code de la consommation [Source 3].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L723-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R724-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1239.5467909993604,
+      "routingCalls": 1,
+      "embeddingMs": 154.4956909995526,
+      "vectorSearchMs": 44.45173299964517,
+      "jinaRerankingMs": 1823.6178190000355,
+      "mappingMs": 0.03295900020748377,
+      "totalMs": 3262.1732499999925,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012892999686300755,
+      "contextBuilderMs": 0.028401000425219536,
+      "generationMs": 1963.1932240007445,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5225.415234000422
+    },
+    "judge": {
+      "questionId": "q345",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux obligations prévues par l'article L722-1 : examiner la situation du débiteur et se prononcer sur la recevabilité de sa demande. Ces affirmations sont explicitement supportées par la source 3 du contexte. L'explication de la recevabilité comme admission à la procédure est cohérente et ne modifie pas le sens juridique."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 est directement pertinente : elle reproduit l'article L722-1 et énonce expressément que la commission examine la situation du débiteur puis se prononce sur la recevabilité de sa demande. Elle couvre intégralement les deux affirmations principales de la réponse, ainsi que la référence à l'article cité."
+    }
+  },
+  "failureStage": "none"
+}

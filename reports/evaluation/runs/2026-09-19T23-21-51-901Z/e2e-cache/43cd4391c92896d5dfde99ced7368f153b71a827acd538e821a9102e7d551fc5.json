@@ -1,0 +1,87 @@
+{
+  "questionId": "q299",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L216-1 du Code de la consommation, la délivrance d’un bien comportant des éléments numériques correspond :\n\n- au transfert au consommateur de la possession physique ou du contrôle du bien ;\n- ainsi qu’à la fourniture des éléments numériques, conformément à l’article L. 224-25-4.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 244.2812879998237,
+      "vectorSearchMs": 601.7558280006051,
+      "jinaRerankingMs": 2020.2796729998663,
+      "mappingMs": 0.03521400038152933,
+      "totalMs": 2866.3871609997004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011045999825000763,
+      "contextBuilderMs": 0.012150000780820847,
+      "generationMs": 1328.5408930005506,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4194.959184000269
+    },
+    "judge": {
+      "questionId": "q299",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition applicable : transfert de la possession physique ou du contrôle du bien, auquel s’ajoute, pour un bien comportant des éléments numériques, la fourniture de ces éléments au sens de l’article L. 224-25-4. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 216-1 et contient expressément les deux éléments de la définition reprise dans la réponse : le transfert au consommateur de la possession physique ou du contrôle du bien, ainsi que la fourniture des éléments numériques au sens de l’article L. 224-25-4."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L216-1 du Code de la consommation, la délivrance d’un bien comportant des éléments numériques comprend :\n\n- le transfert au consommateur de la possession physique ou du contrôle du bien ;\n- ainsi que la fourniture des éléments numériques, au sens de l’article L. 224-25-4.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1434.41801100038,
+      "routingCalls": 1,
+      "embeddingMs": 207.48157500009984,
+      "vectorSearchMs": 51.8539769994095,
+      "jinaRerankingMs": 566.8549370002002,
+      "mappingMs": 0.025762999430298805,
+      "totalMs": 2260.6629490004852,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01192100066691637,
+      "contextBuilderMs": 0.010859999805688858,
+      "generationMs": 1630.0401039998978,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3890.7363189999014
+    },
+    "judge": {
+      "questionId": "q299",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition applicable : transfert de la possession physique ou du contrôle du bien, complété, pour un bien comportant des éléments numériques, par la fourniture de ces éléments au sens de l’article L. 224-25-4. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 216-1 et énonce explicitement que la délivrance correspond au transfert au consommateur de la possession physique ou du contrôle du bien et, pour un bien comportant des éléments numériques, inclut la fourniture de ces éléments au sens de l'article L. 224-25-4. Elle est donc directement pertinente et couvre intégralement les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

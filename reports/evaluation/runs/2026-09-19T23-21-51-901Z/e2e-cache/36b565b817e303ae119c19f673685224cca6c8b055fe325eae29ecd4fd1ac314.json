@@ -1,0 +1,87 @@
+{
+  "questionId": "q411",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 26-1 du Code civil [Source 1]** :\n\n- Pour les déclarations souscrites **en France**, l’enregistrement relève du **directeur des services de greffe judiciaires du tribunal judiciaire**.\n- Pour les déclarations souscrites **à l’étranger**, il relève du **ministre de la Justice**.\n- Toutefois, certaines déclarations sont enregistrées par **l’autorité administrative désignée par décret en Conseil d’État**, quel que soit leur lieu de souscription :\n  1. les déclarations fondées sur le **mariage avec un conjoint français** ;\n  2. celles fondées sur la qualité d’**ascendant de Français** au titre de l’article 21-13-1 ;\n  3. celles fondées sur la qualité de **frère ou sœur de Français** au titre de l’article 21-13-2.\n\nL’article précise que l’enregistrement est exigé **à peine de nullité**.\n\nEn revanche, le contexte fourni ne contient aucune disposition relative au **droit de grève** ni à la protection des droits des salariés dans son exercice. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 182.45467200037092,
+      "vectorSearchMs": 638.7999799996614,
+      "jinaRerankingMs": 552.5730490004644,
+      "mappingMs": 0.027944999746978283,
+      "totalMs": 1373.88029700052,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009633000008761883,
+      "contextBuilderMs": 0.012109000235795975,
+      "generationMs": 2518.434092000127,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3892.3459790004417
+    },
+    "judge": {
+      "questionId": "q411",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon détaillée les autorités d’enregistrement prévues par l’article 26-1 du code civil, y compris les exceptions et la nullité. Elle ne répond toutefois pas à la seconde partie de la question relative à la protection des salariés lors de l’exercice du droit de grève, alors que la référence attend la règle de l’article L1132-2 du code du travail. Toutes les affirmations formulées sont bien appuyées par le contexte fourni, qui ne contient effectivement aucune règle sur le droit de grève. Néanmoins, l’abstention partielle n’est pas conforme à EXPECTED ABSTENTION = false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente et très précise pour la partie relative à l’enregistrement des déclarations de nationalité : elle couvre les autorités selon le lieu de souscription, les trois exceptions, ainsi que la nullité en l’absence d’enregistrement. En revanche, elle ne contient aucune disposition sur le droit de grève ou la protection des salariés, alors que cette seconde partie est importante dans la question ; une source telle que l’article L1132-2 du code du travail manque donc. Toutes les affirmations effectivement formulées dans la réponse générée sont néanmoins fidèlement couvertes par la source, y compris le constat que le contexte fourni ne comporte pas de règle sur le droit de grève."
+    }
+  },
+  "routing": {
+    "answer": "### Enregistrement des déclarations de nationalité\n\nToute déclaration de nationalité doit être enregistrée, à peine de nullité :\n\n- **si elle est souscrite en France** : par le **directeur des services de greffe judiciaires du tribunal judiciaire** ;\n- **si elle est souscrite à l’étranger** : par le **ministre de la Justice**.\n\nToutefois, certaines déclarations relèvent de l’**autorité administrative désignée par décret en Conseil d’État**, notamment celles :\n\n1. souscrites en raison du **mariage avec un conjoint français** ;\n2. fondées sur la qualité d’**ascendant de Français** ;\n3. fondées sur la qualité de **frère ou sœur de Français**.\n\nCes règles résultent de l’**article 26-1 du Code civil** [Source 1].\n\n### Protection des droits des salariés dans l’exercice du droit de grève\n\nLe contexte fourni ne contient aucune disposition relative au droit de grève ni aux garanties accordées aux salariés. Il ne permet donc pas de répondre juridiquement à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.7914220001549,
+      "routingCalls": 1,
+      "embeddingMs": 396.8172590006143,
+      "vectorSearchMs": 341.3895419994369,
+      "jinaRerankingMs": 542.309023999609,
+      "mappingMs": 0.022135999985039234,
+      "totalMs": 2509.3572739996016,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010704000480473042,
+      "contextBuilderMs": 0.014746000058948994,
+      "generationMs": 2186.810336999595,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4696.200877999887
+    },
+    "judge": {
+      "questionId": "q411",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La première partie est exacte et complète, y compris les trois exceptions prévues par l’article 26-1 du code civil. La seconde partie n’est pas répondue : la réponse omet la protection contre les sanctions, licenciements ou discriminations liés à l’exercice normal du droit de grève. Cette omission rend la réponse seulement partiellement correcte et incomplète au regard de la question globale. En revanche, toutes les affirmations formulées sont directement étayées par le contexte fourni, et l’absence de réponse sur le droit de grève est explicitement justifiée par l’absence de source correspondante dans ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente et complète pour les règles d’enregistrement des déclarations de nationalité, y compris les trois exceptions. Elle ne fournit toutefois aucune règle relative à la protection des salariés dans l’exercice du droit de grève, qui constitue une partie importante de la question. Toutes les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les modalités d’enregistrement et exceptions sont reprises fidèlement, et l’absence de disposition sur la grève dans le contexte fourni justifie l’abstention sur ce point."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q373",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de non-respect des obligations applicables à l’offre de service de coffre-fort numérique, le fournisseur est **passible des sanctions prévues aux articles L. 132-2 et L. 132-3 du Code de la consommation**, dès lors qu’il se prévaut d’un service défini aux 1° à 5° de l’article L. 103 du Code des postes et des communications électroniques — **Article L122-22 du Code de la consommation [Source 1]**.\n\nLe contexte fourni ne reproduit toutefois pas le contenu des articles L. 132-2 et L. 132-3. Il ne permet donc pas de préciser :\n\n- la nature exacte des sanctions encourues ;\n- les éventuelles interdictions professionnelles ou autres mesures complémentaires ;\n- les conséquences particulières d’une condamnation pénale ou d’une interdiction prononcée à l’encontre d’un condamné.\n\nCes éléments nécessiteraient le texte des dispositions concernées.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L122-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.92868599947542,
+      "vectorSearchMs": 659.0988500006497,
+      "jinaRerankingMs": 577.8099920004606,
+      "mappingMs": 0.028577999211847782,
+      "totalMs": 1440.890904999338,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009978000074625015,
+      "contextBuilderMs": 0.014620000496506691,
+      "generationMs": 2450.1491539999843,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3891.0721330000088
+    },
+    "judge": {
+      "questionId": "q373",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement l’article L. 122-22 du code de la consommation et indique avec prudence que le contenu précis des sanctions des articles L. 132-2 et L. 132-3 n’est pas fourni. En revanche, elle ne traite pas réellement le volet pénal demandé relatif aux interdictions et mesures pouvant viser un condamné, notamment l’interdiction de rapprochement et les mesures de contrôle évoquées par la référence. Toutes les affirmations formulées sont néanmoins étayées par le contexte disponible ou constatent correctement ses limites."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 122-22 du code de la consommation, qui fonde l’affirmation selon laquelle le fournisseur est passible des sanctions prévues aux articles L. 132-2 et L. 132-3. Elle ne contient pas ces derniers articles ni de dispositions pénales sur les interdictions applicables à un condamné ; elle permet donc aussi de soutenir le constat prudent de la réponse selon lequel le contexte ne permet pas d’en préciser la nature ou les conséquences."
+    }
+  },
+  "routing": {
+    "answer": "En cas de non-respect des obligations applicables à l’offre de coffre-fort numérique, le fournisseur est passible des sanctions prévues aux **articles L. 132-2 et L. 132-3 du Code de la consommation** [Source 1].\n\nToutefois, l’extrait fourni ne précise ni le contenu de ces sanctions, ni les éventuelles interdictions pouvant être prononcées à l’encontre d’une personne condamnée dans un contexte pénal. Il ne permet donc pas de déterminer si ces interdictions s’appliquent au fournisseur, à ses dirigeants ou à une personne condamnée.񎟀",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L122-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2728.4456730000675,
+      "routingCalls": 1,
+      "embeddingMs": 172.35509799979627,
+      "vectorSearchMs": 108.72232900001109,
+      "jinaRerankingMs": 579.8260810002685,
+      "mappingMs": 0.02864500042051077,
+      "totalMs": 3589.4015519991517,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009496999904513359,
+      "contextBuilderMs": 0.010900999419391155,
+      "generationMs": 1758.3904579998925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5347.821106999181
+    },
+    "judge": {
+      "questionId": "q373",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement que le fournisseur ne respectant ses obligations est passible des sanctions des articles L. 132-2 et L. 132-3 du code de la consommation. Elle ne développe toutefois pas le volet pénal évoqué dans la référence, notamment l’interdiction de rapprochement et ses mesures de contrôle, mais précise à juste titre que ce volet n’est pas présent dans le contexte fourni. Toutes les affirmations importantes sont directement appuyées par le seul extrait disponible."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour établir que le fournisseur de coffre-fort numérique qui manque à ses obligations encourt les sanctions visées aux articles L. 132-2 et L. 132-3 du code de la consommation. Elle ne reproduit toutefois ni le contenu de ces sanctions ni aucune disposition relative aux interdictions pénales visant un condamné : des sources importantes manquent donc pour répondre entièrement à la question. En revanche, elle couvre les affirmations effectivement formulées par la réponse générée, y compris le constat que l’extrait ne détaille pas les sanctions ni les interdictions pénales."
+    }
+  },
+  "failureStage": "generation"
+}

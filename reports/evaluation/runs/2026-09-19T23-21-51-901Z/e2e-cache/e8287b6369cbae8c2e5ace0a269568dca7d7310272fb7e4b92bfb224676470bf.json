@@ -1,0 +1,119 @@
+{
+  "questionId": "q020",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 321-1 du Code pénal distingue deux formes de recel :\n\n1. **Le recel matériel** : dissimuler, détenir ou transmettre une chose, ou servir d’intermédiaire pour sa transmission, **en sachant qu’elle provient d’un crime ou d’un délit**.\n\n2. **Le recel de profit** : bénéficier, **en connaissance de cause et par tout moyen**, du produit d’un crime ou d’un délit.\n\nDans les deux cas, la connaissance de l’origine criminelle ou délictuelle de la chose ou du produit est exigée. Le recel est puni de **cinq ans d’emprisonnement et de 375 000 euros d’amende**. [Article 321-1 du Code pénal, Source 2]\n\nL’amende peut toutefois être portée jusqu’à la moitié de la valeur des biens recelés. [Article 321-3 du Code pénal, Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.55545999994501,
+      "vectorSearchMs": 673.0450239999918,
+      "jinaRerankingMs": 527.2016939999885,
+      "mappingMs": 0.021354999975301325,
+      "totalMs": 1426.9452949999832,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00968799996189773,
+      "contextBuilderMs": 0.048072999983560294,
+      "generationMs": 2462.8771159999887,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3889.936783000012
+    },
+    "judge": {
+      "questionId": "q020",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les deux modalités de recel prévues par l’article 321-1 : le recel portant sur une chose dont l’auteur sait qu’elle provient d’un crime ou délit, et le bénéfice, en connaissance de cause, du produit d’un crime ou délit. Elle indique exactement les peines principales de cinq ans d’emprisonnement et 375 000 euros d’amende. La précision additionnelle sur le relèvement possible de l’amende est exacte et explicitement soutenue par l’article 321-3 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 321-1 et couvre les deux modalités de recel, l’exigence de connaissance de l’origine criminelle ou délictuelle, ainsi que les peines principales de cinq ans d’emprisonnement et 375 000 euros d’amende. La source 3 soutient précisément l’affirmation additionnelle sur le relèvement de l’amende jusqu’à la moitié de la valeur des biens recelés. Les autres sources ne sont pas nécessaires à ces affirmations."
+    }
+  },
+  "routing": {
+    "answer": "L’article 321-1 du Code pénal distingue deux formes de recel :\n\n- **Le recel matériel** : dissimuler, détenir ou transmettre une chose, ou servir d’intermédiaire pour sa transmission, **en sachant qu’elle provient d’un crime ou d’un délit** ;\n- **Le recel par profit** : bénéficier, **en connaissance de cause**, par quelque moyen que ce soit, du produit d’un crime ou d’un délit.\n\nDans les deux cas, la connaissance de l’origine criminelle ou délictuelle de la chose ou du produit est exigée. Le recel est puni de **cinq ans d’emprisonnement et de 375 000 euros d’amende** (Article 321-1 du Code pénal [Source 2]).  \n\nL’amende peut toutefois être portée jusqu’à **la moitié de la valeur des biens recelés** (Article 321-3 du Code pénal [Source 4]).",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-38"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1028.139698999992,
+      "routingCalls": 1,
+      "embeddingMs": 168.15563200000906,
+      "vectorSearchMs": 32.94371600000886,
+      "jinaRerankingMs": 547.7001809999929,
+      "mappingMs": 0.033976999984588474,
+      "totalMs": 1777.0076620000182,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015124999976251274,
+      "contextBuilderMs": 0.024701999966055155,
+      "generationMs": 3245.4778209999786,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5022.537337000016
+    },
+    "judge": {
+      "questionId": "q020",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les deux modalités du recel prévues à l’article 321-1, en soulignant l’exigence de connaissance de l’origine criminelle ou délictuelle, et indique les peines principales exactes. La précision sur la majoration de l’amende au titre de l’article 321-3 est également exacte et explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 321-1 et couvre les deux modalités du recel, l’exigence de connaissance de l’origine criminelle ou délictuelle, ainsi que les peines principales. La source 4 couvre explicitement la précision additionnelle sur le relèvement possible de l’amende jusqu’à la moitié de la valeur des biens recelés. Les sources 1, 3 et 5 ne sont pas nécessaires à la réponse, mais ne diminuent pas la pertinence ni la couverture des sources effectivement mobilisées."
+    }
+  },
+  "failureStage": "none"
+}

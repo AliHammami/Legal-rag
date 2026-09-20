@@ -1,0 +1,95 @@
+{
+  "questionId": "q366",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’opposition au mariage, l’officier d’état civil ne peut célébrer le mariage avant la remise de la mainlevée. S’il célèbre néanmoins le mariage, il encourt :\n\n- **3 000 euros d’amende** ;\n- **des dommages-intérêts**.  \n\nCes sanctions sont prévues par l’**article 68 du Code civil** [Source 1].\n\nEn présence d’un **délit connexe puni d’emprisonnement** et impliquant un permis de conduire, la juridiction peut, à la place de l’emprisonnement, prononcer notamment les peines privatives ou restrictives de liberté suivantes, prévues par l’**article 131-6 du Code pénal** [Source 2] :\n\n- la **suspension du permis de conduire** pendant cinq ans au plus ;\n- l’**interdiction de conduire certains véhicules** pendant cinq ans au plus ;\n- l’**annulation du permis**, avec interdiction d’en solliciter un nouveau pendant cinq ans au plus ;\n- la **confiscation d’un ou plusieurs véhicules** appartenant au condamné ;\n- l’**immobilisation d’un ou plusieurs véhicules** pendant un an au plus ;\n- l’interdiction, pendant cinq ans au plus, de conduire un véhicule dépourvu d’un dispositif homologué d’anti-démarrage par éthylotest électronique [Source 2].\n\nLe contexte fourni ne précise toutefois pas quel serait le délit connexe ni si les conditions concrètes de prononcé de ces peines sont réunies.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "68"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 252.34527700021863,
+      "vectorSearchMs": 634.1006700005382,
+      "jinaRerankingMs": 592.1035860003904,
+      "mappingMs": 0.037692999467253685,
+      "totalMs": 1478.6313430005684,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00991000048816204,
+      "contextBuilderMs": 0.01853800006210804,
+      "generationMs": 3263.7737010000274,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4742.44426099956
+    },
+    "judge": {
+      "questionId": "q366",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement l’amende de 3 000 euros et les dommages-intérêts prévus par l’article 68 du Code civil. Elle restitue correctement les principales peines de l’article 131-6 relatives au permis et aux véhicules, avec leurs durées maximales pertinentes. Elle n’évoque toutefois pas les autres peines de la liste, notamment l’interdiction de détenir ou porter une arme, mentionnée dans la référence ; l’omission reste mineure au regard de la formulation centrée sur un délit impliquant le permis. Toutes les affirmations importantes sont directement appuyées par le contexte, et la réponse répond bien à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et établit intégralement l’interdiction de célébrer avant mainlevée ainsi que l’amende de 3 000 euros et les dommages-intérêts. La source 2 est directement pertinente pour les peines alternatives à l’emprisonnement liées au permis et aux véhicules : suspension, interdiction de conduire, annulation, confiscation, immobilisation et dispositif anti-démarrage, avec les durées indiquées. Les précisions finales sur l’absence d’identification du délit connexe et des conditions concrètes ne contredisent pas les sources et constituent une réserve procédurale compatible avec leur portée."
+    }
+  },
+  "routing": {
+    "answer": "En cas d’opposition au mariage, l’officier d’état civil ne peut célébrer le mariage avant la remise de la mainlevée. S’il le célèbre malgré tout, il encourt :\n\n- une amende de **3 000 euros** ;\n- ainsi que le paiement de **dommages-intérêts**.  \n\nC’est ce que prévoit l’**article 68 du Code civil** [Source 1]. La source fournie ne mentionne pas de peine d’emprisonnement.\n\nEn cas de **délit connexe puni d’une peine d’emprisonnement**, la juridiction peut, à la place de l’emprisonnement, prononcer notamment les peines privatives ou restrictives de liberté suivantes, lorsqu’elles sont applicables :\n\n- la **suspension du permis de conduire** pour cinq ans au plus ;\n- l’**interdiction de conduire certains véhicules** pour cinq ans au plus ;\n- l’**annulation du permis de conduire**, avec interdiction d’en solliciter un nouveau pendant cinq ans au plus ;\n- la **confiscation d’un ou plusieurs véhicules** appartenant au condamné ;\n- l’**immobilisation d’un ou plusieurs véhicules** pendant un an au plus ;\n- l’interdiction de conduire un véhicule non équipé d’un **dispositif homologué d’anti-démarrage par éthylotest électronique**, pendant cinq ans au plus.\n\nCes possibilités résultent de l’**article 131-6 du Code pénal** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "68"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5224.314513999969,
+      "routingCalls": 1,
+      "embeddingMs": 222.63315400015563,
+      "vectorSearchMs": 122.28167400043458,
+      "jinaRerankingMs": 542.2898260001093,
+      "mappingMs": 0.026252000592648983,
+      "totalMs": 6111.647441999987,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010809999890625477,
+      "contextBuilderMs": 0.016044000163674355,
+      "generationMs": 3323.416047000326,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9435.098207999952
+    },
+    "judge": {
+      "questionId": "q366",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement l’amende de 3 000 euros et les dommages-intérêts prévus par l’article 68 du Code civil. Elle restitue aussi correctement les principales peines de l’article 131-6 pertinentes pour un délit impliquant la conduite : suspension, interdiction de conduire, annulation, confiscation et immobilisation de véhicule, ainsi que l’éthylotest antidémarrage, avec les durées applicables. Elle omet toutefois d’autres peines listées par l’article 131-6, notamment celles relatives aux armes (et au permis de chasser), ce qui justifie une légère réserve de complétude. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la conséquence de la célébration malgré opposition (mainlevée préalable, amende de 3 000 euros et dommages-intérêts). La source 2 répond directement aux peines substitutives à l’emprisonnement applicables à un délit, notamment celles liées au permis et aux véhicules. Toutes les affirmations substantielles de la réponse générée, y compris les durées et conditions générales indiquées, sont étayées par ces extraits."
+    }
+  },
+  "failureStage": "none"
+}

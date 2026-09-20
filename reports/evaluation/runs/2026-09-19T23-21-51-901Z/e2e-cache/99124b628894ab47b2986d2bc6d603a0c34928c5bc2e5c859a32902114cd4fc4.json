@@ -1,0 +1,111 @@
+{
+  "questionId": "q115",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 1598 du Code civil**, deux conditions doivent être réunies :\n\n1. **Le bien doit être dans le commerce juridique**, c’est-à-dire susceptible de faire l’objet d’une vente ;\n2. **Aucune loi particulière ne doit interdire son aliénation**. [Source 3]\n\nLe seul extrait fourni ne permet pas de préciser quels biens seraient exclus du commerce ou quelles interdictions particulières pourraient s’appliquer. L’exigence de licéité de l’article 1304-1 concerne, quant à elle, les conditions d’une obligation et ne complète pas directement les conditions de vente posées par l’article 1598. [Source 4]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R641-32"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R642-25"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1598"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 516.3876380000729,
+      "vectorSearchMs": 560.6644600001164,
+      "jinaRerankingMs": 503.7543590001296,
+      "mappingMs": 0.023815999971702695,
+      "totalMs": 1580.8527329999488,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009894999908283353,
+      "contextBuilderMs": 0.02775100013241172,
+      "generationMs": 3433.2157779999543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5014.11368900002
+    },
+    "judge": {
+      "questionId": "q115",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les deux conditions de l’article 1598 : le bien doit être dans le commerce et son aliénation ne doit pas être prohibée par une loi particulière. Ces affirmations sont directement soutenues par la source 3. La précision sur l’article 1304-1 est également fondée sur le contexte et ne contredit pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l’article 1598 du Code civil et énonce précisément les deux conditions présentées : bien dans le commerce et absence de prohibition légale particulière de son aliénation. La source 4 permet de situer l’exigence de licéité de l’article 1304-1, sans qu’elle soit nécessaire à la réponse principale. Les constats de limite sur les catégories de biens exclues ou les prohibitions particulières sont cohérents avec le seul contenu fourni."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1598 du Code civil, un bien peut être vendu si :\n\n- il est **dans le commerce** ;\n- aucune **loi particulière n’interdit son aliénation**.  \n  **Article 1598 du Code civil [Source 1]**\n\nEn outre, la vente doit respecter les conditions générales de validité du contrat : **consentement des parties, capacité de contracter et contenu licite et certain**, conformément à l’article 1128 du Code civil [Source 3]. Si la vente comporte une condition, celle-ci doit également être licite, à défaut de quoi l’obligation est nulle (**article 1304-1 du Code civil [Source 2]**).",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1598"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1128"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1614"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.436634000158,
+      "routingCalls": 1,
+      "embeddingMs": 255.73936900007538,
+      "vectorSearchMs": 122.03353300015442,
+      "jinaRerankingMs": 490.59895700006746,
+      "mappingMs": 0.06517299986444414,
+      "totalMs": 2198.8987989998423,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01144100003875792,
+      "contextBuilderMs": 0.019133999943733215,
+      "generationMs": 2617.2108370000497,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4816.147988999961
+    },
+    "judge": {
+      "questionId": "q115",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les deux conditions prévues par l’article 1598 : le bien doit être dans le commerce et son aliénation ne doit pas être prohibée par une loi particulière. Les précisions additionnelles sur la validité générale des contrats et les conditions sont exactes et explicitement soutenues par les sources 2 et 3, bien qu’elles ne soient pas indispensables à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement aux conditions propres à l'article 1598 (bien dans le commerce et absence de prohibition légale d'aliéner). Les sources 3 et 2 sont pertinentes pour les précisions additionnelles de la réponse sur la validité générale du contrat et la licéité d'une condition. Toutes les affirmations juridiques importantes de la réponse sont explicitement couvertes par les sources citées."
+    }
+  },
+  "failureStage": "none"
+}

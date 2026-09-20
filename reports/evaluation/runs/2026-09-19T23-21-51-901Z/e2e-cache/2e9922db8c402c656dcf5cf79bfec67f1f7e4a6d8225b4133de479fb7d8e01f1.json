@@ -1,0 +1,87 @@
+{
+  "questionId": "q116",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1601-1 du Code civil, la vente d’immeubles à construire est le contrat par lequel le vendeur s’engage à édifier un immeuble dans le délai prévu au contrat.  \n\nElle peut prendre deux formes :  \n- la vente à terme ;\n- la vente en l’état futur d’achèvement (VEFA). [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1601-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 276.8874609998893,
+      "vectorSearchMs": 662.3575540001038,
+      "jinaRerankingMs": 534.9559359999839,
+      "mappingMs": 0.023090000031515956,
+      "totalMs": 1474.2716560000554,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010603999951854348,
+      "contextBuilderMs": 0.010132999857887626,
+      "generationMs": 1197.3183379999828,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2671.6179509998765
+    },
+    "judge": {
+      "questionId": "q116",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition légale (obligation du vendeur d’édifier l’immeuble dans le délai contractuellement déterminé) et les deux modalités prévues : vente à terme et vente en l’état futur d’achèvement. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1601-1 du Code civil, qui définit la vente d’immeubles à construire et énonce expressément ses deux modalités : à terme ou en l’état futur d’achèvement. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1601-1 du Code civil, la vente d’immeubles à construire est le contrat par lequel le vendeur s’engage à édifier un immeuble dans le délai fixé par le contrat. Elle peut être conclue :\n\n- **à terme** ;\n- **en l’état futur d’achèvement**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1601-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1067.2652499999385,
+      "routingCalls": 1,
+      "embeddingMs": 258.8117099998053,
+      "vectorSearchMs": 56.67096200003289,
+      "jinaRerankingMs": 500.853906000033,
+      "mappingMs": 0.03250800003297627,
+      "totalMs": 1883.6610970001202,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013567999936640263,
+      "contextBuilderMs": 0.01170899998396635,
+      "generationMs": 1291.6204729999881,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3175.3185590000357
+    },
+    "judge": {
+      "questionId": "q116",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition légale (obligation du vendeur d’édifier l’immeuble dans le délai contractuel) et les deux modalités prévues : vente à terme et vente en l’état futur d’achèvement. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1601-1 du Code civil et répond exactement aux deux éléments demandés : la définition de la vente d’immeubles à construire et ses deux modalités possibles. Toutes les affirmations importantes de la réponse générée sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

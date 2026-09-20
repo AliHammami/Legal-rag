@@ -1,0 +1,87 @@
+{
+  "questionId": "q121",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’Agence nationale des services à la personne peut recruter des **contractuels de droit privé** :\n\n- pour une **durée déterminée** ;\n- ou pour une **mission déterminée**.\n\nCes modalités sont prévues par l’**article L7234-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7234-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 250.7380290001165,
+      "vectorSearchMs": 609.5354230001103,
+      "jinaRerankingMs": 562.3634120000061,
+      "mappingMs": 0.037918000016361475,
+      "totalMs": 1422.7041259999387,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013873000163584948,
+      "contextBuilderMs": 0.023862000089138746,
+      "generationMs": 1238.066329000052,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2660.828930000076
+    },
+    "judge": {
+      "questionId": "q121",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux modalités prévues : recrutement de contractuels de droit privé pour une durée déterminée ou pour une mission déterminée. L’affirmation et la référence à l’article L7234-1 sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L7234-1 vise expressément l’Agence nationale des services à la personne et énonce les deux modalités de recrutement. Elle couvre intégralement les affirmations importantes de la réponse, y compris la nature privée des contrats et les options de durée ou de mission déterminée."
+    }
+  },
+  "routing": {
+    "answer": "L’Agence nationale des services à la personne peut recruter :\n\n- des contractuels de droit privé ;\n- soit pour une durée déterminée ;\n- soit pour une mission déterminée.\n\nCes modalités sont prévues par l’article L7234-1 du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7234-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1272.1012679999694,
+      "routingCalls": 1,
+      "embeddingMs": 219.68701799982227,
+      "vectorSearchMs": 222.2058820000384,
+      "jinaRerankingMs": 535.9559649999719,
+      "mappingMs": 0.03679900011047721,
+      "totalMs": 2250.0135000001173,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010311000049114227,
+      "contextBuilderMs": 0.061160000041127205,
+      "generationMs": 968.1575179998763,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3218.2512590000406
+    },
+    "judge": {
+      "questionId": "q121",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux modalités de recrutement prévues : des contractuels de droit privé, pour une durée déterminée ou une mission déterminée. L'affirmation relative à l'article L7234-1 est également directement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle traite explicitement de l’Agence nationale des services à la personne et énonce ses modalités de recrutement. Elle couvre l’ensemble des affirmations importantes de la réponse, à savoir le recrutement de contractuels de droit privé, pour une durée déterminée ou pour une mission déterminée, ainsi que la référence à l’article L7234-1."
+    }
+  },
+  "failureStage": "none"
+}

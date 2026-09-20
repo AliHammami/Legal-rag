@@ -1,0 +1,99 @@
+{
+  "questionId": "q419",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Contrat d’appui au projet d’entreprise\n\nSelon l’**article L127-2 du Code de commerce**, le contrat :\n\n- doit être **conclu par écrit**, sous peine de **nullité** ;\n- est conclu pour une durée maximale de **douze mois** ;\n- peut être **renouvelé deux fois** ;\n- doit préciser les modalités du programme d’appui, ainsi que les engagements respectifs des parties et les conditions dans lesquelles le bénéficiaire peut s’engager envers des tiers en lien avec son activité projetée. [Source 2]\n\n### Investissement réalisé sans autorisation préalable\n\nEn cas de réalisation d’un investissement sans autorisation préalable, le ministre chargé de l’économie peut infliger à l’investisseur une **sanction pécuniaire**, après l’avoir invité à présenter ses observations dans un délai minimal de **quinze jours**.\n\nLe montant maximal de cette sanction correspond au montant le plus élevé entre :\n\n- le **double du montant de l’investissement irrégulier** ;\n- **10 % du chiffre d’affaires annuel hors taxes** de l’entreprise concernée ;\n- **5 millions d’euros** pour une personne morale ;\n- **1 million d’euros** pour une personne physique.\n\nLa sanction doit être proportionnée à la gravité des manquements et est recouvrée comme une créance de l’État étrangère à l’impôt et au domaine. **Article L151-3-2 du Code monétaire et financier** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L151-3-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L127-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 171.4951769998297,
+      "vectorSearchMs": 557.8512300001457,
+      "jinaRerankingMs": 556.2957330001518,
+      "mappingMs": 0.01822800002992153,
+      "totalMs": 1285.6948750000447,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010317999869585037,
+      "contextBuilderMs": 0.016297999769449234,
+      "generationMs": 3526.082914000377,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4811.814589000307
+    },
+    "judge": {
+      "questionId": "q419",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les exigences de forme, de durée, de renouvellement et de contenu du contrat d’appui prévues par l’article L127-2. Elle expose également fidèlement la procédure et les plafonds alternatifs de la sanction pécuniaire prévue à l’article L151-3-2, y compris la proportionnalité à la gravité des manquements. Toutes les affirmations importantes sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article L127-2 couvre la forme, la durée, les renouvellements et le contenu du contrat d’appui ; l’article L151-3-2 couvre la sanction applicable à un investissement sans autorisation préalable, sa procédure, ses plafonds, sa proportionnalité et son recouvrement. Elles étayent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "### Contrat d’appui au projet d’entreprise\n\nLe contrat doit :\n\n- être conclu **par écrit**, à peine de nullité ;\n- préciser les modalités du programme d’appui et les engagements respectifs des parties, notamment les conditions dans lesquelles le bénéficiaire peut prendre des engagements envers des tiers en lien avec l’activité projetée.\n\nSa durée ne peut pas excéder **douze mois**. Il est **renouvelable deux fois**. [Source 2 — Article L127-2 du Code de commerce]\n\n### Investissement réalisé sans autorisation préalable\n\nEn cas d’investissement réalisé sans autorisation préalable, le ministre chargé de l’économie peut infliger à l’investisseur une **sanction pécuniaire**, après l’avoir mis en mesure de présenter ses observations dans un délai minimal de **quinze jours**.\n\nLe montant maximal de cette sanction correspond au montant le plus élevé entre :\n\n- le **double du montant de l’investissement irrégulier** ;\n- **10 % du chiffre d’affaires annuel hors taxes** de l’entreprise concernée ;\n- **5 millions d’euros** pour une personne morale ;\n- **1 million d’euros** pour une personne physique.\n\nLa sanction doit être proportionnée à la gravité des manquements et est recouvrée comme une créance de l’État étrangère à l’impôt et au domaine. [Source 1 — Article L151-3-2 du Code monétaire et financier]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L151-3-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L127-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L151-3-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2660.58478799928,
+      "routingCalls": 1,
+      "embeddingMs": 194.2451459998265,
+      "vectorSearchMs": 380.45587099995464,
+      "jinaRerankingMs": 581.3380970004946,
+      "mappingMs": 0.01883499976247549,
+      "totalMs": 3816.665877999738,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010618999600410461,
+      "contextBuilderMs": 0.019088000059127808,
+      "generationMs": 2841.176393999718,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6657.883934999816
+    },
+    "judge": {
+      "questionId": "q419",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement toutes les conditions de forme, de contenu et de durée du contrat prévues à l’article L127-2, ainsi que le régime de la sanction pécuniaire applicable à l’investissement sans autorisation préalable. Les plafonds alternatifs, la proportionnalité à la gravité, le délai d’observations et le recouvrement sont fidèles au contexte. Elle répond directement à la question et toutes ses affirmations importantes sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 vise directement les conditions de forme, de contenu et de durée du contrat d’appui au projet d’entreprise. La source 1 vise directement la sanction pécuniaire applicable en cas d’investissement réalisé sans autorisation préalable, y compris la procédure contradictoire, les plafonds, la proportionnalité et le recouvrement. Toutes les affirmations importantes de la réponse générée sont étayées par ces extraits."
+    }
+  },
+  "failureStage": "none"
+}

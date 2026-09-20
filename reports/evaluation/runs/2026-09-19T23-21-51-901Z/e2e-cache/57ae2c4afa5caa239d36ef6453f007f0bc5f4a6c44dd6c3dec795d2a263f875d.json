@@ -1,0 +1,111 @@
+{
+  "questionId": "q400",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne fournit pas le contenu de l’**article L1142-1 du Code du travail**. Il n’est donc pas possible d’indiquer, sur cette base, les restrictions spécifiques relatives aux critères de sélection à l’emploi — notamment celles qui pourraient résulter de cet article.\n\nEn revanche, concernant les **profils des personnels impliqués dans l’octroi ou le conseil en matière de crédit**, l’article D314-22 du Code de la consommation vise :\n\n- les personnes physiques travaillant pour le prêteur et exerçant directement des activités d’élaboration, de proposition, d’octroi ou de conseil concernant les contrats de crédit ;\n- les personnes physiques qui dirigent ou encadrent directement ces personnels ;\n- les personnels des intermédiaires de crédit, selon la définition renvoyée à l’article R. 519-15 du Code monétaire et financier.  \n  **Article D314-22 du Code de la consommation [Source 1]**\n\nCes personnels doivent posséder les compétences professionnelles requises, résultant notamment d’un diplôme approprié ou d’une formation professionnelle adaptée aux opérations de crédit. **Article D314-23 du Code de la consommation [Source 2]**\n\nUne exception concerne les salariés en contrat de formation en alternance : pendant la durée de ce contrat, ils ne sont pas soumis à l’obligation de compétence professionnelle, à condition de participer aux activités concernées uniquement en présence et sous la direction d’un salarié disposant de la formation ou de l’expérience requise. **Article D314-22 du Code de la consommation [Source 1]**\n\nAinsi, les sources permettent d’identifier des exigences de **fonction exercée, d’encadrement et de compétence professionnelle**, mais elles ne permettent pas de préciser les restrictions liées aux critères de sélection à l’emploi résultant de l’article L1142-1 du Code du travail.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-24"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 340.62326600030065,
+      "vectorSearchMs": 688.3821560004726,
+      "jinaRerankingMs": 568.8822710001841,
+      "mappingMs": 0.023151999339461327,
+      "totalMs": 1597.9375249994919,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.053460000082850456,
+      "contextBuilderMs": 0.03567500039935112,
+      "generationMs": 4156.567637000233,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5754.601755000651
+    },
+    "judge": {
+      "questionId": "q400",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement, à partir du contexte, les personnels visés par l'article D314-22, l'exigence de compétence et l'exception pour les salariés en alternance. Elle omet toutefois l'élément central attendu de la combinaison avec l'article L1142-1 : l'interdiction des discriminations ou mentions fondées sur le sexe, la situation de famille ou la grossesse dans le recrutement et les conditions de travail. Cette omission rend la réponse seulement partiellement correcte et incomplète vis-à-vis de la question. Les affirmations effectivement formulées sont bien étayées par les sources fournies. Cependant, alors qu'une réponse complète était attendue, elle refuse de traiter une partie essentielle de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les exigences de compétence et les catégories de personnels intervenant dans les contrats de crédit (D314-22, D314-23, L314-24). En revanche, aucune ne fournit le contenu de l'article L1142-1 du code du travail, pourtant indispensable à la partie de la question portant sur les critères de sélection à l'emploi et les discriminations. Elles sont donc seulement partiellement suffisantes pour la question globale. Les affirmations effectivement formulées dans la réponse sont toutefois couvertes : les personnels visés et l'exception d'alternance le sont par D314-22, les modalités de compétence par D314-23, et le constat que le contexte ne permet pas de détailler L1142-1 est conforme à l'absence de cette source dans le corpus."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas le texte de l’article **L. 1142-1 du Code du travail**. Il ne permet donc pas d’identifier précisément les restrictions qu’il impose en matière de critères de sélection à l’emploi, notamment au regard de l’égalité professionnelle.\n\nEn revanche, l’article **D. 314-22 du Code de la consommation** définit les personnels pouvant être concernés par les exigences de compétence professionnelle :\n\n- les personnes physiques travaillant pour le prêteur et exerçant directement des activités d’élaboration, de proposition, d’octroi ou de conseil relatives aux contrats de crédit ;\n- les personnes qui dirigent ou encadrent directement ces personnels ;\n- pour les intermédiaires de crédit, les personnels définis par l’article R. 519-15 du Code monétaire et financier ;\n- les salariés en contrat de formation en alternance sont temporairement exclus de cette obligation, à condition de n’intervenir que sous la présence et la direction d’un salarié compétent ou expérimenté. [Source 1]\n\nAinsi, les critères professionnels peuvent légalement porter sur les fonctions exercées, le niveau de responsabilité et la compétence requise, puisque les prêteurs doivent veiller à ce que ces personnels disposent de connaissances et compétences appropriées et les maintiennent à jour. **Article L. 314-24 du Code de la consommation** [Source 4]\n\nToutefois, les sources fournies ne permettent pas de préciser les restrictions résultant de l’article **L. 1142-1 du Code du travail** ni d’établir les éventuelles interdictions concernant les critères de sélection ou le profil des candidats. Il faudrait disposer du texte de cet article pour répondre complètement à la question.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-24"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1329.6120660007,
+      "routingCalls": 1,
+      "embeddingMs": 225.28077999968082,
+      "vectorSearchMs": 390.8505110004917,
+      "jinaRerankingMs": 593.5954149998724,
+      "mappingMs": 0.021731999702751637,
+      "totalMs": 2539.384598999284,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012209000065922737,
+      "contextBuilderMs": 0.022022999823093414,
+      "generationMs": 3910.3541620001197,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6449.787543000653
+    },
+    "judge": {
+      "questionId": "q400",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement, à partir du contexte, les catégories de personnels visées par D. 314-22 et l’exigence de compétence issue de L. 314-24. Elle ne répond toutefois pas au point essentiel de la question portant sur les restrictions de sélection à l’emploi prévues par L. 1142-1 du code du travail : l’interdiction des discriminations liées notamment au sexe, à la situation de famille ou à la grossesse. Cette omission rend la réponse seulement partielle au regard de la référence. En revanche, ses affirmations factuelles importantes sont étayées par les sources fournies, et elle constate correctement l’absence du texte de L. 1142-1 dans le contexte. L’abstention est incorrecte car une réponse complète était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour identifier les personnels soumis aux exigences de compétence dans le secteur du crédit (D. 314-22) et pour étayer l’exigence de connaissances et compétences appropriées et actualisées (L. 314-24). Elles ne fournissent toutefois pas le texte de l’article L. 1142-1 du code du travail, pourtant essentiel à la question sur les restrictions des critères de sélection à l’emploi. Elles sont donc seulement partiellement suffisantes pour répondre à la question globale. En revanche, les affirmations effectivement formulées dans la réponse générée sur les catégories de personnels, l’alternance sous supervision et l’exigence de compétence sont couvertes par les sources 1 et 4, et le constat de l’absence de L. 1142-1 dans le contexte est conforme aux sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

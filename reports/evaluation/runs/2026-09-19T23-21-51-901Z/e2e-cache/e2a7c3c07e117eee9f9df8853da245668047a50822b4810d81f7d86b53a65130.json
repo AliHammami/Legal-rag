@@ -1,0 +1,87 @@
+{
+  "questionId": "q338",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un professionnel peut proposer au consommateur :\n\n- **son propre dispositif de médiation de la consommation** ;\n- **le recours à un autre médiateur de la consommation**, à condition que celui-ci respecte les exigences légales applicables ;\n- lorsqu’il existe un médiateur compétent pour l’ensemble du secteur d’activité concerné, **le recours à ce médiateur doit toujours être possible**.\n\nCes dispositifs doivent garantir au consommateur un recours effectif et gratuit à la médiation [Source 1 — Article L612-1 du Code de la consommation].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 190.33867800049484,
+      "vectorSearchMs": 608.8569200001657,
+      "jinaRerankingMs": 734.7406040001661,
+      "mappingMs": 0.05753999948501587,
+      "totalMs": 1534.0218740003183,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01271399948745966,
+      "contextBuilderMs": 0.012105999514460564,
+      "generationMs": 1433.488241000101,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.542895999737
+    },
+    "judge": {
+      "questionId": "q338",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois options/obligations prévues par l’article L612-1 : dispositif propre, autre médiateur conforme aux exigences applicables, et accès toujours possible au médiateur sectoriel lorsqu’il existe. La précision sur la gratuité et le recours effectif est également explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L612-1 énonce expressément les dispositifs que le professionnel peut proposer (dispositif propre ou autre médiateur répondant aux exigences du titre) ainsi que l’obligation de permettre le recours au médiateur compétent pour l’ensemble du secteur lorsqu’il existe. Elle couvre également les affirmations sur le recours effectif et gratuit."
+    }
+  },
+  "routing": {
+    "answer": "Un professionnel peut proposer au consommateur :\n\n- **son propre dispositif de médiation de la consommation** ;\n- **le recours à un autre médiateur de la consommation**, à condition que celui-ci respecte les exigences légales applicables ;\n- lorsqu’il existe, **le médiateur compétent pour l’ensemble des entreprises de son secteur d’activité** : le professionnel doit toujours permettre au consommateur d’y recourir.\n\nLe recours du consommateur à la médiation est gratuit [Source 1 — Article L612-1 du Code de la consommation].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1027.9915709998459,
+      "routingCalls": 1,
+      "embeddingMs": 201.77709699980915,
+      "vectorSearchMs": 45.290053999982774,
+      "jinaRerankingMs": 1876.158408999443,
+      "mappingMs": 0.024184999987483025,
+      "totalMs": 3151.2814309997484,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009999999776482582,
+      "contextBuilderMs": 0.011157000437378883,
+      "generationMs": 1564.5267570000142,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4715.840877999552
+    },
+    "judge": {
+      "questionId": "q338",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois possibilités prévues par l’article L612-1 : dispositif propre, autre médiateur respectant les exigences applicables, et accès obligatoire au médiateur couvrant l’ensemble du secteur lorsqu’il existe. La précision sur la gratuité est également exacte et explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article L612-1 du Code de la consommation, est directement pertinente : elle énonce précisément les dispositifs que le professionnel peut proposer et l’obligation de permettre le recours au médiateur couvrant l’ensemble du secteur lorsqu’il existe. Elle couvre également l’affirmation additionnelle sur la gratuité du recours à la médiation."
+    }
+  },
+  "failureStage": "none"
+}

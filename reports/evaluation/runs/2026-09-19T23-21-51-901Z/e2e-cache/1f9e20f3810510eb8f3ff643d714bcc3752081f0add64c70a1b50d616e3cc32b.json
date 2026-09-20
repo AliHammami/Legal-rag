@@ -1,0 +1,87 @@
+{
+  "questionId": "q146",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les enseignements du centre de formation d’apprentis (CFA) peuvent être dispensés au sein d’un établissement d’enseignement, dans le cadre d’une **unité de formation par apprentissage**.\n\nCette unité est créée par une **convention conclue entre l’établissement d’enseignement et le CFA**. L’établissement d’enseignement assume ensuite la **responsabilité pédagogique** des formations dispensées par cette unité, même si les enseignements relèvent du dispositif de formation du CFA.\n\nAinsi, le dispositif repose sur :\n\n- une implantation de la formation dans l’établissement d’enseignement ;\n- une convention entre cet établissement et le CFA ;\n- la responsabilité pédagogique de l’établissement d’enseignement concernant les formations dispensées par l’unité.\n\n**Article L6233-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 259.40640900004655,
+      "vectorSearchMs": 611.1259169997647,
+      "jinaRerankingMs": 526.7849109997042,
+      "mappingMs": 0.037641000002622604,
+      "totalMs": 1397.3795010000467,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012835999950766563,
+      "contextBuilderMs": 0.00991100026294589,
+      "generationMs": 2456.608043000102,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3854.017096000258
+    },
+    "judge": {
+      "questionId": "q146",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les modalités prévues : enseignements du CFA dispensés dans un établissement d’enseignement au sein d’une unité de formation par apprentissage, créée par convention entre l’établissement et le CFA, avec responsabilité pédagogique de l’établissement. Toutes les affirmations importantes sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle traite expressément des enseignements d’un CFA dispensés dans un établissement d’enseignement via une unité de formation par apprentissage, de la convention constitutive et de la responsabilité pédagogique. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les enseignements du centre de formation d’apprentis (CFA) peuvent être dispensés au sein d’un établissement d’enseignement, dans le cadre d’une **unité de formation par apprentissage**.\n\nCette unité doit être **créée par une convention conclue entre l’établissement d’enseignement et le CFA**. L’établissement d’enseignement assume ensuite la **responsabilité pédagogique** des formations dispensées par cette unité : il est donc responsable de l’organisation et du suivi pédagogique des enseignements concernés.\n\nAinsi, le CFA demeure à l’origine des enseignements, mais leur mise en œuvre au sein de l’établissement repose sur une convention, tandis que la responsabilité pédagogique incombe à l’établissement d’accueil (**article L6233-1 du Code du travail** [Source 1]).",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2254.338196999859,
+      "routingCalls": 1,
+      "embeddingMs": 277.53555800020695,
+      "vectorSearchMs": 556.8349170000292,
+      "jinaRerankingMs": 556.4983749999665,
+      "mappingMs": 0.03918800037354231,
+      "totalMs": 3645.2690289998427,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012577999848872423,
+      "contextBuilderMs": 0.015103999990969896,
+      "generationMs": 2032.0449270000681,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5677.349760999903
+    },
+    "judge": {
+      "questionId": "q146",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les modalités prévues : les enseignements du CFA peuvent être dispensés dans un établissement d’enseignement au sein d’une unité de formation par apprentissage, créée par convention entre l’établissement et le CFA. Elle indique également correctement que l’établissement assume la responsabilité pédagogique. La précision relative à l’organisation et au suivi pédagogique est une explicitation cohérente de cette responsabilité et ne contredit pas le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle prévoit expressément la dispense des enseignements d’un CFA dans un établissement d’enseignement au sein d’une unité de formation par apprentissage, la création de cette unité par convention entre l’établissement et le CFA, ainsi que la responsabilité pédagogique de l’établissement. Elle couvre les affirmations essentielles de la réponse, y compris la référence à l’article L6233-1. La mention d’organisation et de suivi pédagogique constitue une explicitation de la responsabilité pédagogique sans ajouter d’affirmation essentielle non couverte."
+    }
+  },
+  "failureStage": "none"
+}

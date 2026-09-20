@@ -1,0 +1,95 @@
+{
+  "questionId": "q204",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L241-2 du Code de commerce, le délit consiste, pour des gérants, à émettre directement ou par personne interposée, pour le compte de la société, des valeurs mobilières quelconques, à l’exception des obligations émises dans les conditions prévues par l’article L223-11.\n\nLa sanction prévue est :\n\n- **six mois d’emprisonnement** ;\n- **9 000 euros d’amende**.\n\n[Article L241-2 du Code de commerce — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L241-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 269.4956950000487,
+      "vectorSearchMs": 621.2444130000658,
+      "jinaRerankingMs": 612.1614799997769,
+      "mappingMs": 0.05431099981069565,
+      "totalMs": 1502.9818259999156,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014923000242561102,
+      "contextBuilderMs": 0.032066000159829855,
+      "generationMs": 1568.5556540000252,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3071.5930199995637
+    },
+    "judge": {
+      "questionId": "q204",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le comportement incriminé, y compris l'exception relative aux obligations émises selon l'article L. 223-11, et indique les deux peines prévues : six mois d'emprisonnement et 9 000 euros d'amende. Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 241-2 visé par la question. Elle couvre intégralement les affirmations importantes de la réponse générée, soit le comportement incriminé (émission de valeurs mobilières par des gérants, directement ou par personne interposée, pour le compte de la société), l'exception relative aux obligations de l'article L. 223-11, ainsi que les peines de six mois d'emprisonnement et 9 000 euros d'amende."
+    }
+  },
+  "routing": {
+    "answer": "Le délit consiste, pour les gérants, à émettre directement ou par personne interposée, pour le compte de la société, des valeurs mobilières quelconques, à l’exception des obligations émises dans les conditions prévues par l’article L. 223-11 du Code de commerce.\n\nLa sanction prévue est un emprisonnement de six mois et une amende de 9 000 euros.\n\n**Fondement : article L. 241-2 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L241-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1739.7957239998505,
+      "routingCalls": 1,
+      "embeddingMs": 272.9581030001864,
+      "vectorSearchMs": 186.25962800020352,
+      "jinaRerankingMs": 544.9650559998117,
+      "mappingMs": 0.02565199974924326,
+      "totalMs": 2744.029021000024,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010816999711096287,
+      "contextBuilderMs": 0.015610999893397093,
+      "generationMs": 1570.7085530003533,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4314.772456999868
+    },
+    "judge": {
+      "questionId": "q204",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l'incrimination visée par l'article L. 241-2, y compris l'exception relative aux obligations émises conformément à l'article L. 223-11, ainsi que les deux peines prévues : six mois d'emprisonnement et 9 000 euros d'amende. Toutes ces affirmations sont explicitement étayées par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 241-2 et énonce exactement le comportement incriminé, l'exception relative aux obligations visées à l'article L. 223-11, ainsi que les peines de six mois d'emprisonnement et 9 000 euros d'amende. Elle couvre donc l'ensemble des affirmations importantes de la réponse. La source 2 n'est pas nécessaire à cette réponse."
+    }
+  },
+  "failureStage": "none"
+}

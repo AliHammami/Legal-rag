@@ -1,0 +1,87 @@
+{
+  "questionId": "q396",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 2332-2 du Code civil [Source 1]** :\n\n- les privilèges généraux s’exercent dans l’ordre prévu à l’**article 2331 du Code civil** ;\n- exception : le privilège du **Trésor public** suit le rang fixé par les lois qui lui sont propres ;\n- le privilège des **caisses de sécurité sociale** vient au même rang que celui des salariés ;\n- les créanciers privilégiés placés au même rang sont payés **par concurrence**, c’est-à-dire proportionnellement entre eux.\n\nLe contexte fourni ne contient toutefois aucune disposition du **Code du travail** relative à la preuve en matière de discrimination. Il ne permet donc pas de préciser comment cette preuve s’applique.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 236.60763199999928,
+      "vectorSearchMs": 684.667135999538,
+      "jinaRerankingMs": 567.103795000352,
+      "mappingMs": 0.02843800000846386,
+      "totalMs": 1488.4721389999613,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016547000035643578,
+      "contextBuilderMs": 0.021323000080883503,
+      "generationMs": 2195.062663999386,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3683.586865999736
+    },
+    "judge": {
+      "questionId": "q396",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et complètement la règle de rang des privilèges généraux prévue à l'article 2332-2 du Code civil. En revanche, elle ne répond pas à la seconde partie de la question relative au régime de preuve de la discrimination selon le Code du travail, alors que la réponse attendue devait exposer l'obligation pour le défendeur de justifier sa décision par des éléments objectifs étrangers à toute discrimination et le pouvoir d'instruction du juge. Son constat d'absence de source Code du travail est entièrement fondé sur le contexte fourni, qui ne contient effectivement que l'article 2332-2 du Code civil."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la première partie sur l’ordre d’exercice des privilèges généraux et permet aussi de constater qu’aucune disposition relative à la preuve de la discrimination au Code du travail n’est présente dans le contexte. Elle est toutefois insuffisante pour répondre directement à la seconde partie de la question, faute de source telle que l’article L1134-1 du Code du travail. Les affirmations effectivement formulées dans la réponse générée sont toutes couvertes par la source ou par l’absence manifeste de source correspondante dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "Selon **l’article 2332-2 du Code civil**, les privilèges généraux s’exercent selon l’ordre prévu à **l’article 2331 du Code civil** [Source 1].\n\nDeux exceptions sont prévues :\n\n- le privilège du **Trésor public** est classé selon les lois qui lui sont propres ;\n- le privilège des **caisses de sécurité sociale** vient au même rang que le privilège des salariés.\n\nLorsque plusieurs créanciers privilégiés se trouvent au même rang, ils sont payés **par concurrence**, c’est-à-dire proportionnellement entre eux [Source 1].\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code du travail** relative aux règles de preuve applicables en cas de discrimination. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.3967100000009,
+      "routingCalls": 1,
+      "embeddingMs": 185.0401130001992,
+      "vectorSearchMs": 376.3770709997043,
+      "jinaRerankingMs": 528.4236939996481,
+      "mappingMs": 0.033335999585688114,
+      "totalMs": 2012.29841999989,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01189700048416853,
+      "contextBuilderMs": 0.011950000189244747,
+      "generationMs": 1975.675125000067,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3988.005714999512
+    },
+    "judge": {
+      "questionId": "q396",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon complète la règle de rang des privilèges généraux prévue par l’article 2332-2 du Code civil, y compris les exceptions et le paiement par concurrence. Elle ne répond toutefois pas à la seconde partie relative au régime probatoire de la discrimination prévu par l’article L1134-1 du Code du travail, alors que cette règle est essentielle à la question et figure dans la référence. Son abstention sur ce point est bien justifiée par l’absence de contexte correspondant, et toutes ses affirmations positives sont entièrement fondées sur le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 2332-2 du Code civil et permet de fonder l’ensemble des affirmations relatives à l’ordre des privilèges généraux, aux exceptions et au paiement par concurrence. Elle ne fournit en revanche aucune règle du Code du travail sur la preuve de la discrimination, qui constitue une partie importante de la question. Toutefois, elle permet bien de constater que le contexte fourni est limité à cette disposition civile et ne contient pas la règle invoquée pour la seconde partie ; les affirmations effectivement formulées dans la réponse sont donc couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

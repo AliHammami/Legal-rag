@@ -1,0 +1,87 @@
+{
+  "questionId": "q015",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le délaissement d’un mineur de quinze ans est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.\n\nL’exception s’applique lorsque les circonstances du délaissement ont permis d’assurer **la santé et la sécurité du mineur**.\n\n**Article 227-1 du Code pénal [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.30487499997253,
+      "vectorSearchMs": 808.7879589999793,
+      "jinaRerankingMs": 564.2402180000208,
+      "mappingMs": 0.053647000051569194,
+      "totalMs": 1561.4265320000122,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01675699994666502,
+      "contextBuilderMs": 0.015220000001136214,
+      "generationMs": 1247.074151000008,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2808.544101000007
+    },
+    "judge": {
+      "questionId": "q015",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue (sept ans d’emprisonnement et 100 000 euros d’amende) ainsi que l’exception tenant aux circonstances ayant assuré la santé et la sécurité du mineur. Ces éléments sont explicitement soutenus par le contexte, et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 227-1 du Code pénal, directement applicable à la question. Elle énonce explicitement la peine de sept ans d’emprisonnement et 100 000 euros d’amende, ainsi que l’exception lorsque les circonstances ont assuré la santé et la sécurité du mineur. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Le délaissement d’un mineur de quinze ans est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.\n\nL’exception s’applique lorsque les circonstances du délaissement ont permis d’assurer **la santé et la sécurité du mineur**.\n\n**Article 227-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.5688940000255,
+      "routingCalls": 1,
+      "embeddingMs": 230.14531200000783,
+      "vectorSearchMs": 109.88672999996925,
+      "jinaRerankingMs": 512.4851930000004,
+      "mappingMs": 0.024225999950431287,
+      "totalMs": 2081.1466399999917,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010470000037457794,
+      "contextBuilderMs": 0.009747000003699213,
+      "generationMs": 1116.0692769999732,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3197.248692000052
+    },
+    "judge": {
+      "questionId": "q015",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue (sept ans d’emprisonnement et 100 000 euros d’amende) ainsi que l’exception tenant aux circonstances ayant assuré la santé et la sécurité du mineur. Ces éléments sont explicitement présents dans le contexte fourni (article 227-1)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 227-1 du Code pénal et énonce exactement la peine de sept ans d’emprisonnement et 100 000 euros d’amende, ainsi que l’exception liée aux circonstances ayant assuré la santé et la sécurité du mineur. Elle couvre toutes les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

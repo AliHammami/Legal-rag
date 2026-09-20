@@ -1,0 +1,95 @@
+{
+  "questionId": "q083",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La donation entre vifs de biens présents faite par contrat de mariage aux époux ne peut bénéficier aux enfants à naître, sauf dans les cas spécialement prévus au chapitre VI du titre concerné. **Article 1081 du Code civil [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1081"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1086"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 246.13317300006747,
+      "vectorSearchMs": 579.2504149999004,
+      "jinaRerankingMs": 475.88978200010024,
+      "mappingMs": 0.03741400013677776,
+      "totalMs": 1301.3391249999404,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013149000005796552,
+      "contextBuilderMs": 0.01774400006979704,
+      "generationMs": 1087.5239000001457,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2388.9066220000386
+    },
+    "judge": {
+      "questionId": "q083",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la restriction de l’article 1081 : les enfants à naître ne peuvent être bénéficiaires que dans les cas prévus au chapitre VI du titre concerné. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1081) est directement pertinente : elle énonce expressément que la donation entre vifs de biens présents faite par contrat de mariage aux époux ne peut profiter aux enfants à naître que dans les cas du chapitre VI. Elle couvre intégralement l'affirmation centrale de la réponse. La source 2 est connexe mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "La donation entre vifs faite par contrat de mariage **ne peut pas bénéficier aux enfants à naître**, sauf dans les cas expressément prévus au **chapitre VI du titre concerné** — **Article 1081 du Code civil [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1081"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1086"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1188.5753600001335,
+      "routingCalls": 1,
+      "embeddingMs": 230.8628299999982,
+      "vectorSearchMs": 56.15808600001037,
+      "jinaRerankingMs": 486.73566999984905,
+      "mappingMs": 0.03931699995882809,
+      "totalMs": 1962.4068469998892,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013398000039160252,
+      "contextBuilderMs": 0.017321999883279204,
+      "generationMs": 2602.0621539999265,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4564.507248000009
+    },
+    "judge": {
+      "questionId": "q083",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la restriction de l’article 1081 : la donation ne peut profiter aux enfants à naître que dans les cas énoncés au chapitre VI du titre. Elle est directement et entièrement étayée par le contexte fourni et répond sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1081) est directement pertinente : elle énonce explicitement que la donation entre vifs faite par contrat de mariage ne peut avoir lieu au profit des enfants à naître que dans les cas du chapitre VI. Elle couvre entièrement l’affirmation centrale de la réponse, y compris la référence à l’article 1081. La source 2 est complémentaire mais non nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

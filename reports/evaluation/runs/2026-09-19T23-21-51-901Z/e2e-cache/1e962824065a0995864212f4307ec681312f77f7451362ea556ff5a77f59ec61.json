@@ -1,0 +1,95 @@
+{
+  "questionId": "q234",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "À partir de la cinquième année précédant l’échéance, le titulaire peut interroger le gestionnaire de son plan d’épargne retraite d’entreprise afin d’obtenir :\n\n- des informations sur ses droits ;\n- des informations sur les modalités de restitution de l’épargne adaptées à sa situation ;\n- le cas échéant, la possibilité de confirmer le rythme de réduction des risques financiers applicable à son allocation.\n\nCes dispositions figurent à l’article L. 224-10 du Code monétaire et financier [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-30"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.1242549996823,
+      "vectorSearchMs": 578.7854850003496,
+      "jinaRerankingMs": 1731.642367000226,
+      "mappingMs": 0.025993000250309706,
+      "totalMs": 2549.6367579996586,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012228999752551317,
+      "contextBuilderMs": 0.01759799988940358,
+      "generationMs": 1524.8302939999849,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4074.504966000095
+    },
+    "judge": {
+      "questionId": "q234",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois renseignements prévus par l’article L. 224-10 : les droits du titulaire, les modalités de restitution adaptées à sa situation et, le cas échéant, la confirmation du rythme de réduction des risques financiers. Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article L. 224-10 visé par la question et énonce expressément les trois éléments repris dans la réponse : informations sur les droits, modalités de restitution appropriées à la situation et, le cas échéant, confirmation du rythme de réduction des risques financiers. Elle couvre donc l'ensemble des affirmations importantes."
+    }
+  },
+  "routing": {
+    "answer": "À partir de la cinquième année précédant l’échéance de son plan d’épargne retraite d’entreprise, le titulaire peut interroger le gestionnaire afin d’obtenir :\n\n- des informations sur ses droits ;\n- des informations sur les modalités de restitution de l’épargne adaptées à sa situation ;\n- le cas échéant, la possibilité de confirmer le rythme de réduction des risques financiers prévu dans son allocation.\n\nCes éléments sont prévus par l’article L224-10 du Code monétaire et financier [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-30"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.4747970001772,
+      "routingCalls": 1,
+      "embeddingMs": 261.7728850003332,
+      "vectorSearchMs": 123.06315400032327,
+      "jinaRerankingMs": 590.8993829996325,
+      "mappingMs": 0.026788999792188406,
+      "totalMs": 2204.2682710001245,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01044100010767579,
+      "contextBuilderMs": 0.018433999735862017,
+      "generationMs": 1483.4435290000401,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3687.748687000014
+    },
+    "judge": {
+      "questionId": "q234",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois facultés prévues par l’article L224-10 : s’informer sur les droits, sur les modalités de restitution adaptées à la situation, et confirmer le cas échéant le rythme de réduction des risques financiers. Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L224-10 applicable au plan d’épargne retraite d’entreprise et énonce expressément les trois renseignements/facultés repris dans la réponse. Elle couvre donc l’ensemble des affirmations importantes. La source 2 est redondante et concerne un plan individuel, mais n’affecte pas la suffisance de la source 1."
+    }
+  },
+  "failureStage": "none"
+}

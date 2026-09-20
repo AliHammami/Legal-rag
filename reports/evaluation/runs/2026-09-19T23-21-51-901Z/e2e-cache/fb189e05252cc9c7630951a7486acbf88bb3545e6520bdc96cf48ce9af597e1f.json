@@ -1,0 +1,87 @@
+{
+  "questionId": "q198",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La taille d’une société est déterminée selon **trois critères** :\n\n- **Le total du bilan** : somme des montants nets des éléments d’actif ;\n- **Le montant net du chiffre d’affaires** : ventes de produits et services liés à l’activité courante, après déduction des réductions sur ventes, de la TVA et des taxes assimilées ;\n- **Le nombre moyen de salariés employés au cours de l’exercice**. [Source 1]\n\nLes seuils sont les suivants :\n\n| Catégorie | Total du bilan | Chiffre d’affaires net | Salariés moyens |\n|---|---:|---:|---:|\n| Micro-entreprise | 450 000 € | 900 000 € | 10 |\n| Petite entreprise | 7 500 000 € | 15 000 000 € | 50 |\n| Moyenne ou grande entreprise | 25 000 000 € | 50 000 000 € | 250 |\n\nSauf disposition contraire, ces seuils sont considérés comme franchis à la clôture de **deux exercices consécutifs**, sur la base des derniers comptes annuels arrêtés. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "D230-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.76788600021973,
+      "vectorSearchMs": 608.5066029997543,
+      "jinaRerankingMs": 568.6561540002003,
+      "mappingMs": 0.04504500003531575,
+      "totalMs": 1385.9991989997216,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010117999743670225,
+      "contextBuilderMs": 0.011326000094413757,
+      "generationMs": 2734.2851889999583,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4120.31394500006
+    },
+    "judge": {
+      "questionId": "q198",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois critères et fournit des définitions, seuils et règle de franchissement conformes au contexte. Toutefois, elle commet une erreur centrale : selon l’article L. 230-1, la taille est déterminée en fonction de deux des trois critères, et non « selon trois critères » entendus comme tous applicables cumulativement. Cette condition essentielle est absente. Les développements supplémentaires sont largement étayés par le contexte, mais l’affirmation principale sur l’utilisation des trois critères n’y est pas établie et est contraire à la règle attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source D. 230-1 est directement pertinente : elle fixe les seuils des trois critères, définit le total du bilan et le chiffre d’affaires net, précise l’appréciation du nombre moyen de salariés et la règle des deux exercices consécutifs. Elle couvre donc l’essentiel des développements additionnels de la réponse. En revanche, elle ne contient pas la règle centrale de l’article L. 230-1 selon laquelle la taille est déterminée à partir de deux des trois critères ; elle ne permet donc pas de soutenir l’affirmation que la taille est déterminée « selon trois critères » ni de couvrir complètement la réponse à la question."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article D230-1 du Code de commerce**, pris pour l’application de l’article L. 230-1, la taille d’une société est déterminée au regard de trois critères :\n\n- **Le total du bilan** ;\n- **Le montant net du chiffre d’affaires** ;\n- **Le nombre moyen de salariés employés au cours de l’exercice**. [Source 1]\n\nLes seuils sont les suivants :\n\n| Catégorie | Total du bilan | Chiffre d’affaires net | Nombre moyen de salariés |\n|---|---:|---:|---:|\n| Micro-entreprise | 450 000 € | 900 000 € | 10 |\n| Petite entreprise | 7 500 000 € | 15 000 000 € | 50 |\n| Moyenne ou grande entreprise | 25 000 000 € | 50 000 000 € | 250 |\n\nLe **total du bilan** correspond à la somme des montants nets des éléments d’actif. Le **chiffre d’affaires net** correspond aux ventes de produits et services liés à l’activité courante, après déduction notamment des réductions sur ventes et des taxes. [Source 1]\n\nSauf disposition contraire, les seuils sont considérés comme franchis à la clôture de **deux exercices consécutifs**, sur la base des derniers comptes annuels arrêtés. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "D230-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2460.2243019999005,
+      "routingCalls": 1,
+      "embeddingMs": 251.67020700033754,
+      "vectorSearchMs": 655.920967000071,
+      "jinaRerankingMs": 562.3127240003087,
+      "mappingMs": 0.026139999739825726,
+      "totalMs": 3930.188473999966,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010209999978542328,
+      "contextBuilderMs": 0.010866999626159668,
+      "generationMs": 3136.7956070001237,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7067.015379999764
+    },
+    "judge": {
+      "questionId": "q198",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois paramètres pertinents (total du bilan, chiffre d’affaires net et effectif moyen) et les développements chiffrés sont conformes au contexte D. 230-1. Toutefois, elle omet l’élément central de l’article L. 230-1 : la taille est déterminée à partir de deux de ces trois critères. Elle ajoute aussi des seuils et définitions non nécessaires à la question, sans corriger cette omission."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source D. 230-1 est directement liée à l'application de l'article L. 230-1 et fournit les trois paramètres, leurs seuils, leurs définitions et la règle de franchissement sur deux exercices, ce qui rend les développements de la réponse bien étayés. Toutefois, elle ne contient pas la règle centrale selon laquelle la taille est déterminée à partir de deux des trois critères ; l'article L. 230-1 lui-même aurait donc été nécessaire pour une source pleinement suffisante au regard de la question. Toutes les affirmations substantielles effectivement formulées dans la réponse sont néanmoins couvertes par la source fournie."
+    }
+  },
+  "failureStage": "generation"
+}

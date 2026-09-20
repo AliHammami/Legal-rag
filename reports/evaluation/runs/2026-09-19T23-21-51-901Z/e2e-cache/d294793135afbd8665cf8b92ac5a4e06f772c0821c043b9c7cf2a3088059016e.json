@@ -1,0 +1,95 @@
+{
+  "questionId": "q420",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre et en assurant la tenue, à ses frais et sous sa responsabilité, du fichier national automatisé des interdits de gérer. Ce fichier vise notamment à prévenir les infractions prévues par les articles 434-40-1 du Code pénal et L. 654-15 du Code de commerce, ainsi qu’à favoriser l’exécution des interdictions de gérer prononcées par les juridictions. Il recense les faillites personnelles et les mesures définitives d’interdiction de diriger, gérer, administrer ou contrôler certaines entreprises ou personnes morales, en mentionnant la décision juridictionnelle concernée. **Article L. 128-1 du Code de commerce [Source 1].**\n\nLes sources fournies ne précisent pas les peines criminelles encourues par les personnes physiques au titre des infractions mentionnées. Il n’est donc pas possible de les déterminer à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L128-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L741-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 169.39755299966782,
+      "vectorSearchMs": 572.4926480008289,
+      "jinaRerankingMs": 576.597544000484,
+      "mappingMs": 0.020937999710440636,
+      "totalMs": 1318.5287850005552,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010850000195205212,
+      "contextBuilderMs": 0.017589000053703785,
+      "generationMs": 2844.26456999965,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4162.8299510004
+    },
+    "judge": {
+      "questionId": "q420",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement, et de manière étayée par le contexte, le rôle du Conseil national : mise en œuvre et tenue du fichier national des interdits de gérer, finalités de lutte contre les fraudes, prévention de certaines infractions et exécution des interdictions. Elle ne fournit toutefois pas les peines criminelles encourues par les personnes physiques, pourtant demandées et présentes dans la référence ; elle est donc incomplète sur ce point. Son constat selon lequel ces peines ne peuvent être déterminées à partir du seul contexte est bien fondé, puisque les sources ne contiennent pas les dispositions pénales correspondantes. Elle répond néanmoins effectivement à la partie documentée de la question sans abstention globale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour la contribution du Conseil national à la lutte contre les fraudes : elle établit l’existence, la finalité, la responsabilité de tenue et le contenu du fichier national des interdits de gérer. En revanche, aucune source ne donne les peines criminelles applicables aux personnes physiques, qui constituent une partie importante de la question. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : la description du fichier l’est par la source 1, et le constat d’impossibilité de déterminer ces peines à partir du contexte est justifié par l’absence de disposition pénale correspondante dans les sources."
+    }
+  },
+  "routing": {
+    "answer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre un **fichier national automatisé des interdits de gérer**. Ce fichier vise notamment à :\n\n- lutter contre les fraudes ;\n- prévenir certaines infractions prévues par les articles 434-40-1 du Code pénal et L. 654-15 du Code de commerce ;\n- favoriser l’exécution des interdictions de gérer prononcées par les juridictions judiciaires.\n\nLa tenue de ce fichier constitue une **mission de service public**, assurée par le Conseil national à ses frais et sous sa responsabilité. Y sont inscrites les faillites personnelles et les interdictions définitives de diriger, gérer, administrer ou contrôler certaines entreprises, lorsqu’elles résultent de décisions juridictionnelles passées en force de chose jugée. Le fichier mentionne également la décision ayant prononcé la mesure. **Article L. 128-1 du Code de commerce [Source 1].**\n\nLe Conseil national peut aussi défendre l’intérêt collectif de la profession devant les juridictions et exercer les droits réservés à la partie civile pour les faits lui causant un préjudice direct ou indirect. **Article L. 741-2 du Code de commerce [Source 2].**\n\nEn revanche, les sources fournies **ne précisent pas les peines criminelles encourues par les personnes physiques** au titre des infractions mentionnées. Il n’est donc pas possible de les déterminer à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L128-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L741-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2039.6519069997594,
+      "routingCalls": 1,
+      "embeddingMs": 185.21978399995714,
+      "vectorSearchMs": 283.8134790007025,
+      "jinaRerankingMs": 553.490396999754,
+      "mappingMs": 0.02964100055396557,
+      "totalMs": 3062.2277189996094,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011545000597834587,
+      "contextBuilderMs": 0.023338000290095806,
+      "generationMs": 3387.389690999873,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6449.659634999931
+    },
+    "judge": {
+      "questionId": "q420",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement, sur la base de l’article L. 128-1, le rôle du Conseil national via le fichier national automatisé des interdits de gérer, ses finalités et son contenu. Elle ne répond toutefois pas à la seconde partie essentielle de la question : les peines criminelles applicables aux personnes physiques. L’affirmation selon laquelle ces peines ne figurent pas dans le contexte est bien fondée, mais elle laisse la réponse incomplète au regard de la référence et de l’absence d’abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour le rôle du Conseil national dans la lutte contre les fraudes via le fichier national automatisé des interdits de gérer. La source 2 couvre l'affirmation additionnelle relative à la défense de l'intérêt collectif de la profession. Toutefois, aucune source ne traite des peines criminelles encourues par les personnes physiques, qui constituent une partie importante de la question : les sources sont donc seulement partiellement suffisantes pour répondre à l'ensemble de la demande. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes : la description du fichier est étayée par la source 1, le rôle procédural par la source 2, et le constat que les sources ne précisent pas les peines criminelles est conforme au contenu fourni."
+    }
+  },
+  "failureStage": "generation"
+}

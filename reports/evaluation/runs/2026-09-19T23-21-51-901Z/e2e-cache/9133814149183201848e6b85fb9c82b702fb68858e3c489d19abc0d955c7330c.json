@@ -1,0 +1,107 @@
+{
+  "questionId": "q398",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### 1. Créances privilégiées sur la généralité des immeubles\n\nSelon l’**article 2377 du Code civil [Source 2]**, sont notamment privilégiées sur la généralité des immeubles :\n\n1. **Les frais de justice**, à condition qu’ils aient profité au créancier auquel le privilège est opposé ;\n2. **Certaines rémunérations et indemnités**, notamment :\n   - les rémunérations des salariés et apprentis pour les six derniers mois ;\n   - le salaire différé pour l’année échue et l’année courante ;\n   - certaines créances du conjoint survivant ;\n   - l’indemnité de fin de contrat et l’indemnité de précarité d’emploi ;\n   - l’indemnité due en cas d’inobservation du préavis et l’indemnité compensatrice ;\n   - les indemnités de congés payés ;\n   - certaines indemnités de licenciement, dans les limites prévues par le texte ;\n   - diverses indemnités dues aux salariés, notamment en cas d’inaptitude, de licenciement ou de rupture du contrat de travail.\n\n### 2. Sanction des violences ayant entraîné une incapacité totale de travail supérieure à huit jours\n\nLes violences ayant entraîné une **incapacité totale de travail pendant plus de huit jours** sont punies de :\n\n- **trois ans d’emprisonnement** ;\n- **45 000 euros d’amende**.\n\nC’est la sanction prévue par l’**article 222-11 du Code pénal [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-11"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2377"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-13"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2331"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 296.71206299960613,
+      "vectorSearchMs": 671.6105150002986,
+      "jinaRerankingMs": 564.1848790002987,
+      "mappingMs": 0.0423570005223155,
+      "totalMs": 1532.5724490005523,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.10119600035250187,
+      "contextBuilderMs": 0.08885200042277575,
+      "generationMs": 2776.928472000174,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4309.7031180001795
+    },
+    "judge": {
+      "questionId": "q398",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux catégories de créances privilégiées visées par l’article 2377 (frais de justice sous condition et rémunérations/indemnités énumérées) et restitue les principales sous-catégories, y compris les limites applicables à certaines indemnités de licenciement. Elle donne exactement la peine prévue à l’article 222-11 pour une ITT de plus de huit jours : trois ans d’emprisonnement et 45 000 euros d’amende. Toutes les affirmations essentielles sont directement étayées par les sources 1 et 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes : elles correspondent exactement aux articles 222-11 du Code pénal et 2377 du Code civil visés par la question. La source 2 couvre les frais de justice et l'ensemble des catégories de rémunérations et indemnités citées dans la réponse, y compris les créances du conjoint survivant et les limites relatives à certaines indemnités de licenciement. La source 1 couvre intégralement la peine de trois ans d'emprisonnement et 45 000 euros d'amende pour les violences ayant entraîné une ITT de plus de huit jours."
+    }
+  },
+  "routing": {
+    "answer": "### Créances privilégiées sur la généralité des immeubles\n\nSelon l’**article 2377 du Code civil**, sont notamment privilégiées :\n\n1. **Les frais de justice**, à condition qu’ils aient profité au créancier auquel le privilège est opposé ;\n2. **Certaines rémunérations et indemnités**, notamment :\n   - les rémunérations des salariés et apprentis dues au titre des six derniers mois ;\n   - le salaire différé agricole dû pour l’année échue et l’année courante ;\n   - certaines créances du conjoint survivant ;\n   - l’indemnité de fin de contrat et l’indemnité de précarité d’emploi ;\n   - l’indemnité due pour inobservation du préavis et l’indemnité compensatrice correspondante ;\n   - les indemnités de congés payés ;\n   - certaines indemnités de licenciement, dans les limites prévues par le texte ;\n   - diverses indemnités dues aux salariés en application des dispositions citées par l’article.  \n\n**Article 2377 du Code civil [Source 2].**\n\n### Sanction des violences entraînant une incapacité totale de travail supérieure à huit jours\n\nLes violences ayant entraîné une incapacité totale de travail pendant plus de huit jours sont punies de :\n\n- **trois ans d’emprisonnement** ;\n- **45 000 euros d’amende**.\n\n**Article 222-11 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-11"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2377"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1230.1772680003196,
+      "routingCalls": 1,
+      "embeddingMs": 190.598776999861,
+      "vectorSearchMs": 83.5637289993465,
+      "jinaRerankingMs": 670.0667350003496,
+      "mappingMs": 0.02939699962735176,
+      "totalMs": 2174.5026219999418,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01176500041037798,
+      "contextBuilderMs": 0.025628000497817993,
+      "generationMs": 2842.2290750006214,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5016.777463999577
+    },
+    "judge": {
+      "questionId": "q398",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les catégories de créances privilégiées énumérées à l’article 2377, y compris les frais de justice et les différentes rémunérations, salaires et indemnités visés. Elle indique également exactement la peine prévue par l’article 222-11 pour une ITT supérieure à huit jours : trois ans d’emprisonnement et 45 000 euros d’amende. Toutes les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes : elles reproduisent respectivement l'article 222-11 du Code pénal et l'article 2377 du Code civil. Elles couvrent l'ensemble des affirmations importantes de la réponse, y compris les conditions relatives aux frais de justice, les catégories de rémunérations et indemnités privilégiées, ainsi que la peine de trois ans d'emprisonnement et 45 000 euros d'amende. La source 3 est non nécessaire mais ne nuit pas à l'adéquation du corpus."
+    }
+  },
+  "failureStage": "none"
+}

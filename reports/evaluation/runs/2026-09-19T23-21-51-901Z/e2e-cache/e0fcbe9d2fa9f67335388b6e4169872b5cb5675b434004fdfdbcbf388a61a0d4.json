@@ -1,0 +1,87 @@
+{
+  "questionId": "q328",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les personnes physiques coupables du délit mentionné à l’article **L. 452-1 du Code de la consommation** peuvent encourir les peines complémentaires suivantes :\n\n- l’interdiction d’exercer une fonction publique ;\n- l’interdiction d’exercer l’activité professionnelle ou sociale dans le cadre de laquelle l’infraction a été commise ;\n- l’interdiction d’exercer une profession commerciale ou industrielle ;\n- l’interdiction de diriger, administrer, gérer ou contrôler, directement ou indirectement, pour leur compte ou pour le compte d’autrui, une entreprise commerciale ou industrielle ou une société commerciale.\n\nCes interdictions peuvent être prononcées **cumulativement**, selon les modalités prévues par l’article 131-27 du Code pénal. **Article L. 452-2 du Code de la consommation [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L452-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.10804799944162,
+      "vectorSearchMs": 565.8772470001131,
+      "jinaRerankingMs": 2373.8213490005583,
+      "mappingMs": 0.03016499988734722,
+      "totalMs": 3170.864352999255,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009789000265300274,
+      "contextBuilderMs": 0.010670999996364117,
+      "generationMs": 1850.9770529996604,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5021.870733999647
+    },
+    "judge": {
+      "questionId": "q328",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement toutes les interdictions prévues pour les personnes physiques par l’article L. 452-2 : fonction publique, activité professionnelle ou sociale liée à l’infraction, profession commerciale ou industrielle, ainsi que direction, administration, gestion ou contrôle d’une entreprise ou société commerciale. Elle mentionne aussi correctement le caractère cumulatif possible de ces interdictions et leur renvoi aux modalités de l’article 131-27 du Code pénal. Toutes ces affirmations sont explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L. 452-2, qui vise expressément les personnes physiques coupables du délit puni à l’article L. 452-1 et énumère directement les peines complémentaires demandées. Elle couvre l’ensemble des interdictions citées dans la réponse, les précisions sur la direction ou le contrôle direct ou indirect d’entreprises ou sociétés commerciales, le renvoi à l’article 131-27 du Code pénal et la possibilité de cumul."
+    }
+  },
+  "routing": {
+    "answer": "Les personnes physiques coupables du délit prévu à l’article **L. 452-1 du Code de la consommation** peuvent encourir les peines complémentaires suivantes, conformément à l’**article L. 452-2 du Code de la consommation** [Source 1] :\n\n- l’interdiction d’exercer une fonction publique ;\n- l’interdiction d’exercer l’activité professionnelle ou sociale dans le cadre de laquelle l’infraction a été commise ;\n- l’interdiction d’exercer une profession commerciale ou industrielle ;\n- l’interdiction de diriger, administrer, gérer ou contrôler, directement ou indirectement, pour son propre compte ou pour le compte d’autrui, une entreprise commerciale ou industrielle ou une société commerciale.\n\nCes interdictions peuvent être prononcées **cumulativement**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L452-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4914.213897000067,
+      "routingCalls": 1,
+      "embeddingMs": 436.0139920003712,
+      "vectorSearchMs": 130.8829399999231,
+      "jinaRerankingMs": 589.3896109992638,
+      "mappingMs": 0.021873999387025833,
+      "totalMs": 6070.546989000402,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009175000712275505,
+      "contextBuilderMs": 0.013736000284552574,
+      "generationMs": 1504.6706620007753,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7575.248713999987
+    },
+    "judge": {
+      "questionId": "q328",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les interdictions professionnelles, commerciales et de gestion prévues pour les personnes physiques, y compris leur caractère potentiellement cumulatif. Tous les éléments sont explicitement étayés par le contexte fourni et elle répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 452-2 vise expressément les personnes physiques coupables du délit puni à l’article L. 452-1 et énumère les peines complémentaires. Elle couvre l’ensemble des interdictions mentionnées dans la réponse, y compris la direction, l’administration, la gestion ou le contrôle direct ou indirect d’une entreprise ou société commerciale, ainsi que la possibilité de cumul."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q241",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article **L. 214-1 du Code monétaire et financier** distingue :\n\n### 1. Les placements collectifs\nIls comprennent trois catégories :\n\n- les **OPCVM** agréés conformément à la directive 2009/65/CE ;\n- les **FIA** relevant de la directive 2011/61/UE ;\n- les **autres placements collectifs**, c’est-à-dire ceux qui ne relèvent pas des deux catégories précédentes.  \n[Source 1]\n\n### 2. Les organismes de placement collectif\nIls comprennent :\n\n- les **OPCVM** ;\n- les **FIA mentionnés au II de l’article L. 214-24**.  \n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L742-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.41388100013137,
+      "vectorSearchMs": 623.0595759996213,
+      "jinaRerankingMs": 603.3906729998998,
+      "mappingMs": 0.02313400013372302,
+      "totalMs": 1442.927859000396,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010216000024229288,
+      "contextBuilderMs": 0.019507000222802162,
+      "generationMs": 2006.0821580002084,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3449.047627999913
+    },
+    "judge": {
+      "questionId": "q241",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les deux distinctions de l’article L. 214-1 : les placements collectifs (OPCVM, FIA et autres placements collectifs) et les organismes de placement collectif (OPCVM et FIA visés au II de l’article L. 214-24). Les précisions sur les directives sont également conformes au contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est le texte exact de l’article L. 214-1 et répond directement à la question. Elle couvre intégralement les catégories énumérées dans la réponse générée : OPCVM, FIA et autres placements collectifs au I, puis OPCVM et FIA mentionnés au II de l’article L. 214-24 au II. La précision sur les directives 2009/65/CE et 2011/61/UE est également explicitement présente."
+    }
+  },
+  "routing": {
+    "answer": "L’article L. 214-1 du Code monétaire et financier distingue :\n\n**1. Les placements collectifs**, qui comprennent :\n- les **OPCVM** agréés conformément à la directive 2009/65/CE ;\n- les **FIA** relevant de la directive 2011/61/UE ;\n- les **autres placements collectifs**, c’est-à-dire ceux qui ne relèvent pas des deux catégories précédentes.  \n[Article L. 214-1, I, du Code monétaire et financier — Source 1]\n\n**2. Les organismes de placement collectif**, qui comprennent :\n- les **OPCVM** ;\n- les **FIA mentionnés au II de l’article L. 214-24**.  \n[Article L. 214-1, II, du Code monétaire et financier — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L742-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1536.031202999875,
+      "routingCalls": 1,
+      "embeddingMs": 205.8759209997952,
+      "vectorSearchMs": 140.22407400002703,
+      "jinaRerankingMs": 640.5828800001182,
+      "mappingMs": 0.031209999695420265,
+      "totalMs": 2522.7744299997576,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010211000218987465,
+      "contextBuilderMs": 0.0228880001232028,
+      "generationMs": 2189.380069000181,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4712.200957000256
+    },
+    "judge": {
+      "questionId": "q241",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux ensembles définis par l’article L. 214-1 : les placements collectifs (OPCVM, FIA et autres placements collectifs) et les organismes de placement collectif (OPCVM et FIA visés à l’article L. 214-24, II). Les précisions sur les directives et sur la catégorie résiduelle sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L. 214-1 visé par la question et énonce expressément les trois catégories de placements collectifs ainsi que les deux catégories d’organismes de placement collectif. Elle couvre aussi les précisions relatives aux directives et au caractère résiduel des « autres placements collectifs ». La source 2 n’est pas nécessaire à la réponse."
+    }
+  },
+  "failureStage": "none"
+}

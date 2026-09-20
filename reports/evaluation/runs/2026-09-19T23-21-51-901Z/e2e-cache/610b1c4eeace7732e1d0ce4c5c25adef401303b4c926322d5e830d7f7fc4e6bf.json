@@ -1,0 +1,87 @@
+{
+  "questionId": "q374",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après le contexte fourni, seul **l’article R. 127-1 du Code de commerce** est identifiable. Il régit les conditions spécifiques du contrat d’appui au projet d’entreprise, notamment :\n\n- le programme de préparation et les engagements respectifs des parties ;\n- les moyens mis à disposition du bénéficiaire ;\n- la rétribution de la personne morale responsable de l’appui ;\n- les engagements du bénéficiaire envers les tiers et leur prise en charge financière.  \n  **[Source 1]**\n\nEn revanche, aucun extrait du **Code monétaire et financier** n’est fourni. Il n’est donc pas possible d’identifier, à partir des seules sources disponibles, les articles régissant les droits de remboursement dans le cadre des opérations de paiement.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 204.53284400049597,
+      "vectorSearchMs": 672.3223179997876,
+      "jinaRerankingMs": 582.3720030002296,
+      "mappingMs": 0.031883000396192074,
+      "totalMs": 1459.2871380001307,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010080000385642052,
+      "contextBuilderMs": 0.010572000406682491,
+      "generationMs": 2011.8787620002404,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3471.1968529997393
+    },
+    "judge": {
+      "questionId": "q374",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, au regard du contexte, le contenu de l’article R. 127-1 du code de commerce, mais elle ne fournit pas les articles attendus par la question et la référence : L. 127-5 du code de commerce et L. 133-25-2 du code monétaire et financier. Elle est donc largement incomplète et partiellement incorrecte quant à l’identification de l’article pertinent. En revanche, ses affirmations sur R. 127-1 sont bien étayées par le seul extrait fourni, et son constat d’absence de source relative au code monétaire et financier est justifié. Elle répond effectivement à la partie accessible de la question, donc il ne s’agit pas d’une abstention indue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour les stipulations obligatoires du contrat d’appui au projet d’entreprise visées par l’article R. 127-1 du code de commerce. Elle ne couvre toutefois ni l’article L. 127-5 évoqué par la question de référence, ni les droits au remboursement relatifs aux opérations de paiement du code monétaire et financier. En revanche, elle couvre l’ensemble des précisions factuelles formulées dans la réponse générée sur R. 127-1, et l’absence de source CMF dans le corpus justifie le constat de non-identification à partir des seules sources disponibles."
+    }
+  },
+  "routing": {
+    "answer": "- **Contrat d’appui au projet d’entreprise :** l’**article R. 127-1 du Code de commerce** précise notamment le contenu obligatoire du contrat : programme de préparation, engagements des parties, moyens mis à disposition, rémunération éventuelle et engagements du bénéficiaire envers les tiers [Source 1].\n\n- **Droits au remboursement dans le cadre des opérations de paiement :** le contexte fourni ne contient **aucune disposition du Code monétaire et financier** permettant d’identifier l’article applicable.\n\nAinsi, seule la référence à l’**article R. 127-1 du Code de commerce** peut être établie à partir des sources communiquées.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2047.5794050004333,
+      "routingCalls": 1,
+      "embeddingMs": 273.29331499990076,
+      "vectorSearchMs": 332.73960100021213,
+      "jinaRerankingMs": 517.6628019995987,
+      "mappingMs": 0.03210899978876114,
+      "totalMs": 3171.3309470005333,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009736000560224056,
+      "contextBuilderMs": 0.010478000156581402,
+      "generationMs": 1882.8547149999067,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5054.213763000444
+    },
+    "judge": {
+      "questionId": "q374",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse identifie l’article R. 127-1, qui traite du contenu du contrat d’appui et est bien reproduit dans le contexte, mais elle ne donne pas les articles attendus par la question et la référence, à savoir L. 127-5 du code de commerce et L. 133-25-2 du code monétaire et financier. Elle ne répond donc pas au volet essentiel relatif au remboursement des opérations de paiement. En revanche, ses affirmations sur R. 127-1 et l’absence de disposition du code monétaire et financier dans le contexte sont entièrement fondées sur le contexte fourni. L’abstention partielle sur le second volet n’est pas conforme à l’attente d’une réponse complète."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le volet relatif au contrat d’appui au projet d’entreprise, puisqu’elle reproduit l’article R. 127-1 du code de commerce et ses exigences de contenu. En revanche, aucune source ne concerne le code monétaire et financier ni les droits au remboursement des opérations de paiement : une source importante manque donc pour répondre entièrement à la question. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes : le contenu attribué à R. 127-1 est étayé, et l’absence, dans le contexte fourni, de disposition du code monétaire et financier est constatée correctement."
+    }
+  },
+  "failureStage": "generation"
+}

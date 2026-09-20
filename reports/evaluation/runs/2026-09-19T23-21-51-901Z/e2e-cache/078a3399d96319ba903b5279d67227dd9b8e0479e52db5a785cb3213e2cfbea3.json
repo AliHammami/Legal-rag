@@ -1,0 +1,87 @@
+{
+  "questionId": "q255",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L315-1 du Code monétaire et financier, la monnaie électronique est :\n\n- une valeur monétaire stockée sous une forme électronique, y compris magnétique ;\n- représentant une créance sur l’émetteur ;\n- émise en contrepartie de la remise de fonds ;\n- destinée à permettre des opérations de paiement au sens de l’article L. 133-3 ;\n- acceptée par une personne physique ou morale autre que l’émetteur.\n\nLes unités de monnaie électronique sont des **unités de valeur**. Chacune constitue une **créance incorporée dans un titre**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L315-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.87182900030166,
+      "vectorSearchMs": 549.7050600005314,
+      "jinaRerankingMs": 618.1303250007331,
+      "mappingMs": 0.03046100027859211,
+      "totalMs": 1398.7644079998136,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010324999690055847,
+      "contextBuilderMs": 0.010528000071644783,
+      "generationMs": 1515.4858539998531,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2914.2812130004168
+    },
+    "judge": {
+      "questionId": "q255",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de l'article L315-1 : stockage électronique y compris magnétique, créance sur l'émetteur, émission contre remise de fonds, finalité d'opérations de paiement, acceptation par un tiers, ainsi que la qualification des unités comme unités de valeur constituant chacune une créance incorporée dans un titre. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement et intégralement l’article L315-1 visé par la question. Elle étaye toutes les caractéristiques énumérées de la monnaie électronique ainsi que la qualification des unités comme unités de valeur constituant chacune une créance incorporée dans un titre."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L315-1 du Code monétaire et financier, la monnaie électronique est une valeur monétaire :\n\n- stockée sous une forme électronique, y compris magnétique ;\n- représentant une créance sur son émetteur ;\n- émise en contrepartie de la remise de fonds ;\n- destinée à permettre des opérations de paiement définies à l’article L133-3 ;\n- acceptée par une personne physique ou morale autre que l’émetteur.\n\nLes unités qui la composent sont appelées « unités de valeur ». Chacune constitue une créance incorporée dans un titre. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L315-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.5520749995485,
+      "routingCalls": 1,
+      "embeddingMs": 257.3161589996889,
+      "vectorSearchMs": 117.57173299975693,
+      "jinaRerankingMs": 564.6888309996575,
+      "mappingMs": 0.029138999991118908,
+      "totalMs": 1861.1828450001776,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014346000738441944,
+      "contextBuilderMs": 0.009996999986469746,
+      "generationMs": 1722.8549790000543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3584.071114999242
+    },
+    "judge": {
+      "questionId": "q255",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de l’article L315-1 : stockage électronique y compris magnétique, créance sur l’émetteur, émission contre remise de fonds aux fins d’opérations de paiement, acceptation par un tiers, ainsi que la qualification des unités comme unités de valeur constituant chacune une créance incorporée dans un titre. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement et intégralement l’article L. 315-1 cité dans la réponse. Elle est parfaitement pertinente et couvre toutes les affirmations importantes : définition de la monnaie électronique, ses cinq caractéristiques, ainsi que la dénomination et la nature juridique des unités de monnaie électronique."
+    }
+  },
+  "failureStage": "none"
+}

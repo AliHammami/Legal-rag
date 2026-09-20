@@ -1,0 +1,95 @@
+{
+  "questionId": "q101",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du chapitre s’appliquent **à toutes les sociétés civiles**.\n\nIl peut toutefois y être dérogé lorsqu’un **statut légal particulier** auquel certaines sociétés civiles sont soumises prévoit des règles différentes, conformément à l’**article 1845 du Code civil** [Source 1].\n\nPlus généralement, ces dispositions s’appliquent à toutes les sociétés, sauf si la loi en dispose autrement **en raison de leur forme ou de leur objet**, conformément à l’**article 1834 du Code civil** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1845"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1834"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.0128660001792,
+      "vectorSearchMs": 648.2303320001811,
+      "jinaRerankingMs": 498.56484099989757,
+      "mappingMs": 0.030593000119552016,
+      "totalMs": 1389.865165000083,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010575999971479177,
+      "contextBuilderMs": 0.013485000003129244,
+      "generationMs": 1859.5357599998824,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3249.4333699999843
+    },
+    "judge": {
+      "questionId": "q101",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article 1845 : application à toutes les sociétés civiles, sauf dérogation résultant d’un statut légal particulier. Le complément sur l’article 1834 est également cohérent et explicitement soutenu par le contexte, sans contredire la réponse attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement aux deux volets de la question : elle vise toutes les sociétés civiles et prévoit la dérogation par un statut légal particulier. La source 2 soutient explicitement le complément général formulé dans la réponse sur les dérogations légales liées à la forme ou à l’objet. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du chapitre s’appliquent à **toutes les sociétés civiles**, sauf lorsqu’il existe un **statut légal particulier** auquel certaines sociétés civiles sont soumises et qui y déroge, conformément à l’**article 1845 du Code civil** [Source 1].\n\nPlus généralement, elles s’appliquent à toutes les sociétés, sauf disposition contraire de la loi justifiée par leur **forme** ou leur **objet**, selon l’**article 1834 du Code civil** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1845"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1834"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2365.4858940001577,
+      "routingCalls": 1,
+      "embeddingMs": 216.04175799991935,
+      "vectorSearchMs": 55.307651000097394,
+      "jinaRerankingMs": 502.99618000001647,
+      "mappingMs": 0.029374000150710344,
+      "totalMs": 3139.889841000084,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03888799995183945,
+      "contextBuilderMs": 0.015549999894574285,
+      "generationMs": 2196.799407000188,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5336.7583099999465
+    },
+    "judge": {
+      "questionId": "q101",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article 1845 : application à toutes les sociétés civiles, avec dérogation possible lorsque certaines sont soumises à un statut légal particulier. La précision additionnelle relative à l’article 1834 est également explicitement soutenue par le contexte et ne contredit pas la réponse à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1845) répond directement et intégralement à la question : elle vise toutes les sociétés civiles et précise la dérogation tenant au statut légal particulier de certaines d’entre elles. La source 2 (article 1834) est également pertinente pour la généralisation formulée dans la réponse sur les sociétés et les exceptions légales liées à leur forme ou objet. Les deux affirmations importantes de la réponse sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

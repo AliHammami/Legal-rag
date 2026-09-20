@@ -1,0 +1,95 @@
+{
+  "questionId": "q313",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le prêteur doit maintenir les conditions de l’offre pendant **au moins trente jours** :\n\n- à compter de son **émission** selon l’article L315-10 du Code de la consommation [Source 1] ;\n- à compter de sa **réception par l’emprunteur** selon l’article L313-34 du même code [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 190.05754599999636,
+      "vectorSearchMs": 595.5412540007383,
+      "jinaRerankingMs": 526.2427460001782,
+      "mappingMs": 0.04534200020134449,
+      "totalMs": 1311.911755000241,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013110999949276447,
+      "contextBuilderMs": 0.022689000703394413,
+      "generationMs": 2060.342418000102,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3372.2987470002845
+    },
+    "judge": {
+      "questionId": "q313",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement une durée minimale de trente jours. Elle ajoute toutefois un second régime, fondé sur l'article L313-34, dont le point de départ est la réception par l'emprunteur, alors que la réponse de référence attend le régime de l'article L315-10 et le point de départ à l'émission. Cette précision supplémentaire est bien étayée par le contexte, mais peut introduire une ambiguïté sur la règle applicable à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : elles énoncent chacune l’obligation de maintien pendant une durée minimale de trente jours et précisent leur point de départ respectif. Elles couvrent intégralement les deux affirmations principales de la réponse générée, y compris la distinction entre l’émission (L315-10) et la réception par l’emprunteur (L313-34)."
+    }
+  },
+  "routing": {
+    "answer": "Le prêteur doit maintenir les conditions de l’offre pendant une durée minimale de **trente jours** à compter de sa remise ou émission [Source 1 — Article L315-10 du Code de la consommation].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2811.291995000094,
+      "routingCalls": 1,
+      "embeddingMs": 263.35821400023997,
+      "vectorSearchMs": 90.47592899948359,
+      "jinaRerankingMs": 525.8757220003754,
+      "mappingMs": 0.04715400002896786,
+      "totalMs": 3691.0785550000146,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010251999832689762,
+      "contextBuilderMs": 0.017820000648498535,
+      "generationMs": 1631.3681150004268,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5322.483032000251
+    },
+    "judge": {
+      "questionId": "q313",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement la durée minimale de trente jours et le point de départ pertinent (« à compter de son émission »), conformément à l’article L315-10 fourni. La formulation « remise ou émission » est légèrement redondante mais ne contredit pas le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce expressément que la remise de l’offre oblige le prêteur à en maintenir les conditions pendant au moins trente jours à compter de son émission. Elle couvre la durée et le point de départ indiqués dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

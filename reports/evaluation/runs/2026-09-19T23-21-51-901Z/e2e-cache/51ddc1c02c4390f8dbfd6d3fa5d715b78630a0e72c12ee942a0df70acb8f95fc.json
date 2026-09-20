@@ -1,0 +1,87 @@
+{
+  "questionId": "q037",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La peine peut être portée à **cinq ans d’emprisonnement** lorsque les sévices graves ou l’acte de cruauté ont **entraîné la mort de l’animal**. L’amende est alors portée à **75 000 euros**, conformément à l’**article 521-1 du Code pénal** [Source 1].\n\nLes autres circonstances aggravantes mentionnées dans cette disposition — notamment le fait d’être le propriétaire ou le gardien de l’animal, de commettre les faits sur un animal détenu par des agents dans l’exercice de missions de service public, ou en présence d’un mineur — sont indiquées comme aggravantes, mais la source fournie ne précise pas qu’elles portent la peine à cinq ans.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.92280699999537,
+      "vectorSearchMs": 565.15826200007,
+      "jinaRerankingMs": 598.0687260000268,
+      "mappingMs": 0.03169199998956174,
+      "totalMs": 1371.207648999989,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013716999907046556,
+      "contextBuilderMs": 0.01039499999023974,
+      "generationMs": 2000.8815630000317,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3372.121855000034
+    },
+    "judge": {
+      "questionId": "q037",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement la condition prévue par l’article 521-1 : les sévices graves ou actes de cruauté doivent avoir entraîné la mort de l’animal. La précision sur l’amende de 75 000 euros et les autres circonstances aggravantes est exacte et directement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 521-1 du Code pénal, directement applicable aux sévices graves et actes de cruauté envers un animal domestique. Elle prévoit expressément que lorsque les faits ont entraîné la mort de l’animal, les peines sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende. Elle mentionne également les autres circonstances aggravantes citées dans la réponse, sans leur associer dans l’extrait la peine de cinq ans."
+    }
+  },
+  "routing": {
+    "answer": "La peine peut être portée à **cinq ans d’emprisonnement** lorsque les sévices graves ou l’acte de cruauté **ont entraîné la mort de l’animal**. L’amende est alors portée à **75 000 euros**.\n\nCette aggravation s’applique aux faits commis sur un animal domestique, apprivoisé ou tenu en captivité, conformément à l’**article 521-1 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1031.0238070000196,
+      "routingCalls": 1,
+      "embeddingMs": 325.06748399999924,
+      "vectorSearchMs": 34.45078499999363,
+      "jinaRerankingMs": 576.1368820000207,
+      "mappingMs": 0.044344000052660704,
+      "totalMs": 1966.756263999967,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015962000004947186,
+      "contextBuilderMs": 0.018844999955035746,
+      "generationMs": 2333.098026999971,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4299.899325000006
+    },
+    "judge": {
+      "questionId": "q037",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement la condition d’aggravation : les sévices graves ou actes de cruauté ont entraîné la mort de l’animal. Elle mentionne aussi correctement la peine d’amende de 75 000 euros et le champ des animaux visés, tous explicitement prévus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 521-1 du Code pénal applicable. Elle prévoit expressément que lorsque les faits ont entraîné la mort de l’animal, les peines sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende, et précise le champ des animaux domestiques, apprivoisés ou tenus en captivité. Elle couvre donc toutes les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

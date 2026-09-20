@@ -1,0 +1,91 @@
+{
+  "questionId": "q360",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources ne donnent pas une liste complète des mentions devant figurer dans le contrat constitutif ou les statuts. Elles permettent toutefois d’identifier les exigences suivantes pour éviter la nullité de la société :\n\n- **Les fondateurs ne doivent pas être tous incapables** : l’incapacité de tous les fondateurs constitue une cause de nullité de la société.\n- **Le nombre minimal de deux associés doit être respecté**, lorsque cette exigence est applicable : sa violation constitue également une cause de nullité.\n- **Les clauses statutaires ne doivent pas méconnaître une disposition impérative du droit des sociétés**. Toutefois, si la violation de cette disposition n’entraîne pas la nullité de la société, la clause contraire est seulement réputée non écrite.\n- **Les décisions sociales** ne peuvent être annulées que pour violation d’une disposition impérative du droit des sociétés ou pour une cause de nullité des contrats en général.\n- **La seule violation des statuts n’entraîne en principe pas la nullité**, sauf disposition légale contraire.\n\nCes règles résultent de l’**article 1844-10 du Code civil** [Source 1]. Ainsi, le respect des statuts et des règles impératives doit être assuré, mais toute irrégularité ne conduit pas automatiquement à la nullité de la société.\n\nS’agissant de la responsabilité pénale, elle relève d’un mécanisme distinct. Lorsqu’une peine prévue à l’article 131-39 a été prononcée contre une personne morale, la violation, par une personne physique, des obligations qui en découlent est punie de **deux ans d’emprisonnement et 30 000 euros d’amende**. Le maintien ou la reconstitution, même déguisée, d’une personne morale dissoute est puni de **trois ans d’emprisonnement et 45 000 euros d’amende**.\n\nLorsque la dissolution a été prononcée pour une infraction commise **en récidive**, ou pour l’infraction de maintien ou de reconstitution précitée, les peines sont portées à **cinq ans d’emprisonnement et 75 000 euros d’amende**, conformément à l’**article 434-43 du Code pénal** [Source 2].\n\nLa nullité civile des statuts ou de la société ne se confond donc pas avec la responsabilité pénale résultant du maintien ou de la reconstitution d’une personne morale dissoute.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1844-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-43"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.21500700060278,
+      "vectorSearchMs": 566.5945520000532,
+      "jinaRerankingMs": 508.3939060000703,
+      "mappingMs": 0.034930999390780926,
+      "totalMs": 1298.2647200003266,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013646000064909458,
+      "contextBuilderMs": 0.028242000378668308,
+      "generationMs": 5144.635936000384,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6442.951812000014
+    },
+    "judge": {
+      "questionId": "q360",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne traite pas les dispositions visées par la question : elle omet la mention expresse exigée par l’article L125-8 du Code de commerce (absence de privilège ou nantissement des fonds, ou mainlevée de l’opposition), la nullité encourue et la responsabilité solidaire des signataires. Elle omet aussi le mécanisme de l’article 132-15 du Code pénal, soit le décuplement du maximum de l’amende en cas de nouvelle contravention de 5e classe dans l’année. Elle répond à la place sur l’article 1844-10 du Code civil et l’article 434-43 du Code pénal. Ces développements sont fidèlement étayés par le contexte fourni, mais ils ne répondent pas réellement à la question posée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent bien, de manière générale, sur des causes de nullité des sociétés (article 1844-10 du Code civil) et sur certaines conséquences pénales liées à la dissolution d’une personne morale, y compris lorsqu’elle résulte d’une récidive (article 434-43 du Code pénal). Elles ne répondent toutefois pas aux règles spécifiquement demandées sur le contenu obligatoire du contrat constitutif ou des statuts, ni au mécanisme de récidive applicable aux personnes morales pour les contraventions de 5e classe. En revanche, les affirmations juridiques effectivement développées dans la réponse générée sont fidèlement et presque intégralement couvertes par les deux extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne précise pas les conditions que devrait contenir le contrat constitutif ou les statuts pour éviter leur nullité. Il ne permet donc pas de répondre à cette partie de la question.\n\nEn revanche, il établit l’articulation suivante avec la récidive :\n\n- Lorsqu’une peine prévue à l’article 131-39 du Code pénal est prononcée contre une personne morale, la violation, par une personne physique, des obligations qui en résultent est punie de **deux ans d’emprisonnement et 30 000 € d’amende** — Article 434-43 du Code pénal [Source 1].\n- Le maintien ou la reconstitution, ouverte ou déguisée, d’une personne morale dont la dissolution a été prononcée est puni de **trois ans d’emprisonnement et 45 000 € d’amende**.\n- Lorsque la dissolution a été prononcée pour une infraction commise en récidive, ou pour l’infraction de maintien ou de reconstitution, ces peines sont aggravées à **cinq ans d’emprisonnement et 75 000 € d’amende**.\n\nAinsi, la récidive intervient comme circonstance d’aggravation de la peine liée à la dissolution, mais la source ne précise ni les règles de nullité du contrat constitutif ou des statuts, ni les conditions générales d’engagement de la responsabilité pénale de la personne morale.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-43"
+      }
+    ],
+    "profiling": {
+      "routingMs": 923.2262239996344,
+      "routingCalls": 1,
+      "embeddingMs": 218.6414240002632,
+      "vectorSearchMs": 269.5361950006336,
+      "jinaRerankingMs": 506.75979600008577,
+      "mappingMs": 0.03253600001335144,
+      "totalMs": 1918.2242780001834,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010267999954521656,
+      "contextBuilderMs": 0.011233999393880367,
+      "generationMs": 3203.475921999663,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5121.730549999513
+    },
+    "judge": {
+      "questionId": "q360",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne fournit pas les exigences statutaires essentielles (mention de l’absence de privilège ou nantissement, ou de la levée de l’opposition, sous peine de nullité et responsabilité solidaire des signataires). Elle ne traite pas non plus le régime pertinent de récidive des personnes morales prévu par l’article 132-15, soit le décuplement du maximum de l’amende pour une nouvelle contravention de 5e classe dans l’année. Elle expose à la place, de manière exacte et entièrement fondée sur le contexte, les sanctions liées à la violation d’obligations découlant d’une peine contre une personne morale et au maintien ou à la reconstitution après dissolution. Il s’agit toutefois d’un régime distinct et seulement marginalement lié à la question. La réponse répond partiellement plutôt que de s’abstenir entièrement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est partiellement pertinente : elle traite des conséquences pénales de la dissolution d’une personne morale et de l’aggravation en cas de récidive, mais ne couvre ni les mentions statutaires nécessaires pour éviter la nullité ni le régime général de récidive des personnes morales visé par la question. En revanche, elle couvre intégralement les affirmations effectivement formulées dans la réponse générée : sanctions pour violation des obligations issues d’une peine de l’article 131-39, maintien ou reconstitution après dissolution, et aggravation lorsque la dissolution résulte d’une infraction commise en récidive. Le constat d’absence d’information sur la nullité statutaire et les conditions générales de responsabilité est également conforme au périmètre de la source."
+    }
+  },
+  "failureStage": "generation"
+}

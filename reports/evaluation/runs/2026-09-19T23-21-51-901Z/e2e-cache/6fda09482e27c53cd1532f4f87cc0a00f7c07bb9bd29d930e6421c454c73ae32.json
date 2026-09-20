@@ -1,0 +1,111 @@
+{
+  "questionId": "q427",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les délais dépendent de la nature de l’action :\n\n- **Contrat de travail**\n  - Action relative à l’exécution du contrat : **2 ans** à compter du jour où le titulaire a connu ou aurait dû connaître les faits lui permettant d’agir (**article L1471-1 du Code du travail [Source 1]**).\n  - Action relative à la rupture du contrat : **12 mois** à compter de la notification de la rupture.\n  - Ces délais ne s’appliquent notamment pas aux actions en paiement ou répétition du salaire, ni à certaines actions fondées sur la discrimination, le harcèlement ou les délais spéciaux prévus par le Code du travail.\n\n- **Contrat de transport**\n  - Actions pour avaries, pertes ou retards contre le voiturier : **1 an**, sauf fraude ou infidélité.\n  - Autres actions relatives au contrat de transport : **1 an**.\n  - Action récursoire : **1 mois** à compter de l’exercice de l’action contre le garanti.\n  - Le point de départ varie selon qu’il s’agit d’une perte totale, d’une remise ou d’une offre de remise de la marchandise (**article L133-6 du Code de commerce [Source 2]**).\n\n- **Suspension de la prescription**\n  - En cas de médiation, conciliation, procédure participative ou procédure prévue par l’article L. 125-1 du Code des procédures civiles d’exécution, la prescription est suspendue dans les conditions prévues par l’**article 2238 du Code civil [Source 4]**.\n  - Le délai recommence ensuite à courir pour une durée qui ne peut être inférieure à **6 mois**.\n\n- **Mineur ou majeur protégé**\n  - L’**article 1152 du Code civil [Source 3]** fixe certains points de départ particuliers, notamment à la majorité ou à l’émancipation pour les actes accomplis par un mineur, et à la date à laquelle un majeur protégé a eu connaissance des actes alors qu’il pouvait les refaire valablement.\n\nEn l’absence de précisions sur la nature du litige, il n’est donc pas possible de déterminer un délai unique applicable.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1471-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L133-6"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1152"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2238"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 185.28794199973345,
+      "vectorSearchMs": 701.3301599994302,
+      "jinaRerankingMs": 526.6482929997146,
+      "mappingMs": 0.034227000549435616,
+      "totalMs": 1413.322653000243,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014677000232040882,
+      "contextBuilderMs": 0.04891800042241812,
+      "generationMs": 3995.396530000493,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5408.797013999894
+    },
+    "judge": {
+      "questionId": "q427",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale pour déterminer les délais de prescription applicables, et le cas attendait une abstention explicite. La réponse fournit néanmoins des délais propres à quelques domaines civils, sociaux et commerciaux, sans répondre au périmètre juridique indéterminé (et notamment sans établir qu'il s'agit des délais pertinents en matière pénale). Elle est en revanche fidèlement étayée par les extraits de contexte fournis pour les règles qu'elle énonce."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont juridiquement pertinentes pour les exemples spécifiques énoncés (prescription en droit du travail, transport, suspension et points de départ particuliers), mais elles ne permettent pas d’identifier un régime général ni les délais applicables à une question non contextualisée, en particulier si le périmètre attendu est pénal. Elles sont donc seulement partiellement pertinentes pour la question générale. En revanche, elles couvrent fidèlement l’ensemble des affirmations substantielles de la réponse générée : durées, points de départ, exceptions, suspension et délai minimal de reprise."
+    }
+  },
+  "routing": {
+    "answer": "Les délais dépendent de la nature de l’action :\n\n- **Contrat de travail** :\n  - action relative à l’exécution du contrat : **2 ans**, à compter du jour où le titulaire a connu ou aurait dû connaître les faits lui permettant d’agir ;\n  - action relative à la rupture du contrat : **12 mois**, à compter de la notification de la rupture.  \n  Ces délais ne s’appliquent notamment pas aux actions en paiement ou répétition du salaire, ni à certaines actions relatives aux discriminations ou au harcèlement, qui relèvent de règles spécifiques. **Article L. 1471-1 du Code du travail [Source 1].**\n\n- **Contrat de transport** :\n  - actions pour avaries, pertes ou retards : **1 an** ;\n  - autres actions liées au contrat de transport : **1 an** ;\n  - actions récursoires : **1 mois**, à compter de l’exercice de l’action contre le garanti.  \n  Le point de départ varie selon qu’il s’agit d’une perte totale ou d’un autre dommage. **Article L. 133-6 du Code de commerce [Source 2].**\n\n- **Règles particulières concernant certains actes** :\n  - pour les actes accomplis par un mineur : la prescription court à compter de sa majorité ou de son émancipation ;\n  - pour un majeur protégé : à compter du moment où il a eu connaissance de l’acte alors qu’il pouvait valablement le refaire ;\n  - pour les héritiers d’une personne protégée : à compter du décès si la prescription n’avait pas déjà commencé.  \n  **Article 1152 du Code civil [Source 3].**\n\n- **Médiation, conciliation ou procédure participative** :\n  la prescription est **suspendue** pendant la procédure. Elle recommence ensuite à courir pour une durée qui ne peut être inférieure à **6 mois**, selon les modalités prévues par l’**article 2238 du Code civil [Source 4]**.\n\nEn l’absence de précisions sur la nature du litige, il n’est pas possible de déterminer quel délai s’applique exactement.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1471-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L133-6"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1152"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2238"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1231.865012000315,
+      "routingCalls": 1,
+      "embeddingMs": 271.5260960003361,
+      "vectorSearchMs": 618.3385900007561,
+      "jinaRerankingMs": 520.9719660002738,
+      "mappingMs": 0.03347000014036894,
+      "totalMs": 2642.7624689992517,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011041000485420227,
+      "contextBuilderMs": 0.025358999148011208,
+      "generationMs": 3708.861441999674,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6351.668290000409
+    },
+    "judge": {
+      "questionId": "q427",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question, formulée sans préciser l’infraction ou le domaine, appelait une abstention ou une demande de précision, notamment dans le cadre d’un système portant sur le Code pénal. La réponse énumère des prescriptions civiles, commerciales et de droit du travail, sans fournir les délais de prescription pénale recherchés ni pouvoir identifier le régime applicable. Elle est toutefois fidèlement étayée par le contexte fourni pour chacun des régimes qu’elle décrit."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent sur des régimes de prescription civils, commerciaux et sociaux spécifiques (contrat de travail, transport, actes de mineurs/majeurs protégés, suspension en médiation). Elles ne permettent pas d’identifier les délais de prescription pénale éventuellement visés par la question, ni de justifier explicitement une abstention faute de précision. En revanche, elles étayent fidèlement les différents délais, points de départ, exclusions et mécanismes de suspension affirmés dans la réponse générée."
+    }
+  },
+  "failureStage": "abstention"
+}

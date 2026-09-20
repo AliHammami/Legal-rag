@@ -1,0 +1,87 @@
+{
+  "questionId": "q470",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de préciser les formalités nécessaires pour déposer une demande de brevet d’invention.\n\nIl indique seulement que :\n\n- les ventes ou cessions de fonds de commerce comprenant des brevets doivent être inscrites à l’Institut national de la propriété industrielle (INPI), à peine d’inopposabilité aux tiers ;\n- les brevets compris dans la cession d’un fonds restent soumis aux règles des articles L. 613-8 et suivants du Code de la propriété intellectuelle.\n\nCes dispositions figurent à l’**article L. 143-17 du Code de commerce** [Source 1] et concernent la transmission ou le nantissement de droits, non le dépôt initial d’un brevet.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L143-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.41982600092888,
+      "vectorSearchMs": 677.0953439995646,
+      "jinaRerankingMs": 560.8418189994991,
+      "mappingMs": 0.027901001274585724,
+      "totalMs": 1449.4108930006623,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.021215999498963356,
+      "contextBuilderMs": 0.01653899997472763,
+      "generationMs": 2027.8208849988878,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3477.3025649990886
+    },
+    "judge": {
+      "questionId": "q470",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre aux formalités de dépôt, car le contexte ne traite que de l’inscription de certaines cessions, ventes ou nantissements impliquant des brevets. Elle distingue correctement ces règles de transmission du dépôt initial et ses affirmations sont directement étayées par l’article L. 143-17 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est pertinente pour justifier l’abstention : elle traite exclusivement des formalités d’inscription auprès de l’INPI liées aux ventes, cessions et nantissements de fonds comportant notamment des brevets, ainsi que de la transmission des brevets. Elle ne fournit aucune formalité relative au dépôt initial d’une demande de brevet. Elle couvre les constats de la réponse sur l’inscription, l’inopposabilité aux tiers, le renvoi aux articles L. 613-8 et suivants et la distinction avec le dépôt initial."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les formalités nécessaires pour **déposer une demande de brevet d’invention**.\n\nIl indique seulement que les **ventes, cessions ou nantissements** portant sur des brevets compris dans un fonds de commerce doivent être inscrits auprès de l’**Institut national de la propriété industrielle (INPI)**, sous peine d’inopposabilité aux tiers, conformément à l’**article L. 143-17 du Code de commerce** [Source 1]. Il précise également que la transmission des brevets reste soumise aux règles des articles **L. 613-8 et suivants du Code de la propriété intellectuelle** [Source 1].\n\nLes formalités de dépôt initial du brevet ne sont pas précisées dans la source fournie.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L143-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1021.922419000417,
+      "routingCalls": 1,
+      "embeddingMs": 754.0122710000724,
+      "vectorSearchMs": 552.8928730003536,
+      "jinaRerankingMs": 551.5663850009441,
+      "mappingMs": 0.019314000383019447,
+      "totalMs": 2880.4361060000956,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01046299934387207,
+      "contextBuilderMs": 0.011524999514222145,
+      "generationMs": 2036.8097489997745,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4917.27709200047
+    },
+    "judge": {
+      "questionId": "q470",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de fournir des formalités de dépôt, car le contexte ne porte que sur l’inscription de certaines cessions, ventes ou nantissements liés à des brevets et sur leur transmission. Cette abstention est appropriée, et les précisions données sur le contenu limité de l’article sont fidèles au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est hors du champ des formalités de dépôt initial d’un brevet, mais elle est directement pertinente pour justifier l’abstention : elle traite uniquement de l’inscription à l’INPI de ventes, cessions ou nantissements liés à un fonds de commerce et du renvoi aux règles de transmission. Elle couvre les constats de la réponse sur ce contenu limité et l’absence de formalités de dépôt initial."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q169",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L2251-1 du Code du travail**, une convention ou un accord collectif peut :\n\n- prévoir des stipulations **plus favorables aux salariés** que les dispositions légales en vigueur ;\n- en revanche, il ne peut pas déroger aux dispositions légales présentant un **caractère d’ordre public**. [Source 1]\n\nAinsi, la dérogation est possible pour améliorer les droits des salariés, mais elle est exclue lorsque la règle légale est impérative. Des dérogations moins favorables ne sont possibles que lorsqu’une disposition législative les autorise expressément dans une matière donnée. Par exemple, l’article **L3121-68 du Code du travail** permet certaines dérogations conventionnelles concernant l’aménagement des horaires, les repos et les astreintes. [Source 2] Les infractions aux stipulations dérogatoires autorisées sont alors sanctionnées comme la violation des dispositions légales concernées, conformément à l’article **L2263-1 du Code du travail**. [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2251-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3121-68"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2263-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 225.02826799964532,
+      "vectorSearchMs": 570.0403830003925,
+      "jinaRerankingMs": 2018.3167930003256,
+      "mappingMs": 0.025428999681025743,
+      "totalMs": 2813.439615999814,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008954000193625689,
+      "contextBuilderMs": 0.022754000034183264,
+      "generationMs": 3179.040964999702,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5992.521129999775
+    },
+    "judge": {
+      "questionId": "q169",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article L2251-1 : les accords peuvent être plus favorables aux salariés, mais ne peuvent déroger aux règles d’ordre public. Les précisions supplémentaires sur les dérogations expressément autorisées et leur régime de sanction sont cohérentes et étayées par les sources 2 et 3 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en énonçant les deux limites posées par l’article L2251-1 : stipulations plus favorables possibles et impossibilité de déroger aux dispositions d’ordre public. Les sources 2 et 3 sont pertinentes pour les précisions additionnelles de la réponse : l’une illustre une dérogation conventionnelle expressément admise dans un domaine déterminé, l’autre couvre le régime de sanction des infractions aux stipulations dérogatoires autorisées. Toutes les affirmations importantes sont ainsi étayées."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L2251-1 du Code du travail**, une convention ou un accord collectif peut :\n\n- prévoir des dispositions **plus favorables aux salariés** que celles prévues par la loi ;\n- en revanche, **elle ne peut pas écarter les dispositions légales d’ordre public**, auxquelles il est interdit de déroger. [Source 1]\n\nAinsi, la liberté de négociation collective est admise uniquement dans le respect des règles impératives. Le contexte fourni ne permet pas de préciser davantage les catégories de dispositions relevant de l’ordre public.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2251-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3121-68"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2263-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.1138010001741,
+      "routingCalls": 1,
+      "embeddingMs": 218.03192199999467,
+      "vectorSearchMs": 297.7171750003472,
+      "jinaRerankingMs": 567.1541309999302,
+      "mappingMs": 0.031134999822825193,
+      "totalMs": 2107.0724149998277,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00913799973204732,
+      "contextBuilderMs": 0.016131999902427197,
+      "generationMs": 2524.1701050000265,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4631.275755000301
+    },
+    "judge": {
+      "questionId": "q169",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article L2251-1 : des stipulations plus favorables aux salariés sont admises, tandis que les dispositions d’ordre public ne peuvent être écartées. Ces deux affirmations sont explicitement étayées par la source 1. La précision finale sur l’absence de détail concernant les catégories d’ordre public est cohérente avec le contexte et ne constitue pas une abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit la règle de l’article L2251-1 relative aux stipulations plus favorables aux salariés et à l’interdiction de déroger aux dispositions d’ordre public. Elle couvre les deux affirmations juridiques centrales de la réponse. La réserve indiquant que le contexte ne détaille pas les catégories de dispositions d’ordre public est également compatible avec le contenu fourni, qui ne les précise pas."
+    }
+  },
+  "failureStage": "none"
+}

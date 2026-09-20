@@ -1,0 +1,87 @@
+{
+  "questionId": "q350",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 724-1 du Code de la consommation** [Source 1] :\n\n- La commission prescrit des mesures de traitement lorsque l’examen de la demande révèle que les **ressources** ou l’**actif réalisable** du débiteur le permettent. Ces mesures sont prises selon les modalités prévues aux articles L. 732-1, L. 733-1, L. 733-4 et L. 733-7 du même code [Source 1].\n\n- Si la situation du débiteur est **irrémédiablement compromise**, c’est-à-dire s’il est manifestement impossible de mettre en œuvre ces mesures, deux options sont possibles :\n  1. **Imposer un rétablissement personnel sans liquidation judiciaire**, lorsque le débiteur ne possède que des biens meublants nécessaires à la vie courante, des biens non professionnels indispensables à son activité, ou lorsque son actif ne comprend que des biens sans valeur marchande ou dont la vente serait manifestement disproportionnée par rapport à leur valeur [Source 1] ;\n  2. Si ces conditions ne sont pas réunies, **saisir le juge des contentieux de la protection**, avec l’accord du débiteur, afin qu’il ouvre une procédure de rétablissement personnel avec liquidation judiciaire [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 178.69696900062263,
+      "vectorSearchMs": 630.1922880001366,
+      "jinaRerankingMs": 531.4771159999073,
+      "mappingMs": 0.02739000041037798,
+      "totalMs": 1340.4177660001442,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011978999711573124,
+      "contextBuilderMs": 0.011339999735355377,
+      "generationMs": 3023.086246999912,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4363.535470999777
+    },
+    "judge": {
+      "questionId": "q350",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les conditions de prescription des mesures (ressources ou actif réalisable suffisants et renvoi aux articles concernés) ainsi que les deux voies en cas de situation irrémédiablement compromise, y compris leurs conditions respectives. Toutes les affirmations importantes sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 724-1 pertinent. Elle couvre intégralement les conditions de prescription des mesures de traitement, la définition de la situation irrémédiablement compromise, ainsi que les deux options de rétablissement personnel et leurs conditions respectives, y compris l’accord du débiteur pour la saisine du juge."
+    }
+  },
+  "routing": {
+    "answer": "La commission prescrit des mesures de traitement lorsque l’examen de la demande montre que les **ressources ou l’actif réalisable du débiteur le permettent**. Ces mesures sont prises selon les conditions prévues par les articles **L. 732-1, L. 733-1, L. 733-4 et L. 733-7 du Code de la consommation** [Source 1].\n\nSi la situation du débiteur est **irrémédiablement compromise**, c’est-à-dire s’il est manifestement impossible de mettre en œuvre ces mesures, deux options sont possibles :\n\n1. **Imposer un rétablissement personnel sans liquidation judiciaire**, lorsque le débiteur :\n   - ne possède que des biens meubles nécessaires à la vie courante et des biens non professionnels indispensables à son activité professionnelle ; ou\n   - ne possède que des biens dépourvus de valeur marchande, ou dont les frais de vente seraient manifestement disproportionnés par rapport à leur valeur vénale.\n\n2. **Saisir le juge des contentieux de la protection**, avec l’accord du débiteur, afin qu’il ouvre une procédure de **rétablissement personnel avec liquidation judiciaire**, lorsque le débiteur ne remplit pas les conditions de la première option.\n\nCes règles résultent de l’**article L. 724-1 du Code de la consommation** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1319.5449670003727,
+      "routingCalls": 1,
+      "embeddingMs": 191.80739200022072,
+      "vectorSearchMs": 45.4243529997766,
+      "jinaRerankingMs": 683.6052970001474,
+      "mappingMs": 0.035945999436080456,
+      "totalMs": 2240.4673170000315,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009633000008761883,
+      "contextBuilderMs": 0.010615999810397625,
+      "generationMs": 2348.6890400005504,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4589.187509000301
+    },
+    "judge": {
+      "questionId": "q350",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de prescription des mesures (ressources ou actif réalisable suffisants, avec renvoi aux articles indiqués) et les deux voies en cas de situation irrémédiablement compromise. Elle précise correctement l’impossibilité manifeste de mettre en œuvre les mesures, les conditions patrimoniales du rétablissement sans liquidation, ainsi que la saisine du juge avec l’accord du débiteur pour une liquidation judiciaire. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 724-1 du Code de la consommation, qui répond exactement aux deux volets de la question : condition tenant aux ressources ou à l'actif réalisable pour prescrire des mesures de traitement, puis définition de la situation irrémédiablement compromise et les deux options de rétablissement personnel. Elle couvre aussi l'ensemble des précisions importantes de la réponse générée, notamment les conditions patrimoniales du rétablissement sans liquidation et la saisine du juge avec l'accord du débiteur pour une liquidation judiciaire."
+    }
+  },
+  "failureStage": "none"
+}

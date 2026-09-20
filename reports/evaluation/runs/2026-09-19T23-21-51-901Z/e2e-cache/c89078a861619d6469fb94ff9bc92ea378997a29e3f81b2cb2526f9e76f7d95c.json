@@ -1,0 +1,91 @@
+{
+  "questionId": "q055",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 461-17 du Code pénal, la tentative des délits visés au 1° de l’article 461-16 est passible des mêmes causes d’aggravation des peines que les délits eux-mêmes [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "461-17"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-4-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 236.89862100000028,
+      "vectorSearchMs": 605.8521030000411,
+      "jinaRerankingMs": 505.87442599993665,
+      "mappingMs": 0.03319099999498576,
+      "totalMs": 1348.6825289999833,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01380099996458739,
+      "contextBuilderMs": 0.015115000074729323,
+      "generationMs": 1295.827488000039,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2644.5468999999575
+    },
+    "judge": {
+      "questionId": "q055",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle énoncée à l’article 461-17 : la tentative est passible des mêmes causes d’aggravation des peines que les délits concernés. Cette affirmation est directement et intégralement soutenue par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article 461-17 visé par la question et énonce exactement que la tentative des délits prévus au 1° de l'article 461-16 est passible des mêmes causes d'aggravation des peines. Elle couvre intégralement l'affirmation de la réponse générée. La source 2 est sans incidence mais n'affecte pas l'évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 461-17 du Code pénal, la tentative des délits visés au 1° de l’article 461-16 est soumise aux mêmes causes d’aggravation des peines que les délits eux-mêmes. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "461-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1327.983767000027,
+      "routingCalls": 1,
+      "embeddingMs": 235.28029599995352,
+      "vectorSearchMs": 50.00056700001005,
+      "jinaRerankingMs": 472.41411799995694,
+      "mappingMs": 0.03885100001934916,
+      "totalMs": 2085.74769800005,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014178000041283667,
+      "contextBuilderMs": 0.02301700005773455,
+      "generationMs": 1116.9280090000248,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3202.7236440000124
+    },
+    "judge": {
+      "questionId": "q055",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la conséquence prévue par l’article 461-17 : la tentative est passible des mêmes causes d’aggravation des peines. Elle répond directement à la question et cette affirmation est explicitement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 461-17 et énonce explicitement que la tentative des délits prévus au 1° de l’article 461-16 est passible des mêmes causes d’aggravation des peines. Elle est donc parfaitement pertinente et couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

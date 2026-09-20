@@ -1,0 +1,103 @@
+{
+  "questionId": "q226",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L430-1 du Code de commerce, une opération de concentration est réalisée dans les situations suivantes :\n\n1. **Fusion d’entreprises** : lorsque deux ou plusieurs entreprises auparavant indépendantes fusionnent ;\n\n2. **Acquisition du contrôle** : lorsqu’une ou plusieurs personnes ou entreprises acquièrent, directement ou indirectement, le contrôle de tout ou partie d’une ou plusieurs autres entreprises, notamment par :\n   - prise de participation au capital ;\n   - achat d’éléments d’actifs ;\n   - contrat ;\n   - tout autre moyen ;\n\n3. **Création d’une entreprise commune** : lorsqu’une entreprise commune exerce durablement toutes les fonctions d’une entité économique autonome.\n\nLe contrôle correspond à la possibilité d’exercer une **influence déterminante** sur l’activité d’une entreprise, notamment grâce à des droits de propriété, de jouissance ou à des droits ou contrats influençant la composition ou les décisions de ses organes. **Article L430-1 du Code de commerce [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.6997899999842,
+      "vectorSearchMs": 597.3725800001994,
+      "jinaRerankingMs": 937.824237999972,
+      "mappingMs": 0.02776899980381131,
+      "totalMs": 1722.9521860000677,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009839999955147505,
+      "contextBuilderMs": 0.02523400029167533,
+      "generationMs": 2046.5799819999374,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3769.574485000223
+    },
+    "judge": {
+      "questionId": "q226",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les trois hypothèses prévues par l’article L. 430-1 : fusion d’entreprises indépendantes, acquisition directe ou indirecte du contrôle, et création durable d’une entreprise commune autonome. Les précisions sur les modalités d’acquisition et la définition du contrôle sont également explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 430-1 et couvre toutes les hypothèses énoncées : fusion d’entreprises antérieurement indépendantes, acquisition directe ou indirecte du contrôle par les moyens listés, création durable d’une entreprise commune autonome, ainsi que la définition et les illustrations du contrôle par influence déterminante. Les sources 2 et 3 ne sont pas nécessaires à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L430-1 du Code de commerce, une opération de concentration est réalisée dans les situations suivantes :\n\n1. **Fusion** : lorsque deux ou plusieurs entreprises auparavant indépendantes fusionnent.\n\n2. **Acquisition du contrôle** : lorsqu’une ou plusieurs personnes détenant déjà le contrôle d’au moins une entreprise, ou une ou plusieurs entreprises, acquièrent directement ou indirectement le contrôle de tout ou partie d’une ou plusieurs autres entreprises. Cette acquisition peut résulter notamment :\n   - d’une prise de participation au capital ;\n   - de l’achat d’éléments d’actifs ;\n   - d’un contrat ;\n   - ou de tout autre moyen.\n\n3. **Création d’une entreprise commune** : lorsqu’une entreprise commune exerce durablement toutes les fonctions d’une entité économique autonome.\n\nLe contrôle correspond à la possibilité d’exercer une **influence déterminante** sur l’activité d’une entreprise, notamment par des droits de propriété ou de jouissance sur ses biens, ou par des droits ou contrats influençant la composition, les délibérations ou les décisions de ses organes. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L430-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1214.2529520001262,
+      "routingCalls": 1,
+      "embeddingMs": 202.82565200002864,
+      "vectorSearchMs": 170.2772090001963,
+      "jinaRerankingMs": 584.3350499998778,
+      "mappingMs": 0.03186800004914403,
+      "totalMs": 2171.7477110000327,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009837000165134668,
+      "contextBuilderMs": 0.024172999896109104,
+      "generationMs": 2012.5164780002087,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4184.306704000104
+    },
+    "judge": {
+      "questionId": "q226",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les trois hypothèses prévues par l’article L430-1 : fusion d’entreprises indépendantes, acquisition directe ou indirecte du contrôle, et création durable d’une entreprise commune autonome. Les précisions sur les modalités d’acquisition et sur la définition du contrôle sont fidèlement reprises du contexte. Elle répond pleinement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L430-1 visé par la question. Elle énonce les trois situations de concentration (fusion, acquisition directe ou indirecte du contrôle, entreprise commune autonome durable) et couvre également les précisions ajoutées sur les modalités d’acquisition et la définition du contrôle par l’influence déterminante. Les sources 2 et 3 sont accessoires, mais leur présence ne réduit pas la pertinence ni la couverture."
+    }
+  },
+  "failureStage": "none"
+}

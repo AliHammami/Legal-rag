@@ -1,0 +1,87 @@
+{
+  "questionId": "q324",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Il doit informer **sans délai**, par tout moyen permettant d’en justifier, **son fournisseur** ainsi que **les personnes auxquelles il a cédé les produits** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L411-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.31839099992067,
+      "vectorSearchMs": 654.425520000048,
+      "jinaRerankingMs": 580.7884290004149,
+      "mappingMs": 0.02927600033581257,
+      "totalMs": 1438.5879330001771,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008882999420166016,
+      "contextBuilderMs": 0.014313999563455582,
+      "generationMs": 1464.7647589994594,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2903.383647000417
+    },
+    "judge": {
+      "questionId": "q324",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'obligation prévue : information sans délai, par un moyen justifiable, du fournisseur et des personnes auxquelles les produits ont été cédés. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L411-2 directement visé par la question. Elle énonce explicitement l'obligation d'informer sans délai, par tous moyens justifiables, le fournisseur et les personnes auxquelles les produits ont été cédés. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Il doit informer **sans délai**, par tout moyen dont il peut justifier :\n\n- le fournisseur qui lui a fourni les produits ;\n- les personnes auxquelles il les a cédés.\n\nCette obligation s’applique lorsqu’il a connaissance d’une non-conformité à la réglementation portant sur une qualité substantielle des produits. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L411-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2118.1718139993027,
+      "routingCalls": 1,
+      "embeddingMs": 190.2285339999944,
+      "vectorSearchMs": 45.14721699990332,
+      "jinaRerankingMs": 511.1773110004142,
+      "mappingMs": 0.03212600015103817,
+      "totalMs": 2864.7847699997947,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01076700072735548,
+      "contextBuilderMs": 0.011346000246703625,
+      "generationMs": 1273.9569970006123,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4138.772293000482
+    },
+    "judge": {
+      "questionId": "q324",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'obligation prévue : information sans délai, par un moyen justifiable, du fournisseur et des personnes auxquelles les produits ont été cédés, lorsqu'une non-conformité réglementaire portant sur une qualité substantielle est connue. Tous les éléments sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L411-2 visé par la question. Elle établit explicitement l'obligation d'informer sans délai, par des moyens justifiables, le fournisseur et les personnes auxquelles les produits ont été cédés, ainsi que la condition tenant à la connaissance d'une non-conformité réglementaire portant sur une qualité substantielle. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

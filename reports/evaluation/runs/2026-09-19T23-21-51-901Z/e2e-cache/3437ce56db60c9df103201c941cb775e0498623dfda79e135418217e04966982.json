@@ -1,0 +1,87 @@
+{
+  "questionId": "q250",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L341-10 du Code monétaire et financier**, les produits dont le risque maximum n’est pas connu au moment de la souscription **ne peuvent pas faire l’objet de démarchage**. Il en va de même des produits dont le risque de perte est supérieur au montant de l’apport financier initial. [Source 1]\n\nDes exceptions sont toutefois prévues :\n\n- les parts de **sociétés civiles de placement immobilier (SCPI)** peuvent être démarchées ; après un délai de deux ans suivant la promulgation de la loi du 1er août 2003, seules sont concernées celles dont les statuts limitent la responsabilité de chaque associé au montant de sa part au capital ;\n- les produits entrant dans le cadre d’une **opération normale de couverture**, à condition qu’ils soient proposés exclusivement à des **personnes morales**.\n\nCes restrictions s’appliquent sans préjudice des règles particulières éventuellement prévues pour le démarchage de certains produits. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L341-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.82538400031626,
+      "vectorSearchMs": 671.8169430000708,
+      "jinaRerankingMs": 569.1426240000874,
+      "mappingMs": 0.10790399927645922,
+      "totalMs": 1434.9240629998967,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015942000783979893,
+      "contextBuilderMs": 0.013152999803423882,
+      "generationMs": 2830.0019859997556,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4264.968144999817
+    },
+    "judge": {
+      "questionId": "q250",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement l’interdiction de démarchage pour les produits au risque maximal inconnu à la souscription et ceux exposant à une perte supérieure à l’apport initial. Elle mentionne correctement les deux exceptions pertinentes : SCPI avec la condition statutaire de limitation de responsabilité après le délai indiqué, et produits de couverture proposés exclusivement aux personnes morales. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L341-10 et vise précisément les produits dont le risque maximal n’est pas connu à la souscription. Elle étaye l’interdiction de démarchage, le cas du risque de perte supérieur à l’apport initial, les exceptions relatives aux SCPI avec leur condition temporelle et statutaire, aux opérations normales de couverture réservées aux personnes morales, ainsi que la réserve des règles particulières applicables à certains produits."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L341-10 du Code monétaire et financier**, les produits dont le risque maximum n’est pas connu au moment de la souscription **ne peuvent pas faire l’objet de démarchage** [Source 1].\n\nCette interdiction connaît toutefois deux exceptions :\n\n- les **parts de sociétés civiles de placement immobilier (SCPI)** ; après le délai prévu par le texte, seules sont concernées celles dont les statuts limitent la responsabilité de chaque associé au montant de sa part au capital ;\n- les produits entrant dans le cadre d’une **opération normale de couverture**, à condition qu’ils soient proposés **exclusivement à des personnes morales** [Source 1].\n\nLe même régime d’interdiction s’applique aux produits dont le risque de perte est supérieur au montant de l’apport financier initial.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L341-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1407.9786009993404,
+      "routingCalls": 1,
+      "embeddingMs": 287.5835760002956,
+      "vectorSearchMs": 120.3897859994322,
+      "jinaRerankingMs": 571.1734960004687,
+      "mappingMs": 0.043473999947309494,
+      "totalMs": 2388.1893260004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011242000386118889,
+      "contextBuilderMs": 0.010261000134050846,
+      "generationMs": 1810.6033999994397,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4198.822155999951
+    },
+    "judge": {
+      "questionId": "q250",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement l’interdiction de démarchage visant les produits dont le risque maximal n’est pas connu à la souscription, ainsi que le cas des pertes pouvant excéder l’apport initial. Elle expose les deux exceptions pertinentes : certaines parts de SCPI, avec la condition statutaire de limitation de responsabilité après le délai légal, et les produits de couverture proposés exclusivement aux personnes morales. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L341-10 et vise précisément l’interdiction de démarchage des produits dont le risque maximal n’est pas connu à la souscription, ainsi que le cas où la perte peut excéder l’apport initial. Elle couvre également intégralement les deux exceptions mentionnées dans la réponse : les parts de SCPI avec la condition statutaire applicable après le délai prévu, et les produits de couverture proposés exclusivement à des personnes morales."
+    }
+  },
+  "failureStage": "none"
+}

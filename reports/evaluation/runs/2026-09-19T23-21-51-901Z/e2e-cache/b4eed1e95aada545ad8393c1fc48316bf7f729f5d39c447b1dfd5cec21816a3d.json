@@ -1,0 +1,91 @@
+{
+  "questionId": "q383",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 2429 du Code civil** :\n\n- **Échéance ou dernière échéance déterminée** : l’inscription peut produire effet jusqu’à **un an au plus après cette échéance**, dans la limite d’une durée totale de **cinquante ans**.\n- **Échéance indéterminée** — notamment dans le cas visé par l’article L. 315-1 du Code de la consommation — ou hypothèque rechargeable : durée maximale de **cinquante ans à compter de la formalité**.\n- **Échéance antérieure ou concomitante à l’inscription** : durée maximale de **dix ans à compter de la formalité**.\n- En cas de pluralité de créances, le créancier peut prendre des inscriptions distinctes ou une inscription unique jusqu’à la date la plus éloignée applicable. [Source 1]\n\nConcernant les **alternatives à l’emprisonnement pour un délit**, le contexte fourni ne contient pas l’**article 131-5-1 du Code pénal**. L’article 131-4 fourni indique uniquement l’échelle des peines d’emprisonnement et ne précise pas les peines alternatives. Il n’est donc pas possible d’énumérer ces alternatives de manière fiable à partir des seules sources disponibles. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2429"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.9714390002191,
+      "vectorSearchMs": 689.6897929999977,
+      "jinaRerankingMs": 572.2884830003604,
+      "mappingMs": 0.029534999281167984,
+      "totalMs": 1452.1015529995784,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03698199987411499,
+      "contextBuilderMs": 0.022618000395596027,
+      "generationMs": 3360.375397999771,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4812.545389000326
+    },
+    "judge": {
+      "questionId": "q383",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La partie relative à l’article 2429 est correcte et complète, y compris les plafonds de cinquante ans et de dix ans ainsi que la règle d’un an après l’échéance déterminée. En revanche, la réponse ne fournit pas l’alternative prévue par l’article 131-5-1 (le stage, d’une durée maximale d’un mois, à effectuer dans les six mois), pourtant demandée et présente dans la référence. Son refus est bien justifié par le contexte réellement fourni, qui ne contient que l’article 131-4 : toutes ses affirmations sont donc solidement fondées dans ce contexte. Toutefois, puisque l’abstention n’était pas attendue et que la seconde partie de la question n’est pas effectivement traitée, l’abstention n’est pas correcte au regard de l’indicateur attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les règles de durée d'inscription hypothécaire de l'article 2429. La source 2 est seulement connexe à la seconde partie : elle concerne l'échelle de l'emprisonnement (article 131-4), et non les alternatives prévues à l'article 131-5-1, qui manque donc pour répondre directement à cette partie. Toutefois, elle suffit à étayer le constat de la réponse selon lequel le contexte fourni ne contient pas l'article 131-5-1 et ne permet pas d'énumérer de façon fiable les alternatives. Toutes les affirmations effectivement formulées dans la réponse sont ainsi soutenues par les sources."
+    }
+  },
+  "routing": {
+    "answer": "### Durées maximales d’inscription de l’hypothèque\n\nSelon l’**article 2429 du Code civil** :\n\n- **Échéance ou dernière échéance déterminée**, lorsque l’inscription est prise avant celle-ci : l’inscription peut produire effet jusqu’à **un an au plus après l’échéance**, sans pouvoir dépasser une durée totale de **cinquante ans** [Source 1].\n- **Échéance indéterminée**, notamment dans certains contrats de crédit, ou hypothèque assortie d’une clause de rechargement : la durée maximale est de **cinquante ans à compter de la formalité** [Source 1].\n- **Échéance antérieure ou concomitante à l’inscription** : la durée maximale est de **dix ans à compter de la formalité** [Source 1].\n- Lorsque plusieurs créances sont garanties et relèvent de régimes différents, le créancier peut prendre des inscriptions distinctes ou une inscription unique courant jusqu’à la date la plus éloignée [Source 1].\n\n### Alternatives à l’emprisonnement\n\nLe texte de l’**article 131-5-1 du Code pénal** n’est pas fourni dans le contexte. Il n’est donc pas possible d’énumérer, à partir des seules sources disponibles, les peines alternatives pouvant être prescrites pour un délit puni d’emprisonnement.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2429"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.876920999959,
+      "routingCalls": 1,
+      "embeddingMs": 195.29900800064206,
+      "vectorSearchMs": 162.69774799980223,
+      "jinaRerankingMs": 585.0125400004908,
+      "mappingMs": 0.02918399963527918,
+      "totalMs": 2068.94550899975,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00989999994635582,
+      "contextBuilderMs": 0.011877999641001225,
+      "generationMs": 4089.7807620000094,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6158.756660000421
+    },
+    "judge": {
+      "questionId": "q383",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie relative à l’article 2429 du code civil est exacte et reprend toutes les hypothèses pertinentes : un an après l’échéance déterminée dans la limite de cinquante ans, cinquante ans en cas d’échéance indéterminée ou de rechargement, et dix ans lorsque l’échéance est antérieure ou concomitante. En revanche, la réponse ne fournit pas l’alternative prévue par l’article 131-5-1 du code pénal (notamment le stage, d’une durée maximale d’un mois), ce qui la rend partielle. Son abstention sur ce point est correctement motivée par l’absence de cet article dans le contexte. Toutes les affirmations formulées sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la partie relative à l'article 2429 du code civil et couvre précisément toutes les durées et hypothèses exposées. Aucune source sur l'article 131-5-1 du code pénal n'est fournie : elle ne permet donc pas de répondre au fond à cette partie, mais elle justifie l'abstention explicite de la réponse, qui constate cette absence. Les affirmations effectivement formulées dans la réponse sont couvertes par la source ou par ce constat d'absence."
+    }
+  },
+  "failureStage": "generation"
+}

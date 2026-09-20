@@ -1,0 +1,87 @@
+{
+  "questionId": "q151",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L6242-1 du Code du travail**, le taux de la contribution supplémentaire à l’apprentissage dépend principalement du **quotient entre l’effectif salarié annuel relevant de certaines catégories et l’effectif total de l’entreprise** [Source 1].\n\nSont notamment pris en compte au numérateur les salariés en contrat d’apprentissage ou de professionnalisation, certains salariés embauchés en CDI à l’issue de ces contrats, ainsi que les bénéficiaires d’une convention industrielle de formation par la recherche [Source 1].\n\nLes taux sont les suivants :\n\n- **0,4 %** lorsque le quotient est **inférieur à 1 %** ;\n  - ce taux est porté à **0,6 %** lorsque l’entreprise compte **plus de 2 000 salariés** ;\n- **0,2 %** lorsque le quotient est **au moins égal à 1 % et inférieur à 2 %** ;\n- **0,1 %** lorsque le quotient est **au moins égal à 2 % et inférieur à 3 %** ;\n- **0,05 %** lorsque le quotient est **au moins égal à 3 % et inférieur à 5 %** [Source 1].\n\nLa contribution concerne les entreprises d’au moins **250 salariés** redevables de la taxe d’apprentissage lorsque ce quotient est inférieur à **5 %**. Toutefois, une exonération est prévue si l’effectif relevant des catégories prises en compte atteint au moins **3 %** et a progressé d’au moins **10 %** par rapport à l’année précédente [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6242-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 332.8850960000418,
+      "vectorSearchMs": 923.9158200002275,
+      "jinaRerankingMs": 574.4532320001163,
+      "mappingMs": 0.02208899985998869,
+      "totalMs": 1831.3064850000665,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009573000017553568,
+      "contextBuilderMs": 0.012847000267356634,
+      "generationMs": 3227.876942999661,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5059.215691999998
+    },
+    "judge": {
+      "questionId": "q151",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le critère central (quotient entre les effectifs des catégories éligibles et l'effectif total), les catégories prises en compte, l'ensemble des tranches de taux et la majoration à 0,6 % au-delà de 2 000 salariés. Elle mentionne aussi, à juste titre, le champ d'application sous le seuil de 5 % et l'exonération liée au seuil de 3 % et à une progression de 10 %. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L6242-1 visé par la question. Elle établit le critère du quotient, les catégories incluses au numérateur, toutes les tranches de taux, la majoration au-delà de 2 000 salariés, ainsi que le champ d’application et l’exonération additionnellement mentionnés dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L6242-1 du Code du travail** [Source 1], le taux de la contribution supplémentaire à l’apprentissage dépend principalement du **quotient entre l’effectif annuel salarié relevant de certaines catégories et l’effectif total de l’entreprise**, calculé au cours de l’année de référence.\n\nSont notamment pris en compte au numérateur :\n\n- les salariés en contrat de professionnalisation ou d’apprentissage ;\n- les salariés embauchés en CDI à l’issue de ces contrats, pendant l’année suivant leur terme ;\n- les personnes bénéficiant d’une convention industrielle de formation par la recherche.\n\nLa contribution est due lorsque ce quotient est **inférieur à 5 %**, pour les entreprises d’au moins 250 salariés redevables de la taxe d’apprentissage. Le taux est ensuite fixé ainsi :\n\n- **moins de 1 %** : **0,4 %** ;\n  - ce taux est porté à **0,6 %** lorsque l’entreprise compte plus de 2 000 salariés ;\n- **de 1 % à moins de 2 %** : **0,2 %** ;\n- **de 2 % à moins de 3 %** : **0,1 %** ;\n- **de 3 % à moins de 5 %** : **0,05 %**.\n\nLa contribution est assise sur les rémunérations retenues pour l’assiette de la taxe d’apprentissage. [Source 1]\n\nÀ noter : une exonération est prévue lorsque l’effectif relevant des catégories prises en compte atteint au moins **3 %** et a progressé d’au moins **10 %** par rapport à l’année précédente. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6242-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1230.0386459999718,
+      "routingCalls": 1,
+      "embeddingMs": 243.4937370000407,
+      "vectorSearchMs": 311.22507999977097,
+      "jinaRerankingMs": 572.836562000215,
+      "mappingMs": 0.025110000278800726,
+      "totalMs": 2357.668661999982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009738999884575605,
+      "contextBuilderMs": 0.009977000299841166,
+      "generationMs": 3584.6396160000004,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5942.334876999725
+    },
+    "judge": {
+      "questionId": "q151",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement les critères du quotient, les catégories incluses au numérateur, le seuil d’assujettissement de 5 %, l’ensemble des tranches de taux et la majoration à 0,6 % au-delà de 2 000 salariés. Elle mentionne aussi, à juste titre, l’assiette et l’exonération conditionnelle. Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L6242-1 directement applicable à la question. Elle énonce le quotient déterminant l'assujettissement et les catégories comprises au numérateur, le seuil de 5 %, toutes les tranches de taux, la majoration pour un effectif excédant 2 000 salariés, ainsi que l'assiette et l'exonération mentionnées dans la réponse. Toutes les affirmations importantes de la réponse sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

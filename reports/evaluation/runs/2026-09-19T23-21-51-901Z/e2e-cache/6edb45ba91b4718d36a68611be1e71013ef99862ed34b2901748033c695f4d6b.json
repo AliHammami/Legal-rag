@@ -1,0 +1,87 @@
+{
+  "questionId": "q361",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La formation des salariés appelés à exercer des responsabilités syndicales peut être organisée :\n\n- par des centres spécialisés directement rattachés aux organisations syndicales représentatives ;\n- par des instituts internes aux universités ;\n- par d’autres organismes dont la spécialisation est assurée totalement ou partiellement en accord avec des organisations syndicales, à condition qu’ils aient obtenu l’agrément du ministre chargé du Travail pour bénéficier des dispositions de l’article L. 2145-3 du Code du travail.\n\nElle concerne également les adhérents à une organisation syndicale amenés à intervenir en faveur des salariés. **Article L. 2145-2 du Code du travail [Source 1].**\n\nEn revanche, la source fournie ne contient aucune disposition relative à la responsabilité des membres des organes de direction des associations impliquées. Il n’est donc pas possible de répondre à cette partie de la question à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.0012410003692,
+      "vectorSearchMs": 659.221190999262,
+      "jinaRerankingMs": 534.0461729997769,
+      "mappingMs": 0.04764899984002113,
+      "totalMs": 1403.3465690007433,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014974999241530895,
+      "contextBuilderMs": 0.013531999662518501,
+      "generationMs": 2099.7260410003364,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3503.114166000858
+    },
+    "judge": {
+      "questionId": "q361",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement et de façon détaillée l’organisation de la formation prévue à l’article L. 2145-2 du Code du travail. Elle ne répond toutefois pas au volet relatif à la responsabilité des dirigeants associatifs, qui constitue une partie essentielle de la question et est traité par la référence. Cette omission est justifiée au regard du contexte effectivement fourni, lequel ne contient aucune disposition sur cette responsabilité : l’abstention est donc appropriée pour ce seul volet. Toutes les affirmations positives sont étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente et très précise pour le volet relatif à l’organisation de la formation syndicale (centres rattachés aux syndicats représentatifs, instituts universitaires, organismes agréés). Elle ne fournit toutefois aucune règle sur la responsabilité des membres des organes dirigeants d’associations, qui constitue l’autre partie importante de la question. Les affirmations de la réponse générée sont néanmoins toutes couvertes : la description de la formation reprend fidèlement l’article L. 2145-2, et le constat d’absence de disposition sur la responsabilité associative est exact au regard de l’unique source fournie."
+    }
+  },
+  "routing": {
+    "answer": "La formation des salariés appelés à exercer des responsabilités syndicales peut être organisée :\n\n- par des centres spécialisés directement rattachés aux organisations syndicales représentatives ;\n- par des instituts internes aux universités ;\n- par d’autres organismes, lorsque leur spécialisation est assurée totalement ou partiellement en accord avec des organisations syndicales, à condition qu’ils aient reçu l’agrément du ministre chargé du travail pour bénéficier des dispositions de l’article L. 2145-3 du Code du travail.\n\nCes modalités résultent de l’article L. 2145-2 du Code du travail [Source 1].\n\nEn revanche, la source fournie ne contient aucune disposition relative à la responsabilité des membres des organes de direction des associations impliquées. Il n’est donc pas possible de répondre à ce second aspect à partir du seul contexte disponible.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2431.9086809996516,
+      "routingCalls": 1,
+      "embeddingMs": 212.07211900036782,
+      "vectorSearchMs": 366.318134999834,
+      "jinaRerankingMs": 509.85124799981713,
+      "mappingMs": 0.038681999780237675,
+      "totalMs": 3520.221366999671,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010591000318527222,
+      "contextBuilderMs": 0.010859999805688858,
+      "generationMs": 1906.1858959998935,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5426.436904000118
+    },
+    "judge": {
+      "questionId": "q361",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La description de l'organisation de la formation est exacte et reprend fidèlement l'article L. 2145-2. En revanche, la réponse ne fournit pas la règle relative à la responsabilité des dirigeants associatifs attendue par la question et la référence, ce qui la rend incomplète et seulement partiellement correcte au regard de l'ensemble de la question. Cette omission est néanmoins justifiée par le contexte effectivement fourni, qui ne contient aucune disposition sur cette responsabilité : toutes les affirmations produites sont donc solidement fondées sur le contexte. La réponse ne constitue pas une abstention globale : elle répond au premier volet et explicite correctement la limite du contexte pour le second."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le premier volet sur l'organisation de la formation syndicale et permet de constater qu'elle ne traite pas de la responsabilité des dirigeants associatifs. Elle demeure toutefois insuffisante pour répondre pleinement à la question, faute de disposition relative à cette responsabilité. Toutes les affirmations effectivement formulées dans la réponse sont couvertes : les modalités de formation reprennent l'article L. 2145-2 et la limite du contexte est correctement constatée."
+    }
+  },
+  "failureStage": "generation"
+}

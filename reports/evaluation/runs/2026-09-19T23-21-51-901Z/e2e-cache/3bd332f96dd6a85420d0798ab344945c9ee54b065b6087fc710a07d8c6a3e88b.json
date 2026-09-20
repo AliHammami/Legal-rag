@@ -1,0 +1,95 @@
+{
+  "questionId": "q201",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article L. 244-1 du Code de commerce**, les dispositions suivantes s’appliquent aux sociétés par actions simplifiées :\n\n- les articles **L. 242-1 à L. 242-6** ;\n- l’article **L. 242-8** ;\n- les articles **L. 242-17 à L. 242-24**.  \n  **[Source 1]**\n\nEn outre, les dispositions des articles **L. 242-20, L. 821-8 et L. 821-9 du Code de commerce** s’appliquent aux commissaires aux comptes des sociétés par actions simplifiées. **[Source 1]**\n\nConcernant les dirigeants, **les peines prévues pour le président, les administrateurs ou les directeurs généraux des sociétés anonymes sont applicables au président et aux dirigeants des sociétés par actions simplifiées**. Le texte fourni ne précise toutefois pas la nature ni le montant de ces peines. **[Source 1]**\n\nCes règles s’appliquent également à toute personne ayant exercé en fait la direction de la société sous le couvert ou à la place du président ou des dirigeants, conformément à **l’article L. 244-4 du Code de commerce**. **[Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.96271400013939,
+      "vectorSearchMs": 609.0504250000231,
+      "jinaRerankingMs": 528.554025999736,
+      "mappingMs": 0.02358399983495474,
+      "totalMs": 1373.635685000103,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010207000188529491,
+      "contextBuilderMs": 0.014380999840795994,
+      "generationMs": 3546.674283000175,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4920.342115000356
+    },
+    "judge": {
+      "questionId": "q201",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les articles visés par L. 244-1 et indique correctement que les peines applicables aux dirigeants de SA s’appliquent au président et aux dirigeants de SAS. Les précisions supplémentaires sur les commissaires aux comptes et les dirigeants de fait sont exactes, pertinentes et explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit L. 244-1, énumère les articles applicables aux SAS et prévoit l'application aux dirigeants de SAS des peines prévues pour les dirigeants de SA. Elle couvre aussi l'ajout sur les commissaires aux comptes. La source 2 est directement pertinente pour l'affirmation complémentaire sur les dirigeants de fait, qu'elle énonce explicitement. Toutes les affirmations substantielles de la réponse sont ainsi étayées."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L. 244-1 du Code de commerce**, les dispositions suivantes s’appliquent aux sociétés par actions simplifiées :\n\n- les articles **L. 242-1 à L. 242-6** ;\n- l’article **L. 242-8** ;\n- les articles **L. 242-17 à L. 242-24** ;\n- l’article **L. 242-20** concernant les commissaires aux comptes ;\n- les articles **L. 821-8 et L. 821-9** concernant également les commissaires aux comptes.  \n  [Source 1]\n\nS’agissant des peines, celles prévues pour le **président, les administrateurs ou les directeurs généraux des sociétés anonymes** sont applicables au **président et aux dirigeants des sociétés par actions simplifiées**. [Source 1]\n\nLe contexte fourni ne précise toutefois ni la nature ni le montant de ces peines. Ces règles s’appliquent également à toute personne ayant exercé de fait la direction d’une SAS sous le couvert ou à la place de ses dirigeants, conformément à l’**article L. 244-4 du Code de commerce**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2772.15899799997,
+      "routingCalls": 1,
+      "embeddingMs": 328.5831690002233,
+      "vectorSearchMs": 271.00147899985313,
+      "jinaRerankingMs": 552.6511459997855,
+      "mappingMs": 0.02186799980700016,
+      "totalMs": 3924.4425129997544,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009473000187426805,
+      "contextBuilderMs": 0.014295000117272139,
+      "generationMs": 3041.1639700001106,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6965.638040999882
+    },
+    "judge": {
+      "questionId": "q201",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les articles L. 242-1 à L. 242-6, L. 242-8 et L. 242-17 à L. 242-24, ainsi que l’application aux dirigeants de SAS des peines prévues pour les dirigeants de sociétés anonymes. Elle mentionne aussi, conformément au contexte, les dispositions applicables aux commissaires aux comptes et l’extension aux dirigeants de fait prévue par L. 244-4. Toutes les affirmations importantes sont explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce exactement les articles applicables aux SAS au titre de L. 244-1 et la règle d'application des peines des dirigeants de SA aux présidents et dirigeants de SAS. Elle couvre également les précisions sur les commissaires aux comptes. La source 2 est pertinente pour l'affirmation additionnelle relative aux dirigeants de fait et la couvre explicitement. Toutes les affirmations substantielles de la réponse générée sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

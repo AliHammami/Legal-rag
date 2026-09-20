@@ -1,0 +1,87 @@
+{
+  "questionId": "q476",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’attribution d’une parcelle par la SAFER.\n\nLa seule règle disponible concerne l’**attribution préférentielle** d’une exploitation agricole : elle est de droit si l’exploitation ne dépasse pas les limites de superficie fixées par décret en Conseil d’État et si le maintien dans l’indivision n’a pas été ordonné (**article 832 du Code civil [Source 1]**).\n\nAucune disposition relative aux conditions d’intervention ou d’attribution par la SAFER n’est fournie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 270.8268500007689,
+      "vectorSearchMs": 600.8717290014029,
+      "jinaRerankingMs": 567.0721169989556,
+      "mappingMs": 0.02578200027346611,
+      "totalMs": 1438.8228200003505,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011475000530481339,
+      "contextBuilderMs": 0.01504799909889698,
+      "generationMs": 1834.8846579995006,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3273.741883000359
+    },
+    "judge": {
+      "questionId": "q476",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne contient aucune règle sur les conditions d’attribution d’une parcelle par une SAFER. Elle distingue correctement la seule disposition fournie, relative à l’attribution préférentielle d’une exploitation agricole en indivision (article 832 du Code civil), sans l’assimiler aux règles applicables aux SAFER. Toutes les affirmations sont supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie ne traite pas des SAFER mais elle est directement utile pour justifier l’abstention : elle porte uniquement sur l’attribution préférentielle d’une exploitation agricole au titre de l’article 832 du Code civil, ce qui permet de constater que le contexte ne fournit pas les règles recherchées. Elle couvre les conditions précisément énoncées dans la réponse (limites de superficie et absence de maintien de l’indivision) ainsi que la distinction avec les conditions d’attribution par une SAFER."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions spécifiques d’attribution d’une parcelle par la SAFER.\n\nIl indique seulement que l’**attribution préférentielle** est de droit pour une exploitation agricole qui :\n\n- ne dépasse pas les limites de superficie fixées par décret en Conseil d’État ;\n- fait l’objet d’un partage dans lequel le maintien dans l’indivision n’a pas été ordonné.\n\nCes conditions résultent de l’**article 832 du Code civil** [Source 1]. La source ne précise toutefois ni la procédure SAFER, ni les critères de sélection du bénéficiaire, ni les conditions propres à l’attribution d’une parcelle par cette société.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1157.555339999497,
+      "routingCalls": 1,
+      "embeddingMs": 234.99573200009763,
+      "vectorSearchMs": 573.2558549996465,
+      "jinaRerankingMs": 570.2454270012677,
+      "mappingMs": 0.02077299915254116,
+      "totalMs": 2536.1005679983646,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009932000190019608,
+      "contextBuilderMs": 0.017900001257658005,
+      "generationMs": 2100.291209999472,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4636.42949100025
+    },
+    "judge": {
+      "questionId": "q476",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement que le contexte ne contient pas les règles d’attribution d’une parcelle par une SAFER et s’abstient donc de répondre sur ce point. Elle distingue à juste titre l’attribution préférentielle relevant de l’article 832 du Code civil, dont elle restitue fidèlement les deux conditions présentes dans le contexte, de la procédure propre aux SAFER."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est pertinente pour justifier l’abstention : elle traite exclusivement de l’attribution préférentielle d’une exploitation agricole dans le cadre de l’article 832 du Code civil, et non des conditions d’attribution par une SAFER. Elle couvre les deux conditions citées dans la réponse (limites de superficie fixées par décret et absence de maintien ordonné dans l’indivision) ainsi que le constat que le contenu fourni ne décrit ni procédure ni critères propres aux SAFER."
+    }
+  },
+  "failureStage": "none"
+}

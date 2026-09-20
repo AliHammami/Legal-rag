@@ -1,0 +1,95 @@
+{
+  "questionId": "q282",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L466-1 du Code monétaire et financier**, l’avis de l’Autorité des marchés financiers (AMF) est :\n\n- **Facultatif** : les autorités judiciaires peuvent le demander à tout moment lorsqu’elles sont saisies de poursuites :\n  - concernant des infractions mettant en cause des sociétés dont les titres sont admis aux négociations sur un marché réglementé ou offerts au public sur un système multilatéral de négociation ;\n  - ou concernant des infractions commises à l’occasion d’opérations sur un marché d’instruments financiers ou sur les actifs mentionnés au II de l’article L421-1.\n\n- **Obligatoire** : l’avis doit être demandé lorsque les poursuites sont engagées en application des **articles L465-1 à L465-3-3 du Code monétaire et financier**. [Source 1]\n\nLes juridictions peuvent également appeler le président de l’AMF ou son représentant à présenter des conclusions à l’audience, sans préjudice de cette obligation spécifique. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L466-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L621-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.28078600019217,
+      "vectorSearchMs": 619.4670519996434,
+      "jinaRerankingMs": 545.1288799997419,
+      "mappingMs": 0.03321000002324581,
+      "totalMs": 1396.9362460002303,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00964100006967783,
+      "contextBuilderMs": 0.022803000174462795,
+      "generationMs": 3107.891241000034,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4504.867916999385
+    },
+    "judge": {
+      "questionId": "q282",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement le caractère facultatif de la demande d’avis dans les hypothèses visées et son caractère obligatoire pour les poursuites engagées en application des articles L. 465-1 à L. 465-3-3. Ces éléments sont explicitement repris du contexte. La mention additionnelle relative à l’intervention du président de l’AMF à l’audience est également exactement supportée par la source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L. 466-1 et couvre intégralement les conditions de sollicitation facultative et obligatoire de l’avis de l’AMF. La source 2 est directement pertinente pour l’affirmation complémentaire concernant les conclusions du président de l’AMF ou de son représentant à l’audience. Toutes les affirmations importantes de la réponse sont explicitement soutenues."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L466-1 du Code monétaire et financier**, les autorités judiciaires compétentes peuvent solliciter l’avis de l’Autorité des marchés financiers (AMF), à tout moment de la procédure, dans deux situations :\n\n- lorsque les poursuites concernent des infractions mettant en cause des sociétés dont les titres sont admis aux négociations sur un marché réglementé ou offerts au public sur un système multilatéral de négociation ;\n- lorsque les infractions ont été commises à l’occasion d’opérations portant sur un marché d’instruments financiers ou sur les actifs mentionnés au II de l’article L421-1.\n\nLa demande d’avis est **facultative** dans ces cas. En revanche, elle devient **obligatoire** lorsque les poursuites sont engagées sur le fondement des **articles L465-1 à L465-3-3 du Code monétaire et financier**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L466-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L621-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.915621000342,
+      "routingCalls": 1,
+      "embeddingMs": 247.29127299971879,
+      "vectorSearchMs": 177.81715200003237,
+      "jinaRerankingMs": 547.842749000527,
+      "mappingMs": 0.034506999887526035,
+      "totalMs": 2304.9284950001165,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01119499932974577,
+      "contextBuilderMs": 0.017467999830842018,
+      "generationMs": 2633.7716180002317,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4938.738536000252
+    },
+    "judge": {
+      "questionId": "q282",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux hypothèses dans lesquelles l'avis peut être demandé, précise que cette faculté vaut à tout stade de la procédure, et indique correctement le caractère obligatoire de la consultation pour les poursuites fondées sur les articles L. 465-1 à L. 465-3-3. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 466-1 et couvre intégralement les conditions de sollicitation facultative de l'avis, le moment de la procédure, ainsi que l'obligation de sollicitation pour les poursuites fondées sur les articles L. 465-1 à L. 465-3-3. La source 2 est accessoire mais cohérente avec le sujet."
+    }
+  },
+  "failureStage": "none"
+}

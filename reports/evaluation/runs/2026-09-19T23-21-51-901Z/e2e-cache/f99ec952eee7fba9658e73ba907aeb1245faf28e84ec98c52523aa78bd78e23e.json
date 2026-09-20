@@ -1,0 +1,87 @@
+{
+  "questionId": "q135",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L5214-1 du Code du travail, le fonds a pour objectif d’accroître les moyens consacrés à l’insertion professionnelle des personnes handicapées en milieu ordinaire de travail.\n\nSa gestion est confiée à une association composée :\n\n- de représentants des salariés ;\n- de représentants des employeurs ;\n- de représentants des personnes handicapées ;\n- de personnalités qualifiées.\n\nLes statuts de cette association doivent être agréés par l’autorité administrative. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5214-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.57839399995282,
+      "vectorSearchMs": 659.919366999995,
+      "jinaRerankingMs": 537.8439170001075,
+      "mappingMs": 0.0911429999396205,
+      "totalMs": 1430.4670719997957,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03665400017052889,
+      "contextBuilderMs": 0.011436000000685453,
+      "generationMs": 1380.4382419995964,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2810.961012999993
+    },
+    "judge": {
+      "questionId": "q135",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l'objet du fonds, la composition de l'association gestionnaire et l'agrément de ses statuts par l'autorité administrative. Toutes ces affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L5214-1 et est entièrement pertinente. Elle étaye l'objectif du fonds, la gestion par une association administrée par les représentants mentionnés et des personnalités qualifiées, ainsi que l'agrément des statuts par l'autorité administrative."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L5214-1 du Code du travail, le fonds a pour objectif d’accroître les moyens consacrés à l’insertion professionnelle des personnes handicapées en milieu ordinaire de travail.\n\nSa gestion est confiée à une association composée de représentants :\n\n- des salariés ;\n- des employeurs ;\n- des personnes handicapées ;\n- ainsi que de personnalités qualifiées.\n\nLes statuts de cette association doivent être agréés par l’autorité administrative. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5214-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1437.9573099999689,
+      "routingCalls": 1,
+      "embeddingMs": 244.95754799991846,
+      "vectorSearchMs": 223.6276839999482,
+      "jinaRerankingMs": 559.1722389999777,
+      "mappingMs": 0.028295000083744526,
+      "totalMs": 2465.769422999583,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010657000355422497,
+      "contextBuilderMs": 0.013081999961286783,
+      "generationMs": 1848.1167009999044,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4313.918059999589
+    },
+    "judge": {
+      "questionId": "q135",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement l’objet du fonds, la composition de l’association gestionnaire et l’agrément administratif de ses statuts. Tous ces éléments sont explicitement présents dans le contexte. L’omission de la précision relative à l’attribution de subventions n’est pas significative au regard de la question, centrée sur les objectifs et la composition."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L5214-1 et est exactement pertinente : elle établit l'objectif du fonds, les catégories de représentants administrant l'association et l'agrément administratif de ses statuts. Elle couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q472",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les **obligations déclaratives en matière de TVA**.\n\nLa seule disposition communiquée, l’**article L441-9 du Code de commerce** [Source 1], concerne les obligations de **facturation** : émission et conservation de la facture, mentions obligatoires, date de règlement, pénalités de retard et indemnité forfaitaire de recouvrement. Elle ne précise pas les déclarations de TVA à effectuer, leur périodicité, ni les modalités de paiement.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.15886299870908,
+      "vectorSearchMs": 673.891332000494,
+      "jinaRerankingMs": 610.6177370008081,
+      "mappingMs": 0.040356000885367393,
+      "totalMs": 1495.7524800002575,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017751000821590424,
+      "contextBuilderMs": 0.016392000019550323,
+      "generationMs": 1472.8431739993393,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2968.6403419990093
+    },
+    "judge": {
+      "questionId": "q472",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement de répondre sur les obligations déclaratives de TVA, faute de contexte pertinent. Elle identifie correctement que l'unique extrait porte sur la facturation (article L441-9 du Code de commerce) et non sur les déclarations, périodicités ou paiements de TVA. Toutes ces affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique est directement pertinente pour justifier l’abstention : elle porte sur la facturation professionnelle, les mentions de facture et les conditions de règlement, sans traiter des déclarations de TVA, de leur périodicité ou de leurs modalités de paiement. Elle couvre donc les constats essentiels formulés dans la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les obligations déclaratives en matière de TVA.\n\nLa seule disposition communiquée, l’**article L441-9 du Code de commerce** [Source 1], concerne les obligations de facturation : émission et conservation des factures, mentions obligatoires, date de règlement, pénalités et indemnité forfaitaire. Elle ne précise pas les modalités ni les échéances des déclarations de TVA.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1046.1647150013596,
+      "routingCalls": 1,
+      "embeddingMs": 207.2409710008651,
+      "vectorSearchMs": 625.8019309993833,
+      "jinaRerankingMs": 599.576492998749,
+      "mappingMs": 0.03154600039124489,
+      "totalMs": 2478.8388189990073,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014847001060843468,
+      "contextBuilderMs": 0.01929299905896187,
+      "generationMs": 1519.0130019988865,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3997.8977809995413
+    },
+    "judge": {
+      "questionId": "q472",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient correctement : le seul contexte porte sur la facturation commerciale et ne permet pas d'établir les obligations déclaratives de TVA. Elle identifie précisément le champ de l'article L441-9 et explique pourquoi il est insuffisant."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, la source est pertinente car son contenu, limité aux obligations de facturation commerciale (émission, conservation et mentions de facture, règlement et pénalités), permet de constater qu’elle ne fournit ni modalités ni échéances de déclaration de TVA. Elle couvre les constats essentiels formulés par la réponse."
+    }
+  },
+  "failureStage": "none"
+}

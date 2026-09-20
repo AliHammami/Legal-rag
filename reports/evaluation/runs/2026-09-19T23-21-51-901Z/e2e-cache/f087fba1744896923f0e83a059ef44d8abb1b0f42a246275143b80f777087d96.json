@@ -1,0 +1,119 @@
+{
+  "questionId": "q141",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article L6221-1 du Code du travail**, le contrat d’apprentissage crée des obligations réciproques :\n\n- **Obligations de l’employeur :**\n  - verser un salaire à l’apprenti ;\n  - lui assurer une formation professionnelle complète, dispensée en partie dans l’entreprise et en partie dans un centre de formation d’apprentis ou une section d’apprentissage.\n\n- **Obligations de l’apprenti :**\n  - travailler pour l’employeur pendant toute la durée du contrat, en vue de sa formation ;\n  - suivre la formation dispensée par le centre de formation.\n\nCes engagements résultent de la définition même du contrat d’apprentissage comme contrat de travail de type particulier (**Article L6221-1 du Code du travail [Source 1]**). L’employeur doit également faire suivre à l’apprenti la formation dispensée par le centre et veiller à sa participation aux épreuves du diplôme ou du titre préparé (**Article L6223-4 du Code du travail [Source 3]**).",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6235-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 261.45584199996665,
+      "vectorSearchMs": 599.9740030001849,
+      "jinaRerankingMs": 557.0682069999166,
+      "mappingMs": 0.02226300025358796,
+      "totalMs": 1419.3420770000666,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009582000318914652,
+      "contextBuilderMs": 0.021424999926239252,
+      "generationMs": 2507.687284000218,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3927.0689019998536
+    },
+    "judge": {
+      "questionId": "q141",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les obligations réciproques prévues par l’article L6221-1 : salaire et formation professionnelle complète partagée entre entreprise et CFA/section d’apprentissage pour l’employeur ; travail pour l’employeur pendant le contrat et suivi de la formation pour l’apprenti. Le complément relatif au suivi de la formation et aux épreuves est exact et explicitement étayé par la source 3. Toutes les affirmations importantes sont supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et reproduit intégralement les obligations réciproques visées à l’article L. 6221-1 : salaire et formation complète alternant entreprise et CFA/section pour l’employeur ; travail pour l’employeur durant le contrat et suivi de la formation pour l’apprenti. La source 3 couvre explicitement le complément apporté sur le suivi de la formation par l’employeur et la participation aux épreuves. Les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L6221-1 du Code du travail**, le contrat d’apprentissage impose des obligations réciproques :\n\n- **L’employeur** doit verser un salaire à l’apprenti et lui assurer une **formation professionnelle complète**, dispensée pour partie dans l’entreprise et pour partie dans un centre de formation d’apprentis ou une section d’apprentissage.\n- **L’apprenti** doit, en contrepartie, **travailler pour l’employeur pendant la durée du contrat** et **suivre la formation** prévue, en vue de sa qualification professionnelle.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6235-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1232.3506760001183,
+      "routingCalls": 1,
+      "embeddingMs": 245.75830599991605,
+      "vectorSearchMs": 229.2180019998923,
+      "jinaRerankingMs": 543.8732610000297,
+      "mappingMs": 0.03497500019147992,
+      "totalMs": 2251.265270999633,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.20676299976184964,
+      "contextBuilderMs": 0.0330419996753335,
+      "generationMs": 2069.3363589998335,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4320.850709000137
+    },
+    "judge": {
+      "questionId": "q141",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les obligations prévues à l’article L6221-1 : versement du salaire et formation professionnelle complète répartie entre entreprise et CFA/section d’apprentissage pour l’employeur ; travail pour l’employeur durant le contrat et suivi de la formation pour l’apprenti. Ces éléments sont explicitement présents dans le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est le texte même de l’article L6221-1 demandé et énonce directement l’ensemble des obligations réciproques reprises dans la réponse : salaire et formation professionnelle complète partagée entre entreprise et CFA/section d’apprentissage pour l’employeur ; travail durant le contrat et suivi de la formation pour l’apprenti. Elle couvre également la précision selon laquelle ces obligations s’inscrivent dans une perspective de formation."
+    }
+  },
+  "failureStage": "none"
+}

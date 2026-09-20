@@ -1,0 +1,103 @@
+{
+  "questionId": "q473",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de répondre à la question sur les règles de la garde à vue en procédure pénale.\n\nElles concernent notamment :\n\n- le suivi socio-judiciaire et ses obligations, prévu par l’article 131-36-1 du Code pénal [Source 3] ;\n- certaines obligations pouvant être imposées dans le cadre d’une condamnation, prévues par l’article 132-45 du Code pénal [Source 1] ;\n- le gardien judiciaire en matière de saisie, prévu par l’article 1962 du Code civil [Source 2].\n\nAucune de ces sources ne traite de la garde à vue, de sa durée, des droits de la personne gardée à vue ou des conditions de son placement.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-45"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1962"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-36-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.1108989994973,
+      "vectorSearchMs": 654.7018020004034,
+      "jinaRerankingMs": 592.5027820002288,
+      "mappingMs": 0.025650998577475548,
+      "totalMs": 1495.3679540008307,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010680001229047775,
+      "contextBuilderMs": 0.031244998797774315,
+      "generationMs": 2086.807451000437,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3582.2261350005865
+    },
+    "judge": {
+      "questionId": "q473",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de fournir des règles de garde à vue, car aucune source ne les traite. Elle identifie correctement que les extraits portent sur le suivi socio-judiciaire, des obligations de condamnation et le gardien judiciaire civil, et non sur la garde à vue. Cette abstention est conforme à l’attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les sources sont pertinentes car elles permettent de constater qu'elles portent sur des objets distincts de la garde à vue : obligations post-condamnation (source 1), gardien judiciaire de biens saisis (source 2) et suivi socio-judiciaire (source 3). Elles couvrent les constats formulés dans la réponse, notamment l'absence de règles relatives au placement, à la durée ou aux droits en garde à vue."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de répondre à la question sur les règles de la **garde à vue en procédure pénale**.\n\nElles concernent uniquement :\n\n- le **suivi socio-judiciaire** et ses obligations, notamment sous le contrôle du juge de l’application des peines — **Article 131-36-1 du Code pénal [Source 3]** ;\n- certaines obligations pouvant être imposées dans le cadre d’un suivi ou d’un sursis, notamment l’interdiction de rapprochement ou les obligations de prise en charge — **Article 132-45 du Code pénal [Source 1]** ;\n- le **gardien judiciaire** en matière civile, qui ne correspond pas à la garde à vue — **Article 1962 du Code civil [Source 2]**.\n\nAucune disposition relative aux conditions, à la durée, aux droits de la personne gardée à vue ou au contrôle de la mesure n’est présente dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-45"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1962"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-36-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 716.0965129993856,
+      "routingCalls": 1,
+      "embeddingMs": 167.26370999962091,
+      "vectorSearchMs": 583.2513049989939,
+      "jinaRerankingMs": 649.5698559992015,
+      "mappingMs": 0.029019000008702278,
+      "totalMs": 2116.230301000178,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01106099970638752,
+      "contextBuilderMs": 0.023476000875234604,
+      "generationMs": 2286.060891000554,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.336938999593
+    },
+    "judge": {
+      "questionId": "q473",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et à juste titre : le contexte ne contient aucune règle relative à la garde à vue. Elle identifie correctement que les extraits portent sur le suivi socio-judiciaire, des obligations de condamnés et un gardien judiciaire civil, sans les confondre avec la garde à vue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les trois sources sont pertinentes en ce qu’elles permettent de constater que le contexte porte sur des matières distinctes : obligations de condamnés et suivi socio-judiciaire (sources 1 et 3), ainsi que gardien judiciaire civil (source 2). Elles couvrent les constats de la réponse sur l’absence de règles relatives à la garde à vue dans les extraits fournis, notamment l’absence de dispositions portant sur sa durée, ses conditions, les droits de la personne concernée ou le contrôle de la mesure."
+    }
+  },
+  "failureStage": "none"
+}

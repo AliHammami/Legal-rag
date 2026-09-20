@@ -1,0 +1,99 @@
+{
+  "questionId": "q424",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La protection repose sur plusieurs garanties complémentaires :\n\n- **Consentement préalable au démarchage commercial** : lorsqu’une entreprise recueille le numéro de téléphone d’un consommateur, elle doit l’informer que toute sollicitation téléphonique à des fins commerciales nécessite son consentement préalable, sauf exception liée à l’exécution d’un contrat en cours. Cette interdiction doit également être mentionnée clairement dans le contrat lorsque le numéro est recueilli lors de sa conclusion (**Article L223-2 du Code de la consommation [Source 1]**).\n\n- **Confidentialité des données téléphoniques** : les données transmises par les opérateurs de télécommunication doivent être recueillies et conservées selon des modalités garantissant leur confidentialité, jusqu’à leur destruction (**Article R450-5 du Code de commerce [Source 3]**).\n\n- **Protection lors d’un traitement dans un autre pays** : lorsque le dispositif applicable prévoit un traitement des informations à l’étranger, celui-ci doit garantir un niveau suffisant de protection de la vie privée, ainsi que des libertés et droits fondamentaux (**Article L561-20, c), du Code monétaire et financier [Source 2]**).\n\nAinsi, la loi protège simultanément l’individu en encadrant **l’utilisation commerciale de son numéro**, en imposant la **confidentialité des données** et, dans le cadre visé par le Code monétaire et financier, en exigeant une **protection suffisante en cas de traitement à l’étranger**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L561-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R450-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 396.40734300017357,
+      "vectorSearchMs": 619.0635219998658,
+      "jinaRerankingMs": 576.7033569999039,
+      "mappingMs": 0.026623000390827656,
+      "totalMs": 1592.261698000133,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015259999781847,
+      "contextBuilderMs": 0.020754000172019005,
+      "generationMs": 3421.631339999847,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5013.9391599996015
+    },
+    "judge": {
+      "questionId": "q424",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse fournit des garanties réelles relatives au démarchage téléphonique, à la confidentialité de certaines données de télécommunication et à la protection lors d’un traitement à l’étranger. Elle répond donc partiellement au thème de la protection de la vie privée. Toutefois, elle ne traite pas les éléments centraux attendus : les mesures judiciaires permettant de faire cesser une atteinte à l’intimité de la vie privée (article 9 du code civil) et l’obligation d’accessibilité du service téléphonique pour les personnes handicapées (article L112-8 du code de la consommation). Toutes les affirmations importantes sont néanmoins étayées par les extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent bien, pour l’essentiel, sur l’usage des données téléphoniques à des fins commerciales (L223-2) et sur la confidentialité de données transmises par des opérateurs de télécommunication (R450-5). La source relative au traitement à l’étranger est plus générale et son lien avec un service téléphonique destiné à la consommation est indirect. Surtout, les sources ne couvrent pas les mécanismes centraux attendus relatifs à l’atteinte à la vie privée (article 9 du code civil) ni à l’accessibilité des services téléphoniques de consommation. En revanche, toutes les affirmations substantielles effectivement formulées dans la réponse générée sont étayées par les extraits cités, avec la réserve exprimée pour le traitement à l’étranger."
+    }
+  },
+  "routing": {
+    "answer": "La loi prévoit deux garanties complémentaires :\n\n1. **Protection contre le démarchage non sollicité**  \n   Lorsqu’une entreprise recueille le numéro de téléphone d’un consommateur, elle doit l’informer que toute sollicitation téléphonique à des fins commerciales nécessite son **consentement préalable**, sauf lorsqu’elle intervient dans le cadre de l’exécution d’un contrat en cours. Si le numéro est recueilli lors de la conclusion du contrat, cette interdiction doit être mentionnée clairement dans le contrat.  \n   **Article L223-2 du Code de la consommation [Source 1].**\n\n2. **Accès effectif au service client sans surcoût**  \n   Les entreprises dépassant le seuil de chiffre d’affaires fixé par décret doivent rendre accessibles leurs numéros destinés à la bonne exécution d’un contrat ou au traitement d’une réclamation aux personnes sourdes, malentendantes, sourdaveugles et aphasiques, grâce à un service de traduction simultanée écrite et visuelle, sans frais supplémentaires pour les utilisateurs.  \n   **Article L112-8 du Code de la consommation [Source 2].**\n\nAinsi, le consommateur conserve la maîtrise de l’utilisation commerciale de ses données téléphoniques, tout en bénéficiant d’un accès égal et gratuit au service téléphonique nécessaire à la relation contractuelle ou au traitement de ses réclamations. Les sources fournies ne précisent toutefois pas d’autres règles générales relatives à la confidentialité ou à la conservation des données.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L112-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2626.619345999323,
+      "routingCalls": 1,
+      "embeddingMs": 185.16188300028443,
+      "vectorSearchMs": 148.67931900080293,
+      "jinaRerankingMs": 582.460918999277,
+      "mappingMs": 0.018547999672591686,
+      "totalMs": 3542.9614160005003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009379000402987003,
+      "contextBuilderMs": 0.02196700032800436,
+      "generationMs": 3316.91242100019,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6859.914006000385
+    },
+    "judge": {
+      "questionId": "q424",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement l’information et le consentement préalable requis pour le démarchage téléphonique commercial (art. L223-2) ainsi que l’accessibilité sans surcoût des services téléphoniques concernés (art. L112-8). Toutefois, elle omet l’élément central attendu par la référence sur la protection de l’intimité de la vie privée, notamment les mesures judiciaires prévues par l’article 9 du code civil pour faire cesser une atteinte. Elle est en revanche entièrement étayée par le contexte fourni, y compris sa réserve sur l’absence d’autres règles de confidentialité dans les sources."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour les affirmations sur l’information du consommateur, le consentement préalable au démarchage téléphonique commercial, l’exception liée à l’exécution d’un contrat en cours et la mention contractuelle. La source 2 est directement pertinente pour l’accessibilité des numéros concernés aux personnes handicapées, le service de traduction, l’absence de surcoût et le seuil de chiffre d’affaires. Toutes les affirmations substantielles de la réponse générée sont ainsi couvertes. La réserve finale est également compatible avec le périmètre des extraits fournis, qui ne posent pas de règle générale sur la confidentialité ou la conservation des données."
+    }
+  },
+  "failureStage": "generation"
+}

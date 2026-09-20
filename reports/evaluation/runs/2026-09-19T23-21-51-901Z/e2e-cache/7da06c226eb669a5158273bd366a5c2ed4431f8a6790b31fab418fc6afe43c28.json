@@ -1,0 +1,107 @@
+{
+  "questionId": "q085",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article 1245 du Code civil**, le producteur est responsable du dommage causé par le défaut de son produit, **même s’il n’a aucun contrat avec la victime** [Source 1].\n\nCette responsabilité est une **responsabilité de plein droit** : le producteur ne peut s’exonérer que s’il prouve l’un des éléments prévus par l’**article 1245-10 du Code civil**, notamment :\n\n- il n’avait pas mis le produit en circulation ;\n- le défaut n’existait pas lors de la mise en circulation ou est apparu ultérieurement ;\n- le produit n’était pas destiné à la vente ou à une distribution ;\n- l’état des connaissances scientifiques et techniques ne permettait pas de déceler le défaut lors de la mise en circulation ;\n- le défaut résultait du respect de règles impératives législatives ou réglementaires [Source 2].\n\nLe respect des règles de l’art, des normes existantes ou l’obtention d’une autorisation administrative **ne suffit pas à exclure la responsabilité** [Source 4].\n\nLorsque le défaut concerne une partie composante incorporée dans un autre produit, le producteur de cette partie et celui qui a réalisé l’incorporation sont **solidairement responsables** [Source 3]. Le producteur de la partie composante peut toutefois s’exonérer s’il démontre que le défaut provient de la conception du produit final ou des instructions données par son producteur [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-10"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-7"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 236.90795099991374,
+      "vectorSearchMs": 637.7160090000834,
+      "jinaRerankingMs": 509.88685699994676,
+      "mappingMs": 0.031285000033676624,
+      "totalMs": 1384.5674959998578,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01000700006261468,
+      "contextBuilderMs": 0.02190600009635091,
+      "generationMs": 3163.7245839999523,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4548.331109999912
+    },
+    "judge": {
+      "questionId": "q085",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle de l’article 1245 : responsabilité du producteur pour le dommage causé par le défaut, indépendamment de tout lien contractuel avec la victime. Les précisions supplémentaires sur la responsabilité de plein droit, les causes d’exonération, les normes et autorisations administratives, ainsi que la solidarité en cas de partie composante, sont exactes et explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l’article 1245 répond exactement à la question, et les articles 1245-10, 1245-9 et 1245-7 étayent les précisions complémentaires de la réponse. Toutes les affirmations importantes générées, y compris la responsabilité sans lien contractuel, le plein droit et les causes d’exonération, l’absence d’exclusion du fait des normes ou autorisations, ainsi que la solidarité pour une partie composante, sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 1245 du Code civil**, le producteur est responsable du dommage causé par un défaut de son produit, **qu’il soit ou non lié par un contrat avec la victime** [Source 1].\n\nCette responsabilité est une responsabilité **de plein droit** : le producteur peut toutefois s’exonérer s’il prouve l’une des circonstances prévues à l’**article 1245-10 du Code civil**, notamment :\n\n- il n’a pas mis le produit en circulation ;\n- le défaut n’existait pas lors de la mise en circulation ou est apparu ultérieurement ;\n- le produit n’était pas destiné à la vente ou à une autre distribution ;\n- l’état des connaissances scientifiques et techniques ne permettait pas de déceler le défaut au moment de la mise en circulation ;\n- le défaut résulte du respect de règles impératives législatives ou réglementaires [Source 2].\n\nLorsque le dommage est causé par le défaut d’une partie incorporée dans un autre produit, le producteur de cette partie et celui qui a réalisé l’incorporation sont **solidairement responsables**, sous réserve des conditions d’exonération applicables [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-10"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1329.886019000085,
+      "routingCalls": 1,
+      "embeddingMs": 182.66932799993083,
+      "vectorSearchMs": 92.43963799998164,
+      "jinaRerankingMs": 498.76378100016154,
+      "mappingMs": 0.03576099989004433,
+      "totalMs": 2103.869325999869,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010856000008061528,
+      "contextBuilderMs": 0.019429999869316816,
+      "generationMs": 2951.645843999926,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5055.552215999924
+    },
+    "judge": {
+      "questionId": "q085",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la règle de l’article 1245 : responsabilité du producteur pour le dommage causé par le défaut, indépendamment de tout lien contractuel avec la victime. Les précisions supplémentaires sur la responsabilité de plein droit, les causes d’exonération et la solidarité en cas de partie composante sont juridiquement correctes et explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la règle posée par l’article 1245. La source 2 étaye explicitement la qualification de responsabilité de plein droit et chacune des causes d’exonération mentionnées. La source 3 couvre la solidarité entre le producteur de la partie composante et celui qui a réalisé l’incorporation. Les affirmations importantes de la réponse sont donc directement et pleinement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

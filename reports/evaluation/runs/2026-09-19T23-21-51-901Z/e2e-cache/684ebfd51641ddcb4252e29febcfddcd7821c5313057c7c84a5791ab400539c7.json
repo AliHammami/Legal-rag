@@ -1,0 +1,87 @@
+{
+  "questionId": "q228",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après le **I de l’article L443-1 du Code de commerce**, toute publicité destinée aux consommateurs, diffusée sur quelque support que ce soit ou visible depuis l’extérieur du lieu de vente, qui mentionne une réduction de prix ou un prix promotionnel sur des produits alimentaires périssables doit :\n\n- préciser **la nature et l’origine** des produits proposés ;\n- indiquer **la période pendant laquelle l’offre est maintenue** ;\n- présenter la mention relative à l’origine dans des caractères **d’une taille au moins égale à celle de la mention du prix**.\n\nEn outre :\n\n- le terme **« gratuit »** ne peut pas être utilisé comme outil marketing ou promotionnel dans le cadre d’une relation commerciale ;\n- lorsque l’ampleur ou la fréquence des promotions est susceptible de désorganiser les marchés, leur périodicité et leur durée peuvent être fixées par arrêté interministériel ou, à défaut, préfectoral ;\n- le non-respect des trois premiers alinéas est puni d’une **amende de 15 000 €**, et la cessation de la publicité peut être ordonnée.\n\nPour les **fruits et légumes frais** ayant fait l’objet d’un accord sur le prix de cession, l’annonce du prix hors du lieu de vente est également limitée à une diffusion au plus tôt **trois jours avant** l’application du prix et pendant une durée maximale de **cinq jours** à compter de cette date. L’accord doit être constaté par un contrat écrit signé et détenu par les parties avant la diffusion de l’annonce, sauf exception prévue pour les ventes au déballage. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.28962000040337,
+      "vectorSearchMs": 592.0775629999116,
+      "jinaRerankingMs": 574.3673979998566,
+      "mappingMs": 0.029909999575465918,
+      "totalMs": 1405.7912840000354,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015558999963104725,
+      "contextBuilderMs": 0.01155799999833107,
+      "generationMs": 4326.4996090000495,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5732.325393000152
+    },
+    "judge": {
+      "questionId": "q228",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les conditions principales : nature et origine, période de l’offre, interdiction du terme « gratuit », ainsi que les règles complémentaires et sanctions prévues par l’article. Elle comporte toutefois une légère inexactitude : le texte impose que la mention de l’origine soit en caractères d’une taille « égale » à celle du prix, et non « au moins égale ». Les autres développements sont bien appuyés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L443-1 et est donc parfaitement pertinente. Elle couvre toutes les affirmations importantes de la réponse : mentions obligatoires (nature, origine, période et taille des caractères), interdiction du terme « gratuit », encadrement éventuel des promotions, amende et cessation de publicité, ainsi que le régime particulier applicable aux fruits et légumes frais. La formulation « au moins égale » dans la réponse diffère légèrement du texte (« égale »), mais cela ne révèle pas un défaut de couverture de la source."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’**article L443-1 du Code de commerce**, les publicités destinées aux consommateurs, diffusées sur tout support ou visibles de l’extérieur du lieu de vente, qui mentionnent une réduction de prix ou un prix promotionnel sur des produits alimentaires périssables doivent :\n\n- préciser **la nature des produits** offerts ;\n- préciser **leur origine** ;\n- indiquer **la période de validité de l’offre** ;\n- présenter la mention de l’origine avec des caractères **d’une taille égale à celle de la mention du prix**. [Source 1]\n\nEn outre :\n\n- le terme **« gratuit »** ne peut pas être utilisé comme outil marketing ou promotionnel dans le cadre d’une relation commerciale pour un produit alimentaire ;\n- lorsque l’ampleur ou la fréquence des promotions est susceptible de désorganiser les marchés, leur périodicité et leur durée peuvent être fixées par arrêté interministériel ou, à défaut, préfectoral. [Source 1]\n\nPour les **fruits et légumes frais** faisant l’objet d’un accord sur le prix de cession, l’annonce du prix hors lieu de vente n’est autorisée que dans les trois jours précédant l’application du prix et pour une durée maximale de cinq jours à compter de cette date. L’accord doit être formalisé par un contrat écrit signé avant la diffusion de l’annonce. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1741.1784739997238,
+      "routingCalls": 1,
+      "embeddingMs": 219.1080760001205,
+      "vectorSearchMs": 234.7536960002035,
+      "jinaRerankingMs": 594.9209320000373,
+      "mappingMs": 0.07542899996042252,
+      "totalMs": 2790.0666759996675,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.031795999966561794,
+      "contextBuilderMs": 0.029558999929577112,
+      "generationMs": 3366.965113000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6157.101755000185
+    },
+    "judge": {
+      "questionId": "q228",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions prévues au I de l’article L443-1 : nature et origine des produits, période de l’offre, et taille des caractères relative à l’origine égale à celle du prix. Elle mentionne aussi correctement l’interdiction du terme « gratuit ». Les précisions supplémentaires sur la régulation des promotions et les fruits et légumes frais sont également exactes et entièrement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L443-1 cité dans la réponse. Elle couvre toutes les conditions principales demandées (nature, origine, période de l'offre, taille des caractères pour l'origine et interdiction du terme « gratuit »), ainsi que les précisions supplémentaires sur l'encadrement des promotions et les annonces de prix des fruits et légumes frais."
+    }
+  },
+  "failureStage": "none"
+}

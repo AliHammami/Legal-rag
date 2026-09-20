@@ -1,0 +1,111 @@
+{
+  "questionId": "q406",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Engagements de l’employeur\n\n- L’employeur doit prendre en compte un objectif de suppression des écarts de rémunération entre les femmes et les hommes — **Article L1142-7 du Code du travail [Source 1]**.\n- Lorsqu’il souscrit un contrat pour la mixité des emplois et l’égalité professionnelle, ses engagements doivent contribuer significativement à l’égalité professionnelle ou au développement de la mixité des emplois. Ils peuvent notamment porter sur la sensibilisation, l’embauche, la formation, la promotion et l’amélioration des conditions de travail — **Article D1143-10 du Code du travail [Source 3]**.\n- Par ailleurs, lorsqu’un écart moyen de rémunération est constaté au niveau de la branche, sa réduction doit constituer une priorité dans les négociations de branche — **Article L2241-15 du Code du travail [Source 2]**.\n\n### Transfert des droits individuels dans les plans d’épargne retraite\n\nLes droits individuels en cours de constitution peuvent être transférés vers tout autre plan d’épargne retraite. Ce transfert ne modifie pas les conditions de rachat ou de liquidation des droits.\n\nLes frais de transfert sont plafonnés à **1 % des droits acquis**. Ils sont gratuits après cinq ans à compter du premier versement dans le plan ou lorsque le transfert intervient à compter de l’échéance prévue à l’article L. 224-1 du Code monétaire et financier.\n\nPour les plans d’épargne retraite d’entreprise à adhésion obligatoire, le transfert n’est possible que lorsque le titulaire n’est plus tenu d’y adhérer. Des règles particulières peuvent s’appliquer aux plans reposant sur un contrat d’assurance de groupe, notamment concernant une éventuelle réduction de la valeur de transfert et le changement de gestionnaire — **Article L224-6 du Code monétaire et financier [Source 4]**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2241-15"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D1143-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 233.2568179992959,
+      "vectorSearchMs": 587.119630000554,
+      "jinaRerankingMs": 559.7189849996939,
+      "mappingMs": 0.027015000581741333,
+      "totalMs": 1380.1433129999787,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014407999813556671,
+      "contextBuilderMs": 0.02656400017440319,
+      "generationMs": 3141.7100950004533,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4521.902530000545
+    },
+    "judge": {
+      "questionId": "q406",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse couvre correctement l'objectif imposé à l'employeur de suppression des écarts de rémunération et expose de façon complète les règles de transfert des droits : transférabilité, maintien des conditions de rachat ou liquidation, plafonnement puis gratuité des frais, restriction applicable aux régimes d'entreprise obligatoires et particularités des contrats d'assurance de groupe. Les précisions relatives aux engagements dans un contrat de mixité et aux négociations de branche sont exactes, pertinentes et explicitement étayées par le contexte. Toutes les affirmations importantes sont supportées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : L1142-7 couvre l'objectif de suppression des écarts de rémunération, et L224-6 couvre l'ensemble des règles de transfert des droits de PER. Les sources D1143-10 et L2241-15 étayent les précisions complémentaires sur le contrat de mixité et les négociations de branche. Toutes les affirmations importantes de la réponse, y compris le plafonnement et la gratuité des frais, la condition applicable aux adhésions obligatoires et les particularités des contrats d'assurance de groupe, sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "### Engagements de l’employeur concernant les écarts de rémunération\n\n- L’employeur doit prendre en compte un objectif de suppression des écarts de rémunération entre les femmes et les hommes (**article L1142-7 du Code du travail** [Source 1]).\n- Dans le cadre des engagements liés à la mixité des emplois et à l’égalité professionnelle, les mesures peuvent notamment porter sur la sensibilisation, l’embauche, la formation, la promotion et l’amélioration des conditions de travail (**article D1143-10 du Code du travail** [Source 3]).\n- Au niveau de la branche, lorsqu’un écart moyen de rémunération est constaté, sa réduction doit constituer une priorité. Les classifications et critères d’évaluation des postes doivent également être examinés afin de corriger ceux qui pourraient entraîner des discriminations et de prendre en compte toutes les compétences des salariés (**article L2241-15 du Code du travail** [Source 2]).\n\n### Transfert des droits individuels dans les plans d’épargne retraite\n\n- Les droits individuels en cours de constitution peuvent être transférés vers tout autre plan d’épargne retraite.\n- Ce transfert ne modifie pas les conditions de rachat ou de liquidation des droits.\n- Les frais de transfert sont plafonnés à **1 % des droits acquis**. Ils deviennent nuls après cinq ans à compter du premier versement dans le plan, ou lorsque le transfert intervient à compter de l’échéance prévue à l’article L224-1 du Code monétaire et financier.\n- Pour un plan d’épargne retraite d’entreprise auquel le salarié est affilié obligatoirement, le transfert n’est possible que lorsque le titulaire n’est plus soumis à cette obligation.\n- Les plans prévoient également les conditions permettant à l’entreprise ou à l’association souscriptrice de changer de gestionnaire, avec un préavis maximal de six mois (**article L224-6 du Code monétaire et financier** [Source 4]).",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2241-15"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D1143-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1740.2947510005906,
+      "routingCalls": 1,
+      "embeddingMs": 184.25994599983096,
+      "vectorSearchMs": 400.8754910007119,
+      "jinaRerankingMs": 578.0349650001153,
+      "mappingMs": 0.03181099984794855,
+      "totalMs": 2903.5370279997587,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010143999941647053,
+      "contextBuilderMs": 0.025576000101864338,
+      "generationMs": 3550.3339070007205,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6453.915546000004
+    },
+    "judge": {
+      "questionId": "q406",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement l'objectif imposé à l'employeur et les règles principales de transfert des droits : transférabilité, maintien des conditions de rachat/liquidation, plafond de 1 %, gratuité après cinq ans ou à l'échéance légale, et restriction pour les adhésions obligatoires. Elle est entièrement étayée par les sources fournies. Elle omet toutefois la modalité particulière, mentionnée dans le contexte et attendue par la référence, de réduction réglementée de la valeur de transfert pour certains contrats d'assurance de groupe liés à la cessation d'activité professionnelle. Les développements sur la mixité, les négociations de branche et le changement de gestionnaire sont exacts et fondés, bien que périphériques."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les quatre sources sont directement pertinentes : L1142-7 couvre l'objectif de suppression des écarts de rémunération, D1143-10 les engagements de mixité et d'égalité professionnelle, L2241-15 les priorités de branche relatives aux écarts et aux classifications, et L224-6 l'ensemble des règles de transfert exposées. Toutes les affirmations substantielles de la réponse générée sont étayées par ces textes, y compris le plafond et la gratuité des frais, la condition applicable aux adhésions obligatoires et le préavis de changement de gestionnaire."
+    }
+  },
+  "failureStage": "none"
+}

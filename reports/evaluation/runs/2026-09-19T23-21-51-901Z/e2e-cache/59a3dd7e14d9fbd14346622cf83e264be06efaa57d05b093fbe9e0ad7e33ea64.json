@@ -1,0 +1,87 @@
+{
+  "questionId": "q188",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas l’article **L. 233-1 du Code de commerce**. Il ne permet donc pas de déterminer précisément la définition d’une société filiale selon cet article.\n\nLa seule définition disponible figure à l’**article L. 511-20 du Code monétaire et financier** : une filiale est une entreprise sur laquelle est exercé un contrôle exclusif ou une influence dominante ; la filiale d’une filiale est également considérée comme une filiale de l’entreprise mère située à la tête du groupe [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L511-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 276.30885400017723,
+      "vectorSearchMs": 567.7058630003594,
+      "jinaRerankingMs": 765.6439550002106,
+      "mappingMs": 0.04675799980759621,
+      "totalMs": 1609.7424960001372,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02022199984639883,
+      "contextBuilderMs": 0.014270999934524298,
+      "generationMs": 2277.35190399969,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3887.138290999923
+    },
+    "judge": {
+      "questionId": "q188",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée à l’article L. 233-1 du Code de commerce (détention de plus de la moitié du capital). Elle indique correctement que cet article n’est pas présent dans le contexte et restitue fidèlement la définition sectorielle figurant à l’article L. 511-20 du Code monétaire et financier, mais cette définition ne répond pas à la question. Puisqu’une réponse était attendue, l’abstention est incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source porte sur l’article L. 511-20 du Code monétaire et financier, et non sur l’article L. 233-1 du Code de commerce demandé. Elle est seulement tangentiellement pertinente, car elle fournit une définition sectorielle distincte de la filiale, sans permettre de répondre à la définition précise recherchée. En revanche, elle couvre fidèlement les affirmations effectivement formulées dans la réponse sur le contenu de l’article L. 511-20, notamment le contrôle exclusif, l’influence dominante et la filiale de filiale."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L233-1 du Code de commerce, une société est considérée comme la filiale d’une autre lorsque cette dernière possède plus de la moitié de son capital [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 759.0129499998875,
+      "routingCalls": 1,
+      "embeddingMs": 210.52535100001842,
+      "vectorSearchMs": 226.98298300011083,
+      "jinaRerankingMs": 600.2193989995867,
+      "mappingMs": 0.026738000102341175,
+      "totalMs": 1796.7911040000618,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011676999740302563,
+      "contextBuilderMs": 0.010592000093311071,
+      "generationMs": 1376.0081170001067,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3172.82889300026
+    },
+    "judge": {
+      "questionId": "q188",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le critère de l'article L233-1 : la détention de plus de la moitié du capital par une autre société. Elle répond pleinement à la question et est directement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L233-1 du Code de commerce et énonce précisément le critère cité dans la réponse : la détention de plus de la moitié du capital d’une autre société. Elle est donc parfaitement pertinente et couvre l’affirmation importante de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

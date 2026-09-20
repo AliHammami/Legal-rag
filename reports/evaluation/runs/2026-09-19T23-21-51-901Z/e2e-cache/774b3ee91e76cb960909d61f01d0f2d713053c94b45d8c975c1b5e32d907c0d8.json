@@ -1,0 +1,87 @@
+{
+  "questionId": "q172",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une convention ou un accord devient applicable **à partir du jour suivant son dépôt auprès du service compétent**, sauf stipulation contraire. **Article L2261-1 du Code du travail [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 273.60940800001845,
+      "vectorSearchMs": 611.1942789996974,
+      "jinaRerankingMs": 954.3067419999279,
+      "mappingMs": 0.06342799961566925,
+      "totalMs": 1839.2055810000747,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012159999925643206,
+      "contextBuilderMs": 0.009972999803721905,
+      "generationMs": 1142.2519240002148,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2981.4877520003356
+    },
+    "judge": {
+      "questionId": "q172",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle applicable : le lendemain du dépôt auprès du service compétent, sauf stipulation contraire. Elle est intégralement étayée par le contexte, qui cite l’article L2261-1 du Code du travail."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la règle applicable aux conventions et accords : application à compter du jour suivant le dépôt auprès du service compétent, sauf stipulations contraires. Elle couvre intégralement l'affirmation de la réponse, y compris la référence à l'article L2261-1 du Code du travail."
+    }
+  },
+  "routing": {
+    "answer": "Une convention ou un accord devient applicable **à partir du jour suivant son dépôt auprès du service compétent**, sauf stipulation contraire. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1843.7033789996058,
+      "routingCalls": 1,
+      "embeddingMs": 235.40009699994698,
+      "vectorSearchMs": 223.25461900001392,
+      "jinaRerankingMs": 1383.1698719998822,
+      "mappingMs": 0.023510000202804804,
+      "totalMs": 3685.571758999955,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009607999585568905,
+      "contextBuilderMs": 0.010894000064581633,
+      "generationMs": 1125.5878189997748,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4811.190495999996
+    },
+    "judge": {
+      "questionId": "q172",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle applicable : prise d’effet le jour suivant le dépôt auprès du service compétent, sauf stipulation contraire. Cette affirmation est intégralement étayée par le contexte fourni et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la règle applicable aux conventions et accords : ils sont applicables à compter du jour suivant leur dépôt auprès du service compétent, sauf stipulations contraires. Elle est parfaitement pertinente et couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

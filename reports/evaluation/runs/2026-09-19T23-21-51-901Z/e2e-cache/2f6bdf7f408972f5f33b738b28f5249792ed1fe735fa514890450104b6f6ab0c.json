@@ -1,0 +1,91 @@
+{
+  "questionId": "q276",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas d’offre au public de titres financiers réalisée par une personne ou une entité non autorisée par la loi :\n\n- **Les contrats conclus et les titres financiers émis encourent la nullité**. L’émission de titres négociables par une personne non autorisée est également interdite, sous la même sanction. **Article L411-1 du Code monétaire et financier [Source 1]**.\n- **L’action en nullité des contrats conclus se prescrit par trois ans**, à compter du jour où la nullité est encourue. **Article L411-1 du Code monétaire et financier [Source 1]**.\n\nPar ailleurs, lorsque l’émission de valeurs mobilières offertes au public est réalisée sans respecter certaines formalités de publicité et d’information — notamment l’insertion d’une notice ou les mentions obligatoires dans les documents et prospectus — le président, l’administrateur, le directeur général ou le gérant encourt **une amende correspondant à celle prévue pour les contraventions de cinquième classe**. La même amende peut frapper l’intermédiaire concerné ; elle est aggravée en cas de récidive. **Article R247-2 du Code de commerce [Source 2]**.\n\nLes sources fournies prévoient donc principalement une **sanction civile de nullité** pour l’offre réalisée sans autorisation légale, ainsi qu’une **sanction contraventionnelle** en cas de non-respect des formalités mentionnées à l’article R247-2.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L411-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 185.11394700035453,
+      "vectorSearchMs": 561.2740599997342,
+      "jinaRerankingMs": 543.9954039994627,
+      "mappingMs": 0.029826000332832336,
+      "totalMs": 1290.4379799999297,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013088000006973743,
+      "contextBuilderMs": 0.02084299921989441,
+      "generationMs": 4004.7853939998895,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5295.2657310003415
+    },
+    "judge": {
+      "questionId": "q276",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les nullités frappant les contrats conclus, les titres ou parts émis et les titres négociables émis par une personne non autorisée, ainsi que la prescription triennale de l’action en nullité. Ces éléments sont directement prévus par l’article L411-1 reproduit au contexte. Le développement complémentaire sur l’amende liée au non-respect de formalités de publicité est exact, explicitement distingué du défaut d’autorisation, et intégralement supporté par l’article R247-2 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les sanctions principales liées à une offre au public réalisée sans autorisation légale : nullité des contrats, titres ou parts émis, nullité en cas d’émission de titres négociables et prescription triennale de l’action en nullité. La source 2 est pertinente pour le développement explicitement distinct portant sur les manquements aux formalités de publicité et d’information, et couvre l’amende de cinquième classe, les intermédiaires et la récidive. Toutes les affirmations importantes de la réponse sont étayées par les sources."
+    }
+  },
+  "routing": {
+    "answer": "En cas d’offre au public de titres financiers réalisée par une personne ou une entité non autorisée par la loi, **les contrats conclus ainsi que les titres financiers ou parts sociales émis sont frappés de nullité**. L’émission de titres négociables est également interdite, sous la même sanction de nullité. **Article L411-1 du Code monétaire et financier [Source 1].**\n\nLes actions en nullité des contrats conclus se prescrivent par **trois ans à compter du jour où la nullité est encourue**, par dérogation à l’article 2224 du Code civil. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L411-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1638.1129499999806,
+      "routingCalls": 1,
+      "embeddingMs": 183.20902599953115,
+      "vectorSearchMs": 178.31172099988908,
+      "jinaRerankingMs": 553.5396970007569,
+      "mappingMs": 0.03812899999320507,
+      "totalMs": 2553.240697999485,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011712000705301762,
+      "contextBuilderMs": 0.0107829999178648,
+      "generationMs": 2059.9517289996147,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4613.224182000384
+    },
+    "judge": {
+      "questionId": "q276",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les nullités frappant les contrats, titres financiers ou parts sociales émis, ainsi que les titres négociables, et indique le délai de prescription de trois ans. Ces éléments sont explicitement présents dans le contexte. Elle répond bien à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle traite explicitement de l’offre au public de titres financiers ou parts sociales par des personnes non autorisées, de la nullité des contrats et titres émis, de la nullité liée à l’émission de titres négociables, ainsi que de la prescription triennale des actions en nullité. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

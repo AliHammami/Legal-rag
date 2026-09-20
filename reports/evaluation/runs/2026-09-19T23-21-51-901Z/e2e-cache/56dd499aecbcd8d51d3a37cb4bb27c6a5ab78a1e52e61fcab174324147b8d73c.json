@@ -1,0 +1,87 @@
+{
+  "questionId": "q130",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L5222-1 du Code du travail interdit :\n\n- de se faire remettre des fonds, des valeurs ou des biens mobiliers ;\n- ou de tenter de se les faire remettre ;\n- que cette remise soit occasionnelle ou renouvelée ;\n- lorsque celle-ci intervient en vue ou à l’occasion de l’introduction en France d’un travailleur étranger ou de son embauche.\n\nCette interdiction s’applique sous réserve des dispositions de l’article L. 7121-18. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5222-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.55443100025877,
+      "vectorSearchMs": 606.6907429997809,
+      "jinaRerankingMs": 534.8280079998076,
+      "mappingMs": 0.025123999919742346,
+      "totalMs": 1350.1205140003003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009663000237196684,
+      "contextBuilderMs": 0.01614100020378828,
+      "generationMs": 1377.4559249999002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2727.6106100003235
+    },
+    "judge": {
+      "questionId": "q130",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement toutes les composantes de l’interdiction : remise ou tentative de remise, fonds/valeurs/biens mobiliers, caractère occasionnel ou renouvelé, et lien avec l’introduction en France ou l’embauche d’un travailleur étranger. La réserve relative à l’article L. 7121-18 est également explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L5222-1 et est parfaitement pertinente. Elle couvre toutes les affirmations importantes de la réponse : remise ou tentative de remise, fonds/valeurs/biens mobiliers, caractère occasionnel ou renouvelé, finalité ou occasion liée à l’introduction en France ou à l’embauche d’un travailleur étranger, ainsi que la réserve relative à l’article L. 7121-18."
+    }
+  },
+  "routing": {
+    "answer": "L’article L5222-1 du Code du travail interdit, sauf exception prévue à l’article L. 7121-18 :\n\n- de se faire remettre, ou de tenter de se faire remettre ;\n- de manière occasionnelle ou renouvelée ;\n- des fonds, des valeurs ou des biens mobiliers ;\n- en vue ou à l’occasion de l’introduction en France d’un travailleur étranger ou de son embauche.\n\nAutrement dit, il est interdit d’exiger ou de tenter d’obtenir un paiement ou la remise de biens en lien avec l’arrivée en France ou l’embauche d’un travailleur étranger, sous réserve de l’exception mentionnée par le texte. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5222-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.2627350003459,
+      "routingCalls": 1,
+      "embeddingMs": 246.92352499999106,
+      "vectorSearchMs": 220.89381199982017,
+      "jinaRerankingMs": 532.814873999916,
+      "mappingMs": 0.03781599970534444,
+      "totalMs": 2433.9610959999263,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011137000285089016,
+      "contextBuilderMs": 0.01013900013640523,
+      "generationMs": 1582.658574000001,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4016.6487479996867
+    },
+    "judge": {
+      "questionId": "q130",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de l’article : remise ou tentative de remise, caractère occasionnel ou renouvelé, fonds/valeurs/biens mobiliers, et lien avec l’introduction en France ou l’embauche d’un travailleur étranger. Elle mentionne correctement la réserve relative à l’article L. 7121-18. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement et intégralement l'article L5222-1 visé par la question. Elle étaye toutes les composantes de la réponse : l'interdiction de se faire remettre ou de tenter de se faire remettre, le caractère occasionnel ou renouvelé, les fonds, valeurs ou biens mobiliers, le lien avec l'introduction en France ou l'embauche d'un travailleur étranger, ainsi que la réserve relative à l'article L. 7121-18."
+    }
+  },
+  "failureStage": "none"
+}

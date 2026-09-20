@@ -1,0 +1,87 @@
+{
+  "questionId": "q448",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "En cas de retard dans le paiement d’une somme d’argent, les intérêts dus sont les **intérêts au taux légal**, à compter de la **mise en demeure**. Ils sont dus sans que le créancier ait à prouver une perte.\n\nSi le retard a causé, par la mauvaise foi du débiteur, un préjudice distinct du simple retard, le créancier peut également obtenir des dommages et intérêts supplémentaires.  \n**Article 1231-6 du Code civil [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1231-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.4760229997337,
+      "vectorSearchMs": 680.6141490004957,
+      "jinaRerankingMs": 589.8241700008512,
+      "mappingMs": 0.02496899850666523,
+      "totalMs": 1470.963267000392,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011644000187516212,
+      "contextBuilderMs": 0.024467000737786293,
+      "generationMs": 1284.6936600003392,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2755.701450999826
+    },
+    "judge": {
+      "questionId": "q448",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reprend fidèlement l’article 1231-6 du Code civil fourni : intérêt au taux légal à compter de la mise en demeure, sans preuve de perte, et possibilité de dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant. Toutefois, l’abstention était attendue ; le modèle répond au fond au lieu de signaler que la question est hors périmètre ou insuffisamment contextualisée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1231-6 du Code civil, qui répond précisément aux intérêts dus en cas de retard de paiement d’une obligation de somme d’argent. Elle couvre toutes les affirmations substantielles de la réponse générée : taux légal, point de départ à la mise en demeure, absence d’exigence de prouver une perte, et dommages-intérêts distincts en cas de mauvaise foi causant un préjudice indépendant. Le fait que l’abstention ait été attendue n’enlève rien à la pertinence ni à la couverture de cette source pour les affirmations effectivement formulées."
+    }
+  },
+  "routing": {
+    "answer": "En cas de retard dans le paiement d’une somme d’argent, les intérêts dus correspondent à **l’intérêt au taux légal**, à compter de la **mise en demeure**. Le créancier n’a pas à justifier d’une perte.  \n\nSi le retard lui a causé, par la mauvaise foi du débiteur, un préjudice distinct, il peut également obtenir des **dommages et intérêts supplémentaires**.  \n\n**Article 1231-6 du Code civil [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1231-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.6467320006341,
+      "routingCalls": 1,
+      "embeddingMs": 205.01377400010824,
+      "vectorSearchMs": 561.8917270004749,
+      "jinaRerankingMs": 546.7855830006301,
+      "mappingMs": 0.02374900132417679,
+      "totalMs": 2133.3818219993263,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013562999665737152,
+      "contextBuilderMs": 0.011543000116944313,
+      "generationMs": 1347.8542619999498,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3481.268976001069
+    },
+    "judge": {
+      "questionId": "q448",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement le régime de l'article 1231-6 du Code civil figurant dans le contexte : intérêt au taux légal à compter de la mise en demeure, sans preuve de perte, et possibilité de dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant. Toutefois, la question est très générale et était marquée comme nécessitant une abstention ; la réponse tranche donc un régime civil spécifique sans expliciter les limites de ce périmètre."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 1231-6 du Code civil et est pleinement pertinente pour les règles affirmées : intérêt au taux légal à compter de la mise en demeure, absence d'exigence de preuve d'une perte, et dommages-intérêts distincts en cas de mauvaise foi et de préjudice indépendant. Elle couvre donc toutes les affirmations importantes de la réponse générée, même si la question était signalée comme appelant une abstention au regard de son caractère général."
+    }
+  },
+  "failureStage": "abstention"
+}

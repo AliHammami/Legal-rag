@@ -1,0 +1,103 @@
+{
+  "questionId": "q253",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L. 314-1, I du Code monétaire et financier**, un compte de paiement est **un compte détenu au nom d’une ou de plusieurs personnes et utilisé pour l’exécution d’opérations de paiement**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.50659900065511,
+      "vectorSearchMs": 722.8211799999699,
+      "jinaRerankingMs": 554.0722179999575,
+      "mappingMs": 0.041114999912679195,
+      "totalMs": 1466.500276999548,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01148299966007471,
+      "contextBuilderMs": 0.018021000549197197,
+      "generationMs": 1085.5975900003687,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2552.1367410002276
+    },
+    "judge": {
+      "questionId": "q253",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition du I de l’article L. 314-1 : compte détenu au nom d’une ou plusieurs personnes et utilisé aux fins de l’exécution d’opérations de paiement. Elle est complète, directement fondée sur la source 1 et répond à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement le I de l'article L. 314-1 et énonce exactement la définition demandée. Elle couvre intégralement l'affirmation de la réponse générée, y compris le fait que le compte est détenu au nom d'une ou plusieurs personnes et utilisé aux fins de l'exécution d'opérations de paiement."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L314-1 du Code monétaire et financier, un compte de paiement est **un compte détenu au nom d’une ou de plusieurs personnes et utilisé pour l’exécution d’opérations de paiement** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 920.751522000879,
+      "routingCalls": 1,
+      "embeddingMs": 250.38230700045824,
+      "vectorSearchMs": 146.62405799981207,
+      "jinaRerankingMs": 556.0212700003758,
+      "mappingMs": 0.031446000561118126,
+      "totalMs": 1873.8364249998704,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01334299985319376,
+      "contextBuilderMs": 0.028900000266730785,
+      "generationMs": 1194.5054099997506,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3068.3916020002216
+    },
+    "judge": {
+      "questionId": "q253",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition du I de l’article L. 314-1 : compte détenu au nom d’une ou plusieurs personnes et utilisé aux fins de l’exécution d’opérations de paiement. Elle répond directement à la question et est explicitement soutenue par la source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement le I de l’article L. 314-1 et contient exactement les deux éléments de la définition reprise dans la réponse : compte détenu au nom d’une ou plusieurs personnes et utilisé aux fins de l’exécution d’opérations de paiement. Elle est pleinement pertinente et couvre intégralement l’affirmation."
+    }
+  },
+  "failureStage": "none"
+}

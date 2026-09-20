@@ -1,0 +1,87 @@
+{
+  "questionId": "q243",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’un titulaire effectue un retrait avant la dixième année, le plan est clôturé. En effet, tout retrait de fonds entraîne sa clôture, sauf au-delà de la dixième année [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L221-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 220.2506629996933,
+      "vectorSearchMs": 558.8393640001304,
+      "jinaRerankingMs": 540.4117609998211,
+      "mappingMs": 0.026264999993145466,
+      "totalMs": 1319.5526489997283,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00960900029167533,
+      "contextBuilderMs": 0.013724999967962503,
+      "generationMs": 1099.4712069998495,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2419.054327000398
+    },
+    "judge": {
+      "questionId": "q243",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement qu’un retrait avant la dixième année entraîne la clôture du plan. Elle ajoute, de façon exacte et explicitement soutenue par le contexte, l’exception applicable au-delà de la dixième année."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle énonce que tout retrait entraîne la clôture du plan et précise l’exception au-delà de la dixième année. Elle couvre donc entièrement l’affirmation selon laquelle un retrait avant la dixième année clôture le plan, ainsi que la précision sur les retraits postérieurs à cette échéance."
+    }
+  },
+  "routing": {
+    "answer": "Avant la dixième année, tout retrait de fonds entraîne la clôture du plan. [Source 1 — Article L221-20 du Code monétaire et financier]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L221-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3980.4365119999275,
+      "routingCalls": 1,
+      "embeddingMs": 359.09451800026,
+      "vectorSearchMs": 654.7308869999833,
+      "jinaRerankingMs": 568.6965809999965,
+      "mappingMs": 0.02885800041258335,
+      "totalMs": 5563.013290999923,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01827900018543005,
+      "contextBuilderMs": 0.011291999835520983,
+      "generationMs": 1080.8358199996874,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6643.88840499986
+    },
+    "judge": {
+      "questionId": "q243",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond exactement à la question et concorde avec la référence : avant la dixième année, tout retrait entraîne la clôture du plan. Cette affirmation est explicitement étayée par le contexte, qui précise en outre que l'absence de clôture ne vaut qu'au-delà de la dixième année."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle énonce que tout retrait entraîne la clôture du plan et précise que l'exception concerne les retraits au-delà de la dixième année. Elle couvre entièrement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q184",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article L22-10-1 du Code de commerce**, les sociétés dont les titres sont admis aux négociations sur un marché réglementé sont soumises :\n\n- aux règles applicables à leur **forme sociale** ;\n- sous réserve des **dispositions spécifiques du chapitre** consacré à ces sociétés.\n\nAinsi, les règles de leur forme sociale continuent de s’appliquer, mais elles peuvent être complétées ou écartées par les dispositions particulières du Code de commerce relatives aux sociétés cotées. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L22-10-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L22-10-36"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.74971799971536,
+      "vectorSearchMs": 598.0677910000086,
+      "jinaRerankingMs": 582.3997689997777,
+      "mappingMs": 0.056941000279039145,
+      "totalMs": 1411.3085929998197,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01580699998885393,
+      "contextBuilderMs": 0.024960000067949295,
+      "generationMs": 1457.770746000111,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2869.153271999676
+    },
+    "judge": {
+      "questionId": "q184",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article L22-10-1 : application des règles propres à la forme sociale, sous réserve des dispositions spécifiques du chapitre. La précision selon laquelle ces dispositions peuvent compléter ou écarter les règles générales est une paraphrase cohérente de la réserve prévue par le texte et est fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 22-10-1 et répond exactement à la question : application des règles propres à la forme sociale, sous réserve des dispositions du chapitre. Elle couvre les deux propositions centrales de la réponse générée ainsi que l’explication selon laquelle les dispositions spéciales peuvent primer ou compléter les règles générales. La source 2 n’est pas nécessaire à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L22-10-1 du Code de commerce, les sociétés dont les titres sont admis aux négociations sur un marché réglementé sont soumises :\n\n- aux règles applicables à leur forme sociale ;\n- sous réserve des dispositions particulières du chapitre concerné.\n\nAutrement dit, leur régime juridique de droit commun continue de s’appliquer, mais il est complété ou aménagé par les dispositions spécifiques prévues pour les sociétés cotées dans ce chapitre. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L22-10-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L22-10-36"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1638.4688860001042,
+      "routingCalls": 1,
+      "embeddingMs": 193.2075959998183,
+      "vectorSearchMs": 173.0154750002548,
+      "jinaRerankingMs": 531.4290220001712,
+      "mappingMs": 0.027974000200629234,
+      "totalMs": 2536.178935999982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01336799981072545,
+      "contextBuilderMs": 0.013902000151574612,
+      "generationMs": 1610.931215999648,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4147.146594999824
+    },
+    "judge": {
+      "questionId": "q184",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article L22-10-1 : application des règles propres à la forme sociale, sous réserve des dispositions du chapitre. La reformulation sur le complément ou l’aménagement par les règles spécifiques est cohérente et directement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L22-10-1 et répond exactement à la question : les sociétés concernées sont régies par les règles de leur forme sociale, sous réserve des dispositions du chapitre. Elle couvre également la reformulation selon laquelle ces dispositions particulières complètent ou aménagent le régime de droit commun. La source 2 est accessoire, mais son absence d’utilisation n’affecte pas la pertinence ni la couverture."
+    }
+  },
+  "failureStage": "none"
+}

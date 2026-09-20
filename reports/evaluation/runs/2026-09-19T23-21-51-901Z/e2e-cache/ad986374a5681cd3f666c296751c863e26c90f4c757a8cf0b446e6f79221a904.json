@@ -1,0 +1,87 @@
+{
+  "questionId": "q206",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Ces dispositions s’appliquent également à toute personne qui, directement ou par personne interposée, a effectivement exercé la direction, l’administration ou la gestion des sociétés concernées sous le couvert ou à la place de leurs représentants légaux. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L246-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.08240800024942,
+      "vectorSearchMs": 561.2451740000397,
+      "jinaRerankingMs": 505.6326709999703,
+      "mappingMs": 0.038422999903559685,
+      "totalMs": 1262.094242000021,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05867600021883845,
+      "contextBuilderMs": 0.01257999986410141,
+      "generationMs": 1192.7725510001183,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2454.947892999742
+    },
+    "judge": {
+      "questionId": "q206",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle : les dispositions visées s’appliquent à toute personne ayant exercé en fait, directement ou par personne interposée, la direction, l’administration ou la gestion des sociétés sous le couvert ou à la place des représentants légaux. Elle est intégralement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 246-2, qui vise expressément les dispositions mentionnées et précise qu'elles s'appliquent à toute personne ayant exercé en fait, directement ou par personne interposée, la direction, l'administration ou la gestion des sociétés sous le couvert ou au lieu et place de leurs représentants légaux. Elle est donc parfaitement pertinente et couvre l'intégralité de l'affirmation générée."
+    }
+  },
+  "routing": {
+    "answer": "Ces dispositions s’appliquent également à toute personne qui, directement ou par personne interposée, a effectivement exercé la direction, l’administration ou la gestion d’une société anonyme ou d’une société européenne, ou d’une société en commandite par actions, sous le couvert ou à la place de ses représentants légaux. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L246-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4198.923148999922,
+      "routingCalls": 1,
+      "embeddingMs": 236.42990599991754,
+      "vectorSearchMs": 225.01755299977958,
+      "jinaRerankingMs": 511.7709099999629,
+      "mappingMs": 0.036157000344246626,
+      "totalMs": 5172.204843999818,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014948999974876642,
+      "contextBuilderMs": 0.013940999750047922,
+      "generationMs": 1281.011921999976,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6453.254286000039
+    },
+    "judge": {
+      "questionId": "q206",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement le champ personnel prévu par l’article L246-2 : toute personne exerçant en fait, directement ou par personne interposée, la direction, l’administration ou la gestion des sociétés concernées sous le couvert ou à la place des représentants légaux. Elle est entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 246-2, qui répond précisément à la question en étendant l’application des dispositions visées aux personnes ayant exercé en fait la direction, l’administration ou la gestion des sociétés concernées, directement ou par personne interposée, sous le couvert ou à la place des représentants légaux. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

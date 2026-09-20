@@ -1,0 +1,103 @@
+{
+  "questionId": "q393",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Sont habilités à rechercher et constater les infractions aux articles **L. 312-1-1, L. 312-1-2, L. 312-1-4-1, L. 314-12, L. 314-13 et L. 315-6 à L. 315-8 du Code monétaire et financier** :\n\n- les agents de la **Banque de France commissionnés par le ministre chargé de l’économie** ;\n- les agents mentionnés aux **articles L. 511-3 et L. 511-21 du Code de la consommation**.  \nIls peuvent également intervenir pour les infractions commises en France par des agents ou succursales de prestataires de services de paiement établis dans un autre État membre de l’Union européenne ou de l’Espace économique européen. **Article L. 317-1 du Code monétaire et financier [Source 1]**\n\n### Modalités d’accès et de contrôle\n\nDans l’exercice de leurs fonctions, ces agents peuvent :\n\n- accéder à tous les **locaux à usage professionnel** ;\n- demander la communication des livres et autres documents professionnels ;\n- en prendre copie ;\n- recueillir les renseignements et justifications, sur place ou sur convocation.\n\nL’accès aux locaux est limité à la période comprise entre **8 heures et 20 heures**. En cas d’opposition du responsable des lieux, la visite ne peut avoir lieu qu’avec l’autorisation du **procureur de la République du tribunal judiciaire** dans le ressort duquel se trouvent les locaux. Le secret professionnel ne peut pas leur être opposé dans le cadre de ces pouvoirs. **Article L. 317-1 du Code monétaire et financier [Source 1]**\n\nEnfin, lorsque l’infraction est pénalement sanctionnée, le procès-verbal doit être transmis au procureur de la République dans les **cinq jours** suivant son établissement ; une copie est remise à l’intéressé dans tous les cas. **Article L. 317-1 du Code monétaire et financier [Source 1]**\n\nPour les infractions prévues aux articles **L. 353-1 et L. 353-2 du Code monétaire et financier**, les agents mentionnés aux articles L. 511-3 et L. 511-21 du Code de la consommation sont également habilités, dans les conditions prévues par l’article L. 511-5 du même code. **Article L. 353-5 du Code monétaire et financier [Source 3]**",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L317-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-22"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-25-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.12544099986553,
+      "vectorSearchMs": 626.9862170005217,
+      "jinaRerankingMs": 616.8769479999319,
+      "mappingMs": 0.0197759997099638,
+      "totalMs": 1451.0337300002575,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011056999675929546,
+      "contextBuilderMs": 0.021313000470399857,
+      "generationMs": 4143.920119999908,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5595.023161000572
+    },
+    "judge": {
+      "questionId": "q393",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux catégories d'agents habilités et décrit correctement leurs pouvoirs : accès aux locaux professionnels de 8 h à 20 h, communication et copie des documents, recueil de renseignements, autorisation du procureur en cas d'opposition et inopposabilité du secret professionnel. Les précisions sur les prestataires établis dans l'UE/EEE, la transmission des procès-verbaux et l'article L. 353-5 sont également explicitement supportées par le contexte. Elle répond donc effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L. 317-1) est directement pertinente et couvre l’essentiel de la réponse : catégories d’agents habilités, infractions visées, compétence à l’égard de certains prestataires UE/EEE, accès aux locaux professionnels, créneau horaire, communication et copie des documents, recueil de renseignements, autorisation du procureur en cas d’opposition, secret professionnel et régime des procès-verbaux. La source 3 couvre directement l’affirmation complémentaire relative aux infractions des articles L. 353-1 et L. 353-2. Les autres sources ne sont pas nécessaires à la réponse, mais n’en altèrent pas la pertinence ni la couverture."
+    }
+  },
+  "routing": {
+    "answer": "Sont habilités à rechercher et constater les infractions visées par les dispositions citées :\n\n- **Les agents de la Banque de France commissionnés par le ministre chargé de l’économie** ;\n- **Les agents mentionnés aux articles L. 511-3 et L. 511-21 du Code de la consommation**, notamment pour les infractions prévues aux articles L. 312-1-1, L. 312-1-2, L. 312-1-4-1, L. 314-12, L. 314-13 et L. 315-6 à L. 315-8 du Code monétaire et financier — **Article L. 317-1 du Code monétaire et financier [Source 1]** ;\n- Ces agents peuvent également rechercher et constater les infractions prévues aux articles L. 353-1 et L. 353-2 du Code monétaire et financier, dans les conditions prévues par l’article L. 511-5 du Code de la consommation — **Article L. 353-5 du Code monétaire et financier [Source 2]**.\n\nCes agents peuvent :\n\n- accéder à **tous les locaux à usage professionnel** ;\n- demander la communication des livres et autres documents professionnels ;\n- en prendre copie ;\n- recueillir des renseignements et justifications, sur place ou sur convocation.\n\nL’accès aux locaux est limité à la période comprise **entre 8 heures et 20 heures**. En cas d’opposition du responsable des lieux, la visite nécessite l’autorisation du procureur de la République du tribunal judiciaire dans le ressort duquel se trouvent les locaux. Le secret professionnel ne peut pas leur être opposé dans l’exercice de ces pouvoirs — **Article L. 317-1 du Code monétaire et financier [Source 1]**.\n\nPour les infractions pénalement sanctionnées, le procès-verbal doit être transmis au procureur de la République dans les cinq jours suivant son établissement ; une copie est remise à l’intéressé [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L317-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1459.9159760000184,
+      "routingCalls": 1,
+      "embeddingMs": 277.44074400048703,
+      "vectorSearchMs": 171.43949000071734,
+      "jinaRerankingMs": 676.1634400002658,
+      "mappingMs": 0.02512000035494566,
+      "totalMs": 2585.0111159998924,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012885999865829945,
+      "contextBuilderMs": 0.02133799996227026,
+      "generationMs": 3947.4808529997244,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6532.5370139991865
+    },
+    "judge": {
+      "questionId": "q393",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux catégories d'agents habilités et expose toutes les modalités essentielles : accès aux locaux professionnels entre 8 h et 20 h, communication et copie des documents, recueil de renseignements, autorisation du procureur en cas d'opposition, et inopposabilité du secret professionnel. La mention supplémentaire de l'article L. 353-5 ainsi que celle relative à la transmission des procès-verbaux sont exactes et explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question : elle identifie les agents habilités et détaille leurs pouvoirs d'accès aux locaux et documents, les horaires, l'autorisation du procureur en cas d'opposition et l'inopposabilité du secret professionnel. Elle couvre également la transmission des procès-verbaux ajoutée dans la réponse. La source 2 soutient directement l'extension mentionnée concernant les infractions des articles L. 353-1 et L. 353-2. Toutes les affirmations importantes de la réponse sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

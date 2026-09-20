@@ -1,0 +1,87 @@
+{
+  "questionId": "q014",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La dénonciation est punie lorsqu’elle réunit les conditions suivantes :\n\n- elle est effectuée **par tout moyen** ;\n- elle vise une **personne déterminée** ;\n- elle porte sur un fait susceptible d’entraîner des **sanctions judiciaires, administratives ou disciplinaires** ;\n- l’auteur **sait que le fait dénoncé est totalement ou partiellement inexact** ;\n- elle est adressée à une autorité ou personne habilitée à y donner suite : officier de justice ou de police administrative ou judiciaire, autorité compétente, supérieurs hiérarchiques ou employeur de la personne dénoncée.\n\nDans ce cas, la peine encourue est de **cinq ans d’emprisonnement et 45 000 euros d’amende**, conformément à l’**article 226-10 du Code pénal** [Source 1].\n\nLa fausseté du fait dénoncé résulte nécessairement d’une décision devenue définitive d’acquittement, de relaxe ou de non-lieu déclarant que le fait n’a pas été commis ou qu’il n’est pas imputable à la personne dénoncée. Dans les autres cas, le tribunal apprécie la pertinence des accusations [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.54591600003187,
+      "vectorSearchMs": 706.8677490000264,
+      "jinaRerankingMs": 540.3272069999948,
+      "mappingMs": 0.029158999968785793,
+      "totalMs": 1476.8043039999902,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011159999994561076,
+      "contextBuilderMs": 0.016891999985091388,
+      "generationMs": 2818.456882999977,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4295.320844000031
+    },
+    "judge": {
+      "questionId": "q014",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement toutes les conditions de l’article 226-10 : dénonciation par tout moyen, contre une personne déterminée, d’un fait susceptible de sanctions, connu comme totalement ou partiellement inexact, et adressé à l’une des autorités ou personnes visées. Elle indique exactement la peine de cinq ans d’emprisonnement et 45 000 euros d’amende, ainsi que le rôle d’une décision définitive d’acquittement, de relaxe ou de non-lieu et l’appréciation du tribunal dans les autres cas. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 226-10 du Code pénal, directement applicable à la dénonciation de faits inexactes susceptible d’entraîner des sanctions. Elle énonce expressément toutes les conditions reprises dans la réponse, la peine de cinq ans d’emprisonnement et 45 000 euros d’amende, ainsi que les règles relatives à la décision définitive d’acquittement, relaxe ou non-lieu et à l’appréciation du tribunal dans les autres cas."
+    }
+  },
+  "routing": {
+    "answer": "La dénonciation est punie lorsqu’elle réunit les conditions suivantes :\n\n- elle vise une **personne déterminée** ;\n- elle porte sur un fait susceptible d’entraîner des **sanctions judiciaires, administratives ou disciplinaires** ;\n- elle est effectuée **en sachant que le fait est totalement ou partiellement inexact** ;\n- elle est adressée, par tout moyen :\n  - à un officier de justice ou de police administrative ou judiciaire ;\n  - à une autorité pouvant y donner suite ou saisir l’autorité compétente ;\n  - ou aux supérieurs hiérarchiques ou à l’employeur de la personne dénoncée.\n\nLa fausseté du fait est nécessairement établie lorsque l’acquittement, la relaxe ou le non-lieu est devenu définitif et constate que le fait n’a pas été commis ou n’est pas imputable à la personne dénoncée. Dans les autres cas, le tribunal saisi apprécie la pertinence des accusations.\n\nCette infraction est punie de **cinq ans d’emprisonnement et de 45 000 euros d’amende** — **Article 226-10 du Code pénal [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1716.6516650000121,
+      "routingCalls": 1,
+      "embeddingMs": 381.7743919999921,
+      "vectorSearchMs": 77.53956999996444,
+      "jinaRerankingMs": 593.9002350000083,
+      "mappingMs": 0.03133299999171868,
+      "totalMs": 2769.9270300000207,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011976999987382442,
+      "contextBuilderMs": 0.011682999960612506,
+      "generationMs": 2767.254030000011,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5537.2167860000045
+    },
+    "judge": {
+      "questionId": "q014",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les conditions de l'article 226-10 : personne déterminée, fait susceptible d'entraîner des sanctions, connaissance de son inexactitude totale ou partielle, et destinataires légalement visés. Elle expose correctement le mécanisme d'établissement de la fausseté par une décision définitive ainsi que l'appréciation par le tribunal dans les autres cas. La peine de cinq ans d'emprisonnement et 45 000 euros d'amende est exacte. Toutes les affirmations importantes sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article 226-10 du Code pénal, directement applicable à la dénonciation de faits inexactes susceptible d'entraîner des sanctions. Elle couvre l'ensemble des conditions énoncées dans la réponse (personne déterminée, nature des sanctions, connaissance de l'inexactitude, destinataires), les modalités d'établissement de la fausseté et l'appréciation judiciaire dans les autres cas, ainsi que la peine de cinq ans d'emprisonnement et 45 000 euros d'amende."
+    }
+  },
+  "failureStage": "none"
+}

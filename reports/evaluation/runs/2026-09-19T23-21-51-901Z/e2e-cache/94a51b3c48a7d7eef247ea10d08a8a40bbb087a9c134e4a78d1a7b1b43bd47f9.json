@@ -1,0 +1,95 @@
+{
+  "questionId": "q416",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de **manquement à l’obligation d’informer sur la durée de disponibilité des pièces détachées**, le Code de la consommation prévoit une **amende administrative** :\n\n- jusqu’à **3 000 € pour une personne physique** ;\n- jusqu’à **15 000 € pour une personne morale**.\n\nCette sanction est prévue par l’**article L. 131-2 du Code de la consommation** et prononcée selon les conditions du chapitre II du titre II du livre V [Source 1].\n\nÀ distinguer du manquement à l’**obligation de disponibilité effective** des pièces détachées, qui peut être sanctionné par une amende allant jusqu’à :\n\n- **15 000 € pour une personne physique** ;\n- **75 000 € pour une personne morale**,\n\nen application de l’**article L. 131-3 du Code de la consommation** [Source 2].\n\nEn revanche, le contexte fourni ne contient **aucune disposition du Code monétaire et financier** relative aux responsabilités imposées aux banquiers. Il n’est donc pas possible de répondre précisément sur ce point à partir des sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.04768500011414,
+      "vectorSearchMs": 687.3285630000755,
+      "jinaRerankingMs": 549.437555000186,
+      "mappingMs": 0.02941599953919649,
+      "totalMs": 1413.8652569996193,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014441000297665596,
+      "contextBuilderMs": 0.016906999982893467,
+      "generationMs": 2155.383550000377,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3569.2884149998426
+    },
+    "judge": {
+      "questionId": "q416",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne correctement les sanctions prévues par le code de la consommation (3 000 € pour une personne physique et 15 000 € pour une personne morale). Elle omet toutefois les sanctions et responsabilités des banquiers attendues par la question et la référence, en indiquant ne pas pouvoir y répondre. Cette réserve est entièrement justifiée par le contexte fourni, qui ne contient aucune disposition du code monétaire et financier. Les précisions sur l'article L. 131-3 sont également exactes et fondées, mais accessoires à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour le volet relatif au code de la consommation : la source 1 couvre exactement le manquement d'information, les plafonds de 3 000 € et 15 000 €, ainsi que les modalités de prononcé. La source 2 couvre correctement la distinction accessoire faite avec le manquement à l'obligation de disponibilité effective. Aucune source ne traite du code monétaire et financier ni des banquiers ; elles ne permettent donc pas de répondre positivement à ce volet, mais le constat d'absence de disposition pertinente dans le contexte est cohérent avec les sources fournies. Toutes les affirmations substantielles effectivement formulées sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "En cas de **manquement à l’obligation d’informer sur la durée de disponibilité des pièces détachées**, le Code de la consommation prévoit une **amende administrative** :\n\n- jusqu’à **3 000 € pour une personne physique** ;\n- jusqu’à **15 000 € pour une personne morale**.\n\nCette sanction est prévue par **l’article L. 131-2 du Code de la consommation** et est prononcée selon les conditions du chapitre II du titre II du livre V [Source 1].\n\nÀ distinguer du **manquement à l’obligation de disponibilité elle-même**, qui est passible d’une amende pouvant atteindre :\n\n- **15 000 € pour une personne physique** ;\n- **75 000 € pour une personne morale**,\n\nen application de **l’article L. 131-3 du Code de la consommation** [Source 2].\n\nEn revanche, le contexte fourni ne contient **aucune disposition du Code monétaire et financier** ni aucune règle précisant les responsabilités imposées aux banquiers. Il n’est donc pas possible de répondre à cette partie sans source complémentaire.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1157.4630359997973,
+      "routingCalls": 1,
+      "embeddingMs": 206.9648249996826,
+      "vectorSearchMs": 249.2300659995526,
+      "jinaRerankingMs": 518.289026000537,
+      "mappingMs": 0.029845000244677067,
+      "totalMs": 2132.0001590000466,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011135000735521317,
+      "contextBuilderMs": 0.017020000144839287,
+      "generationMs": 2082.358825000003,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4214.404923000373
+    },
+    "judge": {
+      "questionId": "q416",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les sanctions prévues par l’article L. 131-2 et distingue correctement, à titre complémentaire, le manquement à l’obligation de disponibilité de celui à l’obligation d’information. Elle ne fournit toutefois pas les sanctions et responsabilités des banquiers attendues par la question et présentes dans la référence. Cette omission est justifiée par l’absence totale de dispositions du code monétaire et financier dans le contexte. Toutes les affirmations substantielles sont donc étayées par les sources fournies, et la réponse répond effectivement à la partie documentée de la question plutôt que de refuser globalement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour la partie relative au code de la consommation : elles couvrent précisément le manquement à l'information sur la disponibilité des pièces détachées (L. 131-2) et, à titre de distinction, le manquement à l'obligation de disponibilité (L. 131-3). Elles ne fournissent toutefois aucune disposition du code monétaire et financier sur les banquiers, qui constitue une partie importante de la question. Toutes les affirmations factuelles formulées dans la réponse sont néanmoins étayées par les sources, et le constat d'absence de disposition pertinente dans le contexte est cohérent avec les sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

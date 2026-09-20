@@ -1,0 +1,111 @@
+{
+  "questionId": "q065",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 578 du Code civil**, l’usufruit est le droit de jouir de biens dont une autre personne est propriétaire, comme le ferait le propriétaire lui-même, tout en étant tenu d’en conserver la substance [Source 2].\n\nL’obligation principale de l’usufruitier est donc de **préserver la substance du bien** et de le restituer à la fin de l’usufruit dans un état conforme à cette obligation.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "589"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "578"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "609"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "608"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.58673599991016,
+      "vectorSearchMs": 565.0204139999114,
+      "jinaRerankingMs": 502.509371999884,
+      "mappingMs": 0.03829100006259978,
+      "totalMs": 1307.2677579999436,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009749000193551183,
+      "contextBuilderMs": 0.020857000024989247,
+      "generationMs": 1542.3052699998952,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2849.61200199998
+    },
+    "judge": {
+      "questionId": "q065",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article 578 et identifie correctement l’obligation essentielle de conservation de la substance. La précision sur la restitution en fin d’usufruit est cohérente avec cette obligation et avec le contexte, notamment l’article 589."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 578 et couvre intégralement la définition de l’usufruit ainsi que l’obligation essentielle de conserver la substance. La source 1 appuie en outre la précision relative à la restitution à la fin de l’usufruit, au moins pour les biens qui se détériorent progressivement par l’usage."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 578 du Code civil**, l’usufruit est le droit de jouir de biens appartenant à autrui comme le ferait le propriétaire, tout en ayant l’obligation d’en **conserver la substance** [Source 2].\n\nL’obligation principale de l’usufruitier est donc de préserver le bien et de ne pas en altérer la substance pendant la durée de sa jouissance.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "589"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "578"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "608"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "609"
+      }
+    ],
+    "profiling": {
+      "routingMs": 817.8814129999373,
+      "routingCalls": 1,
+      "embeddingMs": 241.31355699989945,
+      "vectorSearchMs": 56.942362000001594,
+      "jinaRerankingMs": 518.6596289998852,
+      "mappingMs": 0.02318499982357025,
+      "totalMs": 1634.849613999948,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01042599999345839,
+      "contextBuilderMs": 0.017860999796539545,
+      "generationMs": 1405.1964990000706,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3040.0820790000726
+    },
+    "judge": {
+      "questionId": "q065",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article 578 et identifie correctement l’obligation de conserver la substance du bien. Ces deux affirmations sont explicitement étayées par la Source 2. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 578 du Code civil, qui définit l'usufruit comme le droit de jouir de la chose d'autrui comme le propriétaire et impose d'en conserver la substance. Elle est donc exactement pertinente et couvre l'ensemble des affirmations importantes de la réponse générée. Les autres sources ne sont pas nécessaires."
+    }
+  },
+  "failureStage": "none"
+}

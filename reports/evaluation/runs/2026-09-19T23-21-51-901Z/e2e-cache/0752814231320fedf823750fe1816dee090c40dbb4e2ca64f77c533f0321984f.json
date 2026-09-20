@@ -1,0 +1,87 @@
+{
+  "questionId": "q219",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 322-1 du Code de commerce, ces ventes sont réalisées par les officiers ministériels préposés à la vente forcée du mobilier, selon les formes prescrites. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.35126999998465,
+      "vectorSearchMs": 609.6916450001299,
+      "jinaRerankingMs": 577.9254350000992,
+      "mappingMs": 0.035534000024199486,
+      "totalMs": 1407.0277690002695,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011039000004529953,
+      "contextBuilderMs": 0.012461000122129917,
+      "generationMs": 1114.091605000198,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2521.150692000054
+    },
+    "judge": {
+      "questionId": "q219",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les officiers ministériels préposés à la vente forcée du mobilier et mentionne le respect des formes prescrites. Elle omet les renvois explicites aux articles L. 221-4 du code des procédures civiles d'exécution et 945 du code de procédure civile, mais ceux-ci constituent un détail accessoire pour répondre à la question « qui »."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 322-1 visé par la question et identifie expressément les officiers ministériels préposés à la vente forcée du mobilier, ainsi que l’exigence des formes prescrites. Elle couvre entièrement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L322-1 du Code de commerce, ces ventes sont réalisées par les officiers ministériels préposés à la vente forcée du mobilier, selon les formes prescrites [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1432.0422439998947,
+      "routingCalls": 1,
+      "embeddingMs": 341.6298540001735,
+      "vectorSearchMs": 165.98422700027004,
+      "jinaRerankingMs": 533.9895350001752,
+      "mappingMs": 0.035629000049084425,
+      "totalMs": 2473.7707589999773,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011992000043392181,
+      "contextBuilderMs": 0.010931000113487244,
+      "generationMs": 1109.3757730000652,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.176785999909
+    },
+    "judge": {
+      "questionId": "q219",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les officiers ministériels préposés à la vente forcée du mobilier. Elle est directement étayée par le contexte. Elle omet seulement la mention explicite de la conformité aux articles L. 221-4 du code des procédures civiles d'exécution et 945 du code de procédure civile, élément complémentaire de la référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L322-1 visé par la question et identifie expressément les officiers ministériels préposés à la vente forcée du mobilier comme réalisant ces ventes. Elle couvre entièrement l’affirmation de la réponse générée, y compris la mention des formes prescrites."
+    }
+  },
+  "failureStage": "none"
+}

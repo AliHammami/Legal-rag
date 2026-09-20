@@ -1,0 +1,91 @@
+{
+  "questionId": "q194",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le président du tribunal statuant en référé peut :\n\n- **enjoindre, sous astreinte**, à la personne ou à l’organe compétent de produire, communiquer ou transmettre les documents ou informations concernés ;\n- **désigner un mandataire** chargé de procéder à cette communication.\n\nLorsque la demande est accueillie, **l’astreinte et les frais de procédure sont mis à la charge** de la personne ou de l’organe en cause.\n\n**Article L. 238-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L238-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.12315899971873,
+      "vectorSearchMs": 598.1350810001604,
+      "jinaRerankingMs": 546.9465729999356,
+      "mappingMs": 0.027437000069767237,
+      "totalMs": 1380.2618370000273,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010511999949812889,
+      "contextBuilderMs": 0.010883999988436699,
+      "generationMs": 1679.3323249998502,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3059.6400490002707
+    },
+    "judge": {
+      "questionId": "q194",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les deux mesures prévues : une injonction sous astreinte de communiquer les documents ou informations, ou la désignation d’un mandataire chargé de cette communication. Elle ajoute à juste titre que l’astreinte et les frais de procédure sont à la charge de la personne ou de l’organe mis en cause lorsque la demande est accueillie. Ces éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 238-1 et prévoit expressément les deux mesures évoquées : injonction sous astreinte à la personne ou à l’organe compétent de communiquer les documents ou informations, ou désignation d’un mandataire chargé de cette communication. Elle couvre également l’affirmation relative à la mise à la charge de la personne ou de l’organe mis en cause de l’astreinte et des frais de procédure lorsque la demande est accueillie."
+    }
+  },
+  "routing": {
+    "answer": "Lorsque les personnes intéressées ne peuvent obtenir les documents ou informations visés par l’**article L. 238-1 du Code de commerce**, le président du tribunal, statuant en référé, peut :\n\n- **enjoindre sous astreinte** à la personne ou à l’organe compétent de produire, communiquer ou transmettre les documents ou informations concernés ;\n- **désigner un mandataire** chargé de procéder à cette production, communication ou transmission.\n\nLorsque la demande est accueillie, **l’astreinte et les frais de procédure sont mis à la charge de la personne ou de l’organe mis en cause**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L238-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-5-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1739.694290000014,
+      "routingCalls": 1,
+      "embeddingMs": 222.642477999907,
+      "vectorSearchMs": 173.9231650000438,
+      "jinaRerankingMs": 533.2993169999681,
+      "mappingMs": 0.07883800007402897,
+      "totalMs": 2669.6645709997974,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013637000229209661,
+      "contextBuilderMs": 0.09035900002345443,
+      "generationMs": 2001.0368460002355,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4670.81438399991
+    },
+    "judge": {
+      "questionId": "q194",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux mesures prévues par l’article L. 238-1 : injonction sous astreinte de communiquer les documents ou informations et désignation d’un mandataire chargé de cette communication. Elle ajoute correctement que l’astreinte et les frais sont à la charge de la personne ou de l’organe mis en cause lorsque la demande est accueillie. Ces éléments sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 238-1 et énonce précisément les deux mesures de référé (injonction sous astreinte de communiquer et désignation d’un mandataire). Elle couvre également l’affirmation additionnelle selon laquelle, si la demande est accueillie, l’astreinte et les frais de procédure sont à la charge de la personne ou de l’organe mis en cause. La source 2 est superflue mais ne nuit pas à l’évaluation."
+    }
+  },
+  "failureStage": "none"
+}

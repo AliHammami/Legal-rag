@@ -1,0 +1,119 @@
+{
+  "questionId": "q011",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’intitulé « ce sous-titre » étant présent dans deux sources, les peines diffèrent selon le sous-titre concerné.\n\n### 1. Article 213-1 du Code pénal\n\nLes personnes physiques encourent également :\n\n- **Interdiction des droits civiques, civils et de famille** : durée maximale de **15 ans** ;\n- **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale concernée** : durée maximale de l’interdiction temporaire de **10 ans** ;\n- **Interdiction de séjour** : durée maximale de **15 ans** ;\n- **Confiscation** de tout ou partie des biens concernés : aucune durée maximale n’est indiquée, puisqu’il s’agit d’une mesure de confiscation ;\n- **Interdiction d’exercer une profession commerciale ou industrielle**, ou de diriger, administrer, gérer ou contrôler une entreprise ou société commerciale : aucune durée maximale n’est précisée dans l’extrait.\n\nLes interdictions d’exercice peuvent être prononcées **cumulativement**.  \n**Article 213-1 du Code pénal [Source 1].**\n\n### 2. Article 215-1 du Code pénal\n\nSont également prévues :\n\n- l’interdiction des droits civiques, civils et de famille ;\n- l’interdiction d’exercer une fonction publique ;\n- l’interdiction de séjour ;\n- la confiscation des biens ;\n- la confiscation du matériel ayant servi à commettre l’infraction ;\n- l’interdiction d’exercer certaines fonctions ou activités, notamment l’activité de prestataire de formation professionnelle continue, pour une durée de **cinq ans**.\n\nPour les autres interdictions et confiscations, aucune durée maximale n’est précisée dans l’extrait. Les interdictions d’exercice peuvent également être prononcées cumulativement.  \n**Article 215-1 du Code pénal [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "213-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "215-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-29"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.50916500002495,
+      "vectorSearchMs": 681.0040459999873,
+      "jinaRerankingMs": 634.9588719999883,
+      "mappingMs": 0.026723999995738268,
+      "totalMs": 1528.6177660000103,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011529000010341406,
+      "contextBuilderMs": 0.023343000008026138,
+      "generationMs": 6843.907304000022,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8372.570227999997
+    },
+    "judge": {
+      "questionId": "q011",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’ambiguïté créée par la présence de deux articles visant les infractions d’un « présent sous-titre ». Pour l’article 213-1, elle reprend exhaustivement les peines et leurs plafonds explicitement prévus (15 ans, 10 ans, 15 ans), ainsi que les confiscations et interdictions d’exercice cumulables. Elle indique à juste titre qu’aucune durée n’est explicitée dans les extraits pour les autres mesures. Les précisions apportées pour l’article 215-1 sont également fidèles au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes : elles visent expressément les personnes physiques coupables d’infractions prévues par le « présent sous-titre » et énumèrent les peines applicables. Elles couvrent l’ensemble des affirmations substantielles de la réponse pour les articles 213-1 et 215-1, y compris les plafonds de 15 ans et 10 ans, la durée de cinq ans pour l’activité de prestataire de formation professionnelle continue, les confiscations, ainsi que le caractère cumulable des interdictions d’exercice. Les constats d’absence de durée explicite dans les extraits sont également vérifiables à partir de ces sources."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte comporte plusieurs dispositions visant des « infractions prévues par le présent sous-titre ». La réponse dépend donc de l’article concerné.\n\n### 1. Article 213-1 du Code pénal [Source 1]\n\nLes personnes physiques encourent notamment :\n\n- **Interdiction des droits civiques, civils et de famille** : durée maximale de **15 ans** ;\n- **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale liée à l’infraction** : interdiction temporaire d’une durée maximale de **10 ans** ;\n- **Interdiction de séjour** : durée maximale de **15 ans** ;\n- **Confiscation** de tout ou partie des biens appartenant au condamné ou dont il a la libre disposition, sous réserve des droits du propriétaire de bonne foi : **aucune durée**, puisqu’il s’agit d’une mesure de confiscation ;\n- **Interdiction d’exercer certaines activités commerciales ou de diriger, administrer, gérer ou contrôler une entreprise ou société commerciale** : les interdictions peuvent être prononcées cumulativement ; **aucune durée maximale spécifique n’est précisée dans l’extrait**.\n\nArticle 213-1 du Code pénal [Source 1].\n\n### 2. Article 215-1 du Code pénal [Source 2]\n\nSont notamment encourues :\n\n- interdiction des droits civiques, civils et de famille ;\n- interdiction d’exercer une fonction publique ;\n- interdiction de séjour ;\n- confiscation des biens et du matériel ayant servi à commettre l’infraction ;\n- interdiction d’exercer certaines fonctions, activités ou professions commerciales.\n\nL’extrait ne précise pas de durée maximale générale pour ces interdictions. Il prévoit toutefois une durée de **cinq ans** pour l’interdiction d’exercer l’activité de prestataire de formation professionnelle continue. Les interdictions d’exercice peuvent être prononcées cumulativement.\n\nArticle 215-1 du Code pénal [Source 2].\n\n### 3. Article 422-3 du Code pénal [Source 3]\n\n- **Interdiction des droits civiques, civils et de famille** : **15 ans maximum en cas de crime** et **10 ans maximum en cas de délit** ;\n- **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale liée à l’infraction** : **10 ans maximum** pour l’interdiction temporaire ;\n- **Interdiction de séjour** : **15 ans maximum en cas de crime** et **10 ans maximum en cas de délit** ;\n- l’interdiction de certaines activités commerciales peut également être prononcée pour les crimes visés par le texte, sans durée maximale précisée dans l’extrait.\n\nArticle 422-3 du Code pénal [Source 3].\n\n### 4. Article 462-3 du Code pénal [Source 4]\n\n- **Interdiction des droits civiques, civils et de famille** : **15 ans maximum en cas de crime** et **10 ans maximum en cas de délit** ;\n- **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale liée à l’infraction** : **10 ans maximum** pour l’interdiction temporaire ;\n- **Interdiction de séjour** : **15 ans maximum en cas de crime** et **10 ans maximum en cas de délit**.\n\nArticle 462-3 du Code pénal [Source 4].\n\n### 5. Article 227-29 du Code pénal [Source 5]\n\n- suspension du permis de conduire : **5 ans maximum** ;\n- annulation du permis avec interdiction d’en solliciter un nouveau : **5 ans maximum** ;\n- interdiction de quitter le territoire français : **5 ans maximum** ;\n- interdiction d’exercer une activité professionnelle ou bénévole impliquant un contact habituel avec des mineurs : **définitive ou 10 ans maximum** ;\n- confiscation de la chose ayant servi ou destinée à commettre l’infraction ou de son produit : **aucune durée** ;\n- pour certains crimes, interdiction d’exercer une fonction publique, une activité liée à l’infraction ou certaines fonctions commerciales : **aucune durée maximale précisée dans l’extrait**.\n\nArticle 227-29 du Code pénal [Source 5].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "213-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "215-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-29"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2310.4850450000085,
+      "routingCalls": 1,
+      "embeddingMs": 190.60133499998483,
+      "vectorSearchMs": 730.8099269999948,
+      "jinaRerankingMs": 564.152287999983,
+      "mappingMs": 0.02619900001445785,
+      "totalMs": 3796.1105849999876,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010643000015988946,
+      "contextBuilderMs": 0.023142999998526648,
+      "generationMs": 7517.377250999998,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 11313.540170999971
+    },
+    "judge": {
+      "questionId": "q011",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement, pour l'article 213-1 correspondant à la formulation de la question, les cinq peines attendues et les plafonds de 15 ans, 10 ans et 15 ans, ainsi que la confiscation et le cumul des interdictions d'exercice. Elle est toutefois inutilement ambiguë et surabondante en présentant plusieurs autres articles relatifs à des titres, livres ou chapitres différents, comme si la question ne permettait pas d'identifier le sous-titre visé. Les affirmations factuelles sont néanmoins étayées par les extraits de contexte cités."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 correspond directement à la formulation de la question et contient l’ensemble des peines et plafonds attendus pour le sous-titre visé. Les sources 2 à 5 concernent des périmètres distincts (autre sous-titre, titre, livre ou chapitre) et sont donc superflues pour répondre à cette question, mais elles restent pertinentes pour les développements additionnels effectivement fournis. Toutes les affirmations substantielles de la réponse générée, y compris les durées, confiscations et possibilités de cumul, sont appuyées par les extraits cités."
+    }
+  },
+  "failureStage": "none"
+}

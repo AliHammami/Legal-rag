@@ -1,0 +1,107 @@
+{
+  "questionId": "q347",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le débiteur doit **saisir la commission de surendettement des particuliers** en déposant ou en adressant sa demande au **secrétariat de la commission compétente**. Cette demande doit tendre au traitement de sa situation de surendettement et comporter la déclaration des éléments actifs et passifs de son patrimoine.\n\n- **Article L721-1 du Code de la consommation** : le débiteur saisit la commission par une demande déclarant les éléments actifs et passifs de son patrimoine [Source 2].\n- **Article R721-1 du Code de la consommation** : la demande est adressée ou remise au secrétariat de la commission [Source 1].\n\nLa commission pourra ensuite proposer ou imposer des mesures de traitement, ou mettre en œuvre une procédure de rétablissement personnel dans les conditions prévues par le Code de la consommation [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R681-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 237.47049199976027,
+      "vectorSearchMs": 659.1996109997854,
+      "jinaRerankingMs": 550.2704530004412,
+      "mappingMs": 0.027668999508023262,
+      "totalMs": 1446.9932519998401,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010747000575065613,
+      "contextBuilderMs": 0.030257999897003174,
+      "generationMs": 1829.977955000475,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3277.0197379998863
+    },
+    "judge": {
+      "questionId": "q347",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit exactement la démarche requise : saisir la commission de surendettement par une demande déclarant les éléments actifs et passifs du patrimoine. Elle ajoute correctement que la demande est remise ou adressée au secrétariat de la commission. Ces éléments, ainsi que la mention des suites possibles par la commission, sont explicitement étayés par les sources 1, 2 et 3 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 répondent directement à la démarche demandée : saisine de la commission, déclaration des éléments actifs et passifs, et remise ou envoi au secrétariat. La source 3 est également pertinente pour l'affirmation complémentaire sur les suites possibles de la demande devant la commission. Toutes les affirmations importantes de la réponse générée sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Le débiteur doit **saisir la commission de surendettement des particuliers** en déposant une demande de traitement de sa situation de surendettement, dans laquelle il **déclare les éléments actifs et passifs de son patrimoine** (Article L721-1 du Code de la consommation [Source 2]).\n\nCette demande doit être **adressée ou remise au secrétariat de la commission compétente** (Article R721-1 du Code de la consommation [Source 1]). La commission pourra ensuite proposer ou imposer des mesures de traitement, ou orienter la procédure vers un rétablissement personnel selon les conditions prévues (Article L712-2 du Code de la consommation [Source 3]).",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L721-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L712-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1527.752600999549,
+      "routingCalls": 1,
+      "embeddingMs": 179.00175999943167,
+      "vectorSearchMs": 45.93000700045377,
+      "jinaRerankingMs": 521.5835500005633,
+      "mappingMs": 0.03790100011974573,
+      "totalMs": 2274.330617000349,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010976999998092651,
+      "contextBuilderMs": 0.019886000081896782,
+      "generationMs": 1915.349171999842,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4189.719167999923
+    },
+    "judge": {
+      "questionId": "q347",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement la saisine de la commission de surendettement et la déclaration des éléments actifs et passifs du patrimoine, conformément à la référence. Elle ajoute à juste titre que la demande est adressée ou remise au secrétariat de la commission compétente. Les précisions sur les suites possibles sont exactes et explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. La source 2 couvre la saisine de la commission et la déclaration de l'actif et du passif ; la source 1 couvre la remise ou l'envoi au secrétariat ; la source 3 couvre les suites procédurales évoquées. Toutes les affirmations importantes de la réponse sont explicitement étayées."
+    }
+  },
+  "failureStage": "none"
+}

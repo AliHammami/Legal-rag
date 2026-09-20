@@ -1,0 +1,87 @@
+{
+  "questionId": "q123",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsque le contrat de travail est rompu à l’initiative de l’employeur, le salarié bénéficie de deux garanties concernant son logement :\n\n- **Un délai minimum avant de devoir quitter son logement** : il ne peut pas être contraint de partir avant l’expiration d’un délai fixé par décret en Conseil d’État.\n- **Le versement d’une indemnité** : à défaut, ou en complément selon les conditions applicables, il doit recevoir une indemnité correspondant au **prix de la location trimestrielle d’un logement équivalent**, ainsi qu’à la valeur des **avantages en nature** dont il bénéficiait.\n\nCes droits résultent de l’**article L7212-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 262.7680720000062,
+      "vectorSearchMs": 556.4681580001488,
+      "jinaRerankingMs": 536.7350990001578,
+      "mappingMs": 0.03599600004963577,
+      "totalMs": 1356.0420630001463,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01070300000719726,
+      "contextBuilderMs": 0.00992799992673099,
+      "generationMs": 1955.312776999781,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3311.3871210000943
+    },
+    "judge": {
+      "questionId": "q123",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux garanties prévues : maintien dans le logement jusqu'à l'expiration du délai réglementaire et, à défaut, paiement d'une indemnité égale à la valeur trimestrielle d'un logement équivalent et des avantages en nature. L'article cité et l'ensemble des affirmations sont directement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle vise expressément le salarié dont le contrat est rompu à l’initiative de l’employeur et ses garanties relatives au logement. Elle couvre l’ensemble des affirmations importantes de la réponse, notamment le délai minimum fixé par décret en Conseil d’État, l’interdiction d’obliger le salarié à quitter le logement avant ce délai ou sans indemnité, ainsi que le montant de l’indemnité incluant la location trimestrielle d’un logement équivalent et les avantages en nature."
+    }
+  },
+  "routing": {
+    "answer": "Lorsque le contrat de travail est rompu à l’initiative de l’employeur, le salarié bénéficie de deux protections concernant son logement :\n\n- Il ne peut pas être contraint de quitter son logement avant l’expiration d’un délai minimum fixé par décret en Conseil d’État.\n- Il a droit au versement d’une indemnité si son logement est concerné. Cette indemnité correspond au prix de la location trimestrielle d’un logement équivalent, augmenté de la valeur des avantages en nature dont il bénéficiait.\n\n**Article L7212-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3787.973418000154,
+      "routingCalls": 1,
+      "embeddingMs": 217.8384130001068,
+      "vectorSearchMs": 352.52326399995945,
+      "jinaRerankingMs": 506.1587559999898,
+      "mappingMs": 0.039594999980181456,
+      "totalMs": 4864.56013899995,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011514000128954649,
+      "contextBuilderMs": 0.010392000200226903,
+      "generationMs": 1521.020322999917,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6385.61062300019
+    },
+    "judge": {
+      "questionId": "q123",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les deux protections prévues : maintien dans le logement pendant le délai réglementaire minimal et, à défaut, indemnité correspondant à la location trimestrielle d'un logement équivalent et aux avantages en nature. Ces éléments, ainsi que la référence à l'article L7212-1, sont directement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L7212-1 du Code du travail applicable à la rupture du contrat à l’initiative de l’employeur et aux conditions de départ du logement. Elle couvre l’ensemble des affirmations importantes : délai minimum fixé par décret en Conseil d’État, interdiction d’obliger le salarié à quitter les lieux avant ce délai ou sans indemnité, et montant de l’indemnité incluant la location trimestrielle d’un logement équivalent et les avantages en nature."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q143",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les contrats d’apprentissage conclus par une entreprise de travail temporaire se caractérisent par les éléments suivants :\n\n- **L’employeur** : ils peuvent être conclus par les entreprises de travail temporaire mentionnées à l’article L. 1251-45 du Code du travail.\n- **Une formation répartie entre deux lieux** :\n  - une partie en entreprise, dans le cadre de missions de travail temporaire ;\n  - une partie en centre de formation d’apprentis ou en section d’apprentissage.  \n  Cette organisation est prévue par l’**article L. 6226-1 du Code du travail** [Source 1].\n- **Une durée minimale des missions** : chaque mission de travail temporaire effectuée dans le cadre de l’apprentissage doit durer au moins **six mois**. Le temps d’enseignement en CFA ou en section d’apprentissage lié à ces missions est inclus dans cette durée [Source 1].\n- **Un double encadrement tutorale** : la fonction de maître d’apprentissage est assurée :\n  - par un maître d’apprentissage dans l’entreprise de travail temporaire ;\n  - par un maître d’apprentissage dans l’entreprise utilisatrice [Source 1].\n- **Des mentions obligatoires dans le contrat** : le contrat doit notamment préciser le nom du maître d’apprentissage désigné dans l’entreprise de travail temporaire ainsi que la durée de son expérience dans ce type d’entreprise, conformément à l’**article R. 6226-1 du Code du travail** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6226-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R6226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 258.547825999558,
+      "vectorSearchMs": 611.695921999868,
+      "jinaRerankingMs": 571.7682880000211,
+      "mappingMs": 0.0384120000526309,
+      "totalMs": 1442.0751649998128,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02177299978211522,
+      "contextBuilderMs": 0.02008299995213747,
+      "generationMs": 3214.4282459998503,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4656.553869999945
+    },
+    "judge": {
+      "questionId": "q143",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement tous les éléments du contexte et de la référence : formation partagée entre missions en entreprise et CFA/section d’apprentissage, durée minimale de six mois pour chaque mission avec prise en compte des enseignements, et double tutorat dans l’ETT et l’entreprise utilisatrice. Elle ajoute, de manière exacte et explicitement supportée par la source 2, les mentions du contrat relatives au maître d’apprentissage de l’ETT. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article L. 6226-1 couvre l'habilitation des entreprises de travail temporaire, l'organisation de la formation, la durée minimale des missions et le double tutorat ; l'article R. 6226-1 couvre les mentions relatives au maître d'apprentissage dans le contrat. Elles étayent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les contrats d’apprentissage conclus par une entreprise de travail temporaire se caractérisent par les éléments suivants :\n\n- **L’employeur** est une entreprise de travail temporaire autorisée à conclure ce type de contrat [Source 1].\n- **La formation est organisée en alternance** :\n  - une partie est dispensée dans le cadre de missions de travail temporaire en entreprise ;\n  - l’autre partie est assurée par un centre de formation d’apprentis ou une section d’apprentissage, selon les conditions prévues par le Code du travail [Source 1].\n- **Chaque mission de travail temporaire doit durer au minimum six mois**. Le temps consacré aux enseignements en CFA ou en section d’apprentissage liés à ces missions est inclus dans cette durée [Source 1].\n- **La fonction tutorale est répartie entre deux maîtres d’apprentissage** :\n  - un maître d’apprentissage dans l’entreprise de travail temporaire ;\n  - un maître d’apprentissage dans l’entreprise utilisatrice [Source 1].\n- **Le contrat doit préciser notamment**, pour le maître d’apprentissage de l’entreprise de travail temporaire, son nom ainsi que la durée de son expérience en entreprise de travail temporaire — **Article R6226-1 du Code du travail** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6226-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R6226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1045.7957399999723,
+      "routingCalls": 1,
+      "embeddingMs": 263.1822800002992,
+      "vectorSearchMs": 235.96001999964938,
+      "jinaRerankingMs": 535.6260949997231,
+      "mappingMs": 0.033536000177264214,
+      "totalMs": 2080.6320079998113,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012274000328034163,
+      "contextBuilderMs": 0.01805899990722537,
+      "generationMs": 3139.7969470000826,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5220.470652000047
+    },
+    "judge": {
+      "questionId": "q143",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les caractéristiques prévues par l’article L6226-1 : formation alternant missions de travail temporaire et CFA/section d’apprentissage, durée minimale de six mois pour chaque mission avec prise en compte du temps de formation, et tutorat assuré dans l’ETT comme dans l’entreprise utilisatrice. Elle ajoute à juste titre l’exigence réglementaire de l’article R6226-1 relative à l’identification et à l’expérience du maître d’apprentissage de l’ETT. Toutes les affirmations importantes sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article L6226-1 couvre les conditions de formation, la durée minimale des missions et le double tutorat, tandis que l'article R6226-1 couvre les mentions relatives au maître d'apprentissage de l'entreprise de travail temporaire. Elles étayent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q107",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 725 du Code civil, pour pouvoir succéder, il faut :\n\n- **exister au moment de l’ouverture de la succession** ; ou\n- **avoir déjà été conçu à ce moment et naître viable**.\n\nPeut également succéder la personne dont l’absence est présumée conformément à l’article 112 du Code civil. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "725"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.10030400007963,
+      "vectorSearchMs": 570.1301959999837,
+      "jinaRerankingMs": 488.1573020000942,
+      "mappingMs": 0.030671000014990568,
+      "totalMs": 1269.4476729999296,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011449000099673867,
+      "contextBuilderMs": 0.01294800010509789,
+      "generationMs": 1389.5123009998351,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2658.993206999963
+    },
+    "judge": {
+      "questionId": "q107",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions d’existence prévues par l’article 725 du Code civil (existence à l’ouverture de la succession, ou conception préalable suivie d’une naissance viable) et ajoute correctement le cas de la personne dont l’absence est présumée selon l’article 112. Toutes les affirmations sont explicitement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 725 du Code civil, qui répond exactement à la question. Elle couvre toutes les affirmations importantes de la réponse : existence à l’ouverture de la succession, conception antérieure suivie d’une naissance viable, et possibilité de succéder pour la personne dont l’absence est présumée selon l’article 112."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 725 du Code civil, pour succéder, il faut :\n\n- **exister au moment de l’ouverture de la succession** ;\n- ou, si l’on est déjà conçu à cette date, **naître viable** ;\n- une personne dont l’absence est présumée conformément à l’article 112 peut également succéder.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "725"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.6415069999639,
+      "routingCalls": 1,
+      "embeddingMs": 181.78483300004154,
+      "vectorSearchMs": 57.53157799993642,
+      "jinaRerankingMs": 517.3572830001358,
+      "mappingMs": 0.028883999912068248,
+      "totalMs": 1576.3751990001183,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009467999916523695,
+      "contextBuilderMs": 0.00990599999204278,
+      "generationMs": 1390.8835549999494,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.285884000128
+    },
+    "judge": {
+      "questionId": "q107",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois conditions prévues à l’article 725 du Code civil : existence lors de l’ouverture de la succession, conception suivie d’une naissance viable, et possibilité de succéder pour la personne dont l’absence est présumée selon l’article 112. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 725 du Code civil et énonce exactement les trois critères mentionnés dans la réponse : existence à l’ouverture de la succession, conception suivie d’une naissance viable, et possibilité de succéder en cas d’absence présumée selon l’article 112. Elle est donc directement pertinente et couvre l’ensemble des affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

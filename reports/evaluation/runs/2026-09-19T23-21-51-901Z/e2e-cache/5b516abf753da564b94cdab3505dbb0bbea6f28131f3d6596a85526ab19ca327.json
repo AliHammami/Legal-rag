@@ -1,0 +1,119 @@
+{
+  "questionId": "q434",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas d’identifier l’infraction concernée. Les peines indiquées sont les suivantes :\n\n- **Vol** : trois ans d’emprisonnement et **45 000 € d’amende** — article 311-3 du Code pénal [Source 1].\n- **Violation de l’article L. 221-10-1** : un an d’emprisonnement et **150 000 € d’amende** — article L. 242-7-1 du Code de la consommation [Source 2].\n- **Infraction aggravée relevant de l’article 322-3** :\n  - cinq ans d’emprisonnement et **75 000 € d’amende** lorsqu’elle relève du I de l’article 322-1 ;\n  - **15 000 € d’amende** et une peine de travail d’intérêt général lorsqu’elle relève du II — article 322-3 du Code pénal [Source 3].\n- **Violation de l’article L. 413-2** : un an d’emprisonnement et **150 000 € d’amende** — article L. 451-3 du Code de la consommation [Source 4].\n- **Violation de l’article L. 433-2** : deux ans d’emprisonnement et **300 000 € d’amende** — article L. 453-7 du Code de la consommation [Source 5].\n\nIl faut préciser les faits ou l’article dont la violation est reprochée pour déterminer la peine applicable.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L453-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 191.50234099850059,
+      "vectorSearchMs": 634.1856749989092,
+      "jinaRerankingMs": 1732.0256619993597,
+      "mappingMs": 0.024486001580953598,
+      "totalMs": 2557.763524999842,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014669999480247498,
+      "contextBuilderMs": 0.027340000495314598,
+      "generationMs": 3379.2851740010083,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5937.099742000923
+    },
+    "judge": {
+      "questionId": "q434",
+      "correctness": 2,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reconnaît correctement qu’aucune infraction n’est identifiée et qu’il faut préciser les faits ou l’article applicable. Toutefois, alors qu’une abstention était attendue, elle énumère plusieurs peines possibles sans pouvoir déterminer laquelle répond à la question. Les peines et renvois cités sont bien étayés par les extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont juridiquement pertinentes pour les cinq peines conditionnelles énumérées et permettent aussi de constater qu’elles concernent des infractions distinctes, sans identifier celle visée par la question. Elles ne permettent toutefois pas de répondre directement à la question générale, faute d’infraction ou de faits précisés. Toutes les affirmations matérielles importantes de la réponse sur les peines, montants, durées et renvois sont couvertes par les extraits fournis, ainsi que le constat implicite qu’une détermination unique est impossible sans précision."
+    }
+  },
+  "routing": {
+    "answer": "La peine encourue ne peut pas être déterminée sans connaître l’infraction concernée. Les extraits fournis prévoient notamment :\n\n- **Vol** : 3 ans d’emprisonnement et 45 000 € d’amende — article 311-3 du Code pénal [Source 1].\n- **Violation de l’article L. 221-10-1** : 1 an d’emprisonnement et 150 000 € d’amende — article L. 242-7-1 du Code de la consommation [Source 2].\n- **Certaines destructions, dégradations ou détériorations aggravées** : 5 ans d’emprisonnement et 75 000 € d’amende, ou 15 000 € d’amende et un travail d’intérêt général selon le cas — article 322-3 du Code pénal [Source 3].\n- **Violation de l’article L. 413-2** : 1 an d’emprisonnement et 150 000 € d’amende — article L. 451-3 du Code de la consommation [Source 4].\n- **Violation de l’article L. 433-2** : 2 ans d’emprisonnement et 300 000 € d’amende — article L. 453-7 du Code de la consommation [Source 5].\n\nIl faut donc préciser les faits ou l’article enfreint pour identifier la peine applicable.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L453-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 716.2627440001816,
+      "routingCalls": 1,
+      "embeddingMs": 191.3241840004921,
+      "vectorSearchMs": 685.8893349990249,
+      "jinaRerankingMs": 493.6209570001811,
+      "mappingMs": 0.03834000043570995,
+      "totalMs": 2087.162471000105,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016902999952435493,
+      "contextBuilderMs": 0.03870999999344349,
+      "generationMs": 2724.978723000735,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4812.207644000649
+    },
+    "judge": {
+      "questionId": "q434",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question ne précise aucune infraction ni aucun article applicable. La réponse indique clairement qu'il est impossible de déterminer une peine unique sans cette précision et demande les faits ou l'article concerné. Les exemples de peines cités correspondent aux extraits du contexte et sont correctement attribués."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La question étant indéterminée, les sources ne permettent pas d’identifier une peine unique, ce qui justifie l’abstention et la demande de précision. Elles sont pertinentes pour illustrer que les peines varient selon l’infraction, bien que plusieurs articles cités soient seulement des exemples non nécessaires à l’abstention. Toutes les peines et qualifications conditionnelles énoncées dans la réponse sont directement étayées par les cinq sources."
+    }
+  },
+  "failureStage": "none"
+}

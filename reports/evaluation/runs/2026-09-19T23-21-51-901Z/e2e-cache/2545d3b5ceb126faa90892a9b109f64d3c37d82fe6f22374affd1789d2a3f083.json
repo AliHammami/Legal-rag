@@ -1,0 +1,103 @@
+{
+  "questionId": "q479",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles applicables à un permis de construire en **zone N**.\n\nElles prévoient seulement que :\n\n- certaines demandes de permis concernant la création ou l’extension d’un commerce de détail ou d’un ensemble commercial peuvent relever de la procédure de l’article L. 752-4, sous certaines conditions de commune et de surface [Source 1] ;\n- lorsqu’un projet commercial nécessite un permis de construire, la demande est déposée selon les articles R. 423-2 et suivants du Code de l’urbanisme [Source 3] ;\n- les règles relatives aux vues sur le fonds voisin sont fixées par l’article 678 du Code civil [Source 2].\n\nAucune source ne précise toutefois les possibilités de construire, les interdictions ou les conditions particulières applicables en **zone N**. Il faudrait notamment disposer des dispositions du Code de l’urbanisme et du règlement du plan local d’urbanisme (PLU) correspondant.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-43-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 205.7539889998734,
+      "vectorSearchMs": 586.9663910008967,
+      "jinaRerankingMs": 572.1431130003184,
+      "mappingMs": 0.03391600027680397,
+      "totalMs": 1364.9173910003155,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010304000228643417,
+      "contextBuilderMs": 0.019965998828411102,
+      "generationMs": 2202.8398419991136,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3567.7962390016764
+    },
+    "judge": {
+      "questionId": "q479",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de déterminer les règles de permis de construire en zone N, faute de sources pertinentes. Elle distingue correctement les éléments effectivement présents dans le contexte (procédure commerciale, dépôt d’une demande, vues civiles) et constate qu’ils ne renseignent pas le régime applicable en zone N. Cette abstention est justifiée et entièrement fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une question d’abstention, les sources sont pertinentes en ce qu’elles établissent que le contexte ne traite que d’une procédure d’aménagement commercial (sources 1 et 3) et des vues sur le fonds voisin (source 2), sans fournir de règle sur la constructibilité ou le permis en zone N. Elles couvrent les constats précis de la réponse sur leur contenu et justifient l’impossibilité de déterminer les règles propres à la zone N à partir du corpus fourni."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles générales applicables à un permis de construire en **zone N** (zone naturelle et forestière). Elles ne précisent notamment ni les constructions autorisées, ni les conditions de constructibilité, ni les exceptions propres à cette zone.\n\nElles indiquent seulement que :\n\n- Pour certains projets de magasins de commerce de détail ou d’ensembles commerciaux d’une surface de vente globale comprise entre **300 et 1 000 m²**, la procédure prévue à l’article L. 752-4 du Code de commerce s’applique notamment lorsque le projet est situé dans une commune de moins de 20 000 habitants ou entraîne une artificialisation des sols dans les conditions mentionnées par le texte — **Article R. 752-21 du Code de commerce [Source 1]**.\n- Lorsqu’un tel projet nécessite un permis de construire, la demande doit être déposée selon les articles R. 423-2 et suivants du Code de l’urbanisme, puis transmise par le maire au secrétariat de la Commission nationale d’aménagement commercial — **Article R. 752-43-3 du Code de commerce [Source 3]**.\n\nL’**Article 678 du Code civil [Source 2]** concerne les vues et fenêtres sur le fonds voisin, et non les règles de constructibilité en zone N.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-43-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.3623500000685,
+      "routingCalls": 1,
+      "embeddingMs": 242.1119599994272,
+      "vectorSearchMs": 554.3433130010962,
+      "jinaRerankingMs": 554.226900998503,
+      "mappingMs": 0.06096000038087368,
+      "totalMs": 2170.1381139997393,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011868000030517578,
+      "contextBuilderMs": 0.03009600006043911,
+      "generationMs": 3052.8581559993327,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5223.049282999709
+    },
+    "judge": {
+      "questionId": "q479",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne permet pas d’établir les règles générales de permis de construire en zone N, ce qui est l’attitude attendue. Les précisions additionnelles sont fidèlement rattachées aux sources fournies et distinguent correctement les textes hors sujet des règles de constructibilité en zone N."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne traitent pas directement des règles de permis de construire en zone N : elles portent sur une procédure d’aménagement commercial et sur les vues sur fonds voisin. Elles sont donc insuffisantes pour répondre au fond, mais permettent de justifier l’abstention et de caractériser précisément leur hors-périmètre. Les affirmations de la réponse sur le contenu respectif des articles R. 752-21 du Code de commerce, R. 752-43-3 du même code et 678 du Code civil sont couvertes par les extraits fournis."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q105",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Peuvent conclure des conventions relatives à l’exercice des droits sur des biens indivis :\n\n- les personnes titulaires de droits sur ces biens en qualité de **propriétaires, nus-propriétaires ou usufruitiers** — Article 1873-1 du Code civil [Source 1] ;\n- les **indivisaires**, conformément aux articles 1873-1 à 1873-18 — Article 815-1 du Code civil [Source 2] ;\n- les **partenaires liés par un pacte civil de solidarité**, pour l’administration des biens indivis, dans les conditions prévues par les articles 1873-1 à 1873-15 — Article 515-5-3 du Code civil [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1873-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "815-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "515-5-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.9665949998889,
+      "vectorSearchMs": 601.4550150001887,
+      "jinaRerankingMs": 485.95131199993193,
+      "mappingMs": 0.0457460000179708,
+      "totalMs": 1312.4448860001285,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012101000174880028,
+      "contextBuilderMs": 0.02257400006055832,
+      "generationMs": 2027.2834199999925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3339.771570000099
+    },
+    "judge": {
+      "questionId": "q105",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les propriétaires, nus-propriétaires et usufruitiers, conformément à l’article 1873-1. Les mentions complémentaires des indivisaires et des partenaires de PACS sont également exactes et directement étayées par les sources fournies, sans contredire la réponse de référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. La source 1 répond exactement à la question en visant les propriétaires, nus-propriétaires et usufruitiers. La source 2 étaye la mention des indivisaires, et la source 3 celle des partenaires de PACS pour l’administration des biens indivis. Elles couvrent l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Peuvent conclure des conventions relatives à l’exercice des droits sur des biens indivis :\n\n- les personnes titulaires de droits sur ces biens en qualité de **propriétaires, nus-propriétaires ou usufruitiers** (article 1873-1 du Code civil) [Source 1] ;\n- plus généralement, les **indivisaires**, conformément aux articles 1873-1 à 1873-18 du Code civil (article 815-1 du Code civil) [Source 2] ;\n- les **partenaires liés par un pacte civil de solidarité**, pour l’administration des biens indivis, dans les conditions prévues par l’article 515-5-3 du Code civil [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1873-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "815-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "515-5-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1372.8526709999423,
+      "routingCalls": 1,
+      "embeddingMs": 171.43700699997135,
+      "vectorSearchMs": 56.344233999960124,
+      "jinaRerankingMs": 497.00252399989404,
+      "mappingMs": 0.031030999962240458,
+      "totalMs": 2097.7006469999906,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010710000060498714,
+      "contextBuilderMs": 0.024391999933868647,
+      "generationMs": 2138.5998939999845,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4236.344941999996
+    },
+    "judge": {
+      "questionId": "q105",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les propriétaires, nus-propriétaires et usufruitiers, conformément à l'article 1873-1. Les précisions sur les indivisaires et les partenaires de PACS sont également exactes et directement étayées par les sources 2 et 3 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. La source 1 couvre exactement la catégorie principale de personnes visées (propriétaires, nus-propriétaires et usufruitiers). La source 2 étaye la formulation plus générale relative aux indivisaires et le renvoi aux articles 1873-1 à 1873-18. La source 3 couvre spécifiquement la possibilité, pour les partenaires de PACS, de conclure une convention pour l’administration des biens indivis selon les conditions indiquées. Toutes les affirmations importantes de la réponse sont ainsi soutenues."
+    }
+  },
+  "failureStage": "none"
+}

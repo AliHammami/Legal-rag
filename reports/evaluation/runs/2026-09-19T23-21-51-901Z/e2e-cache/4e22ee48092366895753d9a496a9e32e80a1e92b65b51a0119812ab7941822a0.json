@@ -1,0 +1,119 @@
+{
+  "questionId": "q230",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L441-1 du Code de commerce**, les conditions générales de vente doivent notamment comprendre :\n\n- **les conditions de règlement** ;\n- **les éléments de détermination du prix**, notamment :\n  - le **barème des prix unitaires** ;\n  - les **éventuelles réductions de prix**.\n\nCes éléments constituent le contenu minimal expressément mentionné par le texte, qui emploie toutefois le terme « notamment ». [Source 1]\n\nLorsque le prix d’un service ne peut pas être déterminé ou indiqué précisément à l’avance, le prestataire doit, à la demande du client professionnel, communiquer **la méthode de calcul du prix** ou **un devis suffisamment détaillé**. [Source 1]\n\nÀ noter : l’article L441-1 concerne les relations entre professionnels. Le professionnel qui établit des CGV doit les communiquer à tout acheteur professionnel qui en fait la demande, sur un support durable. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R221-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 257.52730200020596,
+      "vectorSearchMs": 659.2067340002395,
+      "jinaRerankingMs": 595.5723019996658,
+      "mappingMs": 0.027199000120162964,
+      "totalMs": 1512.36198099982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04135299986228347,
+      "contextBuilderMs": 0.04436699999496341,
+      "generationMs": 2932.780383999925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4445.242789000273
+    },
+    "judge": {
+      "questionId": "q230",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les mentions expressément prévues par l’article L441-1 : conditions de règlement, éléments de détermination du prix, barème des prix unitaires et réductions éventuelles. Les précisions additionnelles sur la méthode de calcul ou le devis lorsque le prix d’un service n’est pas déterminable, ainsi que sur la communication des CGV aux acheteurs professionnels sur support durable, sont également explicitement supportées par le contexte et ne contredisent pas la réponse attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L441-1 visé par la question. Elle couvre l'ensemble des affirmations de la réponse, y compris les mentions minimales des CGV (conditions de règlement, barème des prix unitaires et réductions), la méthode de calcul ou le devis pour certains services, ainsi que la communication aux acheteurs professionnels sur support durable."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 441-1 du Code de commerce, les conditions générales de vente doivent notamment comporter :\n\n- **les conditions de règlement** ;\n- **les éléments de détermination du prix**, notamment :\n  - le **barème des prix unitaires** ;\n  - les **éventuelles réductions de prix**.\n\nCette liste est introduite par le terme « notamment » : elle constitue donc un contenu minimal explicitement mentionné, sans exclure d’autres informations nécessaires selon l’activité. **Article L. 441-1 du Code de commerce [Source 1].**\n\nEn outre, lorsque le prix d’un service ne peut pas être déterminé à l’avance ou indiqué précisément, le prestataire doit communiquer, à la demande du client professionnel, soit la **méthode de calcul du prix**, soit un **devis suffisamment détaillé** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-1-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2367.577561000362,
+      "routingCalls": 1,
+      "embeddingMs": 169.31798199983314,
+      "vectorSearchMs": 279.3630130002275,
+      "jinaRerankingMs": 1800.1897510001436,
+      "mappingMs": 0.07659099996089935,
+      "totalMs": 4616.579180999659,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012947999872267246,
+      "contextBuilderMs": 0.0333999996073544,
+      "generationMs": 4001.667053999845,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8618.305867000017
+    },
+    "judge": {
+      "questionId": "q230",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les éléments visés par l’article L. 441-1 : conditions de règlement, barème des prix unitaires et éventuelles réductions de prix. Elle précise à juste titre que « notamment » n’exclut pas d’autres mentions. L’ajout relatif à la méthode de calcul ou au devis pour les services est exact et expressément prévu par le même contexte, bien qu’il soit accessoire à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 441-1 et énonce expressément les conditions de règlement, les éléments de détermination du prix, le barème des prix unitaires et les éventuelles réductions de prix. Elle couvre également l'affirmation additionnelle sur la communication de la méthode de calcul du prix ou d'un devis détaillé lorsque le prix d'un service ne peut être déterminé à l'avance. Les autres sources ne sont pas nécessaires à la réponse."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q148",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les articles **L. 6353-3 à L. 6353-7 du Code du travail** sont exclus de l’application du titre V du livre III aux centres de formation d’apprentis, selon l’**article L. 6231-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6231-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 273.64900800026953,
+      "vectorSearchMs": 621.9868580000475,
+      "jinaRerankingMs": 529.3619900001213,
+      "mappingMs": 0.030150999780744314,
+      "totalMs": 1425.055451999884,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011880000121891499,
+      "contextBuilderMs": 0.014012000057846308,
+      "generationMs": 1106.7635989999399,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2531.853324000258
+    },
+    "judge": {
+      "questionId": "q148",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les articles exclus, conformément à la référence et au texte du contexte. Elle répond directement à la question et toutes ses affirmations sont explicitement supportées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L. 6231-1 directement visé par la question et énonce explicitement que le titre V du livre III s'applique aux centres de formation d'apprentis, à l'exception des articles L. 6353-3 à L. 6353-7. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les articles **L. 6353-3 à L. 6353-7 du Code du travail** sont exclus de l’application du titre V du livre III aux centres de formation d’apprentis. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6231-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1127.3145829997957,
+      "routingCalls": 1,
+      "embeddingMs": 196.4989700000733,
+      "vectorSearchMs": 275.13921399973333,
+      "jinaRerankingMs": 1575.001358000096,
+      "mappingMs": 0.05139499995857477,
+      "totalMs": 3174.0314939999953,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.14979600021615624,
+      "contextBuilderMs": 0.01221300009638071,
+      "generationMs": 1431.9098620000295,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4606.111552000046
+    },
+    "judge": {
+      "questionId": "q148",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les articles exclus, conformément à l'article L6231-1 et à la référence. Cette information est explicitement présente dans le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L. 6231-1 directement visé par la question et énonce explicitement l’exception : les articles L. 6353-3 à L. 6353-7. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q333",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions de cessation de plein droit des mesures de suspension ordonnées selon l’article **L. 455-1**, qui n’est pas reproduit dans le contexte.\n\nElles concernent d’autres dispositifs :\n\n- la résiliation de plein droit d’un contrat de crédit renouvelable après un an sans demande de levée de suspension (**Article L. 312-82 du Code de la consommation [Source 2]**) ;\n- la cessation de plein droit d’une suspension provisoire au titre de l’article **L. 811-13 du Code de commerce**, avec notification au mandataire concerné (**Article R. 811-53 du Code de commerce [Source 3]**).\n\nIl est donc nécessaire de disposer du texte de l’article **L. 455-1** ou de la disposition précisant les modalités de cessation des mesures qu’il prévoit.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "443"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-82"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-53"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 202.57906999997795,
+      "vectorSearchMs": 629.7301469994709,
+      "jinaRerankingMs": 526.4662669999525,
+      "mappingMs": 0.034745000302791595,
+      "totalMs": 1358.8453379999846,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010319000110030174,
+      "contextBuilderMs": 0.106564000248909,
+      "generationMs": 2430.6594519997016,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3789.629405000247
+    },
+    "judge": {
+      "questionId": "q333",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les conditions demandées : l'absence de décision de la chambre de l'instruction ou de la cour d'appel dans le délai d'un mois, et au plus tard dans les quarante jours du prononcé. Elle s'abstient à la place. En revanche, son constat que l'article L. 455-1 n'est pas reproduit et ses descriptions des sources effectivement citées sont étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne contiennent pas l’article L. 455-1 ni les délais relatifs à la décision de la chambre de l’instruction ou de la cour d’appel : elles ne permettent donc pas de répondre directement à la question. Elles sont toutefois suffisamment liées à des mécanismes distincts de suspension ou de cessation de plein droit pour étayer le constat d’insuffisance du contexte formulé par la réponse. Les descriptions des sources 2 et 3, ainsi que l’absence de reproduction de L. 455-1 dans le corpus fourni, couvrent les affirmations importantes de l’abstention."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L455-1 du Code de la consommation**, les mesures de suspension cessent de plein droit dans deux situations :\n\n- en cas de **décision de non-lieu ou de relaxe** ;\n- lorsque la **chambre de l’instruction ou la cour d’appel**, saisie d’un recours contre une décision relative à la mainlevée, **ne statue pas dans le délai d’un mois** à compter de cette décision et, en tout état de cause, **au plus tard dans les quarante jours** suivant son prononcé [Source 1].\n\nL’article L312-82 relatif à la résiliation d’un crédit renouvelable ne concerne pas ces mesures de suspension [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L455-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-82"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2968.3634990006685,
+      "routingCalls": 1,
+      "embeddingMs": 222.56694099958986,
+      "vectorSearchMs": 93.68484599981457,
+      "jinaRerankingMs": 533.1335519999266,
+      "mappingMs": 0.02956400066614151,
+      "totalMs": 3817.827080000192,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01006300002336502,
+      "contextBuilderMs": 0.01749200001358986,
+      "generationMs": 3758.855072000064,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7576.71864400059
+    },
+    "judge": {
+      "questionId": "q333",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux hypothèses de cessation de plein droit prévues par l'article L455-1 : non-lieu ou relaxe, et absence de décision de la chambre de l'instruction ou de la cour d'appel dans le délai d'un mois, au plus tard quarante jours après le prononcé. Ces éléments sont explicitement contenus dans le contexte. La mention de l'article L312-82 est hors sujet mais exacte au regard du contexte et n'altère pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle contient l'article L455-1 et énonce explicitement la cessation d'effet en cas de non-lieu ou de relaxe ainsi que la cessation de plein droit en l'absence de décision dans le délai d'un mois, au plus tard quarante jours après le prononcé. La source 2 est hors sujet quant aux mesures de suspension de l'article L455-1, mais elle couvre l'affirmation incidente selon laquelle l'article L312-82 traite de la résiliation d'un crédit renouvelable et non de ces mesures. L'ensemble des affirmations importantes de la réponse est donc couvert."
+    }
+  },
+  "failureStage": "none"
+}

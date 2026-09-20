@@ -1,0 +1,95 @@
+{
+  "questionId": "q057",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 421-1 du Code pénal**, sont considérées comme des actes de terrorisme, lorsqu’elles sont intentionnellement liées à une entreprise individuelle ou collective visant à troubler gravement l’ordre public par l’intimidation ou la terreur :\n\n1. Les atteintes volontaires à la vie ou à l’intégrité de la personne, les enlèvements, séquestrations et détournements de moyens de transport ;\n2. Les vols, extorsions, destructions, dégradations, détériorations et infractions informatiques ;\n3. Les infractions relatives aux groupes de combat et mouvements dissous, ainsi que certaines infractions portant atteinte à l’autorité publique ou à la confiance publique ;\n4. Certaines infractions relatives aux armes, produits explosifs et matières nucléaires ;\n5. Le recel du produit de ces infractions ;\n6. Les infractions de blanchiment ;\n7. Les délits d’initié prévus par le Code monétaire et financier.\n\n[Article 421-1 du Code pénal — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "421-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "421-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.64726499991957,
+      "vectorSearchMs": 564.028793000034,
+      "jinaRerankingMs": 534.1747530000284,
+      "mappingMs": 0.02495600003749132,
+      "totalMs": 1292.9106450000545,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010310000041499734,
+      "contextBuilderMs": 0.013839000021107495,
+      "generationMs": 2390.940036999993,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3683.88275400002
+    },
+    "judge": {
+      "questionId": "q057",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère correctement les sept catégories d’infractions visées par l’article 421-1 et rappelle la condition de leur lien intentionnel avec une entreprise visant à troubler gravement l’ordre public par intimidation ou terreur. Les précisions sur les groupes/mouvements dissous, les armes, le recel, le blanchiment et les délits d’initié sont toutes appuyées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 421-1 et énumère expressément les sept catégories d’infractions reprises dans la réponse, ainsi que la condition de leur lien intentionnel avec une entreprise visant à troubler gravement l’ordre public par l’intimidation ou la terreur. Elle couvre donc toutes les affirmations importantes. La source 2 est hors du champ de l’article demandé, mais elle n’est pas utilisée et n’affecte pas l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 421-1 du Code pénal**, sont considérées comme des actes de terrorisme les infractions **intentionnellement liées à une entreprise individuelle ou collective visant à troubler gravement l’ordre public par l’intimidation ou la terreur**. Il s’agit notamment :\n\n1. Des atteintes volontaires à la vie ou à l’intégrité de la personne, des enlèvements et séquestrations, ainsi que des détournements de moyens de transport ;\n2. Des vols, extorsions, destructions, dégradations, détériorations et infractions informatiques ;\n3. Des infractions relatives aux groupes de combat, mouvements dissous, ainsi que certaines infractions de faux et d’entrave à la justice ;\n4. De certaines infractions relatives aux armes, produits explosifs ou matières nucléaires ;\n5. Du recel du produit de ces infractions ;\n6. Des infractions de blanchiment ;\n7. Des délits d’initié.\n\nCes catégories sont énumérées par l’**article 421-1 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "421-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "421-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.8931090000551,
+      "routingCalls": 1,
+      "embeddingMs": 245.36778200010303,
+      "vectorSearchMs": 30.490738000022247,
+      "jinaRerankingMs": 524.7051070000743,
+      "mappingMs": 0.03220999997574836,
+      "totalMs": 2234.510852999985,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013008999987505376,
+      "contextBuilderMs": 0.018060000031255186,
+      "generationMs": 2442.5927020000527,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4677.145525999949
+    },
+    "judge": {
+      "questionId": "q057",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la condition de rattachement à une entreprise visant à troubler gravement l’ordre public par l’intimidation ou la terreur, puis énumère toutes les grandes catégories des 1° à 7° de l’article 421-1. Les précisions sur les infractions de faux et d’entrave à la justice correspondent aux articles expressément visés au 3°. Toutes les affirmations importantes sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l’article 421-1 visé par la question. Elle étaye la condition tenant au lien intentionnel avec une entreprise visant à troubler gravement l’ordre public par l’intimidation ou la terreur, ainsi que chacune des sept catégories d’infractions énumérées dans la réponse, y compris les groupes de combat et mouvements dissous, les articles relatifs à l’entrave et au faux, les armes/explosifs/matières nucléaires, le recel, le blanchiment et les délits d’initié."
+    }
+  },
+  "failureStage": "none"
+}

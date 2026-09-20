@@ -1,0 +1,87 @@
+{
+  "questionId": "q221",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 321-1 du Code de commerce, un bien est considéré comme **d’occasion** lorsqu’il remplit l’une des conditions suivantes :\n\n- il est entré, à un stade quelconque de sa production ou de sa distribution, en la possession d’une personne pour son usage propre, à la suite d’un acte à titre onéreux ou gratuit ;\n- il a subi des altérations qui empêchent sa mise en vente comme bien neuf.\n\nCes critères s’appliquent aux ventes volontaires de meubles aux enchères publiques. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 538.5165559998713,
+      "vectorSearchMs": 583.7584199998528,
+      "jinaRerankingMs": 609.5505649996921,
+      "mappingMs": 0.0295200003311038,
+      "totalMs": 1731.9187030000612,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010363999754190445,
+      "contextBuilderMs": 0.010532000102102757,
+      "generationMs": 1666.3538120002486,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3398.3045180002227
+    },
+    "judge": {
+      "questionId": "q221",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux critères alternatifs de l’article L. 321-1 : possession à tout stade de la production ou distribution pour l’usage propre, à titre onéreux ou gratuit, ou altérations empêchant la vente comme neuf. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 321-1 pertinent et énonce les deux critères alternatifs définissant un bien d’occasion. Elle couvre également le cadre des ventes volontaires de meubles aux enchères publiques mentionné dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L321-1 du Code de commerce, un bien est considéré comme **d’occasion** lorsqu’il remplit l’une des deux conditions suivantes :\n\n- il est entré, à un quelconque stade de la production ou de la distribution, en la possession d’une personne pour son usage propre, que ce soit par un acte à titre onéreux ou gratuit ;\n- il a subi des altérations empêchant sa mise en vente comme bien neuf.\n\nCes critères s’appliquent aux ventes volontaires de meubles aux enchères publiques. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1434.4935320001096,
+      "routingCalls": 1,
+      "embeddingMs": 263.02807400003076,
+      "vectorSearchMs": 176.32956699980423,
+      "jinaRerankingMs": 553.981482999865,
+      "mappingMs": 0.03152200020849705,
+      "totalMs": 2427.8928439999,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00937000010162592,
+      "contextBuilderMs": 0.012891000136733055,
+      "generationMs": 1566.891030000057,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3994.8149489997886
+    },
+    "judge": {
+      "questionId": "q221",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les deux critères de qualification d’un bien d’occasion prévus par l’article L321-1 : possession à un stade de la production ou distribution pour usage propre, à titre onéreux ou gratuit, ou altérations empêchant la vente comme neuf. Ces éléments sont explicitement présents dans le contexte, et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 321-1 et énonce expressément les deux conditions reprises dans la réponse : possession, à tout stade de la production ou de la distribution, pour un usage propre par acte onéreux ou gratuit, ou altérations empêchant la vente comme neuf. Elle couvre également le cadre des ventes volontaires de meubles aux enchères publiques."
+    }
+  },
+  "failureStage": "none"
+}

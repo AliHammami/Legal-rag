@@ -85,7 +85,7 @@ describe('runE2ESourceJudge', () => {
       explanation: `Sources for ${input.questionId}`,
     }));
 
-    const context = `[Source 1 — Article 122-5 — chunk 0]
+    const context = `[Source 1 — Code pénal — Article 122-5 — chunk 0]
 Contenu source unique.`;
 
     const report = await runE2ESourceJudge(

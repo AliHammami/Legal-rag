@@ -1,0 +1,119 @@
+{
+  "questionId": "q433",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les recours dépendent de la nature du litige :\n\n- **Litige entre un consommateur et un professionnel** : le consommateur peut recourir gratuitement à un **médiateur de la consommation** pour rechercher une résolution amiable. Le professionnel doit garantir l’accès effectif à ce dispositif et, lorsqu’un médiateur sectoriel compétent existe, permettre au consommateur d’y recourir. **Article L612-1 du Code de la consommation [Source 1].**\n\n- **Litige transfrontalier de consommation** : le consommateur peut bénéficier d’une assistance et d’informations pour être orienté vers l’entité compétente d’un autre État membre. **Article L616-3 du Code de la consommation [Source 3].**\n\n- **Litige relevant de la relation de travail** : le litige peut être porté devant le **conseil de prud’hommes territorialement compétent**. Le salarié peut notamment saisir le conseil du lieu de travail, de son domicile lorsque le travail est effectué à domicile ou hors établissement, du lieu de conclusion de l’engagement ou du lieu où l’employeur est établi. **Article R1412-1 du Code du travail [Source 4].**\n\n- **Litige relatif à l’homologation d’une charte d’une plateforme** : il relève exclusivement du **tribunal judiciaire désigné par décret**. La plateforme ou le travailleur doit agir dans un délai de deux mois, selon le point de départ prévu par l’article. La décision doit intervenir dans un délai de quatre mois ; en cas d’appel ou d’absence de décision dans ce délai, le litige est porté devant la cour d’appel. **Article L7342-10 du Code du travail [Source 2].**\n\n- **Litige relevant d’une commission de conciliation** : la commission peut être saisie par la partie la plus diligente, au moyen d’une requête écrite adressée à son président, ou par le préfet. **Article R2623-3 du Code du travail [Source 5].**\n\nLes sources ne permettent pas de déterminer quel recours est applicable sans connaître la nature précise du litige.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7342-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1412-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2623-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 410.59780899994075,
+      "vectorSearchMs": 633.9427160006016,
+      "jinaRerankingMs": 564.2105190008879,
+      "mappingMs": 0.023155000060796738,
+      "totalMs": 1608.7949549984187,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018387001007795334,
+      "contextBuilderMs": 0.027714001014828682,
+      "generationMs": 3537.3130230009556,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5146.161922000349
+    },
+    "judge": {
+      "questionId": "q433",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale pour identifier un recours applicable sans préciser la nature du litige. La réponse énumère néanmoins des voies très sectorielles (médiation de consommation, prud’hommes, charte de plateforme), qui ne constituent pas une réponse générale aux recours possibles et ne permettent pas de déterminer le cas d’espèce. Toutes les affirmations juridiques formulées sont toutefois directement étayées par les extraits fournis. Malgré sa réserve finale, la réponse tente de répondre au lieu de s’abstenir clairement comme attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont juridiquement pertinentes pour certains types très spécifiques de litiges (consommation, litiges transfrontaliers de consommation, relations de travail, charte de plateforme, commission de conciliation), mais elles ne permettent pas de répondre de manière générale à une question non contextualisée sur les recours en cas de litige. Elles permettent toutefois de constater qu'aucun recours unique ne peut être identifié sans connaître la nature du litige. Toutes les affirmations substantielles de la réponse sur les dispositifs et compétences sectoriels sont directement couvertes par les extraits cités, y compris la réserve finale sur la nécessité de préciser le litige."
+    }
+  },
+  "routing": {
+    "answer": "Les recours dépendent de la nature du litige :\n\n- **Litige entre un consommateur et un professionnel** : le consommateur peut recourir gratuitement à un **médiateur de la consommation**. Le professionnel doit garantir l’accès effectif à ce dispositif et peut proposer son propre médiateur ou un autre médiateur compétent [Source 1].  \n  En cas de litige transfrontalier, le consommateur peut également bénéficier d’une assistance pour être orienté vers l’entité compétente d’un autre État membre [Source 3].\n\n- **Litige relatif à l’homologation d’une charte de plateforme** : il relève exclusivement du **tribunal judiciaire désigné par décret**. La plateforme ou le travailleur doit agir dans un délai de deux mois, sous peine d’irrecevabilité. La juridiction statue dans un délai de quatre mois ; en cas d’appel ou d’absence de décision dans ce délai, le litige est porté devant la cour d’appel [Source 2 — Article L7342-10 du Code du travail].\n\n- **Litige entre employeur et salarié** : il peut être porté devant le **conseil de prud’hommes territorialement compétent**, notamment celui du lieu de travail, du domicile du salarié lorsque le travail est effectué à domicile ou hors établissement, du lieu de conclusion de l’engagement ou du lieu où l’employeur est établi [Source 4 — Article R1412-1 du Code du travail].\n\n- **Litige relevant d’une commission de conciliation** : la commission peut être saisie par la partie la plus diligente au moyen d’une requête écrite, ou par le préfet [Source 5 — Article R2623-3 du Code du travail].\n\nLes sources fournies ne permettent pas de déterminer quel recours précis est applicable sans connaître la nature du litige concerné.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7342-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1412-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2623-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.6764080002904,
+      "routingCalls": 1,
+      "embeddingMs": 826.8054540008307,
+      "vectorSearchMs": 621.4935219995677,
+      "jinaRerankingMs": 531.0924960002303,
+      "mappingMs": 0.02180200070142746,
+      "totalMs": 2901.112027000636,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010375000536441803,
+      "contextBuilderMs": 0.028568999841809273,
+      "generationMs": 3348.5054369997233,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6249.664890000597
+    },
+    "judge": {
+      "questionId": "q433",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le recours dépend de la nature du litige et précise en conclusion qu’il est impossible d’identifier un recours applicable sans informations complémentaires. Les voies citées sont fidèlement appuyées par le contexte. Elle demeure toutefois trop affirmative et illustrative pour une question totalement indéterminée : les extraits ne permettent pas de dresser une liste générale des recours possibles, mais seulement d’identifier quelques régimes particuliers."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont pertinentes pour illustrer plusieurs régimes particuliers de recours (médiation de consommation, litige relatif à une charte de plateforme, prud'hommes, commission de conciliation), mais elles ne permettent pas de répondre de façon générale à une question entièrement indéterminée sur les recours possibles. Elles sont donc insuffisantes pour établir une liste générale, ce qui rend l'abstention appropriée. En revanche, toutes les voies de recours concrètes énoncées dans la réponse, ainsi que leurs principales modalités, sont directement couvertes par les extraits fournis."
+    }
+  },
+  "failureStage": "none"
+}

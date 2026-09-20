@@ -1,0 +1,95 @@
+{
+  "questionId": "q475",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles de classement des établissements scolaires.\n\nElles indiquent seulement que :\n\n- chaque établissement adopte un règlement intérieur, communiqué à l’avance ainsi que ses modifications — **Article R. 322-9 du Code de commerce [Source 1]** ;\n- un ou plusieurs règlements types fixent les conditions de fonctionnement des établissements — **Article L. 522-13 du Code de commerce [Source 2]**.\n\nAucune disposition relative au classement des établissements scolaires ne figure dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R322-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.02923600003123,
+      "vectorSearchMs": 620.9052889999002,
+      "jinaRerankingMs": 556.1943779997528,
+      "mappingMs": 0.0367249995470047,
+      "totalMs": 1365.1889279987663,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.027546999976038933,
+      "contextBuilderMs": 0.02337699942290783,
+      "generationMs": 1656.1885460000485,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3021.4398529995233
+    },
+    "judge": {
+      "questionId": "q475",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement de répondre sur les règles de classement, conformément au fait que le contexte ne contient aucune disposition sur ce sujet. Les seules informations additionnelles mentionnées sont fidèlement reprises des deux extraits fournis et sont clairement présentées comme insuffisantes."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les deux sources sont pertinentes en ce qu’elles montrent que le contexte porte uniquement sur des règlements intérieurs et les conditions de fonctionnement des établissements, sans traiter de leur classement. Elles couvrent les constats de la réponse : la première affirme l’adoption et la communication d’un règlement intérieur, la seconde l’existence de règlements types sur le fonctionnement, et aucune ne contient de règle sur le classement des établissements scolaires."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles de classement des établissements scolaires.\n\nElles indiquent seulement que :\n\n- chaque établissement adopte un règlement intérieur, communiqué à l’avance ainsi que ses modifications, conformément à l’article R. 322-8 du Code de commerce [Source 1] ;\n- un ou plusieurs règlements types fixent les conditions de fonctionnement des établissements [Article L. 522-13 du Code de commerce, Source 2].\n\nAucune disposition citée ne précise les critères ou modalités de classement des établissements scolaires.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R322-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.887430999428,
+      "routingCalls": 1,
+      "embeddingMs": 179.91214000061154,
+      "vectorSearchMs": 597.2800590004772,
+      "jinaRerankingMs": 535.8428869992495,
+      "mappingMs": 0.028459999710321426,
+      "totalMs": 2438.973508000374,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013573000207543373,
+      "contextBuilderMs": 0.01581299863755703,
+      "generationMs": 1658.118525000289,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4097.132950000465
+    },
+    "judge": {
+      "questionId": "q475",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner des règles de classement, car le contexte ne contient aucune disposition sur ce sujet. Les deux éléments qu’elle résume sont fidèlement étayés par les sources fournies et elle conclut correctement qu’aucun critère ni aucune modalité de classement n’y est précisé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les deux sources sont suffisamment pertinentes en ce qu’elles portent sur le fonctionnement et le règlement intérieur des établissements, sans fournir de règle de classement. Elles permettent donc de constater que le contexte fourni ne contient ni critères ni modalités de classement. Les affirmations factuelles de la réponse sont couvertes : la source 1 vise l’adoption et la communication du règlement intérieur, et la source 2 les règlements types relatifs aux conditions de fonctionnement."
+    }
+  },
+  "failureStage": "none"
+}

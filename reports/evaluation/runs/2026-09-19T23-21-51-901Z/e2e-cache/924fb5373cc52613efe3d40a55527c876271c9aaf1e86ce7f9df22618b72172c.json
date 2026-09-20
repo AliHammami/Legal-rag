@@ -1,0 +1,95 @@
+{
+  "questionId": "q113",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 1387 du Code civil pose le principe de la liberté des conventions matrimoniales : les époux peuvent organiser l’association conjugale quant aux biens selon les modalités qu’ils jugent appropriées, la loi n’intervenant qu’à défaut de convention particulière [Source 1].\n\nCette liberté est toutefois encadrée par deux limites :\n\n- les conventions ne doivent pas être contraires aux bonnes mœurs ;\n- elles ne doivent pas méconnaître les dispositions impératives prévues par la loi, notamment celles visées à l’article 1497 du Code civil [Sources 1 et 2].\n\nAinsi, les époux peuvent modifier la communauté légale — par exemple en prévoyant une communauté universelle, des parts inégales ou des règles particulières d’administration — mais uniquement dans le respect de ces limites. Les règles de la communauté légale continuent de s’appliquer pour les points qui n’ont pas été aménagés par leur convention [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1387"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1497"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 283.80763399996795,
+      "vectorSearchMs": 610.3396429999266,
+      "jinaRerankingMs": 500.77479799999855,
+      "mappingMs": 0.04314600001089275,
+      "totalMs": 1394.9950320001226,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012679999927058816,
+      "contextBuilderMs": 0.018877000082284212,
+      "generationMs": 2508.6369389998727,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3903.671445999993
+    },
+    "judge": {
+      "questionId": "q113",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le principe : la loi ne s'applique qu'à défaut de convention spéciale, sous réserve des bonnes mœurs et des dispositions légales ultérieures. Les exemples de modification de la communauté et le caractère supplétif des règles non aménagées sont soutenus par l'article 1497 fourni. Défaut mineur : elle qualifie de « dispositions impératives », et notamment l'article 1497, des règles qui ne sont pas ainsi formulées dans le contexte ; l'article 1497 est surtout une disposition permissive encadrant les conventions."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce le caractère supplétif de la loi ainsi que les limites tenant aux bonnes mœurs et aux dispositions qui suivent. La source 2 est également pertinente pour les exemples de modifications possibles de la communauté légale et pour l’application résiduelle des règles non conventionnellement aménagées. Elle couvre donc l’essentiel des affirmations de la réponse. La qualification des dispositions comme « impératives », et l’évocation spécifique de l’article 1497 comme limite, ne sont pas formulées exactement ainsi par les extraits, mais ne compromettent pas substantiellement la couverture des affirmations."
+    }
+  },
+  "routing": {
+    "answer": "L’article 1387 du Code civil consacre la liberté des époux d’organiser leurs rapports patrimoniaux par des conventions spéciales : la loi ne régit l’association conjugale quant aux biens qu’à défaut d’un tel accord. Ils peuvent donc définir le régime applicable selon ce qu’ils jugent approprié. [Source 1]\n\nCette liberté est toutefois encadrée par deux limites :\n\n- les conventions ne doivent pas être contraires aux bonnes mœurs ;\n- elles doivent respecter les dispositions légales applicables, notamment celles visées par l’article 1497 du Code civil.\n\nAinsi, les époux peuvent modifier la communauté légale, prévoir notamment une communauté universelle, des parts inégales ou des règles particulières d’administration, à condition de ne pas méconnaître les articles 1387, 1388 et 1389 du Code civil. [Source 2]\n\nEn résumé, l’article 1387 établit une liberté contractuelle en matière matrimoniale, mais cette liberté demeure subordonnée aux exigences légales et aux bonnes mœurs.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1387"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1497"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1341.2483019998763,
+      "routingCalls": 1,
+      "embeddingMs": 238.72389799985103,
+      "vectorSearchMs": 97.97586499992758,
+      "jinaRerankingMs": 500.06916600000113,
+      "mappingMs": 0.03363000019453466,
+      "totalMs": 2178.0807739999145,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01106299995444715,
+      "contextBuilderMs": 0.016675000078976154,
+      "generationMs": 2940.7378159998916,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5118.853341999929
+    },
+    "judge": {
+      "questionId": "q113",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le principe supplétif de la loi, la liberté conventionnelle des époux et les deux limites expresses tenant aux bonnes mœurs et aux dispositions légales ultérieures. Les précisions sur la modification de la communauté légale et ses exemples sont directement étayées par le contexte de l’article 1497. Elle répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 1387 et couvre le principe supplétif de la loi ainsi que les limites tenant aux bonnes mœurs et aux dispositions ultérieures. La source 2 est directement pertinente pour les précisions sur la modification de la communauté légale, les exemples de stipulations possibles et le renvoi aux articles 1387 à 1389. Les affirmations importantes de la réponse sont donc couvertes."
+    }
+  },
+  "failureStage": "none"
+}

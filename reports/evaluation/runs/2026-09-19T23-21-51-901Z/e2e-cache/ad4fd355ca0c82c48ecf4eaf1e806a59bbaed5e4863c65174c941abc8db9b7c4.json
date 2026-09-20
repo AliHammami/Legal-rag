@@ -1,0 +1,87 @@
+{
+  "questionId": "q108",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 731 du Code civil, la succession est dévolue par la loi :\n\n- aux parents du défunt ;\n- à son conjoint successible.\n\nCette dévolution s’effectue dans les conditions définies par les dispositions qui suivent l’article 731 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "731"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.40414900006726,
+      "vectorSearchMs": 606.4287319998257,
+      "jinaRerankingMs": 475.40543999988586,
+      "mappingMs": 0.039409999968484044,
+      "totalMs": 1300.3288900000043,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012618999928236008,
+      "contextBuilderMs": 0.010869000107049942,
+      "generationMs": 1194.9652569999453,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2495.326385000022
+    },
+    "judge": {
+      "questionId": "q108",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’article 731 : dévolution légale aux parents et au conjoint successible du défunt, dans les conditions prévues par les dispositions suivantes. Toutes les affirmations sont directement étayées par le contexte et la réponse répond à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 731 du Code civil, qui répond exactement à la question. Elle couvre l’ensemble des affirmations importantes de la réponse générée : dévolution légale de la succession aux parents et au conjoint successible du défunt, dans les conditions définies ci-après."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 731 du Code civil, la succession est dévolue par la loi :\n\n- aux parents du défunt ;\n- au conjoint successible du défunt.\n\nCette dévolution s’effectue dans les conditions définies par les dispositions qui suivent [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "731"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.8431299999356,
+      "routingCalls": 1,
+      "embeddingMs": 206.1113990000449,
+      "vectorSearchMs": 71.54983399994671,
+      "jinaRerankingMs": 478.317360999994,
+      "mappingMs": 0.02712700003758073,
+      "totalMs": 1780.8956679999828,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008908999850973487,
+      "contextBuilderMs": 0.009846000000834465,
+      "generationMs": 1188.2490640000906,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2969.171687999973
+    },
+    "judge": {
+      "questionId": "q108",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’article 731 : dévolution légale aux parents et au conjoint successible du défunt, selon les conditions définies par les dispositions suivantes. Toutes les affirmations sont directement étayées par le contexte et la réponse répond à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 731 du Code civil, directement pertinent pour identifier les bénéficiaires de la dévolution successorale et sa condition générale. Elle couvre intégralement les affirmations de la réponse : dévolution par la loi aux parents et au conjoint successible du défunt, dans les conditions définies ci-après."
+    }
+  },
+  "failureStage": "none"
+}

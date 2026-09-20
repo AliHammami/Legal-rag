@@ -1,0 +1,87 @@
+{
+  "questionId": "q209",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le caractère commercial d’une société est déterminé soit par **sa forme**, soit par **son objet**.\n\nSont toujours commerciales, quelle que soit leur objet :\n\n- les sociétés en nom collectif ;\n- les sociétés en commandite simple ;\n- les sociétés à responsabilité limitée ;\n- les sociétés par actions.\n\n**Fondement : article L210-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L210-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 306.98480099998415,
+      "vectorSearchMs": 627.7961110002361,
+      "jinaRerankingMs": 559.9838960003108,
+      "mappingMs": 0.04384299973025918,
+      "totalMs": 1494.8347160001285,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013017999939620495,
+      "contextBuilderMs": 0.019166999962180853,
+      "generationMs": 1311.1464220001362,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2806.0288410000503
+    },
+    "judge": {
+      "questionId": "q209",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la règle applicable et énumère exhaustivement les quatre formes sociales toujours commerciales, conformément au contexte et à la référence. La mention de l'article L210-1 est également explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L210-1 énonce expressément que le caractère commercial est déterminé par la forme ou l’objet, puis liste les sociétés toujours commerciales quel que soit leur objet. Elle couvre l’ensemble des affirmations importantes de la réponse générée, y compris son fondement juridique."
+    }
+  },
+  "routing": {
+    "answer": "Le caractère commercial d’une société est déterminé soit par sa **forme**, soit par son **objet**.\n\nSont toujours commerciales, quelle que soit leur activité :\n\n- les sociétés en nom collectif ;\n- les sociétés en commandite simple ;\n- les sociétés à responsabilité limitée ;\n- les sociétés par actions.\n\n**Article L210-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L210-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.94473200012,
+      "routingCalls": 1,
+      "embeddingMs": 232.09632699983194,
+      "vectorSearchMs": 173.68270000023767,
+      "jinaRerankingMs": 562.0062549998984,
+      "mappingMs": 0.03920899983495474,
+      "totalMs": 2093.801762000192,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01344800041988492,
+      "contextBuilderMs": 0.012643999885767698,
+      "generationMs": 1287.061402999796,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3380.8971009999514
+    },
+    "judge": {
+      "questionId": "q209",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle et énumère exhaustivement les quatre formes sociales visées. Toutes les affirmations sont explicitement supportées par le contexte fourni (article L210-1 du Code de commerce)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l'article L210-1 énonce expressément que le caractère commercial est déterminé par la forme ou l'objet, puis liste les sociétés commerciales par la forme quel que soit leur objet. Elle couvre intégralement les deux affirmations essentielles de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -23,6 +23,8 @@ function makeChunk(chunkId: string, rerankScore: number) {
     rerankScore,
     metadata: {
       articleNumber: chunkId.split('#')[0] ?? chunkId,
+      corpusId: 'code-penal',
+      codeName: 'Code pénal',
       pageStart: 1,
       pageEnd: 1,
       source: 'data/code-penal.pdf',
@@ -77,7 +79,9 @@ describe('answerQuestion', () => {
     expect(generateAnswer).toHaveBeenCalledWith(
       expect.objectContaining({
         question: 'Quelles sont les conditions de la légitime défense ?',
-        context: expect.stringContaining('[Source 1 — Article 122-6 — chunk 0]'),
+        context: expect.stringContaining(
+          '[Source 1 — Code pénal — Article 122-6 — chunk 0]',
+        ),
       }),
     );
     expect(result.answer).toBe('Réponse finale.');

@@ -1,0 +1,87 @@
+{
+  "questionId": "q348",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La commission tente en priorité de **concilier les parties afin d’élaborer un plan conventionnel de redressement**, approuvé par le débiteur et ses principaux créanciers. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L732-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.40902399923652,
+      "vectorSearchMs": 596.1914389999583,
+      "jinaRerankingMs": 557.2392279999331,
+      "mappingMs": 0.033433000557124615,
+      "totalMs": 1342.8998739998788,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010583999566733837,
+      "contextBuilderMs": 0.010627999901771545,
+      "generationMs": 1221.3504029996693,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2564.281973000616
+    },
+    "judge": {
+      "questionId": "q348",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l'action prioritaire prévue : la commission s'efforce de concilier les parties afin d'élaborer un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers. Elle est intégralement supportée par le contexte cité et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise exactement le cas où le débiteur relève de l’article L. 724-1 et est propriétaire d’un bien immobilier. Elle énonce explicitement que la commission s’efforce de concilier les parties en vue d’un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers, ce qui couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "La commission tente en priorité de **concilier le débiteur et ses principaux créanciers** afin d’élaborer un **plan conventionnel de redressement**, approuvé par le débiteur et ses principaux créanciers.  \n\n**Article L732-1 du Code de la consommation [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L732-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1544.2684669997543,
+      "routingCalls": 1,
+      "embeddingMs": 239.43577199988067,
+      "vectorSearchMs": 44.73249099962413,
+      "jinaRerankingMs": 1935.6658399999142,
+      "mappingMs": 0.03405199944972992,
+      "totalMs": 3764.164211000316,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014201999641954899,
+      "contextBuilderMs": 0.011189999990165234,
+      "generationMs": 1256.149131000042,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5020.34616599977
+    },
+    "judge": {
+      "questionId": "q348",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'action prioritaire prévue par l'article L. 732-1 : concilier les parties afin d'élaborer un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 732-1, qui vise exactement le cas décrit (débiteur propriétaire d'un bien immobilier dans la situation de l'article L. 724-1) et énonce que la commission s'efforce de concilier les parties afin d'élaborer un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers. Elle couvre intégralement les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

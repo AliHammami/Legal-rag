@@ -1,0 +1,87 @@
+{
+  "questionId": "q358",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 1471-1 du Code du travail** :\n\n- **Actions relatives à l’exécution du contrat de travail** : elles se prescrivent par **deux ans**, à compter du jour où le titulaire a connu ou aurait dû connaître les faits lui permettant d’exercer son droit.\n- **Actions relatives à la rupture du contrat de travail** : elles se prescrivent par **douze mois**, à compter de la notification de la rupture. [Source 1]\n\nCes délais de deux ans et de douze mois **ne s’appliquent pas** :\n\n- aux actions en réparation d’un **dommage corporel** causé à l’occasion de l’exécution du contrat ;\n- aux actions en **paiement ou en répétition du salaire** ;\n- aux actions exercées en application des articles **L. 1132-1, L. 1152-1 et L. 1153-1 du Code du travail**. [Source 1]\n\nEnfin, ces règles ne font pas obstacle :\n\n- aux **délais de prescription plus courts** prévus par le Code du travail, notamment ceux mentionnés aux articles **L. 1233-67, L. 1234-20, L. 1235-7, L. 1237-14 et L. 1237-19-8** ;\n- à l’application du dernier alinéa de l’article **L. 1134-5 du Code du travail**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1471-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 183.87303500063717,
+      "vectorSearchMs": 597.042945000343,
+      "jinaRerankingMs": 544.7670339997858,
+      "mappingMs": 0.031866999343037605,
+      "totalMs": 1325.809736999683,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009713999927043915,
+      "contextBuilderMs": 0.011713000014424324,
+      "generationMs": 3039.171559000388,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4365.01041600015
+    },
+    "judge": {
+      "questionId": "q358",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les délais applicables (deux ans pour l’exécution, douze mois pour la rupture), leurs points de départ, les trois catégories d’exceptions, ainsi que la réserve relative aux délais plus courts et à l’article L. 1134-5. Toutes ces affirmations sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 1471-1 du Code du travail, qui traite exactement des délais et points de départ des actions relatives à l’exécution et à la rupture du contrat, ainsi que de l’ensemble des exceptions et réserves mentionnées dans la réponse. Toutes les affirmations importantes de la réponse sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L1471-1 du Code du travail** [Source 1] :\n\n- **Actions portant sur l’exécution du contrat de travail** : elles se prescrivent par **deux ans**, à compter du jour où la personne a connu ou aurait dû connaître les faits lui permettant d’exercer son droit.\n- **Actions portant sur la rupture du contrat de travail** : elles se prescrivent par **douze mois**, à compter de la notification de la rupture.\n\nCes règles ne s’appliquent toutefois pas :\n\n- aux actions en réparation d’un **dommage corporel** causé à l’occasion de l’exécution du contrat ;\n- aux actions en **paiement ou en répétition du salaire** ;\n- aux actions exercées au titre des articles **L. 1132-1, L. 1152-1 et L. 1153-1 du Code du travail**.\n\nEnfin, ces délais ne font pas obstacle :\n\n- aux **délais de prescription plus courts** prévus par le Code du travail, notamment aux articles **L. 1233-67, L. 1234-20, L. 1235-7, L. 1237-14 et L. 1237-19-8** ;\n- à l’application du dernier alinéa de l’article **L. 1134-5** du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1471-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1432.207190000452,
+      "routingCalls": 1,
+      "embeddingMs": 219.23678799998015,
+      "vectorSearchMs": 229.10953599959612,
+      "jinaRerankingMs": 527.948222999461,
+      "mappingMs": 0.03604200016707182,
+      "totalMs": 2408.5669280001894,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015123999677598476,
+      "contextBuilderMs": 0.011677000671625137,
+      "generationMs": 2923.2325440002605,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5331.8337249998
+    },
+    "judge": {
+      "questionId": "q358",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les délais applicables (deux ans pour l’exécution, douze mois pour la rupture) et leurs points de départ. Elle énumère correctement les trois catégories d’exceptions et ajoute, de façon exacte, la réserve relative aux délais plus courts du Code du travail ainsi qu’au dernier alinéa de l’article L. 1134-5. Toutes ces affirmations sont explicitement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 1471-1 du Code du travail, qui répond précisément à la question. Elle établit les deux délais et leurs points de départ, les trois catégories d’actions exclues, ainsi que la réserve concernant les délais plus courts et le dernier alinéa de l’article L. 1134-5. Toutes les affirmations importantes de la réponse générée y sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

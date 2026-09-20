@@ -1,0 +1,87 @@
+{
+  "questionId": "q180",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L225-1 du Code de commerce, une société anonyme présente principalement les caractéristiques suivantes :\n\n- son capital est divisé en actions ;\n- elle est constituée entre deux associés ou plus ;\n- les associés ne supportent les pertes qu’à concurrence de leurs apports, leur responsabilité financière étant donc limitée à ces apports.\n\n[Article L225-1 du Code de commerce — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.9262569998391,
+      "vectorSearchMs": 557.3681229995564,
+      "jinaRerankingMs": 552.4588249996305,
+      "mappingMs": 0.039273000322282314,
+      "totalMs": 1332.8184440000914,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00935700023546815,
+      "contextBuilderMs": 0.010844999924302101,
+      "generationMs": 1255.4274769998156,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2588.27440200001
+    },
+    "judge": {
+      "questionId": "q180",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois caractéristiques énoncées à l’article L225-1 : capital divisé en actions, constitution entre deux associés ou plus, et pertes limitées au montant des apports. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L225-1 du Code de commerce et énonce explicitement les trois caractéristiques demandées : capital divisé en actions, constitution entre deux associés ou plus, et pertes supportées à concurrence des apports. Elle couvre également la formulation selon laquelle la responsabilité financière est limitée aux apports."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L225-1 du Code de commerce, une société anonyme présente principalement les caractéristiques suivantes :\n\n- son capital est divisé en actions ;\n- elle est constituée entre deux associés ou plus ;\n- les associés ne supportent les pertes qu’à concurrence de leurs apports, ce qui limite leur responsabilité financière [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 765.0937110004015,
+      "routingCalls": 1,
+      "embeddingMs": 223.29905000003055,
+      "vectorSearchMs": 174.4493229999207,
+      "jinaRerankingMs": 544.1261660000309,
+      "mappingMs": 0.0444239997304976,
+      "totalMs": 1707.0362709998153,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011807000264525414,
+      "contextBuilderMs": 0.011595000047236681,
+      "generationMs": 1145.8324790000916,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2852.900557999965
+    },
+    "judge": {
+      "questionId": "q180",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois caractéristiques énoncées par l’article L225-1 et la référence : capital divisé en actions, constitution entre deux associés ou plus, et pertes limitées aux apports. Elles sont toutes explicitement supportées par le contexte. L’explication sur la limitation de la responsabilité financière est une reformulation fidèle."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L225-1 cité dans la réponse et énonce explicitement les trois caractéristiques demandées : capital divisé en actions, constitution entre deux associés ou plus, et pertes supportées à concurrence des apports. Elle couvre également la reformulation relative à la limitation de la responsabilité financière."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q131",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 5224-1 du Code du travail, la méconnaissance de l’article L. 5221-4 est punie :\n\n- d’une **amende de 3 000 euros** ;\n- éventuellement, à titre de peine complémentaire :\n  - de l’**interdiction d’exercer l’activité d’entrepreneur de travail temporaire** pour une durée maximale de dix ans ;\n  - de l’**affichage du jugement** aux frais de la personne condamnée ;\n  - de l’**insertion du jugement**, intégrale ou par extraits, dans les journaux désignés par la juridiction.\n\nLes frais d’affichage et d’insertion ne peuvent pas dépasser le montant maximal de l’amende encourue. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5224-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 354.9402379998937,
+      "vectorSearchMs": 606.0109860002995,
+      "jinaRerankingMs": 519.1233020001091,
+      "mappingMs": 0.03246099967509508,
+      "totalMs": 1480.1314050001092,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010885000228881836,
+      "contextBuilderMs": 0.010034000035375357,
+      "generationMs": 1897.7520690001547,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3377.9121230002493
+    },
+    "judge": {
+      "questionId": "q131",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement l’amende de 3 000 euros et les peines complémentaires prévues : interdiction d’exercer l’activité d’entrepreneur de travail temporaire jusqu’à dix ans, affichage et insertion du jugement. Elle mentionne aussi correctement le plafond des frais, explicitement prévu par le contexte. Toutes les affirmations sont étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 5224-1 visé par la question. Elle énonce l'amende de 3 000 euros, les deux peines complémentaires possibles (interdiction d'exercer jusqu'à dix ans, affichage et insertion du jugement) ainsi que le plafond des frais. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 5224-1 du Code du travail, la méconnaissance de l’article L. 5221-4 est punie :\n\n- d’une **amende de 3 000 euros** ;\n- éventuellement, de l’**interdiction d’exercer l’activité d’entrepreneur de travail temporaire pendant dix ans au plus** ;\n- de l’**affichage du jugement**, aux frais de la personne condamnée ;\n- de l’**insertion intégrale ou par extraits du jugement dans les journaux désignés par la juridiction**, les frais d’affichage et d’insertion étant plafonnés au montant maximal de l’amende encourue.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5224-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1429.3583080000244,
+      "routingCalls": 1,
+      "embeddingMs": 206.60073899989948,
+      "vectorSearchMs": 220.06886400002986,
+      "jinaRerankingMs": 535.1204420002177,
+      "mappingMs": 0.04036199999973178,
+      "totalMs": 2391.212946999818,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014713999815285206,
+      "contextBuilderMs": 0.018515999894589186,
+      "generationMs": 1702.6548139997758,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4093.910653000232
+    },
+    "judge": {
+      "questionId": "q131",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement l’amende et les trois aspects des peines complémentaires prévus par l’article L. 5224-1, y compris la durée maximale de dix ans et le plafond des frais. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 5224-1 visé par la question. Elle couvre l'amende de 3 000 euros, l'interdiction d'exercer l'activité d'entrepreneur de travail temporaire pour dix ans au plus, l'affichage et l'insertion du jugement, ainsi que le plafond des frais."
+    }
+  },
+  "failureStage": "none"
+}

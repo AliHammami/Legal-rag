@@ -1,0 +1,103 @@
+{
+  "questionId": "q465",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La règle dépend de la personne concernée :\n\n- **Juges des tribunaux de commerce** : ils doivent prévenir ou faire cesser immédiatement toute situation de conflit d’intérêts. [Source 1 — Article L722-20 du Code de commerce]\n\n- **Courtiers de marchandises assermentés** : lorsqu’ils sont en conflit d’intérêts avec une partie, ils doivent s’abstenir de participer à la délibération. [Source 2 — Article R131-39 du Code de commerce]\n\n- **Prestataires de services d’investissement** : ils doivent mettre en place des mesures pour détecter, éviter ou gérer les conflits d’intérêts. Si ces mesures ne suffisent pas à protéger les intérêts des clients avec une certitude raisonnable, ils doivent informer clairement le client, avant d’agir, de la nature et de la source du conflit ainsi que des mesures prises pour en limiter les risques. [Source 3 — Article L533-10 du Code monétaire et financier]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L722-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R131-39"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 181.03333000093699,
+      "vectorSearchMs": 685.8627530001104,
+      "jinaRerankingMs": 589.7437619995326,
+      "mappingMs": 0.026655999943614006,
+      "totalMs": 1456.685034999624,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01078600063920021,
+      "contextBuilderMs": 0.08734000101685524,
+      "generationMs": 2249.9704090002924,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3706.762374000624
+    },
+    "judge": {
+      "questionId": "q465",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale et le contexte ne fournit que des règles sectorielles distinctes, sans permettre d’énoncer une règle générale applicable. La réponse tente néanmoins de répondre en listant ces cas particuliers au lieu de signaler cette limite. Les trois énoncés sont toutefois fidèlement soutenus par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les երեք régimes sectoriels effectivement exposés (juges des tribunaux de commerce, courtiers assermentés et prestataires de services d’investissement), mais elles ne permettent pas de répondre à la question générale en formulant une règle unique de conflit d’intérêts ni de justifier le dépassement de ce cadre sectoriel. Elles couvrent néanmoins intégralement les affirmations concrètes de la réponse générée : prévention ou cessation immédiate, abstention de délibérer, et détection/évitement/gestion avec information du client lorsque les mesures sont insuffisantes."
+    }
+  },
+  "routing": {
+    "answer": "La règle dépend de la personne concernée :\n\n- **Juges des tribunaux de commerce** : ils doivent prévenir ou faire cesser immédiatement toute situation de conflit d’intérêts. [Source 1 — Article L722-20 du Code de commerce]\n- **Courtiers de marchandises assermentés** : en cas de conflit avec une partie, ils doivent s’abstenir de participer à la délibération. [Source 2 — Article R131-39 du Code de commerce]\n- **Prestataires de services d’investissement** : ils doivent détecter, éviter ou gérer les conflits d’intérêts afin qu’ils ne portent pas atteinte aux intérêts de leurs clients. Si ces mesures sont insuffisantes, ils doivent informer clairement le client, avant d’agir, de la nature et de la source du conflit ainsi que des mesures prises pour en limiter les risques. [Source 3 — Article L533-10 du Code monétaire et financier]\n\nEn résumé, le conflit doit être **prévenu ou géré**, et peut imposer une **abstention** ou une **information du client** selon le cas.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L722-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R131-39"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 922.5553440004587,
+      "routingCalls": 1,
+      "embeddingMs": 206.23811800032854,
+      "vectorSearchMs": 596.8765590004623,
+      "jinaRerankingMs": 574.5912740007043,
+      "mappingMs": 0.035655999556183815,
+      "totalMs": 2300.318637000397,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00989999994635582,
+      "contextBuilderMs": 0.021641001105308533,
+      "generationMs": 2515.030721999705,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4815.395088000223
+    },
+    "judge": {
+      "questionId": "q465",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les trois règles sectorielles présentes dans le contexte et indique à juste titre qu'elles dépendent de la personne concernée. Toutefois, la question est générale et le contexte ne permet pas d'énoncer une règle unique applicable à tout conflit d'intérêts. Alors qu'une abstention était attendue, la réponse formule une synthèse générale (« le conflit doit être prévenu ou géré ») et tente de répondre sans signaler clairement l'impossibilité de donner une règle universelle. Toutes les affirmations substantielles sont néanmoins étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement relatives à des conflits d’intérêts, mais elles ne fournissent que des règles sectorielles applicables respectivement aux juges des tribunaux de commerce, aux courtiers assermentés et aux prestataires de services d’investissement. Elles sont donc insuffisantes pour établir une règle générale unique, ce qui était particulièrement nécessaire au regard de la question générale et de l’abstention attendue. En revanche, elles couvrent les affirmations concrètes de la réponse : prévention ou cessation immédiate pour les juges, abstention du courtier lors de la délibération, ainsi que détection, prévention/gestion et information du client par les prestataires lorsque les mesures sont insuffisantes."
+    }
+  },
+  "failureStage": "abstention"
+}

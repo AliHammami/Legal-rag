@@ -1,0 +1,99 @@
+{
+  "questionId": "q365",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### 1. Altération d’un acte de l’état civil\n\nToute altération ou falsification d’un acte de l’état civil, ainsi que toute inscription effectuée sur une feuille volante ou sur un support autre que les registres prévus à cet effet, peut donner lieu :\n\n- à une demande de **dommages-intérêts au profit des parties** ;\n- sans préjudice de l’application des **peines prévues par le Code pénal**.\n\nC’est ce que prévoit l’**article 52 du Code civil** [Source 3]. Les sources ne précisent toutefois ni la procédure à suivre ni les conditions de recevabilité d’une action particulière.\n\n### 2. Obligation des notaires et huissiers concernant les protêts\n\nLes notaires et les huissiers doivent :\n\n- laisser une **copie exacte des protêts** ;\n- remettre au greffier compétent, ou lui adresser par lettre recommandée avec accusé de réception, les copies requises ;\n- accomplir cette formalité **dans les quinze jours de l’acte**.\n\nCette obligation est assortie de sanctions pouvant comprendre la **destitution**, les **dépens** et des **dommages-intérêts envers les parties** (**article L. 511-55 du Code de commerce** [Source 2] ; **article L. 131-64 du Code monétaire et financier** [Source 1]).\n\nSelon l’**article R. 511-2 du Code de commerce** [Source 4], il faut remettre :\n\n- **deux copies** des protêts faute de paiement d’une lettre de change acceptée ou d’un billet à ordre ;\n- **trois copies** des protêts faute de paiement d’un chèque.\n\nLes copies sont adressées au greffier du tribunal de commerce du ressort du domicile du débiteur concerné [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-64"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-55"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "52"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R511-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 513.4192110002041,
+      "vectorSearchMs": 684.7220630003139,
+      "jinaRerankingMs": 530.4191929996014,
+      "mappingMs": 0.040754000656306744,
+      "totalMs": 1728.6283449996263,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.08532100077718496,
+      "contextBuilderMs": 0.05569600034505129,
+      "generationMs": 4516.41464199964,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6245.193043000065
+    },
+    "judge": {
+      "questionId": "q365",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les recours issus de l’article 52 du Code civil (dommages-intérêts sans préjudice des peines pénales) et détaille fidèlement les obligations des notaires et huissiers relatives aux protêts : copie exacte, remise ou envoi au greffier compétent, délai de quinze jours et sanctions. Les précisions sur le nombre de copies selon le type de protêt sont également expressément supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les quatre sources sont directement pertinentes. La source 3 couvre les dommages-intérêts et les peines pénales en cas d'altération, faux ou inscription irrégulière d'un acte d'état civil. Les sources 1 et 2 couvrent l'obligation de copie, de remise ou d'envoi au greffier, le délai de quinze jours et les sanctions. La source 4 couvre les précisions sur le nombre de copies et le ressort du greffier selon les types de protêts. Toutes les affirmations importantes de la réponse sont ainsi étayées."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient aucune disposition relative aux recours en cas d’altération d’un acte de l’état civil. Il ne permet donc pas d’identifier les recours applicables.\n\nEn revanche, concernant les protêts, **l’article L. 131-64 du Code monétaire et financier** impose aux notaires et aux huissiers :\n\n- de laisser une copie exacte des protêts, sous peine notamment de destitution, de dépens et de dommages-intérêts envers les parties ;\n- de remettre contre récépissé au greffier compétent, ou de lui adresser par lettre recommandée avec demande d’avis de réception, **deux copies exactes des protêts**, dont l’une est destinée au parquet ;\n- d’accomplir cette formalité **dans les quinze jours de l’acte**. [Source 1]\n\nCette disposition ne précise pas de recours particulier lié à l’altération d’un acte de l’état civil.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-64"
+      }
+    ],
+    "profiling": {
+      "routingMs": 820.1670920001343,
+      "routingCalls": 1,
+      "embeddingMs": 242.21689399983734,
+      "vectorSearchMs": 330.65737099945545,
+      "jinaRerankingMs": 543.6743429992348,
+      "mappingMs": 0.02829200029373169,
+      "totalMs": 1936.7776440000162,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011303999461233616,
+      "contextBuilderMs": 0.011939000338315964,
+      "generationMs": 2468.145112000406,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4404.954075999558
+    },
+    "judge": {
+      "questionId": "q365",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les obligations relatives aux protêts prévues par l’article L. 131-64 du Code monétaire et financier. Elle omet toutefois le recours essentiel en matière d’altération ou de faux d’un acte d’état civil : l’obtention de dommages-intérêts, sans préjudice des sanctions pénales (article 52 du Code civil). Cette omission rend la réponse incomplète au regard de la question et de la référence. L’ensemble des affirmations formulées est néanmoins directement étayé par le seul contexte fourni, qui ne contient effectivement aucune disposition sur l’état civil. La réponse traite réellement une partie substantielle de la question et ne constitue donc pas une abstention totale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour la seconde branche de la question, relative aux obligations des notaires et huissiers concernant les protêts, et elle étaye précisément les sanctions, les modalités de remise ou d’envoi, les destinataires et le délai de quinze jours. Elle ne couvre pas les recours liés à l’altération d’un acte d’état civil, mais elle permet de soutenir le constat explicite de la réponse selon lequel le contexte fourni ne contient aucune disposition sur ce point. Toutes les affirmations substantielles effectivement formulées dans la réponse sont donc couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

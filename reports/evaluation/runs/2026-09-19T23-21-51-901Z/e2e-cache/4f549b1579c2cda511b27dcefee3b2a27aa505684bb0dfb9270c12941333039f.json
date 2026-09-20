@@ -1,0 +1,87 @@
+{
+  "questionId": "q073",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 531 du Code civil, sont qualifiés de **meubles** :\n\n- les bateaux et navires ;\n- les usines installées sur bateau, dès lors qu’elles ne sont **pas fixées par des piliers** et ne font **pas partie d’une maison**.\n\nCette qualification repose donc principalement sur leur caractère non fixé de manière permanente à un immeuble et leur absence d’incorporation à une maison.\n\nToutefois, en raison de l’importance de certains de ces biens, leur saisie peut être soumise à des **formes particulières**, selon les règles prévues par le Code de procédure civile. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "531"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 254.5007489998825,
+      "vectorSearchMs": 553.0166549999267,
+      "jinaRerankingMs": 521.829262000043,
+      "mappingMs": 0.025385000044479966,
+      "totalMs": 1329.3987380000763,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009720999980345368,
+      "contextBuilderMs": 0.010067000053822994,
+      "generationMs": 2312.5997470000293,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3642.027002000017
+    },
+    "judge": {
+      "questionId": "q073",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le critère légal : les usines sont meubles lorsqu’elles ne sont pas fixées par des piliers et ne font pas partie de la maison. Elle indique aussi la conséquence relative à la saisie, susceptible d’être soumise à des formes particulières en raison de l’importance de certains biens. Toutes les affirmations essentielles sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 531 et répond précisément aux deux volets : les critères de qualification mobilière (notamment usines non fixées par des piliers et ne faisant pas partie de la maison) et la possibilité de formes particulières de saisie pour certains objets en raison de leur importance. Elle couvre les affirmations essentielles de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 531 du Code civil, sont qualifiés de **meubles** :\n\n- les **bateaux**, bacs et navires ;\n- les **usines installées sur des bateaux**, dès lors qu’elles ne sont pas fixées par des piliers et ne font pas partie d’une maison.\n\nLa qualification repose donc principalement sur leur **absence de fixation matérielle à un immeuble** et, pour les usines, sur le fait qu’elles ne constituent pas une partie de la maison. [Source 1]\n\nEn conséquence, leur saisie relève en principe des règles applicables aux meubles. Toutefois, compte tenu de leur importance, la saisie de certains de ces biens peut être soumise à des **formes particulières**, prévues par le Code de procédure civile. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "531"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1439.9093599999323,
+      "routingCalls": 1,
+      "embeddingMs": 218.44135099998675,
+      "vectorSearchMs": 91.05993900005706,
+      "jinaRerankingMs": 489.98746299999766,
+      "mappingMs": 0.02657000022009015,
+      "totalMs": 2239.4746100001503,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010114999953657389,
+      "contextBuilderMs": 0.010127000045031309,
+      "generationMs": 2675.5458580001723,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4915.048252000008
+    },
+    "judge": {
+      "questionId": "q073",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la qualification mobilière et la conséquence relative à des formes particulières de saisie. Elle formule toutefois de manière imprécise le critère de l’absence de fixation comme s’il gouvernait aussi les bateaux, alors que le texte vise explicitement les bateaux, bacs et navires et énonce les conditions de non-fixation et de non-intégration à la maison pour les usines. Elle ajoute aussi que les usines sont « installées sur des bateaux », ce qui n’est pas dit par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source reproduit directement l’article 531 et est donc parfaitement pertinente. Elle couvre la qualification mobilière des bateaux, bacs, navires et des usines non fixées par des piliers et ne faisant pas partie de la maison, ainsi que la possibilité de formes particulières de saisie. Toutefois, la réponse ajoute que les usines seraient « installées sur des bateaux », ce que la source ne dit pas, et généralise l’absence de fixation comme critère applicable aux bateaux eux-mêmes ; ces formulations ne sont pas entièrement couvertes par le texte."
+    }
+  },
+  "failureStage": "none"
+}

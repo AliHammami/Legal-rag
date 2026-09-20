@@ -1,0 +1,99 @@
+{
+  "questionId": "q388",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les deux dispositions concernent des domaines distincts et ne prévoient pas de mécanisme d’interaction directe.\n\n- **Code de commerce : annonces de réduction de prix.** Les modalités d’application sont renvoyées à un **décret en Conseil d’État**. Ce décret doit notamment déterminer les secteurs dans lesquels les réductions de prix ne peuvent pas être exprimées en pourcentage ou par référence au prix antérieurement pratiqué, ainsi que la durée ou les conditions de cette interdiction (**article L310-7 du Code de commerce [Source 1]**).\n\n- **Code du travail : relèvement du salaire minimum de croissance.** Lorsque l’indice national des prix à la consommation augmente d’au moins **2 %** par rapport à l’indice retenu lors de la précédente fixation du salaire minimum de croissance, celui-ci est relevé dans la même proportion. Le relèvement prend effet **le premier jour du mois suivant la publication de l’indice** qui le déclenche (**article L3231-5 du Code du travail [Source 2]**).\n\nAinsi, les règles relatives aux annonces de réduction de prix n’organisent ni ne conditionnent le relèvement du salaire minimum de croissance. La première disposition encadre la présentation des réductions de prix et renvoie les modalités particulières à un décret ; la seconde fixe une règle d’indexation automatique du salaire minimum sur l’indice des prix. Les extraits fournis ne permettent pas de préciser davantage les modalités du décret d’application ni d’établir un lien juridique spécifique entre ces deux régimes.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L310-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3231-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.59215399995446,
+      "vectorSearchMs": 651.393438000232,
+      "jinaRerankingMs": 517.9185819998384,
+      "mappingMs": 0.02236500009894371,
+      "totalMs": 1357.9566389992833,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014317999593913555,
+      "contextBuilderMs": 0.014831000007689,
+      "generationMs": 3247.8733659991995,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4605.8893520003185
+    },
+    "judge": {
+      "questionId": "q388",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les deux régimes et relève, à juste titre, l’absence de mécanisme d’interaction juridique directe entre eux. Elle restitue les modalités prévues par l’article L310-7 (renvoi à un décret en Conseil d’État, secteurs concernés, interdiction de l’expression en pourcentage ou par prix antérieur, durée ou conditions) et celles de l’article L3231-5 (seuil de 2 %, relèvement proportionnel, prise d’effet le premier jour du mois suivant la publication). Toutes les affirmations importantes sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article L310-7 couvre le renvoi au décret en Conseil d'État, les secteurs concernés et les modalités d'interdiction des annonces exprimées en pourcentage ou par prix antérieur ; l'article L3231-5 couvre le seuil de hausse de 2 %, le relèvement proportionnel du SMIC et sa prise d'effet. Elles étayent également le constat prudent selon lequel aucun lien juridique direct entre les deux régimes n'est établi par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions concernent deux régimes distincts, fondés sur des modalités différentes :\n\n- **Code de commerce : annonces de réduction de prix.** Les modalités d’application sont renvoyées à un **décret en Conseil d’État**. Ce décret doit notamment déterminer les secteurs dans lesquels une réduction de prix ne peut pas être exprimée en pourcentage ou par référence au prix antérieurement pratiqué, ainsi que la durée ou les conditions de cette interdiction. **Article L310-7 du Code de commerce [Source 1]**\n\n- **Code du travail : relèvement du salaire minimum de croissance.** Lorsque l’indice national des prix à la consommation augmente d’au moins **2 %** par rapport à l’indice retenu lors de la fixation précédente du salaire minimum de croissance, celui-ci est relevé dans la même proportion. Le relèvement prend effet **le premier jour du mois suivant la publication de l’indice** qui le déclenche. **Article L3231-5 du Code du travail [Source 2]**\n\n- **Minimum garanti.** L’évolution de l’indice national des prix à la consommation sert également à déterminer le minimum garanti, notamment pour l’évaluation des avantages en nature. Ce minimum peut toutefois être fixé à un niveau supérieur par voie réglementaire. **Article L3231-12 du Code du travail [Source 3]**\n\nAinsi, l’indice des prix à la consommation joue un rôle dans la revalorisation du salaire minimum de croissance et du minimum garanti, tandis que les annonces de réduction de prix relèvent d’un encadrement réglementaire spécifique. Les sources fournies ne prévoient **aucune interaction directe** entre ces deux mécanismes : la revalorisation salariale ne détermine pas les modalités de publicité des réductions de prix, et inversement. Les modalités concrètes applicables aux annonces doivent être recherchées dans le décret d’application mentionné par l’article L310-7, qui n’est pas reproduit ici.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L310-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3231-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3231-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1322.1338919997215,
+      "routingCalls": 1,
+      "embeddingMs": 187.658013000153,
+      "vectorSearchMs": 464.83204400073737,
+      "jinaRerankingMs": 590.5834649996832,
+      "mappingMs": 0.02369699999690056,
+      "totalMs": 2565.264317000285,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01206899993121624,
+      "contextBuilderMs": 0.020774999633431435,
+      "generationMs": 4544.376039000228,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7109.691212999634
+    },
+    "judge": {
+      "questionId": "q388",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les deux régimes : renvoi au décret en Conseil d’État pour les modalités et secteurs concernés par les annonces de réduction de prix (L. 310-7), et relèvement proportionnel du SMIC dès une hausse d’au moins 2 % de l’indice, à compter du premier jour du mois suivant la publication de l’indice déclencheur (L. 3231-5). Elle précise justement que le contexte ne révèle aucune interaction juridique directe entre ces mécanismes, contrairement à l’idée générale de « coordination » suggérée par la référence. L’ajout relatif au minimum garanti est exact et explicitement soutenu par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. La source 1 couvre le renvoi au décret en Conseil d’État, les secteurs concernés et les restrictions relatives au pourcentage ou au prix antérieur. La source 2 couvre intégralement le seuil de 2 %, le relèvement dans la même proportion et sa prise d’effet le premier jour du mois suivant la publication de l’indice. La source 3 couvre l’affirmation additionnelle sur le minimum garanti et les avantages en nature. La conclusion d’absence d’interaction directe est adéquatement fondée sur le fait que les sources exposent des régimes distincts sans mécanisme de liaison, et l’indication que le décret n’est pas reproduit est vérifiable au regard du corpus fourni."
+    }
+  },
+  "failureStage": "none"
+}

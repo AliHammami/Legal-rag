@@ -1,0 +1,111 @@
+{
+  "questionId": "q281",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne contiennent pas l’**article L. 465-1 du Code monétaire et financier**. Il n’est donc pas possible de déterminer, sur cette seule base, le traitement juridique de l’usage d’une information privilégiée.\n\nLes dispositions communiquées concernent principalement le détournement, le traitement irrégulier ou la divulgation de données à caractère personnel, notamment l’**article 226-21 du Code pénal** [Source 1], et non l’usage d’une information privilégiée.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-21"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-17"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-22"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-12"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-16-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 179.9850490000099,
+      "vectorSearchMs": 666.4330529998988,
+      "jinaRerankingMs": 508.5107860006392,
+      "mappingMs": 0.03402099944651127,
+      "totalMs": 1354.9898150004447,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012040000408887863,
+      "contextBuilderMs": 0.029590999707579613,
+      "generationMs": 1865.6781740002334,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3220.7174720000476
+    },
+    "judge": {
+      "questionId": "q281",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas le traitement juridique demandé par l'article L. 465-1, alors que la question appelait une réponse de fond. Elle constate correctement que cet article ne figure pas dans le contexte et que les extraits portent principalement sur des données personnelles. Cette constatation est entièrement fondée sur le contexte, mais constitue une abstention alors qu'aucune abstention n'était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Les extraits fournis ne portent pas sur l'article L. 465-1 ni sur l'usage d'une information privilégiée ou les abus de marché : ils sont donc hors sujet pour répondre directement à la question. En revanche, ils couvrent les constats de la réponse générée : aucun extrait n'est l'article L. 465-1 et les sources 1, 2, 3 et 5 concernent bien le traitement, le détournement ou la divulgation de données à caractère personnel, notamment l'article 226-21 cité."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L. 465-1 du Code monétaire et financier**, l’usage d’une information privilégiée constitue un délit lorsqu’une personne habilitée ou détenant cette information en connaissance de cause :\n\n- réalise, directement ou indirectement, pour elle-même ou pour autrui, une ou plusieurs opérations sur les instruments financiers ou crypto-actifs concernés ;\n- ou annule ou modifie un ou plusieurs ordres passés avant qu’elle ne détienne l’information privilégiée.\n\nCe délit est puni de **cinq ans d’emprisonnement** et de **100 millions d’euros d’amende**. L’amende peut être portée au **décuple de l’avantage retiré**, sans pouvoir être inférieure à cet avantage [Source 3].\n\nSont notamment concernés les dirigeants, membres des organes sociaux, personnes détenant une participation dans l’émetteur, personnes ayant obtenu l’information dans le cadre de leur profession ou de leurs fonctions, ainsi que toute personne qui la détient en connaissance de cause [Source 3].\n\nEnfin, le simple fait de détenir une information privilégiée ne suffit pas à caractériser l’infraction lorsque le comportement est légitime au sens de l’article 9 du règlement européen relatif aux abus de marché [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1436.1179320001975,
+      "routingCalls": 1,
+      "embeddingMs": 233.8147569997236,
+      "vectorSearchMs": 174.43500300031155,
+      "jinaRerankingMs": 520.7398979999125,
+      "mappingMs": 0.03221900016069412,
+      "totalMs": 2365.167006999254,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011520999483764172,
+      "contextBuilderMs": 0.02310399990528822,
+      "generationMs": 2755.0000420007855,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5120.210297999904
+    },
+    "judge": {
+      "questionId": "q281",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement l’incrimination de l’usage d’une information privilégiée : personnes visées, opérations directes ou indirectes, annulation ou modification d’ordres antérieurs, instruments financiers ou crypto-actifs concernés, peines de cinq ans et 100 millions d’euros, mécanisme du décuple de l’avantage et seuil minimal, ainsi que l’exception de comportement légitime au sens de l’article 9 du règlement (UE) n° 596/2014. Tous ces éléments sont explicitement soutenus par la source 3 du contexte. Elle répond bien à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 est directement l'article L. 465-1 visé par la question. Elle étaye l'ensemble des affirmations substantielles : personnes concernées, usage par opérations directes ou indirectes, annulation ou modification d'ordres antérieurs, instruments financiers ou crypto-actifs, peine de cinq ans et 100 millions d'euros, possibilité de décuplement de l'avantage et plancher correspondant, ainsi que l'exception de comportement légitime au sens de l'article 9 du règlement (UE) n° 596/2014."
+    }
+  },
+  "failureStage": "none"
+}

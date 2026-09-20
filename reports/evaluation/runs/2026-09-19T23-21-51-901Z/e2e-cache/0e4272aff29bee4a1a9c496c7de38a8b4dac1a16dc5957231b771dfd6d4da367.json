@@ -1,0 +1,103 @@
+{
+  "questionId": "q308",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L322-2 du Code de la consommation, la publicité doit indiquer :\n\n- le **nom** de l’établissement de crédit ou de la société de financement ;\n- son **adresse** ;\n- lorsque l’intermédiaire agit pour plusieurs établissements, le nom et l’adresse de **chacun d’eux**.\n\nCes informations concernent l’établissement ou la société pour le compte duquel ou desquels l’intermédiaire exerce son activité. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L322-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.91807899996638,
+      "vectorSearchMs": 706.3340079998598,
+      "jinaRerankingMs": 536.7805239995942,
+      "mappingMs": 0.03393299970775843,
+      "totalMs": 1456.1026499997824,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01216300018131733,
+      "contextBuilderMs": 0.013700000010430813,
+      "generationMs": 1627.0408960003406,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3083.1787639996037
+    },
+    "judge": {
+      "questionId": "q308",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les informations exigées : le nom et l’adresse de l’établissement de crédit ou de la société de financement, y compris de chacun lorsqu’il y en a plusieurs. Ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L322-2 directement visé par la question. Elle énonce explicitement que la publicité indique le nom et l’adresse du ou des établissements de crédit et/ou de la ou des sociétés de financement pour le compte desquels l’intermédiaire exerce son activité. Elle couvre intégralement les affirmations de la réponse, y compris le cas de plusieurs établissements ou sociétés."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas l’**article L322-2** : il n’est donc pas possible de déterminer, sur cette seule base, les informations spécifiques devant figurer dans la publicité concernant l’établissement de crédit ou la société de financement pour laquelle l’intermédiaire exerce son activité.\n\nLes sources fournies prévoient seulement que toute publicité émanant de l’intermédiaire doit mentionner :\n\n- son nom ou sa dénomination sociale ;\n- son adresse professionnelle ou celle de son siège social ;\n- son numéro d’immatriculation ;\n- sa catégorie d’intermédiaire.\n\n**Article R519-24 du Code monétaire et financier [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R519-24"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R519-30"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L511-8"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R519-20"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L519-4-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3319.633860000409,
+      "routingCalls": 1,
+      "embeddingMs": 192.59086399991065,
+      "vectorSearchMs": 119.5891780005768,
+      "jinaRerankingMs": 589.3802169999108,
+      "mappingMs": 0.04259199928492308,
+      "totalMs": 4221.265603999607,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012854000553488731,
+      "contextBuilderMs": 0.036317999474704266,
+      "generationMs": 2638.923861999996,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6860.247487999499
+    },
+    "judge": {
+      "questionId": "q308",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas l'information demandée : le nom et l'adresse du ou des établissements de crédit ou sociétés de financement pour le compte desquels l'intermédiaire exerce. Elle refuse de répondre au motif que l'article L322-2 est absent du contexte et substitue des exigences issues de l'article R519-24, lesquelles sont bien reproduites dans le contexte. Cette abstention est inappropriée alors qu'une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Aucune source ne reproduit l'article L322-2 ni n'établit directement que la publicité doit indiquer le nom et l'adresse des établissements ou sociétés pour le compte desquels l'intermédiaire agit. Les sources sont néanmoins partiellement liées au sujet : R519-24 porte directement sur les mentions des publicités d'intermédiaires, et R519-20/R519-30 concernent l'information sur les établissements avec lesquels ils travaillent. La réponse générée est bien étayée pour les quatre mentions attribuées à R519-24. Son constat que L322-2 n'est pas fourni est compatible avec les sources listées, mais l'affirmation selon laquelle les sources prévoient « seulement » ces éléments est trop large au regard des autres dispositions fournies sur les informations relatives aux établissements."
+    }
+  },
+  "failureStage": "generation"
+}

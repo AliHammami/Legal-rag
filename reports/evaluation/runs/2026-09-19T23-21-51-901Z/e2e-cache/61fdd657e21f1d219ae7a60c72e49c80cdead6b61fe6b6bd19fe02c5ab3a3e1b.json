@@ -1,0 +1,87 @@
+{
+  "questionId": "q050",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 711-1 du Code pénal, les livres Ier à V, dans leur rédaction issue de la loi n° 2026-813 du 24 août 2026, sont applicables en :\n\n- Nouvelle-Calédonie ;\n- Polynésie française ;\n- îles Wallis et Futuna.\n\nCette application est prévue sous réserve des adaptations mentionnées dans le titre concerné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "711-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.9938100000145,
+      "vectorSearchMs": 645.2675020000897,
+      "jinaRerankingMs": 604.0272000000114,
+      "mappingMs": 0.03303799999412149,
+      "totalMs": 1498.3478670000331,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0102259999839589,
+      "contextBuilderMs": 0.010888000018894672,
+      "generationMs": 1564.9465580000542,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3063.3232660000212
+    },
+    "judge": {
+      "questionId": "q050",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les trois collectivités prévues par l’article 711-1 : Nouvelle-Calédonie, Polynésie française et îles Wallis-et-Futuna. Elle mentionne aussi correctement la réserve relative aux adaptations prévues au titre. Toutes les affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 711-1 et vise expressément la rédaction issue de la loi n° 2026-813 du 24 août 2026. Elle identifie les trois collectivités citées dans la réponse et couvre également la réserve relative aux adaptations prévues au présent titre."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 711-1 du Code pénal, les livres Ier à V, dans leur rédaction issue de la loi n° 2026-813 du 24 août 2026, sont applicables en :\n\n- Nouvelle-Calédonie ;\n- Polynésie française ;\n- Îles Wallis et Futuna.\n\nCette application est faite sous réserve des adaptations prévues par le titre concerné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "711-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1138.6579469999997,
+      "routingCalls": 1,
+      "embeddingMs": 212.55995499994606,
+      "vectorSearchMs": 34.46683900000062,
+      "jinaRerankingMs": 517.4018300001044,
+      "mappingMs": 0.030722999945282936,
+      "totalMs": 1903.1390530000208,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009824999957345426,
+      "contextBuilderMs": 0.009812000091187656,
+      "generationMs": 1510.0299329999834,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3413.201197999995
+    },
+    "judge": {
+      "questionId": "q050",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les trois collectivités mentionnées à l’article 711-1 : Nouvelle-Calédonie, Polynésie française et îles Wallis-et-Futuna. Elle restitue également correctement la réserve relative aux adaptations prévues au titre concerné, explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 711-1 et mentionne explicitement la version issue de la loi n° 2026-813 du 24 août 2026, les trois collectivités concernées ainsi que la réserve relative aux adaptations prévues au présent titre. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

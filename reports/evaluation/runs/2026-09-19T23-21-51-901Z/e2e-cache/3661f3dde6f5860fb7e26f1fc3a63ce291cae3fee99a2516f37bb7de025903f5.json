@@ -1,0 +1,95 @@
+{
+  "questionId": "q309",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 341-19 du Code de la consommation, ces dispositions s’appliquent aux autorisations de découvert remboursables :\n\n- dans un délai supérieur à un mois ;\n- et inférieur ou égal à trois mois.\n\nLa limite temporelle est donc **plus d’un mois et jusqu’à trois mois inclus**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-19"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 267.35667499992996,
+      "vectorSearchMs": 653.7547900006175,
+      "jinaRerankingMs": 604.2142969993874,
+      "mappingMs": 0.027900000102818012,
+      "totalMs": 1525.3778969999403,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0133050000295043,
+      "contextBuilderMs": 0.06271999981254339,
+      "generationMs": 1238.7664080001414,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2764.2305230004713
+    },
+    "judge": {
+      "questionId": "q309",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les bornes temporelles prévues par l’article L. 341-19 : délai strictement supérieur à un mois et inférieur ou égal à trois mois. Elle est complète, directement étayée par la source 1 du contexte et répond à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 341-19 demandé et énonce exactement les deux bornes temporelles : remboursement dans un délai supérieur à un mois et inférieur ou égal à trois mois. Elle couvre l'intégralité des affirmations importantes de la réponse générée. La source 2 est non nécessaire mais n'affecte pas l'évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 341-19 du Code de la consommation, ces dispositions s’appliquent aux autorisations de découvert remboursables :\n\n- dans un délai **supérieur à un mois** ;\n- et **inférieur ou égal à trois mois**.\n\nLa limite temporelle est donc : **plus d’un mois et jusqu’à trois mois inclus**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-19"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1065.0834409995005,
+      "routingCalls": 1,
+      "embeddingMs": 221.07312799990177,
+      "vectorSearchMs": 54.5103560006246,
+      "jinaRerankingMs": 534.470568000339,
+      "mappingMs": 0.03274199925363064,
+      "totalMs": 1875.2008739998564,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04865600075572729,
+      "contextBuilderMs": 0.020421000197529793,
+      "generationMs": 1344.4551510000601,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3219.7345000002533
+    },
+    "judge": {
+      "questionId": "q309",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les bornes temporelles prévues par l’article L. 341-19 : un délai strictement supérieur à un mois et inférieur ou égal à trois mois. Elle est entièrement étayée par le contexte fourni et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 341-19 visé par la question et énonce précisément que l’autorisation de découvert doit être remboursable dans un délai supérieur à un mois et inférieur ou égal à trois mois. Elle couvre intégralement les affirmations importantes de la réponse générée. La source 2 n’est pas nécessaire à cette réponse."
+    }
+  },
+  "failureStage": "none"
+}

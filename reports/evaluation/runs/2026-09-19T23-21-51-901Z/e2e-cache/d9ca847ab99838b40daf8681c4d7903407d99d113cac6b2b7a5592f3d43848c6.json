@@ -1,0 +1,99 @@
+{
+  "questionId": "q320",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne reproduisent pas le contenu de l’article **L. 441-3 du Code de la consommation**. Elles indiquent seulement que les délits prévus par cet article sont pénalement sanctionnés par deux ans d’emprisonnement et 300 000 € d’amende, avec une possible majoration [Source 3].\n\nIl n’est donc pas possible, à partir du seul contexte fourni, d’identifier les techniques interdites ni le cas dans lequel un professionnel pourrait être dispensé de cette obligation.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L521-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 246.9817850003019,
+      "vectorSearchMs": 559.453691999428,
+      "jinaRerankingMs": 592.167845999822,
+      "mappingMs": 0.033277000300586224,
+      "totalMs": 1398.705614999868,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009440000168979168,
+      "contextBuilderMs": 0.023536999709904194,
+      "generationMs": 2050.2408569995314,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3448.9881269996986
+    },
+    "judge": {
+      "questionId": "q320",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit ni les techniques interdites ni l’exception applicable, alors que la réponse attendue devait répondre à ces deux points. Elle est toutefois correctement fondée sur le contexte fourni : celui-ci ne contient pas le texte de l’article L. 441-3 et ne permet effectivement d’établir que les sanctions mentionnées à l’article L. 454-6. L’abstention n’était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont hors sujet. La source 3 vise bien l’article L. 441-3, mais uniquement pour en indiquer les sanctions, sans reproduire les techniques interdites ni l’exception demandée. Elle est donc très insuffisante pour répondre directement à la question. En revanche, elle couvre les constats de la réponse générée : le contenu de L. 441-3 n’est pas fourni et seule sa sanction pénale est mentionnée."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne reproduisent pas le contenu de l’article **L. 441-3 du Code de la consommation**. Elles indiquent seulement que les délits prévus par cet article sont pénalement sanctionnés, sans préciser les techniques interdites ni les éventuelles exceptions.\n\nIl n’est donc pas possible de répondre de manière fiable à ces deux questions à partir du seul contexte fourni. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 6182.806726000272,
+      "routingCalls": 1,
+      "embeddingMs": 204.97923200018704,
+      "vectorSearchMs": 77.93126100022346,
+      "jinaRerankingMs": 560.4221919998527,
+      "mappingMs": 0.03923800028860569,
+      "totalMs": 7026.206301999278,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013425000011920929,
+      "contextBuilderMs": 0.01833400037139654,
+      "generationMs": 2188.3608380006626,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9214.60685800016
+    },
+    "judge": {
+      "questionId": "q320",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit ni les techniques interdites ni le cas d’exemption demandés, alors que l’abstention n’était pas attendue. Son constat est toutefois entièrement fondé sur le contexte : celui-ci ne contient que la sanction applicable à l’article L. 441-3, sans son contenu ni ses exceptions."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 vise directement l’article L. 441-3, mais uniquement pour indiquer les sanctions pénales applicables, sans reproduire les techniques interdites ni les exceptions demandées. La source 1 est hors sujet. Les sources sont donc seulement partiellement pertinentes pour la question, avec des éléments essentiels manquants. En revanche, elles couvrent les affirmations de la réponse générée : la source 2 confirme qu’elle ne donne que la sanction liée à l’article L. 441-3 et non son contenu substantiel, ce qui étaye le constat d’insuffisance du contexte."
+    }
+  },
+  "failureStage": "generation"
+}

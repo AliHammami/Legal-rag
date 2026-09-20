@@ -1,0 +1,95 @@
+{
+  "questionId": "q090",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1193 du Code civil, un contrat ne peut être modifié ou révoqué que :\n\n- par le consentement mutuel des parties ;\n- ou pour les causes autorisées par la loi.\n\n[Article 1193 du Code civil — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2028"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.6375049999915,
+      "vectorSearchMs": 597.3400910000782,
+      "jinaRerankingMs": 529.6518649999052,
+      "mappingMs": 0.02956399996764958,
+      "totalMs": 1327.683425999945,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012229999992996454,
+      "contextBuilderMs": 0.01737500005401671,
+      "generationMs": 1012.6042400000151,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2340.3251150001306
+    },
+    "judge": {
+      "questionId": "q090",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article 1193 : le consentement mutuel des parties ou les causes autorisées par la loi. Elle est intégralement étayée par la source 1 et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article 1193 du Code civil visé par la question et énonce exactement les deux conditions reprises dans la réponse générée. Elle couvre intégralement les affirmations importantes relatives au consentement mutuel des parties et aux causes autorisées par la loi."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1193 du Code civil, un contrat peut être modifié ou révoqué :\n\n- avec le consentement mutuel de toutes les parties ;\n- ou dans les cas prévus par la loi.\n\n[Article 1193 du Code civil — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2028"
+      }
+    ],
+    "profiling": {
+      "routingMs": 885.3684129999019,
+      "routingCalls": 1,
+      "embeddingMs": 160.40311899990775,
+      "vectorSearchMs": 56.915183999808505,
+      "jinaRerankingMs": 530.360483000055,
+      "mappingMs": 0.09814999997615814,
+      "totalMs": 1633.185131000122,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017133000073954463,
+      "contextBuilderMs": 0.019926999928429723,
+      "generationMs": 1004.7358810000587,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2637.968089000089
+    },
+    "judge": {
+      "questionId": "q090",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement l’article 1193 : modification ou révocation par consentement mutuel des parties, ou pour les causes prévues/autorisées par la loi. Ces deux éléments sont explicitement présents dans la source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 1193 du Code civil et énonce exactement les deux conditions reprises dans la réponse : consentement mutuel des parties ou causes autorisées par la loi. Elle est donc parfaitement pertinente et couvre l’ensemble des affirmations importantes. La source 2 n’est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

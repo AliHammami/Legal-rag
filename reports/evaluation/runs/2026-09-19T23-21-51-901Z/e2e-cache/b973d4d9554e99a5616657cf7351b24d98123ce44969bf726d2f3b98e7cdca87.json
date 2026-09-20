@@ -1,0 +1,87 @@
+{
+  "questionId": "q302",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L341-11 du Code de la consommation, l’engagement préalable de payer comptant en cas de refus de prêt, dans un contrat de crédit affecté, est **nul de plein droit** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 410.96273299958557,
+      "vectorSearchMs": 562.990557000041,
+      "jinaRerankingMs": 1412.9877789998427,
+      "mappingMs": 0.024001999758183956,
+      "totalMs": 2386.9934959998354,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010174999944865704,
+      "contextBuilderMs": 0.010777999646961689,
+      "generationMs": 869.804944999516,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3256.827953999862
+    },
+    "judge": {
+      "questionId": "q302",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la règle énoncée par l’article L341-11 : l’engagement préalable de payer comptant en cas de refus de prêt est nul de plein droit. Cette affirmation est intégralement soutenue par le contexte fourni et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement l’article L. 341-11 visé par la question et énonce expressément que, pour un contrat de crédit affecté, l’engagement préalable de payer comptant en cas de refus de prêt est nul de plein droit. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’engagement préalable de payer comptant en cas de refus de prêt est **nul de plein droit** lorsqu’il concerne un contrat de crédit affecté mentionné à l’article L. 312-44 du Code de la consommation. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1248.2879619998857,
+      "routingCalls": 1,
+      "embeddingMs": 210.9030240001157,
+      "vectorSearchMs": 44.91233199927956,
+      "jinaRerankingMs": 505.6730829998851,
+      "mappingMs": 0.12514799926429987,
+      "totalMs": 2011.739578999579,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012715000659227371,
+      "contextBuilderMs": 0.010937999933958054,
+      "generationMs": 1060.9345880001783,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3072.704561999999
+    },
+    "judge": {
+      "questionId": "q302",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article L. 341-11 : l’engagement préalable de payer comptant en cas de refus de prêt est nul de plein droit pour un crédit affecté visé à l’article L. 312-44. Elle est complète pour la question et entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 341-11 et répond exactement à la question : dans le cadre d’un crédit affecté mentionné à l’article L. 312-44, l’engagement préalable de payer comptant en cas de refus de prêt est nul de plein droit. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

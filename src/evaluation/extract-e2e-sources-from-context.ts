@@ -1,16 +1,50 @@
-import { formatSourceBlockHeader } from '../generation/build-rag-context.js';
 import { EvaluationError } from './evaluation.error.js';
 import type { E2ESourceSnapshot } from './e2e-evaluation.types.js';
 import type { E2ESourceJudgeSourceInput } from './e2e-source-judge.types.js';
 
 const SOURCE_HEADER_LINE_PATTERN =
-  /^\[Source (\d+) — Article (.+?) — chunk (\d+)\]$/;
+  /^\[Source (\d+) — (.+?) — Article (.+?) — chunk (\d+)\]$/;
 
 export interface ParsedContextSourceBlock {
   sourceId: number;
+  codeName: string;
   articleNumber: string;
   chunkIndex: number;
   content: string;
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function buildSourceHeaderLinePattern(
+  source: Pick<E2ESourceSnapshot, 'sourceId' | 'articleNumber' | 'chunkIndex'>,
+): RegExp {
+  return new RegExp(
+    `^\\[Source ${source.sourceId} — .+? — Article ${escapeRegExp(source.articleNumber)} — chunk ${source.chunkIndex}\\]$`,
+  );
+}
+
+function findSourceHeaderLine(
+  context: string,
+  source: E2ESourceSnapshot,
+  searchFrom = 0,
+): { header: string; headerIndex: number } {
+  const pattern = buildSourceHeaderLinePattern(source);
+  const lines = context.split('\n');
+  let offset = 0;
+
+  for (const line of lines) {
+    if (offset >= searchFrom && pattern.test(line)) {
+      return { header: line, headerIndex: offset };
+    }
+    offset += line.length + 1;
+  }
+
+  throw new EvaluationError(
+    `Missing source block for sourceId ${source.sourceId}`,
+    'SOURCE_CONTEXT_INVALID',
+  );
 }
 
 function findSourceBlockContent(
@@ -18,15 +52,7 @@ function findSourceBlockContent(
   source: E2ESourceSnapshot,
   nextSource: E2ESourceSnapshot | undefined,
 ): string {
-  const header = formatSourceBlockHeader(source);
-  const headerIndex = context.indexOf(header);
-  if (headerIndex === -1) {
-    throw new EvaluationError(
-      `Missing source block for sourceId ${source.sourceId}`,
-      'SOURCE_CONTEXT_INVALID',
-    );
-  }
-
+  const { header, headerIndex } = findSourceHeaderLine(context, source);
   const bodyStart = headerIndex + header.length;
   if (context[bodyStart] !== '\n') {
     throw new EvaluationError(
@@ -37,14 +63,11 @@ function findSourceBlockContent(
 
   let bodyEnd = context.length;
   if (nextSource) {
-    const nextHeader = formatSourceBlockHeader(nextSource);
-    const nextHeaderIndex = context.indexOf(nextHeader, bodyStart + 1);
-    if (nextHeaderIndex === -1) {
-      throw new EvaluationError(
-        `Missing source block for sourceId ${nextSource.sourceId}`,
-        'SOURCE_CONTEXT_INVALID',
-      );
-    }
+    const { headerIndex: nextHeaderIndex } = findSourceHeaderLine(
+      context,
+      nextSource,
+      bodyStart + 1,
+    );
     bodyEnd = nextHeaderIndex;
   }
 
@@ -71,8 +94,9 @@ export function parseContextSourceBlocks(context: string): ParsedContextSourceBl
     }
 
     const sourceId = Number(headerMatch[1]);
-    const articleNumber = headerMatch[2] ?? '';
-    const chunkIndex = Number(headerMatch[3]);
+    const codeName = headerMatch[2] ?? '';
+    const articleNumber = headerMatch[3] ?? '';
+    const chunkIndex = Number(headerMatch[4]);
     const contentLines: string[] = [];
 
     for (lineIndex += 1; lineIndex < lines.length; lineIndex += 1) {
@@ -86,6 +110,7 @@ export function parseContextSourceBlocks(context: string): ParsedContextSourceBl
 
     blocks.push({
       sourceId,
+      codeName,
       articleNumber,
       chunkIndex,
       content: contentLines.join('\n').trimEnd(),

@@ -7,20 +7,30 @@ function makeChunk(
   articleNumber: string,
   chunkIndex: number,
   content: string,
-  distance = 0.42,
-  rerankScore = 0.91,
+  options: {
+    corpusId?: string;
+    codeName?: string;
+    distance?: number;
+    rerankScore?: number;
+  } = {},
 ): SimilarChunk & { rerankScore: number } {
+  const corpusId = options.corpusId ?? 'code-penal';
+  const codeName = options.codeName ?? 'Code pénal';
+
   return {
+    corpusId,
     chunkId,
     articleNumber,
     content,
-    distance,
-    rerankScore,
+    distance: options.distance ?? 0.42,
+    rerankScore: options.rerankScore ?? 0.91,
     metadata: {
       articleNumber,
+      corpusId,
+      codeName,
       pageStart: 1,
       pageEnd: 1,
-      source: 'data/code-penal.pdf',
+      source: `data/${corpusId}.pdf`,
       sourceType: 'pdf',
       chunkIndex,
       chunkCount: 2,
@@ -38,7 +48,7 @@ describe('buildRagContext', () => {
     expect(result.sources).toEqual([]);
   });
 
-  it('formats a single chunk with stable sourceId', () => {
+  it('formats a single chunk with stable sourceId and code name', () => {
     const chunk = makeChunk('122-5#0', '122-5', 0, 'Texte article 122-5');
     const result = buildRagContext([chunk]);
 
@@ -46,13 +56,14 @@ describe('buildRagContext', () => {
     expect(result.sources[0]).toMatchObject({
       sourceId: 1,
       chunkId: '122-5#0',
+      codeName: 'Code pénal',
       articleNumber: '122-5',
       chunkIndex: 0,
       content: 'Texte article 122-5',
       chunk,
     });
     expect(result.context).toBe(
-      '[Source 1 — Article 122-5 — chunk 0]\nTexte article 122-5',
+      '[Source 1 — Code pénal — Article 122-5 — chunk 0]\nTexte article 122-5',
     );
   });
 
@@ -68,8 +79,49 @@ describe('buildRagContext', () => {
       '122-6',
       '122-5',
     ]);
-    expect(result.context).toContain('[Source 1 — Article 122-6 — chunk 0]');
-    expect(result.context).toContain('[Source 2 — Article 122-5 — chunk 0]');
+    expect(result.context).toContain(
+      '[Source 1 — Code pénal — Article 122-6 — chunk 0]',
+    );
+    expect(result.context).toContain(
+      '[Source 2 — Code pénal — Article 122-5 — chunk 0]',
+    );
+  });
+
+  it('includes corpus code name in headers for multicorpus context', () => {
+    const chunks = [
+      makeChunk('L322-2#0', 'L322-2', 0, 'Texte consommation', {
+        corpusId: 'code-de-la-consommation',
+        codeName: 'Code de la consommation',
+      }),
+      makeChunk('L123-4#0', 'L123-4', 0, 'Texte monétaire', {
+        corpusId: 'code-monetaire-et-financier',
+        codeName: 'Code monétaire et financier',
+      }),
+    ];
+    const result = buildRagContext(chunks);
+
+    expect(result.context).toContain(
+      '[Source 1 — Code de la consommation — Article L322-2 — chunk 0]',
+    );
+    expect(result.context).toContain('Texte consommation');
+    expect(result.context).toContain(
+      '[Source 2 — Code monétaire et financier — Article L123-4 — chunk 0]',
+    );
+    expect(result.context).toContain('Texte monétaire');
+  });
+
+  it('falls back to corpusId when codeName metadata is absent', () => {
+    const chunk = makeChunk('122-5#0', '122-5', 0, 'Texte article', {
+      codeName: undefined,
+    });
+    chunk.metadata.codeName = undefined;
+
+    const result = buildRagContext([chunk]);
+
+    expect(result.sources[0]?.codeName).toBe('code-penal');
+    expect(result.context).toContain(
+      '[Source 1 — code-penal — Article 122-5 — chunk 0]',
+    );
   });
 
   it('does not include technical fields in the context string', () => {

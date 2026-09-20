@@ -1,0 +1,87 @@
+{
+  "questionId": "q462",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui. En présence d’une situation dangereuse constatée par un agent de contrôle de l’inspection du travail, le directeur régional peut mettre l’employeur en demeure de prendre toutes les mesures utiles pour y remédier.\n\nCette mise en demeure est possible notamment en cas :\n\n- de non-respect des principes généraux de prévention prévus par les articles L. 4121-1 à L. 4121-5 et L. 4522-1 ;\n- de violation de l’obligation générale de santé et de sécurité prévue à l’article L. 4221-1.\n\nIl s’agit donc d’un moyen juridique d’exiger de l’employeur qu’il respecte ses obligations de sécurité, sous réserve du constat d’une situation dangereuse et du rapport de l’agent de contrôle. **Article L. 4721-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 234.4743690006435,
+      "vectorSearchMs": 695.7404670007527,
+      "jinaRerankingMs": 543.0220410004258,
+      "mappingMs": 0.026952000334858894,
+      "totalMs": 1473.2873339988291,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010625999420881271,
+      "contextBuilderMs": 0.011333998292684555,
+      "generationMs": 2209.8780189994723,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3683.195677999407
+    },
+    "judge": {
+      "questionId": "q462",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement le mécanisme prévu par le contexte : mise en demeure de l’employeur par le directeur régional, sur rapport de l’inspection du travail constatant une situation dangereuse, dans les cas énumérés. Elle est toutefois formulée comme une réponse affirmative à une question très générale et ambiguë, sans signaler que le contexte ne traite que d’un mécanisme précis du Code du travail et non d’une obligation de sécurité en général. Toutes les affirmations juridiques importantes sont néanmoins étayées par la source fournie. Comme une abstention était attendue, le fait de répondre sur le fond rend l’abstention incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le mécanisme précis exposé dans la réponse : elle prévoit la mise en demeure de l'employeur par le directeur régional, sur rapport d'un agent de contrôle constatant une situation dangereuse, ainsi que les deux fondements cités. Elle couvre l'ensemble des affirmations juridiques importantes de la réponse générée, y compris les conditions et les renvois aux articles mentionnés."
+    }
+  },
+  "routing": {
+    "answer": "Oui. En cas de situation dangereuse constatée par l’agent de contrôle de l’inspection du travail, le directeur régional peut mettre l’employeur en demeure de prendre toutes les mesures utiles pour y remédier.\n\nCette mise en demeure est possible notamment en cas de non-respect des principes généraux de prévention prévus aux articles L. 4121-1 à L. 4121-5 et L. 4522-1 du Code du travail, ou d’infraction à l’obligation générale de santé et de sécurité de l’article L. 4221-1 du Code du travail. [Source 1]\n\nIl s’agit donc d’une exigence juridiquement formalisée, sous réserve que les conditions prévues par l’article L. 4721-1 du Code du travail soient réunies.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1046.1043330002576,
+      "routingCalls": 1,
+      "embeddingMs": 174.7951880004257,
+      "vectorSearchMs": 673.568471999839,
+      "jinaRerankingMs": 869.1605760008097,
+      "mappingMs": 0.029535001143813133,
+      "totalMs": 2763.680381000042,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010727999731898308,
+      "contextBuilderMs": 0.011251000687479973,
+      "generationMs": 2255.254922999069,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5018.965729000047
+    },
+    "judge": {
+      "questionId": "q462",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement le mécanisme de mise en demeure prévu par l'article L. 4721-1 du Code du travail, ses conditions et les obligations visées, tous explicitement présents dans le contexte. Elle répond toutefois malgré l'indication qu'une abstention était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 4721-1 du Code du travail prévoit explicitement la mise en demeure de l’employeur de prendre les mesures utiles lorsqu’une situation dangereuse est constatée. Elle couvre les affirmations de la réponse sur l’autorité compétente, le constat par l’inspection du travail, les principes de prévention et l’obligation générale de santé et de sécurité visés, ainsi que la condition tenant à la réunion des critères légaux."
+    }
+  },
+  "failureStage": "abstention"
+}

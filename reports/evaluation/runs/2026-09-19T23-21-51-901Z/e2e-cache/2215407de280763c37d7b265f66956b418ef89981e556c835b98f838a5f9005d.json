@@ -1,0 +1,95 @@
+{
+  "questionId": "q106",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le gérant d’une indivision a droit à une rémunération pour son activité, sauf accord contraire. Les conditions de cette rémunération sont fixées :\n\n- à l’amiable par les indivisaires, à l’exclusion du gérant intéressé ;\n- à défaut d’accord, par le président du tribunal judiciaire statuant à titre provisionnel.  \n\nLorsqu’il s’agit d’un indivisaire qui assure la gestion, sa rémunération peut également être fixée par décision de justice en l’absence d’accord amiable. [Source 1 — Article 1873-10 du Code civil] ; [Source 2 — Article 815-12 du Code civil]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1873-10"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "815-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.34048599982634,
+      "vectorSearchMs": 564.3903980001342,
+      "jinaRerankingMs": 547.5342720001936,
+      "mappingMs": 0.03023499995470047,
+      "totalMs": 1321.324724999955,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00963200000114739,
+      "contextBuilderMs": 0.016167999943718314,
+      "generationMs": 2247.7093219999224,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3569.0702810001094
+    },
+    "judge": {
+      "questionId": "q106",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement la règle applicable : rémunération sauf accord contraire, conditions fixées par les indivisaires hors le gérant intéressé, ou à défaut par le président du tribunal judiciaire à titre provisionnel. La précision finale sur l'indivisaire gestionnaire est également conforme à l'article 815-12 et soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question et couvre la règle principale : droit à rémunération sauf accord contraire, fixation par les indivisaires hors intéressé, ou à défaut par le président du tribunal judiciaire à titre provisionnel. La source 2 est également pertinente pour la précision ajoutée concernant l’indivisaire gestionnaire et la fixation amiable ou judiciaire de sa rémunération. Toutes les affirmations importantes sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Le gérant d’une indivision a droit à une rémunération pour son travail, **sauf accord contraire**. Les conditions de cette rémunération sont fixées :\n\n- **par les indivisaires, à l’exclusion du gérant intéressé** ;\n- à défaut d’accord, **par le président du tribunal judiciaire statuant à titre provisionnel**.  \n  **Article 1873-10 du Code civil [Source 1]**\n\nLorsque le gérant est lui-même un indivisaire, sa rémunération peut également être fixée **à l’amiable** ou, à défaut, **par décision de justice**. Il est par ailleurs redevable des produits nets de sa gestion.  \n**Article 815-12 du Code civil [Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1873-10"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "815-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1146.35575899994,
+      "routingCalls": 1,
+      "embeddingMs": 202.3476329999976,
+      "vectorSearchMs": 58.24300300003961,
+      "jinaRerankingMs": 501.5624729997944,
+      "mappingMs": 0.03897899994626641,
+      "totalMs": 1908.5762020000257,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011332000140100718,
+      "contextBuilderMs": 0.017619000049307942,
+      "generationMs": 2492.9973590001464,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4401.610278000124
+    },
+    "judge": {
+      "questionId": "q106",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle applicable : rémunération sauf accord contraire, conditions fixées par les indivisaires à l’exclusion du gérant, ou à défaut par le président du tribunal judiciaire statuant à titre provisionnel. Le complément relatif au gérant indivisaire est également exact et explicitement supporté par la source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question et couvre intégralement la règle principale : droit à rémunération sauf accord contraire, conditions fixées par les indivisaires hors l'intéressé, ou à défaut par le président du tribunal judiciaire à titre provisionnel. La source 2 est également pertinente pour le cas particulier de l'indivisaire gérant et couvre le complément formulé sur la fixation amiable ou judiciaire ainsi que sur les produits nets de gestion."
+    }
+  },
+  "failureStage": "none"
+}

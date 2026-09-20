@@ -1,0 +1,111 @@
+{
+  "questionId": "q380",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 2307 du Code civil. Il ne permet donc pas de déterminer les règles relatives à la protection de la caution personne physique ni de comparer précisément cet article avec l’article L123-11-3 du Code de commerce.\n\nEn revanche, l’article L123-11-3 du Code de commerce encadre l’activité de domiciliation comme suit :\n\n- l’activité ne peut être exercée qu’après obtention d’un agrément administratif, lequel doit être obtenu avant l’immatriculation au registre du commerce et des sociétés [Source 1] ;\n- le domiciliataire doit disposer de locaux permettant notamment la confidentialité, la réunion des organes de direction et la conservation ou consultation des documents sociaux [Source 1] ;\n- il doit être propriétaire des locaux ou titulaire d’un bail commercial [Source 1] ;\n- il ne doit pas avoir fait l’objet de certaines condamnations définitives, notamment pour crime ou pour certaines infractions patrimoniales sanctionnées d’au moins trois mois d’emprisonnement sans sursis [Source 1] ;\n- l’agrément est délivré par le préfet du département où se situe le siège de l’entreprise de domiciliation, ou par le préfet de police à Paris — Article R123-166-1 du Code de commerce [Source 3].\n\nL’exercice de l’activité sans agrément, ou malgré le retrait ou la suspension de celui-ci, est puni de six mois d’emprisonnement et de 7 500 euros d’amende — Article L123-11-8 du Code de commerce [Source 2].\n\nAinsi, les sources permettent de préciser les conditions d’accès et les sanctions applicables à l’activité de domiciliation, mais elles ne permettent pas d’exposer les limites légales relatives à la protection d’une caution personne physique prévue par l’article 2307 du Code civil.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-11-3"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-11-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R123-166-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R123-168"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 327.957162999548,
+      "vectorSearchMs": 686.4807199994102,
+      "jinaRerankingMs": 575.9691479997709,
+      "mappingMs": 0.036958000622689724,
+      "totalMs": 1590.4676209995523,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014716999605298042,
+      "contextBuilderMs": 0.027735999785363674,
+      "generationMs": 3525.624580000527,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5116.1431460008025
+    },
+    "judge": {
+      "questionId": "q380",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement, au regard du contexte, l’agrément préalable, les exigences relatives aux locaux et au titre d’occupation, les incompatibilités liées à certaines condamnations, l’autorité compétente et la sanction de l’exercice sans agrément. Elle ne répond toutefois pas au volet essentiel relatif à l’article 2307 du code civil et à la protection de la caution physique, alors que cet élément était attendu par la question et la référence. Cette omission est justifiée par l’absence de cet article dans le contexte : les affirmations effectivement formulées sont supportées par les sources fournies. Elle ne constitue pas une abstention injustifiée, car la réponse traite substantiellement la partie répondable de la question tout en signalant explicitement la limite du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet relatif à l’activité de domiciliation : elles couvrent l’agrément préalable, les conditions de locaux et de titre d’occupation, les incompatibilités liées aux condamnations, l’autorité compétente et la sanction de l’exercice sans agrément. Elles ne contiennent toutefois aucune source relative à l’article 2307 du code civil, qui constitue un volet important de la question. Les affirmations effectivement formulées dans la réponse sont néanmoins toutes, ou presque toutes, étayées par les sources, y compris le constat que le texte de l’article 2307 n’est pas fourni."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne contiennent pas l’article 2307 du Code civil. Il n’est donc pas possible de déterminer, à partir du seul contexte, les règles relatives à la protection de la caution personne physique ni de comparer ces règles avec celles de la domiciliation.\n\nEn revanche, l’article L123-11-3 du Code de commerce encadre l’activité de domiciliation comme suit :\n\n- l’activité ne peut être exercée qu’après obtention d’un agrément administratif, et cet agrément doit être obtenu avant l’immatriculation au registre du commerce et des sociétés ;\n- le domiciliataire doit disposer de locaux comprenant notamment une pièce permettant d’assurer la confidentialité et de réunir les organes de direction, d’administration ou de surveillance de l’entreprise ;\n- il doit être propriétaire des locaux ou titulaire d’un bail commercial ;\n- il ne doit pas avoir fait l’objet de certaines condamnations définitives, notamment pour crime ou pour certaines infractions punies d’au moins trois mois d’emprisonnement sans sursis [Article L123-11-3 du Code de commerce, Source 1].\n\nL’agrément est délivré par le préfet du département où se trouve le siège de l’entreprise de domiciliation ; à Paris, il relève du préfet de police [Article R123-166-1 du Code de commerce, Source 4].\n\nEnfin, l’exercice de l’activité sans agrément, ou malgré son retrait ou sa suspension, est puni de six mois d’emprisonnement et de 7 500 euros d’amende [Article L123-11-8 du Code de commerce, Source 2].\n\nAinsi, les sources permettent de préciser les conditions et les sanctions liées à l’agrément du domiciliataire, mais elles ne permettent pas de traiter les limites légales de protection de la caution personne physique prévues par l’article 2307 du Code civil.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-11-3"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-11-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R123-168"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R123-166-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1430.4383039996028,
+      "routingCalls": 1,
+      "embeddingMs": 201.96005299966782,
+      "vectorSearchMs": 285.68891500029713,
+      "jinaRerankingMs": 565.8594580003992,
+      "mappingMs": 0.03563100006431341,
+      "totalMs": 2484.0130470003933,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01089400053024292,
+      "contextBuilderMs": 0.025652999989688396,
+      "generationMs": 3627.477932999842,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6111.537468999624
+    },
+    "judge": {
+      "questionId": "q380",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement et de façon détaillée les conditions d’agrément de l’activité de domiciliation prévues par l’article L123-11-3, ainsi que l’autorité compétente et la sanction de l’exercice sans agrément. Elle ne répond toutefois pas au volet essentiel relatif à l’article 2307 du code civil et à la protection de la caution physique, ce qui la rend incomplète au regard de la question et de la référence. Cette omission est explicitement justifiée par l’absence de cet article dans le contexte. Toutes les affirmations formulées sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet relatif à l’activité de domiciliation : l’article L123-11-3 couvre l’agrément préalable et ses conditions, R123-166-1 l’autorité compétente, et L123-11-8 la sanction de l’exercice sans agrément. Elles ne contiennent toutefois aucune source relative à l’article 2307 du code civil, ce qui empêche de répondre complètement à la question sur la protection de la caution. Elles couvrent néanmoins toutes les affirmations effectivement formulées dans la réponse générée, y compris le constat explicite que le volet sur la caution ne peut pas être déterminé à partir du contexte fourni."
+    }
+  },
+  "failureStage": "generation"
+}

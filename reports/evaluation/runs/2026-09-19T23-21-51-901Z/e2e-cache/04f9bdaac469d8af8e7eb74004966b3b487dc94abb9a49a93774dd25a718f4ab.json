@@ -1,0 +1,95 @@
+{
+  "questionId": "q157",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne contient pas l’article L2221-1 lui-même. Il indique toutefois que le livre concerné définit :\n\n- les règles d’ordre public ;\n- le champ de la négociation collective ;\n- les règles supplétives applicables en l’absence d’accord.\n\nCette formulation figure à l’article L3111-3 du Code du travail [Source 1] et à l’article R3111-1 du Code du travail [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.93055600021034,
+      "vectorSearchMs": 628.5881509999745,
+      "jinaRerankingMs": 500.63648500014096,
+      "mappingMs": 0.03388099977746606,
+      "totalMs": 1354.217534000054,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013580999802798033,
+      "contextBuilderMs": 0.02251600008457899,
+      "generationMs": 2142.2229490000755,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3496.4866689997725
+    },
+    "judge": {
+      "questionId": "q157",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 2,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne fournit pas l’objet du livre visé à l’article L2221-1 et lui substitue le contenu d’un autre livre, cité aux articles L3111-3 et R3111-1. Elle est donc incorrecte et ne couvre aucun des éléments essentiels attendus relatifs aux relations collectives entre employeurs et salariés et à la négociation collective. Les citations reproduites sont présentes dans le contexte, mais rien dans celui-ci ne permet d’établir qu’elles répondent à la question portant sur L2221-1, d’où un fondement seulement partiel. Malgré la réserve initiale, le modèle tente bien une réponse, ce qui satisfait formellement l’attente d’absence d’abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 2,
+      "explanation": "Les deux sources sont des doublons et portent sur les articles L3111-3 et R3111-1, non sur l’article L2221-1 demandé. Elles sont donc très peu pertinentes pour identifier l’objet principal du livre visé. Elles couvrent toutefois les affirmations effectivement formulées par la réponse sur le contenu du « présent livre » de ces articles et l’absence de L2221-1 dans le contexte fourni, mais ne soutiennent pas l’objet du livre demandé."
+    }
+  },
+  "routing": {
+    "answer": "D’après les extraits fournis, l’objet principal du livre est de définir :\n\n- les règles d’ordre public ;\n- le champ de la négociation collective ;\n- les règles supplétives applicables en l’absence d’accord.\n\nToutefois, l’article L2221-1 lui-même n’est pas fourni dans le contexte.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1220.1383959995583,
+      "routingCalls": 1,
+      "embeddingMs": 284.7428650003858,
+      "vectorSearchMs": 659.0327809997834,
+      "jinaRerankingMs": 483.2615109998733,
+      "mappingMs": 0.027601999696344137,
+      "totalMs": 2647.23037200002,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018223999999463558,
+      "contextBuilderMs": 0.01609800010919571,
+      "generationMs": 2222.0327099999413,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4869.307382000145
+    },
+    "judge": {
+      "questionId": "q157",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond à la question, mais elle attribue à l'article L2221-1 le contenu d'extraits relatifs à l'article L3111-3/R3111-1. Elle ne restitue donc pas l'objet principal attendu, relatif aux relations collectives entre employeurs et salariés et au droit à la négociation collective. En revanche, les affirmations qu'elle formule sont fidèlement reprises du contexte fourni, et elle signale correctement que L2221-1 n'y figure pas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 3,
+      "explanation": "Les deux sources sont directement pertinentes pour le contenu effectivement énoncé dans la réponse générée, puisqu’elles reproduisent la formulation sur les règles d’ordre public, le champ de la négociation collective et les règles supplétives. Elles ne sont toutefois pas pertinentes pour répondre à la question portant spécifiquement sur l’objet du livre défini à l’article L2221-1 : elles concernent L3111-3 et R3111-1, et ne permettent pas d’établir l’objet prévu par L2221-1. Elles couvrent néanmoins les affirmations matérielles de la réponse, ainsi que le constat que L2221-1 n’est pas fourni, mais ne justifient pas l’assimilation implicite de leur contenu à l’objet demandé."
+    }
+  },
+  "failureStage": "generation"
+}

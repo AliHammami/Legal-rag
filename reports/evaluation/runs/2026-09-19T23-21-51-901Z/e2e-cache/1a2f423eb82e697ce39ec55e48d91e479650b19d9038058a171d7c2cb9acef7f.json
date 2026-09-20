@@ -1,0 +1,87 @@
+{
+  "questionId": "q251",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L312-1-1 du Code monétaire et financier [Source 1]**, l’établissement de crédit doit :\n\n- **Mettre à disposition de sa clientèle et du public** les conditions générales et tarifaires applicables à la gestion d’un compte de dépôt, sur support papier ou durable, selon les modalités fixées par arrêté ministériel.\n- Pour les **personnes physiques n’agissant pas à des fins professionnelles**, conclure une **convention écrite** de compte de dépôt, sur support papier ou durable.\n- Faire figurer dans cette convention les principales stipulations relatives notamment aux conditions générales et tarifaires d’**ouverture, de fonctionnement et de clôture** du compte.\n- **Fournir ces conditions avant que le client ne soit engagé**, sur papier ou support durable. La remise d’une copie du projet de convention satisfait à cette obligation.\n- Lorsque la convention est conclue à distance, à la demande du client, par un moyen ne permettant pas cette remise préalable, communiquer ces informations **aussitôt après la conclusion** de la convention.\n- Formaliser l’acceptation de la convention par la **signature du ou des titulaires du compte**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L312-1-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.28518399968743,
+      "vectorSearchMs": 605.2881840001792,
+      "jinaRerankingMs": 595.900841999799,
+      "mappingMs": 0.038292999379336834,
+      "totalMs": 1452.5407470008358,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011781999841332436,
+      "contextBuilderMs": 0.010045000351965427,
+      "generationMs": 3412.919816999696,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4865.496105999686
+    },
+    "judge": {
+      "questionId": "q251",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement toutes les obligations énoncées par l’article fourni : mise à disposition des conditions générales et tarifaires, convention écrite pour les personnes physiques non professionnelles, contenu principal de la convention, information précontractuelle et exception liée à la conclusion à distance, ainsi que formalisation par signature. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit intégralement l’article L312-1-1 du Code monétaire et financier, directement visé par la question. Elle étaye chacune des obligations exposées dans la réponse : mise à disposition des conditions générales et tarifaires, convention écrite pour les personnes physiques non professionnelles, contenu de la convention, information préalable et exception pour la conclusion à distance, ainsi que signature des titulaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article **L312-1-1 du Code monétaire et financier**, l’établissement de crédit doit :\n\n- mettre à la disposition de sa clientèle et du public, sur papier ou sur un support durable, les conditions générales et tarifaires applicables à la gestion d’un compte de dépôt, selon les modalités fixées par arrêté [Source 1] ;\n- conclure avec toute personne physique n’agissant pas à des fins professionnelles une convention écrite de compte de dépôt, sur papier ou sur support durable [Source 1] ;\n- faire figurer dans cette convention les principales conditions d’ouverture, de fonctionnement et de clôture du compte, conformément aux précisions fixées par arrêté [Source 1] ;\n- fournir au client, avant qu’il ne soit lié par la convention, les conditions applicables sur papier ou support durable. La remise d’une copie du projet de convention suffit à satisfaire cette obligation [Source 1] ;\n- lorsque la convention est conclue à distance, fournir ces informations dès que possible après la conclusion si le moyen utilisé ne permettait pas de les transmettre avant [Source 1].\n\nEnfin, l’acceptation de la convention doit être formalisée par la signature du ou des titulaires du compte [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L312-1-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1285.5804280005395,
+      "routingCalls": 1,
+      "embeddingMs": 208.55404799990356,
+      "vectorSearchMs": 163.07993000000715,
+      "jinaRerankingMs": 563.7935079997405,
+      "mappingMs": 0.024046000093221664,
+      "totalMs": 2221.0602879999205,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010110000148415565,
+      "contextBuilderMs": 0.009941999800503254,
+      "generationMs": 3438.0787510005757,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5659.166660999879
+    },
+    "judge": {
+      "questionId": "q251",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les obligations prévues par l’article L312-1-1 : mise à disposition des conditions générales et tarifaires sur support papier ou durable, convention écrite pour les personnes physiques agissant hors besoins professionnels, contenu essentiel de la convention, information précontractuelle, exception liée à la conclusion à distance et formalisation de l’acceptation par signature. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L312-1-1 visé par la question. Elle couvre l’ensemble des obligations énoncées dans la réponse : mise à disposition des conditions générales et tarifaires, convention écrite pour les personnes physiques hors besoins professionnels, stipulations essentielles, information précontractuelle, exception en cas de conclusion à distance et signature des titulaires."
+    }
+  },
+  "failureStage": "none"
+}

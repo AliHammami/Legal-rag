@@ -1,0 +1,103 @@
+{
+  "questionId": "q323",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 414-1 du Code de la consommation**, l’agrément n’est pas requis lorsque l’établissement traite par ionisation des denrées **figurant sur une liste définie par décret en Conseil d’État** [Source 1].\n\nLe contexte fourni ne précise toutefois ni les denrées concernées ni les éventuelles autres modalités applicables.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L414-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 264.7926239995286,
+      "vectorSearchMs": 556.0094299996272,
+      "jinaRerankingMs": 536.6809660000727,
+      "mappingMs": 0.0266080005094409,
+      "totalMs": 1357.5434399992228,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016951000317931175,
+      "contextBuilderMs": 0.018002000637352467,
+      "generationMs": 2123.4746099999174,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3481.0635819993913
+    },
+    "judge": {
+      "questionId": "q323",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la condition prévue par l’article L. 414-1 : l’absence d’agrément lorsque les denrées traitées figurent sur une liste définie par décret en Conseil d’État. Cette affirmation est explicitement soutenue par le contexte. La précision selon laquelle le contexte ne détaille pas les denrées est également exacte et ne constitue pas une abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce expressément l’exception d’absence d’agrément pour les établissements traitant par ionisation des denrées figurant sur une liste définie par décret en Conseil d’État. Elle couvre également le constat que le contexte ne précise pas quelles denrées figurent sur cette liste ni d’autres modalités. Les sources 2 et 3 sont cohérentes mais non nécessaires à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 414-1 du Code de la consommation, l’agrément est normalement requis pour les établissements traitant par ionisation des denrées destinées à l’alimentation humaine ou animale.  \n\nToutefois, un établissement peut s’en dispenser lorsque les denrées traitées figurent sur une liste définie par décret en Conseil d’État [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L414-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3789.864623999223,
+      "routingCalls": 1,
+      "embeddingMs": 284.82667100057006,
+      "vectorSearchMs": 80.88691100012511,
+      "jinaRerankingMs": 541.4846109999344,
+      "mappingMs": 0.029714999720454216,
+      "totalMs": 4697.121989000589,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010463999584317207,
+      "contextBuilderMs": 0.020320000126957893,
+      "generationMs": 1343.4754419997334,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6040.636202999391
+    },
+    "judge": {
+      "questionId": "q323",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement que l’agrément n’est pas requis lorsque les denrées ionisées figurent sur une liste définie par décret en Conseil d’État. Elle répond entièrement à la question et cette affirmation est explicitement soutenue par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 414-1 et énonce à la fois le principe de l'agrément pour les établissements traitant par ionisation des denrées destinées à l'alimentation humaine ou animale et l'exception lorsque les denrées figurent sur une liste définie par décret en Conseil d'État. Elle est donc directement pertinente et couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

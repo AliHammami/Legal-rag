@@ -1,0 +1,103 @@
+{
+  "questionId": "q330",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La violation de l’interdiction prévue à l’article L. 441-1 du Code de la consommation est punie de **trois ans d’emprisonnement et de 300 000 € d’amende** — **Article L454-1 du Code de la consommation** [Source 1].\n\nDes peines aggravées sont prévues :\n\n- **cinq ans d’emprisonnement et 600 000 € d’amende** dans les cas énumérés à l’article L454-2, notamment en cas d’utilisation de poids ou instruments faux ou de manœuvres frauduleuses [Source 3] ;\n- **sept ans d’emprisonnement et 750 000 € d’amende** si le délit a rendu la marchandise dangereuse pour la santé ou a été commis en bande organisée, conformément à l’article L454-3 [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.43129699956626,
+      "vectorSearchMs": 625.4068819992244,
+      "jinaRerankingMs": 495.3243419993669,
+      "mappingMs": 0.04784400016069412,
+      "totalMs": 1316.250754000619,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0182499997317791,
+      "contextBuilderMs": 0.03116999939084053,
+      "generationMs": 2161.914687000215,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3478.2256249999627
+    },
+    "judge": {
+      "questionId": "q330",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la peine de droit commun attendue : trois ans d’emprisonnement et 300 000 € d’amende. Les précisions supplémentaires sur les circonstances aggravantes sont exactes et directement étayées par les sources L454-2 et L454-3 du contexte. Elle répond clairement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : la source 1 énonce exactement la peine de droit commun demandée pour la violation de l’interdiction de l’article L. 441-1, tandis que les sources 2 et 3 étayent précisément les peines aggravées ajoutées dans la réponse. Toutes les affirmations pénales importantes de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "La violation de l’interdiction prévue à l’article L. 441-1 du Code de la consommation est punie, en principe, de **trois ans d’emprisonnement et de 300 000 € d’amende** (Article L. 454-1 du Code de la consommation [Source 1]).\n\nDes peines aggravées sont prévues :\n\n- **cinq ans d’emprisonnement et 600 000 € d’amende** lorsque les faits ont été commis notamment à l’aide de poids ou instruments faux ou inexacts, ou par des manœuvres frauduleuses sur l’analyse, le dosage, le pesage, le mesurage ou la composition des marchandises (Article L. 454-2 [Source 3]) ;\n- **sept ans d’emprisonnement et 750 000 € d’amende** si les faits ont rendu la marchandise dangereuse pour la santé humaine ou animale, ou s’ils ont été commis en bande organisée (Article L. 454-3 [Source 2]).",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1465.8097099997103,
+      "routingCalls": 1,
+      "embeddingMs": 207.43643100000918,
+      "vectorSearchMs": 631.8026870004833,
+      "jinaRerankingMs": 546.2343399999663,
+      "mappingMs": 0.04115599952638149,
+      "totalMs": 2851.356688000262,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01681699976325035,
+      "contextBuilderMs": 0.02887399960309267,
+      "generationMs": 2165.8433289993554,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5017.257261999883
+    },
+    "judge": {
+      "questionId": "q330",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la peine de droit commun attendue (trois ans d’emprisonnement et 300 000 euros d’amende). Elle ajoute utilement les deux régimes aggravés, avec leurs montants et conditions correctement repris du contexte. Toutes les affirmations importantes sont explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l'article L. 454-1 établit exactement la peine principale demandée, tandis que les articles L. 454-2 et L. 454-3 étayent les peines aggravées ajoutées. Toutes les peines, montants et conditions essentielles mentionnés dans la réponse sont explicitement couverts par les extraits fournis."
+    }
+  },
+  "failureStage": "none"
+}

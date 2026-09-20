@@ -1,0 +1,103 @@
+{
+  "questionId": "q363",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dérogations applicables aux **SICAV** sont prévues par l’**article L. 214-7-2 du Code monétaire et financier** [Source 1]. Par rapport aux dispositions générales des titres II et III du livre II et du titre II du livre VIII du Code de commerce, les règles suivantes s’appliquent :\n\n1. **Libération immédiate des actions** dès leur émission.\n2. **Évaluation des apports en nature** par le commissaire aux comptes, sous sa responsabilité.\n3. **Absence de quorum obligatoire** pour la tenue de l’assemblée générale.\n4. Une même personne physique peut exercer simultanément **cinq mandats** de directeur général, de membre du directoire ou de directeur général unique de SICAV ayant leur siège en France. Ces mandats ne sont pas pris en compte pour les règles générales de cumul prévues par le Code de commerce.\n5. Les mandats de représentant permanent d’une personne morale au conseil d’administration ou de surveillance d’une SICAV ne sont pas pris en compte pour l’application des articles L. 225-21, L. 225-77 et L. 225-94-1 du Code de commerce.\n6. Le commissaire aux comptes est désigné pour **six exercices**, après accord de l’Autorité des marchés financiers. La désignation d’un commissaire aux comptes suppléant n’est pas requise. Certaines dispositions de l’article L. 821-45 du Code de commerce s’appliquent également aux SICAV concernées.\n7. Les produits distribuables doivent être mis en paiement dans le délai d’**un mois suivant l’assemblée générale** ayant approuvé les comptes de l’exercice.\n\nS’agissant de la possibilité, pour la juridiction, de gérer les **dommages et intérêts lors d’un ajournement du prononcé de la peine**, les sources fournies ne contiennent aucune disposition sur ce point. Il n’est donc pas possible de répondre juridiquement à cette seconde question à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-7-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-24-31"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-133"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 178.76987299975008,
+      "vectorSearchMs": 724.204462999478,
+      "jinaRerankingMs": 612.0601359996945,
+      "mappingMs": 0.022173000499606133,
+      "totalMs": 1515.0988280000165,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00929499976336956,
+      "contextBuilderMs": 0.020743999630212784,
+      "generationMs": 4318.604278000072,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5833.741538000293
+    },
+    "judge": {
+      "questionId": "q363",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue avec exactitude et de manière détaillée les dérogations de l'article L. 214-7-2 applicables aux SICAV. Elle ne répond toutefois pas au second volet : selon la référence, l'article 132-70-2 du Code pénal permet à la juridiction, en cas d'ajournement, d'allouer immédiatement à la victime des dommages et intérêts provisionnels ou définitifs. L'abstention sur ce volet est néanmoins pleinement fondée au regard du seul contexte fourni, qui ne contient aucune disposition pénale. Comme une réponse était attendue sans abstention, l'abstention n'est pas conforme à l'indicateur attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre de façon complète les dérogations applicables aux SICAV énumérées dans la réponse. Les sources 2 et 3 sont redondantes ou concernent partiellement un autre régime (SICAF pour la source 3). Aucune source ne traite de l’ajournement du prononcé de la peine ni des dommages et intérêts : les sources sont donc insuffisantes pour répondre à l’ensemble de la question, mais elles permettent bien d’étayer le constat de la réponse selon lequel le contexte fourni ne contient pas de disposition sur ce second point. Toutes les affirmations effectivement formulées dans la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "### Dérogations applicables aux SICAV\n\nPar dérogation aux titres II et III du livre II et au titre II du livre VIII du Code de commerce, les règles suivantes s’appliquent aux SICAV :\n\n- les actions doivent être intégralement libérées dès leur émission ;\n- les apports en nature sont évalués par le commissaire aux comptes, sous sa responsabilité ;\n- l’assemblée générale peut se tenir sans condition de quorum ;\n- une même personne physique peut exercer simultanément jusqu’à cinq mandats de directeur général, de membre du directoire ou de directeur général unique de SICAV ayant leur siège en France ; ces mandats ne sont pas pris en compte pour les règles de cumul prévues par le Code de commerce ;\n- les mandats de représentant permanent d’une personne morale au conseil d’administration ou de surveillance d’une SICAV ne sont pas pris en compte pour l’application des articles L. 225-21, L. 225-77 et L. 225-94-1 du Code de commerce ;\n- le commissaire aux comptes est désigné pour six exercices par l’organe compétent, après accord de l’Autorité des marchés financiers, sans qu’un commissaire aux comptes suppléant soit requis ;\n- les dispositions de l’article L. 821-45 du Code de commerce s’appliquent aux SICAV relevant du II de l’article L. 821-2 du même code ;\n- les produits distribuables doivent être mis en paiement dans le mois suivant l’assemblée générale ayant approuvé les comptes.\n\nCes dérogations sont prévues par l’article L. 214-7-2 du Code monétaire et financier [Source 1]. Une disposition analogue figure à l’article L. 214-24-31 du même code pour les SICAV constituées sous forme de société anonyme [Source 2].\n\n### Ajournement du prononcé de la peine et dommages-intérêts\n\nLes sources fournies ne contiennent aucune disposition relative à l’ajournement du prononcé de la peine ni aux modalités de fixation, de liquidation ou de gestion des dommages-intérêts dans ce cadre. Il n’est donc pas possible de répondre juridiquement à cette seconde question à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-7-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-24-31"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-133"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1332.9297980004922,
+      "routingCalls": 1,
+      "embeddingMs": 242.71431000065058,
+      "vectorSearchMs": 226.6767520001158,
+      "jinaRerankingMs": 607.4598310003057,
+      "mappingMs": 0.037668999284505844,
+      "totalMs": 2409.8442480005324,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011656000278890133,
+      "contextBuilderMs": 0.024025999940931797,
+      "generationMs": 4423.2954860003665,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6833.183962999843
+    },
+    "judge": {
+      "questionId": "q363",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La partie relative aux SICAV restitue de façon exacte et complète les dérogations énoncées à l’article L. 214-7-2 figurant dans le contexte. En revanche, la réponse ne fournit pas la règle attendue pour l’ajournement du prononcé de la peine : la juridiction peut allouer immédiatement à la victime des dommages et intérêts provisionnels ou définitifs. Elle est donc partiellement correcte et incomplète au regard de la question composée. Son refus de répondre à ce second volet est néanmoins entièrement fondé sur le contexte réellement fourni, qui ne contient aucune disposition pénale pertinente. Comme une réponse était attendue sans abstention, l’abstention sur une partie essentielle de la question n’est pas correcte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes et suffisantes pour les dérogations applicables aux SICAV, mais aucune source ne porte sur l’ajournement du prononcé de la peine ou les dommages-intérêts : elles sont donc insuffisantes pour la question composée dans son ensemble. Toutes les dérogations énoncées dans la réponse sont couvertes par la source 1, et le constat d’absence de disposition pénale dans le contexte est cohérent avec les sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

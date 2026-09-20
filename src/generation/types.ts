@@ -6,6 +6,7 @@ import type { RerankStatus, RerankedChunk } from '../reranking/types.js';
 export interface ContextSource {
   sourceId: number;
   chunkId: string;
+  codeName: string;
   articleNumber: string;
   chunkIndex: number;
   content: string;

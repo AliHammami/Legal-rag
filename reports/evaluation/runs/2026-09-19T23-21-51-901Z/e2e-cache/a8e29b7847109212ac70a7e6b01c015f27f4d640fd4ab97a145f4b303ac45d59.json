@@ -1,0 +1,87 @@
+{
+  "questionId": "q382",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 2427 du Code civil distingue les droits de colloque ainsi :\n\n- **Principal** : le créancier hypothécaire est colloqué au rang de son inscription pour le capital garanti.\n- **Intérêts et arrérages** : il bénéficie du même rang que le principal pour **trois années seulement**.\n- **Au-delà de ces trois années** : des inscriptions particulières doivent être prises ; elles produisent une hypothèque **à compter de leur propre date**, pour les intérêts et arrérages non couverts par l’inscription initiale.\n- **Exception — prêt viager** : lorsque l’hypothèque garantit un prêt viager défini au I de l’article L. 315-1 du Code de la consommation, le créancier peut être colloqué **pour la totalité des intérêts au même rang que le principal**.\n\nAinsi, le régime ordinaire limite le bénéfice du rang initial à trois années d’intérêts et d’arrérages, tandis que le prêt viager permet une protection au même rang pour la totalité des intérêts. **Article 2427 du Code civil [Source 1].**\n\nLe contexte fourni ne contient toutefois aucune disposition relative à l’**article L. 171-3 du Code monétaire et financier** ni aux compétences de l’autorité saisie des amendes. Il n’est donc pas possible de répondre juridiquement à cette seconde partie à partir des seules sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2427"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.48422800004482,
+      "vectorSearchMs": 637.8026439994574,
+      "jinaRerankingMs": 555.4227430000901,
+      "mappingMs": 0.02397300023585558,
+      "totalMs": 1381.758594000712,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009711000137031078,
+      "contextBuilderMs": 0.010929999873042107,
+      "generationMs": 2919.2127069998533,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4301.001125999726
+    },
+    "judge": {
+      "questionId": "q382",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément le régime de l’article 2427 : limitation à trois années au rang du principal, inscriptions particulières prenant rang à leur date, et exception du prêt viager pour la totalité des intérêts. Ces éléments sont entièrement appuyés par le contexte. En revanche, elle ne répond pas au volet relatif à l’article L. 171-3 du code monétaire et financier, alors que la réponse attendue indique que les amendes sont prononcées par l’autorité compétente dans les conditions prévues par le code de la consommation. L’abstention sur cette partie rend la réponse incomplète malgré l’absence de source correspondante dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 2427 et est donc très pertinente pour le régime du colloque : limite de trois années, inscriptions particulières prenant rang à leur date, et exception du prêt viager pour la totalité des intérêts. En revanche, aucune source ne porte sur l’article L. 171-3 du code monétaire et financier, qui constitue une partie importante de la question : les sources sont donc insuffisantes dans l’ensemble. Les affirmations effectivement formulées dans la réponse générée sur l’article 2427 sont toutes couvertes par la source, et son constat d’absence de disposition relative à L. 171-3 dans le contexte est conforme aux sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "L’article 2427 du Code civil distingue les droits de colloque ainsi :\n\n- **Principal** : le créancier hypothécaire est colloqué au rang correspondant à son inscription.\n- **Intérêts et arrérages** : il bénéficie du même rang que le principal, mais **pour trois années seulement**.\n- **Intérêts et arrérages au-delà de ces trois années** : ils nécessitent des **inscriptions particulières**, qui prennent rang à compter de leur propre date.\n- **Exception liée au prêt viager** : lorsque l’hypothèque garantit un prêt viager défini au I de l’article L. 315-1 du Code de la consommation, le créancier peut être colloqué **pour la totalité des intérêts au même rang que le principal**. [Source 1]\n\nLe contexte fourni ne contient toutefois aucune disposition relative à l’**article L. 171-3 du Code monétaire et financier**. Il ne permet donc pas de déterminer les compétences de l’autorité saisie des amendes.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2427"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1625.7656450001523,
+      "routingCalls": 1,
+      "embeddingMs": 212.2612260002643,
+      "vectorSearchMs": 332.6402279995382,
+      "jinaRerankingMs": 566.4475759994239,
+      "mappingMs": 0.028932999819517136,
+      "totalMs": 2737.1764190001413,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01044899970293045,
+      "contextBuilderMs": 0.010703999549150467,
+      "generationMs": 2779.5320339994505,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5516.7377559999
+    },
+    "judge": {
+      "questionId": "q382",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément le régime de l’article 2427 : priorité du principal, intérêts et arrérages limités à trois années au même rang, nécessité d’inscriptions particulières pour le surplus, et exception du prêt viager pour la totalité des intérêts. Elle ne fournit toutefois pas l’information attendue sur l’article L. 171-3 du code monétaire et financier, se limitant à indiquer avec raison que cette disposition n’est pas présente dans le contexte. Toutes les affirmations juridiques formulées sont soutenues par le contexte fourni. Il ne s’agit pas d’une abstention globale : elle répond effectivement à la partie documentée de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 2427 et est donc très pertinente pour la première partie : limite de trois années pour intérêts et arrérages au rang du principal, inscriptions particulières pour le surplus, et exception du prêt viager pour la totalité des intérêts. Elle ne fournit toutefois aucune règle de l’article L. 171-3 du code monétaire et financier, de sorte qu’elle est insuffisante pour répondre intégralement à la question. Les affirmations effectivement formulées dans la réponse générée sont couvertes par la source, et le constat d’absence de disposition L. 171-3 dans le contexte est cohérent avec les sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q147",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’organe chargé de déterminer ces mesures est **le Conseil d’État, par décret** : **Article L6234-1 du Code du travail [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6234-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6324-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 233.0284220003523,
+      "vectorSearchMs": 622.2806799998507,
+      "jinaRerankingMs": 497.5807630000636,
+      "mappingMs": 0.035081000067293644,
+      "totalMs": 1352.9674929999746,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011390000116080046,
+      "contextBuilderMs": 0.018000999931246042,
+      "generationMs": 1113.0634719999507,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2466.071332000196
+    },
+    "judge": {
+      "questionId": "q147",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement qu’un décret en Conseil d’État détermine les mesures d’application. Elle répond entièrement à la question et est directement étayée par l’article L6234-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L6234-1 et indique expressément qu'un décret en Conseil d'Etat détermine les mesures d'application du titre. Elle couvre entièrement l'affirmation de la réponse générée. La source 2 est redondante et porte sur un autre article, mais n'affecte pas la suffisance de la source 1."
+    }
+  },
+  "routing": {
+    "answer": "L’organe chargé de déterminer ces mesures d’application est **un décret en Conseil d’État**, comme le prévoit l’article L6234-1 du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6234-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6324-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 818.0382489999756,
+      "routingCalls": 1,
+      "embeddingMs": 257.695858000312,
+      "vectorSearchMs": 251.417264000047,
+      "jinaRerankingMs": 489.9599449997768,
+      "mappingMs": 0.02718200022354722,
+      "totalMs": 1817.1650330000557,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013351999688893557,
+      "contextBuilderMs": 0.014204999897629023,
+      "generationMs": 1105.9610559996217,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2923.1663209996186
+    },
+    "judge": {
+      "questionId": "q147",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle énoncée à l’article L6234-1 : les mesures d’application sont déterminées par un décret en Conseil d’État. Elle répond directement à la question et est intégralement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L6234-1 et énonce exactement qu’un décret en Conseil d’État détermine les mesures d’application du titre. Elle couvre intégralement l’affirmation de la réponse générée. La source 2 est redondante et porte sur un autre article, mais n’affecte pas l’adéquation de la source 1."
+    }
+  },
+  "failureStage": "none"
+}

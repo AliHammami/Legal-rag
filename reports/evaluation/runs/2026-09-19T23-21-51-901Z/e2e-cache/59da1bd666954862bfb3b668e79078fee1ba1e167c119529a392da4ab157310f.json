@@ -1,0 +1,87 @@
+{
+  "questionId": "q212",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L251-1 du Code de commerce, le groupement d’intérêt économique (GIE) a pour objectifs :\n\n- de faciliter ou développer l’activité économique de ses membres ;\n- d’améliorer ou d’accroître les résultats de cette activité.\n\nSon activité est toutefois soumise à plusieurs limites :\n\n- le GIE ne doit pas avoir pour but de réaliser des bénéfices pour lui-même ;\n- son activité doit être liée à l’activité économique de ses membres ;\n- elle doit rester auxiliaire, c’est-à-dire complémentaire, par rapport à celle de ses membres.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 254.49369399994612,
+      "vectorSearchMs": 606.2255819998682,
+      "jinaRerankingMs": 547.4489179998636,
+      "mappingMs": 0.02651599980890751,
+      "totalMs": 1408.2250250000507,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00992400012910366,
+      "contextBuilderMs": 0.010224000085145235,
+      "generationMs": 1661.9037859998643,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3070.165621000342
+    },
+    "judge": {
+      "questionId": "q212",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les objectifs du GIE et les trois limites prévues par l’article L251-1 : absence de but lucratif propre, rattachement à l’activité économique des membres et caractère auxiliaire. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L251-1 pertinent. Elle couvre explicitement les objectifs du GIE (faciliter ou développer l’activité économique des membres, améliorer ou accroître les résultats) ainsi que toutes les limites mentionnées dans la réponse (absence de bénéfices pour lui-même, rattachement à l’activité des membres et caractère auxiliaire)."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L251-1 du Code de commerce, le groupement d’intérêt économique (GIE) a pour objectifs :\n\n- de faciliter ou de développer l’activité économique de ses membres ;\n- d’améliorer ou d’accroître les résultats de cette activité.\n\nSon activité est toutefois limitée :\n\n- le GIE ne doit pas rechercher la réalisation de bénéfices pour lui-même ;\n- son activité doit être rattachée à celle de ses membres ;\n- elle ne peut avoir qu’un caractère auxiliaire par rapport à l’activité de ces membres.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.5721819996834,
+      "routingCalls": 1,
+      "embeddingMs": 202.05344500020146,
+      "vectorSearchMs": 198.00111399963498,
+      "jinaRerankingMs": 559.4146389998496,
+      "mappingMs": 0.025288000237196684,
+      "totalMs": 2086.0982770002447,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009922999888658524,
+      "contextBuilderMs": 0.010695999953895807,
+      "generationMs": 1600.311457999982,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3686.4378800000995
+    },
+    "judge": {
+      "questionId": "q212",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les objectifs du GIE (faciliter ou développer l’activité économique des membres, améliorer ou accroître ses résultats) ainsi que toutes les limites prévues : absence de bénéfices pour lui-même, rattachement à l’activité des membres et caractère exclusivement auxiliaire. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L251-1 visé par la question. Elle étaye explicitement tous les objectifs et toutes les limites énoncés dans la réponse : facilitation ou développement de l’activité économique des membres, amélioration ou accroissement des résultats, absence de bénéfices pour le groupement, rattachement de son activité à celle des membres et caractère auxiliaire."
+    }
+  },
+  "failureStage": "none"
+}

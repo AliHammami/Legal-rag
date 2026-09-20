@@ -1,0 +1,111 @@
+{
+  "questionId": "q305",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L354-1 du Code de la consommation prévoit les remplacements suivants pour la Nouvelle-Calédonie, la Polynésie française et les îles Wallis et Futuna :\n\n- **30 000 €** → **3 580 000 francs CFP** ;\n- **150 000 €** → **17 900 000 francs CFP** ;\n- **300 000 €** → **35 800 000 francs CFP** ;\n- **375 000 €** → **44 750 000 francs CFP**.\n\n[Article L354-1 du Code de la consommation — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L351-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D351-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.58058800082654,
+      "vectorSearchMs": 555.6660960000008,
+      "jinaRerankingMs": 605.9482519999146,
+      "mappingMs": 0.023884999565780163,
+      "totalMs": 1371.2449270002544,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010970999486744404,
+      "contextBuilderMs": 0.02273199986666441,
+      "generationMs": 1493.9919920004904,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2865.2809089999646
+    },
+    "judge": {
+      "questionId": "q305",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement les quatre remplacements monétaires prévus par l’article L354-1, conformément à la référence. Toutes les affirmations sont explicitement étayées par la source 1 du contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L354-1 et énonce explicitement les quatre remplacements de montants pour la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna. Elle couvre intégralement les quatre affirmations chiffrées de la réponse générée. Les autres sources ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "L’article **L354-1 du Code de la consommation** prévoit les conversions suivantes pour la Nouvelle-Calédonie, la Polynésie française et les îles Wallis et Futuna :\n\n- **30 000 €** → **3 580 000 francs CFP** ;\n- **150 000 €** → **17 900 000 francs CFP** ;\n- **300 000 €** → **35 800 000 francs CFP** ;\n- **375 000 €** → **44 750 000 francs CFP**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L351-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L354-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D351-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1501.038368999958,
+      "routingCalls": 1,
+      "embeddingMs": 246.67271499987692,
+      "vectorSearchMs": 43.96242899913341,
+      "jinaRerankingMs": 525.5835660006851,
+      "mappingMs": 0.0230900002643466,
+      "totalMs": 2317.303067000583,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010383999906480312,
+      "contextBuilderMs": 0.018915999680757523,
+      "generationMs": 1641.3868399998173,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3958.7275029998273
+    },
+    "judge": {
+      "questionId": "q305",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les quatre substitutions prévues par l’article L354-1, avec les bons montants en francs CFP et les bons territoires. Toutes les affirmations sont directement étayées par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L354-1 et énonce expressément les quatre remplacements de montants pour la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna. Elle couvre intégralement les quatre conversions affirmées dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

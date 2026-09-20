@@ -1,0 +1,111 @@
+{
+  "questionId": "q260",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L353-1 du Code monétaire et financier prévoit, pour les cas suivants, une peine de **six mois d’emprisonnement et 7 500 euros d’amende** [Source 2] :\n\n1. **Exercice du démarchage sans carte de démarchage**, lorsque cette carte est exigée par l’article L. 341-8 du même code [Source 2].\n\n2. **Défaut de communication des informations et documents obligatoires** à la personne démarchée, dans le cadre visé au septième alinéa de l’article L. 341-1, notamment ceux mentionnés à l’article L. 341-12 et à l’avant-dernier alinéa de l’article L. 341-6 [Source 2].\n\n3. **Non-respect des règles relatives à la signature du contrat** prévues par l’article L. 341-14 [Source 2].\n\n4. **Défaut de respect du délai de rétractation** permettant à la personne démarchée de se rétracter conformément à l’article L. 341-16, sous réserve des exceptions prévues par cet article [Source 2].\n\n5. **Réception prématurée d’ordres ou de fonds** : dans le cadre du démarchage visé au deuxième alinéa de l’article L. 341-1, recevoir des ordres ou des fonds destinés à la fourniture de services de réception-transmission ou d’exécution d’ordres pour compte de tiers, ou concernant des instruments financiers, **avant l’expiration du délai de quarante-huit heures** prévu au IV de l’article L. 341-16 [Source 2].\n\nLe texte fourni commence également un **6°**, mais son contenu n’est pas communiqué. Il n’est donc pas possible d’en préciser le cas à partir des sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R353-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-61"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-41"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.3004820002243,
+      "vectorSearchMs": 607.784171000123,
+      "jinaRerankingMs": 590.5620039999485,
+      "mappingMs": 0.03178999945521355,
+      "totalMs": 1428.7016340000555,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014554999768733978,
+      "contextBuilderMs": 0.027293000370264053,
+      "generationMs": 4104.4106849990785,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5533.161487999372
+    },
+    "judge": {
+      "questionId": "q260",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère correctement les cinq hypothèses explicitement reproduites dans le contexte de l’article L353-1 et associe à chacune la sanction commune de six mois d’emprisonnement et 7 500 euros d’amende. Elle précise de façon justifiée que le contenu du 6° n’est pas disponible dans l’extrait fourni, sans inventer d’information. Les affirmations sont directement étayées par la Source 2 et la réponse répond bien à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 353-1 et couvre la peine commune ainsi que les cinq cas détaillés dans la réponse : absence de carte, défaut de communication des informations et documents, non-respect des règles de signature, atteinte au délai de rétractation et réception d’ordres ou fonds avant quarante-huit heures. Elle montre également que le 6° est tronqué dans l’extrait, ce qui soutient la réserve finale de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "L’article **L353-1 du Code monétaire et financier** prévoit, pour les cas suivants, une peine de **six mois d’emprisonnement et 7 500 € d’amende** [Source 2] :\n\n1. **Exercer le démarchage bancaire ou financier sans carte de démarchage**, lorsque cette carte est exigée par l’article L. 341-8 [Source 2] ;\n\n2. **Ne pas communiquer à la personne démarchée les informations et documents obligatoires**, notamment ceux prévus aux articles L. 341-12 et L. 341-6 [Source 2] ;\n\n3. **Ne pas respecter les règles de signature du contrat** prévues à l’article L. 341-14 [Source 2] ;\n\n4. **Ne pas permettre l’exercice du délai de rétractation** prévu à l’article L. 341-16, sous réserve des exceptions prévues par ce texte [Source 2] ;\n\n5. **Recevoir des ordres ou des fonds avant l’expiration du délai de quarante-huit heures**, lorsqu’il s’agit de démarchage portant sur la réception-transmission ou l’exécution d’ordres pour le compte de tiers, ou sur des instruments financiers [Source 2].\n\nL’extrait fourni commence également un **6°**, mais il est incomplet. Il ne permet donc pas d’identifier ce cas supplémentaire avec certitude.\n\nÀ titre distinct, le non-respect de certaines obligations d’information peut aussi être sanctionné par une **contravention de cinquième classe**, conformément à l’article R. 353-1 du Code monétaire et financier [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R353-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1434.450289000757,
+      "routingCalls": 1,
+      "embeddingMs": 226.47323000058532,
+      "vectorSearchMs": 173.05993799958378,
+      "jinaRerankingMs": 552.6507219998166,
+      "mappingMs": 0.027276000007987022,
+      "totalMs": 2386.6854729996994,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01034999918192625,
+      "contextBuilderMs": 0.024236999452114105,
+      "generationMs": 3656.1770959999412,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6042.904818999581
+    },
+    "judge": {
+      "questionId": "q260",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les cinq cas explicitement visibles à l’article L. 353-1 et associe à chacun la peine unique prévue : six mois d’emprisonnement et 7 500 euros d’amende. Elle restitue fidèlement les conditions pertinentes, notamment le délai de quarante-huit heures au 5°. Elle signale à juste titre que le 6° est tronqué dans le contexte et ne l’invente pas. La mention distincte de l’article R. 353-1 est également étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit l’article L. 353-1, énonce la peine de six mois d’emprisonnement et 7 500 euros d’amende, et couvre les cinq cas détaillés dans la réponse. Elle permet aussi de constater que le 6° est tronqué dans l’extrait. La source 3 soutient la précision distincte relative à la contravention de cinquième classe pour certaines obligations d’information. La source 1 n’est pas nécessaire à la réponse, mais son absence d’utilisation ne réduit pas la pertinence ni la couverture des sources effectivement invoquées."
+    }
+  },
+  "failureStage": "none"
+}

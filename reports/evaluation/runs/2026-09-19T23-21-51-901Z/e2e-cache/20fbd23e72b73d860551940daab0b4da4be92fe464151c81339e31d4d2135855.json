@@ -1,0 +1,119 @@
+{
+  "questionId": "q346",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Après avoir déclaré la demande recevable, la commission :\n\n1. **Dresse l’état du passif du débiteur** et peut, à cette fin, publier un appel aux créanciers afin qu’ils se manifestent — **Article L. 723-1 du Code de la consommation** [Source 1].\n\n2. **Peut saisir le juge des contentieux de la protection** pour demander la suspension des mesures d’expulsion du logement du débiteur — **Article L. 722-6 du Code de la consommation** [Source 2].\n\n3. **Examine la situation financière du débiteur et oriente le dossier** par une décision motivée. Cette décision précise si le débiteur peut bénéficier de mesures de traitement ou s’il se trouve dans une situation irrémédiablement compromise — **Article R. 724-1 du Code de la consommation** [Source 5].\n\n4. Selon les résultats de l’examen :\n   - si les ressources ou l’actif réalisable le permettent, elle **prescrit des mesures de traitement** dans les conditions prévues par la loi ;\n   - si la situation est irrémédiablement compromise, elle peut **imposer un rétablissement personnel sans liquidation judiciaire** lorsque les conditions sont réunies, ou, avec l’accord du débiteur, **saisir le juge** pour l’ouverture d’une procédure de rétablissement personnel avec liquidation judiciaire — **Article L. 724-1 du Code de la consommation** [Source 4].\n\n5. Enfin, la décision d’orientation est **notifiée au débiteur et aux créanciers par lettre simple**, cette lettre indiquant les possibilités de contestation lorsque le juge est saisi dans les cas prévus — **Article R. 724-1 du Code de la consommation** [Source 5].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L723-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-6"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L724-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.62822499964386,
+      "vectorSearchMs": 633.2189420005307,
+      "jinaRerankingMs": 1608.526775999926,
+      "mappingMs": 0.031298999674618244,
+      "totalMs": 2454.4280009996146,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008684000000357628,
+      "contextBuilderMs": 0.03307600039988756,
+      "generationMs": 3687.088789000176,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6141.566596000455
+    },
+    "judge": {
+      "questionId": "q346",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse contient bien les deux opérations directement prévues par l’article L. 723-1 : l’établissement de l’état du passif et la possibilité de publier un appel aux créanciers. Elle ajoute toutefois d’autres mesures relevant d’articles distincts et plus largement de la suite de la procédure, ce qui est exact au regard du contexte mais dépasse légèrement la question centrée sur L. 723-1. Toutes les affirmations importantes sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : la source 1 répond précisément aux suites prévues par l’article L. 723-1 (état du passif et appel aux créanciers), tandis que les sources 2, 4 et 5 étayent les étapes supplémentaires décrites après la recevabilité et l’orientation du dossier. Toutes les affirmations importantes de la réponse générée, y compris la saisine possible du juge pour suspendre l’expulsion, les modalités d’orientation, les mesures de traitement ou de rétablissement personnel et la notification, sont couvertes par les sources citées."
+    }
+  },
+  "routing": {
+    "answer": "Après avoir déclaré la demande recevable, la commission accomplit principalement les étapes suivantes :\n\n1. **Établissement de l’état du passif**  \n   Elle dresse l’état des dettes du débiteur et peut, à cette fin, publier un appel aux créanciers afin qu’ils se manifestent. — **Article L. 723-1 du Code de la consommation [Source 1]**\n\n2. **Examen de la situation financière et orientation du dossier**  \n   Elle examine notamment les ressources et l’actif réalisable du débiteur. Elle rend une décision motivée indiquant soit que le débiteur peut bénéficier de mesures de traitement, soit qu’il se trouve dans une situation irrémédiablement compromise. Cette décision est notifiée au débiteur et aux créanciers par lettre simple. — **Article R. 724-1 du Code de la consommation [Source 5]**\n\n3. **Mise en œuvre de mesures de traitement lorsque cela est possible**  \n   Si les ressources ou l’actif réalisable le permettent, la commission prescrit les mesures de traitement prévues par le Code de la consommation. — **Article L. 724-1, alinéa 1er, du Code de la consommation [Source 4]**\n\n4. **Orientation vers un rétablissement personnel lorsque la situation est irrémédiablement compromise**  \n   - Elle peut imposer un rétablissement personnel sans liquidation judiciaire si le débiteur ne possède que certains biens nécessaires ou si ses biens sont dépourvus de valeur marchande, ou trop coûteux à vendre.  \n   - Dans les autres cas, et avec l’accord du débiteur, elle peut saisir le juge des contentieux de la protection pour l’ouverture d’un rétablissement personnel avec liquidation judiciaire. — **Article L. 724-1, alinéa 2, du Code de la consommation [Source 4]**\n\n5. **Possibilité de demander la suspension d’une expulsion**  \n   Dès la décision de recevabilité, la commission peut saisir le juge des contentieux de la protection afin de demander la suspension des mesures d’expulsion du logement du débiteur. — **Article L. 722-6 du Code de la consommation [Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L723-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-6"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L724-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1274.1509919995442,
+      "routingCalls": 1,
+      "embeddingMs": 195.41986600030214,
+      "vectorSearchMs": 76.76919999998063,
+      "jinaRerankingMs": 811.0440880004317,
+      "mappingMs": 0.028920999728143215,
+      "totalMs": 2357.4389279996976,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011125000193715096,
+      "contextBuilderMs": 0.03319100011140108,
+      "generationMs": 4126.255912000313,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6483.746984000318
+    },
+    "judge": {
+      "questionId": "q346",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l’étape prévue par l’article L. 723-1 : établissement de l’état du passif et possibilité de publier un appel aux créanciers. Elle ajoute des développements exacts sur l’orientation et les suites possibles du dossier, tous conformes aux extraits fournis des articles L. 722-6, L. 724-1 et R. 724-1. Ces ajouts dépassent la réponse de référence, mais restent pertinents et correctement conditionnés."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : L. 723-1 couvre l’établissement du passif et l’appel aux créanciers ; R. 724-1 et L. 724-1 couvrent l’orientation et les mesures ou procédures ultérieures ; L. 722-6 couvre la demande de suspension d’expulsion après recevabilité. Elles étayent l’ensemble des affirmations substantielles de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

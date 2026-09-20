@@ -1,0 +1,95 @@
+{
+  "questionId": "q494",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’ouverture d’un établissement d’enseignement privé hors contrat.\n\nElles indiquent seulement que :\n\n- le directeur d’un établissement privé accueillant des classes hors contrat peut être pénalement sanctionné s’il ne remédie pas aux manquements constatés après mise en demeure : un an d’emprisonnement et 15 000 € d’amende, avec une éventuelle interdiction de diriger ou d’enseigner (article 227-17-1 du Code pénal) [Source 2] ;\n- le fait de ne pas fermer un établissement ou des classes faisant l’objet d’une mesure de fermeture est également puni pénalement (article 227-17-1 du Code pénal) [Source 2].\n\nAucune disposition du contexte ne précise les formalités, déclarations, qualifications ou contrôles requis pour ouvrir un tel établissement.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5134-128"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-17-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 659.5747090000659,
+      "vectorSearchMs": 666.0372079983354,
+      "jinaRerankingMs": 540.143524998799,
+      "mappingMs": 0.059081001207232475,
+      "totalMs": 1865.837495001033,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019613999873399734,
+      "contextBuilderMs": 0.03751400113105774,
+      "generationMs": 1968.0229139998555,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3833.9277840014547
+    },
+    "judge": {
+      "questionId": "q494",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît correctement que le contexte ne permet pas d’identifier les conditions d’ouverture d’un établissement privé hors contrat. Les précisions ajoutées sur les sanctions et la fermeture sont fidèlement tirées de l’article 227-17-1 fourni et distinguent clairement ces éléments des conditions d’ouverture absentes du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les sources sont suffisamment pertinentes pour établir que le contexte fourni traite de sanctions liées à des manquements, à une mise en demeure et à une fermeture, plutôt que des conditions juridiques d’ouverture. La source 2 couvre précisément les deux sanctions décrites dans la réponse, y compris les peines et l’interdiction complémentaire. Elle permet aussi de soutenir le constat prudent que les formalités d’ouverture ne sont pas précisées dans les extraits fournis. La source 1 est peu exploitable et ne traite pas directement de l’ouverture, ce qui empêche une pertinence maximale."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les **conditions d’ouverture** d’un établissement d’enseignement privé hors contrat.\n\nElles indiquent seulement que :\n\n- le directeur d’un établissement privé accueillant des classes hors contrat peut être sanctionné s’il ne remédie pas aux manquements constatés après une mise en demeure : **un an d’emprisonnement et 15 000 € d’amende**, avec une possible interdiction de diriger ou d’enseigner (**article 227-17-1 du Code pénal [Source 2]**) ;\n- le fait de ne pas fermer un établissement faisant l’objet d’une mesure de fermeture est également pénalement sanctionné (**article 227-17-1 du Code pénal [Source 2]**).\n\nAucune source ne précise les formalités, déclarations, qualifications ou autorisations nécessaires à l’ouverture.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5134-128"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-17-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1226.8902349993587,
+      "routingCalls": 1,
+      "embeddingMs": 174.857711000368,
+      "vectorSearchMs": 557.667596001178,
+      "jinaRerankingMs": 553.3257510010153,
+      "mappingMs": 0.02380399964749813,
+      "totalMs": 2512.787614000961,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013469001278281212,
+      "contextBuilderMs": 0.018025999888777733,
+      "generationMs": 1990.6576319988817,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4503.485950000584
+    },
+    "judge": {
+      "questionId": "q494",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse abstient correctement de répondre aux conditions d’ouverture, lesquelles ne figurent pas dans le contexte. Elle identifie précisément les seules informations pertinentes disponibles, relatives aux sanctions en cas de non-remédiation aux manquements après mise en demeure et de non-respect d’une fermeture. Ces affirmations, y compris les peines mentionnées, sont directement supportées par l’article 227-17-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, la source 2 est pertinente car elle concerne explicitement les établissements privés accueillant des classes hors contrat et montre qu’elle traite de sanctions postérieures à des manquements ou à une mesure de fermeture, sans énoncer de conditions d’ouverture. La source 1 est largement hors sujet. Les affirmations concrètes de la réponse sur les sanctions, leurs montants et l’interdiction complémentaire sont toutes directement couvertes par la source 2, tout comme le constat que les sources ne donnent ni formalités ni autorisations d’ouverture."
+    }
+  },
+  "failureStage": "none"
+}

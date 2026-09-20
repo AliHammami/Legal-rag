@@ -1,0 +1,91 @@
+{
+  "questionId": "q314",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 314-22 du Code de la consommation**, les prêteurs doivent, lors de l’élaboration, de l’octroi et de l’exécution d’un contrat de crédit :\n\n- agir de manière **honnête, équitable, transparente et professionnelle** ;\n- agir **au mieux des droits et des intérêts de l’emprunteur** ;\n- fonder l’octroi du crédit sur les **informations relatives à la situation de l’emprunteur** ;\n- prendre en compte toute **demande spécifique formulée par l’emprunteur** ;\n- tenir compte des **hypothèses raisonnables concernant les risques liés à la durée du contrat de crédit**.\n\nCes obligations s’appliquent également aux services accessoires et aux services de conseil liés au crédit. **Article L. 314-22 du Code de la consommation [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.99937800038606,
+      "vectorSearchMs": 630.389776000753,
+      "jinaRerankingMs": 567.0426709996536,
+      "mappingMs": 0.09310599975287914,
+      "totalMs": 1401.5588670000434,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020188000053167343,
+      "contextBuilderMs": 0.034776000306010246,
+      "generationMs": 2694.8801190005615,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4096.50270499941
+    },
+    "judge": {
+      "questionId": "q314",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement toutes les obligations prévues par l’article L. 314-22 : comportement honnête, équitable, transparent et professionnel, prise en compte prioritaire des droits et intérêts de l’emprunteur, et fondement de l’octroi sur sa situation, ses demandes spécifiques et les risques raisonnablement liés à la durée. La précision sur les services de conseil et accessoires est également explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 314-22 visé par la question. Elle étaye l’ensemble des obligations énoncées dans la réponse : conduite honnête, équitable, transparente et professionnelle, action au mieux des droits et intérêts de l’emprunteur, prise en compte de sa situation, de ses demandes spécifiques et des risques liés à la durée du contrat. Elle couvre aussi explicitement l’extension aux services de conseil et services accessoires. La source 2 est complémentaire mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas l’**article L314-22** ni ne précise le code auquel il appartient. Il ne permet donc pas d’identifier les obligations déontologiques des prêteurs spécifiquement prévues par cet article.\n\nLa seule disposition fournie impose, dans les relations avec les emprunteurs, aux personnes visées par le texte :\n\n- d’agir de bonne foi, loyalement et professionnellement ;\n- de fournir des informations non trompeuses, obscures ou fausses ;\n- de respecter et protéger les données personnelles et la vie privée ;\n- de communiquer sans harcèlement, coercition ni abus d’influence — **Article L54-11-9 du Code monétaire et financier** [Source 1].\n\nIl est nécessaire de disposer du texte de l’article L314-22 pour répondre précisément à la question.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L54-11-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 9931.544133000076,
+      "routingCalls": 1,
+      "embeddingMs": 218.74059300031513,
+      "vectorSearchMs": 184.04391400050372,
+      "jinaRerankingMs": 561.4626970002428,
+      "mappingMs": 0.02889200020581484,
+      "totalMs": 10895.847021999769,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009978000074625015,
+      "contextBuilderMs": 0.01072199922055006,
+      "generationMs": 2822.573410999961,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 13718.45119499974
+    },
+    "judge": {
+      "questionId": "q314",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les obligations prévues par l’article L314-22 et affirme à tort ne pas pouvoir répondre, alors que la réponse attendue porte sur l’action honnête, équitable, transparente et professionnelle dans l’intérêt des emprunteurs. Elle est néanmoins correctement fondée sur le seul contexte fourni : celui-ci ne contient effectivement que l’article L54-11-9 du Code monétaire et financier, dont les exigences sont fidèlement restituées. L’abstention n’était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 3,
+      "explanation": "La source fournie porte sur l’article L54-11-9 du Code monétaire et financier, non sur l’article L314-22 demandé : elle est donc insuffisante et seulement indirectement liée au thème des obligations envers les emprunteurs. En revanche, elle étaye les obligations alternatives citées dans la réponse générée et permet de constater que le texte précis de l’article L314-22 n’est pas présent parmi les sources. Les affirmations importantes de l’abstention et la restitution de L54-11-9 sont ainsi largement couvertes, même si cela ne répond pas à la question."
+    }
+  },
+  "failureStage": "generation"
+}

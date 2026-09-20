@@ -1,0 +1,103 @@
+{
+  "questionId": "q483",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas d’exposer les règles générales applicables aux travaux dans les parties communes d’une copropriété : elles ne précisent ni les règles d’autorisation, ni les majorités requises, ni la répartition générale des charges.\n\nElles permettent seulement d’indiquer une règle particulière concernant un **mur mitoyen** :\n\n- Tout copropriétaire peut faire **exhausser le mur mitoyen**.\n- Il doit toutefois supporter seul :\n  - le coût de l’exhaussement ;\n  - les réparations d’entretien situées au-dessus de la hauteur de la clôture commune ;\n  - les frais d’entretien de la partie commune du mur rendus nécessaires par l’exhaussement ;\n  - le remboursement au voisin des dépenses que cet exhaussement lui a occasionnées.\n\nCes règles résultent de l’**article 658 du Code civil** [Source 1].\n\nLes autres sources concernent respectivement les droits de participation des associés aux décisions collectives (**article 1844 du Code civil** [Source 2]) et les opérations de restauration immobilière (**article L. 941-14 du Code de commerce** [Source 3]) ; elles ne permettent pas de déterminer les règles générales de décision et de financement des travaux dans les parties communes d’un immeuble en copropriété.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "658"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1844"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L941-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.71917900070548,
+      "vectorSearchMs": 625.7429030016065,
+      "jinaRerankingMs": 537.9698910005391,
+      "mappingMs": 0.02456899918615818,
+      "totalMs": 1395.4774040002376,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01254200004041195,
+      "contextBuilderMs": 0.02012300118803978,
+      "generationMs": 3001.8123020008206,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4397.332885000855
+    },
+    "judge": {
+      "questionId": "q483",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas d’établir les règles générales de copropriété relatives aux travaux dans les parties communes, notamment les autorisations, majorités et charges. Elle ne présente comme applicable qu’une règle particulière effectivement fournie par le contexte, relative à l’exhaussement d’un mur mitoyen (article 658 du Code civil), et distingue correctement les sources non pertinentes. Toutes les affirmations substantielles sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les sources sont globalement pertinentes en ce qu’elles montrent l’absence de règles générales de copropriété sur les travaux en parties communes : la source 1 ne traite que du mur mitoyen, la source 2 des décisions d’associés, et la source 3 de restauration immobilière. La source 1 est directement pertinente pour la règle particulière exposée. Toutes les affirmations substantielles de la réponse, y compris le contenu et les coûts liés à l’exhaussement, sont couvertes par les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de présenter les règles générales applicables aux travaux dans les parties communes d’une copropriété.\n\nElles permettent seulement d’indiquer les éléments suivants :\n\n- **Pour un mur mitoyen**, tout copropriétaire peut procéder à son exhaussement. Il doit toutefois supporter seul :\n  - le coût de l’exhaussement ;\n  - les réparations et l’entretien au-dessus de la hauteur de la clôture commune ;\n  - les frais d’entretien de la partie commune du mur rendus nécessaires par l’exhaussement ;\n  - le remboursement des dépenses que cet exhaussement impose au voisin.  \n  **Article 658 du Code civil [Source 1].**\n\n- **Pour une société**, tout associé a le droit de participer aux décisions collectives. Cette disposition concerne les décisions d’une société et non, en tant que telle, les travaux dans les parties communes d’un immeuble en copropriété.  \n  **Article 1844 du Code civil [Source 2].**\n\n- Les opérations de restauration immobilière peuvent, sous certaines conditions, être décidées et exécutées par les autorités compétentes ou à l’initiative de propriétaires, notamment dans le cadre d’une association syndicale.  \n  **Article L. 941-14 du Code de commerce [Source 3].**\n\nAinsi, le contexte ne précise ni les règles de vote de l’assemblée des copropriétaires, ni la répartition des charges, ni les conditions d’autorisation des travaux affectant les parties communes.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "658"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1844"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L941-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 816.8724229987711,
+      "routingCalls": 1,
+      "embeddingMs": 193.43877199850976,
+      "vectorSearchMs": 685.8246980011463,
+      "jinaRerankingMs": 531.6287080012262,
+      "mappingMs": 0.020646000280976295,
+      "totalMs": 2227.8055980000645,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010276000946760178,
+      "contextBuilderMs": 0.01770699955523014,
+      "generationMs": 2993.615203000605,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5221.457957999781
+    },
+    "judge": {
+      "questionId": "q483",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne permet pas d’exposer les règles générales de copropriété relatives aux travaux dans les parties communes. Les précisions supplémentaires sont explicitement limitées aux textes fournis et sont fidèles à leur contenu ; elle indique correctement que le contexte ne contient pas les règles de vote, de charges ou d’autorisation propres à la copropriété."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne fournissent pas les règles générales de copropriété relatives aux travaux dans les parties communes (assemblée générale, majorités, autorisations, charges). Elles sont donc insuffisantes pour répondre directement à la question, mais leur caractère essentiellement périphérique permet de justifier l’abstention : la source 1 porte sur l’exhaussement d’un mur mitoyen, la source 2 sur les décisions d’associés d’une société, et la source 3 sur des opérations de restauration immobilière. Toutes les affirmations concrètes de la réponse sur le contenu de ces trois textes sont fidèlement couvertes, de même que le constat d’absence, dans le contexte fourni, des règles générales de copropriété demandées."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q006",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 221-18 du Code pénal**, l’homicide routier est caractérisé lorsque :\n\n1. **Un conducteur d’un véhicule terrestre à moteur cause la mort d’autrui** ;\n2. Le décès est causé **sans intention de le donner**, dans les conditions prévues à l’article 121-3 ;\n3. Le conducteur se trouve dans **au moins l’une** des situations suivantes :\n   - violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité prévue par la loi ou le règlement ;\n   - état d’ivresse manifeste, état alcoolique ou refus de se soumettre aux vérifications d’alcoolémie ;\n   - usage de stupéfiants ou refus des vérifications destinées à le constater ;\n   - consommation volontaire, détournée ou manifestement excessive de certaines substances psychoactives ;\n   - conduite sans permis, avec un permis annulé, invalidé, suspendu ou retenu ;\n   - dépassement de la vitesse maximale autorisée d’au moins 30 km/h ;\n   - fuite après l’accident ou absence de secours à une personne en danger ;\n   - violation des règles relatives à l’usage du téléphone tenu en main ou au port à l’oreille d’un dispositif susceptible d’émettre du son.\n\nL’homicide routier est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.  \n**Article 221-18 du Code pénal [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.32206200000655,
+      "vectorSearchMs": 605.6369199999899,
+      "jinaRerankingMs": 577.451034999991,
+      "mappingMs": 0.03560099999594968,
+      "totalMs": 1415.509407999998,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02035500000056345,
+      "contextBuilderMs": 0.07704899999953341,
+      "generationMs": 3708.8803330000082,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5124.511979000003
+    },
+    "judge": {
+      "questionId": "q006",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les éléments constitutifs généraux (conducteur, véhicule terrestre à moteur, mort d’autrui, absence d’intention, renvoi à l’article 121-3) ainsi que les hypothèses 1° à 8° présentes dans le contexte, et indique correctement la peine. Elle présente toutefois cette liste comme exhaustive alors que la référence mentionne des violations allant jusqu’aux points 10°, ce qui constitue une omission mineure à modérée au regard de la formulation de la question. Toutes les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est le texte même de l’article 221-18 cité par la réponse. Elle est directement pertinente et couvre les éléments constitutifs énoncés, les hypothèses listées aux 1° à 8° reproduites dans l’extrait, ainsi que la peine de sept ans d’emprisonnement et 100 000 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 221-18 du Code pénal**, l’homicide routier est caractérisé lorsque les conditions suivantes sont réunies :\n\n1. **Un conducteur d’un véhicule terrestre à moteur** est impliqué ;\n2. Il a **causé la mort d’autrui sans intention de la donner** ;\n3. Les faits sont commis dans les conditions prévues par l’**article 121-3 du Code pénal** ;\n4. Au moins l’une des circonstances suivantes est présente :\n\n- violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité prévue par la loi ou le règlement ;\n- conduite en état d’ivresse manifeste, sous l’empire d’un état alcoolique, ou refus de se soumettre aux vérifications d’alcoolémie ;\n- usage de stupéfiants ou refus des vérifications destinées à établir cet usage ;\n- consommation volontaire, détournée ou manifestement excessive, de substances psychoactives visées par le texte ;\n- absence de permis de conduire, ou permis annulé, invalidé, suspendu ou retenu ;\n- dépassement de la vitesse maximale autorisée d’au moins 30 km/h ;\n- délit de fuite ou absence de secours après avoir causé ou occasionné un accident ;\n- usage illégal du téléphone tenu en main ou port à l’oreille d’un dispositif susceptible d’émettre du son.\n\nL’homicide routier est alors puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1123.172080999997,
+      "routingCalls": 1,
+      "embeddingMs": 173.8966519999958,
+      "vectorSearchMs": 75.06723899999633,
+      "jinaRerankingMs": 568.0600209999975,
+      "mappingMs": 0.05473599999095313,
+      "totalMs": 1940.378349999999,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03563100000610575,
+      "contextBuilderMs": 0.022660000002360903,
+      "generationMs": 3592.984838999997,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5533.482564000005
+    },
+    "judge": {
+      "questionId": "q006",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les éléments constitutifs généraux (conducteur d’un véhicule terrestre à moteur, mort d’autrui non intentionnelle, renvoi à l’article 121-3) et les circonstances 1° à 8° présentes dans le contexte. Elle omet toutefois les circonstances 9° et 10° auxquelles renvoie la question/référence, et ne précise pas, pour le 1°, que la violation doit être distincte de celles visées aux autres points. Les affirmations formulées, y compris la peine, sont soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 221-18 et est donc parfaitement pertinente. Elle couvre l'ensemble des affirmations de la réponse générée : les conditions générales, chacune des huit circonstances effectivement énumérées, ainsi que la peine de sept ans d'emprisonnement et 100 000 euros d'amende. L'absence des points 9° et 10° dans la réponse ne constitue pas un défaut de couverture des affirmations formulées."
+    }
+  },
+  "failureStage": "none"
+}

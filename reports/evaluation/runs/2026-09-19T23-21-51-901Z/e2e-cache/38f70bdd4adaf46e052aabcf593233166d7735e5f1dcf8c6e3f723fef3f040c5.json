@@ -1,0 +1,95 @@
+{
+  "questionId": "q362",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les congés pour formation des salariés exerçant des responsabilités syndicales sont encadrés par deux limites :\n\n- **Limite individuelle** : un salarié ne peut prendre plus de **18 jours de congé par an** au titre de la formation économique, sociale, environnementale et syndicale, conformément à l’**article L. 2145-1 du Code du travail** [Source 2].\n- **Limites collectives et réglementaires** : un arrêté fixe, selon l’effectif de l’établissement :\n  - le nombre maximal de jours pouvant être utilisés par les salariés exerçant des responsabilités syndicales ;\n  - le pourcentage maximal de salariés pouvant être simultanément absents ;\n  - ainsi que le nombre total maximal de jours de congé pris dans l’établissement au titre de ces formations, conformément à l’**article L. 2145-8 du Code du travail** [Source 1].\n\nEn revanche, les sources fournies ne précisent pas **dans quelles conditions une juridiction peut ajourner le prononcé d’une peine**. Il n’est donc pas possible de répondre à ce second point à partir du seul contexte disponible.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 205.7606159998104,
+      "vectorSearchMs": 683.9991420004517,
+      "jinaRerankingMs": 520.9132090006024,
+      "mappingMs": 0.03365899994969368,
+      "totalMs": 1410.7312669996172,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012037999927997589,
+      "contextBuilderMs": 0.022766999900341034,
+      "generationMs": 2898.206703000702,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4308.989989000373
+    },
+    "judge": {
+      "questionId": "q362",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement les plafonds individuel (18 jours) et collectifs/réglementaires prévus par les articles L. 2145-1 et L. 2145-8, avec des affirmations intégralement étayées par le contexte. En revanche, elle ne répond pas à la seconde partie essentielle de la question : les conditions de l’ajournement du prononcé de la peine (reclassement en voie d’acquisition, réparation du dommage en cours, cessation prochaine du trouble et présence à l’audience). Elle s’abstient donc à tort sur ce point alors qu’une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les limites des congés de formation syndicale : elles établissent le plafond individuel de dix-huit jours et les plafonds collectifs/réglementaires dépendant de l'effectif. Elles ne contiennent toutefois aucune disposition sur l'ajournement du prononcé d'une peine, qui constitue une partie importante de la question : une source pénale pertinente manque donc. Les affirmations effectivement formulées par la réponse sont néanmoins couvertes : les limites citées le sont expressément, et l'absence de conditions d'ajournement dans les sources fournies justifie son constat d'insuffisance du contexte sur ce point."
+    }
+  },
+  "routing": {
+    "answer": "Les limites sont les suivantes :\n\n- **Pour chaque salarié exerçant des fonctions syndicales**, la durée totale des congés de formation économique, sociale, environnementale et syndicale pris au cours d’une année ne peut dépasser **18 jours** — **Article L. 2145-1 du Code du travail [Source 2]**.\n- **Au niveau de l’établissement**, le nombre total annuel de jours de congés pris par l’ensemble des salariés est plafonné par voie réglementaire, en fonction de l’effectif.\n- L’arrêté fixe également, selon cet effectif :\n  - le nombre maximal de jours utilisables par les salariés exerçant des responsabilités syndicales ;\n  - le pourcentage maximal de salariés pouvant être simultanément absents au titre de ces congés — **Article L. 2145-8 du Code du travail [Source 1]**.\n\nLes sources fournies ne précisent toutefois pas les plafonds chiffrés fixés par l’arrêté réglementaire.\n\nS’agissant de la possibilité pour une juridiction **d’ajourner le prononcé d’une peine**, les sources communiquées ne contiennent aucune disposition permettant de répondre.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1360.3827440002933,
+      "routingCalls": 1,
+      "embeddingMs": 234.31249700021,
+      "vectorSearchMs": 324.6963639995083,
+      "jinaRerankingMs": 521.8994469996542,
+      "mappingMs": 0.02801600005477667,
+      "totalMs": 2441.3474090006202,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012960999272763729,
+      "contextBuilderMs": 0.01564900018274784,
+      "generationMs": 2985.0329830003902,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5426.419480999932
+    },
+    "judge": {
+      "questionId": "q362",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les limites prévues par les articles L. 2145-1 et L. 2145-8 : plafond individuel de 18 jours, plafond global annuel déterminé réglementairement selon l’effectif, plafond spécifique pour les responsables syndicaux et taux maximal d’absences simultanées. Elle omet toutefois entièrement les conditions d’ajournement du prononcé de la peine prévues par l’article 132-60 du Code pénal, pourtant essentielles à la seconde partie de la question. Cette omission est justifiée au regard du contexte effectivement fourni, qui ne contient aucune disposition pénale : toutes les affirmations formulées sont donc bien étayées par ce contexte. La réponse ne constitue pas une abstention globale, puisqu’elle répond substantiellement à la première partie et explicite l’absence de source pour la seconde."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les limites des congés de formation syndicale : L. 2145-1 couvre le plafond individuel de dix-huit jours et L. 2145-8 couvre le plafond annuel collectif fixé réglementairement selon l'effectif, les maxima applicables aux responsables syndicaux et l'absence simultanée. Aucune source ne porte sur l'ajournement de peine, mais cela étaye le constat prudent de la réponse selon lequel les sources communiquées ne permettent pas de répondre à cette partie. Toutes les affirmations importantes effectivement formulées sont donc couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

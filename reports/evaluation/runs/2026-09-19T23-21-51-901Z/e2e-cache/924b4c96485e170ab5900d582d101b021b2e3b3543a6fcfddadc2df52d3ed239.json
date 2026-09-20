@@ -1,0 +1,95 @@
+{
+  "questionId": "q018",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’accès frauduleux à un système de traitement automatisé de données ayant entraîné une altération de son fonctionnement est puni de **cinq ans d’emprisonnement et de 150 000 € d’amende**, conformément à l’**article 323-1 du Code pénal** [Source 1].\n\nSi le système concerne des données à caractère personnel mis en œuvre par l’État, les peines sont portées à **sept ans d’emprisonnement et 300 000 € d’amende** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "323-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "323-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 225.89772100001574,
+      "vectorSearchMs": 1148.293639999989,
+      "jinaRerankingMs": 570.9620669999858,
+      "mappingMs": 0.22694000002229586,
+      "totalMs": 1945.461192000017,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.10571099998196587,
+      "contextBuilderMs": 0.24259400001028553,
+      "generationMs": 3412.423959000036,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5358.314318999997
+    },
+    "judge": {
+      "questionId": "q018",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la peine applicable à l’accès frauduleux ayant entraîné une altération du fonctionnement : cinq ans d’emprisonnement et 150 000 euros d’amende. Elle est directement étayée par l’article 323-1 fourni. La précision sur la circonstance concernant un système de données personnelles mis en œuvre par l’État est également exacte et fondée sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise explicitement l’accès ou le maintien frauduleux dans un STAD lorsqu’il en résulte une altération de son fonctionnement, avec la peine de cinq ans d’emprisonnement et 150 000 € d’amende. Elle couvre également la majoration à sept ans et 300 000 € pour un système de données personnelles mis en œuvre par l’État, mentionnée dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’accès frauduleux à un système de traitement automatisé de données ayant entraîné une altération de son fonctionnement est puni de **cinq ans d’emprisonnement et de 150 000 € d’amende**, conformément à l’**article 323-1, deuxième alinéa, du Code pénal** [Source 1].\n\nSi le système concerné est un système de traitement automatisé de données à caractère personnel mis en œuvre par l’État, la peine est portée à **sept ans d’emprisonnement et 300 000 € d’amende** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "323-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "323-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1137.0289639999974,
+      "routingCalls": 1,
+      "embeddingMs": 209.72382600000128,
+      "vectorSearchMs": 64.46561100002145,
+      "jinaRerankingMs": 570.2877929999959,
+      "mappingMs": 0.20849099999759346,
+      "totalMs": 1981.8166060000076,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.08540999999968335,
+      "contextBuilderMs": 0.1348600000492297,
+      "generationMs": 2337.491833999986,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4319.59571199998
+    },
+    "judge": {
+      "questionId": "q018",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la peine applicable prévue par l'article 323-1, deuxième alinéa : cinq ans d'emprisonnement et 150 000 euros d'amende. Elle ajoute correctement la circonstance aggravante relative à un système de données personnelles mis en œuvre par l'État, explicitement prévue dans le contexte. Toutes les affirmations sont étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise expressément l’accès ou le maintien frauduleux dans un système de traitement automatisé de données lorsqu’il en résulte une altération de son fonctionnement. Elle établit la peine principale de cinq ans d’emprisonnement et 150 000 € d’amende, ainsi que l’aggravation à sept ans et 300 000 € lorsque le système de données personnelles est mis en œuvre par l’État. Elle couvre donc toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q279",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L462-2 du Code monétaire et financier**, les sanctions applicables à la publicité pour la souscription de valeurs mobilières sont fixées par **l’article L245-2 du Code de commerce** [Source 1].\n\nToutefois, le texte fourni ne reproduit pas l’article L245-2. Il permet seulement de préciser que, pour certains manquements aux règles de publicité et d’information relatives aux valeurs mobilières, l’**article R247-2 du Code de commerce** prévoit :\n\n- une **amende correspondant à celle prévue pour les contraventions de la cinquième classe** ;\n- la même amende pour l’intermédiaire qui intervient dans une cession sans respecter ces prescriptions ;\n- en cas de récidive, l’amende prévue pour la récidive d’une contravention de cinquième classe [Source 2].\n\nCes sanctions concernent notamment l’absence de notice préalable, l’insuffisance des mentions dans les documents et annonces, ainsi que l’absence d’indications sur la signature ou l’admission des valeurs mobilières à la négociation. Elles ne s’appliquent pas à certaines offres au public visées par le Code monétaire et financier [Source 2].\n\nLe montant exact de l’amende prévue par l’article L245-2 du Code de commerce ne peut pas être déterminé à partir des sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L462-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.4735960001126,
+      "vectorSearchMs": 613.0546679999679,
+      "jinaRerankingMs": 544.9496590001509,
+      "mappingMs": 0.03249199967831373,
+      "totalMs": 1377.5382929993793,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010540000163018703,
+      "contextBuilderMs": 0.018281000666320324,
+      "generationMs": 3231.449847000651,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4609.024191999808
+    },
+    "judge": {
+      "questionId": "q279",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne correctement l’élément central attendu : l’article L. 462-2 renvoie à l’article L. 245-2 du code de commerce. Elle ajoute toutefois des développements sur l’article R. 247-2, dont le contexte décrit bien le contenu mais sans établir qu’il constitue la sanction visée par ce renvoi à l’article L. 245-2 ; cette addition est donc potentiellement confuse et insuffisamment reliée à la question. La réponse reste globalement fondée sur les extraits fournis et répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "La source 1 est directement pertinente : elle répond à la question en renvoyant expressément aux sanctions fixées par l’article L. 245-2 du code de commerce. La source 2 est pertinente pour les sanctions qu’elle énonce elle-même en matière de publicité et d’émission de valeurs mobilières, mais elle ne permet pas d’établir son lien juridique avec le renvoi de l’article L. 462-2 à l’article L. 245-2. Elle couvre donc les précisions factuelles ajoutées sur l’amende de cinquième classe, la récidive, les manquements et les exclusions, mais la présentation de ces sanctions comme éclairant directement celles visées par L. 462-2 demeure insuffisamment étayée. L’affirmation selon laquelle le montant exact prévu par L. 245-2 ne peut être déterminé est soutenue par l’absence de reproduction de cet article dans les sources."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L462-2 du Code monétaire et financier**, les sanctions applicables à la publicité pour la souscription de valeurs mobilières sont celles prévues par **l’article L245-2 du Code de commerce** [Source 1].\n\nLe contenu de l’article L245-2 n’étant pas fourni, il n’est pas possible de préciser davantage la nature ou le montant des sanctions. L’article L231-10 du Code monétaire et financier prévoit, pour certains faits frauduleux liés aux souscriptions ou versements, une peine de **cinq ans d’emprisonnement et 9 000 euros d’amende** [Source 2], mais le contexte ne permet pas d’affirmer qu’il s’applique directement à la publicité visée par l’article L462-2.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L462-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L231-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3028.1625800002366,
+      "routingCalls": 1,
+      "embeddingMs": 244.57015400007367,
+      "vectorSearchMs": 180.69409099966288,
+      "jinaRerankingMs": 580.9948320006952,
+      "mappingMs": 0.032987999729812145,
+      "totalMs": 4034.4825710002333,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010576999746263027,
+      "contextBuilderMs": 0.01742000039666891,
+      "generationMs": 2297.2306180000305,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6331.747909000143
+    },
+    "judge": {
+      "questionId": "q279",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement que les sanctions applicables sont celles de l’article L. 245-2 du code de commerce, conformément à l’article L. 462-2 et à la référence. Elle précise à juste titre que le contexte ne fournit pas le contenu de cet article et ne transpose pas indûment les peines de l’article L. 231-10, dont elle présente seulement le contenu comme non directement applicable. Toutes les affirmations importantes sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en renvoyant expressément les sanctions relatives à cette publicité à l’article L. 245-2 du code de commerce. La source 2 est pertinente pour l’illustration prudente d’infractions frauduleuses liées aux souscriptions et versements, et son contenu couvre exactement les peines et faits cités. Les sources permettent aussi d’étayer l’absence de précision sur le contenu de l’article L. 245-2, qui n’est pas reproduit."
+    }
+  },
+  "failureStage": "none"
+}

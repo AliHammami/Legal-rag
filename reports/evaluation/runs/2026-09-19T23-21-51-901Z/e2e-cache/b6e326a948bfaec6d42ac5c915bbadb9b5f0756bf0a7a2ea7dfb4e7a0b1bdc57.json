@@ -1,0 +1,103 @@
+{
+  "questionId": "q484",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’accès au barreau.\n\nElles concernent principalement :\n\n- les diplômes permettant de se présenter à l’examen d’accès au stage professionnel prévu à l’article L. 811-5 du Code de commerce [Source 1] ;\n- les conditions d’inscription sur la liste des mandataires judiciaires, notamment la nationalité, l’honorabilité, les diplômes et l’expérience professionnelle [Sources 2 et 3].\n\nAucune source ne traite de l’accès à la profession d’avocat ou de l’inscription au barreau.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R812-15"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L812-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.507331000641,
+      "vectorSearchMs": 629.1065779998899,
+      "jinaRerankingMs": 582.2621069997549,
+      "mappingMs": 0.020410999655723572,
+      "totalMs": 1430.924008000642,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010843999683856964,
+      "contextBuilderMs": 0.018178001046180725,
+      "generationMs": 2046.280782001093,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3477.2427229993045
+    },
+    "judge": {
+      "questionId": "q484",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre sur l’accès au barreau, car le contexte ne contient que des dispositions relatives à l’examen/stage des mandataires judiciaires et à leur inscription. Cette caractérisation est exacte et entièrement étayée par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont hors du champ de l’accès à la profession d’avocat, mais elles sont directement pertinentes pour justifier l’abstention : elles portent sur l’examen et le stage des mandataires judiciaires (source 1) ainsi que sur leur inscription et leurs conditions d’exercice (sources 2 et 3). Elles étayent donc les constats selon lesquels le contexte ne permet pas de déterminer les conditions d’accès au barreau et qu’aucune source ne traite de l’accès à la profession d’avocat."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’accès au barreau.\n\nElles concernent principalement :\n\n- les diplômes requis pour se présenter à l’examen d’accès au stage professionnel prévu par l’article L. 811-5 du Code de commerce [Source 1] ;\n- les conditions d’inscription sur la liste des mandataires judiciaires et l’accès à leur examen ou à leur stage professionnel [Sources 2 et 3].\n\nAucune disposition relative à l’accès à la profession d’avocat ou à l’inscription au barreau n’est fournie.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R812-15"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L812-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1182.879416000098,
+      "routingCalls": 1,
+      "embeddingMs": 208.44431999884546,
+      "vectorSearchMs": 611.2927519995719,
+      "jinaRerankingMs": 646.2256690002978,
+      "mappingMs": 0.02421499975025654,
+      "totalMs": 2648.8910780008882,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009649999439716339,
+      "contextBuilderMs": 0.033245999366045,
+      "generationMs": 2162.8670509997755,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4811.811048001051
+    },
+    "judge": {
+      "questionId": "q484",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement et à juste titre : le contexte ne contient aucune règle relative à la profession d’avocat ou à l’inscription au barreau. Elle identifie correctement que les extraits portent sur l’accès au stage de mandataire judiciaire et sur l’inscription des mandataires judiciaires, sans extrapoler ces règles au barreau."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont hors du champ de l’accès à la profession d’avocat, mais elles sont directement pertinentes pour justifier l’abstention : elles portent explicitement sur l’examen et le stage des mandataires judiciaires ainsi que sur leur inscription sur une liste. Elles permettent donc de constater que le contexte ne contient aucune disposition sur l’accès au barreau. Les trois constats importants de la réponse sont couverts."
+    }
+  },
+  "failureStage": "none"
+}

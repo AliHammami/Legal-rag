@@ -1,0 +1,87 @@
+{
+  "questionId": "q181",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans une société en commandite par actions, il existe deux types d’associés :\n\n- **Les commandités** : ils ont la qualité de commerçant et répondent **indéfiniment et solidairement** des dettes sociales.\n- **Les commanditaires** : ils ont la qualité d’actionnaires et ne supportent les pertes qu’à concurrence du montant de leurs apports. Leur nombre ne peut être inférieur à trois.\n\nCes règles sont prévues par l’**article L. 226-1 du Code de commerce** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.023983000312,
+      "vectorSearchMs": 605.4250300000422,
+      "jinaRerankingMs": 546.219889999833,
+      "mappingMs": 0.07324600033462048,
+      "totalMs": 1377.7724349997006,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011082999873906374,
+      "contextBuilderMs": 0.01106500020250678,
+      "generationMs": 1468.2236159997992,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2846.028226000257
+    },
+    "judge": {
+      "questionId": "q181",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux catégories d’associés et leurs responsabilités respectives, conformément à la référence. La précision additionnelle selon laquelle les commanditaires doivent être au moins trois est exacte et explicitement étayée par le contexte, de même que la citation de l’article L. 226-1 du Code de commerce."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 226-1 du Code de commerce, qui définit les deux catégories d’associés d’une société en commandite par actions, leur qualité et leur régime de responsabilité. Elle couvre également la précision ajoutée sur le nombre minimal de trois commanditaires ainsi que la référence légale citée."
+    }
+  },
+  "routing": {
+    "answer": "Dans une société en commandite par actions, il existe deux types d’associés :\n\n- **Les commandités** : ils ont la qualité de commerçant et sont responsables **indéfiniment et solidairement** des dettes sociales.\n- **Les commanditaires** : ils ont la qualité d’actionnaires et ne supportent les pertes qu’à concurrence du montant de leurs apports.\n\nLe nombre de commanditaires ne peut pas être inférieur à trois. **Article L226-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1352.8139299997129,
+      "routingCalls": 1,
+      "embeddingMs": 208.52465299982578,
+      "vectorSearchMs": 169.27042399998754,
+      "jinaRerankingMs": 495.4127050000243,
+      "mappingMs": 0.022752000018954277,
+      "totalMs": 2226.0735340001993,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009297000244259834,
+      "contextBuilderMs": 0.01247100019827485,
+      "generationMs": 1484.450387999881,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3710.552944999654
+    },
+    "judge": {
+      "questionId": "q181",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux catégories d’associés et leurs régimes de responsabilité respectifs. Elle ajoute correctement le minimum légal de trois commanditaires. Toutes ces affirmations sont explicitement étayées par l’article L226-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L226-1 du Code de commerce définit les commandités et les commanditaires d’une société en commandite par actions, leurs qualités et leurs responsabilités. Elle couvre explicitement toutes les affirmations de la réponse, y compris le minimum de trois associés commanditaires."
+    }
+  },
+  "failureStage": "none"
+}

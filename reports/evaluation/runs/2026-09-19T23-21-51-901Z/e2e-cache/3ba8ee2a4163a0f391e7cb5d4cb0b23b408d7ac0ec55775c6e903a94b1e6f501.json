@@ -1,0 +1,95 @@
+{
+  "questionId": "q237",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L226-2 du Code monétaire et financier**, les crypto-actifs sont des **biens incorporels négociables** [Source 2].\n\nLe transfert de propriété s’opère selon deux modalités :\n\n1. **Principe : inscription dans la DLT**  \n   Le transfert résulte de l’inscription des crypto-actifs au bénéfice de l’acquéreur dans la technologie de registres distribués (*DLT*). Cette inscription doit devenir **irréversible**, conformément au mécanisme de consensus de la DLT concernée [Sources 1 et 2].\n\n2. **Exception : conservation par un prestataire**  \n   Lorsque les crypto-actifs sont conservés par un prestataire relevant de l’article 75 du règlement européen mentionné par l’article L226-2, le transfert résulte de l’inscription de la **position de l’acquéreur** dans le registre de positions tenu par ce prestataire [Source 2]. Cette inscription doit intervenir **le plus rapidement possible après le dénouement de l’opération** [Source 1].\n\nLes modalités de ce transfert doivent en outre être précisées par un **décret en Conseil d’État** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R226-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L226-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 383.6165240001865,
+      "vectorSearchMs": 603.8336609997787,
+      "jinaRerankingMs": 594.2832529996522,
+      "mappingMs": 0.03526000026613474,
+      "totalMs": 1581.7957760002464,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011403999757021666,
+      "contextBuilderMs": 0.018410000018775463,
+      "generationMs": 3139.5892380001023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4721.422917000018
+    },
+    "judge": {
+      "questionId": "q237",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement le principe d’inscription au bénéfice de l’acquéreur dans la DLT, l’exception en cas de conservation par le prestataire visé à l’article 75 du règlement (UE) 2023/1114, et le renvoi à un décret en Conseil d’État. Elle ajoute à juste titre les précisions réglementaires du contexte : irréversibilité de l’inscription selon le consensus de la DLT et inscription rapide après le dénouement pour le registre du prestataire."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle énonce le principe du transfert par inscription dans la DLT, l’exception liée à la conservation par le prestataire visé à l’article 75 du règlement (UE) 2023/1114, ainsi que le renvoi à un décret en Conseil d’État. La source 1, prise en application de L. 226-2, précise exactement les deux modalités temporelles ajoutées par la réponse : irréversibilité selon le mécanisme de consensus et inscription rapide après le dénouement. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L226-2 du Code monétaire et financier**, le transfert de propriété des crypto-actifs obéit aux règles suivantes :\n\n- Les crypto-actifs sont des **biens incorporels négociables**.\n- **Principe :** le transfert de propriété intervient par l’**inscription des crypto-actifs au bénéfice de l’acquéreur dans la DLT** (technologie de registres distribués).\n- **Exception :** lorsque les crypto-actifs sont conservés par un prestataire de services sur actifs numériques relevant de l’article 75 du règlement européen mentionné, le transfert intervient par l’**inscription de la position de l’acquéreur dans le registre de positions tenu par ce prestataire**.\n- Les modalités pratiques du transfert sont fixées par **décret en Conseil d’État**. [Source 2]\n\nLe décret précise notamment que, dans le premier cas, l’inscription doit être **irréversible selon le mécanisme de consensus de la DLT**. Dans le second cas, l’inscription de la position doit intervenir **le plus rapidement possible après le dénouement de l’opération**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R226-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L226-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3071.373263000045,
+      "routingCalls": 1,
+      "embeddingMs": 182.8711609998718,
+      "vectorSearchMs": 189.31007899995893,
+      "jinaRerankingMs": 1777.305209999904,
+      "mappingMs": 0.022600000258535147,
+      "totalMs": 5220.911781999748,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010611000005155802,
+      "contextBuilderMs": 0.014639000408351421,
+      "generationMs": 3277.6928209997714,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8498.637406999711
+    },
+    "judge": {
+      "questionId": "q237",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement le principe d’inscription au bénéfice de l’acquéreur dans la DLT, l’exception de conservation auprès d’un prestataire visé à l’article 75 du règlement (UE) 2023/1114 avec inscription dans son registre, ainsi que le renvoi à un décret en Conseil d’État. Elle ajoute correctement les précisions réglementaires sur l’irréversibilité dans la DLT et la rapidité de l’inscription après dénouement. Toutes les affirmations importantes sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 226-2 et couvre la qualification des crypto-actifs, le principe du transfert par inscription dans la DLT, l’exception liée au prestataire visé à l’article 75 du règlement (UE) 2023/1114, ainsi que le renvoi à un décret en Conseil d’État. La source 1, qui précise l’article R. 226-1, est directement pertinente pour les modalités supplémentaires invoquées : irréversibilité de l’inscription selon le consensus de la DLT et inscription rapide dans le registre du prestataire après dénouement. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

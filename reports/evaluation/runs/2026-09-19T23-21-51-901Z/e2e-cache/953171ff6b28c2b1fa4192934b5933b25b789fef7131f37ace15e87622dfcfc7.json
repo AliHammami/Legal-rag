@@ -1,0 +1,95 @@
+{
+  "questionId": "q378",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L133-33 du Code monétaire et financier**, la demande de remboursement de monnaie électronique est possible **avant le terme prévu au contrat**, à condition qu’il ne s’agisse pas d’un cas de résiliation du contrat. Elle peut porter **sur la totalité ou sur une partie** de la monnaie électronique détenue [Source 1].\n\nEn revanche, le contexte fourni **ne contient aucune disposition du Code pénal relative aux sanctions de l’homicide involontaire**. Il n’est donc pas possible de préciser ces sanctions à partir des seules sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-33"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-35"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.37275800015777,
+      "vectorSearchMs": 679.4619849994779,
+      "jinaRerankingMs": 580.3280889997259,
+      "mappingMs": 0.02173200063407421,
+      "totalMs": 1489.2159679997712,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00911100022494793,
+      "contextBuilderMs": 0.014430000446736813,
+      "generationMs": 2194.962473999709,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3684.2102589998394
+    },
+    "judge": {
+      "questionId": "q378",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de manière complète la condition de remboursement anticipé prévue à l’article L133-33 : hors résiliation, pour tout ou partie de la monnaie électronique détenue. Elle omet toutefois entièrement les sanctions de l’homicide involontaire attendues (trois ans et 45 000 euros, portés à cinq ans et 75 000 euros en cas de violation délibérée). Son refus de les préciser est pleinement fondé au regard du contexte, qui ne contient aucune disposition pénale. Néanmoins, l’abstention n’était pas attendue pour cette question et la réponse ne répond donc pas intégralement à la demande."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour la première branche de la question et permet d’établir les conditions du remboursement anticipé (avant terme, hors résiliation, total ou partiel). Aucune source ne porte sur l’homicide involontaire, ce qui rend les sources globalement insuffisantes pour répondre intégralement à la question, mais elles permettent de fonder le constat de la réponse selon lequel le contexte fourni ne contient pas les sanctions pénales demandées. La réponse générée ne formule aucune sanction pénale non couverte : toutes ses affirmations importantes sont donc étayées par les sources ou par leur absence constatée dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "### Remboursement avant terme de la monnaie électronique\n\nSelon l’**article L133-33 du Code monétaire et financier**, une demande de remboursement peut être présentée avant le terme prévu au contrat, à condition qu’elle intervienne **hors le cas de résiliation du contrat**. Elle peut porter :\n\n- soit sur la totalité de la monnaie électronique détenue ;\n- soit sur une partie seulement de celle-ci.  \n\n[Source 1]\n\nL’**article L133-35 du Code monétaire et financier** concerne, quant à lui, une demande formée **dans l’année suivant le terme du contrat** — et non avant celui-ci. Dans ce cas, le remboursement est total si la proportion des fonds devant être utilisée sous forme de monnaie électronique n’a pas été prévue entre les parties. [Source 2]\n\n### Sanctions de l’homicide involontaire\n\nLes sources fournies ne contiennent aucune disposition du **Code pénal** relative à l’homicide involontaire. Il n’est donc pas possible de préciser les sanctions applicables à partir du seul contexte transmis.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-33"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-35"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1026.515066999942,
+      "routingCalls": 1,
+      "embeddingMs": 189.3211239995435,
+      "vectorSearchMs": 228.9469919996336,
+      "jinaRerankingMs": 553.0049400003627,
+      "mappingMs": 0.024304999969899654,
+      "totalMs": 1997.843097999692,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010583999566733837,
+      "contextBuilderMs": 0.045339000411331654,
+      "generationMs": 2919.775487999432,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4917.683465000242
+    },
+    "judge": {
+      "questionId": "q378",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément la règle de l'article L133-33 : remboursement avant le terme, hors résiliation, total ou partiel. Elle ajoute une précision sur L133-35 qui est bien conforme au contexte, mais qui n'était pas nécessaire. En revanche, elle ne fournit pas les sanctions de l'homicide involontaire demandées (trois ans et 45 000 euros, portés à cinq ans et 75 000 euros en cas de violation manifestement délibérée), ce qui rend la réponse incomplète et partiellement incorrecte au regard de la question globale. Toutes les affirmations formulées sont soutenues par le contexte fourni, y compris l'absence de texte pénal dans ce contexte. Toutefois, l'abstention sur le second volet n'est pas attendue puisque la question pouvait recevoir une réponse complète."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour le volet relatif au remboursement de monnaie électronique : L133-33 couvre précisément la demande avant terme, hors résiliation, totale ou partielle, et L133-35 couvre correctement la précision additionnelle sur le délai d’un an après terme. En revanche, aucune source ne porte sur l’homicide involontaire ni sur les sanctions du code pénal, ce qui laisse un volet essentiel de la question sans source. Les affirmations effectivement formulées dans la réponse sont néanmoins toutes étayées par les extraits fournis, y compris le constat que le corpus transmis ne contient pas de disposition pénale sur ce point."
+    }
+  },
+  "failureStage": "generation"
+}

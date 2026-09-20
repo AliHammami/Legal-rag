@@ -1,0 +1,119 @@
+{
+  "questionId": "q303",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions de l’**article L. 312-1 du Code de la consommation** s’appliquent :\n\n- à toute opération de crédit mentionnée au **6° de l’article L. 311-1** ;\n- que cette opération soit conclue **à titre onéreux ou gratuit** ;\n- ainsi, le cas échéant, qu’à son **cautionnement** ;\n- lorsque le montant total du crédit est **égal ou supérieur à 200 euros et inférieur ou égal à 75 000 euros**.  \n  **[Article L. 312-1 du Code de la consommation — Source 2]**\n\nToutefois, ces opérations doivent être appréciées sous réserve des exclusions prévues à l’**article L. 312-4 du Code de la consommation**, notamment les crédits immobiliers ou garantis par une sûreté immobilière, les crédits inférieurs à 200 euros ou supérieurs à 75 000 euros, ainsi que les autorisations de découvert remboursables dans un délai d’un mois. **[Source 5]**\n\nPour les autorisations de découvert remboursables au-delà d’un mois, des règles spécifiques s’appliquent selon la durée du remboursement. **[Article L. 312-84 du Code de la consommation — Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-84"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-94"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 240.18369800038636,
+      "vectorSearchMs": 596.1915909992531,
+      "jinaRerankingMs": 548.5027180006728,
+      "mappingMs": 0.053864000365138054,
+      "totalMs": 1384.9620519997552,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01630099955946207,
+      "contextBuilderMs": 0.04746000003069639,
+      "generationMs": 4330.866636000574,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5715.901610000059
+    },
+    "judge": {
+      "questionId": "q303",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de l’article L. 312-1 : opérations visées au 6° de l’article L. 311-1, à titre onéreux ou gratuit, y compris le cautionnement éventuel, pour un montant total compris entre 200 et 75 000 euros inclus. Les précisions additionnelles sur les exclusions et découverts sont également étayées par les sources fournies et ne contredisent pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 312-1 et couvre toutes les conditions centrales énoncées : renvoi au 6° de l’article L. 311-1, caractère onéreux ou gratuit, cautionnement éventuel et seuils de 200 à 75 000 euros inclus. La source 5 étaye les précisions additionnelles relatives aux exclusions, dont les crédits immobiliers, certains montants et les découverts d’un mois. La source 1 couvre les règles spécifiques mentionnées pour les autorisations de découvert remboursables au-delà d’un mois. Les sources sont donc directement pertinentes et couvrent les affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions de l’article **L. 312-1 du Code de la consommation** s’appliquent :\n\n- à toute opération de crédit mentionnée au **6° de l’article L. 311-1** ;\n- qu’elle soit conclue **à titre onéreux ou à titre gratuit** ;\n- ainsi que, le cas échéant, à son **cautionnement** ;\n- lorsque le montant total du crédit est **au moins égal à 200 € et au plus égal à 75 000 €**.\n\n**Article L. 312-1 du Code de la consommation [Source 2].**\n\nCette application demeure soumise aux exclusions prévues par l’article **L. 312-4 du Code de la consommation**, notamment les crédits immobiliers ou garantis par une sûreté immobilière relevant du chapitre III, les crédits inférieurs à 200 € ou supérieurs à 75 000 €, ainsi que certaines autorisations de découvert et opérations de courte durée [Source 5].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-84"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-94"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1332.1279670000076,
+      "routingCalls": 1,
+      "embeddingMs": 206.54354900028557,
+      "vectorSearchMs": 74.60872799996287,
+      "jinaRerankingMs": 1458.3550009997562,
+      "mappingMs": 0.022602999582886696,
+      "totalMs": 3071.7083999998868,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010260000824928284,
+      "contextBuilderMs": 0.02523500006645918,
+      "generationMs": 3687.9009589999914,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6759.65268499963
+    },
+    "judge": {
+      "questionId": "q303",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions posées par l’article L. 312-1 : opération de crédit visée au 6° de l’article L. 311-1, à titre onéreux ou gratuit, cautionnement éventuel, et montant compris entre 200 et 75 000 euros inclus. Le complément sur les exclusions de l’article L. 312-4 est globalement exact et explicitement supporté par le contexte, sans altérer la réponse principale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et couvre intégralement les conditions énoncées dans la réponse : opération visée au 6° de l'article L. 311-1, caractère onéreux ou gratuit, cautionnement éventuel et seuils de 200 à 75 000 euros inclus. La source 5 est également pertinente pour le complément relatif aux exclusions, notamment les crédits immobiliers ou garantis, les montants hors seuil, les découverts d'un mois et certaines opérations de courte durée."
+    }
+  },
+  "failureStage": "none"
+}

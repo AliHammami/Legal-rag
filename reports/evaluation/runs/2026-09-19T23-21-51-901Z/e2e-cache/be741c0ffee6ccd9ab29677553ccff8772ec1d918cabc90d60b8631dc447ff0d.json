@@ -1,0 +1,107 @@
+{
+  "questionId": "q002",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne contiennent pas l’article 223-1 ni la description des éléments constitutifs de l’infraction concernée. Elles indiquent seulement des peines d’un an d’emprisonnement et de **150 000 euros d’amende**, et non de 15 000 euros [Sources 1 et 2].\n\nIl est donc impossible de déterminer, à partir du seul contexte fourni, les éléments constitutifs de l’infraction punie d’un an d’emprisonnement et de 15 000 euros d’amende.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 179.19536700000026,
+      "vectorSearchMs": 735.157342999999,
+      "jinaRerankingMs": 478.5976739999969,
+      "mappingMs": 0.03779700000450248,
+      "totalMs": 1393.110388000001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01655899999605026,
+      "contextBuilderMs": 0.023425999999744818,
+      "generationMs": 2269.747479000005,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3662.9751190000025
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’énonce pas les éléments constitutifs prévus par l’article 223-1 et ne répond donc pas à la question. Elle est toutefois correctement fondée sur le contexte fourni : celui-ci ne contient que deux articles du Code de la consommation, relatifs à des amendes de 150 000 euros, et ne permet pas d’établir le contenu de l’article 223-1. Comme une réponse était attendue (EXPECTED ABSTENTION = false), l’abstention est considérée incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne sont pas pertinentes pour répondre au fond à la question sur l’article 223-1 : elles concernent d’autres articles et une amende de 150 000 euros. En revanche, elles couvrent les constats factuels de la réponse générée : aucune ne contient l’article 223-1 ni ses éléments constitutifs, et toutes deux prévoient bien un an d’emprisonnement et 150 000 euros d’amende. Elles soutiennent donc l’abstention formulée, même si celle-ci ne répond pas à la question attendue."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne contiennent pas le texte de l’article **223-1 du Code pénal**. Il n’est donc pas possible d’identifier, à partir du seul contexte, les éléments constitutifs de l’infraction visée.\n\nLes dispositions fournies mentionnent une peine d’un an d’emprisonnement et 15 000 euros d’amende pour d’autres infractions, notamment aux articles **225-16-2**, **226-22-2** et **226-4-1 du Code pénal**, mais elles ne permettent pas de répondre à la question concernant l’article 223-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-16-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-22-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-4-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.5173439999999,
+      "routingCalls": 1,
+      "embeddingMs": 231.0932729999986,
+      "vectorSearchMs": 113.57404800000222,
+      "jinaRerankingMs": 557.1665310000026,
+      "mappingMs": 0.026460999994014855,
+      "totalMs": 1823.5054669999954,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01992699999391334,
+      "contextBuilderMs": 0.053546999995887745,
+      "generationMs": 2375.4458530000047,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4199.041651
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les éléments constitutifs de l’infraction prévue à l’article 223-1, alors qu’ils étaient demandés et qu’une réponse était attendue. Elle s’abstient à tort. En revanche, son constat selon lequel le contexte ne contient pas l’article 223-1, ainsi que les références aux autres articles et peines présents dans le contexte, est exact et intégralement supporté par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne contient l’article 223-1 ni les éléments constitutifs de l’infraction demandée : elles sont donc très insuffisantes pour répondre directement à la question. Elles permettent toutefois d’étayer l’abstention formulée : les articles 225-16-2, 226-22-2 et 226-4-1 mentionnent bien chacun, dans des contextes distincts, la peine d’un an d’emprisonnement et 15 000 euros d’amende. Les constats importants de la réponse générée sur l’absence de l’article demandé dans le contexte et sur les autres dispositions citées sont ainsi couverts."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q127",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L4221-1 du Code du travail**, les établissements et locaux de travail doivent :\n\n- être aménagés de façon à garantir la **sécurité des travailleurs** ;\n- être maintenus dans un **état constant de propreté** ;\n- présenter des conditions d’**hygiène et de salubrité** propres à assurer la **santé des travailleurs**.\n\nLes conditions d’application sont déterminées par les décrets prévus à l’article L. 4111-6 [Source 1].\n\nPour les locaux de travail fermés concernés par l’article R4534-138, ces exigences incluent notamment les règles relatives à l’aération et l’assainissement, à l’ambiance thermique, à la sécurité et à l’aménagement des lieux de travail [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R4534-138"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 228.40863900026307,
+      "vectorSearchMs": 612.4051179997623,
+      "jinaRerankingMs": 516.4960850002244,
+      "mappingMs": 0.037754999939352274,
+      "totalMs": 1357.3739080000669,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015335999894887209,
+      "contextBuilderMs": 0.024745000060647726,
+      "generationMs": 1714.0531019996852,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3071.4773229998536
+    },
+    "judge": {
+      "questionId": "q127",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois exigences de l’article L4221-1 : sécurité, propreté constante, et conditions d’hygiène et de salubrité assurant la santé. Les précisions sur les décrets d’application et sur certains locaux fermés sont exactes et explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les trois exigences centrales énoncées dans la réponse, ainsi que la mention des décrets d'application prévus à l'article L. 4111-6. La source 2 est pertinente pour la précision additionnelle, explicitement limitée aux locaux fermés visés par l'article R. 4534-138, et couvre les catégories de règles citées (aération, ambiance thermique, sécurité et aménagement)."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L4221-1 du Code du travail**, les établissements et locaux de travail doivent :\n\n- être aménagés de manière à garantir la **sécurité des travailleurs** ;\n- être maintenus dans un **état constant de propreté** ;\n- présenter des conditions d’**hygiène et de salubrité** propres à assurer la **santé des travailleurs**. [Source 1]\n\nPour les locaux de travail fermés concernés par l’article **R4534-138 du Code du travail**, ces exigences sont notamment précisées par des règles relatives à l’aération et l’assainissement, à l’ambiance thermique, à la sécurité et à l’aménagement des lieux de travail. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R4534-138"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1405.513361999765,
+      "routingCalls": 1,
+      "embeddingMs": 189.91300699999556,
+      "vectorSearchMs": 227.31673099985346,
+      "jinaRerankingMs": 517.961267999839,
+      "mappingMs": 0.039235999807715416,
+      "totalMs": 2340.7678390000947,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011088999919593334,
+      "contextBuilderMs": 0.017231000121682882,
+      "generationMs": 1785.9153279997408,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4126.719771000091
+    },
+    "judge": {
+      "questionId": "q127",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les trois exigences de l’article L4221-1 : aménagement garantissant la sécurité, état constant de propreté, et conditions d’hygiène et de salubrité assurant la santé. Ces éléments sont explicitement supportés par la source 1. Le complément relatif à l’article R4534-138 est également fidèle à la source 2, bien qu’il ne soit pas nécessaire pour répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et reproduit explicitement toutes les exigences visées par la question : sécurité lors de l'utilisation, état constant de propreté, et conditions d'hygiène et de salubrité assurant la santé. La source 2 est pertinente pour le complément, plus spécifique aux locaux fermés sur certains chantiers, et couvre les précisions citées sur l'aération, l'ambiance thermique, la sécurité et l'aménagement. Toutes les affirmations substantielles de la réponse sont ainsi couvertes."
+    }
+  },
+  "failureStage": "none"
+}

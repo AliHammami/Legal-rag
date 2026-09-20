@@ -1,0 +1,95 @@
+{
+  "questionId": "q043",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 721-1 du Code pénal**, l’application des livres Ier à V du Code pénal au Département-Région de Mayotte tient compte des **adaptations prévues par le titre concerné** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "721-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2492"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R920-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.4104019999504,
+      "vectorSearchMs": 584.4051980000222,
+      "jinaRerankingMs": 533.069618999958,
+      "mappingMs": 0.03320299996994436,
+      "totalMs": 1324.949527000077,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010800999938510358,
+      "contextBuilderMs": 0.026650000014342368,
+      "generationMs": 1236.6706680000061,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2561.6656760000624
+    },
+    "judge": {
+      "questionId": "q043",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article 721-1 : l’application des livres Ier à V à Mayotte tient compte des adaptations prévues par le présent titre. Elle répond directement à la question et est explicitement étayée par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 721-1 et énonce précisément la spécificité demandée : l'application des livres Ier à V à Mayotte tient compte des adaptations prévues par le présent titre. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 721-1 du Code pénal, l’application des livres Ier à V à Mayotte tient compte des adaptations prévues par le titre concerné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1106.7497679999797,
+      "routingCalls": 1,
+      "embeddingMs": 183.63161400007084,
+      "vectorSearchMs": 47.84276099991985,
+      "jinaRerankingMs": 510.42922300007194,
+      "mappingMs": 0.022711000056006014,
+      "totalMs": 1848.6997609999962,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010669999988749623,
+      "contextBuilderMs": 0.013904000050388277,
+      "generationMs": 1208.3428019999992,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3057.0761710000224
+    },
+    "judge": {
+      "questionId": "q043",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article 721-1 : l’application des livres Ier à V à Mayotte doit tenir compte des adaptations prévues par le titre concerné. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 721-1 et répond exactement à la spécificité demandée : l’application des livres Ier à V dans le Département-Région de Mayotte tient compte des adaptations prévues par le titre. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q086",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 1302 du Code civil**, un paiement suppose nécessairement l’existence d’une **dette** : « tout paiement suppose une dette » [Source 1].\n\nLa restitution est normalement due lorsque la somme ou la chose a été reçue **sans être due**. Elle est toutefois exclue lorsque le paiement concerne une **obligation naturelle** qui a été **volontairement acquittée** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.99446499999613,
+      "vectorSearchMs": 664.9898719999474,
+      "jinaRerankingMs": 494.5848499999847,
+      "mappingMs": 0.08158200001344085,
+      "totalMs": 1403.6833649999462,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012174000032246113,
+      "contextBuilderMs": 0.016897000139579177,
+      "generationMs": 1979.6654489999637,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3383.3871339999605
+    },
+    "judge": {
+      "questionId": "q086",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les deux règles de l’article 1302 : tout paiement suppose une dette, et la restitution est exclue pour les obligations naturelles volontairement acquittées. L’ajout sur la restitution de ce qui a été reçu sans être dû est également exact et directement supporté par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 1302 et répond exactement aux deux volets de la question : la nécessité d’une dette pour tout paiement et l’exclusion de la restitution pour les obligations naturelles volontairement acquittées. Elle couvre également l’affirmation complémentaire de la réponse sur la restitution de ce qui a été reçu sans être dû."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 1302 du Code civil**, la validité d’un paiement suppose l’existence d’une dette : **« tout paiement suppose une dette »**. Un paiement effectué sans dette est indu et doit en principe être restitué. [Source 1]\n\nLa restitution est toutefois exclue lorsque le paiement concerne une **obligation naturelle qui a été volontairement acquittée**. [Source 1]\n\nPar ailleurs, la restitution peut être réduite si le paiement résulte d’une faute, conformément à l’**article 1302-3 du Code civil**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1302-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1124.0975960001815,
+      "routingCalls": 1,
+      "embeddingMs": 245.73295699991286,
+      "vectorSearchMs": 72.17574400012381,
+      "jinaRerankingMs": 487.3979690000415,
+      "mappingMs": 0.03354199999012053,
+      "totalMs": 1929.465320999967,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009639000054448843,
+      "contextBuilderMs": 0.01728900009766221,
+      "generationMs": 1758.075371999992,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3687.575616999995
+    },
+    "judge": {
+      "questionId": "q086",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la condition (« tout paiement suppose une dette ») et l’exception à la restitution relative aux obligations naturelles volontairement acquittées. L’ajout sur l’article 1302-3 est exact, pertinent à la restitution et explicitement supporté par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement les deux règles demandées par la question : le paiement suppose une dette et l’absence de restitution pour les obligations naturelles volontairement acquittées. La source 2 est également pertinente pour l'ajout relatif à la réduction possible de la restitution en cas de faute. Toutes les affirmations importantes de la réponse générée sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

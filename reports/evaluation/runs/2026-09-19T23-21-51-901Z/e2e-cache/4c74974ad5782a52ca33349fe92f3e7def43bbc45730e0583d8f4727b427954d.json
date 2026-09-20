@@ -1,0 +1,91 @@
+{
+  "questionId": "q280",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 464-2 du Code monétaire et financier, sont punis les membres des organes d’administration, de direction et de surveillance, ainsi que les dirigeants, salariés et préposés des entreprises de marché qui violent le secret professionnel institué à l’article L. 421-8. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L464-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L464-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 264.35425700061023,
+      "vectorSearchMs": 624.18634200003,
+      "jinaRerankingMs": 504.6890259999782,
+      "mappingMs": 0.05341600067913532,
+      "totalMs": 1393.309145999141,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.023606999777257442,
+      "contextBuilderMs": 0.026866999454796314,
+      "generationMs": 1473.417019999586,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2866.7964970003814
+    },
+    "judge": {
+      "questionId": "q280",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement toutes les catégories de personnes visées par l’article L. 464-2. Elle est directement étayée par le contexte. Elle omet seulement la réserve relative à l’article 226-14 du code pénal, élément accessoire à la question sur les personnes punies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 464-2 et énumère exactement les personnes visées (membres des organes d’administration, de direction et de surveillance, dirigeants, salariés et préposés des entreprises de marché) en cas de violation du secret de l’article L. 421-8. Elle couvre intégralement l’affirmation de la réponse générée. La source 2 est non nécessaire mais n’affecte pas l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne contiennent ni l’article L. 421-8 ni l’article L. 464-2 du Code de commerce. Elles ne permettent donc pas de déterminer précisément qui est puni en cas de violation du secret professionnel institué par l’article L. 421-8.\n\nElles indiquent seulement que la divulgation, par l’une des parties, d’informations obtenues lors des communications ou consultations est punie des peines prévues à l’article 226-13 du Code pénal — Article L. 463-6 du Code de commerce [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L463-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4295.188860000111,
+      "routingCalls": 1,
+      "embeddingMs": 235.5737039996311,
+      "vectorSearchMs": 243.30626299977303,
+      "jinaRerankingMs": 526.0144870001823,
+      "mappingMs": 0.04495500028133392,
+      "totalMs": 5300.155104000121,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010343000292778015,
+      "contextBuilderMs": 0.05391500052064657,
+      "generationMs": 2361.5985510004684,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7661.8254849994555
+    },
+    "judge": {
+      "questionId": "q280",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question : elle n’identifie pas les catégories de personnes punies, à savoir les membres des organes d’administration, de direction et de surveillance, les dirigeants, salariés et préposés des entreprises de marché. Elle constate correctement que les articles L. 421-8 et L. 464-2 ne figurent pas dans le contexte et décrit fidèlement la règle distincte de l’article L. 463-6 fournie. Toutefois, elle s’abstient de répondre alors que l’abstention n’était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source L. 463-6 ne répond pas directement à la question portant sur les articles L. 421-8 et L. 464-2 : elle traite d’une règle distincte de divulgation d’informations lors de communications ou consultations. Elle est donc seulement marginalement pertinente. En revanche, elle couvre les affirmations de la réponse générée : elle ne contient effectivement ni L. 421-8 ni L. 464-2 et elle prévoit bien une sanction renvoyant à l’article 226-13 du code pénal pour la divulgation des informations décrites."
+    }
+  },
+  "failureStage": "generation"
+}

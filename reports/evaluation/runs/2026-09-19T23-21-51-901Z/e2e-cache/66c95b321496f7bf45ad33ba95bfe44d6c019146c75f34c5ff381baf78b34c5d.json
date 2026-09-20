@@ -1,0 +1,99 @@
+{
+  "questionId": "q224",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En vertu de l’**article L310-2 du Code de commerce [Source 1]**, les ventes au déballage sont soumises aux conditions et restrictions suivantes :\n\n- **Définition** : il s’agit des ventes ou rachats de marchandises réalisés dans des locaux ou emplacements qui ne sont pas destinés habituellement à la vente au public ou au rachat de ces marchandises, ainsi que des ventes réalisées à partir de véhicules spécialement aménagés.\n- **Durée maximale** : elles ne peuvent pas excéder **deux mois par année civile** dans un même local, sur un même emplacement ou dans un même arrondissement.\n- **Exception pour les fruits et légumes** : les ventes de fruits et légumes frais réalisées pendant une période de crise conjoncturelle ne sont pas prises en compte dans cette limite.\n- **Participation des particuliers** : les particuliers qui ne sont pas inscrits au registre du commerce et des sociétés ne peuvent y participer que pour vendre exclusivement des **objets personnels et usagés**, et **au plus deux fois par an**.\n- **Contrôle** : les ventes au déballage autorisées aux particuliers sont contrôlées au moyen du registre prévu par l’article 321-7 du Code pénal, conformément à l’**article R310-9 du Code de commerce [Source 2]**.\n\nCertaines opérations sont toutefois exclues de ces règles, notamment :\n\n1. les tournées de ventes définies par l’article L121-22, 1°, du Code de la consommation ;\n2. les ventes définies par l’article L320-2 du Code de commerce ;\n3. les ventes réalisées sur la voie publique par des professionnels disposant d’une permission de voirie ou d’un permis de stationnement ;\n4. les manifestations commerciales organisées dans un parc d’exposition ;\n5. les salons professionnels ne se tenant pas dans un parc d’exposition ;\n6. les fêtes foraines et manifestations agricoles lorsque seuls des producteurs ou éleveurs y exposent. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L310-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R310-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.8000699998811,
+      "vectorSearchMs": 622.5431809998117,
+      "jinaRerankingMs": 537.455006999895,
+      "mappingMs": 0.02622300013899803,
+      "totalMs": 1376.8499659998342,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009960000403225422,
+      "contextBuilderMs": 0.01695400010794401,
+      "generationMs": 4005.3859369996935,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5382.274765999988
+    },
+    "judge": {
+      "questionId": "q224",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la définition, la limite de deux mois, l’exception relative aux fruits et légumes frais en crise conjoncturelle, les conditions de participation des particuliers, ainsi que l’ensemble des exclusions applicables aux professionnels et organisateurs. Le contrôle par registre est également exact et explicitement fondé sur la source 2. Toutes les affirmations importantes sont soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle contient la définition des ventes au déballage, la limite de durée, l’exception relative aux fruits et légumes, les conditions applicables aux particuliers et l’ensemble des exclusions citées. La source 2 est directement pertinente pour l’affirmation sur le contrôle par registre. Toutes les affirmations importantes de la réponse sont explicitement couvertes par ces sources."
+    }
+  },
+  "routing": {
+    "answer": "En vertu de l’**article L310-2 du Code de commerce**, sont considérées comme des ventes au déballage les ventes ou rachats de marchandises :\n\n- dans des locaux ou emplacements qui ne sont pas destinés habituellement à la vente au public ou au rachat de ces marchandises ;\n- ou à partir de véhicules spécialement aménagés à cette fin.  \n[Article L310-2 du Code de commerce, I — Source 1]\n\nLes principales restrictions sont les suivantes :\n\n1. **Limitation de durée**  \n   Une vente au déballage ne peut pas excéder **deux mois par année civile** dans un même local, sur un même emplacement ou dans un même arrondissement. Les ventes de fruits et légumes frais réalisées pendant une période de crise conjoncturelle ne sont pas prises en compte dans cette limite. [Source 1]\n\n2. **Participation des particuliers**  \n   Les particuliers qui ne sont pas inscrits au registre du commerce et des sociétés peuvent participer à ces ventes **au maximum deux fois par an**. Ils ne peuvent y vendre que des **objets personnels et usagés**. [Source 1]  \n   Ces ventes sont contrôlées au moyen du registre prévu par l’article 321-7 du Code pénal. [Article R310-9 du Code de commerce — Source 2]\n\n3. **Déclaration préalable**  \n   L’organisateur doit adresser une déclaration préalable au maire :\n\n   - lorsque la vente a lieu sur le domaine public, dans les mêmes délais que la demande d’autorisation d’occupation temporaire, et concomitamment à celle-ci lorsque le maire est compétent ;\n   - dans les autres cas, **au moins quinze jours avant** le début de la vente.  \n   [Article R310-8 du Code de commerce, I — Source 3]\n\n   Cette déclaration est adressée par lettre recommandée avec demande d’avis de réception ou remise contre récépissé. [Source 3]\n\n4. **Exceptions au régime de l’article L310-2**  \n   Les règles du I ne s’appliquent pas :\n\n   - aux professionnels effectuant certaines tournées de ventes ;\n   - aux professionnels réalisant les ventes définies à l’article L320-2 ;\n   - aux professionnels disposant d’une permission de voirie ou d’un permis de stationnement pour les ventes sur la voie publique ;\n   - aux manifestations commerciales organisées dans un parc d’exposition ;\n   - aux salons professionnels ne se tenant pas dans un parc d’exposition ;\n   - aux fêtes foraines et manifestations agricoles lorsque seuls des producteurs ou éleveurs y exposent.  \n   [Article L310-2 du Code de commerce, II et III — Source 1]\n\nEnfin, les délais de déclaration ne s’appliquent pas aux ventes de fruits et légumes frais réalisées pendant une crise conjoncturelle, ou en prévision de celle-ci, lorsqu’elles sont décidées conjointement par les ministres compétents dans le but de favoriser un déstockage rapide. [Article R310-8 du Code de commerce, II — Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L310-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R310-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R310-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.5270159998909,
+      "routingCalls": 1,
+      "embeddingMs": 233.51859099976718,
+      "vectorSearchMs": 250.68774100020528,
+      "jinaRerankingMs": 570.7806139998138,
+      "mappingMs": 0.04015899961814284,
+      "totalMs": 2181.582928999793,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010478000156581402,
+      "contextBuilderMs": 0.02180500002577901,
+      "generationMs": 6522.209305000026,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8703.833400999662
+    },
+    "judge": {
+      "questionId": "q224",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement la définition des ventes au déballage, la limite de deux mois par an et par lieu/arrondissement, l’exception relative aux fruits et légumes frais en crise conjoncturelle, ainsi que les règles applicables aux particuliers et les exceptions prévues pour certains professionnels et organisateurs. Elle ajoute de façon exacte les modalités de déclaration préalable et leur exception, toutes expressément étayées par les sources R310-8 et R310-9 fournies. Elle répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L310-2 couvre la définition, la limite de durée, le régime des particuliers et les exceptions ; R310-8 couvre la déclaration préalable et son exception pour les fruits et légumes ; R310-9 couvre le contrôle par registre. Elles étayent toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

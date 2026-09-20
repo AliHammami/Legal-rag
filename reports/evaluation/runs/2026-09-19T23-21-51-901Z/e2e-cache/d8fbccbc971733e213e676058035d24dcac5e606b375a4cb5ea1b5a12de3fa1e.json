@@ -1,0 +1,95 @@
+{
+  "questionId": "q062",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 544 du Code civil définit le droit de propriété comme le droit de **jouir des choses et d’en disposer de la manière la plus absolue**. Cela signifie que le propriétaire peut utiliser son bien et en décider librement.\n\nToutefois, ce droit n’est pas illimité : son exercice ne doit pas constituer un **usage prohibé par les lois ou les règlements**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2227"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "544"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 270.5945609998889,
+      "vectorSearchMs": 617.9271730000619,
+      "jinaRerankingMs": 491.4167189998552,
+      "mappingMs": 0.033085000002756715,
+      "totalMs": 1379.9963049998041,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00963200000114739,
+      "contextBuilderMs": 0.018820999888703227,
+      "generationMs": 1844.3192430001218,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3224.351877000183
+    },
+    "judge": {
+      "questionId": "q062",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article 544 et sa limite explicite : l’usage ne doit pas être prohibé par les lois ou règlements. Les précisions sur l’utilisation et la libre disposition du bien sont cohérentes avec le texte et l’ensemble est directement étayé par la source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 544 et répond exactement aux deux volets de la question : définition du droit de propriété (« jouir et disposer ») et limite (« usage prohibé par les lois ou les règlements »). Elle couvre également les affirmations essentielles de la réponse générée. La source 1 est non nécessaire mais ne diminue pas la pertinence de l’ensemble."
+    }
+  },
+  "routing": {
+    "answer": "L’**article 544 du Code civil** définit le droit de propriété comme le droit de **jouir** des choses et d’en **disposer de la manière la plus absolue** [Source 2].\n\nCe droit connaît toutefois une limite : son titulaire ne doit pas en faire un usage **prohibé par les lois ou les règlements** [Source 2]. Ainsi, la propriété est très étendue, mais elle ne permet pas d’utiliser ou de disposer d’un bien en violation des règles légales ou réglementaires.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2227"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "544"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.2419259999879,
+      "routingCalls": 1,
+      "embeddingMs": 214.32332399999723,
+      "vectorSearchMs": 56.93932299991138,
+      "jinaRerankingMs": 562.9195650001056,
+      "mappingMs": 0.03127199993468821,
+      "totalMs": 1959.481138000032,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.08057400002144277,
+      "contextBuilderMs": 0.017007000045850873,
+      "generationMs": 2136.466933999909,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4096.054098000051
+    },
+    "judge": {
+      "questionId": "q062",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l'article 544 du Code civil (« jouir » et « disposer » de la manière la plus absolue) ainsi que sa limite explicite, l'interdiction d'un usage prohibé par les lois ou règlements. Toutes les affirmations essentielles sont directement étayées par la source 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 544 du Code civil et répond exactement aux deux volets de la question : la définition du droit de propriété (jouir et disposer des choses de la manière la plus absolue) et sa limite explicite (absence d’usage prohibé par les lois ou règlements). Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

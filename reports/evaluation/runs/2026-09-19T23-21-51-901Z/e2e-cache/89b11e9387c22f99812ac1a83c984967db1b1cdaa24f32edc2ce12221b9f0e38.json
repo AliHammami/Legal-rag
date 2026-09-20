@@ -1,0 +1,95 @@
+{
+  "questionId": "q187",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "À la clôture de chaque exercice, le conseil d’administration, le directoire ou les gérants doivent dresser :\n\n- l’inventaire ;\n- les comptes annuels, conformément aux dispositions applicables.\n\n**Article L232-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.4838470001705,
+      "vectorSearchMs": 612.8454450001009,
+      "jinaRerankingMs": 535.0035630003549,
+      "mappingMs": 0.031461999751627445,
+      "totalMs": 1379.392051000148,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010327000170946121,
+      "contextBuilderMs": 0.022446000017225742,
+      "generationMs": 1680.4931060001254,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3059.9263470000587
+    },
+    "judge": {
+      "questionId": "q187",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que doivent être dressés l’inventaire et les comptes annuels. Elle est directement étayée par l’article L232-1 fourni dans le contexte. La formulation « dispositions applicables » est légèrement moins précise que la référence quant à la section et au chapitre, mais ne retire aucun élément essentiel à la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit le passage de l’article L232-1 indiquant qu’à la clôture de chaque exercice, les organes visés dressent l’inventaire et les comptes annuels conformément aux dispositions mentionnées. Elle couvre les deux éléments essentiels affirmés dans la réponse générée. La source 2 n’est pas nécessaire à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "À la clôture de chaque exercice, le conseil d’administration, le directoire ou les gérants doivent dresser :\n\n- l’inventaire ;\n- les comptes annuels, conformément aux dispositions applicables du Code de commerce.\n\n[Article L232-1 du Code de commerce — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.1081819999963,
+      "routingCalls": 1,
+      "embeddingMs": 248.1366399996914,
+      "vectorSearchMs": 168.06480999989435,
+      "jinaRerankingMs": 563.3020520000719,
+      "mappingMs": 0.06484000012278557,
+      "totalMs": 2412.72116299998,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013888000044971704,
+      "contextBuilderMs": 0.01585800014436245,
+      "generationMs": 2007.6677920003422,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4420.43099100003
+    },
+    "judge": {
+      "questionId": "q187",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l’inventaire et les comptes annuels, et précise qu’ils sont établis conformément aux dispositions applicables du Code de commerce. Ces éléments sont directement supportés par l’extrait de l’article L232-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'énoncé de l'article L232-1 selon lequel, à la clôture de chaque exercice, les organes visés dressent l'inventaire et les comptes annuels conformément aux dispositions indiquées. Elle couvre les deux éléments essentiels de la réponse générée. La source 2 est non nécessaire mais ne nuit pas à l'évaluation."
+    }
+  },
+  "failureStage": "none"
+}

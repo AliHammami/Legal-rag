@@ -1,0 +1,87 @@
+{
+  "questionId": "q036",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le fait de donner volontairement la mort, sans nécessité, à un animal domestique est puni de :\n\n- **six mois d’emprisonnement** ;\n- **7 500 euros d’amende**.\n\nCette infraction concerne également les animaux apprivoisés ou tenus en captivité, lorsqu’elle est commise hors du cadre d’activités légales. **Article 522-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 189.94979100010823,
+      "vectorSearchMs": 585.9789660000242,
+      "jinaRerankingMs": 1933.068855999969,
+      "mappingMs": 0.04351500002667308,
+      "totalMs": 2709.0748380000005,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011912000016309321,
+      "contextBuilderMs": 0.02063300006557256,
+      "generationMs": 1325.7254249999532,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4034.8401739998953
+    },
+    "judge": {
+      "questionId": "q036",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues : six mois d’emprisonnement et 7 500 euros d’amende. Elle ajoute, de manière exacte et explicitement étayée par le contexte, le champ concernant les animaux apprivoisés ou tenus en captivité et la condition tenant au cadre d’activités légales."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 522-1 du Code pénal, qui vise la mise à mort volontaire et sans nécessité d’un animal domestique et prévoit exactement six mois d’emprisonnement et 7 500 euros d’amende. Elle couvre également les précisions ajoutées sur les animaux apprivoisés ou tenus en captivité ainsi que la condition relative au cadre d’activités légales."
+    }
+  },
+  "routing": {
+    "answer": "Le fait de donner volontairement la mort, sans nécessité, à un animal domestique est puni de **six mois d’emprisonnement** et de **7 500 euros d’amende**, lorsque les faits sont commis hors du cadre d’activités légales. **Article 522-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1229.406445999979,
+      "routingCalls": 1,
+      "embeddingMs": 242.60974200000055,
+      "vectorSearchMs": 30.401924000005238,
+      "jinaRerankingMs": 590.3843199999537,
+      "mappingMs": 0.029276999994181097,
+      "totalMs": 2092.8599440000253,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011163000017404556,
+      "contextBuilderMs": 0.01014599995687604,
+      "generationMs": 1281.5642509999452,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3374.45583900006
+    },
+    "judge": {
+      "questionId": "q036",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues (six mois d’emprisonnement et 7 500 euros d’amende) et précise correctement la condition légale « hors du cadre d’activités légales ». Toutes les affirmations sont directement étayées par le contexte de l’article 522-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 522-1 du Code pénal, qui vise précisément le fait de donner volontairement la mort, sans nécessité, à un animal domestique hors du cadre d’activités légales. Elle énonce explicitement les peines de six mois d’emprisonnement et 7 500 euros d’amende, ainsi que la condition mentionnée dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

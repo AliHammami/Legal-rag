@@ -1,0 +1,95 @@
+{
+  "questionId": "q192",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L236-1 du Code de commerce, une société en liquidation peut transmettre son patrimoine par voie de fusion uniquement si la répartition de ses actifs entre les associés n’a pas commencé à être exécutée. La fusion peut alors être réalisée au profit d’une société existante ou d’une société nouvelle constituée à cette fin. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 279.24459699960425,
+      "vectorSearchMs": 596.9237589999102,
+      "jinaRerankingMs": 650.5827000001445,
+      "mappingMs": 0.035528999753296375,
+      "totalMs": 1526.8120220000856,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01496999990195036,
+      "contextBuilderMs": 0.020030000247061253,
+      "generationMs": 2052.888300999999,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3579.7432329999283
+    },
+    "judge": {
+      "questionId": "q192",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la condition prévue par l’article L236-1 : l’absence de début d’exécution de la répartition des actifs entre les associés. Elle ajoute correctement que la transmission peut se faire au profit d’une société existante ou nouvelle, élément également expressément contenu dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L236-1 et énonce expressément la condition applicable aux sociétés en liquidation : la répartition des actifs entre associés ne doit pas avoir fait l’objet d’un début d’exécution. Elle couvre également l’affirmation complémentaire selon laquelle la fusion peut bénéficier à une société existante ou à une société nouvelle. La source 2 est moins directement pertinente car relative à la scission, mais elle n’est pas nécessaire à la couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L236-1 du Code de commerce, une société en liquidation peut transmettre son patrimoine par voie de fusion à condition que **la répartition de ses actifs entre les associés n’ait pas commencé à être exécutée**. [Source 1]\n\nLa fusion peut intervenir au profit :\n\n- d’une société existante ; ou\n- d’une société nouvelle constituée à cette fin.\n\nLes associés reçoivent en contrepartie des parts ou actions de la société bénéficiaire, éventuellement assorties d’une soulte en espèces plafonnée à **10 % de la valeur nominale** des titres attribués. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L236-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1353.2890800000168,
+      "routingCalls": 1,
+      "embeddingMs": 206.71418299991637,
+      "vectorSearchMs": 190.8988290000707,
+      "jinaRerankingMs": 548.1543939998373,
+      "mappingMs": 0.03560899989679456,
+      "totalMs": 2299.120747999754,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013087000232189894,
+      "contextBuilderMs": 0.019133999943733215,
+      "generationMs": 1593.3388869999908,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3892.4994009998627
+    },
+    "judge": {
+      "questionId": "q192",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La condition essentielle est exactement énoncée : la répartition des actifs entre les associés ne doit pas avoir commencé à être exécutée. Les précisions supplémentaires sur la fusion au profit d'une société existante ou nouvelle, les titres remis aux associés et la soulte maximale de 10 % sont exactes et explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l’article L236-1 directement visé par la question. Elle énonce expressément la condition applicable aux sociétés en liquidation, ainsi que les précisions additionnelles données dans la réponse (société bénéficiaire existante ou nouvelle, attribution de titres et soulte plafonnée à 10 %). Elle couvre donc l’ensemble des affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q163",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les formations communes visant à améliorer les pratiques du dialogue social dans les entreprises peuvent bénéficier :\n\n- aux salariés et aux employeurs ou à leurs représentants ;\n- aux magistrats judiciaires ou administratifs et à d’autres agents de la fonction publique, qui peuvent également les suivre ou y participer.\n\nElles sont dispensées par des centres, instituts ou organismes de formation. L’Institut national du travail, de l’emploi et de la formation professionnelle contribue à leur création et à leur mise en œuvre.\n\nCes formations sont suivies conjointement par les salariés et les employeurs ou leurs représentants respectifs sur un même site. [Sources 1 et 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.25195499975234,
+      "vectorSearchMs": 558.760437999852,
+      "jinaRerankingMs": 522.3012580000795,
+      "mappingMs": 0.056474000215530396,
+      "totalMs": 1297.4427499999292,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012281000148504972,
+      "contextBuilderMs": 0.014669999945908785,
+      "generationMs": 1402.0097960000858,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2699.4885499998927
+    },
+    "judge": {
+      "questionId": "q163",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les salariés, les employeurs ou leurs représentants comme bénéficiaires, ainsi que les centres, instituts ou organismes de formation comme dispensateurs. Elle ajoute à juste titre que des magistrats et agents publics peuvent suivre ou participer aux formations, et que l'Institut national du travail, de l'emploi et de la formation professionnelle concourt à leur création et mise en œuvre. Toutes ces précisions, ainsi que le suivi conjoint sur un même site, sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l'article L2212-1 identifie les salariés et employeurs ou leurs représentants comme bénéficiaires, les centres, instituts ou organismes comme dispensateurs, le concours de l'Institut national du travail, de l'emploi et de la formation professionnelle, ainsi que la possibilité pour des magistrats et agents publics de suivre les formations. L'article R2212-1 couvre le suivi conjoint sur un même site et la participation éventuelle des magistrats et agents publics. Toutes les affirmations importantes de la réponse générée sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les formations communes peuvent bénéficier :\n\n- aux **salariés et aux employeurs ou à leurs représentants** ;\n- également, le cas échéant, aux **magistrats judiciaires ou administratifs** et aux **agents de la fonction publique**.  \nElles sont suivies conjointement par les salariés et les employeurs ou leurs représentants sur un même site [Sources 1 et 2].\n\nCes formations sont dispensées par des **centres, instituts ou organismes de formation**. L’Institut national du travail, de l’emploi et de la formation professionnelle contribue à leur création et à leur mise en œuvre [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1180.246168000158,
+      "routingCalls": 1,
+      "embeddingMs": 248.50726100010797,
+      "vectorSearchMs": 227.98603800032288,
+      "jinaRerankingMs": 1658.5607719998807,
+      "mappingMs": 0.037482999730855227,
+      "totalMs": 3315.3656609999016,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01434599980711937,
+      "contextBuilderMs": 0.019557000137865543,
+      "generationMs": 2366.864593000151,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5682.274861000013
+    },
+    "judge": {
+      "questionId": "q163",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les bénéficiaires principaux (salariés, employeurs ou leurs représentants) et les organismes dispensateurs (centres, instituts ou organismes de formation). Les précisions sur la participation possible des magistrats et agents publics, le suivi conjoint et le concours de l’INTEFP sont exactes et explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 (L. 2212-1) et 2 (R. 2212-1) sont directement pertinentes. Elles identifient les salariés et employeurs ou représentants comme bénéficiaires, prévoient la participation éventuelle des magistrats et agents publics, imposent le suivi conjoint sur un même site et désignent les centres, instituts ou organismes de formation comme dispensateurs. La source 1 couvre aussi le concours de l’INTEFP à la création et à la mise en œuvre."
+    }
+  },
+  "failureStage": "none"
+}

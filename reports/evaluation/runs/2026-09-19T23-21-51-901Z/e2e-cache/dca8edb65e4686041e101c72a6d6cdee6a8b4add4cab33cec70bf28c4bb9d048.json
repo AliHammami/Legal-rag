@@ -1,0 +1,87 @@
+{
+  "questionId": "q413",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En l’absence de registres d’état civil, ou lorsque ceux-ci ont été perdus, les actes peuvent être prouvés :\n\n- par des **titres** ou des **témoignages** ;\n- pour les mariages, naissances et décès, par les **registres et papiers provenant des parents décédés**, ainsi que par des témoins ;\n- lorsque les originaux ont été détruits ou ont disparu à la suite d’un sinistre ou de faits de guerre, par un **acte de notoriété**, jusqu’à la reconstitution ou la restitution des registres. [Source 1]\n\nCet acte de notoriété est délivré par un **notaire**, établi sur la base des déclarations d’au moins **trois témoins** et de tout autre document utile. Il est signé par le notaire et les témoins. Les déclarants et les témoins encourent les peines prévues par l’article 441-4 du Code pénal en cas de fausse déclaration. **Article 46 du Code civil [Source 1]**\n\nEn revanche, la source fournie ne contient aucune règle relative à l’**application immédiate des lois nouvelles** ni à leur effet sur la validité des actes d’état civil. Il n’est donc pas possible de déterminer, à partir de ce seul contexte, comment une loi nouvelle affecterait ces actes.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "46"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.98160099983215,
+      "vectorSearchMs": 630.4232909996063,
+      "jinaRerankingMs": 511.4886849997565,
+      "mappingMs": 0.024205000139772892,
+      "totalMs": 1345.944563999772,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010603000409901142,
+      "contextBuilderMs": 0.01202200073748827,
+      "generationMs": 3161.669534999877,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4507.644562999718
+    },
+    "judge": {
+      "questionId": "q413",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les modalités de preuve prévues par l’article 46 du code civil, y compris l’acte de notoriété notarié fondé sur au moins trois témoins. Elle ne répond toutefois pas au second volet relatif à l’application immédiate des lois nouvelles et à la validité des actes antérieurs, alors que cet élément était attendu. Son refus de conclure sur ce point est entièrement justifié par le contexte effectivement fourni, qui ne contient que l’article 46 du code civil."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente et très détaillée pour le premier volet relatif à la preuve des actes d’état civil en cas d’absence, perte ou destruction des registres. Elle ne traite pas de l’application immédiate des lois nouvelles, mais elle permet précisément de justifier l’absence de réponse affirmative sur ce second volet, la réponse générée constatant explicitement cette lacune sans formuler d’affirmation non sourcée. Les affirmations substantielles de la réponse sont donc couvertes."
+    }
+  },
+  "routing": {
+    "answer": "En l’absence de registres d’état civil ou lorsque ceux-ci ont été perdus, les actes peuvent être prouvés :\n\n- par des **titres** et des **témoignages** ;\n- pour les mariages, naissances et décès, par les **registres et papiers provenant des parents décédés**, ainsi que par des témoins ;\n- jusqu’à la reconstitution ou la restitution des registres, par un **acte de notoriété** lorsque les originaux ont été détruits ou ont disparu à la suite d’un sinistre ou de faits de guerre.\n\nL’acte de notoriété est délivré par un **notaire**. Il repose sur les déclarations d’au moins **trois témoins** et sur tout document établissant l’état civil de l’intéressé ; il est signé par le notaire et les témoins. Les requérants et témoins encourent les peines prévues par l’article 441-4 du Code pénal. **Article 46 du Code civil [Source 1].**\n\nEn revanche, le contexte fourni ne contient aucune règle relative à l’**application immédiate des lois nouvelles** ni à ses effets sur la validité de ces actes. Il ne permet donc pas de déterminer si une loi nouvelle affecterait leur validité.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "46"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1538.9266590001062,
+      "routingCalls": 1,
+      "embeddingMs": 173.50177499931306,
+      "vectorSearchMs": 89.83746000006795,
+      "jinaRerankingMs": 505.34932800009847,
+      "mappingMs": 0.027633999474346638,
+      "totalMs": 2307.6651229998097,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012381999753415585,
+      "contextBuilderMs": 0.013159000314772129,
+      "generationMs": 2711.6269549997523,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5019.325674000196
+    },
+    "judge": {
+      "questionId": "q413",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue avec précision les modalités de preuve prévues par l’article 46 du Code civil (titres, témoins, papiers des parents décédés, acte de notoriété notarié fondé sur au moins trois témoins). En revanche, elle ne répond pas au second volet essentiel relatif à l’application immédiate des lois nouvelles : la référence indique que l’article 112-4 du Code pénal préserve la validité des actes accomplis sous la loi ancienne. Cette omission est toutefois entièrement justifiée au regard du contexte effectivement fourni, qui ne contient que l’article 46 du Code civil. Toutes les affirmations positives sont donc fortement étayées par le contexte, mais la réponse ne traite pas complètement une question pour laquelle une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "La source 1 est directement pertinente pour le premier volet : elle couvre les titres, témoignages, papiers des parents décédés et l’acte de notoriété notarié avec au moins trois témoins. Elle ne fournit aucune règle sur l’application immédiate des lois nouvelles ni sur la préservation de la validité des actes accomplis sous la loi ancienne, qui constitue le second volet essentiel de la question. La réponse générée s’abstient explicitement sur ce point, et ce constat est supporté par l’unique source fournie. Ainsi, les affirmations effectivement formulées sont presque toutes couvertes, mais les sources restent insuffisantes pour répondre intégralement à la question."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q453",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après les sources fournies, la **faillite personnelle** entraîne principalement :\n\n- **L’interdiction de diriger, gérer, administrer ou contrôler**, directement ou indirectement, toute entreprise commerciale ou artisanale, exploitation agricole, entreprise exerçant une autre activité indépendante ou personne morale, conformément à l’**article L. 653-2 du Code de commerce** [Source 1].\n- Le tribunal peut également prononcer une **incapacité d’exercer une fonction publique élective**. Cette incapacité dure aussi longtemps que la faillite personnelle, dans la limite de **cinq ans**. Elle prend effet à compter de la notification faite par le ministère public lorsque la décision est devenue définitive, conformément à l’**article L. 653-10 du Code de commerce** [Source 3].\n\nLes sources fournies ne permettent pas de préciser les autres effets éventuels de la faillite.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 166.5801210012287,
+      "vectorSearchMs": 646.4267139993608,
+      "jinaRerankingMs": 550.3666409999132,
+      "mappingMs": 0.026341000571846962,
+      "totalMs": 1363.4176880009472,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010983001440763474,
+      "contextBuilderMs": 0.02472900040447712,
+      "generationMs": 2320.894848998636,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3684.3563520014286
+    },
+    "judge": {
+      "questionId": "q453",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement deux effets spécifiques de la faillite personnelle au regard des articles fournis, mais la question générale sur les effets d'une « faillite » est ambiguë et ne permettait pas de répondre fiablement sans préciser le régime concerné. Elle aurait dû s'abstenir, conformément à l'attendu. Les affirmations avancées sont toutefois directement étayées par les sources 1 et 3."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 3 sont directement pertinentes pour les effets de la faillite personnelle et étayent précisément les deux effets exposés. Elles ne permettent toutefois pas de répondre de manière complète à la question générale et ambiguë sur les effets d’une « faillite », ni d’identifier le régime concerné. La source 2 est sans rapport utile. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes par les sources 1 et 3, y compris le caractère limité des autres précisions disponibles dans le corpus."
+    }
+  },
+  "routing": {
+    "answer": "D’après les sources fournies, les effets de la **faillite personnelle** sont les suivants :\n\n- **Interdiction de diriger, gérer, administrer ou contrôler**, directement ou indirectement, toute entreprise commerciale ou artisanale, toute exploitation agricole, toute entreprise ayant une autre activité indépendante, ainsi que toute personne morale — **Article L. 653-2 du Code de commerce** [Source 1].\n- Le tribunal peut également prononcer une **incapacité d’exercer une fonction publique élective**. Cette incapacité dure aussi longtemps que la faillite personnelle, dans la limite de **cinq ans**. Elle prend effet à compter de la notification de la décision définitive par le ministère public — **Article L. 653-10 du Code de commerce** [Source 3].\n\nLes sources fournies ne permettent pas de préciser les autres effets éventuels d’une faillite au sens général.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.2439070008695,
+      "routingCalls": 1,
+      "embeddingMs": 185.01993099972606,
+      "vectorSearchMs": 640.1647469997406,
+      "jinaRerankingMs": 555.9362560007721,
+      "mappingMs": 0.030379999428987503,
+      "totalMs": 2200.4138200003654,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012328000739216805,
+      "contextBuilderMs": 0.021728001534938812,
+      "generationMs": 2510.728690000251,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4711.1900030002
+    },
+    "judge": {
+      "questionId": "q453",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement deux effets de la faillite personnelle, mais la question porte de façon générale sur les effets d'une faillite et le contexte ne permettait pas de répondre fiablement à cette question large. Elle aurait dû s'abstenir plutôt que de fournir une réponse partielle centrée sur un régime particulier. Les affirmations formulées sont toutefois directement étayées par les articles L. 653-2 et L. 653-10 fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 3 sont directement pertinentes pour les deux effets précis de la faillite personnelle énoncés dans la réponse : l'interdiction de diriger ou gérer (L. 653-2) et la possible incapacité d'exercer une fonction publique élective, avec ses modalités de durée et de prise d'effet (L. 653-10). Elles couvrent donc les affirmations substantielles effectivement formulées. Elles restent toutefois insuffisantes pour répondre de manière générale aux « effets d'une faillite » ou pour établir exhaustivement les autres effets éventuels ; la source 2 est sans lien utile avec la faillite personnelle."
+    }
+  },
+  "failureStage": "abstention"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q229",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L444-1-A du Code de commerce, les chapitres Ier à III du titre concerné :\n\n- s’appliquent à toute convention conclue entre un fournisseur et un acheteur concernant des produits ou services commercialisés sur le territoire français ;\n- ont un caractère d’ordre public ;\n- relèvent, pour les litiges relatifs à leur application, de la compétence exclusive des tribunaux français.\n\nCette compétence s’exerce sous réserve du respect du droit de l’Union européenne et des traités internationaux ratifiés ou approuvés par la France, et sans exclure le recours à l’arbitrage. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1-A"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.25519799999893,
+      "vectorSearchMs": 606.3429680000991,
+      "jinaRerankingMs": 577.6135289999656,
+      "mappingMs": 0.04440900031477213,
+      "totalMs": 1427.2842219998129,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0120749999769032,
+      "contextBuilderMs": 0.05105200037360191,
+      "generationMs": 1641.9209980000742,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3069.2768749999814
+    },
+    "judge": {
+      "questionId": "q229",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement la portée territoriale (conventions entre fournisseur et acheteur portant sur des produits ou services commercialisés en France) et la compétence exclusive des tribunaux français. Elle mentionne correctement les réserves liées au droit de l’UE, aux traités internationaux et à l’arbitrage, ainsi que le caractère d’ordre public figurant dans le contexte. Toutes les affirmations sont directement étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L444-1-A et est exactement pertinente : elle établit le champ territorial (produits ou services commercialisés en France), le caractère d'ordre public, la compétence exclusive des tribunaux français, ainsi que les réserves relatives au droit de l'Union, aux traités internationaux et à l'arbitrage. Toutes les affirmations importantes de la réponse générée y sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L444-1-A du Code de commerce, les chapitres Ier à III du titre concerné :\n\n- s’appliquent à toute convention entre un fournisseur et un acheteur portant sur des produits ou services commercialisés sur le territoire français, quelle que soit l’origine des parties ;\n- sont d’ordre public ;\n- relèvent, pour les litiges concernant leur application, de la compétence exclusive des tribunaux français.\n\nCette compétence s’exerce sous réserve du respect du droit de l’Union européenne et des traités internationaux ratifiés ou approuvés par la France, et sans exclure le recours à l’arbitrage. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1-A"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3995.2928630001843,
+      "routingCalls": 1,
+      "embeddingMs": 205.6690369998105,
+      "vectorSearchMs": 226.99368000030518,
+      "jinaRerankingMs": 555.5803890000097,
+      "mappingMs": 0.03219499997794628,
+      "totalMs": 4983.639787999913,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011018999852240086,
+      "contextBuilderMs": 0.014054999686777592,
+      "generationMs": 1958.086812000256,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6941.758779000025
+    },
+    "judge": {
+      "questionId": "q229",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement le champ territorial (conventions entre fournisseur et acheteur portant sur des produits ou services commercialisés en France), le caractère d’ordre public, la compétence exclusive des tribunaux français, ainsi que les réserves liées au droit de l’UE, aux traités internationaux et à l’arbitrage. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L444-1-A et est exactement pertinente pour la portée territoriale et la compétence juridictionnelle demandées. Elle couvre toutes les affirmations importantes de la réponse générée : conventions entre fournisseur et acheteur, produits ou services commercialisés en France, caractère d’ordre public, compétence exclusive des tribunaux français, réserve du droit de l’Union et des traités internationaux, et maintien du recours à l’arbitrage."
+    }
+  },
+  "failureStage": "none"
+}

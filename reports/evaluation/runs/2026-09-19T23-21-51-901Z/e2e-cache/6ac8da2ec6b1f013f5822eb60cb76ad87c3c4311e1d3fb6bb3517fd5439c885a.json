@@ -1,0 +1,87 @@
+{
+  "questionId": "q080",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour être exécutable sur des biens situés en France, un testament étranger doit :\n\n1. Être enregistré au bureau du domicile du testateur, s’il en a conservé un ;\n2. À défaut, être enregistré au bureau de son dernier domicile connu en France ;\n3. Si le testament contient des dispositions concernant des immeubles situés en France, être également enregistré au bureau de la situation de ces immeubles.\n\nAucun double droit ne peut être exigé pour ces formalités. [Source 1 — Article 1000 du Code civil]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1000"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 252.59751300001517,
+      "vectorSearchMs": 619.4800810001325,
+      "jinaRerankingMs": 532.0735100000165,
+      "mappingMs": 0.024731999961659312,
+      "totalMs": 1404.2013979998883,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011387000093236566,
+      "contextBuilderMs": 0.010103000095114112,
+      "generationMs": 1767.5559849999845,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3171.7865180000663
+    },
+    "judge": {
+      "questionId": "q080",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les formalités prévues : enregistrement au bureau du domicile conservé en France ou, à défaut, du dernier domicile connu, enregistrement supplémentaire au bureau de situation des immeubles français concernés, et absence de double droit. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article 1000 du Code civil, répond directement à la question et énonce précisément toutes les formalités mentionnées dans la réponse : enregistrement au bureau du domicile conservé, à défaut au dernier domicile connu en France, enregistrement supplémentaire pour les immeubles situés en France et absence de double droit."
+    }
+  },
+  "routing": {
+    "answer": "Pour être exécutable sur des biens situés en France, un testament fait à l’étranger doit :\n\n- être enregistré au bureau du domicile du testateur, s’il en a conservé un ;\n- à défaut, être enregistré au bureau de son dernier domicile connu en France ;\n- s’il contient des dispositions concernant des immeubles situés en France, être également enregistré au bureau de la situation de ces immeubles.\n\nAucun double droit ne peut être exigé pour ces formalités. [Source 1 — Article 1000 du Code civil]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1000"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1637.5680289999582,
+      "routingCalls": 1,
+      "embeddingMs": 205.66390499984846,
+      "vectorSearchMs": 56.027782999910414,
+      "jinaRerankingMs": 515.2142619998194,
+      "mappingMs": 0.03209999995306134,
+      "totalMs": 2414.5356959998608,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010789999971166253,
+      "contextBuilderMs": 0.010070000076666474,
+      "generationMs": 1558.4714220000897,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3973.036119000055
+    },
+    "judge": {
+      "questionId": "q080",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement toutes les formalités prévues : enregistrement au bureau du domicile conservé en France ou, à défaut, du dernier domicile connu, enregistrement supplémentaire au bureau de situation des immeubles français concernés, et absence de double droit. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 1000 du Code civil, directement applicable aux testaments faits à l’étranger devant être exécutés sur des biens situés en France. Elle couvre expressément l’enregistrement au bureau du domicile conservé du testateur ou, à défaut, de son dernier domicile connu en France, l’enregistrement additionnel pour les immeubles situés en France et l’absence de double droit."
+    }
+  },
+  "failureStage": "none"
+}

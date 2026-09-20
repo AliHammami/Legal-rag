@@ -1,0 +1,103 @@
+{
+  "questionId": "q039",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le fait de se prêter à un prélèvement de cellules ou de gamètes dans ce but est puni de **dix ans d’emprisonnement et de 150 000 euros d’amende**, selon l’**article 511-1 du Code pénal** [Source 1].\n\nIl s’agit donc d’une **peine d’emprisonnement assortie d’une amende**, et non d’une peine de réclusion criminelle.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 246.1652690001065,
+      "vectorSearchMs": 659.1480270000175,
+      "jinaRerankingMs": 582.8208490000106,
+      "mappingMs": 0.030008999980054796,
+      "totalMs": 1488.203484000056,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011424000025726855,
+      "contextBuilderMs": 0.02058700006455183,
+      "generationMs": 1992.0752009999705,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3480.318576000049
+    },
+    "judge": {
+      "questionId": "q039",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement les peines prévues par l’article 511-1 pour le comportement décrit : dix ans d’emprisonnement et 150 000 euros d’amende. Elle répond également à la question sur la nature de la peine et distingue correctement cette peine de la réclusion criminelle. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise exactement le fait décrit et prévoit explicitement dix ans d’emprisonnement et 150 000 euros d’amende. Elle couvre aussi la qualification de peine d’emprisonnement assortie d’une amende, par opposition à la réclusion criminelle. Les sources 2 et 3 apportent un contexte distinct mais ne sont pas nécessaires à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le fait de se prêter à ce prélèvement est puni de **dix ans d’emprisonnement** et de **150 000 euros d’amende**. Il s’agit donc d’une peine d’emprisonnement assortie d’une peine d’amende, et non de réclusion criminelle. **Article 511-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.670380000025,
+      "routingCalls": 1,
+      "embeddingMs": 245.63534399995115,
+      "vectorSearchMs": 47.0354150000494,
+      "jinaRerankingMs": 536.5281240000622,
+      "mappingMs": 0.02549099992029369,
+      "totalMs": 2057.9181350000435,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009353999979794025,
+      "contextBuilderMs": 0.022370000020600855,
+      "generationMs": 2133.1956240000436,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4191.153015000047
+    },
+    "judge": {
+      "questionId": "q039",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues par l’article 511-1 : dix ans d’emprisonnement et 150 000 euros d’amende. La précision selon laquelle il ne s’agit pas de réclusion criminelle est également correcte et permet de distinguer cette infraction de celle de l’article 214-2. Toutes les affirmations importantes sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise exactement le fait de se prêter à un prélèvement de cellules ou de gamètes dans le but décrit et prévoit dix ans d’emprisonnement ainsi que 150 000 euros d’amende. Elle couvre donc l’intégralité de la peine annoncée. La qualification comme emprisonnement, et non réclusion criminelle, découle du libellé même de la source 1 ; la source 3 permet en outre de distinguer explicitement la réclusion criminelle applicable à un autre comportement."
+    }
+  },
+  "failureStage": "none"
+}

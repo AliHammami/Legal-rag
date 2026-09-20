@@ -1,0 +1,87 @@
+{
+  "questionId": "q285",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L121-1 du Code monétaire et financier, les pièces métalliques de fabrication étrangère ne peuvent pas être admises dans les caisses publiques pour le paiement de droits et contributions payables en numéraire, sauf celles ayant cours légal en France. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L121-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 267.0694709997624,
+      "vectorSearchMs": 691.968142000027,
+      "jinaRerankingMs": 612.5724100004882,
+      "mappingMs": 0.03217000048607588,
+      "totalMs": 1571.6736589996144,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01032199990004301,
+      "contextBuilderMs": 0.01013300009071827,
+      "generationMs": 1250.4060829998925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2822.1102749994025
+    },
+    "judge": {
+      "questionId": "q285",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement la règle de l’article L121-1 : exclusion des pièces métalliques étrangères des caisses publiques pour le paiement en numéraire, à l’exception de celles ayant cours légal en France. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L121-1 visé par la question et énonce précisément la règle ainsi que son exception. Elle couvre intégralement l’affirmation de la réponse générée : exclusion des pièces métalliques étrangères des caisses publiques pour les droits et contributions payables en numéraire, sauf celles ayant cours légal en France."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L121-1 du Code monétaire et financier, les pièces métalliques de fabrication étrangère ne peuvent pas être admises dans les caisses publiques pour le paiement de droits et contributions payables en numéraire, sauf si elles ont cours légal en France. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L121-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1659.4038490001112,
+      "routingCalls": 1,
+      "embeddingMs": 334.78938499931246,
+      "vectorSearchMs": 119.91251199971884,
+      "jinaRerankingMs": 599.0406319992617,
+      "mappingMs": 0.03522800002247095,
+      "totalMs": 2713.2060420000926,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011490999720990658,
+      "contextBuilderMs": 0.010583999566733837,
+      "generationMs": 1383.057075000368,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4096.293979999609
+    },
+    "judge": {
+      "questionId": "q285",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement la règle de l’article L121-1 : les pièces métalliques étrangères sont exclues des caisses publiques pour le paiement de droits et contributions en numéraire, à l’exception de celles ayant cours légal en France. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L121-1 pertinent et énonce exactement la règle demandée, y compris l’exception des pièces ayant cours légal en France, l’interdiction d’admission dans les caisses publiques et son champ (droits et contributions payables en numéraire). Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

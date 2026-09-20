@@ -1,0 +1,87 @@
+{
+  "questionId": "q045",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 726-1 du Code pénal [Source 1]**, le prélèvement d’un organe sur un donneur vivant mineur est en principe interdit et puni de **sept ans d’emprisonnement et 100 000 euros d’amende**.\n\nUne exception est prévue pour un **prélèvement de moelle osseuse au profit du frère ou de la sœur du mineur**, à condition que :\n\n- un **comité médical** l’autorise ;\n- chacun des titulaires de l’autorité parentale ou le représentant légal du mineur y ait consenti ;\n- le mineur ait été informé du prélèvement s’il est capable d’exprimer sa volonté ;\n- le refus du mineur fasse obstacle au prélèvement ;\n- le consentement soit exprimé devant le président du tribunal judiciaire ou le magistrat désigné par lui, et puisse être révoqué à tout moment.\n\nEn cas d’urgence, le consentement peut être recueilli par tout moyen par le procureur de la République. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "726-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.6320340000093,
+      "vectorSearchMs": 561.0683260000078,
+      "jinaRerankingMs": 535.7211740000639,
+      "mappingMs": 0.034164999960921705,
+      "totalMs": 1323.4806350000435,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010637999977916479,
+      "contextBuilderMs": 0.010184000013396144,
+      "generationMs": 2971.3353840000927,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4294.844160000095
+    },
+    "judge": {
+      "questionId": "q045",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement l’interdiction de principe et l’exception limitée au prélèvement de moelle osseuse au profit d’un frère ou d’une sœur. Elle énonce toutes les garanties prévues : autorisation du comité médical, consentement des titulaires de l’autorité parentale ou du représentant légal, information du mineur apte à exprimer sa volonté, effet bloquant de son refus, recueil judiciaire et caractère révocable du consentement, ainsi que la procédure d’urgence. Ces éléments sont tous explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le texte applicable, décrivant l'interdiction de principe, l'exception limitée à la moelle osseuse au profit d'un frère ou d'une sœur, ainsi que l'ensemble des conditions citées dans la réponse : autorisation du comité médical, consentements parentaux ou du représentant légal, information et refus du mineur, expression et révocation des consentements devant le président du tribunal judiciaire, et procédure d'urgence."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 726-1 du Code pénal, le prélèvement d’un organe sur un donneur vivant mineur est en principe interdit et puni de **sept ans d’emprisonnement et de 100 000 euros d’amende** [Source 1].\n\nUne exception est prévue pour un **prélèvement de moelle osseuse au profit du frère ou de la sœur du mineur**, à plusieurs conditions :\n\n- le prélèvement doit être **autorisé par un comité médical** ;\n- chacun des titulaires de l’autorité parentale ou le représentant légal doit y avoir consenti ;\n- le comité médical doit vérifier que le mineur a été informé afin qu’il puisse exprimer sa volonté, s’il est capable de le faire ;\n- le **refus du mineur fait obstacle au prélèvement** ;\n- les consentements sont exprimés devant le président du tribunal judiciaire ou le magistrat désigné par lui et peuvent être révoqués à tout moment ;\n- en cas d’urgence, le consentement peut être recueilli par tout moyen par le procureur de la République [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "726-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 765.3640949999681,
+      "routingCalls": 1,
+      "embeddingMs": 154.41443600005005,
+      "vectorSearchMs": 85.05442100006621,
+      "jinaRerankingMs": 547.6465220000828,
+      "mappingMs": 0.0318220000481233,
+      "totalMs": 1552.5418549999595,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012153999996371567,
+      "contextBuilderMs": 0.010659000021405518,
+      "generationMs": 3366.802270999993,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4919.37659
+    },
+    "judge": {
+      "questionId": "q045",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement l’interdiction de principe et l’exception limitée au prélèvement de moelle osseuse au profit du frère ou de la sœur. Elle énonce toutes les garanties essentielles : autorisation du comité médical, consentement des titulaires de l’autorité parentale ou du représentant légal, information du mineur apte à exprimer sa volonté, effet obstructif de son refus, recueil judiciaire et révocabilité des consentements, ainsi que la procédure d’urgence. Ces éléments, y compris les peines mentionnées, sont explicitement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le texte applicable, qui encadre l’interdiction de principe et l’exception de prélèvement de moelle osseuse sur un mineur au profit de son frère ou de sa sœur. Elle étaye toutes les affirmations importantes de la réponse : peines, autorisation du comité, consentements parentaux ou du représentant légal, information et volonté du mineur, effet de son refus, recueil judiciaire et révocabilité, ainsi que la procédure d’urgence."
+    }
+  },
+  "failureStage": "none"
+}

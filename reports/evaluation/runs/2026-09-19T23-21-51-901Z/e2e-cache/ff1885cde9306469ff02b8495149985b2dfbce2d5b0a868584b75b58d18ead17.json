@@ -1,0 +1,87 @@
+{
+  "questionId": "q109",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 768 du Code civil**, l’héritier peut :\n\n- **accepter la succession purement et simplement** ;\n- **accepter la succession à concurrence de l’actif net**, s’il a une vocation universelle ou à titre universel.\n\nL’option conditionnelle ou à terme est nulle. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "768"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 199.58268900006078,
+      "vectorSearchMs": 561.4063640001696,
+      "jinaRerankingMs": 488.29333699983545,
+      "mappingMs": 0.03915300010703504,
+      "totalMs": 1249.3483959999867,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011269999900832772,
+      "contextBuilderMs": 0.010180999990552664,
+      "generationMs": 1317.5714999998454,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2566.9492020001635
+    },
+    "judge": {
+      "questionId": "q109",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse est conforme au contexte et mentionne l’acceptation pure et simple, l’acceptation à concurrence de l’actif net sous la condition de vocation universelle ou à titre universel, ainsi que la nullité de l’option conditionnelle ou à terme. Elle omet toutefois le troisième mode expressément prévu par l’article 768 : la renonciation à la succession."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source reproduit directement l’article 768 du Code civil et est donc parfaitement pertinente. Elle couvre les affirmations formulées dans la réponse (acceptation pure et simple, acceptation à concurrence de l’actif net sous condition de vocation universelle ou à titre universel, nullité de l’option conditionnelle ou à terme). Elle mentionne aussi la renonciation, mais celle-ci est omise de la réponse générée ; la couverture des affirmations effectivement faites reste élevée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 768 du Code civil, l’héritier peut :\n\n- accepter la succession purement et simplement ;\n- l’accepter à concurrence de l’actif net, s’il a une vocation universelle ou à titre universel ;\n- renoncer à la succession.\n\nL’option conditionnelle ou à terme est nulle. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "768"
+      }
+    ],
+    "profiling": {
+      "routingMs": 881.4532110001892,
+      "routingCalls": 1,
+      "embeddingMs": 182.99642300000414,
+      "vectorSearchMs": 59.7285339999944,
+      "jinaRerankingMs": 498.3238099999726,
+      "mappingMs": 0.03437600005418062,
+      "totalMs": 1622.5641309998464,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014141000108793378,
+      "contextBuilderMs": 0.010748000117018819,
+      "generationMs": 1141.9598129999358,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2764.5558059997857
+    },
+    "judge": {
+      "questionId": "q109",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement tous les modes d’option prévus par l’article 768 : acceptation pure et simple, renonciation, acceptation à concurrence de l’actif net sous la condition de vocation universelle ou à titre universel, ainsi que la nullité de l’option conditionnelle ou à terme. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 768 du Code civil et énonce exactement les trois options successorales, la condition tenant à la vocation universelle ou à titre universel pour l’acceptation à concurrence de l’actif net, ainsi que la nullité de l’option conditionnelle ou à terme. Elle couvre l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

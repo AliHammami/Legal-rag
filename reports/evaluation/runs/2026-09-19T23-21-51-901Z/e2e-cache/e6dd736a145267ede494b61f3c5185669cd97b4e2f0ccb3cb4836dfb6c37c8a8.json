@@ -1,0 +1,95 @@
+{
+  "questionId": "q486",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après **l’article 545 du Code civil**, l’expropriation suppose deux conditions essentielles :\n\n1. **Une cause d’utilité publique** : l’expropriation doit être justifiée par l’utilité publique.\n2. **Le versement d’une indemnité juste et préalable** : le propriétaire doit recevoir une indemnisation équitable avant la dépossession. [Source 2]\n\nLa source fournie relative au **Code de commerce** fixe seulement les barèmes d’émoluments applicables aux règlements d’indemnité en cas d’expropriation ; elle ne précise pas les autres conditions ou la procédure de déclaration d’utilité publique. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-160"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "545"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.26414600014687,
+      "vectorSearchMs": 671.9705900009722,
+      "jinaRerankingMs": 542.4595550000668,
+      "mappingMs": 0.022092999890446663,
+      "totalMs": 1408.7356269992888,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010292001068592072,
+      "contextBuilderMs": 0.01817299984395504,
+      "generationMs": 1968.071149000898,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3376.8432539999485
+    },
+    "judge": {
+      "questionId": "q486",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement les deux conditions prévues par l’article 545 du Code civil : cause d’utilité publique et juste et préalable indemnité. Ces affirmations sont directement supportées par la source 2. Elle précise également à juste titre que la source 1 ne traite que des émoluments liés aux règlements d’indemnité. Toutefois, l’abstention était attendue et la réponse apporte une réponse de fond ; l’abstention n’est donc pas correcte selon le critère demandé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article 545 du Code civil) est directement pertinente et énonce expressément les deux conditions affirmées : cause d’utilité publique et indemnité juste et préalable. La source 1 est pertinente pour l’observation limitée selon laquelle elle porte sur les émoluments des règlements d’indemnité et non sur les conditions générales ou la procédure. Les affirmations importantes de la réponse sont donc couvertes par les sources fournies, même si une abstention était attendue."
+    }
+  },
+  "routing": {
+    "answer": "Selon **l’article 545 du Code civil**, l’expropriation est soumise à deux conditions essentielles :\n\n1. **Elle doit être justifiée par une cause d’utilité publique** ;\n2. **Elle doit donner lieu au versement d’une indemnité juste et préalable** au propriétaire.\n\nAinsi, nul ne peut être contraint de céder sa propriété en dehors de ces conditions. **Article 545 du Code civil [Source 2].**\n\nLe contexte fourni ne permet pas de préciser les autres règles de procédure applicables à l’expropriation.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-160"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "545"
+      }
+    ],
+    "profiling": {
+      "routingMs": 996.189749000594,
+      "routingCalls": 1,
+      "embeddingMs": 224.32179100066423,
+      "vectorSearchMs": 603.6510830000043,
+      "jinaRerankingMs": 508.9990849997848,
+      "mappingMs": 0.02958899922668934,
+      "totalMs": 2333.21594100073,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011966999620199203,
+      "contextBuilderMs": 0.020232999697327614,
+      "generationMs": 1877.1010800004005,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4210.358039999381
+    },
+    "judge": {
+      "questionId": "q486",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement les deux garanties de fond prévues par l’article 545 du Code civil : cause d’utilité publique et indemnité juste et préalable. Elle reste toutefois limitée à ces principes et ne détaille pas les éventuelles conditions procédurales de l’expropriation. Toutes les affirmations juridiques importantes sont directement étayées par la source 2. Néanmoins, alors qu’une abstention était attendue, elle répond au fond malgré l’insuffisance du contexte pour traiter l’ensemble du régime de l’expropriation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article 545 du Code civil) est directement pertinente pour les deux conditions de fond énoncées dans la réponse : cause d’utilité publique et indemnité juste et préalable. Elle couvre aussi l’affirmation selon laquelle nul ne peut être contraint de céder sa propriété hors de ces conditions. La source 1 est périphérique, limitée aux émoluments liés aux règlements d’indemnité, mais n’est pas utilisée. La remarque finale sur l’impossibilité de préciser les autres règles procédurales est cohérente avec le caractère limité des sources fournies."
+    }
+  },
+  "failureStage": "abstention"
+}

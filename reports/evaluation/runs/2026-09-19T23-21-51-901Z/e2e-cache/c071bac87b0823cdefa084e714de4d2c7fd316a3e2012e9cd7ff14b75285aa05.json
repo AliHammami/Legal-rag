@@ -1,0 +1,87 @@
+{
+  "questionId": "q126",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le **conseil de prud’hommes** est seul compétent pour connaître de ces différends, ainsi que des contrats accessoires au contrat de travail, selon l’**article L7215-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.56265099998564,
+      "vectorSearchMs": 569.7221919996664,
+      "jinaRerankingMs": 499.18261700030416,
+      "mappingMs": 0.025450999848544598,
+      "totalMs": 1272.543148000259,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011473000049591064,
+      "contextBuilderMs": 0.010577999986708164,
+      "generationMs": 1076.9863159996457,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2349.5827070004307
+    },
+    "judge": {
+      "questionId": "q126",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le conseil de prud'hommes comme juridiction seule compétente et mentionne les contrats accessoires. Ces éléments sont intégralement confirmés par le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 7215-1 et répond précisément à la question : elle désigne le conseil de prud'hommes comme seul compétent pour les différends relatifs au contrat de travail des salariés visés à l'article L. 7211-2, ainsi que pour les contrats accessoires. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le **conseil de prud’hommes** est seul compétent pour connaître de ces différends, ainsi que de ceux relatifs aux contrats accessoires au contrat de travail. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1539.6603879998438,
+      "routingCalls": 1,
+      "embeddingMs": 228.1387959998101,
+      "vectorSearchMs": 226.3354889997281,
+      "jinaRerankingMs": 532.675164999906,
+      "mappingMs": 0.04331899993121624,
+      "totalMs": 2526.8832809999585,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010745000094175339,
+      "contextBuilderMs": 0.01044199988245964,
+      "generationMs": 1158.0480339997448,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3684.965702000074
+    },
+    "judge": {
+      "questionId": "q126",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le conseil de prud’hommes comme juridiction seule compétente et mentionne les contrats accessoires. Ces éléments sont explicitement énoncés dans le contexte. Elle répond directement à la question, sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 7215-1 et vise expressément les différends relatifs au contrat de travail entre les salariés définis à l’article L. 7211-2 et leurs employeurs, ainsi que les contrats accessoires. Elle étaye intégralement les deux affirmations de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

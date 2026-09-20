@@ -1,0 +1,103 @@
+{
+  "questionId": "q075",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 901 du Code civil**, deux conditions sont nécessaires :\n\n- l’auteur de la libéralité doit être **sain d’esprit** ;\n- son consentement ne doit pas avoir été vicié par **l’erreur, le dol ou la violence**.\n\nÀ défaut, la libéralité est nulle. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "901"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1078-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 373.7948420001194,
+      "vectorSearchMs": 611.7926429999061,
+      "jinaRerankingMs": 500.38274900009856,
+      "mappingMs": 0.032543000066652894,
+      "totalMs": 1486.0296189999208,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.030842999927699566,
+      "contextBuilderMs": 0.026101999916136265,
+      "generationMs": 1275.722894999897,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2761.8172599999234
+    },
+    "judge": {
+      "questionId": "q075",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux exigences de l’article 901 : la santé d’esprit et l’absence de vice du consentement (erreur, dol ou violence), ainsi que la sanction de nullité. Toutes ces affirmations sont explicitement étayées par la source 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 901 du code civil et répond exactement à la question. Elle couvre l'exigence de santé d'esprit, l'absence de vices du consentement (erreur, dol, violence) et la nullité encourue à défaut."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 901 du Code civil, une libéralité est valable si :\n\n- son auteur est **sain d’esprit** ;\n- son consentement est **libre et non vicié** par l’erreur, le dol ou la violence.\n\nÀ défaut, la libéralité est nulle. [Source 2 — Article 901 du Code civil]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "901"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1078-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 816.9405440001283,
+      "routingCalls": 1,
+      "embeddingMs": 223.26316299987957,
+      "vectorSearchMs": 55.5013579998631,
+      "jinaRerankingMs": 482.92388799996115,
+      "mappingMs": 0.030125000048428774,
+      "totalMs": 1578.6825079999398,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011433999985456467,
+      "contextBuilderMs": 0.0243520000949502,
+      "generationMs": 1288.2192030001897,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2866.948417000007
+    },
+    "judge": {
+      "questionId": "q075",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions de l’article 901 : être sain d’esprit et ne pas avoir un consentement vicié par l’erreur, le dol ou la violence. Elle mentionne correctement la nullité à défaut. Toutes les affirmations sont directement étayées par la Source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 901 du Code civil et répond exactement à la question. Elle couvre intégralement les affirmations de la réponse générée : nécessité d’être sain d’esprit, nullité en cas de consentement vicié par l’erreur, le dol ou la violence, et conséquence de nullité à défaut."
+    }
+  },
+  "failureStage": "none"
+}

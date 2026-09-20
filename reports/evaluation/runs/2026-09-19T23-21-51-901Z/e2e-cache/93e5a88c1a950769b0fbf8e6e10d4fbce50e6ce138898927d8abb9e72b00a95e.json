@@ -1,0 +1,95 @@
+{
+  "questionId": "q024",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 311-10 du Code pénal, le vol est puni de la réclusion criminelle à perpétuité lorsqu’il est précédé, accompagné ou suivi :\n\n- de violences ayant entraîné la mort ;\n- ou de tortures ou d’actes de barbarie.\n\nLa période de sûreté prévue à l’article 132-23 est également applicable. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.73327399999835,
+      "vectorSearchMs": 963.9877270000288,
+      "jinaRerankingMs": 583.1002119999612,
+      "mappingMs": 0.03344899998046458,
+      "totalMs": 1770.004122000013,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010956999962218106,
+      "contextBuilderMs": 0.017430000007152557,
+      "generationMs": 1469.6084859999828,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3239.6633419999853
+    },
+    "judge": {
+      "questionId": "q024",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux circonstances aggravantes prévues par l'article 311-10 : violences ayant entraîné la mort, ou tortures/actes de barbarie, lorsqu'elles précèdent, accompagnent ou suivent le vol. La mention additionnelle de la période de sûreté est correcte et explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 311-10 et vise exactement les circonstances aggravantes demandées : violences ayant entraîné la mort, tortures ou actes de barbarie, lorsqu'elles précèdent, accompagnent ou suivent le vol. Elle couvre aussi la mention complémentaire de l'applicabilité de la période de sûreté de l'article 132-23. La source 2 est sans incidence, mais n'altère pas la pertinence ni la couverture globales."
+    }
+  },
+  "routing": {
+    "answer": "L’article 311-10 du Code pénal prévoit la réclusion criminelle à perpétuité lorsque le vol est :\n\n- précédé, accompagné ou suivi de **violences ayant entraîné la mort** ;\n- précédé, accompagné ou suivi de **tortures ou d’actes de barbarie**.\n\nLa peine est également assortie d’une amende de **150 000 euros**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1345.7703420000034,
+      "routingCalls": 1,
+      "embeddingMs": 243.5576810000348,
+      "vectorSearchMs": 36.323887999984436,
+      "jinaRerankingMs": 579.6598099999828,
+      "mappingMs": 0.16576499998336658,
+      "totalMs": 2205.5819740000297,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0397629999788478,
+      "contextBuilderMs": 0.06991500000003725,
+      "generationMs": 1682.5473900000216,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3888.3061520000338
+    },
+    "judge": {
+      "questionId": "q024",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux circonstances aggravantes de l’article 311-10 : les violences ayant entraîné la mort, et les tortures ou actes de barbarie, lorsqu’elles précèdent, accompagnent ou suivent le vol. La mention supplémentaire de l’amende de 150 000 euros est exacte et explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 311-10 et vise exactement les circonstances aggravantes demandées : violences ayant entraîné la mort, ou tortures ou actes de barbarie, lorsqu'elles précèdent, accompagnent ou suivent le vol. Elle couvre aussi la mention additionnelle de l'amende de 150 000 euros. La source 2 est non nécessaire, mais n'altère pas la pertinence ni la couverture globales."
+    }
+  },
+  "failureStage": "none"
+}

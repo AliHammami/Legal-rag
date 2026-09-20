@@ -1,0 +1,95 @@
+{
+  "questionId": "q154",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’adaptation des modalités d’application du livre II relatif à l’apprentissage est prévue par **l’article L6522-1 du Code du travail** pour la Guadeloupe, la Guyane, la Martinique, Mayotte, La Réunion et certaines collectivités ultramarines. Elle est décidée par **décret**. [Source 1]\n\nPar ailleurs, pour la Moselle, le Bas-Rhin et le Haut-Rhin, **l’article L6261-2 du Code du travail** prévoit également des modalités particulières, fixées par **décret en Conseil d’État**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6522-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6261-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 288.33917100029066,
+      "vectorSearchMs": 628.4576179999858,
+      "jinaRerankingMs": 558.9068920002319,
+      "mappingMs": 0.032173000276088715,
+      "totalMs": 1475.7635699999519,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010088999755680561,
+      "contextBuilderMs": 0.017429000232368708,
+      "generationMs": 2621.16352700023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4096.963394000195
+    },
+    "judge": {
+      "questionId": "q154",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’article L6261-2 du Code du travail pour la Moselle, le Bas-Rhin et le Haut-Rhin, ainsi que la décision par décret en Conseil d’État. Ces éléments sont explicitement étayés par la source 2. La mention additionnelle de l’article L6522-1 et des territoires ultramarins est hors du cœur de la question, mais elle est également exacte et fondée sur la source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente à la question : elle vise expressément la Moselle, le Bas-Rhin et le Haut-Rhin et indique que les modalités particulières sont déterminées par décret en Conseil d'État. La source 1, bien qu'additionnelle par rapport au cas attendu, est pertinente pour l'affirmation distincte sur les collectivités ultramarines et le décret. Les deux sources couvrent explicitement toutes les affirmations factuelles importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’adaptation est prévue par **l’article L6522-1 du Code du travail** : dans plusieurs territoires ultramarins — notamment la Guadeloupe, la Guyane, la Martinique, Mayotte et La Réunion — les modalités particulières d’application du **livre II relatif à l’apprentissage** sont déterminées **par décret** [Source 1].\n\nPar ailleurs, pour la Moselle, le Bas-Rhin et le Haut-Rhin, l’**article L6261-2 du Code du travail** prévoit une adaptation déterminée **par décret en Conseil d’État**, afin de tenir compte des circonstances locales [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6522-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6261-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.8920959997922,
+      "routingCalls": 1,
+      "embeddingMs": 241.08753499994054,
+      "vectorSearchMs": 275.3009000001475,
+      "jinaRerankingMs": 529.6642120000906,
+      "mappingMs": 0.0407019997946918,
+      "totalMs": 2480.010571999941,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011481000110507011,
+      "contextBuilderMs": 0.017477000132203102,
+      "generationMs": 2989.993843000382,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5470.0412750002
+    },
+    "judge": {
+      "questionId": "q154",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’article L6261-2 du Code du travail et précise qu’un décret en Conseil d’État fixe les modalités particulières pour la Moselle, le Bas-Rhin et le Haut-Rhin, afin de tenir compte des circonstances locales. Elle ajoute toutefois une disposition ultramarine (L6522-1) qui n’était pas demandée, ce qui constitue un défaut mineur de pertinence. Les deux affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 répond directement à la question : elle vise la Moselle, le Bas-Rhin et le Haut-Rhin et précise que les modalités sont déterminées par décret en Conseil d’État afin de tenir compte des circonstances locales. La source 1, bien que non nécessaire à la question ciblée, est pertinente pour l’affirmation additionnelle de la réponse sur les territoires ultramarins. Toutes les affirmations factuelles importantes de la réponse sont explicitement couvertes par les sources fournies."
+    }
+  },
+  "failureStage": "none"
+}

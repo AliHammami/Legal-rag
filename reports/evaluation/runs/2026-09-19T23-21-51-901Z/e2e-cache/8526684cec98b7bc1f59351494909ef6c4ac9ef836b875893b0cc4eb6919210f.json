@@ -1,0 +1,95 @@
+{
+  "questionId": "q319",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L431-1 du Code de la consommation définit l’appellation d’origine comme la dénomination d’un pays, d’une région ou d’une localité utilisée pour désigner un produit qui en est originaire, lorsque sa qualité ou ses caractéristiques résultent du milieu géographique, incluant des facteurs naturels et humains [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L431-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L431-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.858767000027,
+      "vectorSearchMs": 615.4607600001618,
+      "jinaRerankingMs": 549.0939330002293,
+      "mappingMs": 0.04326900001615286,
+      "totalMs": 1352.482482000254,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011787000112235546,
+      "contextBuilderMs": 0.01497699972242117,
+      "generationMs": 1275.1908750003204,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2627.7081279996783
+    },
+    "judge": {
+      "questionId": "q319",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de la définition de l’article L431-1 : dénomination d’un pays, d’une région ou d’une localité, produit qui en est originaire, et qualité ou caractéristiques dues au milieu géographique incluant des facteurs naturels et humains. Elle est directement étayée par la source fournie et répond à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente, car elle reproduit la définition de l’appellation d’origine à l’article L431-1. Elle couvre tous les éléments importants de la réponse générée : dénomination géographique, produit originaire du lieu, qualité ou caractères dus au milieu géographique, et facteurs naturels et humains. La source 2 n’est pas nécessaire à cette définition."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L431-1 du Code de la consommation, une appellation d’origine est la dénomination d’un pays, d’une région ou d’une localité utilisée pour désigner un produit qui en est originaire, lorsque sa qualité ou ses caractéristiques résultent du milieu géographique, incluant des facteurs naturels et humains [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L431-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L431-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1842.1649820003659,
+      "routingCalls": 1,
+      "embeddingMs": 249.43231199961156,
+      "vectorSearchMs": 45.7422409998253,
+      "jinaRerankingMs": 557.3895609993488,
+      "mappingMs": 0.05443400051444769,
+      "totalMs": 2694.8108389992267,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020703000016510487,
+      "contextBuilderMs": 0.021858999505639076,
+      "generationMs": 1196.7198679996654,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3891.5873180003837
+    },
+    "judge": {
+      "questionId": "q319",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de la définition de l’article L431-1 : dénomination d’un pays, d’une région ou d’une localité, produit qui en est originaire, et qualité ou caractères dus au milieu géographique incluant les facteurs naturels et humains. Elle est directement étayée par la source 1 et répond à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la définition légale demandée à l’article L431-1 et couvre l’ensemble des éléments affirmés : dénomination géographique, produit originaire du lieu, qualité ou caractères dus au milieu géographique incluant les facteurs naturels et humains. La source 2 est accessoire mais ne nuit pas à la pertinence globale."
+    }
+  },
+  "failureStage": "none"
+}

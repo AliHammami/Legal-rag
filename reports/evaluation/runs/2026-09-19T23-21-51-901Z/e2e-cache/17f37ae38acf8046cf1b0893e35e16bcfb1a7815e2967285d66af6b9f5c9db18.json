@@ -1,0 +1,95 @@
+{
+  "questionId": "q097",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans une obligation conditionnelle :\n\n- **La condition suspensive** est un événement futur et incertain dont la réalisation rend l’obligation pure et simple. Tant qu’elle n’est pas réalisée, l’obligation reste en suspens. **Article 1304 du Code civil** [Source 1].\n- **La condition résolutoire** est un événement futur et incertain dont la réalisation entraîne l’anéantissement de l’obligation. L’obligation existe donc, mais elle peut disparaître si la condition se réalise. **Article 1304 du Code civil** [Source 1].\n\nPar ailleurs, si la partie qui a intérêt à empêcher une condition suspensive en empêche la réalisation, celle-ci est réputée accomplie. Inversement, une condition résolutoire est réputée défaillie si la partie intéressée provoque sa réalisation. **Article 1304-3 du Code civil** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 256.6091310000047,
+      "vectorSearchMs": 637.3905490001198,
+      "jinaRerankingMs": 512.866788999876,
+      "mappingMs": 0.03542800014838576,
+      "totalMs": 1406.9397630000021,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014487000182271004,
+      "contextBuilderMs": 0.01884999987669289,
+      "generationMs": 2072.4556050000247,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3479.4360379998107
+    },
+    "judge": {
+      "questionId": "q097",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose exactement la distinction prévue à l’article 1304 du Code civil : l’accomplissement de la condition suspensive rend l’obligation pure et simple, tandis que celui de la condition résolutoire l’anéantit. Les précisions additionnelles relatives à l’article 1304-3 sont exactes, pertinentes et explicitement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre la définition de l'obligation conditionnelle ainsi que la distinction centrale entre conditions suspensive et résolutoire. La source 2 est directement pertinente pour la précision additionnelle sur l'empêchement ou la provocation de l'accomplissement de la condition. Toutes les affirmations importantes de la réponse sont explicitement étayées par ces sources."
+    }
+  },
+  "routing": {
+    "answer": "Dans une obligation conditionnelle, la différence tient à l’effet de la réalisation de l’événement futur et incertain :\n\n- **Condition suspensive** : l’obligation ne devient pure et simple que si la condition se réalise. [Source 1]  \n  *Exemple :* une vente conclue sous réserve de l’obtention d’un prêt ; l’obligation est pleinement effective si le prêt est obtenu.\n\n- **Condition résolutoire** : l’obligation existe, mais sa réalisation entraîne son anéantissement. [Source 1]  \n  *Exemple :* un contrat qui prend fin si un événement prévu survient.\n\nEn outre, la condition suspensive est réputée accomplie si la personne intéressée à son échec en a empêché la réalisation ; inversement, la condition résolutoire est réputée défaillie si la partie intéressée à sa réalisation l’a provoquée. **Article 1304-3 du Code civil [Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1013.8339129998349,
+      "routingCalls": 1,
+      "embeddingMs": 180.51467499998398,
+      "vectorSearchMs": 55.93459700001404,
+      "jinaRerankingMs": 481.63716699997894,
+      "mappingMs": 0.03762099985033274,
+      "totalMs": 1731.992775999941,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009987999917939305,
+      "contextBuilderMs": 0.01697500003501773,
+      "generationMs": 2251.749536999967,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3983.7785249999724
+    },
+    "judge": {
+      "questionId": "q097",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les effets des deux conditions, conformément à l’article 1304 et à la référence : la condition suspensive rend l’obligation pure et simple, tandis que la condition résolutoire l’anéantit. Le complément relatif à l’article 1304-3 est exact et explicitement soutenu par le contexte. Les exemples sont cohérents avec les définitions fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. La source 1 énonce exactement la distinction demandée entre condition suspensive (obligation rendue pure et simple) et résolutoire (anéantissement), et la source 2 couvre précisément le complément sur les conditions réputées accomplies ou défaillies. Les exemples sont cohérents avec ces définitions et ne portent pas d'affirmation juridique substantielle non couverte."
+    }
+  },
+  "failureStage": "none"
+}

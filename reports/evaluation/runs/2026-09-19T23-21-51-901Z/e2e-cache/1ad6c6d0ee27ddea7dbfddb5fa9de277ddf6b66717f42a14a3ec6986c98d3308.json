@@ -1,0 +1,95 @@
+{
+  "questionId": "q257",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L317-1 du Code monétaire et financier**, les agents concernés disposent des pouvoirs et sont soumis aux conditions suivantes :\n\n- **Agents habilités** : les agents de la Banque de France commissionnés par le ministre chargé de l’économie, ainsi que les agents mentionnés aux articles L. 511-3 et L. 511-21 du Code de la consommation. Ces derniers sont des fonctionnaires habilités par arrêté du ministre chargé de l’économie [Source 1] [Source 2].\n- **Objet de leur intervention** : ils peuvent rechercher et constater, par procès-verbal, les infractions aux dispositions énumérées à l’article L317-1, notamment celles relatives aux services de paiement et aux instruments de paiement [Source 1].\n- **Champ territorial et personnel** : ils peuvent également intervenir à l’égard d’agents et de succursales, implantés en France, de prestataires de services de paiement dont le siège ou l’administration centrale est situé dans un autre État membre de l’Union européenne ou partie à l’accord sur l’Espace économique européen [Source 1].\n- **Accès aux locaux professionnels** : ils peuvent accéder à tous les locaux à usage professionnel, uniquement entre **8 heures et 20 heures** [Source 1].\n- **Documents et renseignements** : ils peuvent demander la communication des livres et autres documents professionnels, en prendre copie, et recueillir les renseignements et justifications, sur convocation ou sur place [Source 1].\n- **Opposition du responsable des lieux** : en cas d’opposition, la visite ne peut avoir lieu qu’avec l’autorisation du procureur de la République du tribunal judiciaire dans le ressort duquel se trouvent les locaux [Source 1].\n- **Secret professionnel** : celui-ci ne peut pas leur être opposé lorsqu’ils agissent dans le cadre des pouvoirs prévus par l’article L317-1 [Source 1].\n- **Transmission des procès-verbaux** : lorsque les infractions sont pénalement sanctionnées, les procès-verbaux doivent être transmis au procureur de la République dans les **cinq jours** suivant leur établissement. Dans tous les cas, une copie doit être remise à l’intéressé [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L317-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-21"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.40508699975908,
+      "vectorSearchMs": 583.5532559994608,
+      "jinaRerankingMs": 586.482396999374,
+      "mappingMs": 0.026153000071644783,
+      "totalMs": 1396.5034369993955,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01018300000578165,
+      "contextBuilderMs": 0.021859999746084213,
+      "generationMs": 4634.467044000514,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6031.01428299956
+    },
+    "judge": {
+      "questionId": "q257",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement et de façon complète les pouvoirs d’enquête, les limites horaires, la procédure en cas d’opposition, l’inopposabilité du secret professionnel et le régime des procès-verbaux prévus par l’article L317-1. Elle est presque entièrement étayée par le contexte. Léger défaut de fondement : elle indique que les agents visés aux articles L. 511-3 et L. 511-21 sont tous des fonctionnaires habilités par arrêté, alors que le contexte fourni ne précise cette habilitation par arrêté que pour l’article L. 511-21."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L317-1 et couvre l'identité des agents, les infractions visées, la compétence concernant certains agents et succursales implantés en France, l'accès aux locaux et sa plage horaire, la communication et copie de documents, le recueil de renseignements, l'autorisation du procureur en cas d'opposition, l'inopposabilité du secret professionnel et le régime des procès-verbaux. La source 2 étaye en outre l'habilitation par arrêté des fonctionnaires visés à l'article L. 511-21. Toutes les affirmations importantes de la réponse sont ainsi couvertes, hormis une légère généralisation possible concernant l'habilitation par arrêté des agents de L. 511-3, qui ne compromet pas la couverture des pouvoirs et conditions demandés."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L317-1 du Code monétaire et financier**, les agents de la Banque de France commissionnés par le ministre chargé de l’économie disposent des pouvoirs suivants :\n\n- **Recherche et constatation des infractions** : ils peuvent rechercher et constater, par procès-verbal, les infractions aux articles **L. 312-1-1, L. 312-1-2, L. 312-1-4-1, L. 314-12, L. 314-13 et L. 315-6 à L. 315-8** du Code monétaire et financier [Source 1].\n- **Champ territorial et professionnel** : ils peuvent également intervenir à l’égard des agents et succursales implantés en France de prestataires de services de paiement dont le siège social ou l’administration centrale se situe dans un autre État membre de l’Union européenne ou partie à l’accord sur l’Espace économique européen [Source 1].\n- **Accès aux locaux professionnels** : ils peuvent accéder à tous les locaux à usage professionnel, uniquement **entre 8 heures et 20 heures** [Source 1].\n- **Communication et copie de documents** : ils peuvent demander la communication des livres et de tous documents professionnels, et en prendre copie [Source 1].\n- **Recueil de renseignements** : ils peuvent recueillir, sur convocation ou sur place, les renseignements et justifications nécessaires [Source 1].\n- **En cas d’opposition** : si le responsable des lieux s’oppose à la visite, celle-ci ne peut avoir lieu qu’avec l’autorisation du **procureur de la République du tribunal judiciaire** dans le ressort duquel se trouvent les locaux [Source 1].\n- **Secret professionnel** : le secret professionnel ne peut pas leur être opposé lorsqu’ils agissent dans le cadre de leurs pouvoirs légaux [Source 1].\n- **Procès-verbaux** : lorsque les infractions sont pénalement sanctionnées, les procès-verbaux doivent être transmis au procureur de la République dans les **cinq jours** suivant leur établissement. Dans tous les cas, une copie doit être remise à l’intéressé [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L317-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1415.1217640005052,
+      "routingCalls": 1,
+      "embeddingMs": 229.1964720003307,
+      "vectorSearchMs": 219.20731899980456,
+      "jinaRerankingMs": 695.0861050002277,
+      "mappingMs": 0.0823980001732707,
+      "totalMs": 2558.7279960000888,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010235000401735306,
+      "contextBuilderMs": 0.014144999906420708,
+      "generationMs": 4122.381605000235,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6681.144249999896
+    },
+    "judge": {
+      "questionId": "q257",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de manière complète les pouvoirs, limites horaires, modalités d'accès aux locaux, droit de communication et de copie, recueil d'informations, condition d'autorisation du procureur en cas d'opposition, inopposabilité du secret professionnel et règles de transmission/remise des procès-verbaux. Toutes ces affirmations, y compris la compétence concernant certains prestataires établis dans l'UE/EEE, sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L317-1 visé et énonce l'ensemble des pouvoirs et conditions mentionnés dans la réponse : habilitation et infractions concernées, compétence pour certains agents et succursales de prestataires UE/EEE, accès aux locaux et plage horaire, communication et copie des documents, recueil de renseignements, autorisation du procureur en cas d'opposition, inopposabilité du secret professionnel, ainsi que transmission et remise des procès-verbaux."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q137",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de non-respect des dispositions de l’article L. 5213-5 du Code du travail relatives au réentraînement au travail et à la rééducation professionnelle des malades et blessés :\n\n- le contrevenant encourt l’amende prévue pour les contraventions de la quatrième classe [Source 1] ;\n- les dispositions des articles L. 4741-4, L. 4741-5 et L. 4741-12 du Code du travail sont également applicables [Source 2].\n\nLes sources fournies ne précisent pas le contenu ni les effets de ces trois derniers articles.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5215-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 215.82165899965912,
+      "vectorSearchMs": 620.9513320000842,
+      "jinaRerankingMs": 542.0047929999419,
+      "mappingMs": 0.03377999970689416,
+      "totalMs": 1378.880255999975,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.09938099980354309,
+      "contextBuilderMs": 0.018180999904870987,
+      "generationMs": 1968.4845599997789,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3347.491136999801
+    },
+    "judge": {
+      "questionId": "q137",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement l’applicabilité des articles L. 4741-4, L. 4741-5 et L. 4741-12, conformément à la référence, et ajoute justement la contravention de quatrième classe prévue par l’article R. 5215-1. Ces deux affirmations sont explicitement étayées par le contexte. L’absence de détail sur le contenu des articles L. 4741-4, L. 4741-5 et L. 4741-12 est correctement signalée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 vise directement le non-respect de l’article L. 5213-5 et établit explicitement l’amende applicable aux contraventions de quatrième classe. La source 2 traite exactement de la même méconnaissance et prévoit l’applicabilité des articles L. 4741-4, L. 4741-5 et L. 4741-12. Elles couvrent également le constat selon lequel le contenu détaillé de ces derniers articles n’est pas fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le non-respect des dispositions de l’article **L. 5213-5 du Code du travail** relatives au réentraînement au travail et à la rééducation professionnelle des malades et blessés constitue une **contravention de quatrième classe**, punie de l’amende correspondante [Source 1 — Article R. 5215-1 du Code du travail].\n\nEn outre, les dispositions des **articles L. 4741-4, L. 4741-5 et L. 4741-12 du Code du travail** sont applicables en cas de méconnaissance de cette obligation [Source 2 — Article L. 5215-1 du Code du travail]. Le contexte fourni ne précise toutefois pas le contenu ni les sanctions prévues par ces trois articles.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5215-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1535.2050959998742,
+      "routingCalls": 1,
+      "embeddingMs": 246.89455599989742,
+      "vectorSearchMs": 241.38145999982953,
+      "jinaRerankingMs": 534.1956009999849,
+      "mappingMs": 0.026698000263422728,
+      "totalMs": 2557.73080699984,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013315999880433083,
+      "contextBuilderMs": 0.014144999906420708,
+      "generationMs": 2338.7841730001383,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4896.549161999952
+    },
+    "judge": {
+      "questionId": "q137",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement l’applicabilité des articles L. 4741-4, L. 4741-5 et L. 4741-12, conformément à la référence. Elle ajoute correctement la contravention de quatrième classe, expressément prévue par l’article R. 5215-1 figurant dans le contexte. Toutes les affirmations importantes sont donc étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. La source 1 établit explicitement la contravention de quatrième classe en cas de méconnaissance de l'article L. 5213-5. La source 2 établit l'applicabilité des articles L. 4741-4, L. 4741-5 et L. 4741-12. Elles couvrent également l'indication selon laquelle leur contenu détaillé n'est pas fourni dans le contexte."
+    }
+  },
+  "failureStage": "none"
+}

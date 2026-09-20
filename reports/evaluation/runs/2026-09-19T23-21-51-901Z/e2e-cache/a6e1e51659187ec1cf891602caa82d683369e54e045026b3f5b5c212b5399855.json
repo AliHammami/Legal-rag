@@ -1,0 +1,87 @@
+{
+  "questionId": "q100",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Celui qui réclame l’exécution d’une obligation doit la prouver. Celui qui affirme être libéré doit justifier le paiement ou le fait ayant entraîné l’extinction de son obligation, conformément à l’article 1353 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1353"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.2161630000919,
+      "vectorSearchMs": 560.5967500000261,
+      "jinaRerankingMs": 518.0440739998594,
+      "mappingMs": 0.03386500012129545,
+      "totalMs": 1288.920501000015,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010389999952167273,
+      "contextBuilderMs": 0.009557999903336167,
+      "generationMs": 1238.762035000138,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2527.7107630001847
+    },
+    "judge": {
+      "questionId": "q100",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux règles énoncées à l’article 1353 du Code civil : la charge de prouver l’obligation incombe à celui qui en réclame l’exécution, et celui qui se prétend libéré doit justifier le paiement ou le fait extinctif. Ces affirmations sont intégralement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1353 du Code civil et répond exactement aux deux éléments demandés : la preuve incombe à celui qui réclame l’exécution, tandis que celui qui se prétend libéré doit justifier le paiement ou le fait extinctif. Elle couvre intégralement les affirmations de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Celui qui réclame l’exécution d’une obligation doit la prouver.\n\nCelui qui affirme être libéré doit justifier le paiement ou le fait ayant entraîné l’extinction de son obligation.\n\n**Article 1353 du Code civil [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1353"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.5226590000093,
+      "routingCalls": 1,
+      "embeddingMs": 514.1772910000291,
+      "vectorSearchMs": 57.16611100011505,
+      "jinaRerankingMs": 481.6199219999835,
+      "mappingMs": 0.028468000004068017,
+      "totalMs": 2384.5717329999898,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011328999884426594,
+      "contextBuilderMs": 0.013136999914422631,
+      "generationMs": 1200.4596450000536,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3585.0683760000393
+    },
+    "judge": {
+      "questionId": "q100",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux règles énoncées à l’article 1353 du Code civil : charge de prouver pour celui qui réclame l’exécution, et justification du paiement ou du fait extinctif pour celui qui se prétend libéré. Toutes les affirmations sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1353 du Code civil, qui répond exactement aux deux volets de la question. Elle couvre intégralement les affirmations de la réponse générée relatives à la charge de la preuve et à la justification du paiement ou du fait extinctif."
+    }
+  },
+  "failureStage": "none"
+}

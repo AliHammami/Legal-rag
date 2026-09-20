@@ -1,0 +1,103 @@
+{
+  "questionId": "q399",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon les sources fournies, un professionnel peut effectuer une prospection téléphonique uniquement dans les conditions suivantes :\n\n- **Consentement préalable** : le consommateur doit avoir donné un consentement libre, spécifique, éclairé, univoque et révocable. Le professionnel doit pouvoir en apporter la preuve (**article L223-1 du Code de la consommation [Sources 2 et 3]**).\n- **Jours autorisés** : les appels sont permis **du lundi au vendredi**, à l’exclusion des jours fériés mentionnés par l’article L. 3133-1 du Code du travail (**article D223-9 du Code de la consommation [Source 1]**).\n- **Horaires autorisés** : les appels peuvent être effectués de **10 h à 13 h** et de **14 h à 20 h**, selon le fuseau horaire du consommateur (**article D223-9 du Code de la consommation [Source 1]**).\n- **Fréquence maximale** : un même professionnel ne peut pas démarcher, ou tenter de démarcher, le même consommateur plus de **quatre fois sur une période de trente jours calendaires** (**article D223-9 du Code de la consommation [Source 1]**).\n- **Appel en dehors des horaires réglementaires** : il est possible seulement si le consommateur a expressément accepté d’être appelé à une date et à une heure précisément déterminées, et si le professionnel peut en apporter la preuve (**article L223-1 du Code de la consommation [Source 3]**).\n\nLe contexte fourni **ne contient pas l’article L141-28 du Code de commerce**. Il ne permet donc pas de déterminer les éventuelles règles relatives à la **consultation préalable du comité social et économique**, ni de préciser si cette consultation est obligatoire et dans quelles conditions.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D223-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.7279209997505,
+      "vectorSearchMs": 569.714778999798,
+      "jinaRerankingMs": 585.8803039994091,
+      "mappingMs": 0.02631899993866682,
+      "totalMs": 1404.373875000514,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010406000539660454,
+      "contextBuilderMs": 0.04448099993169308,
+      "generationMs": 4739.137008000165,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6143.574696999975
+    },
+    "judge": {
+      "questionId": "q399",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement, et de façon fondée sur le contexte, les jours, horaires, fuseau horaire, fréquence maximale et la possibilité d'un appel hors créneaux sur consentement explicite. Elle ajoute correctement l'exigence générale de consentement préalable. Toutefois, elle omet l'exception prévue dans le contexte pour l'exécution d'un contrat en cours et ne répond pas sur le fond à la consultation du CSE prévue par l'article L141-28, pourtant demandée et présente dans la référence. Son constat que cet article ne figure pas dans le contexte est cependant exact, de sorte que ses affirmations sont bien ancrées dans les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les règles de prospection téléphonique : consentement, jours, horaires, fuseau horaire, fréquence et dérogation sur consentement explicite. Elles ne contiennent toutefois pas l’article L141-28 du code de commerce, pourtant nécessaire pour répondre au volet essentiel relatif à la consultation du comité social et économique. Les affirmations effectivement formulées dans la réponse sont, elles, couvertes par les sources : D223-9 couvre les créneaux, jours et fréquence ; L223-1 couvre le consentement, sa preuve et l’appel hors créneaux sur accord explicite. Le constat d’absence de l’article L141-28 dans le contexte est également conforme aux sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni permet de préciser les règles suivantes, mais il ne contient pas le texte de l’article **L141-28 du Code de commerce**. Il n’est donc pas possible de répondre sur l’obligation de consultation préalable du comité social et économique.\n\n### Conditions relatives aux appels de prospection\n\nLorsqu’elle est autorisée, la prospection téléphonique doit avoir lieu :\n\n- **du lundi au vendredi** ;\n- sauf lorsque ces jours sont fériés ;\n- uniquement entre **10 heures et 13 heures** et entre **14 heures et 20 heures** ;\n- selon les horaires correspondant au **fuseau horaire du consommateur** ;\n- dans la limite de **quatre sollicitations ou tentatives de sollicitation du même consommateur au cours de trente jours calendaires** par un même professionnel, directement ou par l’intermédiaire d’un tiers.  \n  **Article D223-9 du Code de la consommation [Source 1]**\n\nEn principe, le professionnel ne peut appeler un consommateur que si celui-ci a donné au préalable un **consentement exprès**, libre, spécifique, éclairé, univoque et révocable. Le professionnel doit pouvoir prouver que ce consentement a été recueilli conformément aux conditions légales. **Article L223-1 du Code de la consommation [Source 2]**\n\nLe consommateur peut toutefois être sollicité sans ce consentement préalable lorsque l’appel intervient dans le cadre de l’exécution d’un contrat en cours et présente un rapport avec l’objet de ce contrat. **Article L223-1 du Code de la consommation [Source 2]**\n\nEnfin, le consommateur peut accepter explicitement d’être appelé en dehors des jours et horaires réglementaires, à une date et à une heure précisément déterminées, à condition que le professionnel puisse en apporter la preuve. **Article L223-1 du Code de la consommation [Source 3]**\n\nEn revanche, la consultation préalable du comité social et économique ne peut pas être analysée à partir des sources transmises : le texte de l’article **L141-28 du Code de commerce** manque au contexte.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D223-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5584.284988000058,
+      "routingCalls": 1,
+      "embeddingMs": 226.6000769995153,
+      "vectorSearchMs": 513.567184000276,
+      "jinaRerankingMs": 585.5054029999301,
+      "mappingMs": 0.027761000208556652,
+      "totalMs": 6910.0077919997275,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014151999726891518,
+      "contextBuilderMs": 0.023005999624729156,
+      "generationMs": 4011.3926849998534,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 10921.446976000443
+    },
+    "judge": {
+      "questionId": "q399",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les jours, plages horaires, fuseau horaire et limite de fréquence prévus par l’article D223-9. Elle ajoute des précisions exactes et expressément présentes dans le contexte sur le consentement et ses exceptions. Elle ne fournit toutefois pas la condition attendue au titre de l’article L141-28 du code de commerce (information et consultation du CSE dans le cadre d’un projet de vente de fonds de commerce), en indiquant à juste titre que ce texte n’est pas présent dans le contexte. Cette omission rend la réponse incomplète au regard de la question globale, mais toutes ses affirmations substantielles sont soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources D223-9 et L223-1 du code de la consommation sont directement pertinentes pour les conditions de prospection téléphonique exposées (jours, horaires, fuseau, fréquence, consentement, exceptions et appel hors créneaux sur accord explicite). Aucune source ne porte sur l'article L141-28 du code de commerce ni sur la consultation du CSE : les sources sont donc insuffisantes pour répondre complètement à cette partie de la question, mais elles permettent de justifier le constat de la réponse selon lequel cette obligation ne peut être analysée à partir du contexte transmis. Toutes les affirmations substantielles effectivement formulées sont couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

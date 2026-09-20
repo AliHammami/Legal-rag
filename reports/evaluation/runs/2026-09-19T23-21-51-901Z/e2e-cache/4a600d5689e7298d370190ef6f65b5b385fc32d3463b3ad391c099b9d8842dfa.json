@@ -1,0 +1,119 @@
+{
+  "questionId": "q392",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "## 1. Rôles et missions des services de prévention et de santé au travail\n\nLeur mission principale est d’**éviter toute altération de la santé des travailleurs du fait de leur travail** et de contribuer à leur maintien dans l’emploi [Source 2].\n\nÀ ce titre, ils :\n\n- conduisent des actions visant à préserver la **santé physique et mentale** des travailleurs ;\n- aident l’entreprise à évaluer et prévenir les risques professionnels, selon une approche pluridisciplinaire ;\n- conseillent les employeurs, les travailleurs et leurs représentants sur la prévention des risques, l’amélioration des conditions de travail, le télétravail, les addictions, le harcèlement et la désinsertion professionnelle ;\n- accompagnent l’entreprise et les salariés lors de changements organisationnels importants ;\n- assurent la surveillance de l’état de santé des travailleurs en fonction des risques professionnels, de leur âge et de l’exposition à certains facteurs de risques ;\n- participent au suivi et à la traçabilité des expositions professionnelles ainsi qu’à la veille sanitaire.\n\nCes missions sont prévues par l’**article L4622-2 du Code du travail** [Source 2].\n\n## 2. Peines encourues pour des violences volontaires sans incapacité totale de travail\n\nEn principe, les violences volontaires n’ayant entraîné **aucune incapacité totale de travail** constituent une **contravention de 4e classe**, punie de l’amende correspondante, sauf lorsqu’elles relèvent notamment des articles 222-13 ou 222-14 du Code pénal : **article R624-1 du Code pénal** [Source 1].\n\nDes peines complémentaires peuvent également être prononcées :\n\n- suspension du permis de conduire pendant trois ans au plus ;\n- interdiction de détenir ou porter une arme soumise à autorisation pendant trois ans au plus ;\n- confiscation d’une ou plusieurs armes ;\n- retrait du permis de chasser, avec interdiction d’en solliciter un nouveau pendant trois ans au plus ;\n- confiscation de l’objet ayant servi ou destiné à commettre l’infraction, ou de son produit.\n\nL’aide ou l’assistance apportée sciemment à la préparation ou à la consommation de cette contravention est punie des mêmes peines [Source 1].\n\nToutefois, lorsque les violences sans incapacité sont commises dans certaines circonstances prévues par l’**article 222-13 du Code pénal** — par exemple sur un mineur de quinze ans, une personne particulièrement vulnérable ou certaines personnes protégées dans l’exercice de leurs fonctions — elles sont punies de **trois ans d’emprisonnement et de 45 000 euros d’amende** [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R624-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4622-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-13"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.3650939995423,
+      "vectorSearchMs": 688.3607429992408,
+      "jinaRerankingMs": 574.5855949996039,
+      "mappingMs": 0.022311999462544918,
+      "totalMs": 1481.3578180000186,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010499000549316406,
+      "contextBuilderMs": 0.03245000075548887,
+      "generationMs": 4663.575267000124,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6144.987939999439
+    },
+    "judge": {
+      "questionId": "q392",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond aux deux volets. Elle restitue fidèlement les missions prévues à l’article L4622-2 du code du travail, y compris la prévention, le conseil, l’accompagnement des changements, la surveillance et la traçabilité. Elle expose correctement le régime de l’article R624-1 pour les violences sans incapacité, les peines complémentaires et la complicité, puis précise à juste titre le régime aggravé de l’article 222-13. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1, 2 et 3 sont directement pertinentes et correspondent aux deux volets de la question. La source 2 couvre l’ensemble des missions énumérées des services de prévention et de santé au travail. La source 1 couvre la contravention de 4e classe, ses peines complémentaires et l’aide ou assistance. La source 3 couvre l’exception aggravée mentionnée, y compris la peine de trois ans d’emprisonnement et 45 000 euros d’amende ainsi que les exemples de victimes visées. Les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "## Services de prévention et de santé au travail\n\nLeur mission principale est d’éviter toute altération de la santé des travailleurs liée à leur travail et de contribuer à leur maintien dans l’emploi [Source 2].\n\nÀ ce titre, ils ont notamment pour missions de :\n\n- conduire des actions de prévention afin de préserver la santé physique et mentale des travailleurs ;\n- aider l’entreprise à évaluer et prévenir les risques professionnels ;\n- conseiller les employeurs, les travailleurs et leurs représentants sur la prévention des risques, l’amélioration des conditions de travail, le télétravail, les addictions, le harcèlement et la désinsertion professionnelle ;\n- accompagner l’entreprise et les salariés lors de changements organisationnels importants ;\n- assurer la surveillance de l’état de santé des travailleurs selon les risques professionnels, leur âge et leur exposition ;\n- participer au suivi et à la traçabilité des expositions professionnelles ainsi qu’à la veille sanitaire.\n\nCes missions sont prévues par l’article L4622-2 du Code du travail [Source 2].\n\n## Violences volontaires sans incapacité totale de travail\n\nEn principe, les violences volontaires n’ayant entraîné aucune incapacité totale de travail constituent une contravention de 4e classe, conformément à l’article R624-1 du Code pénal [Source 1].\n\nLes peines complémentaires possibles sont :\n\n- la suspension du permis de conduire pendant trois ans au plus ;\n- l’interdiction de détenir ou porter une arme soumise à autorisation pendant trois ans au plus ;\n- la confiscation d’une ou plusieurs armes ;\n- le retrait du permis de chasser, avec interdiction d’en solliciter un nouveau pendant trois ans au plus ;\n- la confiscation de la chose ayant servi ou destinée à commettre l’infraction, ou de son produit.\n\nL’aide ou l’assistance apportée sciemment à la préparation ou à la commission de cette contravention est punie des mêmes peines [Source 1].\n\nToutefois, lorsque les violences sont commises dans certaines circonstances aggravantes prévues par l’article 222-13 du Code pénal, elles peuvent être punies de **trois ans d’emprisonnement et de 45 000 euros d’amende**, même sans incapacité totale de travail [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R624-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4622-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-13"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1405.6760220006108,
+      "routingCalls": 1,
+      "embeddingMs": 223.14620800036937,
+      "vectorSearchMs": 345.9960139999166,
+      "jinaRerankingMs": 667.6487819999456,
+      "mappingMs": 0.027697999961674213,
+      "totalMs": 2642.518510999158,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015749000012874603,
+      "contextBuilderMs": 0.031946999952197075,
+      "generationMs": 3706.2958949999884,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6348.872018000111
+    },
+    "judge": {
+      "questionId": "q392",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse couvre correctement les deux volets : missions des services de prévention et de santé au travail (prévention, conseil, surveillance, accompagnement des changements, traçabilité) et régime des violences sans ITT (contravention de 4e classe hors cas aggravés, peines complémentaires et aide/assistance). Les précisions sur les circonstances aggravantes et la peine de trois ans et 45 000 euros sont également conformes au contexte. Toutes les affirmations importantes sont explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 répondent directement aux deux volets de la question et étayent l’ensemble des missions et peines complémentaires exposées. La source 3 couvre également la précision ajoutée sur les violences sans incapacité commises dans les circonstances aggravantes visées, avec la peine de trois ans d’emprisonnement et 45 000 euros d’amende. Les affirmations importantes de la réponse sont donc couvertes par des sources directement pertinentes."
+    }
+  },
+  "failureStage": "none"
+}

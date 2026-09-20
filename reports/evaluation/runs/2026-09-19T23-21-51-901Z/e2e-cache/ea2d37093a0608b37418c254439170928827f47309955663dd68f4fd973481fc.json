@@ -1,0 +1,119 @@
+{
+  "questionId": "q440",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La juridiction compétente dépend de la nature du litige :\n\n- **Procédure concernant un débiteur en difficulté** :  \n  - **tribunal de commerce** si le débiteur exerce une activité commerciale ou artisanale ;  \n  - **tribunal judiciaire** dans les autres cas.  \n  Le tribunal ayant ouvert la procédure reste compétent pour les demandes d’extension ou de réunion de patrimoines. **Article L. 621-2 du Code de commerce [Source 5].**\n\n- **Fixation du prix d’un bail commercial révisé ou renouvelé** : le **président du tribunal judiciaire** du lieu où se situe l’immeuble. Pour les autres contestations relatives au bail, le **tribunal judiciaire** du même lieu est compétent. **Article R. 145-23 du Code de commerce [Source 4].**\n\n- **Procédures relevant de l’article L. 420-7** :  \n  - personnes non commerçantes ou non artisanes : juridiction judiciaire compétente selon le ressort indiqué ;  \n  - commerçants ou artisans : tribunal de commerce compétent selon ce ressort. **Annexes 9-4 et 9-5 du Code de commerce [Sources 2 et 3].**  \n  En appel, la **cour d’appel de Paris** est compétente pour l’application de la deuxième phrase de l’article L. 420-7. **Article R. 420-5 du Code de commerce [Source 1].**\n\nLes éléments fournis ne permettent pas de déterminer une juridiction unique sans connaître la nature précise du litige, le statut des parties et, le cas échéant, le lieu concerné.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R420-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R145-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 174.02975899912417,
+      "vectorSearchMs": 691.829219000414,
+      "jinaRerankingMs": 524.1848159991205,
+      "mappingMs": 0.042246999219059944,
+      "totalMs": 1390.1089099999517,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012980999425053596,
+      "contextBuilderMs": 0.02777799963951111,
+      "generationMs": 3334.6380950007588,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4724.797078000382
+    },
+    "judge": {
+      "questionId": "q440",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question étant dépourvue de tout fait permettant d’identifier le type de litige, les parties ou le ressort territorial, la réponse conclut correctement qu’aucune juridiction unique ne peut être déterminée. Les hypothèses exposées correspondent aux sources fournies : procédure collective (L. 621-2), bail commercial (R. 145-23) et procédures de l’article L. 420-7 avec appel à Paris. La réponse reconnaît explicitement l’insuffisance des éléments, ce qui constitue l’abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les hypothèses juridictionnelles exposées et permettent aussi de justifier qu’aucune juridiction unique ne peut être déterminée sans préciser la nature du litige, le statut des parties et le lieu. L’article L. 621-2 couvre la compétence en procédure collective et le maintien de compétence pour extension ou réunion de patrimoines ; l’article R. 145-23 couvre les baux commerciaux et le critère territorial ; les annexes 9-4 et 9-5 ainsi que l’article R. 420-5 couvrent les procédures de l’article L. 420-7 et l’appel à Paris. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les éléments fournis ne permettent pas d’identifier une seule juridiction compétente : cela dépend de la nature du litige.\n\n- **Procédure collective** :  \n  - si le débiteur exerce une activité commerciale ou artisanale : **tribunal de commerce** ;  \n  - dans les autres cas : **tribunal judiciaire**.  \n  — Article L. 621-2 du Code de commerce [Source 5].\n\n- **Fixation du prix d’un bail commercial révisé ou renouvelé** : **président du tribunal judiciaire** du lieu de situation de l’immeuble. Pour les autres contestations relatives au bail : **tribunal judiciaire** du même lieu.  \n  — Article R. 145-23 du Code de commerce [Source 4].\n\n- **Procédures concernant des personnes non commerçantes ou non artisanes**, en application de l’article L. 420-7 : **tribunal judiciaire** ; pour les commerçants ou artisans : **tribunal de commerce**, selon le ressort indiqué.  \n  — Annexes 9-4 et 9-5 du Code de commerce [Sources 2 et 3].\n\n- **Appel dans le cadre visé par la deuxième phrase de l’article L. 420-7** : **cour d’appel de Paris**.  \n  — Article R. 420-5 du Code de commerce [Source 1].\n\nIl faut donc préciser la nature du litige et, le cas échéant, l’activité du débiteur ou le lieu de situation de l’immeuble.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R420-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R145-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 714.5919300001115,
+      "routingCalls": 1,
+      "embeddingMs": 519.24044900015,
+      "vectorSearchMs": 667.0125149991363,
+      "jinaRerankingMs": 498.66328599862754,
+      "mappingMs": 0.038738999515771866,
+      "totalMs": 2399.571636000648,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012635000050067902,
+      "contextBuilderMs": 0.029949000105261803,
+      "generationMs": 2718.520687999204,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5118.149250000715
+    },
+    "judge": {
+      "questionId": "q440",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question est trop indéterminée pour désigner une juridiction unique. La réponse l’indique explicitement et précise les éléments nécessaires. Les hypothèses juridictionnelles ensuite exposées sont conformes aux extraits de contexte cités."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La question étant indéterminée, les sources sont pertinentes pour étayer l'absence de juridiction unique et illustrer les critères déterminants selon plusieurs contentieux. Chaque affirmation juridictionnelle de la réponse est directement couverte : L. 621-2 pour les procédures collectives, R. 145-23 pour les baux commerciaux et la compétence territoriale, les annexes 9-4 et 9-5 pour les procédures relevant de L. 420-7, et R. 420-5 pour l'appel devant la cour d'appel de Paris."
+    }
+  },
+  "failureStage": "none"
+}

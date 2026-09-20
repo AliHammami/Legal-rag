@@ -1,0 +1,119 @@
+{
+  "questionId": "q287",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du chapitre de l’**article L. 133-1 du Code monétaire et financier** s’appliquent selon les conditions suivantes :\n\n1. **Services et prestataires concernés**  \n   Elles concernent les services de paiement fournis par les prestataires de services de paiement mentionnés au livre V, dans le cadre des activités visées au II de l’article L. 314-1 du même code (**article L. 133-1, I [Source 1]**).\n\n2. **Opérations en euros ou dans certaines devises européennes**  \n   Elles s’appliquent lorsque les prestataires du payeur et du bénéficiaire sont situés :\n   - l’un en France métropolitaine ou dans certains territoires français mentionnés par le texte ;\n   - l’autre en France, dans un autre État membre de l’Union européenne ou dans un État partie à l’accord sur l’Espace économique européen ;\n\n   et lorsque l’opération est réalisée en euros ou dans la devise d’un État membre de l’Union européenne n’appartenant pas à la zone euro, ou d’un autre État partie à l’EEE (**article L. 133-1, II [Source 1]**).\n\n3. **Opérations dans une devise d’un État extérieur à l’EEE**  \n   Les dispositions s’appliquent également, à certaines exceptions près, lorsque l’opération est réalisée dans la devise d’un État n’appartenant pas à l’EEE, mais uniquement pour les parties de l’opération effectuées dans l’Union européenne (**article L. 133-1, III [Source 1]**).\n\n4. **Un seul prestataire situé dans les territoires français concernés**  \n   Lorsque seul le prestataire du payeur ou celui du bénéficiaire est situé dans les territoires français visés, les dispositions s’appliquent, quelle que soit la devise de l’opération, pour les parties effectuées dans l’Union européenne. Plusieurs dispositions sont toutefois expressément exclues (**article L. 133-1, IV [Source 4]**).\n\n5. **Limites et exclusions**\n   - Les services fournis par les prestataires de services d’information sur les comptes sont en principe exclus, sauf pour les articles expressément maintenus applicables (**article L. 133-1, V [Source 4]**).\n   - Le chapitre ne s’applique pas aux opérations effectuées entre prestataires de services de paiement pour leur propre compte (**article L. 133-1, VI [Source 4]**).\n   - Il s’applique également à l’émission et à la gestion de monnaie électronique, sans préjudice des règles spécifiques applicables (**article L. 133-1, VII [Source 4]**).\n\nLe contexte prévoit en outre une **adaptation spécifique** des règles territoriales et monétaires pour la France, Saint-Pierre-et-Miquelon, la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna, notamment en euros ou en francs CFP (**article L. 732-3 du Code monétaire et financier [Source 2]**).",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L732-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.88776999991387,
+      "vectorSearchMs": 601.86660400033,
+      "jinaRerankingMs": 583.6138920001686,
+      "mappingMs": 0.045231000520288944,
+      "totalMs": 1429.4387459997088,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017645000480115414,
+      "contextBuilderMs": 0.04784199967980385,
+      "generationMs": 8213.646639000624,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9643.171095999889
+    },
+    "judge": {
+      "questionId": "q287",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les conditions des II à IV de l’article L. 133-1 : localisation des prestataires, devises UE/EEE, devises d’États hors EEE avec application limitée aux parties exécutées dans l’Union, et hypothèse d’un seul prestataire situé dans les territoires français visés. Elle mentionne aussi à juste titre les principales exclusions et extensions des V à VII. Ces affirmations sont directement étayées par les sources 1 et 4 ; l’adaptation territoriale additionnelle est également tirée de la source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 4 reproduisent directement l’article L. 133-1 et couvrent les conditions d’application énoncées aux I à VII : prestataires et activités concernés, localisation, devises UE/EEE ou hors EEE, limitation aux parties réalisées dans l’Union, exceptions, services d’information sur les comptes, opérations inter-prestataires et monnaie électronique. La source 2 étaye l’adaptation territoriale additionnelle mentionnée dans la réponse. Les affirmations importantes sont donc directement et presque intégralement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du chapitre s’appliquent aux services de paiement selon les conditions suivantes :\n\n1. **Prestataires et activités concernés**  \n   Elles concernent les services de paiement fournis par les prestataires de services de paiement mentionnés au livre V du Code monétaire et financier, dans le cadre des activités définies au II de l’article L. 314-1 [Source 1].\n\n2. **Opérations impliquant la France ou un autre État de l’UE/EEE**  \n   Elles s’appliquent lorsque les prestataires du payeur et du bénéficiaire sont situés, l’un dans un territoire français visé par l’article, l’autre en France, dans un autre État membre de l’Union européenne ou dans un autre État partie à l’accord sur l’Espace économique européen. L’opération doit être réalisée en euros ou dans la devise d’un État membre de l’Union européenne non membre de la zone euro, ou d’un autre État partie à l’EEE [Source 1].\n\n3. **Opérations dans une devise extérieure à l’EEE**  \n   Lorsque l’opération est réalisée dans la devise d’un État n’appartenant pas à l’EEE, les dispositions s’appliquent uniquement aux parties de l’opération effectuées dans l’Union européenne, sous réserve des exceptions prévues par le texte [Source 1].\n\n4. **Lorsqu’un seul prestataire est situé dans les territoires concernés**  \n   Le chapitre s’applique également lorsque seul le prestataire du payeur ou celui du bénéficiaire est situé dans les territoires français mentionnés, quelle que soit la devise de l’opération, mais uniquement pour les parties de l’opération effectuées dans l’Union européenne. Plusieurs dispositions sont toutefois expressément exclues, notamment les articles L. 133-11, L. 133-22 et L. 133-25 à L. 133-25-2 [Source 4].\n\n5. **Limites et exclusions**  \n   - Les règles ne s’appliquent pas aux services fournis par les prestataires de services d’information sur les comptes, sauf pour les articles expressément maintenus par l’article L. 133-1 [Source 4].  \n   - Elles ne s’appliquent pas aux opérations effectuées entre prestataires de services de paiement pour leur propre compte [Source 4].  \n   - Elles s’appliquent toutefois à l’émission et à la gestion de monnaie électronique [Source 4].\n\nDes adaptations particulières existent pour certains territoires ultramarins, notamment Saint-Pierre-et-Miquelon, la Nouvelle-Calédonie, la Polynésie française et les îles Wallis-et-Futuna, avec des règles spécifiques de territorialité et de devise [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L732-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1025.9105679998174,
+      "routingCalls": 1,
+      "embeddingMs": 194.1815319992602,
+      "vectorSearchMs": 176.57090199925005,
+      "jinaRerankingMs": 631.0282460004091,
+      "mappingMs": 0.09113599918782711,
+      "totalMs": 2027.81974099949,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.022350000217556953,
+      "contextBuilderMs": 0.04525099974125624,
+      "generationMs": 8415.621656999923,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 10443.518569000065
+    },
+    "judge": {
+      "questionId": "q287",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose fidèlement les conditions des II, III et IV de l’article L. 133-1 : localisation des prestataires, devise de l’opération, limitation aux parties effectuées dans l’Union pour certaines opérations et exceptions applicables. Elle mentionne également correctement les exclusions et extensions des V à VII. Les affirmations sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 4 reproduisent directement les I à VII de l'article L. 133-1 et sont donc parfaitement ciblées pour les conditions territoriales, de devise, les exceptions et exclusions exposées. La source 2 étaye les adaptations territoriales particulières évoquées pour Saint-Pierre-et-Miquelon, la Nouvelle-Calédonie, la Polynésie française et Wallis-et-Futuna. Toutes les affirmations importantes de la réponse sont couvertes par le contenu cité."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q499",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne précisent pas les règles applicables à la chasse pendant la période de nidification.\n\nL’**article 715 du Code civil** indique seulement que la chasse et la pêche sont régies par des **lois particulières** [Source 1]. L’article 1812 concerne quant à lui la disposition des bêtes d’un troupeau et ne traite pas de la chasse [Source 2].\n\nIl faudrait donc disposer des textes spéciaux applicables pour répondre précisément.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "715"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1812"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 215.2480079997331,
+      "vectorSearchMs": 627.424251999706,
+      "jinaRerankingMs": 521.6518489997834,
+      "mappingMs": 0.018954001367092133,
+      "totalMs": 1364.3626090008765,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009885000064969063,
+      "contextBuilderMs": 0.021557001397013664,
+      "generationMs": 1560.4636779986322,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2924.8669729996473
+    },
+    "judge": {
+      "questionId": "q499",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner des règles non présentes dans le contexte et explique correctement que l’article 715 renvoie à des lois particulières. Elle relève aussi, à juste titre, que l’article 1812 est sans rapport avec la question. Toutes les affirmations sont soutenues par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour justifier l’abstention : elle indique que la chasse est régie par des lois particulières, sans fournir les règles demandées. La source 2 est hors du sujet de la chasse mais permet de soutenir le constat qu’elle ne traite que de la disposition des bêtes d’un troupeau. Les deux affirmations factuelles de la réponse sont couvertes, ainsi que la conclusion selon laquelle les textes spéciaux seraient nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles applicables à la chasse pendant la période de nidification.\n\nL’**article 715 du Code civil** indique seulement que la faculté de chasser est réglée par des lois particulières [Source 1]. L’**article 1812 du Code civil** concerne le preneur et les bêtes d’un troupeau, sans rapport avec la chasse [Source 2].\n\nIl faudrait disposer des textes particuliers applicables à la chasse et à la protection des espèces pendant cette période.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "715"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1812"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1024.055826999247,
+      "routingCalls": 1,
+      "embeddingMs": 216.5020679999143,
+      "vectorSearchMs": 601.6436960007995,
+      "jinaRerankingMs": 498.41921800002456,
+      "mappingMs": 0.019937999546527863,
+      "totalMs": 2340.66319799982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010672999545931816,
+      "contextBuilderMs": 0.014223000034689903,
+      "generationMs": 1652.1030809991062,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3992.7986180000007
+    },
+    "judge": {
+      "questionId": "q499",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner des règles non présentes dans le contexte et explique correctement que l’article 715 renvoie à des lois particulières. Elle identifie aussi, à juste titre, que l’article 1812 est sans rapport avec la question. Toutes les affirmations sont directement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est pertinente pour justifier l’abstention : elle indique explicitement que la chasse est régie par des lois particulières, lesquelles ne sont pas fournies. La source 2 est hors sujet quant aux règles de chasse, mais elle permet de constater qu’elle ne contient pas de règle pertinente sur ce thème. Ensemble, les sources couvrent les constats de la réponse : absence de règles applicables dans le contexte, renvoi de l’article 715 à des textes particuliers et contenu non relatif à la chasse de l’article 1812."
+    }
+  },
+  "failureStage": "none"
+}

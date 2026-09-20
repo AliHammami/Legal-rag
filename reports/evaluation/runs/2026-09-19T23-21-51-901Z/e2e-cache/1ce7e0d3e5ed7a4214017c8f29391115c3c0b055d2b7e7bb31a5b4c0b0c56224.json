@@ -1,0 +1,95 @@
+{
+  "questionId": "q370",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’employeur doit, **au plus tard le 31 janvier de chaque année**, adresser à l’organisme chargé du recouvrement des cotisations et contributions sociales dont il relève une déclaration portant sur l’année civile précédente.\n\nCette déclaration doit notamment préciser :\n\n- le nombre de salariés partis en préretraite ou placés en cessation anticipée d’activité ;\n- leur âge ;\n- le montant de l’avantage qui leur est alloué ;\n- le nombre de mises à la retraite à l’initiative de l’employeur.\n\nSelon le texte applicable :\n\n- **Article L320-4 du Code du travail [Source 1]** : la déclaration mentionne également les salariés âgés de **60 ans et plus licenciés** au cours de l’année précédente. L’obligation ne s’applique que si au moins un salarié a été placé en préretraite ou en cessation anticipée d’activité.\n- **Article L1221-18 du Code du travail [Source 2]** : la déclaration comprend aussi les salariés âgés de **55 ans et plus licenciés ou ayant bénéficié d’une rupture conventionnelle**. L’obligation s’applique notamment lorsqu’au moins un salarié a été mis à la retraite à l’initiative de l’employeur, licencié ou a bénéficié d’une rupture conventionnelle.\n\nLe modèle de déclaration est fixé par arrêté conjoint des ministres chargés de la sécurité sociale et de l’emploi [Sources 1 et 2].\n\nEn cas de défaut de déclaration dans le délai prescrit, l’employeur encourt une pénalité égale à **600 fois le taux horaire du salaire minimum de croissance**. Cette pénalité est recouvrée par l’organisme chargé du recouvrement des cotisations et contributions sociales, et son produit est affecté à la Caisse nationale d’assurance vieillesse [Sources 1 et 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L320-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 523.689766000025,
+      "vectorSearchMs": 669.7564179999754,
+      "jinaRerankingMs": 574.9881739998236,
+      "mappingMs": 0.03931399993598461,
+      "totalMs": 1768.497131999582,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015976999886333942,
+      "contextBuilderMs": 0.026115999557077885,
+      "generationMs": 3861.177446999587,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5629.782845000736
+    },
+    "judge": {
+      "questionId": "q370",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement l’échéance annuelle du 31 janvier, le destinataire, les catégories et informations à déclarer, ainsi que la pénalité de 600 fois le taux horaire du SMIC. Elle ajoute utilement les modalités de recouvrement et d’affectation. La présentation parallèle de l’ancien article L320-4 et de l’article L1221-18 peut toutefois créer une légère confusion sur le régime applicable, alors que la question appelle principalement la règle de l’article L1221-18. Toutes les affirmations importantes sont néanmoins étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement les obligations déclaratives et la sanction visées par la question : échéance au 31 janvier, organisme destinataire, informations et catégories de salariés à déclarer, conditions d'assujettissement, modèle fixé par arrêté, pénalité de 600 fois le taux horaire du SMIC, recouvrement et affectation. La source 2 correspond précisément à l'article L1221-18 cité dans la réponse ; la source 1 couvre également les affirmations présentées comme relevant de l'ancien article L320-4. Toutes les affirmations substantielles de la réponse sont ainsi étayées par les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "L’employeur doit adresser, **au plus tard le 31 janvier de chaque année**, une déclaration à l’organisme chargé du recouvrement des cotisations et contributions sociales dont il relève.\n\nCette déclaration doit notamment préciser :\n\n- le nombre de salariés partis en préretraite ou placés en cessation anticipée d’activité au cours de l’année précédente ;\n- leur âge ;\n- le montant de l’avantage qui leur est accordé ;\n- le nombre de mises à la retraite d’office à l’initiative de l’employeur ;\n- selon le texte applicable, le nombre de salariés âgés d’au moins 55 ou 60 ans licenciés, ainsi que, dans la version prévue par l’**article L. 1221-18 du Code du travail**, ceux ayant bénéficié d’une rupture conventionnelle. [Source 2]\n\nL’obligation ne concerne que les employeurs entrant dans les situations prévues par le texte applicable : notamment lorsqu’au moins un salarié a été placé en préretraite ou en cessation anticipée d’activité ; l’**article L. 1221-18 du Code du travail** vise également la mise à la retraite à l’initiative de l’employeur, ainsi que certains licenciements ou ruptures conventionnelles de salariés âgés d’au moins 55 ans. [Source 2] La rédaction de l’**article L. 320-4 du Code du travail** prévoit, quant à elle, un seuil de 60 ans pour les salariés licenciés et une condition d’assujettissement plus restreinte. [Source 1]\n\nLe modèle de déclaration est fixé par arrêté conjoint des ministres chargés de la sécurité sociale et de l’emploi. [Sources 1 et 2]\n\nEn cas de défaut de déclaration dans le délai prescrit, l’employeur encourt une pénalité égale à **600 fois le taux horaire du salaire minimum de croissance**. Cette pénalité est recouvrée par l’organisme chargé du recouvrement des cotisations et contributions sociales, et son produit est affecté à la Caisse nationale d’assurance vieillesse. [Sources 1 et 2]\n\nLes deux extraits présentant des différences de rédaction, notamment sur les catégories de salariés concernées, le texte applicable à la situation précise de l’employeur ne peut pas être déterminé avec certitude à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L320-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2147.7726980000734,
+      "routingCalls": 1,
+      "embeddingMs": 214.984858000651,
+      "vectorSearchMs": 318.4306569993496,
+      "jinaRerankingMs": 572.8186020003632,
+      "mappingMs": 0.026875999756157398,
+      "totalMs": 3254.0590300001204,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01017600018531084,
+      "contextBuilderMs": 0.026170000433921814,
+      "generationMs": 4322.5467570004985,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7576.650205000304
+    },
+    "judge": {
+      "questionId": "q370",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement l’échéance annuelle du 31 janvier, le destinataire de la déclaration, les informations à déclarer (préretraite/cessation anticipée, âge, avantage, mises à la retraite et salariés âgés concernés) ainsi que la condition d’application de l’obligation. Elle indique exactement la pénalité de 600 fois le taux horaire du SMIC et ajoute correctement ses modalités de recouvrement. Toutes les affirmations importantes sont explicitement étayées par les deux extraits de contexte. La mention des différences entre les deux versions est prudente et ne constitue pas une abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : elles énoncent l’obligation déclarative annuelle, son destinataire, les informations requises, les catégories de salariés concernées, les conditions d’application, le modèle de déclaration et la pénalité. Elles couvrent les affirmations substantielles de la réponse, y compris le montant de 600 fois le taux horaire du SMIC, le recouvrement et l’affectation du produit de la pénalité. Les différences relevées entre les articles L. 320-4 et L. 1221-18 sont elles-mêmes explicitement visibles dans les sources."
+    }
+  },
+  "failureStage": "none"
+}

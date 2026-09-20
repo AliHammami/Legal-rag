@@ -1,0 +1,111 @@
+{
+  "questionId": "q220",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L320-1 du Code de commerce, les ventes aux enchères publiques de meubles sont régies par les dispositions du titre concerné, sous réserve des règles particulières applicables à certains meubles incorporels.  \n\nToutefois, les ventes à cri public de comestibles et d’objets de peu de valeur sont libres. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L320-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-11"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-36"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 191.25828299997374,
+      "vectorSearchMs": 573.0740450001322,
+      "jinaRerankingMs": 571.1530530001037,
+      "mappingMs": 0.0347079997882247,
+      "totalMs": 1335.5441990001127,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010191000066697598,
+      "contextBuilderMs": 0.024461000226438046,
+      "generationMs": 1224.4152729995549,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2560.003000999801
+    },
+    "judge": {
+      "questionId": "q220",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux règles de l’article L320-1 : le régime de principe par le titre, sous réserve des dispositions particulières concernant certains meubles incorporels, et la liberté des ventes à cri public de comestibles et d’objets de peu de valeur. Toutes les affirmations sont explicitement étayées par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l’article L320-1 visé par la question. Elle étaye toutes les affirmations importantes de la réponse : le rattachement des ventes aux enchères publiques de meubles au présent titre, la réserve relative à certains meubles incorporels et la liberté des ventes à cri public de comestibles et d’objets de peu de valeur."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article **L320-1 du Code de commerce**, les ventes aux enchères publiques de meubles sont régies par les dispositions du titre concerné, sous réserve des règles particulières applicables à certains meubles incorporels.  \n\nToutefois, les ventes à cri public de **comestibles et d’objets de peu de valeur sont libres**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L320-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-11"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-36"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1264.559739000164,
+      "routingCalls": 1,
+      "embeddingMs": 223.76640000008047,
+      "vectorSearchMs": 189.27131200022995,
+      "jinaRerankingMs": 546.9590719998814,
+      "mappingMs": 0.09003000007942319,
+      "totalMs": 2224.6715150000528,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011123999953269958,
+      "contextBuilderMs": 0.02656499994918704,
+      "generationMs": 1639.4348340001889,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3864.151680999901
+    },
+    "judge": {
+      "questionId": "q220",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l'article L320-1 : application du titre aux ventes aux enchères publiques de meubles, réserve des règles particulières concernant certains meubles incorporels, et liberté des ventes à cri public de comestibles et d'objets de peu de valeur. Toutes les affirmations sont directement étayées par la source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l’article L320-1 visé par la question. Elle étaye toutes les affirmations importantes de la réponse : le régime de principe par le titre, la réserve pour certains meubles incorporels et la liberté des ventes à cri public de comestibles et d’objets de peu de valeur."
+    }
+  },
+  "failureStage": "none"
+}

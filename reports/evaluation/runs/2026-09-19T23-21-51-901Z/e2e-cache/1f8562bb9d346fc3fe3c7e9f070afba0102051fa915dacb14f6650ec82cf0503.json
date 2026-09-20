@@ -1,0 +1,95 @@
+{
+  "questionId": "q500",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’inscription au tableau de l’Ordre des médecins.\n\nElles concernent le **Code de commerce** et l’inscription auprès :\n\n- de la **commission nationale d’inscription et de discipline**, qui statue selon les articles R. 811-33 à R. 811-35 [Source 1] ;\n- de la **Haute autorité**, à laquelle la demande doit être adressée avec les pièces justificatives, par courrier recommandé ou par voie électronique [Source 2].\n\nCes dispositions ne concernent pas l’Ordre des médecins. Il faudrait disposer des articles pertinents du **Code de la santé publique** pour répondre à la question.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-61"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-57"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 174.40521899983287,
+      "vectorSearchMs": 563.1130729988217,
+      "jinaRerankingMs": 525.8939260002226,
+      "mappingMs": 0.029858998954296112,
+      "totalMs": 1263.4687959998846,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01202000118792057,
+      "contextBuilderMs": 0.01888199895620346,
+      "generationMs": 2001.6892569996417,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3265.19937299937
+    },
+    "judge": {
+      "questionId": "q500",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner les conditions d’inscription à l’Ordre des médecins, car le contexte ne contient que des dispositions du Code de commerce relatives à d’autres procédures d’inscription. Elle identifie correctement que ces sources ne portent pas sur l’Ordre des médecins et indique qu’il faudrait des dispositions pertinentes du Code de la santé publique."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Dans le cadre d’une abstention attendue, les deux sources sont pertinentes pour constater que le contexte porte sur des procédures d’inscription distinctes : l’une relève de la commission nationale d’inscription et de discipline, l’autre de la Haute autorité. Elles soutiennent ainsi l’affirmation que les extraits fournis ne permettent pas d’établir les conditions d’inscription au tableau de l’Ordre des médecins. La réponse ne formule pas de conditions médicales non sourcées et les constats essentiels sont couverts."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les **conditions d’inscription au tableau de l’Ordre des médecins**.\n\nElles concernent uniquement :\n\n- une demande d’inscription examinée par la commission nationale d’inscription et de discipline, selon les articles R. 811-33 à R. 811-35 [Source 1] ;\n- les modalités de dépôt d’une demande auprès de la Haute autorité, avec pièces justificatives, ainsi que le délai de quatre mois au terme duquel l’absence de réponse vaut décision d’inscription [Source 2].\n\nAucune de ces sources ne précise les conditions propres à l’inscription au tableau de l’Ordre des médecins, telles que les diplômes, la nationalité, la compétence professionnelle ou les conditions d’exercice.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-61"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-57"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1234.274952000007,
+      "routingCalls": 1,
+      "embeddingMs": 236.74915600009263,
+      "vectorSearchMs": 555.331692000851,
+      "jinaRerankingMs": 562.8216070011258,
+      "mappingMs": 0.022836999967694283,
+      "totalMs": 2589.2238549999893,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017771998420357704,
+      "contextBuilderMs": 0.015535000711679459,
+      "generationMs": 2100.684459000826,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4689.951332999393
+    },
+    "judge": {
+      "questionId": "q500",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre sur les conditions d’inscription au tableau de l’Ordre des médecins, ce qui est approprié puisque le contexte ne contient que des dispositions du Code de commerce relatives à d’autres procédures d’inscription. Les affirmations sur le contenu des deux sources sont fidèles au contexte et l’absence d’informations sur les conditions propres aux médecins est correctement constatée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les deux sources sont pertinentes en ce qu’elles montrent qu’elles portent sur d’autres procédures d’inscription : l’une sur une commission nationale d’inscription et de discipline, l’autre sur une demande adressée à la Haute autorité. Elles ne fournissent aucune condition relative au tableau de l’Ordre des médecins. La réponse décrit fidèlement leur contenu (renvoi aux articles R. 811-33 à R. 811-35 ; modalités de dépôt, pièces et délai de quatre mois) et le constat d’insuffisance du contexte est ainsi couvert."
+    }
+  },
+  "failureStage": "none"
+}

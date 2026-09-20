@@ -1,0 +1,87 @@
+{
+  "questionId": "q395",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 2332 du Code civil**, les créances privilégiées sur certains meubles comprennent notamment :\n\n1. les sommes dues au titre d’un bail ou de l’occupation d’un immeuble, garanties sur le mobilier garnissant les lieux et appartenant au débiteur ;\n2. les frais de conservation d’un meuble, garantis sur ce meuble ;\n3. le prix de vente d’un meuble, garanti sur celui-ci ;\n4. les créances issues du contrat de travail de l’auxiliaire salarié d’un travailleur à domicile, garanties sur les sommes dues à ce travailleur par les donneurs d’ouvrage. [Source 1]\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code de commerce** relative aux restrictions applicables aux contrats des vendeurs à domicile indépendants. Il ne permet donc pas de répondre à cette seconde partie sans ajouter une source juridique.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.4468410005793,
+      "vectorSearchMs": 656.6663089999929,
+      "jinaRerankingMs": 598.8169989995658,
+      "mappingMs": 0.02701800037175417,
+      "totalMs": 1455.9839040003717,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013602999970316887,
+      "contextBuilderMs": 0.011901999823749065,
+      "generationMs": 2095.561460999772,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3551.580703999847
+    },
+    "judge": {
+      "questionId": "q395",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les quatre catégories de créances privilégiées énumérées à l’article 2332 du Code civil. Elle ne fournit toutefois pas les restrictions prévues par le Code de commerce pour les vendeurs à domicile indépendants, qui constituent une partie essentielle de la question. Cette omission est justifiée au regard du contexte effectivement fourni, lequel ne contient que l’article 2332 ; les affirmations produites sont donc entièrement fondées sur ce contexte. La réponse ne constitue pas une abstention totale : elle répond substantiellement à la première partie et explicite la limite documentaire pour la seconde."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la première partie, puisqu’elle reproduit intégralement l’article 2332 du Code civil et permet d’établir les quatre catégories énoncées. Aucune source relative au Code de commerce ou aux vendeurs à domicile indépendants n’est fournie : la réponse le constate explicitement et s’abstient donc correctement sur ce point. Les affirmations effectivement formulées sont couvertes par la source, y compris la constatation de l’absence de disposition pertinente dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 2332 du Code civil**, les créances privilégiées sur certains meubles comprennent, en plus de celles prévues par des lois spéciales :\n\n1. les sommes dues au titre d’un bail ou de l’occupation d’un immeuble, garanties sur le mobilier garnissant les lieux et appartenant au débiteur, y compris le mobilier d’exploitation et la récolte de l’année, le cas échéant ;\n2. les frais de conservation d’un meuble, garantis sur ce meuble ;\n3. le prix de vente d’un meuble, garanti sur celui-ci ;\n4. les créances issues du contrat de travail de l’auxiliaire salarié d’un travailleur à domicile, garanties sur les sommes dues à ce travailleur par les donneurs d’ouvrage.\n\n**Article 2332 du Code civil [Source 1].**\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code de commerce** relative aux restrictions applicables aux contrats des vendeurs à domicile indépendants. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1029.365712000057,
+      "routingCalls": 1,
+      "embeddingMs": 211.08361899945885,
+      "vectorSearchMs": 339.38356400001794,
+      "jinaRerankingMs": 560.8608860000968,
+      "mappingMs": 0.02274599950760603,
+      "totalMs": 2140.740562000312,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010809999890625477,
+      "contextBuilderMs": 0.011873999610543251,
+      "generationMs": 2367.312318000011,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4508.083750999533
+    },
+    "judge": {
+      "questionId": "q395",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue avec exactitude et de façon détaillée les quatre catégories de créances privilégiées prévues par l’article 2332 du Code civil. Elle ne répond toutefois pas au volet essentiel relatif à l’article L135-2 du Code de commerce et aux restrictions des contrats des vendeurs à domicile indépendants, alors que la question appelle une réponse sur ces deux aspects. Les affirmations formulées sur le Code civil sont entièrement étayées par le contexte, et l’absence de disposition pertinente du Code de commerce dans ce contexte est correctement constatée. Néanmoins, l’abstention partielle sur la seconde question ne satisfait pas l’attendu d’une réponse effective lorsque EXPECTED ABSTENTION est false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La seule source fournie est directement pertinente pour le premier volet : elle reproduit l’article 2332 du Code civil et permet d’identifier les quatre catégories de créances privilégiées mentionnées. Elle ne fournit toutefois aucune disposition relative au Code de commerce ni aux vendeurs à domicile indépendants, de sorte qu’elle est insuffisante pour traiter l’ensemble de la question. Les affirmations effectivement formulées dans la réponse générée sont néanmoins couvertes : l’énumération de l’article 2332 est conforme à la source, et le constat que le contexte fourni ne contient pas de disposition pertinente du Code de commerce est vérifiable à partir du corpus de sources fourni."
+    }
+  },
+  "failureStage": "generation"
+}

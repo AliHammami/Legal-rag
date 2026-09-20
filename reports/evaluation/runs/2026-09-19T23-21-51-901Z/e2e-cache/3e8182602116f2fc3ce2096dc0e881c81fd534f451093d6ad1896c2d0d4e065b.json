@@ -1,0 +1,87 @@
+{
+  "questionId": "q405",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une société peut substituer un référent de mission au comité de mission si :\n\n- elle emploie **moins de 50 salariés permanents au cours de l’exercice** ;\n- ses statuts remplissent les conditions prévues aux **1° et 2° de l’article L. 210-10 du Code de commerce** ;\n- cette possibilité est prévue dans ses statuts.\n\nLe référent de mission peut être un salarié de la société, mais son contrat de travail doit correspondre à un **emploi effectif**.  \n**Article L. 210-12 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L210-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 215.647348000668,
+      "vectorSearchMs": 575.8119359994307,
+      "jinaRerankingMs": 567.8893289994448,
+      "mappingMs": 0.025883999653160572,
+      "totalMs": 1359.3993039997295,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010720999911427498,
+      "contextBuilderMs": 0.015414999797940254,
+      "generationMs": 1522.8771980004385,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2882.3115830002353
+    },
+    "judge": {
+      "questionId": "q405",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de l’article L. 210-12 : moins de cinquante salariés permanents au cours de l’exercice, respect statutaire des conditions des 1° et 2° de l’article L. 210-10, et prévision statutaire de la substitution. Elle indique également correctement qu’un salarié ne peut être référent que si son contrat correspond à un emploi effectif. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce précisément les conditions de substitution du comité de mission par un référent de mission pour une société de moins de cinquante salariés permanents, ainsi que la condition relative à l’emploi effectif du salarié référent. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Une société peut substituer un référent de mission au comité de mission si :\n\n- elle emploie **moins de 50 salariés permanents au cours de l’exercice** ;\n- ses statuts remplissent les conditions prévues aux **1° et 2° de l’article L. 210-10 du Code de commerce** ;\n- cette possibilité est prévue dans ses statuts.\n\nLe référent de mission peut être un salarié de la société, mais son contrat de travail doit correspondre à **un emploi effectif**.  \n**Article L. 210-12 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L210-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2967.8413610002026,
+      "routingCalls": 1,
+      "embeddingMs": 245.23926500044763,
+      "vectorSearchMs": 177.97023400012404,
+      "jinaRerankingMs": 605.2206839993596,
+      "mappingMs": 0.029505999758839607,
+      "totalMs": 3996.3249310003594,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013195999898016453,
+      "contextBuilderMs": 0.01309799961745739,
+      "generationMs": 1533.8876360002905,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5530.266667000018
+    },
+    "judge": {
+      "questionId": "q405",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions légales : moins de cinquante salariés permanents au cours de l’exercice, respect statutaire des conditions des 1° et 2° de l’article L. 210-10, et prévision statutaire de la substitution. Elle précise aussi correctement qu’un référent salarié doit avoir un contrat correspondant à un emploi effectif. Toutes ces affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l'article L. 210-12 du Code de commerce, qui répond précisément aux deux volets de la question : les conditions de substitution du comité de mission par un référent de mission pour une société de moins de cinquante salariés permanents, et l'exigence d'un emploi effectif lorsque le référent est salarié. Elle couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

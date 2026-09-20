@@ -1,0 +1,103 @@
+{
+  "questionId": "q066",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 637 du Code civil, une servitude est une **charge imposée sur un héritage** au profit de **l’usage et de l’utilité d’un autre héritage appartenant à un propriétaire différent**. Elle constitue donc une charge foncière bénéficiant à un autre fonds. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "637"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "649"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "697"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.2687160000205,
+      "vectorSearchMs": 585.1038210000843,
+      "jinaRerankingMs": 492.18931200006045,
+      "mappingMs": 0.04213000019080937,
+      "totalMs": 1299.6320830001496,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010175000177696347,
+      "contextBuilderMs": 0.0166060000192374,
+      "generationMs": 2023.6645959999878,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3323.3302680000197
+    },
+    "judge": {
+      "questionId": "q066",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l’article 637 : une charge imposée sur un héritage pour l’usage et l’utilité d’un héritage appartenant à un autre propriétaire. La reformulation en « charge foncière bénéficiant à un autre fonds » est cohérente et entièrement soutenue par la source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 637 et répond exactement à la question sur la nature de la servitude et sa finalité. Elle couvre l’ensemble des affirmations essentielles de la réponse générée, y compris la charge grevant un héritage au bénéfice de l’usage et de l’utilité d’un autre héritage appartenant à un autre propriétaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 637 du Code civil, une servitude est une **charge imposée sur un immeuble** — appelé héritage servant — au profit de **l’usage et de l’utilité d’un autre immeuble** appartenant à un propriétaire différent — l’héritage dominant. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "637"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "649"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "697"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1236.5102860000916,
+      "routingCalls": 1,
+      "embeddingMs": 201.9479360000696,
+      "vectorSearchMs": 66.67330100014806,
+      "jinaRerankingMs": 507.74416200001724,
+      "mappingMs": 0.023801000090315938,
+      "totalMs": 2012.9639010000974,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012030000099912286,
+      "contextBuilderMs": 0.01768300007097423,
+      "generationMs": 1571.6639469999354,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3584.6677550000604
+    },
+    "judge": {
+      "questionId": "q066",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l'article 637 : une charge imposée sur un héritage au bénéfice de l'usage et de l'utilité d'un autre héritage appartenant à un propriétaire distinct. Les précisions terminologiques sur les héritages servant et dominant sont cohérentes avec cette définition et ne la contredisent pas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 637 et répond exactement aux deux éléments demandés : la servitude est une charge imposée sur un héritage et elle sert à l'usage et à l'utilité d'un héritage appartenant à un autre propriétaire. Elle couvre également les précisions de la réponse sur l'immeuble concerné et la distinction de propriétaire."
+    }
+  },
+  "failureStage": "none"
+}

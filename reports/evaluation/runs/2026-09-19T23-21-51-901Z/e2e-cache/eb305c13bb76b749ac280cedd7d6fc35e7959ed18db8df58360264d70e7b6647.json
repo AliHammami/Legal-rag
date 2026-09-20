@@ -1,0 +1,95 @@
+{
+  "questionId": "q199",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En application de l’**article L242-1 du Code de commerce**, les fondateurs, le président, les administrateurs ou les directeurs généraux d’une société anonyme qui émettent ou négocient des actions non libérées conformément aux exigences légales encourent une **amende de 150 000 €** [Source 1].\n\nCette sanction vise notamment l’émission :\n\n- d’actions de numéraire libérées de moins de la moitié lors de la souscription ;\n- d’actions d’apport non intégralement libérées avant l’immatriculation de la société au registre du commerce et des sociétés.\n\nL’amende peut être **portée à 300 000 €** lorsque les actions ou coupures d’actions ont fait l’objet d’une offre au public, sous réserve des exceptions prévues par le texte [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.3720400002785,
+      "vectorSearchMs": 614.4418480000459,
+      "jinaRerankingMs": 563.7143399999477,
+      "mappingMs": 0.03916800022125244,
+      "totalMs": 1429.597418999765,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.053410999942570925,
+      "contextBuilderMs": 0.027240999974310398,
+      "generationMs": 2872.4123019999824,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4302.102041000035
+    },
+    "judge": {
+      "questionId": "q199",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les personnes visées, l’infraction (émission ou négociation d’actions/coupures insuffisamment libérées), l’amende de 150 000 €, les deux conditions de libération applicables et le doublement à 300 000 € en cas d’offre au public. Ces éléments sont directement étayés par le contexte. La mention des exceptions est prudente et conforme au texte, bien qu’elle ne les détaille pas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L242-1 visé par la question et énonce les personnes concernées, les faits sanctionnés, les exigences de libération des actions de numéraire et d'apport, l'amende de 150 000 € ainsi que son doublement en cas d'offre au public et les exceptions. Elle couvre donc toutes les affirmations importantes de la réponse générée. La source 2 n'est pas nécessaire à cette réponse."
+    }
+  },
+  "routing": {
+    "answer": "En application de l’**article L242-1 du Code de commerce**, les fondateurs, le président, les administrateurs et les directeurs généraux d’une société anonyme qui émettent ou négocient des actions non libérées conformément aux exigences légales encourent une **amende de 150 000 €** [Source 1].\n\nCette amende peut être **portée au double**, soit **300 000 €**, lorsque les actions ou coupures d’actions ont fait l’objet d’une offre au public, sous réserve des exceptions prévues par le texte [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1434.7268390003592,
+      "routingCalls": 1,
+      "embeddingMs": 217.92864000005648,
+      "vectorSearchMs": 236.60352199990302,
+      "jinaRerankingMs": 566.0227310000919,
+      "mappingMs": 0.033321999944746494,
+      "totalMs": 2455.3428040002473,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009467999916523695,
+      "contextBuilderMs": 0.02306699985638261,
+      "generationMs": 2364.216494999826,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4819.603068999946
+    },
+    "judge": {
+      "questionId": "q199",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement l’amende de 150 000 € et son doublement possible à 300 000 € en cas d’offre au public, tout en mentionnant l’existence d’exceptions. Elle est pleinement étayée par le contexte. Elle n’explicite toutefois pas les conditions précises de défaut de libération (moitié des actions de numéraire à la souscription et intégralité des actions d’apport avant immatriculation), ce qui constitue une omission mineure."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L242-1 visé par la question et énonce les personnes concernées, l'amende de 150 000 €, ainsi que la possibilité de doublement en cas d'offre au public et les exceptions. Elle couvre toutes les affirmations importantes de la réponse générée, y compris le montant de 300 000 € qui résulte explicitement du doublement. La source 2 n'est pas nécessaire à cette réponse."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q129",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’il est informé par écrit par un agent de contrôle de conditions d’hébergement collectif incompatibles avec la dignité humaine, le maître d’ouvrage doit :\n\n1. **Enjoindre immédiatement par écrit** à son cocontractant ou sous-traitant de faire cesser la situation sans délai.\n2. **À défaut de régularisation**, prendre à sa charge l’hébergement collectif des salariés, dans des conditions respectant les normes applicables.\n\nCette obligation ne s’applique pas au particulier contractant une entreprise pour son usage personnel ou celui de certains proches. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4231-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 234.1524429996498,
+      "vectorSearchMs": 584.3584569999948,
+      "jinaRerankingMs": 545.6505689998157,
+      "mappingMs": 0.07910299999639392,
+      "totalMs": 1364.26432799967,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014190000016242266,
+      "contextBuilderMs": 0.010414000134915113,
+      "generationMs": 1602.738473000005,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.035089999903
+    },
+    "judge": {
+      "questionId": "q129",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les obligations prévues : injonction écrite immédiate de faire cesser la situation, puis prise en charge de l’hébergement collectif conforme aux normes applicables en l’absence de régularisation. La précision sur l’exception du particulier est également exacte et explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L4231-1 et vise précisément la situation décrite. Elle couvre l'injonction écrite immédiate au cocontractant ou sous-traitant, la prise en charge de l'hébergement en l'absence de régularisation, ainsi que l'exception applicable à certains particuliers, toutes reprises dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Lorsqu’il est informé **par écrit** par un agent de contrôle que des salariés de son cocontractant ou d’une entreprise sous-traitante sont hébergés dans des conditions incompatibles avec la dignité humaine, le maître d’ouvrage doit :\n\n1. **Enjoindre immédiatement par écrit** à son cocontractant de faire cesser cette situation sans délai.\n2. **À défaut de régularisation**, prendre à sa charge l’hébergement collectif des salariés, dans des conditions respectant les normes applicables.\n\nCette obligation ne s’applique pas au particulier contractant avec une entreprise pour son usage personnel ou celui de certains proches. **Article L4231-1 du Code du travail [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4231-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3275.347326000221,
+      "routingCalls": 1,
+      "embeddingMs": 282.6212240001187,
+      "vectorSearchMs": 230.70970900030807,
+      "jinaRerankingMs": 522.1152669996955,
+      "mappingMs": 0.03380599990487099,
+      "totalMs": 4310.85759499995,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010772999841719866,
+      "contextBuilderMs": 0.010666999965906143,
+      "generationMs": 1728.601526999846,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6039.486850000452
+    },
+    "judge": {
+      "questionId": "q129",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les obligations prévues par l’article L4231-1 : injonction écrite immédiate de faire cesser la situation, puis prise en charge de l’hébergement collectif à défaut de régularisation, dans le respect des normes applicables. La précision sur l’information écrite, les sous-traitants et l’exception du particulier est également conforme au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L. 4231-1 directement applicable à la question. Elle couvre l'information écrite par un agent de contrôle, l'injonction écrite immédiate de faire cesser la situation, la prise en charge de l'hébergement en l'absence de régularisation, les normes applicables et l'exception concernant certains particuliers."
+    }
+  },
+  "failureStage": "none"
+}

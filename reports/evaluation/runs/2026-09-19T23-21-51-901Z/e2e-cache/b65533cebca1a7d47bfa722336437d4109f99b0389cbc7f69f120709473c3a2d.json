@@ -1,0 +1,87 @@
+{
+  "questionId": "q379",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le contenu de l’article 1891 du Code civil ni celui du liminaire du Code de la consommation. Il permet seulement d’affirmer que, selon l’article 1898 du Code civil, le prêteur est tenu de la responsabilité prévue par l’article 1891 pour le prêt à usage [Source 1].\n\nIl n’est donc pas possible de préciser davantage cette responsabilité lorsque l’emprunteur est un consommateur sans disposer de ces textes.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1898"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 515.8865250004455,
+      "vectorSearchMs": 657.0528570003808,
+      "jinaRerankingMs": 563.056215999648,
+      "mappingMs": 0.024450999684631824,
+      "totalMs": 1736.1280759992078,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008592000231146812,
+      "contextBuilderMs": 0.016044000163674355,
+      "generationMs": 1804.2043120004237,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3540.3655580002815
+    },
+    "judge": {
+      "questionId": "q379",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la règle de l’article 1898 : dans un prêt de consommation, le prêteur est tenu de la responsabilité prévue à l’article 1891 pour le prêt à usage. Elle omet toutefois l’élément relatif à la définition du consommateur donnée par le liminaire du code de la consommation et ne formule pas pleinement la réponse conditionnée à cette qualité. Toutes ses affirmations substantielles sont néanmoins appuyées par le seul contexte fourni ; l’absence des autres textes dans ce contexte justifie sa prudence. Elle répond au moins partiellement à la question, sans abstention totale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "La source reproduit directement l’article 1898 et permet d’établir la responsabilité du prêteur par renvoi à l’article 1891. Elle ne contient toutefois ni le texte de l’article 1891 ni le liminaire du code de la consommation, de sorte qu’elle ne permet pas de caractériser la qualité de consommateur ni de détailler la responsabilité visée. Elle couvre les affirmations effectivement formulées par la réponse, y compris le constat d’absence de ces textes dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte est insuffisant pour répondre complètement : seul l’**article 1898 du Code civil** est fourni, et le liminaire du Code de la consommation ainsi que l’article 1891 auquel il renvoie ne sont pas reproduits.\n\nD’après l’article 1898 du Code civil, le prêteur dans un prêt de consommation est tenu de la responsabilité prévue par l’article 1891 pour le prêt à usage [Source 1]. La nature précise de cette responsabilité, notamment lorsque l’emprunteur est un consommateur, ne peut toutefois pas être déterminée à partir des seuls éléments fournis.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1898"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1683.3774570003152,
+      "routingCalls": 1,
+      "embeddingMs": 191.35652200039476,
+      "vectorSearchMs": 143.42275100015104,
+      "jinaRerankingMs": 521.1274520000443,
+      "mappingMs": 0.035636999644339085,
+      "totalMs": 2539.343155999668,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010130999609827995,
+      "contextBuilderMs": 0.012961000204086304,
+      "generationMs": 2175.530263999477,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4714.9046120001
+    },
+    "judge": {
+      "questionId": "q379",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, sur le fondement de l’article 1898, que le prêteur est tenu de la responsabilité prévue par l’article 1891 pour le prêt à usage. Elle omet toutefois l’élément essentiel issu du liminaire du code de la consommation, à savoir la définition du consommateur comme personne physique agissant hors de son activité professionnelle, et ne formule donc pas complètement la réponse attendue. Toutes ses affirmations substantielles sont néanmoins étayées par le seul contexte fourni ou portent correctement sur l’absence des autres textes mentionnés."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1898 du code civil et permet d’établir que le prêteur est soumis à la responsabilité prévue par l’article 1891 pour le prêt à usage. Elle ne fournit toutefois ni le contenu de l’article 1891 ni le liminaire du code de la consommation, pourtant nécessaires pour traiter pleinement la qualification de consommateur et la nature de la responsabilité. Elle couvre néanmoins toutes les affirmations effectivement formulées par la réponse générée, y compris le constat d’insuffisance du contexte."
+    }
+  },
+  "failureStage": "generation"
+}

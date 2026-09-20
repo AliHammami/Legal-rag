@@ -1,0 +1,91 @@
+{
+  "questionId": "q409",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 10 du Code civil** [Source 1], toute personne doit apporter son concours à la justice afin de contribuer à la manifestation de la vérité.\n\nCette obligation peut être mise en œuvre lorsque la personne a été **légalement requise**. Si elle refuse d’y satisfaire **sans motif légitime**, elle peut être contrainte de collaborer, notamment :\n\n- sous astreinte ;\n- par une amende civile ;\n- sans préjudice de dommages et intérêts.\n\nLe contexte fourni ne contient toutefois aucune disposition relative aux **protections accordées aux consommateurs**. Il ne permet donc pas de préciser si, ni dans quelles conditions, une législation protectrice des consommateurs pourrait limiter ou encadrer cette obligation.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.24844799935818,
+      "vectorSearchMs": 700.7273690002039,
+      "jinaRerankingMs": 545.5852760002017,
+      "mappingMs": 0.022181999869644642,
+      "totalMs": 1467.6095219999552,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010565000586211681,
+      "contextBuilderMs": 0.0260429996997118,
+      "generationMs": 2383.8688300000504,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3851.522193000652
+    },
+    "judge": {
+      "questionId": "q409",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement l’obligation de concours à la justice, sa condition de réquisition légale, ainsi que les conséquences d’un refus sans motif légitime (astreinte, amende civile et éventuels dommages-intérêts). Elle ne traite pas le mécanisme de protection prévu par le code de la consommation mentionné dans la référence, ce qui limite sa complétude. Toutefois, cette omission est explicitement justifiée par l’absence de toute source pertinente dans le contexte. Toutes les affirmations juridiques formulées sont directement étayées par la source fournie, et la réponse répond effectivement à la partie documentée de la question plutôt que de s’abstenir globalement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour l’obligation de concours à la justice, la condition de réquisition légale et les conséquences du refus sans motif légitime. Elle ne couvre pas les protections des consommateurs, mais son absence dans le contexte permet d’étayer le constat explicite de la réponse selon lequel cette partie ne peut pas être précisée. Toutes les affirmations juridiques substantielles de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de déterminer :\n\n- dans quelles conditions générales une personne serait juridiquement tenue de collaborer avec la justice pour contribuer à la manifestation de la vérité ;\n- quelles sanctions ou conséquences entraînerait un refus dépourvu de motif légitime.\n\nElles établissent seulement les protections et règles suivantes :\n\n- Les obligations liées au secret professionnel ou au secret de l’enquête et de l’instruction ne font pas obstacle à la divulgation d’informations par des agents habilités lorsqu’elle vise à prévenir un danger grave ou immédiat pour la santé ou la sécurité des consommateurs (article L. 512-22 du Code de la consommation) [Source 1].\n- Le consommateur qui a consenti à l’exercice d’une action devant une juridiction pénale est considéré comme exerçant les droits reconnus à la partie civile. Les significations et notifications le concernant sont adressées à l’association (article L. 622-3 du Code de la consommation) [Source 2].\n\nCes dispositions ne prévoient ni une obligation générale de témoignage ou de collaboration, ni les conséquences d’un refus sans motif légitime.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L622-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 6449.921982000582,
+      "routingCalls": 1,
+      "embeddingMs": 178.34447399992496,
+      "vectorSearchMs": 86.02065099962056,
+      "jinaRerankingMs": 552.5481409998611,
+      "mappingMs": 0.03467800002545118,
+      "totalMs": 7266.8986379997805,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010790999978780746,
+      "contextBuilderMs": 0.018303999677300453,
+      "generationMs": 3176.6336730001494,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 10443.569187000394
+    },
+    "judge": {
+      "questionId": "q409",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question : elle omet la règle de l'article 10 du code civil, selon laquelle chacun doit apporter son concours à la justice pour la manifestation de la vérité, ainsi que les conséquences d'un refus sans motif légitime (contrainte, astreinte ou amende civile). Elle n'aborde pas non plus la protection pertinente de l'article L112-5 du code de la consommation. En revanche, ses affirmations relatives aux deux seuls extraits fournis sont fidèles à ce contexte et l'absence de règle générale dans ces extraits est correctement relevée. Toutefois, alors qu'une réponse était attendue, elle s'abstient à tort."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les deux extraits portent sur des aspects particuliers du Code de la consommation : la levée de certains secrets pour prévenir un danger grave pour les consommateurs et le statut procédural d’un consommateur dans une action pénale exercée par une association. Ils ne fournissent pas la règle générale de concours à la justice, ni les sanctions d’un refus sans motif légitime, ni la protection réglementaire évoquée dans la question. Ils sont donc très insuffisants pour répondre directement, mais ils permettent de soutenir les constats prudents de la réponse générée sur leur contenu limité et sur l’absence, dans ces extraits, des règles recherchées."
+    }
+  },
+  "failureStage": "generation"
+}

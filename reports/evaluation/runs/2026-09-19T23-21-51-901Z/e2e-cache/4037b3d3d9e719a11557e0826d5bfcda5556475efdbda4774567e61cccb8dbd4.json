@@ -1,0 +1,115 @@
+{
+  "questionId": "q300",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L217-1 distingue l’application du chapitre selon la structure du contrat combiné :\n\n- **Vente de biens relevant du chapitre et d’autres biens non couverts** : le chapitre s’applique **uniquement aux biens couverts**.\n- **Vente principalement consacrée à des biens couverts, avec des services accessoires non couverts** : le chapitre s’applique **aux biens seulement**, et non aux services accessoires.\n- **Offre groupée** au sens de l’article L. 224-42-2 du Code de la consommation : le chapitre s’applique également **uniquement aux biens**.\n\nAinsi, le caractère combiné du contrat n’étend pas le champ du chapitre aux biens ou services qui en sont normalement exclus : son application est limitée aux biens relevant de la garantie légale de conformité. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L112-4-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 165.2746280003339,
+      "vectorSearchMs": 558.9825459998101,
+      "jinaRerankingMs": 563.6982050007209,
+      "mappingMs": 0.024121999740600586,
+      "totalMs": 1288.0035360008478,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011617000214755535,
+      "contextBuilderMs": 0.031156999990344048,
+      "generationMs": 2702.060189000331,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3990.114835999906
+    },
+    "judge": {
+      "questionId": "q300",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les trois hypothèses de contrats combinés prévues au II de l’article L217-1 : coexistence de biens couverts et non couverts, objet principal de vente de biens avec services accessoires, et offre groupée. Elle indique à chaque fois que le chapitre ne s’applique qu’aux biens concernés. Ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : son II énonce expressément les trois hypothèses de contrat combiné visées par la réponse (biens couverts et non couverts, services accessoires, offre groupée) et limite dans chaque cas l'application du chapitre aux biens. Elle couvre également l'idée finale selon laquelle le contrat combiné n'étend pas le champ du chapitre aux services ou biens exclus. Les autres sources ne sont pas nécessaires à ces affirmations."
+    }
+  },
+  "routing": {
+    "answer": "L’article **L217-1, II du Code de la consommation** distingue trois situations dans un contrat combiné :\n\n- **Vente de biens relevant du chapitre et de biens non couverts** : le chapitre s’applique uniquement aux biens qui entrent dans son champ d’application.\n- **Vente principalement consacrée à des biens couverts, avec fourniture accessoire de services non couverts** : le chapitre s’applique uniquement aux biens, et non aux services accessoires.\n- **Offre groupée** au sens de l’article L. 224-42-2 : le chapitre s’applique également uniquement aux biens.\n\nAinsi, la présence de biens ou de services non couverts ne fait pas perdre au contrat son application aux biens relevant du chapitre ; elle en limite simplement la portée à ces biens. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L217-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L112-4-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1434.1070799995214,
+      "routingCalls": 1,
+      "embeddingMs": 215.78892400022596,
+      "vectorSearchMs": 82.06488000042737,
+      "jinaRerankingMs": 608.4467070000246,
+      "mappingMs": 0.04648700077086687,
+      "totalMs": 2340.481840000488,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010956999845802784,
+      "contextBuilderMs": 0.027470999397337437,
+      "generationMs": 2785.9818289997056,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5126.510720999911
+    },
+    "judge": {
+      "questionId": "q300",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les trois règles du II de l’article L. 217-1 : limitation aux biens couverts lorsqu’un contrat combine des biens couverts et non couverts ; limitation aux biens lorsque des services non couverts sont accessoires à une vente principalement composée de biens couverts ; limitation aux biens dans une offre groupée. Ces affirmations sont directement et entièrement étayées par la source 2. Elle répond effectivement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 217-1, notamment son II, qui énonce les trois hypothèses décrites : contrat mêlant biens couverts et non couverts, vente principalement de biens avec services accessoires non couverts, et offre groupée. Elle couvre donc l’ensemble des affirmations substantielles de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

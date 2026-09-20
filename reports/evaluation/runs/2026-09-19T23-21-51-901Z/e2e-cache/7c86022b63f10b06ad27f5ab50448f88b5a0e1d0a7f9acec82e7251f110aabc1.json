@@ -1,0 +1,95 @@
+{
+  "questionId": "q176",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après l’article L223-1 du Code de commerce, une SARL peut être constituée par **une seule personne**. Dans ce cas, cette personne est automatiquement qualifiée d’**« associé unique »** [Source 1].\n\nL’extrait ne prévoit pas de procédure particulière de nomination : la qualité d’associé unique découle du fait qu’une seule personne constitue ou détient la société. Cette personne exerce les pouvoirs normalement attribués à l’assemblée des associés [Source 1].\n\nÀ noter : lorsque l’associé unique est une **personne physique**, il peut également assumer personnellement la gérance, ce qui entraîne certaines règles spécifiques de statuts et de publicité [Source 1]. Ses décisions ne peuvent pas être déléguées et doivent être répertoriées dans un registre [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-31"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 366.17406699992716,
+      "vectorSearchMs": 616.9454250000417,
+      "jinaRerankingMs": 560.7456660000607,
+      "mappingMs": 0.0284939999692142,
+      "totalMs": 1543.9139169999398,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012714999727904797,
+      "contextBuilderMs": 0.017136999871581793,
+      "generationMs": 2919.167843999807,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4463.118302000221
+    },
+    "judge": {
+      "questionId": "q176",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse explique correctement qu’une SARL à associé unique existe lorsqu’elle ne comporte qu’une personne, laquelle exerce les pouvoirs de l’assemblée. Elle mentionne aussi le cas de l’associé unique personne physique assumant la gérance. Toutefois, elle n’énonce pas clairement la règle essentielle selon laquelle les statuts types s’appliquent par défaut, sauf production de statuts différents lors de la demande d’immatriculation, et reste vague sur les formalités de publicité allégées. Toutes les affirmations importantes sont néanmoins étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente puisqu’elle reproduit l’article L223-1 visé et couvre la constitution par une seule personne, la qualification d’associé unique, l’exercice des pouvoirs de l’assemblée, ainsi que le régime des statuts et de la gérance de l’associé unique personne physique. La source 2 est pertinente pour les affirmations additionnelles sur l’interdiction de déléguer les pouvoirs et l’inscription des décisions dans un registre. Les affirmations importantes de la réponse sont ainsi étayées par les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "D’après **l’article L223-1 du Code de commerce**, une SARL peut être constituée par **une seule personne**. Dans ce cas, cette personne est appelée **« associé unique »** et exerce les pouvoirs normalement dévolus à l’assemblée des associés [Source 1].\n\nL’article prévoit également que :\n\n- l’associé unique ne supporte les pertes qu’à concurrence de son apport ;\n- lorsqu’il est une **personne physique** et assume personnellement la gérance, des statuts types et des formalités de publicité allégées peuvent s’appliquer [Source 1].\n\nLe texte ne prévoit toutefois pas une procédure spécifique de « nomination » de l’associé unique : sa qualité résulte du fait que la société ne comporte qu’un seul associé.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-31"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1540.006937999744,
+      "routingCalls": 1,
+      "embeddingMs": 249.52689400035888,
+      "vectorSearchMs": 266.40313900029287,
+      "jinaRerankingMs": 545.0920699997805,
+      "mappingMs": 0.049488999880850315,
+      "totalMs": 2601.148838999681,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013625000137835741,
+      "contextBuilderMs": 0.025107000023126602,
+      "generationMs": 3244.0333350002766,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5845.230634999927
+    },
+    "judge": {
+      "questionId": "q176",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement qu’il ne s’agit pas d’une procédure autonome de nomination : la qualité d’associé unique résulte de l’existence d’un seul associé. Elle mentionne ses pouvoirs d’assemblée, la limitation des pertes aux apports, ainsi que le régime des statuts types, la possibilité de produire des statuts différents à l’immatriculation et les formalités allégées lorsque l’associé unique personne physique est lui-même gérant. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L223-1 visé par la question et couvre l’ensemble des éléments importants de la réponse : constitution par une seule personne, qualification d’associé unique, exercice des pouvoirs de l’assemblée, responsabilité limitée aux apports, statuts types et possibilité de statuts différents lors de l’immatriculation, ainsi que formalités de publicité allégées lorsque l’associé unique personne physique assure la gérance. La conclusion selon laquelle il n’existe pas de procédure autonome de nomination est également étayée par le fait que le texte définit cette qualité par la présence d’un seul associé."
+    }
+  },
+  "failureStage": "none"
+}

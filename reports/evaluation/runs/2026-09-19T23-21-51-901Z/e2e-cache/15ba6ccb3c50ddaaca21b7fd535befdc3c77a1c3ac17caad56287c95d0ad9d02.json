@@ -1,0 +1,119 @@
+{
+  "questionId": "q467",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas d’affirmer que le taux de l’impôt sur le revenu est de **30 % pour une tranche**.\n\nLa seule règle indiquée concerne le calcul du **taux moyen d’imposition** dans les entreprises relevant de l’impôt sur le revenu :  \n**taux moyen = 100 × impôt sur le revenu dû / revenus soumis à l’impôt**, avec un plafonnement au taux de droit commun de l’impôt sur les sociétés (**Article R3324-7 du Code du travail [Source 1]**).\n\nAucun barème des tranches de l’impôt sur le revenu ni taux de **30 %** n’est fourni dans le contexte.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3324-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-68"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-135"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3252-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-151"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 251.42877599969506,
+      "vectorSearchMs": 630.7584730014205,
+      "jinaRerankingMs": 492.9919130001217,
+      "mappingMs": 0.023048000410199165,
+      "totalMs": 1375.2247310001403,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.035488998517394066,
+      "contextBuilderMs": 0.028214000165462494,
+      "generationMs": 2043.9766760002822,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3419.2761029992253
+    },
+    "judge": {
+      "questionId": "q467",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de confirmer un taux de 30 % faute de barème de l’impôt sur le revenu dans le contexte. Elle identifie correctement la seule information pertinente fournie, relative au taux moyen d’imposition de l’exploitant au titre de l’article R3324-7 du Code du travail, sans la confondre avec un barème par tranches. Toutes les affirmations importantes sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour constater que le contexte ne fournit qu’une règle de calcul d’un taux moyen d’imposition dans un cadre particulier, et non un barème général de l’impôt sur le revenu par tranches. Les autres sources portent sur des barèmes ou proportions sans rapport avec l’impôt sur le revenu. Pour cette abstention, la source 1 couvre la formule citée et, avec l’absence de tout barème IR dans les sources, soutient le constat qu’aucun taux de 30 % par tranche ne peut être affirmé à partir du contexte."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas d’affirmer que le taux de l’impôt sur le revenu est de **30 % pour une tranche**.\n\nL’**article R3324-7 du Code du travail** prévoit que le taux retenu est le **taux moyen d’imposition** de l’exploitant, calculé en divisant l’impôt sur le revenu dû par les revenus soumis à cet impôt. Ce taux est toutefois plafonné au taux de droit commun de l’impôt sur les sociétés [Source 1].\n\nAucun barème de tranches de l’impôt sur le revenu ni taux de **30 %** n’est indiqué dans les sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3324-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-68"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-135"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3252-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-151"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.7940999995917,
+      "routingCalls": 1,
+      "embeddingMs": 249.1051879990846,
+      "vectorSearchMs": 617.0059879999608,
+      "jinaRerankingMs": 507.8762260004878,
+      "mappingMs": 0.029996000230312347,
+      "totalMs": 2499.8327660001814,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01844100095331669,
+      "contextBuilderMs": 0.0284000001847744,
+      "generationMs": 1781.3038129992783,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4281.1928820014
+    },
+    "judge": {
+      "questionId": "q467",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît correctement que le contexte ne contient aucun barème des tranches de l’impôt sur le revenu ni aucun taux de 30 %. Elle s’appuie fidèlement sur l’article R3324-7 fourni, qui traite d’un taux moyen d’imposition dans un calcul spécifique et non d’un taux marginal par tranche. L’abstention est donc appropriée et explicitement motivée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour justifier l’abstention : elle traite de l’impôt sur le revenu mais ne fournit qu’un taux moyen d’imposition applicable à un calcul spécifique, sans barème par tranches ni taux de 30 %. Les autres sources portent sur des barèmes ou proportions sans rapport avec l’impôt sur le revenu. Les affirmations de la réponse sur le contenu de l’article R3324-7 et l’absence, dans les sources, d’un barème IR ou d’un taux de 30 % sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

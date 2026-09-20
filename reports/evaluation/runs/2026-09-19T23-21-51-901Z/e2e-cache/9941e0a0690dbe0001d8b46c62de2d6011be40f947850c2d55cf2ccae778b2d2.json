@@ -1,0 +1,103 @@
+{
+  "questionId": "q481",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de présenter l’ensemble des règles de la détention provisoire.\n\nElles permettent seulement d’indiquer que :\n\n- Lorsque la juridiction prononce une peine relevant des seuils prévus à l’article 132-25 du Code pénal — notamment une peine ou une partie ferme inférieure ou égale à six mois, ou une durée restant à exécuter après détention provisoire inférieure ou égale à six mois — elle doit en principe prévoir une exécution sous détention à domicile sous surveillance électronique, semi-liberté ou placement à l’extérieur, sauf impossibilité liée à la personnalité ou à la situation du condamné [Source 1].\n- Dans ces cas, la juridiction peut ordonner le placement ou le maintien en détention du condamné si elle assortit sa décision de l’exécution provisoire, dans les conditions prévues par les articles 397-4 et 465-1 du Code de procédure pénale. Le juge de l’application des peines fixe alors les modalités d’exécution dans un délai de cinq jours ouvrables [Source 1].\n- La détention irrégulière ou prolongée indûment par un agent de l’administration pénitentiaire constitue une infraction punie de deux ans d’emprisonnement et de 30 000 euros d’amende, conformément à l’article 432-6 du Code pénal [Source 2].\n\nEn revanche, les conditions de placement en détention provisoire, sa durée, son renouvellement et les voies de recours ne sont pas précisées dans les sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-25"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-6"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-63"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 361.7168609984219,
+      "vectorSearchMs": 661.6940039992332,
+      "jinaRerankingMs": 917.5778199993074,
+      "mappingMs": 0.027842998504638672,
+      "totalMs": 1941.0420080013573,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009922999888658524,
+      "contextBuilderMs": 0.029908999800682068,
+      "generationMs": 3379.6716440003365,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5320.761788999662
+    },
+    "judge": {
+      "questionId": "q481",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas d’exposer les règles générales de la détention provisoire et précise les lacunes essentielles (conditions, durée, renouvellement, recours). Les seules indications complémentaires sont fidèlement tirées des articles fournis et sont clairement limitées à leur portée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une question d’abstention, les sources sont suffisamment pertinentes pour établir qu’elles ne couvrent pas les règles générales de la détention provisoire : l’article 132-25 ne traite que des modalités d’exécution de certaines peines après jugement, tout en mentionnant marginalement une détention provisoire, et l’article 432-6 vise l’irrégularité ou la prolongation indue d’une détention par un agent pénitentiaire. Elles soutiennent aussi les trois précisions factuelles apportées par la réponse. La source 3 est hors sujet, mais n’est pas mobilisée. La couverture est complète au regard des affirmations de la réponse, qui se limite correctement à constater l’insuffisance du contexte et à exposer les éléments effectivement contenus dans les sources."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne permettent pas de présenter les règles générales de la détention provisoire — notamment ses conditions, sa durée, son renouvellement ou les voies de recours.\n\nElles permettent seulement d’établir que :\n\n- Dans certains cas, la juridiction de jugement peut ordonner le placement ou le maintien en détention du condamné, à condition d’assortir sa décision de l’exécution provisoire. Cette possibilité concerne notamment les peines pouvant être aménagées sous certains régimes, selon l’Article 132-25 du Code pénal [Source 1].\n- La durée d’une détention ne peut pas être prolongée indûment par un agent de l’administration pénitentiaire. Un tel comportement est puni de deux ans d’emprisonnement et de 30 000 euros d’amende, selon l’Article 432-6 du Code pénal [Source 2].\n- La décision d’ajournement du prononcé de la peine avec placement sous probation est exécutoire par provision, mais cette disposition ne fixe pas les règles de la détention provisoire, selon l’Article 132-63 du Code pénal [Source 3].\n\nIl faudrait disposer des dispositions pertinentes du Code de procédure pénale pour répondre complètement à la question.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-25"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-6"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-63"
+      }
+    ],
+    "profiling": {
+      "routingMs": 819.4350639991462,
+      "routingCalls": 1,
+      "embeddingMs": 203.44110099971294,
+      "vectorSearchMs": 657.4662379994988,
+      "jinaRerankingMs": 573.4402920007706,
+      "mappingMs": 0.03206400014460087,
+      "totalMs": 2253.8391340002418,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012057000771164894,
+      "contextBuilderMs": 0.022967999801039696,
+      "generationMs": 2521.7378489989787,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4775.622822999954
+    },
+    "judge": {
+      "questionId": "q481",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne permet pas d’exposer les règles générales de la détention provisoire et indique à juste titre que celles-ci relèvent des dispositions pertinentes du Code de procédure pénale. Les précisions limitées qu’elle ajoute sont fidèlement appuyées par les trois sources fournies et sont présentées comme partielles, sans prétendre répondre exhaustivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les sources sont suffisamment pertinentes pour constater qu’elles ne fournissent pas les règles générales demandées : elles portent sur l’aménagement/exécution de certaines peines, l’incrimination de la rétention irrégulière par un agent pénitentiaire et l’ajournement avec probation, sans exposer conditions, durées, renouvellements ou recours de la détention provisoire. Elles étayent aussi les trois précisions limitées formulées : l’article 132-25 prévoit bien la possibilité de placement ou maintien en détention sous exécution provisoire dans les cas visés ; l’article 432-6 sanctionne la prolongation indue ; l’article 132-63 rend la décision d’ajournement exécutoire par provision. La mention du besoin de dispositions du Code de procédure pénale est cohérente avec les renvois de la source 1, même si les règles elles-mêmes ne sont pas fournies."
+    }
+  },
+  "failureStage": "none"
+}

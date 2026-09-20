@@ -1,0 +1,87 @@
+{
+  "questionId": "q114",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1596 du Code civil, sont interdits de se rendre adjudicataires, sous peine de nullité, directement ou par personnes interposées :\n\n- les tuteurs, pour les biens des personnes placées sous leur tutelle ;\n- les mandataires, pour les biens qu’ils sont chargés de vendre ;\n- les administrateurs, pour les biens des communes ou établissements publics confiés à leurs soins ;\n- les officiers publics, pour les biens nationaux vendus par leur ministère ;\n- les fiduciaires, pour les biens ou droits composant le patrimoine fiduciaire. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1596"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 228.50709199998528,
+      "vectorSearchMs": 642.5291689999867,
+      "jinaRerankingMs": 511.1227839998901,
+      "mappingMs": 0.056277000112459064,
+      "totalMs": 1382.2411950000096,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011875000083819032,
+      "contextBuilderMs": 0.01088300021365285,
+      "generationMs": 1690.956525000045,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3073.2286199999508
+    },
+    "judge": {
+      "questionId": "q114",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exhaustivement les cinq catégories visées par l’article 1596, ainsi que l’interdiction d’acquérir directement ou par personne interposée et la sanction de nullité. Toutes les affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1596 du Code civil, qui répond exactement à la question. Elle couvre l’ensemble des cinq catégories citées dans la réponse générée, l’interdiction d’acquérir par soi-même ou par personne interposée, ainsi que la sanction de nullité."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1596 du Code civil, sont interdits de se rendre adjudicataires, sous peine de nullité, directement ou par personne interposée :\n\n- les tuteurs, des biens des personnes dont ils ont la tutelle ;\n- les mandataires, des biens qu’ils sont chargés de vendre ;\n- les administrateurs, des biens des communes ou établissements publics confiés à leurs soins ;\n- les officiers publics, des biens nationaux dont la vente se fait par leur ministère ;\n- les fiduciaires, des biens ou droits composant le patrimoine fiduciaire.\n\n[Article 1596 du Code civil — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1596"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.404505000217,
+      "routingCalls": 1,
+      "embeddingMs": 822.1488149999641,
+      "vectorSearchMs": 61.67404900002293,
+      "jinaRerankingMs": 499.9035190001596,
+      "mappingMs": 0.09222600003704429,
+      "totalMs": 2612.257084999932,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019069999922066927,
+      "contextBuilderMs": 0.014272999949753284,
+      "generationMs": 1544.7849719999358,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4157.094251999864
+    },
+    "judge": {
+      "questionId": "q114",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les cinq catégories visées par l’article 1596, ainsi que l’interdiction d’acquérir directement ou par personne interposée et la sanction de nullité. Toutes les affirmations sont explicitement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1596 du Code civil, qui répond exactement à la question. Elle couvre intégralement les cinq catégories de personnes interdites de se rendre adjudicataires, ainsi que l’interdiction par personne interposée et la sanction de nullité mentionnées dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

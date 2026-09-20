@@ -1,0 +1,87 @@
+{
+  "questionId": "q478",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’ouverture d’une officine de pharmacie.\n\nLa seule disposition disponible concerne l’agrément d’un **magasin général** lorsque l’ouverture d’un établissement est subordonnée à un décret ou à un arrêté ministériel : **article L. 522-8 du Code de commerce** [Source 1]. Elle ne traite pas des officines de pharmacie.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 398.35755500011146,
+      "vectorSearchMs": 659.6351230014116,
+      "jinaRerankingMs": 555.5558339990675,
+      "mappingMs": 0.02583099901676178,
+      "totalMs": 1613.594459000975,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01025400124490261,
+      "contextBuilderMs": 0.011469999328255653,
+      "generationMs": 1456.7154709994793,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3070.340080998838
+    },
+    "judge": {
+      "questionId": "q478",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement, conformément à l’attente, car le contexte ne porte pas sur les conditions d’ouverture d’une officine de pharmacie. Elle identifie correctement que l’unique source concerne l’agrément de magasins généraux et non les pharmacies. Toutes les affirmations sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour justifier l’abstention : elle porte uniquement sur l’agrément d’un établissement comme magasin général et ne fournit aucune condition relative à l’ouverture d’une officine de pharmacie. Elle couvre ainsi les constats de la réponse sur l’insuffisance du contexte et sur l’objet de l’article L. 522-8."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’ouverture d’une officine de pharmacie. La seule disposition disponible concerne l’agrément d’un établissement comme **magasin général**, et non les officines de pharmacie : **article L. 522-8 du Code de commerce** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.2829390000552,
+      "routingCalls": 1,
+      "embeddingMs": 210.1978009995073,
+      "vectorSearchMs": 597.8655529990792,
+      "jinaRerankingMs": 561.0278729982674,
+      "mappingMs": 0.021532000973820686,
+      "totalMs": 2494.41945300065,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010479999706149101,
+      "contextBuilderMs": 0.011328000575304031,
+      "generationMs": 1203.1492699999362,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3697.5991409998387
+    },
+    "judge": {
+      "questionId": "q478",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre sur les conditions d’ouverture d’une officine de pharmacie, car le contexte ne contient qu’une disposition relative à l’agrément des magasins généraux. Cette distinction est exacte et entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est hors du champ des officines de pharmacie, mais elle est directement pertinente pour justifier l’abstention : son contenu vise explicitement l’agrément d’un établissement comme « magasin général » et ne fournit aucune condition relative à l’ouverture d’une officine de pharmacie. Elle couvre donc le constat formulé par la réponse."
+    }
+  },
+  "failureStage": "none"
+}

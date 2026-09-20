@@ -1,0 +1,95 @@
+{
+  "questionId": "q225",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L420-1 du Code de commerce, sont interdits les actions concertées, conventions, ententes expresses ou tacites et coalitions qui ont pour objet ou peuvent avoir pour effet d’empêcher, de restreindre ou de fausser le jeu de la concurrence sur un marché [Source 2].\n\nSont notamment visés les comportements qui consistent à :\n\n1. limiter l’accès au marché ou le libre exercice de la concurrence par d’autres entreprises ;\n2. faire obstacle à la fixation des prix par le libre jeu du marché, en favorisant artificiellement leur hausse ou leur baisse ;\n3. limiter ou contrôler la production, les débouchés, les investissements ou le progrès technique ;\n4. répartir les marchés ou les sources d’approvisionnement [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L420-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L420-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 254.54028799990192,
+      "vectorSearchMs": 647.655565999914,
+      "jinaRerankingMs": 555.0085750003345,
+      "mappingMs": 0.02872700011357665,
+      "totalMs": 1457.261448000092,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009820000268518925,
+      "contextBuilderMs": 0.030864999629557133,
+      "generationMs": 1921.740017999895,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3379.0514490003698
+    },
+    "judge": {
+      "questionId": "q225",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les catégories de pratiques visées par l’article L. 420-1 : actions concertées, conventions, ententes et coalitions, ainsi que les quatre exemples de restrictions. Toutes les affirmations substantielles sont directement étayées par la Source 2. Elle répond effectivement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 420-1 visé par la question et énumère précisément les pratiques et effets mentionnés dans la réponse générée. Elle couvre la qualification des actions concertées, conventions, ententes et coalitions, ainsi que les quatre comportements détaillés. La source 1 est non nécessaire, mais n’affecte pas la pertinence ni la couverture de la source 2."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L420-1 du Code de commerce**, sont interdits, lorsqu’ils ont pour objet ou peuvent avoir pour effet d’empêcher, de restreindre ou de fausser le jeu de la concurrence :\n\n- les actions concertées ;\n- les conventions ;\n- les ententes expresses ou tacites ;\n- les coalitions.\n\nSont notamment visés les comportements qui tendent à :\n\n1. limiter l’accès au marché ou le libre exercice de la concurrence par d’autres entreprises ;\n2. faire obstacle à la fixation des prix par le libre jeu du marché, en favorisant artificiellement leur hausse ou leur baisse ;\n3. limiter ou contrôler la production, les débouchés, les investissements ou le progrès technique ;\n4. répartir les marchés ou les sources d’approvisionnement.\n\nCes interdictions s’appliquent également lorsque ces pratiques sont mises en œuvre indirectement par une société du groupe implantée hors de France. **[Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L420-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L420-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1146.5456320000812,
+      "routingCalls": 1,
+      "embeddingMs": 213.23316900013015,
+      "vectorSearchMs": 201.51146900001913,
+      "jinaRerankingMs": 575.3725789999589,
+      "mappingMs": 0.03199899988248944,
+      "totalMs": 2136.72622699989,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009343000128865242,
+      "contextBuilderMs": 0.021298000123351812,
+      "generationMs": 2062.8924840004183,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4199.657183000352
+    },
+    "judge": {
+      "questionId": "q225",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les pratiques visées par l’article L420-1 et les quatre catégories de comportements énumérées. L’ensemble des affirmations, y compris la précision relative à l’intermédiaire d’une société de groupe implantée hors de France, est explicitement soutenu par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 420-1 et vise exactement les pratiques demandées : actions concertées, conventions, ententes et coalitions, ainsi que les quatre catégories de restrictions énumérées. Elle couvre également la précision de la réponse sur la mise en œuvre directe ou indirecte par une société du groupe implantée hors de France. La source 1 est hors sujet mais n’est pas nécessaire à la couverture."
+    }
+  },
+  "failureStage": "none"
+}

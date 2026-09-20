@@ -1,0 +1,87 @@
+{
+  "questionId": "q296",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L214-2 du Code de la consommation, les sommes versées d’avance dans un contrat de vente d’un bien mobilier produisent des intérêts au taux légal en matière civile.\n\nCes intérêts :\n\n- commencent à courir à l’expiration d’un délai de trois mois suivant le versement ;\n- courent jusqu’à la livraison du bien ;\n- sont déduits du solde restant à payer au moment de la livraison.\n\nCette règle ne dispense pas le vendeur de son obligation de livrer le bien. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.6649070000276,
+      "vectorSearchMs": 646.4772060001269,
+      "jinaRerankingMs": 505.2821610001847,
+      "mappingMs": 0.029009999707341194,
+      "totalMs": 1353.4787330003455,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010769999586045742,
+      "contextBuilderMs": 0.011826999485492706,
+      "generationMs": 1613.9761439999565,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.484530999325
+    },
+    "judge": {
+      "questionId": "q296",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le régime applicable aux avances sur le prix d’un bien mobilier : intérêts au taux légal en matière civile, à compter de trois mois après le versement jusqu’à la livraison, déduction du solde à payer et maintien de l’obligation de livraison. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L214-2 applicable à la vente d'un bien mobilier. Elle couvre explicitement le taux légal en matière civile, le point de départ après trois mois, la période jusqu'à la livraison, la déduction des intérêts du solde et le maintien de l'obligation de livrer."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L214-2 du Code de la consommation, les sommes versées d’avance pour l’achat d’un bien mobilier produisent des intérêts au taux légal en matière civile.\n\nCes intérêts commencent à courir à l’expiration d’un délai de trois mois suivant le versement et jusqu’à la livraison du bien. Ils sont ensuite déduits du solde restant à payer au moment de la livraison. Cette règle ne dispense pas le vendeur de son obligation de livrer le bien. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3174.0029660006985,
+      "routingCalls": 1,
+      "embeddingMs": 222.94321500044316,
+      "vectorSearchMs": 55.240625999867916,
+      "jinaRerankingMs": 524.3645499991253,
+      "mappingMs": 0.023212000727653503,
+      "totalMs": 3976.6024810001254,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010308999568223953,
+      "contextBuilderMs": 0.011149000376462936,
+      "generationMs": 1449.9005260001868,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5426.5382679998875
+    },
+    "judge": {
+      "questionId": "q296",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le régime applicable aux biens mobiliers : intérêts au taux légal civil, courant après trois mois à compter du versement jusqu'à la livraison, déduction du solde lors de la livraison et maintien de l'obligation de livrer. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L214-2 et vise expressément les sommes versées d’avance dans un contrat de vente portant sur un bien mobilier. Elle couvre toutes les affirmations importantes : taux légal civil, point de départ après trois mois, durée jusqu’à la livraison, déduction des intérêts du solde et maintien de l’obligation de livrer."
+    }
+  },
+  "failureStage": "none"
+}

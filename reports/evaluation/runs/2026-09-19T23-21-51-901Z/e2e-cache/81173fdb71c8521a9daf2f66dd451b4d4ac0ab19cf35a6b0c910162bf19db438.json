@@ -1,0 +1,87 @@
+{
+  "questionId": "q178",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 229-1 du Code de commerce** :\n\n- **Personnalité juridique** : une société européenne immatriculée en France au registre du commerce et des sociétés acquiert la personnalité juridique **à compter de cette immatriculation**.\n- **Gestion et organisation** : elle est régie par le règlement européen relatif au statut de la société européenne, par les dispositions spécifiques du Code de commerce et par les règles applicables aux sociétés anonymes lorsqu’elles ne sont pas incompatibles.\n- **Localisation de la direction** : son **siège statutaire** et son **administration centrale** doivent être situés au même endroit ; ils ne peuvent être dissociés.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L229-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 273.08136900002137,
+      "vectorSearchMs": 574.6638529999182,
+      "jinaRerankingMs": 521.8412290001288,
+      "mappingMs": 0.03763899998739362,
+      "totalMs": 1369.6550619998015,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009577999822795391,
+      "contextBuilderMs": 0.0143310003913939,
+      "generationMs": 2341.4262769999914,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3711.112015000079
+    },
+    "judge": {
+      "questionId": "q178",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les trois éléments de l'article L. 229-1 : acquisition de la personnalité juridique dès l'immatriculation au RCS, régime juridique applicable (règlement CE n° 2157/2001, chapitre concerné et règles non contraires des SA) et impossibilité de dissocier siège statutaire et administration centrale. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 229-1 visé par la question. Elle étaye explicitement l’acquisition de la personnalité juridique à compter de l’immatriculation au RCS, le régime applicable (règlement CE n° 2157/2001, chapitre concerné et règles des SA non contraires) et l’indissociabilité du siège statutaire et de l’administration centrale."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 229-1 du Code de commerce, une société européenne immatriculée en France :\n\n- **acquiert la personnalité juridique à compter de son immatriculation** au registre du commerce et des sociétés ;\n- est soumise au règlement européen relatif au statut de la société européenne, aux dispositions du chapitre concerné et aux règles applicables aux sociétés anonymes lorsqu’elles ne sont pas contraires ;\n- doit avoir un **siège statutaire et une administration centrale situés au même endroit** : ces deux éléments ne peuvent pas être dissociés.\n\nCes règles résultent de l’**article L. 229-1 du Code de commerce** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L229-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1329.8042129999958,
+      "routingCalls": 1,
+      "embeddingMs": 233.2707000002265,
+      "vectorSearchMs": 169.511398000177,
+      "jinaRerankingMs": 578.5424750000238,
+      "mappingMs": 0.02935100020840764,
+      "totalMs": 2311.229776999913,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009310999885201454,
+      "contextBuilderMs": 0.010559999849647284,
+      "generationMs": 2400.825348000042,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4712.083358999807
+    },
+    "judge": {
+      "questionId": "q178",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les trois éléments de l’article L. 229-1 : acquisition de la personnalité juridique lors de l’immatriculation au RCS, régime juridique applicable (règlement CE n° 2157/2001, chapitre concerné et règles des SA non contraires) et impossibilité de dissocier siège statutaire et administration centrale. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 229-1 applicable aux sociétés européennes immatriculées en France. Elle couvre l’acquisition de la personnalité juridique lors de l’immatriculation au RCS, le régime juridique applicable et l’interdiction de dissocier siège statutaire et administration centrale, soit l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

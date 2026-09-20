@@ -1,0 +1,95 @@
+{
+  "questionId": "q375",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Responsabilités dans le contrat d’appui au projet d’entreprise\n\nSelon l’**article L. 127-6 du Code de commerce**, la personne morale responsable de l’appui :\n\n- est responsable envers les tiers des dommages causés par le bénéficiaire pendant le programme d’appui et de préparation, **avant son immatriculation** ;\n- après l’immatriculation, garantit la responsabilité du bénéficiaire à l’occasion du contrat d’appui, à condition que celui-ci ait respecté les clauses contractuelles jusqu’à la fin du contrat. [Source 1]\n\nLe contrat doit également préciser les engagements respectifs des parties, les moyens mis à disposition, la rémunération éventuelle de la personne morale, ainsi que les engagements du bénéficiaire envers les tiers et la partie qui en assume la charge financière, conformément à l’**article R. 127-1 du Code de commerce**. [Source 2]\n\n### Compétence juridictionnelle en cas d’ajournement du prononcé et de consignation\n\nLes sources fournies ne contiennent aucune disposition du **Code pénal** concernant :\n\n- l’ajournement du prononcé ;\n- la consignation ;\n- la juridiction compétente pour en connaître.\n\nIl n’est donc pas possible de déterminer cette compétence à partir du contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L127-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.93160699959844,
+      "vectorSearchMs": 659.3895709998906,
+      "jinaRerankingMs": 560.2215860001743,
+      "mappingMs": 0.02644200064241886,
+      "totalMs": 1414.607619999908,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009914999827742577,
+      "contextBuilderMs": 0.017934000119566917,
+      "generationMs": 2722.143407999538,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4136.801804999821
+    },
+    "judge": {
+      "questionId": "q375",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse expose correctement le régime de responsabilité prévu à l’article L. 127-6 du code de commerce. En revanche, elle ne répond pas au second volet : selon la référence, la juridiction peut ajourner le prononcé en imposant une consignation et fixe son montant, son délai ainsi que la date de renvoi. L’absence de réponse pénale rend l’ensemble partiellement correct et incomplet. Toutefois, toutes les affirmations formulées sont fidèlement étayées par le contexte fourni, qui ne contient effectivement aucune disposition pénale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour le volet commercial : l'article L. 127-6 couvre la responsabilité envers les tiers avant immatriculation et la garantie après immatriculation, tandis que l'article R. 127-1 couvre le contenu contractuel complémentaire évoqué. En revanche, aucune source ne porte sur l'ajournement du prononcé, la consignation ou la compétence de la juridiction au titre du code pénal, ce qui constitue une lacune importante au regard de la question complète. Toutes les affirmations effectivement formulées dans la réponse générée sont néanmoins étayées : les développements commerciaux le sont par les sources 1 et 2, et le constat d'absence de disposition pénale dans le contexte est conforme aux sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Dans le **contrat d’appui au projet d’entreprise**, les responsabilités sont définies de la manière suivante :\n\n- Le contrat doit fixer les engagements respectifs des parties, le programme d’accompagnement et distinguer les stipulations applicables avant et après le début de l’activité économique (**article R. 127-1, 1° du Code de commerce** [Source 2]).\n- Il doit également préciser les engagements que le bénéficiaire peut prendre envers les tiers ainsi que la partie qui en assume la charge financière (**article R. 127-1, 4° du Code de commerce** [Source 2]).\n- Avant l’immatriculation, la personne morale responsable de l’appui est responsable envers les tiers des dommages causés par le bénéficiaire à l’occasion du programme d’appui et de préparation.\n- Après l’immatriculation, cette personne morale garantit la responsabilité liée au contrat d’appui, à condition que le bénéficiaire ait respecté les clauses contractuelles jusqu’à la fin du contrat (**article L. 127-6 du Code de commerce** [Source 1]).\n\nEn revanche, le contexte fourni ne contient **aucune disposition du Code pénal** relative à la compétence de la juridiction en matière de consignation lors d’un ajournement de prononcé. Il n’est donc pas possible de répondre juridiquement à cette seconde partie à partir des seules sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L127-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1415.0474509997293,
+      "routingCalls": 1,
+      "embeddingMs": 170.15256300009787,
+      "vectorSearchMs": 268.3822280000895,
+      "jinaRerankingMs": 617.6256430000067,
+      "mappingMs": 0.027487000450491905,
+      "totalMs": 2471.2683629998937,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010766999796032906,
+      "contextBuilderMs": 0.020566999912261963,
+      "generationMs": 2956.611685999669,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5427.919727999717
+    },
+    "judge": {
+      "questionId": "q375",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement le régime de responsabilité du contrat d'appui, y compris la responsabilité avant immatriculation et la garantie après immatriculation sous condition du respect des clauses. Elle ne répond toutefois pas à la seconde partie, alors que celle-ci attendait l'explication du pouvoir de la juridiction d'ajourner le prononcé en ordonnant une consignation et d'en fixer les modalités. Les affirmations effectivement formulées sont toutes étayées par le contexte fourni, qui ne contient aucune disposition pénale. Néanmoins, l'abstention partielle sur un élément essentiel n'est pas conforme à l'indicateur EXPECTED ABSTENTION = false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour la partie relative au contrat d’appui : R. 127-1 couvre les engagements des parties et les engagements envers les tiers, tandis que L. 127-6 couvre la responsabilité avant immatriculation et la garantie après immatriculation. En revanche, aucune source ne porte sur l’ajournement du prononcé, la consignation ou la compétence de la juridiction au titre du code pénal, qui constitue une partie essentielle de la question. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les énoncés sur le contrat sont étayés par les deux articles, et le constat d’absence de disposition pénale dans le contexte est conforme aux sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

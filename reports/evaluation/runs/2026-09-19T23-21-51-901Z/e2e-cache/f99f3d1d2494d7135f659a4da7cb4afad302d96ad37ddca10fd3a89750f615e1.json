@@ -1,0 +1,87 @@
+{
+  "questionId": "q076",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après l’article 912 du Code civil, la **réserve héréditaire** est la part de la succession que la loi protège au profit de certains héritiers, appelés **héritiers réservataires**, à condition qu’ils soient appelés à la succession et qu’ils l’acceptent. Cette part leur est dévolue libre de charges.\n\nLa **quotité disponible** correspond, à l’inverse, à la partie de la succession qui n’est pas réservée par la loi. Le défunt peut donc en disposer librement, notamment par des libéralités.\n\nEn résumé : la réserve héréditaire est la part légalement protégée, tandis que la quotité disponible est la part dont le défunt peut librement disposer. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "912"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.99031899985857,
+      "vectorSearchMs": 614.6535010000225,
+      "jinaRerankingMs": 511.3959999999497,
+      "mappingMs": 0.03242700011469424,
+      "totalMs": 1362.0955439999234,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010037000058218837,
+      "contextBuilderMs": 0.010196999879553914,
+      "generationMs": 1926.477000999963,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3288.6115419999696
+    },
+    "judge": {
+      "questionId": "q076",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux définitions de l’article 912 : protection légale au profit des héritiers réservataires, sous condition d’appel et d’acceptation, avec dévolution libre de charges pour la réserve ; part non réservée dont le défunt peut disposer par libéralités pour la quotité disponible. Toutes les affirmations importantes sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 912 du code civil, précisément demandé. Elle définit explicitement la réserve héréditaire (héritiers réservataires, conditions d’appel et d’acceptation, dévolution libre de charges) et la quotité disponible (part non réservée et librement transmissible par libéralités), couvrant toutes les affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’article 912 du Code civil, la **réserve héréditaire** est la part de la succession que la loi protège au profit de certains héritiers, appelés **héritiers réservataires**, à condition qu’ils soient appelés à la succession et qu’ils l’acceptent. Cette part doit leur être transmise libre de charges.\n\nLa **quotité disponible** correspond, à l’inverse, à la part de la succession qui n’est pas réservée par la loi. Le défunt peut donc en disposer librement, notamment par des libéralités.\n\nEn résumé : la réserve héréditaire est la part légalement protégée, tandis que la quotité disponible est la part dont le défunt peut librement disposer. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "912"
+      }
+    ],
+    "profiling": {
+      "routingMs": 831.5574270000216,
+      "routingCalls": 1,
+      "embeddingMs": 222.75513900001533,
+      "vectorSearchMs": 56.11162900016643,
+      "jinaRerankingMs": 495.3276339999866,
+      "mappingMs": 0.03685400006361306,
+      "totalMs": 1605.8211449999362,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03043100005015731,
+      "contextBuilderMs": 0.011886999942362309,
+      "generationMs": 1771.6912440001033,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3377.5618729998823
+    },
+    "judge": {
+      "questionId": "q076",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les deux notions définies par l’article 912 : réserve assurée aux héritiers réservataires appelés et acceptants, libre de charges, et quotité non réservée dont le défunt peut disposer par libéralités. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 912 du Code civil, qui définit précisément la réserve héréditaire et la quotité disponible. Elle couvre toutes les affirmations essentielles de la réponse : bénéficiaires réservataires, conditions d’appel et d’acceptation, dévolution libre de charges, part non réservée et libre disposition par libéralités."
+    }
+  },
+  "failureStage": "none"
+}

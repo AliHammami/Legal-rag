@@ -1,0 +1,111 @@
+{
+  "questionId": "q155",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une entreprise peut bénéficier de l’aide de l’État si les conditions suivantes sont réunies :\n\n- elle compte **moins de 250 salariés** ;\n- le contrat d’apprentissage prépare à un **diplôme ou titre à finalité professionnelle de niveau au plus égal au baccalauréat** [Source 1 ; Source 2] ;\n- le contrat ouvre droit à l’aide au titre de sa **première année d’exécution** [Source 4] ;\n- l’employeur transmet le contrat à l’opérateur de compétences **dans les six mois suivant sa conclusion**, puis celui-ci le dépose auprès du ministre chargé de la formation professionnelle [Source 4] ;\n- l’employeur n’a pas déjà bénéficié d’une aide à l’embauche d’un apprenti pour un contrat antérieur conclu avec **le même apprenti et pour la même certification professionnelle** [Source 4].\n\nLe montant maximal est de **5 000 euros**, porté à **6 000 euros** lorsque le contrat est conclu avec une personne reconnue travailleur handicapé [Source 4]. L’aide cesse notamment d’être due en cas de rupture anticipée du contrat ou de suspension entraînant l’absence de rémunération de l’apprenti [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5121-24"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 262.2092109997757,
+      "vectorSearchMs": 562.6406449996866,
+      "jinaRerankingMs": 528.6148829995655,
+      "mappingMs": 0.07223099982365966,
+      "totalMs": 1353.5701099997386,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010967999696731567,
+      "contextBuilderMs": 0.024652999825775623,
+      "generationMs": 4236.145048999693,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5589.760211999994
+    },
+    "judge": {
+      "questionId": "q155",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les deux conditions principales (entreprise de moins de 250 salariés et préparation d’un diplôme ou titre professionnel au plus équivalent au baccalauréat) ainsi que les conditions réglementaires d’attribution figurant dans le contexte. Les précisions sur le montant et la cessation/suspension de l’aide sont également exactes et directement supportées par la source 4."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 énoncent directement les conditions de taille de l'entreprise et de niveau du diplôme/titre. La source 4 couvre les conditions réglementaires supplémentaires, la première année d'exécution, les modalités de transmission, l'absence de bénéfice antérieur pour le même apprenti et la même certification, les montants, ainsi que les conséquences d'une rupture ou suspension. La source 3 est hors sujet, mais elle n'est pas utilisée et n'affecte pas la pertinence ni la couverture de l'ensemble."
+    }
+  },
+  "routing": {
+    "answer": "Une entreprise peut bénéficier de l’aide de l’État si les conditions suivantes sont réunies :\n\n- elle compte **moins de 250 salariés** ;\n- le contrat d’apprentissage prépare à un **diplôme ou titre à finalité professionnelle de niveau au plus égal au baccalauréat** — Article L6243-1 du Code du travail [Sources 1 et 2] ;\n- l’aide est demandée au titre de la **première année d’exécution du contrat** ;\n- l’employeur transmet le contrat à l’opérateur de compétences dans un délai maximal de **six mois suivant sa conclusion**, puis celui-ci le dépose auprès du ministre chargé de la formation professionnelle ;\n- l’employeur n’a pas déjà bénéficié d’une aide à l’embauche d’un apprenti pour un précédent contrat conclu avec **le même apprenti et pour la même certification professionnelle** — Article D6243-2 du Code du travail [Source 4].\n\nLe montant de l’aide est plafonné à **5 000 euros**, ou à **6 000 euros** lorsque le contrat est conclu avec une personne reconnue travailleur handicapé. L’aide est versée mensuellement, sous réserve notamment de la transmission des données déclaratives requises [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6243-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5121-24"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6243-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1360.2018009996973,
+      "routingCalls": 1,
+      "embeddingMs": 226.62302599987015,
+      "vectorSearchMs": 311.76270799990743,
+      "jinaRerankingMs": 535.1924580000341,
+      "mappingMs": 0.02097899978980422,
+      "totalMs": 2433.8241079999134,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.008905000053346157,
+      "contextBuilderMs": 0.02211300004273653,
+      "generationMs": 3543.346218999941,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5977.208507000003
+    },
+    "judge": {
+      "questionId": "q155",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les conditions principales prévues par les articles L6243-1 et D6243-1 (entreprise de moins de 250 salariés et préparation d’un diplôme ou titre au plus équivalent au baccalauréat). Elle ajoute de façon exacte les modalités et conditions complémentaires de l’article D6243-2 : première année du contrat, transmission et dépôt du contrat, ainsi que l’absence d’aide antérieure pour le même employeur, apprenti et certification. Les précisions sur le montant et le versement sont également fidèles au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 énoncent directement les deux conditions de fond principales (entreprise de moins de 250 salariés et préparation d’un diplôme ou titre au plus équivalent au baccalauréat). La source 4 couvre les conditions complémentaires invoquées, la première année d’exécution, les modalités de transmission et de dépôt, l’absence d’aide antérieure pour le même apprenti et la même certification, ainsi que le montant et les modalités de versement. La source 3 est hors sujet mais n’affecte pas la pertinence ni la couverture de l’ensemble, assurées par les autres sources."
+    }
+  },
+  "failureStage": "none"
+}
