@@ -136,6 +136,47 @@ describe('searchQuestion', () => {
     );
   });
 
+  it('uses per-corpus quota retrieval for two corpora with one embedding', async () => {
+    searchSimilarChunksMock.mockImplementation(
+      async (_prisma, _embedding, topK, options) => {
+        const corpusId = options?.corpusIds?.[0] ?? 'code-civil';
+        return [
+          {
+            corpusId,
+            chunkId: `${corpusId}#0`,
+            articleNumber: '1',
+            content: 'x',
+            metadata: {
+              articleNumber: '1',
+              pageStart: 1,
+              pageEnd: 1,
+              source: 'x.pdf',
+              sourceType: 'pdf' as const,
+              chunkIndex: 0,
+              chunkCount: 1,
+              unitStart: 0,
+              unitEnd: 0,
+              unitCount: 1,
+            },
+            distance: corpusId === 'code-civil' ? 0.1 : 0.2,
+          },
+        ].slice(0, topK);
+      },
+    );
+    const openAIService = { createEmbeddings } as unknown as OpenAIService;
+
+    await searchQuestion(prisma, openAIService, QUESTION, 20, {
+      corpusIds: ['code-civil', 'code-du-travail'],
+    });
+
+    expect(createEmbeddings).toHaveBeenCalledTimes(1);
+    expect(searchSimilarChunksMock).toHaveBeenCalledTimes(2);
+    expect(searchSimilarChunksMock.mock.calls[0]?.[1]).toEqual(queryVector());
+    expect(searchSimilarChunksMock.mock.calls[1]?.[1]).toEqual(queryVector());
+    expect(searchSimilarChunksMock.mock.calls[0]?.[2]).toBe(10);
+    expect(searchSimilarChunksMock.mock.calls[1]?.[2]).toBe(10);
+  });
+
   it('passes topK through to searchSimilarChunks', async () => {
     const openAIService = { createEmbeddings } as unknown as OpenAIService;
 

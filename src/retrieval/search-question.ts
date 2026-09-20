@@ -3,6 +3,10 @@ import { performance } from 'node:perf_hooks';
 import type { OpenAIService } from '../openai/openai.service.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import { RetrievalError } from './retrieval.error.js';
+import {
+  searchSimilarChunksWithCorpusQuota,
+  shouldUseCorpusQuotaRetrieval,
+} from './corpus-quota-retrieval.js';
 import { searchSimilarChunks } from './search-similar-chunks.js';
 import type { SearchQuestionOptions, SimilarChunk } from './types.js';
 import { validateQuestion } from './validate-search-input.js';
@@ -35,12 +39,15 @@ export async function searchQuestion(
   }
 
   const searchStart = performance.now();
-  const results = await searchSimilarChunks(
-    prisma,
-    queryEmbedding,
-    topK,
-    searchOptions,
-  );
+  const results = shouldUseCorpusQuotaRetrieval(searchOptions.corpusIds)
+    ? await searchSimilarChunksWithCorpusQuota(
+        prisma,
+        queryEmbedding,
+        topK,
+        searchOptions.corpusIds!,
+        searchOptions,
+      )
+    : await searchSimilarChunks(prisma, queryEmbedding, topK, searchOptions);
   if (profiling) {
     profiling.vectorSearchMs = performance.now() - searchStart;
   }
