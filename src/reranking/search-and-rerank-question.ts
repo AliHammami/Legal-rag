@@ -3,8 +3,12 @@ import { performance } from 'node:perf_hooks';
 import type { OpenAIService } from '../openai/openai.service.js';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import type { PipelineProfilingTimings } from '../profiling/pipeline-timings.js';
-import { resolveRoutingForRetrieval } from '../routing/resolve-routing-for-retrieval.js';
-import type { RoutingMetadata } from '../routing/types.js';
+import {
+  resolveRoutingForRetrieval,
+  resolveRoutingFromRouterResult,
+  routingMetadataFromExplicitCorpusIds,
+} from '../routing/resolve-routing-for-retrieval.js';
+import type { RoutingMetadata, RoutingResult } from '../routing/types.js';
 import type { SearchSimilarChunksOptions } from '../retrieval/types.js';
 import { searchQuestion } from '../retrieval/search-question.js';
 import {
@@ -25,6 +29,8 @@ export interface SearchAndRerankQuestionOptions extends SearchSimilarChunksOptio
   profiling?: PipelineProfilingTimings;
   /** When false, skips LLM routing and uses explicit corpusIds or global retrieval. */
   enableRouting?: boolean;
+  /** Replays a prior router decision without calling the routing LLM. */
+  routingResultOverride?: Pick<RoutingResult, 'corpusIds'>;
 }
 
 export interface SearchAndRerankQuestionResult {
@@ -47,6 +53,7 @@ export async function searchAndRerankQuestion(
     profiling,
     enableRouting = true,
     corpusIds: explicitCorpusIds,
+    routingResultOverride,
     ...searchOptions
   } = options;
   const totalStart = profiling ? performance.now() : 0;
@@ -55,16 +62,40 @@ export async function searchAndRerankQuestion(
   let retrievalCorpusIds: string[] | undefined;
 
   if (explicitCorpusIds !== undefined) {
+    routing = routingMetadataFromExplicitCorpusIds(explicitCorpusIds);
     retrievalCorpusIds =
       explicitCorpusIds.length > 0 ? explicitCorpusIds : undefined;
   } else if (enableRouting) {
-    const routingStart = performance.now();
-    const resolved = await resolveRoutingForRetrieval(openAIService, question);
-    if (profiling) {
-      profiling.routingMs = performance.now() - routingStart;
-      profiling.routingCalls = 1;
+    let resolved;
+
+    if (routingResultOverride !== undefined) {
+      resolved = resolveRoutingFromRouterResult(routingResultOverride);
+    } else {
+      const routingStart = performance.now();
+      resolved = await resolveRoutingForRetrieval(openAIService, question);
+      if (profiling) {
+        profiling.routingMs = performance.now() - routingStart;
+        profiling.routingCalls = 1;
+      }
     }
+
     routing = resolved.routing;
+
+    if (resolved.abstain) {
+      if (profiling) {
+        profiling.retrievedCandidates = 0;
+        profiling.rerankStatus = 'success';
+        profiling.totalMs = performance.now() - totalStart;
+      }
+
+      return {
+        candidates: [],
+        reranked: [],
+        rerankStatus: 'success',
+        routing,
+      };
+    }
+
     retrievalCorpusIds = resolved.retrievalCorpusIds;
   }
 

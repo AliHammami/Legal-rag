@@ -76,7 +76,7 @@ describe('searchAndRerankQuestion', () => {
       openAIService,
       rerankerService,
       QUESTION,
-      { profiling },
+      { profiling, enableRouting: false },
     );
 
     expect(result.candidates).toHaveLength(20);

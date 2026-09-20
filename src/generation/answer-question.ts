@@ -11,7 +11,12 @@ import {
   DEFAULT_RETRIEVAL_TOP_K,
 } from '../reranking/constants.js';
 import { buildRagContext } from './build-rag-context.js';
-import { DEFAULT_RELATIVE_SCORE_THRESHOLD } from './constants.js';
+import {
+  DEFAULT_RELATIVE_SCORE_THRESHOLD,
+  ROUTING_ABSTENTION_ANSWER,
+} from './constants.js';
+import type { RoutingResult } from '../routing/types.js';
+import { isRoutingAbstain } from '../routing/types.js';
 import { dynamicContextFilter } from './dynamic-context-filter.js';
 import type { RagGenerationService } from './rag-generation.service.js';
 import type { AnswerQuestionResult } from './types.js';
@@ -23,6 +28,7 @@ export interface AnswerQuestionOptions {
   profiling?: PipelineProfilingTimings;
   enableRouting?: boolean;
   corpusIds?: string[];
+  routingResultOverride?: Pick<RoutingResult, 'corpusIds'>;
 }
 
 export async function answerQuestion(
@@ -52,8 +58,30 @@ export async function answerQuestion(
         profiling,
         enableRouting: options.enableRouting,
         corpusIds: options.corpusIds,
+        routingResultOverride: options.routingResultOverride,
       },
     );
+
+  if (isRoutingAbstain(routing)) {
+    profiling.answerPipelineTotalMs = performance.now() - pipelineStart;
+
+    return {
+      question,
+      routing,
+      candidates,
+      reranked,
+      rerankStatus,
+      contextFiltering: {
+        jinaResults: 0,
+        contextResults: 0,
+        relativeScoreThreshold,
+      },
+      context: '',
+      sources: [],
+      answer: ROUTING_ABSTENTION_ANSWER,
+      profiling,
+    };
+  }
 
   const filteringStart = performance.now();
   const contextChunks = dynamicContextFilter(reranked, {

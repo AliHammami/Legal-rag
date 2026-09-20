@@ -86,6 +86,7 @@ describe('searchAndRerankQuestion routing integration', () => {
     );
     expect(result.routing).toEqual({
       corpusIds: ['code-penal'],
+      decision: 'routed',
       fallbackToGlobal: false,
     });
     expect(result.reranked).toEqual(reranked);
@@ -114,7 +115,7 @@ describe('searchAndRerankQuestion routing integration', () => {
     );
   });
 
-  it('falls back to global retrieval when routing is ambiguous', async () => {
+  it('abstains when the router returns an empty corpus selection', async () => {
     routeQuestionMock.mockResolvedValue({ corpusIds: [] });
 
     const result = await searchAndRerankQuestion(
@@ -124,6 +125,27 @@ describe('searchAndRerankQuestion routing integration', () => {
       'Quelle est la loi en France ?',
     );
 
+    expect(searchQuestionMock).not.toHaveBeenCalled();
+    expect(rerankChunksMock).not.toHaveBeenCalled();
+    expect(result.routing).toEqual({
+      corpusIds: [],
+      decision: 'abstain',
+      fallbackToGlobal: false,
+    });
+    expect(result.candidates).toEqual([]);
+    expect(result.reranked).toEqual([]);
+  });
+
+  it('falls back to global retrieval when explicit corpusIds are empty', async () => {
+    const result = await searchAndRerankQuestion(
+      prisma,
+      openAIService,
+      rerankerService,
+      'Quelle est la loi en France ?',
+      { corpusIds: [] },
+    );
+
+    expect(routeQuestionMock).not.toHaveBeenCalled();
     expect(searchQuestionMock).toHaveBeenCalledWith(
       prisma,
       openAIService,
@@ -134,6 +156,7 @@ describe('searchAndRerankQuestion routing integration', () => {
     expect(searchQuestionMock.mock.calls[0]?.[4]?.corpusIds).toBeUndefined();
     expect(result.routing).toEqual({
       corpusIds: [],
+      decision: 'global_fallback',
       fallbackToGlobal: true,
     });
   });

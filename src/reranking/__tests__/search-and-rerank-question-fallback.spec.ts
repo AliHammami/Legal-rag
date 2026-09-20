@@ -79,6 +79,7 @@ describe('searchAndRerankQuestion fallback', () => {
       openAIService,
       rerankerService,
       'Question ?',
+      { enableRouting: false },
     );
 
     expect(warnSpy).toHaveBeenCalledWith(
@@ -105,7 +106,9 @@ describe('searchAndRerankQuestion fallback', () => {
     );
 
     await expect(
-      searchAndRerankQuestion(prisma, openAIService, rerankerService, 'Question ?'),
+      searchAndRerankQuestion(prisma, openAIService, rerankerService, 'Question ?', {
+        enableRouting: false,
+      }),
     ).rejects.toMatchObject({ code: 'CONFIG_MISSING' });
   });
 });
