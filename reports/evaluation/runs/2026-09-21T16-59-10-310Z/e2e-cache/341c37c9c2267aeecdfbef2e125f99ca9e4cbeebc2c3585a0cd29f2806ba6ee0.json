@@ -1,0 +1,87 @@
+{
+  "questionId": "q209",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le caractère commercial d’une société est déterminé soit par **sa forme**, soit par **son objet**.\n\nSont toujours commerciales, quelle que soit leur objet :\n\n- les sociétés en nom collectif (SNC) ;\n- les sociétés en commandite simple (SCS) ;\n- les sociétés à responsabilité limitée (SARL) ;\n- les sociétés par actions.\n\n**Article L210-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L210-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 245.79017199994996,
+      "vectorSearchMs": 636.0430359998718,
+      "jinaRerankingMs": 549.8628909997642,
+      "mappingMs": 0.02453599963337183,
+      "totalMs": 1431.7511419998482,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010880000423640013,
+      "contextBuilderMs": 0.011965000070631504,
+      "generationMs": 1373.0283439997584,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2804.816318000201
+    },
+    "judge": {
+      "questionId": "q209",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle et énumère exhaustivement les quatre formes sociales visées. Toutes les affirmations sont explicitement supportées par l’article L210-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L210-1 énonce expressément que le caractère commercial est déterminé par la forme ou l’objet et liste les quatre formes toujours commerciales quel que soit leur objet. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le caractère commercial d’une société est déterminé soit par **sa forme**, soit par **son objet**.\n\nSont toujours commerciales, quelle que soit leur activité :\n\n- les sociétés en nom collectif ;\n- les sociétés en commandite simple ;\n- les sociétés à responsabilité limitée ;\n- les sociétés par actions.\n\n**Fondement : Article L210-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L210-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1379.4710049997084,
+      "routingCalls": 1,
+      "embeddingMs": 808.126084999647,
+      "vectorSearchMs": 205.10552300000563,
+      "jinaRerankingMs": 544.2644680002704,
+      "mappingMs": 0.02488799998536706,
+      "totalMs": 2937.0268950001337,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.09589300025254488,
+      "contextBuilderMs": 0.013556999620050192,
+      "generationMs": 1373.4167299997061,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4310.5634130002
+    },
+    "judge": {
+      "questionId": "q209",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle applicable : le caractère commercial dépend de la forme ou de l'objet, et elle énumère exhaustivement les quatre catégories toujours commerciales. Toutes les affirmations, y compris la référence à l'article L210-1, sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L210-1 du Code de commerce, qui répond aux deux volets de la question : détermination du caractère commercial par la forme ou l'objet, et liste exhaustive des sociétés commerciales par la forme quel que soit leur objet. Elle couvre toutes les affirmations importantes de la réponse générée, y compris son fondement juridique."
+    }
+  },
+  "failureStage": "none"
+}

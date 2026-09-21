@@ -1,0 +1,87 @@
+{
+  "questionId": "q183",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après l’**article L228-1 du Code de commerce**, les valeurs mobilières émises par les sociétés par actions :\n\n- sont des **titres financiers** au sens de l’article L. 211-1 du Code monétaire et financier ;\n- confèrent des **droits identiques au sein de chaque catégorie** ;\n- peuvent prendre la forme de **titres au porteur** ou de **titres nominatifs**, sauf lorsque la loi ou les statuts imposent la forme nominative pour tout ou partie du capital ;\n- peuvent, en principe, être **converties** de la forme au porteur à la forme nominative, et inversement, à la demande du propriétaire. Cette conversion n’est toutefois pas possible lorsque la forme nominative est obligatoire ;\n- doivent être inscrites en compte ou dans un dispositif d’enregistrement électronique partagé au nom de leur propriétaire. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.27704900037497,
+      "vectorSearchMs": 623.238299000077,
+      "jinaRerankingMs": 554.288205999881,
+      "mappingMs": 0.038964000064879656,
+      "totalMs": 1395.8754530004226,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015338999684900045,
+      "contextBuilderMs": 0.015250999946147203,
+      "generationMs": 2048.6631209999323,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3444.582254999783
+    },
+    "judge": {
+      "questionId": "q183",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement tous les éléments pertinents de l’article : qualification de titres financiers, droits identiques par catégorie, formes au porteur ou nominative avec exception, faculté et limite de conversion, et obligation d’inscription au nom du propriétaire. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement et intégralement l’article L228-1 visé par la question. Elle étaye toutes les affirmations importantes de la réponse : qualification de titres financiers, droits identiques par catégorie, formes au porteur ou nominative et exceptions, faculté de conversion avec sa limite, ainsi que l’obligation d’inscription au nom du propriétaire."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’**article L228-1 du Code de commerce** :\n\n- Les sociétés par actions peuvent émettre des **valeurs mobilières**, qui sont des **titres financiers** au sens du Code monétaire et financier.\n- Ces titres confèrent des **droits identiques au sein d’une même catégorie**.\n- Ils peuvent prendre la forme :\n  - de **titres au porteur** ;\n  - ou de **titres nominatifs**.\n- Toutefois, la loi ou les statuts peuvent imposer la **forme nominative** pour tout ou partie du capital.\n- Lorsqu’une émission comprend à la fois des titres au porteur et des titres nominatifs, le propriétaire peut en principe **convertir ses titres dans l’autre forme**, sauf lorsque la forme nominative est légalement ou statutairement obligatoire.\n- Quelle que soit leur forme, les valeurs mobilières doivent être **inscrites en compte** ou dans un **dispositif d’enregistrement électronique partagé** au nom de leur propriétaire.\n\n[Source 1 — Article L228-1 du Code de commerce]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1365.9501450001262,
+      "routingCalls": 1,
+      "embeddingMs": 205.70185899967328,
+      "vectorSearchMs": 188.09469699999318,
+      "jinaRerankingMs": 550.2677850001492,
+      "mappingMs": 0.023750999942421913,
+      "totalMs": 2310.066465999931,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010342999827116728,
+      "contextBuilderMs": 0.01158200018107891,
+      "generationMs": 2229.474066999741,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4539.571237999946
+    },
+    "judge": {
+      "questionId": "q183",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les éléments de l’article : qualification de titres financiers, droits identiques par catégorie, formes au porteur ou nominative et exception de forme nominative obligatoire, faculté de conversion et sa limite, ainsi que l’inscription en compte ou dans un dispositif d’enregistrement électronique partagé au nom du propriétaire. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L228-1 directement visé par la question. Elle couvre l'ensemble des affirmations importantes de la réponse : qualification de titres financiers, droits identiques par catégorie, formes au porteur ou nominative, exception liée à l'obligation légale ou statutaire de forme nominative, faculté de conversion et sa limite, ainsi que l'inscription en compte ou dans un dispositif d'enregistrement électronique partagé."
+    }
+  },
+  "failureStage": "none"
+}

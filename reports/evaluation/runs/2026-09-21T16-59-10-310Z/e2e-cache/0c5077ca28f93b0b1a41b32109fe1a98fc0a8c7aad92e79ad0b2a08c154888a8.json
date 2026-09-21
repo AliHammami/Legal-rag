@@ -1,0 +1,103 @@
+{
+  "questionId": "q238",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L231-10 du Code monétaire et financier, le fait d’affirmer comme sincères et véritables des souscriptions que l’on sait fictives est puni :\n\n- d’un emprisonnement de **cinq ans** ;\n- d’une amende de **9 000 euros**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L231-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.7226320002228,
+      "vectorSearchMs": 690.6666209995747,
+      "jinaRerankingMs": 528.8174179997295,
+      "mappingMs": 0.03333300072699785,
+      "totalMs": 1420.2706720000133,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010817999951541424,
+      "contextBuilderMs": 0.010897999629378319,
+      "generationMs": 1556.3818660005927,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2976.684946999885
+    },
+    "judge": {
+      "questionId": "q238",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les deux sanctions prévues par l’article L231-10 pour l’affirmation de souscriptions fictives : cinq ans d’emprisonnement et 9 000 euros d’amende. Elle est intégralement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L231-10 et vise expressément le fait d'affirmer sincères et véritables des souscriptions que la personne sait fictives. Elle prévoit exactement les sanctions citées dans la réponse : cinq ans d'emprisonnement et 9 000 euros d'amende."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne contiennent pas l’article **L. 231-10 du Code de commerce** et ne précisent donc pas la sanction applicable au fait d’affirmer des souscriptions fictives.\n\nIl n’est pas possible de déduire cette sanction des articles communiqués, qui concernent notamment les apports en nature frauduleusement surévalués, les dividendes fictifs et les comptes infidèles [Sources 1, 2 et 5].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L241-3"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L242-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2144.565445999615,
+      "routingCalls": 1,
+      "embeddingMs": 210.66758699994534,
+      "vectorSearchMs": 200.62734600063413,
+      "jinaRerankingMs": 563.8587159998715,
+      "mappingMs": 0.026999999769032,
+      "totalMs": 3119.7846919996664,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011398999951779842,
+      "contextBuilderMs": 0.03454599995166063,
+      "generationMs": 2306.2456879997626,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5426.086425000802
+    },
+    "judge": {
+      "questionId": "q238",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de fournir la sanction demandée alors que celle-ci est attendue : cinq ans d’emprisonnement et 9 000 euros d’amende. Elle est toutefois correctement fondée sur le contexte fourni, qui ne contient pas l’article L. 231-10 ni l’infraction précise visée ; elle ne tire donc pas de conclusion non supportée. L’abstention n’était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne contiennent pas l’article L. 231-10 ni l’incrimination précise d’affirmation de souscriptions fictives ; elles ne permettent donc pas de répondre directement à la question. Elles sont toutefois pertinentes pour étayer le constat d’insuffisance du contexte : les sources 1, 2 et 5 portent bien sur l’évaluation frauduleuse d’apports, les dividendes fictifs ou les comptes sociaux, et non sur les souscriptions fictives. Elles couvrent ainsi les affirmations importantes de la réponse générée, malgré l’abstention non attendue."
+    }
+  },
+  "failureStage": "generation"
+}

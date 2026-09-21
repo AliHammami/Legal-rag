@@ -1,0 +1,115 @@
+{
+  "questionId": "q408",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Application du Code du travail\n\nPour le **plan d’épargne retraite d’entreprise collectif**, les règles du **plan d’épargne d’entreprise** prévues au chapitre II du titre III du livre III de la troisième partie du Code du travail s’appliquent, sous réserve des dispositions particulières du Code monétaire et financier. Sont toutefois exclues les dispositions des articles **L. 3332-10 et L. 3332-18 à L. 3332-28 du Code du travail** — **Article L. 224-13 du Code monétaire et financier [Source 1]**.\n\nLes modalités d’application des règles relatives au plan d’épargne d’entreprise sont déterminées par les articles **R. 3332-1 à D. 3335-3 du Code du travail** — **Article R. 222-1 du Code monétaire et financier [Source 2]**.\n\nÀ titre de précision, pour le **plan d’épargne pour la retraite collectif**, les dispositions relatives notamment aux versements, à la composition, à la gestion, à l’évaluation des titres, à l’indisponibilité des sommes et aux régimes social et fiscal sont également applicables, par renvoi aux articles **R. 3332-9 à R. 3332-23 et R. 3332-30 à R. 3332-32 du Code du travail** — **Article R. 3334-1 du Code du travail [Source 3]**. Plus généralement, les dispositions relatives au plan d’épargne d’entreprise s’appliquent sous réserve des dispositions particulières prévues et des exclusions énoncées à l’article **L. 3334-1 du Code du travail [Source 4]**.\n\n### Sanctions pénales en cas de négligence d’un conducteur\n\nLes sources fournies ne contiennent aucune disposition relative aux sanctions pénales applicables lorsqu’un conducteur d’un véhicule terrestre à moteur cause, par négligence, une incapacité de travail inférieure ou égale à trois mois. Il n’est donc pas possible de déterminer ces sanctions à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-13"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R222-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3334-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3334-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.40302100032568,
+      "vectorSearchMs": 713.540076000616,
+      "jinaRerankingMs": 707.8540179990232,
+      "mappingMs": 0.0218260008841753,
+      "totalMs": 1642.8455940000713,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010697001591324806,
+      "contextBuilderMs": 0.02128800004720688,
+      "generationMs": 4056.3365219999105,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5699.225527999923
+    },
+    "judge": {
+      "questionId": "q408",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement l'application des règles du plan d'épargne d'entreprise au plan d'épargne retraite d'entreprise collectif, y compris les exclusions prévues par l'article L. 224-13. Elle ne répond toutefois pas au second volet : la sanction attendue est de deux ans d'emprisonnement et 30 000 euros d'amende. L'abstention sur ce point est bien justifiée par l'absence de disposition pénale dans le contexte, de sorte que les affirmations sont entièrement fondées sur le contexte fourni. Néanmoins, EXPECTED ABSTENTION étant false, la réponse n'apporte pas une réponse effective à l'ensemble de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet relatif au plan d’épargne retraite d’entreprise collectif, notamment l’application des règles du plan d’épargne d’entreprise et les exclusions prévues. Elles ne contiennent en revanche aucune disposition pénale concernant le conducteur et l’incapacité de travail, ce qui laisse un volet essentiel de la question sans source de fond. Toutefois, elles couvrent les affirmations effectivement formulées dans la réponse : les renvois et exclusions sont étayés, et le constat d’absence de disposition pénale dans le contexte est cohérent avec les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne contiennent aucune disposition du **Code du travail** relative au **plan d’épargne retraite d’entreprise collectif**. Il n’est donc pas possible de préciser, sur cette base, les règles applicables à ce dispositif.\n\nEn revanche, lorsque la maladresse, l’imprudence, l’inattention, la négligence ou le manquement à une obligation de prudence ou de sécurité est commis par le conducteur d’un véhicule terrestre à moteur et cause une incapacité totale de travail **inférieure ou égale à trois mois**, les sanctions sont les suivantes :\n\n- **2 ans d’emprisonnement et 30 000 euros d’amende**, selon l’**article 222-20-1 du Code pénal** [Source 1], qui renvoie aux comportements visés à l’article 222-19 ;\n- lorsque l’une des circonstances aggravantes énumérées à l’**article 221-20 du Code pénal** est caractérisée — notamment une violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité, l’alcool, les stupéfiants, l’absence de permis ou un excès de vitesse d’au moins 30 km/h — les faits constituent des blessures routières punies de **3 ans d’emprisonnement et 45 000 euros d’amende** [Source 3].\n\nAinsi, la négligence simple relève de l’article 222-20-1, tandis que certaines circonstances aggravantes entraînent l’application du régime plus sévère de l’article 221-20.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-20-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-19-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-20"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-19"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-19"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2150.3902649991214,
+      "routingCalls": 1,
+      "embeddingMs": 208.8301170002669,
+      "vectorSearchMs": 310.4956599995494,
+      "jinaRerankingMs": 571.2091450002044,
+      "mappingMs": 0.024282000958919525,
+      "totalMs": 3240.9738660007715,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04391000047326088,
+      "contextBuilderMs": 0.03103100135922432,
+      "generationMs": 4041.1349370013922,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7282.1940150000155
+    },
+    "judge": {
+      "questionId": "q408",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse traite correctement le volet pénal principal : pour une ITT inférieure ou égale à trois mois causée par un conducteur, elle indique bien 2 ans d'emprisonnement et 30 000 € d'amende. L'ajout sur les circonstances aggravantes est également soutenu par le contexte, bien que non indispensable à la question. Elle omet toutefois entièrement la règle attendue sur le plan d'épargne retraite d'entreprise collectif, en déclarant à juste titre que le contexte ne contient aucune disposition du Code du travail sur ce point. Cette abstention partielle est appropriée au regard du contexte et la réponse répond effectivement au volet pénal ; elle n'est donc pas une abstention injustifiée au sens de l'indicateur."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet pénal, notamment l'article 222-20-1 pour l'ITT inférieure ou égale à trois mois et l'article 221-20 pour les circonstances aggravantes. Elles ne couvrent toutefois pas le volet relatif au Code du travail et au plan d'épargne retraite d'entreprise collectif, qui constitue une partie importante de la question. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : l'absence de disposition pertinente du Code du travail est constatée à partir du corpus fourni, et les peines ainsi que les circonstances aggravantes citées sont étayées par les sources 1 et 3."
+    }
+  },
+  "failureStage": "generation"
+}

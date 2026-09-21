@@ -1,0 +1,87 @@
+{
+  "questionId": "q258",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un établissement de crédit peut offrir des opérations de banque à des personnes physiques résidant en France uniquement si :\n\n- son siège social est situé dans un État figurant sur la liste des États bénéficiaires de l’aide publique au développement établie par le Comité d’aide au développement de l’OCDE ;\n- cet État n’est pas partie à l’accord sur l’Espace économique européen ;\n- il a obtenu l’autorisation préalable de l’Autorité de contrôle prudentiel et de résolution ;\n- il respecte les conditions prévues par le chapitre concerné.\n\nCes conditions résultent de l’article L318-1 du Code monétaire et financier [Source 1]. Le contexte fourni ne précise pas les conditions détaillées de ce chapitre.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L318-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 182.62283699959517,
+      "vectorSearchMs": 697.4709299998358,
+      "jinaRerankingMs": 581.1010659998283,
+      "mappingMs": 0.11614499986171722,
+      "totalMs": 1461.356727999635,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017544000409543514,
+      "contextBuilderMs": 0.013536999933421612,
+      "generationMs": 1914.6495729992166,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3376.0550039997324
+    },
+    "judge": {
+      "questionId": "q258",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement toutes les conditions de l’article L318-1 : siège dans un État figurant sur la liste CAD-OCDE des bénéficiaires de l’APD, État non partie à l’EEE, autorisation préalable de l’ACPR et respect des conditions du chapitre. Ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article L318-1 du Code monétaire et financier, est directement pertinente. Elle énonce expressément le critère relatif à la liste CAD-OCDE des États bénéficiaires de l’APD, l’exclusion des États parties à l’EEE, l’autorisation préalable de l’ACPR et le renvoi aux conditions du chapitre. Elle couvre donc toutes les affirmations importantes de la réponse générée, y compris l’absence de détail sur ces conditions de chapitre."
+    }
+  },
+  "routing": {
+    "answer": "Un établissement de crédit peut offrir des opérations de banque à des personnes physiques résidant en France uniquement si :\n\n- son siège social est situé dans un État figurant sur la liste des États bénéficiaires de l’aide publique au développement établie par le Comité d’aide au développement de l’OCDE ;\n- cet État n’est pas partie à l’accord sur l’Espace économique européen ;\n- il obtient l’autorisation préalable de l’Autorité de contrôle prudentiel et de résolution ;\n- il respecte les conditions fixées par le chapitre concerné.\n\n**Article L318-1 du Code monétaire et financier [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L318-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1593.0735670002177,
+      "routingCalls": 1,
+      "embeddingMs": 395.6164879994467,
+      "vectorSearchMs": 267.8988439999521,
+      "jinaRerankingMs": 592.4276399994269,
+      "mappingMs": 0.027854999527335167,
+      "totalMs": 2849.074346999638,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01080000028014183,
+      "contextBuilderMs": 0.048555999994277954,
+      "generationMs": 1920.3792759999633,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4769.524441000074
+    },
+    "judge": {
+      "questionId": "q258",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions de l’article L318-1 : siège dans un État figurant sur la liste OCDE des bénéficiaires de l’APD, État non partie à l’EEE, autorisation préalable de l’ACPR et respect des conditions du chapitre. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L318-1 du Code monétaire et financier, directement applicable à la situation visée. Elle énonce explicitement le siège dans un État de la liste OCDE des bénéficiaires de l’APD, l’exclusion des États parties à l’EEE, l’autorisation préalable de l’ACPR et le respect des conditions du chapitre. Elle couvre donc l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

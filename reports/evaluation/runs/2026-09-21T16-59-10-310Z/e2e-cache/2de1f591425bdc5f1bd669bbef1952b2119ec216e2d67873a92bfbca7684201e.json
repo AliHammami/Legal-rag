@@ -1,0 +1,91 @@
+{
+  "questionId": "q179",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L221-1 du Code de commerce**, les créanciers d’une société en nom collectif doivent respecter une condition préalable avant de poursuivre un associé :\n\n- ils doivent **mettre en demeure la société** de payer la dette ;\n- cette mise en demeure doit être faite **par acte extrajudiciaire** ;\n- la mise en demeure doit être restée **vaine**.\n\nCe n’est qu’après l’accomplissement infructueux de cette démarche qu’ils peuvent poursuivre l’associé en nom collectif, lequel répond **indéfiniment et solidairement** des dettes sociales. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1858"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 249.83880700031295,
+      "vectorSearchMs": 617.3924589999951,
+      "jinaRerankingMs": 543.0598519998603,
+      "mappingMs": 0.029126000124961138,
+      "totalMs": 1410.3508179998025,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014429000206291676,
+      "contextBuilderMs": 0.02330600004643202,
+      "generationMs": 2531.7694020001218,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3942.1682469998486
+    },
+    "judge": {
+      "questionId": "q179",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la condition posée par l’article L221-1 : mise en demeure préalable et vaine de la société, par acte extrajudiciaire, avant toute poursuite contre l’associé. Elle mentionne aussi correctement la responsabilité indéfinie et solidaire des associés. Toutes ces affirmations sont explicitement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L221-1 et vise précisément les conditions de poursuite d’un associé de SNC : mise en demeure préalable, vaine, de la société par acte extrajudiciaire. Elle couvre également l’affirmation sur la responsabilité indéfinie et solidaire des associés. La source 2 est moins spécifique mais cohérente ; la source 1 suffit à couvrir toutes les affirmations importantes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L221-1 du Code de commerce, les créanciers doivent respecter une étape préalable avant de poursuivre un associé en nom collectif :\n\n1. **Mettre la société en demeure de payer**, par **acte extrajudiciaire** ;\n2. **Attendre que cette mise en demeure reste infructueuse** ;\n3. Ce n’est qu’ensuite qu’ils peuvent **poursuivre l’associé** en paiement des dettes sociales.\n\nL’associé en nom collectif est toutefois tenu **indéfiniment et solidairement** des dettes sociales. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1437.9119970002212,
+      "routingCalls": 1,
+      "embeddingMs": 220.63426099997014,
+      "vectorSearchMs": 234.59276100015268,
+      "jinaRerankingMs": 563.8232769998722,
+      "mappingMs": 0.05117500014603138,
+      "totalMs": 2457.0814660000615,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015370999928563833,
+      "contextBuilderMs": 0.011993000283837318,
+      "generationMs": 2046.774991999846,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4503.892949000001
+    },
+    "judge": {
+      "questionId": "q179",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement la condition préalable posée par l’article L221-1 : mise en demeure de la société par acte extrajudiciaire, demeurée vaine, avant toute poursuite contre un associé. Elle mentionne aussi correctement la responsabilité indéfinie et solidaire des associés. Toutes les affirmations importantes sont expressément supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L221-1 pertinent. Elle établit expressément la nécessité d’une mise en demeure préalable de la société par acte extrajudiciaire, restée vaine, avant toute poursuite contre un associé, ainsi que la responsabilité indéfinie et solidaire des associés. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

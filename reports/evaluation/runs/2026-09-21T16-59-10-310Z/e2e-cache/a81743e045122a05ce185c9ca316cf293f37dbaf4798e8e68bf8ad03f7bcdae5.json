@@ -1,0 +1,90 @@
+{
+  "questionId": "q483",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas d’exposer les règles générales applicables aux travaux dans les parties communes d’une copropriété.\n\nElles établissent toutefois les règles particulières suivantes :\n\n- **Exhaussement d’un mur mitoyen** : tout copropriétaire peut exhausser le mur. Il doit alors supporter seul :\n  - le coût de l’exhaussement ;\n  - les réparations d’entretien au-dessus de la hauteur de la clôture commune ;\n  - les frais d’entretien de la partie commune du mur rendus nécessaires par l’exhaussement ;\n  - le remboursement au voisin des dépenses que cet exhaussement lui impose.  \n  **Article 658 du Code civil [Source 1].**\n\n- **Opérations de restauration immobilière** : des travaux de remise en état, de conservation, de modernisation ou de démolition entraînant une modification des conditions d’habitabilité peuvent être décidés et exécutés dans le respect de la réglementation locale, soit par les autorités publiques compétentes, soit à l’initiative d’un ou plusieurs propriétaires, éventuellement regroupés en association syndicale. Une autorisation spécifique des autorités territoriales est alors prévue.  \n  **Article L. 941-14 du Code de commerce [Source 3].**\n\nL’**article 1844 du Code civil** concerne, quant à lui, la participation des associés aux décisions collectives et la représentation des copropriétaires d’une part sociale indivise ; il ne fixe pas les règles relatives aux travaux dans les parties communes d’un immeuble. **[Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "658"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1844"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L941-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.73548099957407,
+      "vectorSearchMs": 679.21944199875,
+      "jinaRerankingMs": 554.2990990001708,
+      "mappingMs": 0.02085600048303604,
+      "totalMs": 1444.2968530002981,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010990001261234283,
+      "contextBuilderMs": 0.019972000271081924,
+      "generationMs": 3260.4973900001496,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4704.836895998567
+    },
+    "judge": {
+      "questionId": "q483",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît correctement que le contexte ne permet pas de présenter les règles générales de copropriété applicables aux travaux dans les parties communes. Les précisions ajoutées sont fidèles aux extraits fournis, mais elles sont marginales ou peu pertinentes pour la question générale : l’article 658 concerne un mur mitoyen, et l’extrait relatif à la restauration immobilière ne constitue pas le régime usuel des décisions de copropriété sur les parties communes."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne fournissent pas le régime général de la copropriété des immeubles bâtis ni les règles de décision pour les travaux en parties communes, ce qui justifie l’abstention sur la question générale. La source 1 est directement pertinente pour le cas particulier d’un mur mitoyen et couvre les obligations énoncées. La source 3 couvre les opérations de restauration immobilière décrites, même si ce régime est périphérique à la copropriété. La source 2 couvre l’affirmation selon laquelle l’article 1844 traite des décisions collectives d’associés et de parts sociales indivises, non des travaux de copropriété. Ainsi, les affirmations effectivement formulées sont couvertes, mais la pertinence globale pour répondre directement à la question reste limitée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 922.8506930004805,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 922.8515780009329,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 922.8601730000228
+    },
+    "judge": {
+      "questionId": "q483",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question relève du droit de la copropriété, hors du périmètre annoncé du Code pénal. La réponse s'abstient explicitement et indique qu'aucun corpus pertinent ne permet une réponse fiable."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, ce qui est cohérent avec une abstention : le contexte vide permet de constater qu'aucun corpus ou fondement juridique disponible ne permet de répondre. Les constats de la réponse sur l'absence de contexte et de recherche sont ainsi entièrement supportés par les éléments fournis."
+    }
+  },
+  "failureStage": "none"
+}

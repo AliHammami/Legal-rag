@@ -1,0 +1,87 @@
+{
+  "questionId": "q270",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L426-1 du Code monétaire et financier, la détention, le transport et le commerce de l’or sont **libres sur le territoire français**. Aucune condition particulière n’est mentionnée dans l’extrait fourni. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L426-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 205.45416600070894,
+      "vectorSearchMs": 553.4949190001935,
+      "jinaRerankingMs": 528.5253069996834,
+      "mappingMs": 0.028578000143170357,
+      "totalMs": 1287.5554960006848,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016490000300109386,
+      "contextBuilderMs": 0.011746000498533249,
+      "generationMs": 1370.8158470001072,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2658.4136189995334
+    },
+    "judge": {
+      "questionId": "q270",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement la règle énoncée par l'article L426-1 : ces activités sont libres sur le territoire français. Elle est complète pour la question posée et intégralement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L426-1 cité et répond exactement à la question : elle énonce que la détention, le transport et le commerce de l'or sont libres sur le territoire français. Elle couvre l'ensemble des affirmations importantes de la réponse générée, y compris l'absence de condition particulière dans l'extrait."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas l’article **L426-1** et ne permet donc pas de déterminer les conditions spécifiques de la détention, du transport et du commerce de l’or.\n\nLa seule disposition fournie, **l’article L831-1 du Code de commerce**, indique que la fabrication, la détention et le commerce des ouvrages en or, argent ou platine sur le territoire national sont réalisés dans les conditions prévues par le titre concerné, y compris lorsqu’ils sont destinés à quitter le territoire national [Source 1]. Elle ne précise pas les règles applicables au transport.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L831-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5437.186431000009,
+      "routingCalls": 1,
+      "embeddingMs": 170.20046299975365,
+      "vectorSearchMs": 224.37427099980414,
+      "jinaRerankingMs": 517.0262329997495,
+      "mappingMs": 0.108924999833107,
+      "totalMs": 6348.931489000097,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017057999968528748,
+      "contextBuilderMs": 0.017779000103473663,
+      "generationMs": 2252.7277650004253,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8601.70706300065
+    },
+    "judge": {
+      "questionId": "q270",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question et n'énonce pas la règle attendue selon laquelle la détention, le transport et le commerce de l'or sont libres. Elle s'abstient alors qu'une réponse était attendue. En revanche, ses affirmations sur l'absence de l'article L426-1 dans le contexte et sur le contenu de l'article L831-1 fourni sont fidèles au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L831-1 est partiellement pertinente puisqu’elle concerne la détention et le commerce d’ouvrages en métaux précieux, dont l’or. Elle ne porte toutefois pas sur l’article L426-1 demandé, ne couvre pas la règle applicable au transport et ne permet pas d’établir les conditions générales recherchées. En revanche, elle couvre les constats de la réponse générée sur son propre contenu, notamment l’encadrement de la fabrication, détention et du commerce ainsi que l’absence de précision relative au transport."
+    }
+  },
+  "failureStage": "generation"
+}

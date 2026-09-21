@@ -1,0 +1,111 @@
+{
+  "questionId": "q406",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Engagements de l’employeur concernant les écarts de rémunération\n\n- L’employeur doit prendre en compte un **objectif de suppression des écarts de rémunération entre les femmes et les hommes** — **Article L1142-7 du Code du travail** [Source 1].\n- Dans le cadre d’un contrat pour la mixité des emplois et l’égalité professionnelle, ses engagements doivent contribuer **de manière significative** à l’égalité professionnelle ou au développement de la mixité des emplois. Ils peuvent notamment porter sur la sensibilisation, l’embauche, la formation, la promotion et l’amélioration des conditions de travail — **Article D1143-10 du Code du travail** [Source 3].\n- Au niveau de la branche, lorsqu’un écart moyen de rémunération est constaté, sa réduction doit constituer une **priorité**. Les critères d’évaluation des postes doivent également être examinés afin de corriger ceux qui pourraient entraîner des discriminations — **Article L2241-15 du Code du travail** [Source 2].\n\n### Transfert des droits individuels dans les plans d’épargne retraite\n\nLes droits individuels en cours de constitution peuvent être transférés vers **tout autre plan d’épargne retraite**. Ce transfert ne modifie pas les conditions applicables à leur rachat ou à leur liquidation — **Article L224-6 du Code monétaire et financier** [Source 4].\n\nLes frais de transfert :\n\n- ne peuvent pas dépasser **1 % des droits acquis** ;\n- sont **nuls** lorsque cinq ans se sont écoulés depuis le premier versement dans le plan ;\n- sont également nuls lorsque le transfert intervient à compter de l’échéance mentionnée à l’article L. 224-1 du même code.\n\nPour un plan d’épargne retraite d’entreprise obligatoire, le transfert n’est possible que lorsque le titulaire n’est plus tenu d’y adhérer. Enfin, les plans doivent prévoir les conditions permettant à l’entreprise ou à l’association souscriptrice de changer de gestionnaire, avec un préavis maximal de six mois [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2241-15"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D1143-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.3313580006361,
+      "vectorSearchMs": 664.4281140007079,
+      "jinaRerankingMs": 571.288327999413,
+      "mappingMs": 0.020715000107884407,
+      "totalMs": 1467.0907579995692,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010079000145196915,
+      "contextBuilderMs": 0.021903999149799347,
+      "generationMs": 3445.7935090009123,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4912.926221998408
+    },
+    "judge": {
+      "questionId": "q406",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond précisément aux deux volets. Elle reprend correctement l’objectif imposé à l’employeur, détaille à juste titre les engagements relevant du contrat pour la mixité et les règles de branche présentes dans le contexte. Elle expose fidèlement la transférabilité des droits, l’absence de modification des conditions de rachat ou liquidation, le plafond et la gratuité des frais, la restriction applicable aux adhésions obligatoires et les règles sur le changement de gestionnaire. Toutes les affirmations importantes sont explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les quatre sources sont directement pertinentes : elles traitent de l'objectif de suppression des écarts de rémunération, des engagements de mixité et d'égalité professionnelle, des priorités de branche, ainsi que de l'ensemble des règles de transfert des droits en cours de constitution dans un plan d'épargne retraite. Elles couvrent toutes les affirmations importantes de la réponse, y compris le plafond et la gratuité des frais, la condition relative aux régimes obligatoires et le préavis de changement de gestionnaire."
+    }
+  },
+  "routing": {
+    "answer": "### Engagements de l’employeur\n\n- L’employeur doit prendre en compte un **objectif de suppression des écarts de rémunération entre les femmes et les hommes** — Article L1142-7 du Code du travail [Source 1].\n- Dans le cadre d’un contrat pour la mixité des emplois et l’égalité professionnelle, ses engagements doivent contribuer significativement à l’égalité professionnelle ou à la mixité des emplois. Ils peuvent notamment porter sur la **sensibilisation, l’embauche, la formation, la promotion et l’amélioration des conditions de travail** — Article D1143-10 du Code du travail [Source 3].\n- Lorsqu’un écart moyen de rémunération est constaté au niveau de la branche, sa réduction doit être traitée comme une priorité par les organisations concernées — Article L2241-15 du Code du travail [Source 2].\n\n### Transfert des droits individuels d’épargne retraite\n\nLes droits individuels en cours de constitution peuvent être transférés vers **tout autre plan d’épargne retraite**, sans modification des conditions de rachat ou de liquidation applicables [Source 4].\n\nLes frais de transfert :\n\n- ne peuvent pas dépasser **1 % des droits acquis** ;\n- sont **nuls après cinq ans** à compter du premier versement dans le plan, ou lorsque le transfert intervient à compter de l’échéance prévue à l’article L. 224-1 du Code monétaire et financier [Source 4].\n\nPour un plan d’épargne retraite d’entreprise auquel le salarié adhère obligatoirement, le transfert n’est possible que lorsque le titulaire **n’est plus tenu d’y adhérer** [Source 4]. Le contexte ne précise pas les modalités pratiques de la demande de transfert.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2241-15"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D1143-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1429.3645190000534,
+      "routingCalls": 1,
+      "embeddingMs": 229.0658400002867,
+      "vectorSearchMs": 601.1760489996523,
+      "jinaRerankingMs": 602.9956179987639,
+      "mappingMs": 0.04636500030755997,
+      "totalMs": 2862.679206999019,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05866900086402893,
+      "contextBuilderMs": 0.04538100026547909,
+      "generationMs": 3483.488337000832,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6346.286834999919
+    },
+    "judge": {
+      "questionId": "q406",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond correctement aux deux volets : elle énonce l’objectif de suppression des écarts de rémunération et décrit la transférabilité des droits, le maintien des conditions de rachat ou liquidation, le plafond de frais de 1 %, leur gratuité après cinq ans ou à l’échéance pertinente, ainsi que la restriction pour les régimes obligatoires. Toutes ces affirmations sont explicitement étayées par le contexte. Elle omet seulement la modalité particulière relative à la possible réduction de la valeur de transfert dans certains contrats d’assurance de groupe, ce qui justifie une légère réserve de complétude."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les deux volets de la question : l'article L1142-7 établit l'objectif imposé à l'employeur, les articles L2241-15 et D1143-10 apportent un contexte complémentaire exact sur l'égalité professionnelle et la réduction des écarts, et l'article L224-6 couvre précisément le transfert des droits d'épargne retraite. Toutes les affirmations importantes de la réponse générée sont explicitement soutenues : objectif de suppression des écarts, engagements possibles dans le contrat pour la mixité, priorité de branche, transférabilité, maintien des conditions de rachat ou liquidation, plafonnement et exonération des frais, et restriction applicable aux plans obligatoires. La mention selon laquelle le contexte ne précise pas les modalités pratiques est compatible avec le contenu fourni."
+    }
+  },
+  "failureStage": "none"
+}

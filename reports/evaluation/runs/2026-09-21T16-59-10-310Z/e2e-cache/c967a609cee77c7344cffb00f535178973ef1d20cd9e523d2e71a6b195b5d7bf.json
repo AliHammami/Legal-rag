@@ -1,0 +1,107 @@
+{
+  "questionId": "q455",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "En cas de **rupture brutale, même partielle, d’une relation commerciale établie**, l’auteur de la rupture engage sa responsabilité et doit réparer le préjudice causé s’il n’a pas accordé un **préavis écrit suffisant**. La durée du préavis doit notamment tenir compte :\n\n- de la durée de la relation commerciale ;\n- des usages du commerce ;\n- des accords interprofessionnels applicables ;\n- des conditions économiques du marché pour déterminer le prix applicable pendant le préavis.\n\n**Article L442-1, II du Code de commerce [Source 5].**\n\nEn cas de litige, la responsabilité ne peut pas être engagée pour insuffisance du préavis lorsque l’auteur a respecté un préavis de **dix-huit mois**. La rupture sans préavis reste toutefois possible en cas d’inexécution des obligations de l’autre partie ou de force majeure. **Article L442-1, II du Code de commerce [Source 5].**\n\nPar ailleurs, lorsqu’il s’agit d’un **agent commercial**, celui-ci a droit, à la cessation de ses relations avec le mandant, à une indemnité compensatrice réparant son préjudice. Il doit notifier au mandant son intention de faire valoir ses droits dans l’année suivant la cessation du contrat, faute de quoi il perd ce droit. **Article L134-12 du Code de commerce [Source 2].**\n\nLe contexte fourni ne permet pas de déterminer le montant concret de la réparation, qui dépendrait notamment du préjudice subi et de la durée du préavis qui aurait dû être accordée.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L8223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L134-12"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7112-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3153-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.4315310008824,
+      "vectorSearchMs": 719.2965629994869,
+      "jinaRerankingMs": 588.7670139987022,
+      "mappingMs": 0.040077999234199524,
+      "totalMs": 1511.5620559994131,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01163800060749054,
+      "contextBuilderMs": 0.024081001058220863,
+      "generationMs": 3306.3483140002936,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4817.960271000862
+    },
+    "judge": {
+      "questionId": "q455",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement le régime de la rupture brutale d'une relation commerciale établie (préavis écrit, critères, réparation, plafond de sécurité de dix-huit mois et exceptions), tous explicitement prévus par la source 5. Elle mentionne aussi à juste titre le régime particulier de l'agent commercial et son délai de notification d'un an, fondés sur la source 2. Toutefois, l'abstention était attendue : la réponse apporte une réponse de fond au lieu de signaler que la question relève du Code de commerce et non du périmètre attendu du corpus pénal."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 est directement pertinente pour le régime de la rupture brutale d’une relation commerciale établie : responsabilité, réparation du préjudice, préavis écrit, critères de sa durée et de son prix, seuil de dix-huit mois et exceptions. La source 2 est directement pertinente pour le cas particulier de l’agent commercial et couvre l’indemnité compensatrice ainsi que le délai de notification d’un an. Les principales affirmations de la réponse sont explicitement soutenues par ces deux sources. L’absence de chiffrage concret du préjudice est cohérente avec les sources, qui prévoient la réparation sans en fixer le montant."
+    }
+  },
+  "routing": {
+    "answer": "En cas de **rupture brutale, même partielle, d’une relation commerciale établie**, la personne qui subit la rupture peut demander la **réparation du préjudice** si aucun préavis écrit suffisant n’a été accordé. Le préavis doit notamment tenir compte :\n\n- de la durée de la relation commerciale ;\n- des usages du commerce ou accords interprofessionnels ;\n- des conditions économiques du marché concerné.\n\nCette règle concerne les activités de production, de distribution ou de services. **Article L442-1, II du Code de commerce [Source 1].**\n\nEn cas de litige sur la durée du préavis, la responsabilité ne peut pas être engagée pour insuffisance lorsque l’auteur de la rupture a respecté un **préavis de dix-huit mois**. [Source 1]\n\nUne réduction substantielle des volumes de commandes peut également engager la responsabilité de son auteur lorsqu’elle compromet, par son ampleur, son caractère inhabituel ou ses conditions, l’équilibre de la relation commerciale établie, même si elle est temporaire. [Source 1]\n\nEn revanche, une rupture sans préavis reste possible en cas :\n\n- d’inexécution des obligations de l’autre partie ;\n- de force majeure. [Source 1]\n\nSi la relation concerne un **agent commercial**, celui-ci a droit, lors de la cessation de ses relations avec le mandant, à une **indemnité compensatrice du préjudice subi**. Il doit toutefois notifier au mandant, dans l’année suivant la cessation du contrat, qu’il entend faire valoir ses droits ; à défaut, il perd son droit à réparation. **Article L134-12 du Code de commerce [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L134-12"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1554.6740530002862,
+      "routingCalls": 1,
+      "embeddingMs": 240.62230199947953,
+      "vectorSearchMs": 236.11395099945366,
+      "jinaRerankingMs": 713.000732999295,
+      "mappingMs": 0.047498999163508415,
+      "totalMs": 2744.490380000323,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01785000041127205,
+      "contextBuilderMs": 0.029612001031637192,
+      "generationMs": 3188.8295109998435,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5933.383176999167
+    },
+    "judge": {
+      "questionId": "q455",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement le régime de la rupture brutale d’une relation commerciale établie : réparation du préjudice, exigence et critères du préavis écrit, plafond de sécurité de dix-huit mois, réduction substantielle des commandes, exceptions d’inexécution et de force majeure, ainsi que le régime particulier de l’agent commercial. Toutes ces affirmations sont directement étayées par le contexte fourni. Toutefois, l’abstention était attendue et la réponse apporte une réponse de fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les régimes juridiques invoqués dans la réponse : l’article L442-1, II couvre la rupture brutale d’une relation commerciale établie, le préavis, le seuil de dix-huit mois, la réduction des commandes et les exceptions ; l’article L134-12 couvre l’indemnité et le délai de notification de l’agent commercial. Toutes les affirmations importantes de la réponse sont explicitement étayées par ces extraits."
+    }
+  },
+  "failureStage": "abstention"
+}

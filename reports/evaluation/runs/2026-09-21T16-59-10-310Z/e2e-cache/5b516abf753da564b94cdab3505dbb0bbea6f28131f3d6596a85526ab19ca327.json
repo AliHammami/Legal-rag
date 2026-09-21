@@ -1,0 +1,98 @@
+{
+  "questionId": "q434",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La peine encourue ne peut pas être déterminée sans connaître l’infraction concernée.\n\nSelon la qualification :\n\n- **Vol** : 3 ans d’emprisonnement et **45 000 € d’amende** — Article 311-3 du Code pénal [Source 1].\n- **Violation de l’article L. 221-10-1** : 1 an d’emprisonnement et **150 000 € d’amende** — Article L. 242-7-1 du Code de la consommation [Source 2].\n- **Dégradation ou détérioration aggravée visée par l’article 322-3** :  \n  - 5 ans d’emprisonnement et **75 000 € d’amende** pour l’infraction définie au I de l’article 322-1 ;  \n  - **15 000 € d’amende** et une peine de travail d’intérêt général pour celle définie au II — Article 322-3 du Code pénal [Source 3].\n- **Violation de l’article L. 413-2** : 1 an d’emprisonnement et **150 000 € d’amende** — Article L. 451-3 du Code de la consommation [Source 4].\n- **Violation de l’article L. 433-2** : 2 ans d’emprisonnement et **300 000 € d’amende** — Article L. 453-7 du Code de la consommation [Source 5].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L453-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 1018.3396090008318,
+      "vectorSearchMs": 662.1051019988954,
+      "jinaRerankingMs": 498.54789999872446,
+      "mappingMs": 0.025985000655055046,
+      "totalMs": 2179.047336000949,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013442998751997948,
+      "contextBuilderMs": 0.030547000467777252,
+      "generationMs": 2928.6777400001884,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5107.783075999469
+    },
+    "judge": {
+      "questionId": "q434",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse indique correctement qu’il est impossible de déterminer une peine sans identifier l’infraction. Les peines ensuite citées sont factuellement conformes aux extraits de contexte et explicitement conditionnées à des qualifications précises. Toutefois, alors qu’une abstention était attendue face à une question dépourvue de qualification, elle fournit plusieurs réponses hypothétiques plutôt que de s’en tenir à l’impossibilité de répondre de façon fiable."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont juridiquement pertinentes pour les hypothèses de qualifications effectivement énumérées, mais elles ne sont pas ciblées sur la question indéterminée et ne permettent pas, à elles seules, d’identifier l’infraction concernée ni de justifier une réponse déterminée. En revanche, elles couvrent les affirmations concrètes de la réponse : chacune des peines citées correspond au contenu de la source associée, y compris les deux niveaux de sanction mentionnés pour l’article 322-3."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 920.0958740003407,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 920.0967500004917,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 920.1053199991584
+    },
+    "judge": {
+      "questionId": "q434",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et indique que le contexte vide ne permet pas de déterminer une peine. Cela correspond à l'abstention attendue et n'avance aucune information juridique non fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une question volontairement trop ambiguë et une abstention attendue. La réponse se limite à constater l’absence de contexte ou de corpus permettant de déterminer une peine et ne formule aucune affirmation juridique nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

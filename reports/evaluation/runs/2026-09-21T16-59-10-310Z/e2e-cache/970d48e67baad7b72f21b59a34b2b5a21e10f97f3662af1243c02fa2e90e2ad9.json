@@ -1,0 +1,87 @@
+{
+  "questionId": "q103",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1832 du Code civil, une société est instituée :\n\n- en principe, par deux ou plusieurs personnes qui concluent un contrat afin d’affecter des biens ou leur industrie à une entreprise commune, dans le but de partager les bénéfices ou de profiter des économies réalisées ;\n- exceptionnellement, par la volonté d’une seule personne lorsque la loi le prévoit.\n\nLes associés s’engagent à contribuer aux pertes. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 370.6230659999419,
+      "vectorSearchMs": 617.9408180001192,
+      "jinaRerankingMs": 581.3973870000336,
+      "mappingMs": 0.032032999908551574,
+      "totalMs": 1570.0278039998375,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010748999891802669,
+      "contextBuilderMs": 0.011418000096455216,
+      "generationMs": 1526.1914150000084,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3096.2549410001375
+    },
+    "judge": {
+      "questionId": "q103",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les trois éléments de l’article 1832 : institution par contrat entre deux ou plusieurs personnes avec affectation de biens ou industrie à une entreprise commune, possibilité d’une société unipersonnelle dans les cas prévus par la loi, et engagement des associés à contribuer aux pertes. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1832 du Code civil, qui répond exactement aux deux volets de la question : modalités d’institution de la société (contrat entre deux ou plusieurs personnes ou acte de volonté d’une seule personne dans les cas légaux) et engagement des associés à contribuer aux pertes. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1832 du Code civil, une société est instituée :\n\n- en principe, par **deux ou plusieurs personnes** qui concluent un contrat ;\n- ces personnes affectent à une entreprise commune des biens ou leur industrie afin de partager les bénéfices ou de profiter des économies réalisées ;\n- dans les cas prévus par la loi, elle peut être instituée par **la volonté d’une seule personne**.\n\nLes associés **s’engagent à contribuer aux pertes** de la société, conformément à l’article 1832 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1843.9734159999061,
+      "routingCalls": 1,
+      "embeddingMs": 186.43831399991177,
+      "vectorSearchMs": 71.81326300022192,
+      "jinaRerankingMs": 509.69828199991025,
+      "mappingMs": 0.033125000074505806,
+      "totalMs": 2611.980462000007,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010761999990791082,
+      "contextBuilderMs": 0.010387999936938286,
+      "generationMs": 1793.1113289999776,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4405.125977999996
+    },
+    "judge": {
+      "questionId": "q103",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les trois éléments de l’article 1832 fourni : constitution par contrat entre deux ou plusieurs personnes avec affectation de biens ou industrie à une entreprise commune, possibilité d’une société unipersonnelle dans les cas prévus par la loi, et engagement des associés à contribuer aux pertes. Elle répond directement à la question et toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1832 du Code civil, qui répond intégralement à la question : modalités d’institution de la société, y compris l’hypothèse unipersonnelle prévue par la loi, objet de l’affectation à l’entreprise commune, et engagement des associés à contribuer aux pertes. Toutes les affirmations importantes de la réponse générée y sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q285",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L121-1 du Code monétaire et financier, les pièces métalliques de fabrication étrangère ne peuvent pas être admises dans les caisses publiques pour le paiement de droits et contributions payables en numéraire, sauf celles ayant cours légal en France. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L121-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 186.97878199908882,
+      "vectorSearchMs": 601.991165000014,
+      "jinaRerankingMs": 587.74123499915,
+      "mappingMs": 0.061304000206291676,
+      "totalMs": 1376.803952999413,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019674000330269337,
+      "contextBuilderMs": 0.017388000153005123,
+      "generationMs": 1184.133382000029,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2560.986558000557
+    },
+    "judge": {
+      "questionId": "q285",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement la règle et son exception : les pièces métalliques étrangères sont exclues des caisses publiques pour le paiement en numéraire des droits et contributions, sauf celles ayant cours légal en France. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L121-1 pertinent et énonce explicitement la règle, son exception pour les pièces ayant cours légal en France, ainsi que son champ d'application aux droits et contributions payables en numéraire. Elle couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L121-1 du Code monétaire et financier, les pièces métalliques de fabrication étrangère ne peuvent pas être admises dans les caisses publiques pour le paiement de droits ou de contributions payables en numéraire, sauf celles ayant cours légal en France. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L121-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1399.8768309997395,
+      "routingCalls": 1,
+      "embeddingMs": 196.48131499998271,
+      "vectorSearchMs": 126.71388299949467,
+      "jinaRerankingMs": 578.0246350001544,
+      "mappingMs": 0.03548899944871664,
+      "totalMs": 2301.1619520001113,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0154249994084239,
+      "contextBuilderMs": 0.01134399976581335,
+      "generationMs": 1762.1692330008373,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4063.371995999478
+    },
+    "judge": {
+      "questionId": "q285",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement l'article L121-1 : elle énonce l'interdiction d'admettre les pièces métalliques étrangères dans les caisses publiques pour le paiement de droits ou contributions payables en numéraire, avec l'exception des pièces ayant cours légal en France. Tous ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L121-1 et est parfaitement ciblée. Elle couvre l’interdiction d’admettre les pièces métalliques étrangères dans les caisses publiques, son application aux droits et contributions payables en numéraire, ainsi que l’exception pour les pièces ayant cours légal en France."
+    }
+  },
+  "failureStage": "none"
+}

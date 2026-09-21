@@ -1,0 +1,90 @@
+{
+  "questionId": "q490",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions générales de délivrance d’un permis de conduire : elles ne précisent notamment ni les conditions d’âge, ni les modalités d’examen, ni les conditions médicales ou administratives.\n\nElles concernent uniquement l’éligibilité au **compte personnel de formation (CPF)** pour financer une préparation au permis. Cette prise en charge est soumise aux conditions suivantes :\n\n- l’obtention du permis doit contribuer à un projet professionnel ou à la sécurisation du parcours professionnel du titulaire ;\n- le titulaire ne doit faire l’objet ni d’une suspension de permis ni d’une interdiction de solliciter un permis ;\n- pour certains permis du groupe léger, hors permis BE, le titulaire ne doit pas déjà posséder un permis de conduire en cours de validité en France ;\n- la formation doit être dispensée par un établissement agréé, ayant effectué la déclaration requise et détenant la certification exigée — **Article D6323-8 du Code du travail [Source 1]** ;\n- ces conditions sont vérifiées au moyen d’une attestation sur l’honneur, et la Caisse des dépôts contrôle notamment l’existence, la catégorie et la validité du permis — **Article D6323-8 du Code du travail [Source 3]**.\n\nAinsi, le contexte ne fournit pas les conditions juridiques complètes de délivrance du permis lui-même.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6323-8"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R712-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D6323-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.3306409999932,
+      "vectorSearchMs": 1048.3560750000033,
+      "jinaRerankingMs": 584.9911260000081,
+      "mappingMs": 0.0376959999994142,
+      "totalMs": 1849.7588700000051,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.024309000000357628,
+      "contextBuilderMs": 0.1784299999999348,
+      "generationMs": 3570.8694749999995,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5420.872997999992
+    },
+    "judge": {
+      "questionId": "q490",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique clairement que le contexte ne permet pas de répondre aux conditions générales de délivrance du permis, ce qui constitue l’abstention attendue. Les précisions apportées sont correctement limitées aux conditions d’éligibilité au CPF et sont toutes étayées par les sources D6323-8 fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources D6323-8 portent directement sur l’éligibilité au CPF pour financer la préparation au permis, et non sur les conditions générales de délivrance du permis. Elles sont donc pertinentes pour justifier l’abstention et la limitation du périmètre de la réponse. Elles couvrent les conditions CPF énumérées (projet professionnel, absence de suspension/interdiction, absence de permis valide dans certains cas, obligations de l’établissement) ainsi que les modalités de vérification par attestation et contrôle de la Caisse des dépôts."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 920.8772590000008,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 920.8797579999955,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 920.9034709999978
+    },
+    "judge": {
+      "questionId": "q490",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question porte sur les conditions de délivrance du permis de conduire, hors du périmètre documenté. La réponse s'abstient explicitement et indique correctement qu'aucune réponse fiable ne peut être fournie à partir du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, ce qui est cohérent avec une abstention : l'absence de corpus permet de constater que le contexte disponible ne permet pas de répondre de manière fondée. Les constats essentiels de la réponse générée portent précisément sur cette absence de contexte et de recherche, sans avancer d'affirmation juridique non sourcée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q054",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 462-1 du Code pénal, lorsque l’infraction est initialement punie de **sept ans d’emprisonnement** et constitue un crime ou un délit de guerre, le maximum de la peine est relevé à **dix ans d’emprisonnement**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 237.146241000155,
+      "vectorSearchMs": 583.8859330001287,
+      "jinaRerankingMs": 501.9763939999975,
+      "mappingMs": 0.03290399978868663,
+      "totalMs": 1323.0695049997885,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010431999806314707,
+      "contextBuilderMs": 0.045824999921023846,
+      "generationMs": 1646.5891199999023,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2969.724148000125
+    },
+    "judge": {
+      "questionId": "q054",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que la peine maximale passe de sept à dix ans d’emprisonnement. Cette règle est explicitement prévue au 5° de l’article 462-1 reproduit dans le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 462-1 et son 5°, qui prévoit expressément que le maximum est porté à dix ans d'emprisonnement lorsque l'infraction est punie de sept ans d'emprisonnement et constitue un crime ou délit de guerre. Elle est donc parfaitement pertinente et couvre intégralement l'affirmation de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Lorsqu’une infraction est initialement punie de **sept ans d’emprisonnement**, l’article 462-1 prévoit que sa peine maximale est portée à **dix ans d’emprisonnement** lorsqu’elle constitue un crime ou un délit de guerre.\n\nC’est l’application du **5° de l’article 462-1 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1291.7744950000197,
+      "routingCalls": 1,
+      "embeddingMs": 213.62117399997078,
+      "vectorSearchMs": 28.671454000053927,
+      "jinaRerankingMs": 510.96704800007865,
+      "mappingMs": 0.030732000013813376,
+      "totalMs": 2045.1089360001497,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011058999923989177,
+      "contextBuilderMs": 0.019576000049710274,
+      "generationMs": 1535.4077049999032,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3580.556859999895
+    },
+    "judge": {
+      "questionId": "q054",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement que la peine maximale passe de sept à dix ans d’emprisonnement, conformément au 5° de l’article 462-1 reproduit dans le contexte. Elle répond directement à la question et cite correctement la disposition pertinente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 462-1, 5°, qui prévoit qu'une infraction punie de sept ans d'emprisonnement est portée à dix ans lorsqu'elle constitue un crime ou délit de guerre. Elle couvre intégralement l'affirmation de la réponse, y compris la référence au 5°."
+    }
+  },
+  "failureStage": "none"
+}

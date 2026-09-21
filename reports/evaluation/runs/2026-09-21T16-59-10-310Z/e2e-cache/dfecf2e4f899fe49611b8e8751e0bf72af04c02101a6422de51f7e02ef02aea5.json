@@ -1,0 +1,87 @@
+{
+  "questionId": "q015",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le délaissement d’un mineur de quinze ans est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.\n\nL’exception s’applique lorsque les circonstances du délaissement ont permis d’assurer **la santé et la sécurité du mineur** — Article 227-1 du Code pénal [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 213.74780499999179,
+      "vectorSearchMs": 754.220484999998,
+      "jinaRerankingMs": 519.5461789999972,
+      "mappingMs": 0.04536399996140972,
+      "totalMs": 1487.6042289999896,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02743199997348711,
+      "contextBuilderMs": 0.015369999979157,
+      "generationMs": 1270.0439649999607,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2757.706268000009
+    },
+    "judge": {
+      "questionId": "q015",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue (sept ans d’emprisonnement et 100 000 euros d’amende) ainsi que l’exception tenant aux circonstances ayant permis d’assurer la santé et la sécurité du mineur. Ces éléments sont explicitement supportés par l’article 227-1 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 227-1 du Code pénal, directement applicable au délaissement d’un mineur de quinze ans. Elle énonce explicitement la peine de sept ans d’emprisonnement et 100 000 euros d’amende ainsi que l’exception lorsque les circonstances ont permis d’assurer la santé et la sécurité du mineur. Elle couvre donc l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le délaissement d’un mineur de quinze ans est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**.\n\nL’exception prévue s’applique lorsque les circonstances du délaissement ont permis d’assurer **la santé et la sécurité du mineur**.\n\n**Article 227-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1432.360428999993,
+      "routingCalls": 1,
+      "embeddingMs": 187.98270500003127,
+      "vectorSearchMs": 40.39085999998497,
+      "jinaRerankingMs": 518.3898300000001,
+      "mappingMs": 0.034635999996680766,
+      "totalMs": 2179.201049999974,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.024221999978180975,
+      "contextBuilderMs": 0.018302000011317432,
+      "generationMs": 1300.6343999999808,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3479.9519219999784
+    },
+    "judge": {
+      "questionId": "q015",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue (sept ans d’emprisonnement et 100 000 euros d’amende) ainsi que l’exception tenant aux circonstances ayant permis d’assurer la santé et la sécurité du mineur. Ces éléments sont explicitement contenus dans le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l'article 227-1 du Code pénal, qui répond exactement à la question : elle prévoit la peine de sept ans d'emprisonnement et 100 000 euros d'amende, ainsi que l'exception lorsque les circonstances ont permis d'assurer la santé et la sécurité du mineur. Elle couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

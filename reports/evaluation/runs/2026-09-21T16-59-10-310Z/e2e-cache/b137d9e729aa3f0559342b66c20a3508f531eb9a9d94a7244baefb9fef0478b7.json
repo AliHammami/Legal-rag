@@ -1,0 +1,82 @@
+{
+  "questionId": "q293",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L221-2 du Code de la consommation, sont exclus du champ d’application du chapitre :\n\n1. Les contrats relatifs aux services sociaux, sauf certains services à la personne ;\n2. Les contrats relatifs aux services de santé fournis par des professionnels de santé ;\n3. Les contrats relatifs aux jeux d’argent et de hasard ainsi qu’aux paris ;\n4. Les contrats relatifs aux services financiers ;\n5. Les contrats portant sur un forfait touristique ;\n6. Les contrats d’utilisation de biens à temps partagé, de produits de vacances à long terme, ainsi que les contrats de revente et d’échange correspondants ;\n7. Les contrats rédigés par un officier public ;\n8. Les contrats de fourniture de denrées alimentaires, boissons ou biens ménagers courants livrés physiquement lors de tournées régulières ;\n9. Les contrats relatifs aux services de transport de passagers, sauf les dispositions prévues à l’article L. 221-14 ;\n10. Les contrats conclus au moyen de distributeurs automatiques ou de sites commerciaux automatisés ;\n11. Les contrats conclus avec des opérateurs de télécommunications pour l’utilisation de cabines téléphoniques publiques ou pour une connexion unique par téléphone, internet ou télécopie, notamment les services et produits à valeur ajoutée accessibles par téléphone ou message textuel.\n\n[Article L221-2 du Code de la consommation — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.86006399989128,
+      "vectorSearchMs": 599.538650999777,
+      "jinaRerankingMs": 587.0673899995163,
+      "mappingMs": 0.028313999995589256,
+      "totalMs": 1395.5276939999312,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010990000329911709,
+      "contextBuilderMs": 0.02144400030374527,
+      "generationMs": 2187.9162170002237,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.4864799994975
+    },
+    "judge": {
+      "questionId": "q293",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les onze catégories visibles dans le contexte et les décrit de manière fidèle. Elle omet toutefois les contrats immobiliers, mentionnés dans la réponse de référence comme une exclusion supplémentaire ; le contexte fourni s'arrête cependant au 11°, de sorte que cette omission ne nuit pas à la groundedness. La réponse répond bien à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L221-2 directement visé par la question et énumère les onze catégories d’exclusions reprises dans la réponse générée. Elle couvre également les précisions et exceptions mentionnées, notamment pour les services à la personne, le transport de passagers, les tournées régulières et les télécommunications."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 2355.5887799998745,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 2355.5905510000885,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 2355.5998999997973
+    },
+    "judge": {
+      "questionId": "q293",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question et omet entièrement la liste des catégories de contrats exclues prévue par l'article L221-2. L'absence de contexte justifie qu'elle signale une impossibilité de répondre de façon fondée, mais l'abstention n'était pas attendue et les affirmations selon lesquelles la question serait ambiguë ou hors périmètre ne sont pas établies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. Il n'existe donc aucune source pertinente pour identifier les exclusions prévues à l'article L221-2, ni pour étayer les affirmations d'abstention (question ambiguë, hors périmètre ou absence de corpus fiable)."
+    }
+  },
+  "failureStage": "generation"
+}

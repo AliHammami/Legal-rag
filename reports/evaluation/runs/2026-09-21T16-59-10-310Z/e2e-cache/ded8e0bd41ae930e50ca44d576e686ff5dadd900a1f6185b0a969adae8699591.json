@@ -1,0 +1,103 @@
+{
+  "questionId": "q004",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 221-1 du Code pénal**, le meurtre est **le fait de donner volontairement la mort à autrui**. Il est puni de **trente ans de réclusion criminelle**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.2883850000071,
+      "vectorSearchMs": 933.9547250000032,
+      "jinaRerankingMs": 579.179078000001,
+      "mappingMs": 0.03039300000818912,
+      "totalMs": 1739.5180399999954,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016354000006685965,
+      "contextBuilderMs": 0.025613000005250797,
+      "generationMs": 1138.5700040000083,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2878.1618279999966
+    },
+    "judge": {
+      "questionId": "q004",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition et la peine prévues par l'article 221-1. Ces deux éléments sont explicitement présents dans la source 2 du contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit l'article 221-1 et énonce explicitement la définition du meurtre (« donner volontairement la mort à autrui ») ainsi que la peine de trente ans de réclusion criminelle. Elle couvre intégralement les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 221-1 du Code pénal**, le meurtre est le fait de **donner volontairement la mort à autrui**. Il est puni de **trente ans de réclusion criminelle**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.1544399999984,
+      "routingCalls": 1,
+      "embeddingMs": 242.1119999999937,
+      "vectorSearchMs": 39.59150700000464,
+      "jinaRerankingMs": 549.3616430000111,
+      "mappingMs": 0.03525300000910647,
+      "totalMs": 1957.3088019999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020485000000917353,
+      "contextBuilderMs": 0.024927000005845912,
+      "generationMs": 1221.0454119999922,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3178.424543000001
+    },
+    "judge": {
+      "questionId": "q004",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition du meurtre et la peine prévues à l'article 221-1. Ces deux affirmations sont explicitement étayées par la source 2 du contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 221-1 et énonce explicitement à la fois la définition (« donner volontairement la mort à autrui ») et la peine (« trente ans de réclusion criminelle »). Elle est parfaitement pertinente et couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

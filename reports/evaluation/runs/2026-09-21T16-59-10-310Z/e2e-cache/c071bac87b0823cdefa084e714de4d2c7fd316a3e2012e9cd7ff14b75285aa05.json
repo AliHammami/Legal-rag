@@ -1,0 +1,87 @@
+{
+  "questionId": "q126",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le **conseil de prud’hommes** est seul compétent pour connaître de ces différends, selon l’article **L7215-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 244.0138019998558,
+      "vectorSearchMs": 567.701222000178,
+      "jinaRerankingMs": 515.9947480000556,
+      "mappingMs": 0.03609299985691905,
+      "totalMs": 1327.796793999616,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017626999877393246,
+      "contextBuilderMs": 0.015589999966323376,
+      "generationMs": 1220.955059000291,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2548.801438000053
+    },
+    "judge": {
+      "questionId": "q126",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le conseil de prud’hommes comme juridiction seule compétente. Elle est directement et intégralement étayée par le contexte. Bien qu’elle ne reformule pas explicitement la mention des contrats accessoires, elle répond pleinement à la question telle qu’elle est posée sur la juridiction compétente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 7215-1 et répond précisément à la question en désignant le conseil de prud’hommes comme seul compétent. Elle couvre l’affirmation centrale de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le **conseil de prud’hommes** est seul compétent pour connaître de ces différends, selon l’article **L7215-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7215-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.5414020000026,
+      "routingCalls": 1,
+      "embeddingMs": 213.13639400014654,
+      "vectorSearchMs": 222.75065799988806,
+      "jinaRerankingMs": 532.6622579996474,
+      "mappingMs": 0.025268000084906816,
+      "totalMs": 2299.143343999982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010888000018894672,
+      "contextBuilderMs": 0.010624999646097422,
+      "generationMs": 977.9912169999443,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3277.167700999882
+    },
+    "judge": {
+      "questionId": "q126",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le conseil de prud'hommes comme juridiction seule compétente. Elle est directement soutenue par le contexte. Elle omet toutefois la précision relative aux contrats accessoires et aux employeurs, ce qui constitue une omission mineure."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 7215-1 et répond précisément à la question en désignant le conseil de prud’hommes comme juridiction exclusivement compétente. Elle couvre l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q012",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La mise en œuvre d’une pratique eugénique visant à organiser la sélection des personnes est punie de **trente ans de réclusion criminelle** et de **7 500 000 euros d’amende** — **article 214-1 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.26804599998286,
+      "vectorSearchMs": 762.2144710000139,
+      "jinaRerankingMs": 511.13580299995374,
+      "mappingMs": 0.036229000019375235,
+      "totalMs": 1491.7347510000109,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014693999954033643,
+      "contextBuilderMs": 0.014876000001095235,
+      "generationMs": 1305.8290200000047,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2797.6211800000165
+    },
+    "judge": {
+      "questionId": "q012",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue (trente ans de réclusion criminelle et 7 500 000 euros d’amende). Ces éléments, ainsi que la qualification visée, sont explicitement supportés par le contexte de l’article 214-1. Elle répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 214-1 et énonce exactement l'incrimination visée ainsi que les deux peines indiquées dans la réponse : trente ans de réclusion criminelle et 7 500 000 euros d'amende. Elle couvre également la référence à l'article 214-1."
+    }
+  },
+  "routing": {
+    "answer": "La mise en œuvre d’une pratique eugénique visant à organiser la sélection des personnes est punie de **trente ans de réclusion criminelle** et de **7 500 000 euros d’amende** (article 214-1 du Code pénal) [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2152.9226830000407,
+      "routingCalls": 1,
+      "embeddingMs": 237.34121300000697,
+      "vectorSearchMs": 46.853619000001345,
+      "jinaRerankingMs": 496.33601600001566,
+      "mappingMs": 0.028409000020474195,
+      "totalMs": 2933.529696999991,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012112000025808811,
+      "contextBuilderMs": 0.01100100000621751,
+      "generationMs": 1162.6782169999788,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4096.244036999997
+    },
+    "judge": {
+      "questionId": "q012",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la peine prévue par le contexte et la référence : trente ans de réclusion criminelle et 7 500 000 euros d’amende. La qualification et la mention de l’article 214-1 sont également cohérentes avec la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 214-1 et énonce exactement l'incrimination visée ainsi que les deux peines mentionnées dans la réponse : trente ans de réclusion criminelle et 7 500 000 euros d'amende. Elle couvre aussi la référence à l'article 214-1."
+    }
+  },
+  "failureStage": "none"
+}

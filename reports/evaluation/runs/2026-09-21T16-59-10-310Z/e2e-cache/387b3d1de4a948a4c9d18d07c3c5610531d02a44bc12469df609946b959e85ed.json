@@ -1,0 +1,111 @@
+{
+  "questionId": "q232",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les prestations des professionnels mentionnés à l’article L. 444-1 du Code de commerce ne sont pas soumises aux tarifs réglementés lorsqu’elles remplissent les conditions suivantes :\n\n- elles sont accomplies **en concurrence avec des prestations non soumises à un tarif**, réalisées par d’autres professionnels ;\n- aucune disposition contraire ne prévoit l’application d’un tarif ;\n- elles ne relèvent pas d’un tarif propre à une autre catégorie d’auxiliaire de justice ou d’officier public ou ministériel, lorsque le professionnel est autorisé à exercer cette activité. Dans ce cas, la rémunération suit ce tarif propre [Source 1].\n\nDans cette situation, les honoraires sont librement fixés entre le professionnel et le client. Ils doivent toutefois tenir compte notamment de la situation de fortune du client, de la difficulté de l’affaire, des frais exposés, de la notoriété du professionnel et de ses diligences [Source 1]. Une **convention d’honoraires écrite** doit préciser le montant ou le mode de détermination des honoraires couvrant les diligences prévisibles, ainsi que les frais et débours envisagés [Source 1].\n\nLes honoraires ainsi fixés librement doivent rester ceux prévus par la convention : le professionnel ne peut demander ou percevoir une somme supplémentaire en dehors de cette convention [Source 3]. Ils sont, en principe, fixés librement sous le contrôle de l’instance professionnelle compétente et, en cas de contestation, par le juge chargé de la taxation, **à l’exception de ceux dus au titre d’un mandat de justice** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-16"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 157.25285299960524,
+      "vectorSearchMs": 707.3230339996517,
+      "jinaRerankingMs": 553.3739090003073,
+      "mappingMs": 0.024759000167250633,
+      "totalMs": 1418.0020840000361,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011460999958217144,
+      "contextBuilderMs": 0.04348899982869625,
+      "generationMs": 4537.883895999752,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5955.951872000471
+    },
+    "judge": {
+      "questionId": "q232",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement la condition centrale : les prestations doivent être accomplies en concurrence avec celles d'autres professionnels non soumises à un tarif. Elle restitue aussi correctement la réserve « sauf disposition contraire », les critères de détermination des honoraires et l'exigence d'une convention écrite. Les précisions sur le tarif propre d'une autre catégorie, l'interdiction de percevoir hors convention et le contrôle/taxation sont exactes et explicitement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la condition d’absence de tarif réglementé (prestations accomplies en concurrence avec celles d’autres professionnels non soumises à tarif, sauf disposition contraire) et couvre les critères des honoraires ainsi que la convention écrite. Les sources 2 et 3 étayent précisément les précisions ajoutées sur la fixation libre, le contrôle, la taxation, l’exception du mandat de justice et l’interdiction de percevoir au-delà de la convention. La source 4 est accessoire mais ne nuit pas à l’ensemble."
+    }
+  },
+  "routing": {
+    "answer": "Les honoraires ne sont pas soumis aux tarifs réglementés lorsque les prestations :\n\n- sont accomplies **en concurrence avec des prestations non tarifées d’autres professionnels** ;  \n- ne font pas l’objet d’une disposition contraire prévoyant l’application d’un tarif réglementé.  \n\nDans ce cas, les honoraires sont librement fixés entre le professionnel et son client. Ils doivent toutefois tenir compte notamment de la fortune du client, de la difficulté de l’affaire, des frais exposés, de la notoriété du professionnel et de ses diligences. Une **convention d’honoraires écrite** doit préciser le montant ou le mode de détermination des honoraires ainsi que les frais et débours prévisibles. [Source 1 — Article L444-1 du Code de commerce]\n\nLe professionnel ne peut alors demander ou percevoir une somme autre que celle prévue dans cette convention. [Source 3 — Article R444-13 du Code de commerce]\n\nEn cas de contestation, les honoraires sont fixés par le juge chargé de la taxation ; cette liberté de fixation ne concerne toutefois pas les honoraires dus au titre d’un mandat de justice. [Source 2 — Article R444-16 du Code de commerce]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-16"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1841.615056999959,
+      "routingCalls": 1,
+      "embeddingMs": 184.58912700042129,
+      "vectorSearchMs": 231.17860900051892,
+      "jinaRerankingMs": 583.9371759993955,
+      "mappingMs": 0.0360339991748333,
+      "totalMs": 2841.3839189996943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01063500065356493,
+      "contextBuilderMs": 0.029738999903202057,
+      "generationMs": 4118.161873999983,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6959.5966110005975
+    },
+    "judge": {
+      "questionId": "q232",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement la condition centrale : les prestations doivent être accomplies en concurrence avec celles d’autres professionnels non soumis à tarif. Elle restitue aussi, conformément au contexte, la réserve « sauf disposition contraire », les critères de détermination des honoraires et l’exigence d’une convention écrite. Les précisions sur l’interdiction de percevoir hors convention et sur le règlement des contestations sont également explicitement appuyées par les articles R. 444-13 et R. 444-16 fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l'article L. 444-1 énonce la condition d'absence de tarif réglementé, les critères des honoraires et l'exigence d'une convention écrite. Les articles R. 444-13 et R. 444-16 couvrent précisément les précisions ajoutées sur les sommes exigibles, le mandat de justice et le règlement des contestations. Toutes les affirmations importantes de la réponse sont ainsi étayées."
+    }
+  },
+  "failureStage": "none"
+}

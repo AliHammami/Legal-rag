@@ -1,0 +1,87 @@
+{
+  "questionId": "q118",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’applicabilité de ce titre repose sur plusieurs critères cumulatifs :\n\n- le salarié doit être employé par un **particulier** ;\n- l’emploi doit être exercé au **domicile privé** de celui-ci, ou à proximité ;\n- les tâches doivent présenter un caractère **familial ou ménager** ;\n- le particulier employeur ne doit poursuivre **aucun but lucratif** ;\n- l’emploi doit répondre à des besoins relevant de sa **vie personnelle**, notamment familiale ;\n- sont exclues les activités relevant de sa **vie professionnelle**.\n\nCes critères résultent de l’**article L7221-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 220.2649330003187,
+      "vectorSearchMs": 681.8382879998535,
+      "jinaRerankingMs": 547.8110279999673,
+      "mappingMs": 0.03100399998947978,
+      "totalMs": 1449.9770630002022,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012879000045359135,
+      "contextBuilderMs": 0.021585000213235617,
+      "generationMs": 1913.8506570002064,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3363.870673999656
+    },
+    "judge": {
+      "questionId": "q118",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère correctement les critères cumulatifs prévus par l’article L7221-1 : emploi par un particulier, à son domicile privé ou à proximité, travaux à caractère familial ou ménager, absence de but lucratif, satisfaction de besoins personnels notamment familiaux, à l’exclusion des besoins professionnels. Tous ces éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L7221-1 du Code du travail, qui énonce précisément les critères d’applicabilité visés : emploi par un particulier, au domicile privé ou à proximité, travaux familiaux ou ménagers, absence de but lucratif, satisfaction de besoins personnels notamment familiaux, à l’exclusion des besoins professionnels. Elle couvre toutes les affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "L’applicabilité de ce titre repose sur les critères suivants :\n\n- le salarié est employé par un **particulier** ;\n- il travaille au **domicile privé** de celui-ci ou à proximité ;\n- il réalise des travaux à caractère **familial ou ménager** ;\n- l’employeur n’agit **sans but lucratif** ;\n- l’emploi vise à satisfaire les besoins relevant de la **vie personnelle** du particulier, notamment familiale ;\n- sont exclus les besoins relevant de sa **vie professionnelle**.\n\nCes critères sont prévus par l’**article L7221-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1332.215573000256,
+      "routingCalls": 1,
+      "embeddingMs": 220.0996429999359,
+      "vectorSearchMs": 299.52980099990964,
+      "jinaRerankingMs": 539.9884560001083,
+      "mappingMs": 0.026368000078946352,
+      "totalMs": 2391.8913159999065,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01025900011882186,
+      "contextBuilderMs": 0.010680999606847763,
+      "generationMs": 2320.3971060002223,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4712.325745000038
+    },
+    "judge": {
+      "questionId": "q118",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce tous les critères de l’article L7221-1 : particulier employeur, domicile privé ou proximité, travaux familiaux ou ménagers, absence de but lucratif, besoins personnels notamment familiaux, à l’exclusion des besoins professionnels. Ces éléments sont intégralement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L7221-1 du Code du travail, qui fixe précisément les critères d'applicabilité visés. Elle couvre l'ensemble des affirmations importantes de la réponse : emploi par un particulier, domicile privé ou proximité, travaux familiaux ou ménagers, absence de but lucratif, besoins personnels notamment familiaux, et exclusion des besoins professionnels."
+    }
+  },
+  "failureStage": "none"
+}

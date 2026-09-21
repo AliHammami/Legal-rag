@@ -1,0 +1,87 @@
+{
+  "questionId": "q274",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les adhérents des chambres de compensation ne peuvent pas invoquer le secret professionnel lorsqu’une chambre de compensation leur demande des informations afin :\n\n- d’assurer la surveillance des positions ;\n- de connaître l’identité des donneurs d’ordres dont ils tiennent les comptes ;\n- de connaître les positions de ces donneurs d’ordres ;\n- d’évaluer leur solvabilité.\n\nCette règle est prévue par l’article L440-10 du Code monétaire et financier [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L440-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 176.87443699967116,
+      "vectorSearchMs": 596.9260360002518,
+      "jinaRerankingMs": 560.7544610006735,
+      "mappingMs": 0.02615900058299303,
+      "totalMs": 1334.612683000043,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015785000286996365,
+      "contextBuilderMs": 0.014666999690234661,
+      "generationMs": 1322.6982450000942,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2657.4956939993426
+    },
+    "judge": {
+      "questionId": "q274",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement tous les cas visés : demandes de la chambre pour la surveillance des positions et demandes relatives à l’identité, aux positions et à la solvabilité des donneurs d’ordres. L’attribution à l’article L440-10 est également explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle reproduit l’article L440-10 du Code monétaire et financier, qui répond exactement à la question. Elle couvre toutes les affirmations importantes de la réponse générée, soit la surveillance des positions ainsi que l’identité, les positions et la solvabilité des donneurs d’ordres concernés, et elle justifie la référence à cet article."
+    }
+  },
+  "routing": {
+    "answer": "Les adhérents des chambres de compensation ne peuvent pas invoquer le secret professionnel lorsqu’une chambre de compensation leur adresse des demandes visant :\n\n- à assurer la surveillance des positions ;\n- à obtenir des informations sur l’identité des donneurs d’ordres dont ils tiennent les comptes ;\n- à connaître les positions de ces donneurs d’ordres ;\n- à vérifier leur solvabilité.\n\n**Article L440-10 du Code monétaire et financier [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L440-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1742.444569000043,
+      "routingCalls": 1,
+      "embeddingMs": 287.7871449999511,
+      "vectorSearchMs": 121.30103799980134,
+      "jinaRerankingMs": 567.0093050003052,
+      "mappingMs": 0.024495000019669533,
+      "totalMs": 2718.5943310000002,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010783999226987362,
+      "contextBuilderMs": 0.011326000094413757,
+      "generationMs": 1390.901544000022,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4109.527947999537
+    },
+    "judge": {
+      "questionId": "q274",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les cas prévus : demandes des chambres de compensation visant la surveillance des positions et demandes relatives à l’identité, aux positions et à la solvabilité des donneurs d’ordres dont les adhérents tiennent les comptes. Ces éléments sont intégralement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L440-10 du Code monétaire et financier et répond exactement à la question. Elle couvre l'ensemble des affirmations importantes de la réponse générée : demandes visant la surveillance des positions, ainsi que demandes concernant l'identité, les positions et la solvabilité des donneurs d'ordres dont les adhérents tiennent les comptes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q389",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour qu’une vente volontaire de meubles aux enchères publiques porte sur des **biens neufs vendus en gros**, les conditions suivantes doivent être réunies :\n\n- la vente doit être une **vente volontaire de meubles aux enchères publiques** ;\n- les biens doivent être **neufs** ;\n- la vente en gros doit porter sur des **lots suffisamment importants pour ne pas être considérés comme tenus à la portée du consommateur** ;\n- les biens neufs doivent être **issus du stock d’une entreprise**.\n\nLa vente en gros ne peut donc pas porter sur des biens d’occasion. Ces règles s’appliquent sous réserve des dispositions de l’article L. 322-8 du Code de commerce. **Article L. 321-1 du Code de commerce [Source 1]**\n\nS’agissant de la publicité :\n\n- lorsque la vente porte sur un bien neuf, la publicité prévue à l’article L. 321-11 doit **indiquer que le bien est neuf** ;\n- lorsque les biens neufs sont mis en vente par le commerçant ou l’artisan qui les a produits, cette circonstance doit être mentionnée dans les **documents et publicités annonçant la vente**. **Article L. 321-1 du Code de commerce [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 234.95982100069523,
+      "vectorSearchMs": 812.4863959997892,
+      "jinaRerankingMs": 606.5560560002923,
+      "mappingMs": 0.030748999677598476,
+      "totalMs": 1654.0591099997982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.025966000743210316,
+      "contextBuilderMs": 0.014324000105261803,
+      "generationMs": 3404.137424000539,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5058.250633000396
+    },
+    "judge": {
+      "questionId": "q389",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les conditions de la vente en gros : lots suffisamment importants pour ne pas être à la portée du consommateur, biens neufs et issus du stock d’une entreprise. Elle indique aussi correctement que la publicité doit mentionner qu’un bien est neuf et que les documents et publicités doivent préciser lorsque les biens neufs sont vendus par le commerçant ou l’artisan qui les a produits. Toutes ces affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l'article L. 321-1 traite expressément des ventes volontaires de meubles aux enchères publiques, de la vente en gros de biens neufs issus du stock d'une entreprise, ainsi que des mentions à faire dans la publicité et les documents. Elle couvre l'ensemble des affirmations importantes de la réponse générée, y compris la définition des lots vendus en gros, l'exclusion des biens d'occasion, la réserve relative à l'article L. 322-8 et les obligations de mention du caractère neuf."
+    }
+  },
+  "routing": {
+    "answer": "Pour qu’une vente volontaire de meubles aux enchères publiques soit considérée comme une **vente en gros de biens neufs**, les conditions suivantes doivent être réunies :\n\n- les biens doivent être **neufs** ; sont notamment considérés comme d’occasion ceux qui ont été détenus par une personne pour son usage propre, à titre onéreux ou gratuit, ou qui ont subi des altérations empêchant leur vente comme neufs ;\n- ils doivent être vendus **en lots suffisamment importants pour ne pas être considérés comme tenus à la portée du consommateur** ;\n- la vente en gros doit porter **exclusivement sur des biens neufs issus du stock d’une entreprise**.  \n  Ces règles résultent de l’**article L. 321-1 du Code de commerce** [Source 1].\n\nLorsque les biens neufs sont mis en vente par le commerçant ou l’artisan qui les a produits, cette circonstance doit être mentionnée dans les documents et publicités annonçant la vente.\n\nDans tous les cas, lorsque la vente porte sur un bien neuf, **la nature neuve du bien doit être mentionnée dans la publicité prévue à l’article L. 321-11 du Code de commerce** [Source 1]. Le texte fourni n’impose pas de formulation précise pour cette mention.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1554.1095730001107,
+      "routingCalls": 1,
+      "embeddingMs": 225.41074599977583,
+      "vectorSearchMs": 225.22467599995434,
+      "jinaRerankingMs": 603.5860740002245,
+      "mappingMs": 0.027941999956965446,
+      "totalMs": 2608.3830430004746,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010869999416172504,
+      "contextBuilderMs": 0.012647999450564384,
+      "generationMs": 4281.160260000266,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6889.576435999945
+    },
+    "judge": {
+      "questionId": "q389",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les conditions cumulatives de la vente en gros : lots suffisamment importants, biens neufs et issus du stock d’une entreprise. Elle indique aussi correctement la double obligation de mention : lorsque le bien est produit par le commerçant ou l’artisan vendeur, dans les documents et publicités annonçant la vente, et, pour tout bien neuf, dans la publicité prévue à l’article L. 321-11. Toutes ces affirmations, y compris la définition des biens d’occasion, sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 321-1 du code de commerce, qui traite précisément des ventes volontaires de meubles aux enchères publiques, des conditions de la vente en gros (lots importants, biens neufs issus du stock d’une entreprise) et des mentions obligatoires relatives au caractère neuf dans les documents, publicités et la publicité visée à l’article L. 321-11. Elle couvre également la définition des biens d’occasion reprise dans la réponse."
+    }
+  },
+  "failureStage": "none"
+}

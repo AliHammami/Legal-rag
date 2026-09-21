@@ -1,0 +1,98 @@
+{
+  "questionId": "q463",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les conséquences d’un défaut de paiement dépendent de la situation concernée.\n\n### 1. Défaut de provision d’un chèque\n\nLe banquier peut refuser le paiement du chèque après avoir informé le titulaire du compte des conséquences du défaut de provision. Il doit alors lui demander :\n\n- de restituer les formules de chèques détenues par lui et ses mandataires ;\n- de ne plus émettre de chèques, sauf certains chèques permettant exclusivement un retrait auprès du tiré ou chèques certifiés ;\n- d’informer les mandataires du titulaire du compte.  \n**Article L. 131-73 du Code monétaire et financier [Source 1].**\n\nLe titulaire peut toutefois retrouver le droit d’émettre des chèques s’il règle le chèque impayé ou constitue une provision suffisante et disponible.\n\nAprès trente jours, en l’absence de paiement ou de constitution de provision, un certificat de non-paiement peut être délivré. Sa notification ou sa signification vaut commandement de payer. Si le paiement n’intervient pas dans les quinze jours, l’huissier de justice délivre un titre exécutoire, sans autre acte de procédure ni frais. **Article L. 131-73 du Code monétaire et financier [Source 1].**\n\n### 2. Défaut de remboursement d’un crédit à la consommation\n\nEn cas de défaillance de l’emprunteur, le prêteur peut exiger immédiatement :\n\n- le remboursement du capital restant dû ;\n- les intérêts échus mais non payés ;\n- des intérêts de retard au taux du prêt jusqu’au règlement effectif ;\n- éventuellement, une indemnité calculée selon un barème réglementaire.  \n**Article L. 312-39 du Code de la consommation [Source 2].**\n\nLorsque le prêteur demande la résolution du contrat, il peut également exiger le remboursement immédiat du capital versé ou du capital restant dû, selon le type de contrat, ainsi que les intérêts échus et les intérêts de retard au taux du prêt. Une indemnité peut aussi être demandée dans la limite d’un barème réglementaire. **Articles L. 315-23 et L. 313-51 du Code de la consommation [Sources 3 et 5].**\n\n### 3. Retard de paiement dans les relations commerciales\n\nLe non-respect des délais de paiement, l’absence de certaines mentions obligatoires ou la fixation de pénalités non conformes peut entraîner une amende administrative pouvant aller jusqu’à :\n\n- 75 000 € pour une personne physique et 2 000 000 € pour une personne morale ;\n- en cas de réitération dans les deux ans, 150 000 € pour une personne physique et 4 000 000 € pour une personne morale.  \n\nLes clauses ou pratiques retardant abusivement le point de départ des délais de paiement sont également interdites. **Article L. 441-16 du Code de commerce [Source 4].**",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-73"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-39"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-16"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-51"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 192.70629699900746,
+      "vectorSearchMs": 732.797698000446,
+      "jinaRerankingMs": 554.2945150006562,
+      "mappingMs": 0.05113699845969677,
+      "totalMs": 1479.8827509991825,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018852999433875084,
+      "contextBuilderMs": 0.05323999933898449,
+      "generationMs": 4381.109131000936,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5861.084372999147
+    },
+    "judge": {
+      "questionId": "q463",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale et est explicitement un cas d’abstention attendue : sans préciser la nature du paiement, aucune conséquence juridique unique ne peut être donnée de manière fiable. La réponse tente néanmoins de répondre en sélectionnant trois régimes particuliers. Ces développements sont globalement fidèlement étayés par le contexte, mais ils ne constituent pas une réponse appropriée à cette question indéterminée et ne reconnaissent pas l’insuffisance de précision."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent directement sur trois hypothèses particulières de défaut de paiement (chèque sans provision, crédit à la consommation et délais de paiement commerciaux), mais elles ne sont pas suffisantes pour répondre de façon générale à une question aussi indéterminée, ni pour justifier l’absence d’abstention. En revanche, les conséquences spécifiques effectivement énoncées dans la réponse sont, dans leur ensemble, directement étayées par les articles fournis : interdiction bancaire et procédure du certificat de non-paiement, sommes exigibles et indemnité en matière de crédit, ainsi que sanctions administratives commerciales."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 2314.528859999031,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 2314.5297019984573,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 2314.53945799917
+    },
+    "judge": {
+      "questionId": "q463",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question, très générale, ne peut pas être traitée de manière fiable sur la base des éléments fournis. La réponse abstient explicitement et correctement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, ce qui est cohérent avec une abstention : le contexte vide permet de constater qu'aucun corpus juridique pertinent n'est disponible pour répondre à cette question générale sur le défaut de paiement. La réponse ne formule aucune affirmation juridique de fond nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

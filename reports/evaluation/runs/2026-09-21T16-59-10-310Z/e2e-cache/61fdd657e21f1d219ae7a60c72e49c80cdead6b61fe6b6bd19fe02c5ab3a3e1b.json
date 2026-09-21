@@ -1,0 +1,87 @@
+{
+  "questionId": "q050",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 711-1 du Code pénal, les livres Ier à V, dans leur version issue de la loi n° 2026-813 du 24 août 2026, sont applicables en :\n\n- Nouvelle-Calédonie ;\n- Polynésie française ;\n- îles Wallis et Futuna.\n\nCette application est prévue sous réserve des adaptations mentionnées dans le titre concerné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "711-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 256.1363040000433,
+      "vectorSearchMs": 649.9748309999704,
+      "jinaRerankingMs": 585.0043719999958,
+      "mappingMs": 0.02709700004197657,
+      "totalMs": 1491.1717890000436,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009791999938897789,
+      "contextBuilderMs": 0.06668599997647107,
+      "generationMs": 1268.3352760000853,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2759.5976650000084
+    },
+    "judge": {
+      "questionId": "q050",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les trois collectivités visées par l’article 711-1 : Nouvelle-Calédonie, Polynésie française et îles Wallis-et-Futuna. Elle mentionne aussi correctement la réserve relative aux adaptations prévues au titre, explicitement présente dans le contexte. Toutes les affirmations sont directement étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 711-1 et vise expressément la rédaction issue de la loi n° 2026-813 du 24 août 2026. Elle énumère exactement la Nouvelle-Calédonie, la Polynésie française et les îles Wallis et Futuna, ainsi que la réserve relative aux adaptations prévues au titre. Elle couvre donc toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 711-1 du Code pénal, les livres Ier à V, dans leur rédaction issue de la loi n° 2026-813 du 24 août 2026, sont applicables en :\n\n- Nouvelle-Calédonie ;\n- Polynésie française ;\n- Îles Wallis et Futuna.\n\nCette application est toutefois soumise aux adaptations prévues par le titre concerné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "711-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1107.1685979999602,
+      "routingCalls": 1,
+      "embeddingMs": 377.86010499997064,
+      "vectorSearchMs": 30.29964900005143,
+      "jinaRerankingMs": 512.0735850000056,
+      "mappingMs": 0.02472799993120134,
+      "totalMs": 2027.470811999985,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009412999963387847,
+      "contextBuilderMs": 0.011506000068038702,
+      "generationMs": 1759.3701519999886,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3786.8712720000185
+    },
+    "judge": {
+      "questionId": "q050",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les trois collectivités visées par l’article 711-1 et mentionne correctement la réserve relative aux adaptations prévues au titre. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 711-1 et vise précisément la version issue de la loi n° 2026-813 du 24 août 2026. Elle énumère explicitement la Nouvelle-Calédonie, la Polynésie française et les îles Wallis et Futuna, et couvre également la réserve relative aux adaptations prévues au titre."
+    }
+  },
+  "failureStage": "none"
+}

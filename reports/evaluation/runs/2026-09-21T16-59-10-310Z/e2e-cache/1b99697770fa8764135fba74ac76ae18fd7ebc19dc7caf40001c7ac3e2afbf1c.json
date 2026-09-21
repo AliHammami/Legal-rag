@@ -1,0 +1,95 @@
+{
+  "questionId": "q283",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L122-1 du Code monétaire et financier, les billets ayant cours légal sont émis dans les conditions prévues à l’article L. 141-5 du même code [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L122-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 181.3081189999357,
+      "vectorSearchMs": 661.5098489997908,
+      "jinaRerankingMs": 541.7009389996529,
+      "mappingMs": 0.03947700001299381,
+      "totalMs": 1384.5889090001583,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013340000063180923,
+      "contextBuilderMs": 0.019573000259697437,
+      "generationMs": 1311.960636999458,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2696.5927339997143
+    },
+    "judge": {
+      "questionId": "q283",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la condition prévue par l'article L. 122-1 : les billets ayant cours légal sont émis dans les conditions prévues à l'article L. 141-5. Cette affirmation est explicitement contenue dans le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article L. 122-1 cité dans la question et énonce explicitement que les billets ayant cours légal sont émis dans les conditions prévues à l'article L. 141-5. Elle couvre intégralement l'affirmation de la réponse générée. La source 2 est également cohérente mais n'est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 122-1 du Code monétaire et financier, les billets ayant cours légal sont émis dans les conditions prévues à l’article L. 141-5 [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L122-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L721-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.3651860002428,
+      "routingCalls": 1,
+      "embeddingMs": 256.24372499994934,
+      "vectorSearchMs": 129.87095399945974,
+      "jinaRerankingMs": 553.7959139999002,
+      "mappingMs": 0.07778799999505281,
+      "totalMs": 2373.380173000507,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011959999799728394,
+      "contextBuilderMs": 0.019778000190854073,
+      "generationMs": 1210.4846890000626,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3583.9064090000466
+    },
+    "judge": {
+      "questionId": "q283",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la condition énoncée à l’article L. 122-1 : les billets ayant cours légal sont émis dans les conditions prévues à l’article L. 141-5. Cette affirmation est explicitement supportée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 122-1 et énonce explicitement que les billets ayant cours légal sont émis dans les conditions prévues à l'article L. 141-5. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

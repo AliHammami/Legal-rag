@@ -1,0 +1,119 @@
+{
+  "questionId": "q020",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 321-1 du Code pénal distingue deux formes de recel liées à la connaissance de l’origine frauduleuse :\n\n1. **Le recel matériel** : dissimuler, détenir ou transmettre une chose, ou servir d’intermédiaire pour sa transmission, **en sachant qu’elle provient d’un crime ou d’un délit**.\n\n2. **Le recel par profit** : bénéficier, **en connaissance de cause et par tout moyen**, du produit d’un crime ou d’un délit.\n\nDans les deux cas, la sanction prévue est de **cinq ans d’emprisonnement et 375 000 euros d’amende** — Article 321-1 du Code pénal [Source 2]. L’amende peut toutefois être portée jusqu’à la moitié de la valeur des biens recelés, conformément à l’article 321-3 du Code pénal [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 213.08262199995806,
+      "vectorSearchMs": 641.8835969999782,
+      "jinaRerankingMs": 526.815048999968,
+      "mappingMs": 0.0327640000032261,
+      "totalMs": 1381.8733990000328,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010940999956801534,
+      "contextBuilderMs": 0.051562000007834285,
+      "generationMs": 2608.9091040000203,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3990.85775700002
+    },
+    "judge": {
+      "questionId": "q020",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les deux modalités prévues par l’article 321-1 : le recel par dissimulation, détention, transmission ou intermédiation avec connaissance de l’origine criminelle ou délictuelle, et le bénéfice du produit en connaissance de cause. Elle indique exactement les peines principales. La précision sur la majoration possible de l’amende est également exacte et explicitement fondée sur le contexte (article 321-3)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 321-1 et couvre les deux modalités de recel fondées sur la connaissance de l'origine criminelle ou délictuelle, ainsi que les peines principales. La source 3 couvre explicitement la précision ajoutée sur le relèvement de l'amende jusqu'à la moitié de la valeur des biens recelés. Les autres sources ne sont pas nécessaires à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "L’article 321-1 du Code pénal distingue deux formes de recel :\n\n- **Le recel matériel** : dissimuler, détenir ou transmettre une chose, ou servir d’intermédiaire pour sa transmission, **en sachant qu’elle provient d’un crime ou d’un délit** ;\n- **Le recel par profit** : bénéficier, **en connaissance de cause et par tout moyen**, du produit d’un crime ou d’un délit.\n\nDans les deux cas, le recel est puni de **cinq ans d’emprisonnement et de 375 000 euros d’amende** [Source 2]. L’amende peut toutefois être portée jusqu’à la moitié de la valeur des biens recelés [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-38"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "321-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1522.1219700000365,
+      "routingCalls": 1,
+      "embeddingMs": 213.02463599998737,
+      "vectorSearchMs": 66.65835199999856,
+      "jinaRerankingMs": 501.5384329999797,
+      "mappingMs": 0.02325799997197464,
+      "totalMs": 2303.393398999993,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011585000029299408,
+      "contextBuilderMs": 0.021955000003799796,
+      "generationMs": 2229.6333579999628,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4533.070896000019
+    },
+    "judge": {
+      "questionId": "q020",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les deux modalités du recel prévues par l’article 321-1, en distinguant la connaissance de provenance criminelle ou délictuelle de la chose et le bénéfice du produit en connaissance de cause. Elle indique exactement les peines de base. La précision sur le relèvement de l’amende jusqu’à la moitié de la valeur des biens recelés est également exacte et explicitement fondée sur le contexte (article 321-3)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 321-1 et couvre les deux modalités du recel, l'exigence de connaissance de l'origine criminelle ou délictuelle / de connaissance de cause, ainsi que les peines de base. La source 4 couvre explicitement l'affirmation complémentaire relative au relèvement de l'amende jusqu'à la moitié de la valeur des biens recelés. Les sources citées sont donc directement pertinentes et couvrent l'ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

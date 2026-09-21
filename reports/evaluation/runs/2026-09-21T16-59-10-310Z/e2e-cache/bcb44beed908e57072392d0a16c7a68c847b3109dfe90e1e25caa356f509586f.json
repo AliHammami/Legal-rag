@@ -1,0 +1,99 @@
+{
+  "questionId": "q354",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "- **Altération d’actes d’état civil** : toute altération, tout faux ou toute inscription sur une feuille volante ou autrement que sur les registres prévus engage la responsabilité de son auteur envers les parties, avec condamnation à des **dommages-intérêts**, sans préjudice des peines prévues par le Code pénal. **Article 52 du Code civil [Source 3].**\n\n- **Obligations des notaires et huissiers concernant les protêts** :\n  - ils doivent **laisser une copie exacte des protêts** ;\n  - ils doivent transmettre les copies au greffier du tribunal de commerce ou du tribunal judiciaire statuant commercialement du domicile du débiteur, soit **contre récépissé**, soit par **lettre recommandée avec demande d’avis de réception** ;\n  - cette formalité doit être accomplie **dans la quinzaine de l’acte**.\n\n  Les sanctions encourues en cas de manquement sont la **destitution**, les **dépens** et les **dommages-intérêts envers les parties**. **Article L511-55 du Code de commerce [Source 2]** et **article L131-64 du Code monétaire et financier [Source 1].**\n\n  Les deux sources ne formulent toutefois pas exactement la transmission de la même manière : l’article L131-64 du Code monétaire et financier prévoit l’envoi de **deux copies**, dont l’une est destinée au parquet, tandis que l’article L511-55 du Code de commerce mentionne **une copie exacte** des protêts faute de paiement de traites acceptées et de billets à ordre.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-64"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L511-55"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "52"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 256.3664770005271,
+      "vectorSearchMs": 564.7337040007114,
+      "jinaRerankingMs": 501.4280699994415,
+      "mappingMs": 0.027943999506533146,
+      "totalMs": 1322.5891899997368,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011334999464452267,
+      "contextBuilderMs": 0.03124300017952919,
+      "generationMs": 4117.113210999407,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5439.759807999246
+    },
+    "judge": {
+      "questionId": "q354",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les sanctions prévues par l’article 52 du Code civil (dommages-intérêts, sans préjudice des peines pénales) et les obligations relatives aux protêts (copie exacte, remise ou envoi au greffier, délai de quinze jours), ainsi que les sanctions de destitution, dépens et dommages-intérêts. Les précisions sur les deux copies, dont une pour le parquet, et la différence avec l’article L511-55 sont fidèlement appuyées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l’article 52 couvre les altérations et faux d’état civil, tandis que les articles L131-64 et L511-55 couvrent les obligations de copie, de transmission au greffier, le délai et les sanctions applicables aux notaires et huissiers. Elles étayent toutes les affirmations importantes de la réponse, y compris la distinction entre deux copies dont une destinée au parquet (L131-64) et une copie pour les protêts impayés de traites acceptées et billets à ordre (L511-55)."
+    }
+  },
+  "routing": {
+    "answer": "- **Altération d’actes d’état civil** : toute altération ou tout faux, ainsi que toute inscription sur une feuille volante ou autrement que sur les registres prévus à cet effet, engage la responsabilité de son auteur à l’égard des parties, avec obligation de verser des **dommages-intérêts**. Ces conséquences s’appliquent **sans préjudice des peines prévues par le Code pénal** — Article 52 du Code civil [Source 2].\n\n- **Obligations des notaires et huissiers concernant les protêts** :\n  1. Ils doivent **laisser une copie exacte des protêts**.\n  2. Ils doivent également remettre contre récépissé au greffier du tribunal de commerce ou du tribunal judiciaire statuant commercialement du domicile du débiteur, ou lui adresser en lettre recommandée avec demande d’avis de réception, **deux copies exactes des protêts**, dont **l’une est destinée au parquet**.\n  3. Cette transmission doit être effectuée **dans les quinze jours de l’acte**.\n\n  Le non-respect de ces obligations peut entraîner la **destitution**, le paiement des **dépens** et des **dommages-intérêts envers les parties** — Article L131-64 du Code monétaire et financier [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-64"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "52"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1742.5255559999496,
+      "routingCalls": 1,
+      "embeddingMs": 229.8084019999951,
+      "vectorSearchMs": 261.76593199931085,
+      "jinaRerankingMs": 532.8110509999096,
+      "mappingMs": 0.040327999740839005,
+      "totalMs": 2766.991309000179,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06914499960839748,
+      "contextBuilderMs": 0.01782400067895651,
+      "generationMs": 2967.411713000387,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5734.4995129993185
+    },
+    "judge": {
+      "questionId": "q354",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et complètement les sanctions prévues par l'article 52 du code civil (dommages-intérêts, sans préjudice des peines pénales) ainsi que les obligations et sanctions de l'article L131-64 du code monétaire et financier : copie exacte des protêts, transmission de deux copies au greffier dans les quinze jours, dont une destinée au parquet, et sanctions de destitution, dépens et dommages-intérêts. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article 52 couvre les conséquences de l’altération, du faux et des inscriptions irrégulières dans les actes d’état civil, tandis que l’article L131-64 couvre précisément les obligations des notaires et huissiers relatives aux copies et à la transmission des protêts, les délais et les sanctions. Elles étayent l’ensemble des affirmations importantes de la réponse générée, y compris les modalités de remise, les deux copies dont une pour le parquet, le délai de quinze jours, ainsi que la destitution, les dépens et les dommages-intérêts."
+    }
+  },
+  "failureStage": "none"
+}

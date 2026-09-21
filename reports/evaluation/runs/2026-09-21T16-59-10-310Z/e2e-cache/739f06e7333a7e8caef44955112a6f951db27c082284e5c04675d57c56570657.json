@@ -1,0 +1,87 @@
+{
+  "questionId": "q161",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 2243-1 du Code du travail, le fait de se soustraire aux obligations de convocation des parties et de négociation périodique prévues à l’article L. 2242-1 est puni :\n\n- d’un emprisonnement d’un an ;\n- d’une amende de 3 750 euros. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2243-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 242.19731399975717,
+      "vectorSearchMs": 666.3536189999431,
+      "jinaRerankingMs": 509.0901119997725,
+      "mappingMs": 0.03464600024744868,
+      "totalMs": 1417.766317000147,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010110000148415565,
+      "contextBuilderMs": 0.010385999921709299,
+      "generationMs": 1342.4133449997753,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2760.2120270002633
+    },
+    "judge": {
+      "questionId": "q161",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement les deux sanctions prévues (un an d’emprisonnement et 3 750 euros d’amende), ainsi que le champ des obligations concernées. Toutes les affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 2243-1 et vise expressément la soustraction aux obligations de convocation et de négociation périodique prévues à l’article L. 2242-1. Elle établit intégralement les deux sanctions mentionnées dans la réponse : un an d’emprisonnement et 3 750 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "L’article L. 2243-1 du Code du travail prévoit, pour le fait de se soustraire aux obligations de convocation des parties et de négociation périodique prévues à l’article L. 2242-1 :\n\n- **un emprisonnement d’un an** ;\n- **une amende de 3 750 euros**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2243-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1226.5180600001477,
+      "routingCalls": 1,
+      "embeddingMs": 248.07909100037068,
+      "vectorSearchMs": 234.44885400030762,
+      "jinaRerankingMs": 552.1819830001332,
+      "mappingMs": 0.0676150000654161,
+      "totalMs": 2261.3277110001072,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020151000004261732,
+      "contextBuilderMs": 0.015728000085800886,
+      "generationMs": 1526.0204749996774,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3787.4006699998863
+    },
+    "judge": {
+      "questionId": "q161",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les deux peines prévues : un an d’emprisonnement et 3 750 euros d’amende. Elle précise correctement qu’elles concernent les obligations de convocation et de négociation périodique de l’article L. 2242-1, ce qui est explicitement confirmé par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 2243-1 et vise expressément la soustraction aux obligations de convocation et de négociation périodique prévues à l’article L. 2242-1. Elle couvre intégralement les deux sanctions affirmées dans la réponse : un an d’emprisonnement et 3 750 euros d’amende."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q307",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La publicité doit comporter de manière apparente la mention suivante :\n\n> « Aucun versement, de quelque nature que ce soit, ne peut être exigé d'un particulier, avant l'obtention d'un ou plusieurs prêts d'argent. »\n\n**Article L322-2 du Code de la consommation [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L322-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 157.4026960004121,
+      "vectorSearchMs": 630.3642049999908,
+      "jinaRerankingMs": 562.4471589997411,
+      "mappingMs": 0.022470999509096146,
+      "totalMs": 1350.2710170000792,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009712000377476215,
+      "contextBuilderMs": 0.01498899981379509,
+      "generationMs": 1223.4046340007335,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2573.7108169998974
+    },
+    "judge": {
+      "questionId": "q307",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la mention obligatoire prévue par l'article L322-2. Elle répond directement à la question et cette affirmation est explicitement contenue dans le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l'article L322-2 directement visé par la question et reproduit explicitement la mention obligatoire. Elle couvre intégralement l'affirmation centrale de la réponse générée, y compris son caractère apparent et le libellé cité."
+    }
+  },
+  "routing": {
+    "answer": "La publicité doit faire apparaître de manière apparente la mention suivante :\n\n**« Aucun versement, de quelque nature que ce soit, ne peut être exigé d'un particulier, avant l'obtention d'un ou plusieurs prêts d'argent. »**\n\nCette obligation est prévue par l’**article L322-2 du Code de la consommation** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L322-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.4777550008148,
+      "routingCalls": 1,
+      "embeddingMs": 198.40598900057375,
+      "vectorSearchMs": 45.139183999970555,
+      "jinaRerankingMs": 552.9029879998416,
+      "mappingMs": 0.03352500032633543,
+      "totalMs": 2024.9905920000747,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011001000180840492,
+      "contextBuilderMs": 0.011145000346004963,
+      "generationMs": 1251.2691879998893,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3276.29273299966
+    },
+    "judge": {
+      "questionId": "q307",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement la mention obligatoire demandée. Elle est entièrement conforme à l'article L322-2 reproduit dans le contexte, et répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement l'article L322-2 du Code de la consommation, précisément visé par la question. Elle reproduit explicitement la mention devant apparaître de manière apparente dans la publicité. Elle couvre intégralement l'affirmation principale de la réponse ainsi que son attribution à l'article L322-2."
+    }
+  },
+  "failureStage": "none"
+}

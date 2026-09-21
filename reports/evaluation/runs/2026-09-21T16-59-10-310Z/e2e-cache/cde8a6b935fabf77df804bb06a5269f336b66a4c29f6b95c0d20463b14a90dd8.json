@@ -1,0 +1,103 @@
+{
+  "questionId": "q387",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Contrôles et audits de cybersécurité\n\nLes fournisseurs de plateformes en ligne, ainsi que les moteurs de recherche et comparateurs en ligne et certains fournisseurs de services de communications interpersonnelles non fondés sur la numérotation, doivent réaliser un **audit de cybersécurité** lorsqu’ils dépassent un ou plusieurs seuils fixés par décret.\n\nCet audit porte notamment sur :\n\n- la sécurisation des données hébergées ;\n- la localisation de ces données, qu’elles soient hébergées directement ou par un tiers ;\n- la sécurité propre du fournisseur.\n\nIl doit être réalisé par un **prestataire d’audit qualifié par l’Agence nationale de la sécurité des systèmes d’information (ANSSI)**. Un arrêté conjoint des ministres chargés du numérique et de la consommation, après avis de la CNIL, fixe les critères de l’audit, sa durée de validité et ses modalités de présentation. Le résultat doit être présenté au consommateur de manière lisible, claire et compréhensible, avec un indicateur ou une expression complémentaire sous forme de système coloriel. **Article L111-7-3 du Code de la consommation [Source 2].**\n\n### Sanctions pénales en cas de cession illicite\n\nL’article 323-3-2 du Code pénal réprime le fait, pour certains fournisseurs de plateformes en ligne, de permettre sciemment la cession de produits, contenus ou services dont la cession, l’offre, l’acquisition ou la détention sont **manifestement illicites**. Les peines sont de :\n\n- **sept ans d’emprisonnement et 500 000 euros d’amende** ;\n- les mêmes peines pour les prestations d’intermédiation ou de séquestre ayant pour objet principal de mettre en œuvre, dissimuler ou faciliter ces opérations ;\n- **dix ans d’emprisonnement et 1 million d’euros d’amende** lorsque les faits sont commis en bande organisée ;\n- les mêmes peines que l’infraction consommée en cas de tentative.\n\n**Article 323-3-2 du Code pénal [Source 1].**\n\nLe texte fourni ne vise pas expressément les stupéfiants, mais ses sanctions peuvent concerner une cession de stupéfiants si celle-ci relève de la cession d’un produit manifestement illicite et si les autres conditions prévues par l’article sont réunies.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "323-3-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 398.26550200022757,
+      "vectorSearchMs": 613.5344099998474,
+      "jinaRerankingMs": 593.4949570000172,
+      "mappingMs": 0.026952000334858894,
+      "totalMs": 1605.3506680000573,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01053600013256073,
+      "contextBuilderMs": 0.021525000222027302,
+      "generationMs": 5608.308428999968,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7213.702246000059
+    },
+    "judge": {
+      "questionId": "q387",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie relative à l’article L111-7-3 du code de la consommation est exacte et complète : catégories de services concernées, seuils réglementaires, objet de l’audit, qualification ANSSI, modalités réglementaires et présentation au consommateur. En revanche, pour la cession illicite de stupéfiants, la réponse substitue l’article 323-3-2 à l’article 222-39 attendu : elle ne donne donc pas la qualification ni les peines spécifiques applicables à la cession ou l’offre de stupéfiants pour usage personnel (cinq ans et 75 000 euros, avec aggravations). L’article 323-3-2 et ses peines sont correctement restitués au regard du contexte, y compris son application seulement conditionnelle. La réponse est ainsi pleinement fondée sur les sources fournies, mais incomplète et seulement partiellement correcte par rapport à la question et à la référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et couvre précisément les obligations d’audit de cybersécurité au-delà des seuils réglementaires. La source 1 est pertinente pour les sanctions spécifiques visant certains fournisseurs de plateformes qui permettent sciemment des opérations manifestement illicites, mais elle ne constitue pas la source directe des peines propres à la cession ou à l’offre de stupéfiants évoquées dans la question (l’article 222-39 n’est pas fourni). Les affirmations effectivement formulées dans la réponse générée sont néanmoins toutes, ou presque toutes, étayées par les deux sources : conditions et peines de l’article 323-3-2, ainsi que l’ensemble des modalités de l’audit de l’article L111-7-3."
+    }
+  },
+  "routing": {
+    "answer": "### Contrôles et audits des plateformes\n\nLes fournisseurs de plateformes en ligne dont l’activité dépasse un ou plusieurs seuils fixés par décret doivent réaliser un **audit de cybersécurité**. Cet audit porte notamment sur :\n\n- la sécurisation des données hébergées ;\n- la localisation de ces données ;\n- la sécurité propre du fournisseur de plateforme.\n\nL’audit doit être réalisé par un prestataire qualifié par l’**Agence nationale de la sécurité des systèmes d’information (ANSSI)**. Ses critères, sa durée de validité et ses modalités de présentation sont fixés par arrêté conjoint des ministres chargés du numérique et de la consommation, après avis de la CNIL. Le résultat doit être présenté au consommateur de manière lisible, claire et compréhensible, avec une présentation complémentaire au moyen d’un système coloriel. **Article L111-7-3 du Code de la consommation [Source 4].**\n\n### Sanctions pénales liées aux stupéfiants\n\nLa cession ou l’offre illicite de stupéfiants à une personne pour sa consommation personnelle est punie de **cinq ans d’emprisonnement et 75 000 euros d’amende**. La peine est portée à **dix ans d’emprisonnement** lorsque les faits concernent notamment des mineurs ou certains établissements et leurs abords. **Article 222-39 du Code pénal [Source 3].**\n\nPlus largement, le transport, la détention, l’offre, la cession, l’acquisition ou l’emploi illicites de stupéfiants, ainsi que le fait de faciliter leur usage illicite, sont punis de **dix ans d’emprisonnement et 7 500 000 euros d’amende**. **Article 222-37 du Code pénal [Source 2].**\n\nEnfin, lorsqu’un fournisseur de plateforme permet sciemment la cession de produits ou services manifestement illicites dans les conditions prévues par le texte, il encourt **sept ans d’emprisonnement et 500 000 euros d’amende**. Ces peines sont portées à **dix ans d’emprisonnement et un million d’euros d’amende** en cas de bande organisée ; la tentative est punie des mêmes peines. **Article 323-3-2 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "323-3-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-37"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-39"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1099.799906999804,
+      "routingCalls": 1,
+      "embeddingMs": 208.63648200035095,
+      "vectorSearchMs": 109.64439199957997,
+      "jinaRerankingMs": 578.0418120007962,
+      "mappingMs": 0.03619700018316507,
+      "totalMs": 1996.2074930006638,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05528800003230572,
+      "contextBuilderMs": 0.025416999123990536,
+      "generationMs": 5179.613268999383,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7175.917775999755
+    },
+    "judge": {
+      "questionId": "q387",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement l’audit de cybersécurité prévu à l’article L111-7-3 (seuils réglementaires, objet de l’audit, qualification ANSSI et information du consommateur) et les peines de l’article 222-39 (cinq ans et 75 000 euros, aggravation à dix ans pour mineurs ou certains lieux). Les précisions additionnelles relatives aux articles 222-37 et 323-3-2 sont exactes et explicitement étayées par le contexte. Elle répond effectivement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 4 et 3 répondent directement aux deux volets principaux de la question : audit de cybersécurité des plateformes franchissant des seuils et sanctions de la cession ou offre de stupéfiants pour consommation personnelle. Elles étayent l’ensemble des précisions données sur l’objet, les modalités et la présentation de l’audit, ainsi que les peines de base et l’aggravation de l’article 222-39. Les développements additionnels sont également directement couverts par les sources 2 (article 222-37) et 1 (article 323-3-2), y compris les peines aggravées et la tentative."
+    }
+  },
+  "failureStage": "none"
+}

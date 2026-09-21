@@ -1,0 +1,91 @@
+{
+  "questionId": "q261",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L. 351-1 prévoit deux niveaux de sanctions :\n\n- **Amende fiscale de 75 euros** :\n  - en cas de méconnaissance des obligations prévues aux premier, deuxième, troisième et dernier alinéas du II de l’article L. 312-1-1 du Code monétaire et financier ;\n  - et, lorsque le client est une **personne physique agissant pour des besoins non professionnels**, en cas de méconnaissance de l’article L. 314-12 et du III de l’article L. 314-13.  \n  Cette amende est prononcée et recouvrée selon les règles applicables à la TVA [Source 1].\n\n- **Amende prévue pour les contraventions de la cinquième classe** :\n  - en cas de méconnaissance des obligations prévues aux I et IV de l’article L. 312-1-1 ;\n  - au I de l’article L. 314-13 ;\n  - aux articles L. 315-5 à L. 315-8 ;\n  - ou des interdictions prévues au I de l’article L. 312-1-2 ;\n  - et, lorsque le client est une **personne physique agissant pour des besoins non professionnels**, en cas de méconnaissance du IV de l’article L. 314-13 [Source 1].\n\nAinsi, les dispositions relatives aux articles **L. 314-12** et **L. 314-13** sont expressément sanctionnées lorsque le client est une personne physique agissant pour des besoins non professionnels. Le texte fourni ne précise pas de sanction spécifique pour ces obligations lorsque le client agit pour des besoins professionnels.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L351-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 196.7482010005042,
+      "vectorSearchMs": 606.033618000336,
+      "jinaRerankingMs": 503.14829199947417,
+      "mappingMs": 0.02698799967765808,
+      "totalMs": 1305.991449999623,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01094099972397089,
+      "contextBuilderMs": 0.010747999884188175,
+      "generationMs": 4400.177706000395,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5706.203881000169
+    },
+    "judge": {
+      "questionId": "q261",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux régimes de sanctions de l’article L. 351-1, distingue correctement les dispositions dont la sanction est conditionnée au fait que le client soit une personne physique agissant pour des besoins non professionnels, et mentionne les autres obligations sanctionnées par une contravention de cinquième classe. Toutes les affirmations substantielles sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 351-1 et énonce les deux régimes de sanction, les obligations visées et la condition tenant au client personne physique agissant pour des besoins non professionnels. Elle couvre également les précisions sur le prononcé et le recouvrement de l’amende fiscale, ainsi que le constat selon lequel aucune sanction spécifique n’est précisée dans ce texte pour les besoins professionnels concernant L. 314-12 et les dispositions conditionnelles de L. 314-13."
+    }
+  },
+  "routing": {
+    "answer": "Les sources fournies ne contiennent pas l’article **L. 351-1** ni les dispositions des articles **L. 312-1-1, L. 314-12, L. 314-13 et L. 315-5 à L. 315-8**. Elles ne permettent donc pas de déterminer les sanctions applicables selon que le client est une personne physique agissant pour des besoins personnels ou non.\n\nLes seuls éléments disponibles concernent :\n\n- une amende administrative pouvant atteindre **15 000 € pour une personne physique** et **75 000 € pour une personne morale** en cas de manquement aux articles L. 224-25-22 et L. 224-25-23 [Source 1] ;\n- une amende administrative pouvant atteindre **3 000 € pour une personne physique** et **15 000 € pour une personne morale** en cas de manquement au dernier alinéa de l’article L. 313-8 [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-18-7"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-26-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2455.0671279998496,
+      "routingCalls": 1,
+      "embeddingMs": 223.96698900032789,
+      "vectorSearchMs": 86.64988899976015,
+      "jinaRerankingMs": 505.30577499978244,
+      "mappingMs": 0.026585999876260757,
+      "totalMs": 3271.044714999385,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010468999855220318,
+      "contextBuilderMs": 0.01872600056231022,
+      "generationMs": 2258.1214880002663,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5529.204653000459
+    },
+    "judge": {
+      "questionId": "q261",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les sanctions demandées (amende fiscale de 75 euros dans le cas visé et amende de cinquième classe pour les autres manquements). Elle refuse de répondre alors qu'une réponse était attendue. En revanche, son constat selon lequel le contexte ne contient pas les articles pertinents, ainsi que les deux sanctions étrangères à la question qu'elle rapporte, sont fidèlement supportés par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources portent sur des manquements distincts (L. 224-25-22 et L. 224-25-23, ainsi que L. 313-8) et ne permettent pas de répondre aux sanctions prévues par L. 351-1 : elles sont donc hors sujet au regard de la question. En revanche, elles couvrent les affirmations effectivement formulées dans la réponse générée : l’absence des articles visés dans les extraits fournis peut être constatée, et les montants de 15 000/75 000 euros puis 3 000/15 000 euros sont fidèlement repris des sources."
+    }
+  },
+  "failureStage": "generation"
+}

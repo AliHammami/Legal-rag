@@ -1,0 +1,87 @@
+{
+  "questionId": "q014",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La dénonciation est punie lorsqu’elle réunit les conditions suivantes :\n\n- elle est faite **par tout moyen** et vise une **personne déterminée** ;\n- elle porte sur un fait susceptible d’entraîner des **sanctions judiciaires, administratives ou disciplinaires** ;\n- son auteur sait que ce fait est **totalement ou partiellement inexact** ;\n- elle est adressée à une autorité ou personne habilitée à y donner suite : officier de justice ou de police administrative ou judiciaire, autorité compétente, supérieurs hiérarchiques ou employeur de la personne dénoncée.\n\nLa fausseté du fait résulte nécessairement d’une décision devenue définitive d’**acquittement, de relaxe ou de non-lieu** établissant que le fait n’a pas été commis ou qu’il n’est pas imputable à la personne dénoncée. Dans les autres cas, le tribunal apprécie la pertinence des accusations.\n\nLa peine encourue est de **cinq ans d’emprisonnement et 45 000 euros d’amende**, conformément à l’**article 226-10 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 281.7882979999995,
+      "vectorSearchMs": 635.2846359999967,
+      "jinaRerankingMs": 542.2599679999985,
+      "mappingMs": 0.030396000016480684,
+      "totalMs": 1459.3951770000276,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013914000010117888,
+      "contextBuilderMs": 0.011623999977018684,
+      "generationMs": 2312.838633999985,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3772.2709690000047
+    },
+    "judge": {
+      "questionId": "q014",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l’ensemble des conditions prévues à l’article 226-10 : dénonciation par tout moyen contre une personne déterminée, fait susceptible de sanctions, connaissance de son inexactitude totale ou partielle, et destinataires légalement visés. Elle expose correctement le régime de preuve de la fausseté et l’appréciation du tribunal dans les autres cas, ainsi que la peine de cinq ans d’emprisonnement et 45 000 euros d’amende. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 226-10 du Code pénal, directement applicable à la dénonciation calomnieuse visée par la question. Elle couvre l’ensemble des conditions énoncées dans la réponse, les destinataires de la dénonciation, le régime de constatation de la fausseté, l’appréciation du tribunal dans les autres cas, ainsi que la peine de cinq ans d’emprisonnement et 45 000 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "La dénonciation est punie lorsqu’elle réunit les conditions suivantes :\n\n- elle est faite **par tout moyen** ;\n- elle vise une **personne déterminée** ;\n- elle porte sur un fait susceptible d’entraîner des **sanctions judiciaires, administratives ou disciplinaires** ;\n- son auteur sait que ce fait est **totalement ou partiellement inexact** ;\n- elle est adressée à un officier de justice ou de police, à une autorité compétente pour y donner suite ou saisir l’autorité compétente, ou aux supérieurs hiérarchiques ou à l’employeur de la personne dénoncée.\n\nLa peine encourue est de **cinq ans d’emprisonnement et 45 000 euros d’amende**, conformément à l’**article 226-10 du Code pénal** [Source 1].\n\nLa fausseté du fait dénoncé résulte nécessairement d’une décision devenue définitive d’acquittement, de relaxe ou de non-lieu établissant que le fait n’a pas été commis ou qu’il n’est pas imputable à la personne dénoncée. Dans les autres cas, le tribunal saisi apprécie la pertinence des accusations [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1617.0262039999943,
+      "routingCalls": 1,
+      "embeddingMs": 200.99018399999477,
+      "vectorSearchMs": 63.35164700000314,
+      "jinaRerankingMs": 551.5999430000084,
+      "mappingMs": 0.026749999960884452,
+      "totalMs": 2433.03172499995,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010538999980781227,
+      "contextBuilderMs": 0.01095800002804026,
+      "generationMs": 2996.840411000012,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5429.907776000036
+    },
+    "judge": {
+      "questionId": "q014",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions prévues par l’article 226-10 : dénonciation par tout moyen, contre une personne déterminée, portant sur un fait susceptible de sanctions, connu comme totalement ou partiellement inexact, et adressée à l’une des autorités ou personnes visées. Elle indique correctement la peine de cinq ans d’emprisonnement et 45 000 euros d’amende, ainsi que les règles relatives à l’établissement de la fausseté par une décision définitive ou à l’appréciation du tribunal dans les autres cas. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article 226-10 du Code pénal, directement applicable à la dénonciation calomnieuse visée par la question. Elle énonce toutes les conditions reprises dans la réponse, la peine de cinq ans d’emprisonnement et 45 000 euros d’amende, ainsi que les modalités d’établissement de la fausseté et l’appréciation du tribunal dans les autres cas."
+    }
+  },
+  "failureStage": "none"
+}

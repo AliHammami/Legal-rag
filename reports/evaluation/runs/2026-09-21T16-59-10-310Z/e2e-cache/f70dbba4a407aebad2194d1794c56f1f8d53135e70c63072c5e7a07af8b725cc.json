@@ -1,0 +1,90 @@
+{
+  "questionId": "q477",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de présenter l’ensemble des règles de déontologie des avocats. Elles établissent toutefois les obligations suivantes :\n\n- **Interdiction de partager les émoluments avec un tiers** : les avocats ne peuvent pas partager leurs émoluments avec un tiers, sous peine de sanctions disciplinaires (**article R. 444-76 du Code de commerce** [Source 1]).\n\n- **Remise obligatoire d’un état de frais avant tout règlement** : l’avocat doit remettre aux parties un document détaillant les émoluments, frais, débours et provisions versées, même si les parties ne le demandent pas (**article R. 444-74 du Code de commerce** [Source 2]).\n\n- **Présentation détaillée des émoluments** : l’état de frais doit notamment mentionner les lignes du tableau 6 correspondant aux émoluments ainsi que les articles du Code qui en fixent le montant (**article R. 444-74 du Code de commerce** [Source 2]).\n\n- **Absence de facturation de l’état de frais** : aucun émolument ne peut être demandé pour la rédaction ou l’établissement de cet état, ni pour ses éventuelles copies (**article R. 444-74 du Code de commerce** [Source 2]).\n\nLa **Source 3** concerne des règles professionnelles établies par le Conseil national et leur éventuelle application à certaines autres professions ; elle ne détaille pas directement les règles déontologiques applicables aux avocats.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-76"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R444-74"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-3-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.01001700013876,
+      "vectorSearchMs": 686.526494000107,
+      "jinaRerankingMs": 557.1879239995033,
+      "mappingMs": 0.028609000146389008,
+      "totalMs": 1453.7878769990057,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010831000283360481,
+      "contextBuilderMs": 0.022227998822927475,
+      "generationMs": 3689.518396001309,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5143.3511290010065
+    },
+    "judge": {
+      "questionId": "q477",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique explicitement que les sources ne permettent pas de présenter l’ensemble des règles déontologiques des avocats, ce qui constitue une abstention appropriée pour une question aussi large. Les obligations ensuite citées correspondent fidèlement aux articles fournis. Elles ne couvrent toutefois qu’un champ très limité, relatif aux émoluments et aux états de frais, et ne sauraient constituer les règles générales de déontologie des avocats."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement liées à certaines obligations professionnelles des avocats, mais elles ne permettent pas de répondre de manière générale à une question portant sur l’ensemble de leur déontologie : elles se limitent aux émoluments et aux états de frais. Dans le cadre d’une abstention, elles sont néanmoins suffisantes pour établir que le contexte ne couvre que des règles ponctuelles. La source 3 est hors du champ direct des avocats et la réponse le signale correctement. Toutes les affirmations factuelles importantes de la réponse concernant les sources 1 et 2, ainsi que la limitation de la source 3, sont couvertes par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1308.0644329991192,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1308.065943999216,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1308.0748250000179
+    },
+    "judge": {
+      "questionId": "q477",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement et indique que le contexte vide ne permet pas de répondre de manière fiable. Cela correspond à l’abstention attendue pour une question hors du périmètre du corpus fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie. Pour une abstention attendue fondée sur l’absence de contexte ou de corpus pertinent, cette absence permet de constater qu’aucun élément source ne permet de répondre à la question. La réponse générée se limite à ce constat et n’avance aucune règle déontologique non sourcée."
+    }
+  },
+  "failureStage": "none"
+}

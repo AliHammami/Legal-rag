@@ -1,0 +1,87 @@
+{
+  "questionId": "q139",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "C’est **l’employeur** qui inscrit l’apprenti dans le centre de formation d’apprentis (CFA) assurant l’enseignement correspondant à la formation prévue au contrat.\n\nLe choix du CFA est **formalisé dans le contrat d’apprentissage**, qui doit le préciser. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.1063159997575,
+      "vectorSearchMs": 576.7501429999247,
+      "jinaRerankingMs": 518.2978950003162,
+      "mappingMs": 0.02184800012037158,
+      "totalMs": 1313.2068150001578,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010089999996125698,
+      "contextBuilderMs": 0.01015700027346611,
+      "generationMs": 1349.9969499995932,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2663.2336500003003
+    },
+    "judge": {
+      "questionId": "q139",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux éléments requis : l’employeur inscrit l’apprenti dans le CFA correspondant à la formation prévue au contrat, et ce choix est précisé dans le contrat d’apprentissage. Ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source L6223-2 est directement pertinente : elle désigne l’employeur comme responsable de l’inscription de l’apprenti dans le CFA correspondant à la formation prévue et précise que le choix du CFA figure dans le contrat d’apprentissage. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’employeur détermine le centre de formation d’apprentis dans lequel l’apprenti sera inscrit. Ce choix doit être précisé dans le contrat d’apprentissage. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6223-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1637.957206999883,
+      "routingCalls": 1,
+      "embeddingMs": 226.0656139999628,
+      "vectorSearchMs": 281.2466159998439,
+      "jinaRerankingMs": 485.5889500002377,
+      "mappingMs": 0.02322399988770485,
+      "totalMs": 2630.9442519997247,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010101000312715769,
+      "contextBuilderMs": 0.010065999813377857,
+      "generationMs": 1462.838823999744,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4093.812371000182
+    },
+    "judge": {
+      "questionId": "q139",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l'employeur comme responsable du choix/inscription au CFA et indique que ce choix est précisé dans le contrat d'apprentissage. Ces deux affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle indique que l’employeur inscrit l’apprenti dans un CFA correspondant à la formation prévue au contrat et que le choix du CFA est précisé dans le contrat d’apprentissage. Elle couvre intégralement les deux affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q041",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’extrait fourni, l’infraction comporte les éléments suivants :\n\n1. **Un acte matériel** :  \n   - pratiquer une recherche impliquant la personne humaine sur une personne ; ou  \n   - faire pratiquer une telle recherche sur une personne.\n\n2. **L’absence de consentement requis** : l’auteur n’a pas recueilli un consentement qui soit à la fois :\n   - **libre** ;\n   - **éclairé** ;\n   - **exprès**.\n\n   Ce consentement doit provenir de l’intéressé ou, selon le cas, des titulaires de l’autorité parentale ou du tuteur.\n\nL’infraction est punie de **trois ans d’emprisonnement et de 45 000 euros d’amende**. Ces éléments résultent de la rédaction reproduite du premier alinéa de l’**article 223-8 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "723-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.15429700003006,
+      "vectorSearchMs": 685.0424579998944,
+      "jinaRerankingMs": 558.9408860000549,
+      "mappingMs": 0.030797000043094158,
+      "totalMs": 1458.1993040000089,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0726749999448657,
+      "contextBuilderMs": 0.02073800005018711,
+      "generationMs": 3455.275228000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4913.57866400003
+    },
+    "judge": {
+      "questionId": "q041",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l'acte matériel (pratiquer ou faire pratiquer une recherche impliquant la personne humaine) et l'absence du consentement libre, éclairé et exprès de la personne concernée ou, selon le cas, des titulaires de l'autorité parentale ou du tuteur. La mention de la peine est exacte, quoique non nécessaire, et est explicitement supportée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le premier alinéa de l’article 223-8 visé par la question. Elle permet d’établir l’acte matériel (pratiquer ou faire pratiquer une recherche impliquant la personne humaine), l’absence de recueil du consentement libre, éclairé et exprès des personnes mentionnées, ainsi que la peine complémentairement indiquée dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les éléments constitutifs de l’infraction sont :\n\n1. **Un élément matériel** : pratiquer ou faire pratiquer, sur une personne, une **recherche impliquant la personne humaine** ;\n2. **Un défaut de consentement** : l’absence de consentement **libre, éclairé et exprès** :\n   - de l’intéressé ;\n   - ou des titulaires de l’autorité parentale ;\n   - ou du tuteur.\n\nL’infraction est punie de **trois ans d’emprisonnement et de 45 000 euros d’amende**.  \n**Article 223-8, premier alinéa, du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "723-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1640.4132860000245,
+      "routingCalls": 1,
+      "embeddingMs": 217.26183999993373,
+      "vectorSearchMs": 56.386968999984674,
+      "jinaRerankingMs": 540.7371709999861,
+      "mappingMs": 0.02832499996293336,
+      "totalMs": 2454.8504260000773,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0103270000545308,
+      "contextBuilderMs": 0.0140839999075979,
+      "generationMs": 2050.1468770001084,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4505.029563999968
+    },
+    "judge": {
+      "questionId": "q041",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les éléments de l'incrimination : pratiquer ou faire pratiquer une recherche impliquant la personne humaine et l'absence de recueil du consentement libre, éclairé et exprès de l'intéressé, des titulaires de l'autorité parentale ou du tuteur. La peine ajoutée est également explicitement indiquée dans le contexte. Toutes les affirmations importantes sont donc fondées sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le premier alinéa de l’article 223-8, qui définit le comportement incriminé, l’exigence de consentement libre, éclairé et exprès des personnes visées, ainsi que les peines. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

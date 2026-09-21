@@ -1,0 +1,98 @@
+{
+  "questionId": "q471",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de présenter les règles générales d’urbanisme applicables à l’extension d’une maison : elles ne précisent notamment ni les seuils de surface, ni les règles de déclaration préalable ou de permis de construire, ni les règles du PLU.\n\nElles permettent seulement d’indiquer que :\n\n- Si l’extension concerne un **magasin de commerce de détail ou un ensemble commercial** dont la surface de vente globale est comprise entre 300 et 1 000 m², une procédure spécifique peut s’appliquer dans certaines communes ou en cas d’artificialisation des sols, conformément à l’**article R. 752-21 du Code de commerce** [Source 1].\n- Lorsqu’un tel projet nécessite un permis de construire, la demande doit être déposée selon les règles des articles R. 423-2 et suivants du Code de l’urbanisme, avec transmission au secrétariat de la commission départementale, conformément à l’**article R. 752-9 du Code de commerce** [Source 5].\n- Pour les ouvertures créant des vues droites ou certaines saillies donnant sur le terrain voisin, une distance de 19 décimètres entre le mur et la limite du fonds voisin est exigée, sauf exception liée à une servitude de passage, conformément à l’**article 678 du Code civil** [Source 2].\n\nAinsi, pour une extension d’habitation classique, le contexte fourni est insuffisant pour déterminer l’autorisation nécessaire et les règles applicables.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-21"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "678"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A761-14"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4744-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R752-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.33335400000215,
+      "vectorSearchMs": 659.7596269994974,
+      "jinaRerankingMs": 555.3488090001047,
+      "mappingMs": 0.018376000225543976,
+      "totalMs": 1441.486714001745,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010193999856710434,
+      "contextBuilderMs": 0.02337700128555298,
+      "generationMs": 3278.156844999641,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4719.688334999606
+    },
+    "judge": {
+      "questionId": "q471",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne permet pas de déterminer les règles d’urbanisme applicables à une extension d’habitation, ce qui constitue l’abstention attendue. Les précisions additionnelles sont explicitement limitées à des cas commerciaux ou aux vues sur le fonds voisin et sont fidèlement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour justifier l’abstention, les sources sont globalement pertinentes en ce qu’elles montrent qu’elles portent surtout sur des extensions commerciales (R. 752-21 et R. 752-9) et sur les vues sur le fonds voisin (article 678 du Code civil), non sur le régime général d’urbanisme d’une extension d’habitation. Elles étayent les trois précisions conditionnelles données dans la réponse, ainsi que le constat que le corpus ne fournit pas les seuils, procédures usuelles ou règles de PLU applicables à une maison. La pertinence n’est pas maximale car aucune source ne traite directement des règles générales recherchées pour une extension d’habitation."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 943.8255139999092,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 943.8263659998775,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 943.8420850001276
+    },
+    "judge": {
+      "questionId": "q471",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et indique que le contexte vide ne permet pas de répondre de manière fiable à une question d'urbanisme, hors du périmètre indiqué. Cette abstention est appropriée et entièrement cohérente avec le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie. Elles ne peuvent donc pas être pertinentes pour répondre directement à la question, mais l’absence de sources couvre le constat central de la réponse générée : le contexte disponible ne permet pas d’apporter une réponse juridique fiable et aucune recherche n’a été effectuée."
+    }
+  },
+  "failureStage": "none"
+}

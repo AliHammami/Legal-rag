@@ -1,0 +1,103 @@
+{
+  "questionId": "q216",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 233-28-2 du Code de commerce [Source 1]**, une société commerciale doit publier et mettre à disposition le rapport relatif à l’impôt sur les bénéfices dans deux situations :\n\n1. **Société contrôlée par une société située hors de l’Union européenne et de l’Espace économique européen**  \n   La société doit :\n   - ne pas être une micro-entreprise ni une petite entreprise ;\n   - être contrôlée par une société dont le siège social n’est pas situé dans l’Union européenne ou dans un autre État partie à l’accord sur l’EEE.  \n   Cette obligation s’applique également lorsque la structure a été mise en place principalement pour éviter l’application de cet article.\n\n2. **Société comprise dans les comptes consolidés d’une société située hors de l’Union européenne et de l’EEE**  \n   L’obligation s’applique lorsque cette société dispose d’une **succursale en France** dont le chiffre d’affaires net dépasse, à la clôture de **deux exercices consécutifs**, le seuil prévu par l’article L. 232-6-1 du Code de commerce. Elle s’applique également aux montages principalement destinés à éluder cette obligation.\n\nLa publication est effectuée à la diligence, selon le cas, des organes dirigeants de la société ou du représentant légal en France [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-28-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-28-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 379.380768999923,
+      "vectorSearchMs": 636.9471070002764,
+      "jinaRerankingMs": 580.7414279999211,
+      "mappingMs": 0.032091999892145395,
+      "totalMs": 1597.1368219996803,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010358999948948622,
+      "contextBuilderMs": 0.02597999991849065,
+      "generationMs": 3408.8615399999544,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5006.047742000315
+    },
+    "judge": {
+      "questionId": "q216",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les deux hypothèses prévues par l’article L. 233-28-2 : société commerciale non micro/petite contrôlée par une société hors UE/EEE, et société incluse dans les comptes consolidés d’une société hors UE/EEE disposant d’une succursale française dépassant le seuil pendant deux exercices consécutifs. Elle mentionne aussi, conformément au contexte, les dispositifs anti-évitement et les personnes chargées de la publication. Les affirmations sont toutes étayées par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L. 233-28-2 visé par la question. Elle établit les deux hypothèses exposées, les conditions (hors micro/petite entreprise, contrôle ou consolidation par une société hors UE/EEE, succursale française et seuil sur deux exercices), les clauses anti-évitement et les personnes chargées de publier. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 233-28-2 du Code de commerce, une société commerciale doit publier et mettre à disposition le rapport relatif à l’impôt sur les bénéfices dans deux situations :\n\n1. **Société contrôlée par une société située hors de l’Union européenne ou de l’EEE**  \n   La société doit être :\n   - ni une micro-entreprise ni une petite entreprise ;\n   - contrôlée par une société dont le siège social n’est pas situé dans un État membre de l’Union européenne ou de l’Espace économique européen.  \n   L’obligation s’applique également aux sociétés qui n’auraient pas d’autre objet que d’éluder cette obligation.\n\n2. **Société comprise dans les comptes consolidés d’une société située hors de l’Union européenne ou de l’EEE**  \n   L’obligation concerne aussi une société incluse dans les comptes consolidés d’une telle société lorsqu’elle dispose en France d’une succursale dont le chiffre d’affaires net dépasse, à la clôture de deux exercices consécutifs, le seuil prévu par l’article L. 232-6-1 du Code de commerce. Elle s’applique également lorsque la structure mise en place n’a pas d’autre objet que d’éluder l’obligation.\n\nLa publication est effectuée à la diligence du conseil d’administration, du directoire, des gérants ou, selon le cas, du représentant légal de la société en France ou de la personne habilitée à l’engager. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-28-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-28-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1456.4727389998734,
+      "routingCalls": 1,
+      "embeddingMs": 238.09788200072944,
+      "vectorSearchMs": 239.31596900057048,
+      "jinaRerankingMs": 579.8691169992089,
+      "mappingMs": 0.04450399987399578,
+      "totalMs": 2513.8270180001855,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01921200007200241,
+      "contextBuilderMs": 0.030712000094354153,
+      "generationMs": 3425.085926999338,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5938.974613999948
+    },
+    "judge": {
+      "questionId": "q216",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les deux hypothèses prévues par l’article L. 233-28-2 : la société commerciale non micro ou petite entreprise contrôlée par une société hors UE/EEE, et la société comprise dans des comptes consolidés d’une société hors UE/EEE disposant d’une succursale française dépassant le seuil pendant deux exercices consécutifs. Elle mentionne aussi les clauses anti-évitement et les personnes chargées de la publication. Ces éléments sont directement supportés par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement les deux hypothèses de l’article L. 233-28-2 invoquées dans la réponse : société commerciale ni micro ni petite contrôlée par une société hors UE/EEE, ainsi que société comprise dans les comptes consolidés d’une société hors UE/EEE avec succursale française dépassant le seuil pendant deux exercices consécutifs. Elle couvre aussi les clauses anti-évitement et les personnes à la diligence desquelles la publication est effectuée. Les sources 2 et 3 sont accessoires ; la source 1 suffit à fonder pratiquement toutes les affirmations importantes."
+    }
+  },
+  "failureStage": "none"
+}

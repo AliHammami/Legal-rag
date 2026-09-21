@@ -1,0 +1,103 @@
+{
+  "questionId": "q040",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’interdiction visée par l’article 722-1 consiste, juridiquement, en une **obligation de s’abstenir de conduire certains véhicules terrestres pour lesquels un permis de conduire est nécessaire** : le texte modifie ainsi le 7° de l’article 132-45 du Code pénal [Source 1].\n\n### Nature de l’interdiction\n\n- Il s’agit d’une **interdiction ciblée**, portant sur « certains véhicules », et non nécessairement sur tous les véhicules.\n- Elle concerne uniquement les véhicules terrestres **dont la conduite exige légalement un permis**.\n- Elle prend la forme d’une obligation négative : la personne doit **ne pas conduire** les véhicules concernés.\n\nCette interdiction se distingue de celle prévue, dans un autre dispositif, pour l’infraction de mise en danger d’autrui : l’article 223-18 prévoit une interdiction de conduire certains véhicules terrestres à moteur, **y compris ceux pour lesquels le permis n’est pas exigé**, pour une durée maximale de cinq ans [Source 5]. Cette extension aux véhicules sans permis ne figure pas dans la formulation de l’article 722-1.\n\n### Conditions d’application\n\nD’après le texte fourni, l’application suppose donc :\n\n1. qu’une interdiction soit prononcée sur le fondement du 7° de l’article 132-45 ;\n2. qu’elle désigne ou concerne certains véhicules terrestres ;\n3. que ces véhicules soient de ceux pour lesquels la loi exige un permis de conduire.\n\nLe texte fourni ne permet toutefois pas de préciser la durée de cette interdiction, ses modalités de prononcé ou les conséquences exactes de sa violation. Il ne faut pas non plus lui appliquer automatiquement la règle relative au dispositif antidémarrage par éthylotest électronique, qui correspond à une autre rédaction du 7° de l’article 132-45 mentionnée à l’article 712-2 [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "722-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-21"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R131-4-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "712-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "223-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 510.11544099997263,
+      "vectorSearchMs": 646.8473300000187,
+      "jinaRerankingMs": 574.5553330000257,
+      "mappingMs": 0.02699200005736202,
+      "totalMs": 1731.5742320000427,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011014999938197434,
+      "contextBuilderMs": 0.02219000004697591,
+      "generationMs": 5087.32889200002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6818.94645300007
+    },
+    "judge": {
+      "questionId": "q040",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l'interdiction : s'abstenir de conduire certains véhicules terrestres pour lesquels un permis est nécessaire. Elle en explicite correctement le caractère ciblé et les conditions directement déductibles de la formulation. Les précisions comparatives relatives à l'article 223-18 et à la variante avec éthylotest sont également fidèlement étayées par le contexte. Elle répond effectivement à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en reproduisant la rédaction du 7° de l’article 132-45 visée par l’article 722-1 : abstention de conduire certains véhicules terrestres nécessitant un permis. Elle couvre la nature ciblée de l’interdiction et les conditions déduites de son libellé. La source 5 étaye correctement la comparaison avec l’article 223-18, notamment l’inclusion expresse des véhicules sans permis et la durée maximale de cinq ans. La source 4 couvre la précision relative à une rédaction distincte incluant l’éthylotest antidémarrage. Les constats de prudence sur l’absence, dans l’extrait principal, de durée, modalités de prononcé et sanctions de violation sont compatibles avec les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 722-1. Il permet seulement d’indiquer que l’interdiction de conduire est :\n\n- **temporaire** ;\n- limitée à **certains véhicules** ;\n- définie par la juridiction, qui doit préciser dans sa décision les **catégories de véhicules concernées** et la **durée** de l’interdiction.\n\nCette règle figure à l’**article R131-3 du Code pénal** [Source 1]. Les conditions précises d’application de l’interdiction visée à l’article 722-1 ne peuvent pas être déterminées à partir des sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 6385.404774000053,
+      "routingCalls": 1,
+      "embeddingMs": 257.32913600001484,
+      "vectorSearchMs": 55.961786000058055,
+      "jinaRerankingMs": 643.5810550000751,
+      "mappingMs": 0.04740000003948808,
+      "totalMs": 7342.35974799993,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02335300005506724,
+      "contextBuilderMs": 0.014624000061303377,
+      "generationMs": 2318.6318489999976,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9661.040983999963
+    },
+    "judge": {
+      "questionId": "q040",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne donne pas la nature exacte attendue : l’interdiction visée à l’article 722-1 est celle de conduire certains véhicules terrestres à moteur pour lesquels un permis de conduire est exigé, prévue au 7° de l’article 132-45. Elle répond seulement avec une description générale, en ajoutant correctement, au regard du contexte, que la décision doit préciser les catégories de véhicules et la durée. Ces affirmations sont entièrement étayées par l’unique source fournie, mais l’identification juridique demandée manque largement. Malgré sa réserve sur les conditions précises, elle apporte une réponse substantielle ; ce n’est donc pas une abstention au sens de l’évaluation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "La source R131-3 est directement pertinente pour les modalités de l’interdiction temporaire de conduire certains véhicules : elle impose à la juridiction de préciser les catégories concernées et la durée. Elle ne permet toutefois pas d’identifier l’interdiction spécifiquement visée par l’article 722-1 ni son rattachement au 7° de l’article 132-45, notamment la condition tenant aux véhicules terrestres nécessitant un permis. Les affirmations positives de la réponse (caractère temporaire, certains véhicules, précision des catégories et de la durée) sont couvertes, tandis que la réserve sur l’impossibilité de déterminer les conditions précises est cohérente avec l’absence de texte de l’article 722-1 dans le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

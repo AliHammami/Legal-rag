@@ -1,0 +1,98 @@
+{
+  "questionId": "q433",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les recours dépendent de la nature du litige.\n\n### 1. Litige entre un consommateur et un professionnel\n\nLe consommateur peut recourir gratuitement à un médiateur de la consommation pour rechercher une résolution amiable du litige. Le professionnel doit garantir l’accès effectif à ce dispositif, soit par son propre médiateur, soit par un autre médiateur répondant aux exigences légales. [Source 1]\n\nEn cas de litige transfrontalier, le consommateur peut également bénéficier d’une assistance et d’informations afin d’être orienté vers l’entité compétente d’un autre État membre. [Source 3]\n\n### 2. Litige relevant du droit du travail\n\nLes différends et litiges entre l’employeur et le salarié peuvent être portés devant le conseil de prud’hommes territorialement compétent. Le salarié peut notamment saisir le conseil du lieu de travail, de son domicile lorsque le travail est effectué à domicile ou hors établissement, du lieu de conclusion de l’engagement ou du lieu où l’employeur est établi. **Article R1412-1 du Code du travail** [Source 4]\n\nUne commission de conciliation peut également être saisie par la partie la plus diligente au moyen d’une requête écrite, ou par le préfet. **Article R2623-3 du Code du travail** [Source 5]\n\nEnfin, les litiges relatifs à la conformité, à l’homologation ou au refus d’homologation d’une charte relèvent exclusivement du tribunal judiciaire désigné par décret. Le recours doit en principe être formé dans un délai de deux mois ; la juridiction statue dans un délai de quatre mois. **Article L7342-10 du Code du travail** [Source 2]\n\nLe contexte ne permet pas de déterminer quel recours est applicable sans connaître la nature précise du litige.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7342-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L616-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1412-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2623-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 197.73240999877453,
+      "vectorSearchMs": 703.3623530007899,
+      "jinaRerankingMs": 557.9793730005622,
+      "mappingMs": 0.034745000302791595,
+      "totalMs": 1459.144972000271,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01710600033402443,
+      "contextBuilderMs": 0.050137000158429146,
+      "generationMs": 3157.3816330004483,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4616.609183000401
+    },
+    "judge": {
+      "questionId": "q433",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale pour identifier un recours applicable et appelait une abstention ou une demande de précisions. La réponse énumère néanmoins plusieurs voies propres à des contentieux très spécifiques, sans pouvoir les rattacher au litige visé. Les informations sur la médiation de consommation, les prud'hommes et les délais de l'article L7342-10 sont globalement issues du contexte, mais la dernière voie est présentée de façon trop large alors qu'elle concerne précisément les chartes de plateformes. La phrase finale reconnaissant l'insuffisance du contexte ne corrige pas le fait que la réponse tente substantiellement de répondre malgré l'abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont juridiquement pertinentes pour les hypothèses spécifiques évoquées (médiation de consommation, litiges transfrontaliers de consommation, compétence prud’homale, commission de conciliation et contentieux très particulier des chartes de plateformes). Toutefois, elles ne permettent pas d’identifier un recours adapté à la question générale, faute d’information sur la nature du litige, et ne justifient pas à elles seules une réponse générale exhaustive. En revanche, les affirmations substantielles effectivement formulées dans la réponse sont directement couvertes par les cinq sources citées ; la réserve finale sur l’impossibilité de déterminer le recours applicable découle de l’absence de précision dans la question plutôt que du contenu des sources."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1141.5542669985443,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1141.55556399934,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1141.5664689987898
+    },
+    "judge": {
+      "questionId": "q433",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est générale ; la réponse s'abstient explicitement de fournir une information juridique non fondée. Cette abstention correspond à l'attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, ce qui permet de constater que le contexte ne contient aucun élément juridique exploitable pour répondre à une question générale sur les recours. La réponse se limite à cette abstention et ne formule aucune affirmation juridique de fond nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

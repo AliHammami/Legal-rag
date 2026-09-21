@@ -1,0 +1,87 @@
+{
+  "questionId": "q212",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L251-1 du Code de commerce, le groupement d’intérêt économique (GIE) a pour objectifs :\n\n- de faciliter ou de développer l’activité économique de ses membres ;\n- d’améliorer ou d’accroître les résultats de cette activité.\n\nSes limites sont les suivantes :\n\n- il ne doit pas avoir pour objectif de réaliser des bénéfices pour lui-même ;\n- son activité doit être rattachée à l’activité économique de ses membres ;\n- elle doit rester auxiliaire par rapport à celle-ci, c’est-à-dire ne pas s’y substituer.\n\nLe GIE peut être constitué par au moins deux personnes physiques ou morales et pour une durée déterminée. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 182.03143800003454,
+      "vectorSearchMs": 616.9893620000221,
+      "jinaRerankingMs": 539.2235810002312,
+      "mappingMs": 0.03202599985525012,
+      "totalMs": 1338.3075759997591,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01166599988937378,
+      "contextBuilderMs": 0.012124000117182732,
+      "generationMs": 2141.988917000126,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3480.3348610000685
+    },
+    "judge": {
+      "questionId": "q212",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les objectifs et limites prévus par l’article L251-1 : facilitation ou développement de l’activité des membres, amélioration des résultats, absence de but lucratif propre, rattachement à l’activité des membres et caractère auxiliaire. La précision finale sur la constitution par au moins deux personnes et la durée déterminée est également explicitement présente dans le contexte, bien qu’elle soit accessoire à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L251-1 du Code de commerce et est exactement pertinente. Elle couvre tous les objectifs et limites affirmés : facilitation ou développement de l’activité des membres, amélioration des résultats, absence de bénéfices propres, rattachement à l’activité des membres et caractère auxiliaire. Elle couvre aussi la précision additionnelle relative à la constitution par deux ou plusieurs personnes et à la durée déterminée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L251-1 du Code de commerce, le groupement d’intérêt économique (GIE) a pour objectifs :\n\n- de faciliter ou développer l’activité économique de ses membres ;\n- d’améliorer ou d’accroître les résultats de cette activité.\n\nSon activité est toutefois limitée :\n\n- le GIE ne doit pas rechercher la réalisation de bénéfices pour lui-même ;\n- son activité doit être rattachée à celle de ses membres ;\n- elle ne peut avoir qu’un caractère auxiliaire par rapport à l’activité de ces derniers ;\n- le GIE est constitué pour une durée déterminée.\n\n[Article L251-1 du Code de commerce — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L251-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1312.3421490001492,
+      "routingCalls": 1,
+      "embeddingMs": 228.13574999989942,
+      "vectorSearchMs": 184.10847599990666,
+      "jinaRerankingMs": 520.1680490002036,
+      "mappingMs": 0.03372199973091483,
+      "totalMs": 2244.812479000073,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011644000187516212,
+      "contextBuilderMs": 0.011397999711334705,
+      "generationMs": 1729.8064999999478,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3974.6522770002484
+    },
+    "judge": {
+      "questionId": "q212",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les objectifs du GIE (faciliter ou développer l'activité économique des membres, améliorer ou accroître ses résultats) et ses limites (absence de bénéfices pour lui-même, rattachement à l'activité des membres et caractère auxiliaire). La mention de la durée déterminée est également exacte et expressément prévue par le contexte, même si elle relève davantage des modalités de constitution que des limites d'activité."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L251-1 du Code de commerce et est pleinement pertinente. Elle couvre tous les éléments importants de la réponse : objectifs de facilitation ou développement de l’activité des membres et d’amélioration des résultats, interdiction de réaliser des bénéfices propres, rattachement de l’activité à celle des membres, caractère auxiliaire, ainsi que la durée déterminée du groupement."
+    }
+  },
+  "failureStage": "none"
+}

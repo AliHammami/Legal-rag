@@ -1,0 +1,103 @@
+{
+  "questionId": "q425",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un commerçant assujetti à l’immatriculation qui ne l’a pas demandée dans les quinze jours suivant le début de son activité ne peut pas se prévaloir de la qualité de commerçant, jusqu’à son immatriculation, à l’égard des tiers ou des administrations. Toutefois, il ne peut pas invoquer son absence d’inscription pour échapper aux responsabilités et obligations inhérentes à l’activité commerciale. Il peut donc être tenu responsable des obligations commerciales qu’il a contractées, malgré son défaut d’immatriculation — **article L123-8 du Code de commerce [Source 1]**.\n\nCette règle doit être distinguée de la présomption attachée à l’immatriculation : l’immatriculation d’une personne physique fait présumer sa qualité de commerçant, mais cette présomption peut être combattue par les tiers ou les administrations qui prouvent le contraire — **article L123-7 du Code de commerce [Source 2]**.\n\nLe fait qu’un commerçant non immatriculé puisse être responsable de ses obligations ne permet toutefois pas de le présenter publiquement comme coupable d’une infraction ou de faits faisant l’objet d’une enquête ou d’une instruction avant toute condamnation. Une telle présentation porte atteinte au droit au respect de la présomption d’innocence. Dans ce cas, le juge peut, même en référé, ordonner notamment la publication d’une rectification ou la diffusion d’un communiqué, aux frais du responsable de l’atteinte — **article 9-1 du Code civil [Source 3]**.\n\nAinsi, la responsabilité commerciale résultant de l’activité exercée est indépendante de l’atteinte éventuelle à la présomption d’innocence : la première concerne les obligations envers les tiers, tandis que la seconde protège la personne contre une présentation publique prématurée comme coupable.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-7"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 277.3914090003818,
+      "vectorSearchMs": 660.0667399987578,
+      "jinaRerankingMs": 571.4746710006148,
+      "mappingMs": 0.022559000179171562,
+      "totalMs": 1509.01030100137,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010402001440525055,
+      "contextBuilderMs": 0.03243900090456009,
+      "generationMs": 4103.074384000152,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5612.142059998587
+    },
+    "judge": {
+      "questionId": "q425",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le mécanisme de l’article L123-8 : après quinze jours sans demande d’immatriculation, l’intéressé ne peut se prévaloir de la qualité de commerçant, mais ne peut opposer son défaut d’inscription pour échapper aux obligations et responsabilités inhérentes à cette qualité. Elle expose aussi correctement la protection de l’article 9-1 du code civil, y compris les mesures judiciaires de rectification ou de communiqué, et distingue de façon pertinente responsabilité commerciale et présomption d’innocence. L’ensemble des affirmations importantes est directement étayé par les trois sources fournies. L’ajout sur la présomption issue de l’immatriculation (L123-7) est exact, pertinent comme précision, et fondé par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L123-8 couvre les effets du défaut d’immatriculation et le maintien des responsabilités commerciales ; L123-7 couvre la précision ajoutée sur la présomption liée à l’immatriculation ; l’article 9-1 du code civil couvre la protection de la présomption d’innocence et les mesures de rectification ou de communiqué. Elles étayent toutes les affirmations importantes de la réponse, y compris la distinction finale entre obligations commerciales et protection contre une présentation publique prématurée comme coupable."
+    }
+  },
+  "routing": {
+    "answer": "Un commerçant soumis à immatriculation qui n’a pas effectué cette formalité dans les quinze jours suivant le début de son activité ne peut pas se prévaloir, jusqu’à son immatriculation, de la qualité de commerçant à l’égard des tiers ou des administrations. En revanche, il ne peut pas invoquer son défaut d’inscription pour échapper aux responsabilités et obligations liées à cette activité. Il peut donc être tenu responsable des obligations commerciales contractées envers les tiers, malgré son absence d’immatriculation — **Article L123-8 du Code de commerce [Source 1]**.\n\nCette règle ne signifie toutefois pas que l’intéressé doit être publiquement présenté comme coupable d’une infraction ou d’un comportement fautif. Le droit au respect de la présomption d’innocence demeure applicable : avant toute condamnation, une présentation publique comme coupable de faits faisant l’objet d’une enquête ou d’une instruction peut constituer une atteinte à cette présomption. Le juge peut alors ordonner, notamment en référé, une rectification ou la diffusion d’un communiqué, sans préjudice de la réparation du dommage subi — **Article 9-1 du Code civil [Source 3]**.\n\nAinsi, la responsabilité commerciale envers les tiers et la présomption d’innocence relèvent de deux questions distinctes :\n\n- l’absence d’immatriculation ne permet pas de se soustraire aux obligations et responsabilités commerciales ;\n- cette responsabilité ne permet pas, à elle seule, de présenter publiquement la personne comme coupable avant toute condamnation.\n\nEnfin, la présomption attachée à l’immatriculation concerne la qualité de commerçant et peut être combattue par les tiers ou les administrations apportant la preuve contraire — **Article L123-7 du Code de commerce [Source 2]**.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-7"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2558.8532449994236,
+      "routingCalls": 1,
+      "embeddingMs": 228.64259700104594,
+      "vectorSearchMs": 297.6294519994408,
+      "jinaRerankingMs": 504.34839900024235,
+      "mappingMs": 0.035648999735713005,
+      "totalMs": 3589.5640989989042,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.060298001393675804,
+      "contextBuilderMs": 0.03470299951732159,
+      "generationMs": 4051.932033000514,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7641.60475999862
+    },
+    "judge": {
+      "questionId": "q425",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement l’article L123-8 : absence de possibilité de se prévaloir de la qualité de commerçant jusqu’à l’immatriculation, sans possibilité d’échapper aux obligations et responsabilités inhérentes. Elle explique aussi correctement l’autonomie de la présomption d’innocence prévue par l’article 9-1 du code civil et les mesures judiciaires possibles en cas de présentation publique comme coupable avant condamnation. Les affirmations sont directement étayées par les sources 1 et 3 ; le complément sur la présomption issue de l’immatriculation est fidèlement fondé sur la source 2. La réponse répond bien sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 3 sont directement pertinentes : elles régissent respectivement les effets du défaut d’immatriculation sur les obligations et responsabilités du commerçant, et la protection de la présomption d’innocence avec les mesures judiciaires possibles. La source 2 est également pertinente pour le complément final sur la présomption de qualité de commerçant liée à l’immatriculation. Toutes les affirmations importantes de la réponse générée, y compris le délai de quinze jours, l’impossibilité d’échapper aux obligations, les conditions d’atteinte à la présomption d’innocence et les mesures de rectification ou communiqué, sont couvertes par les sources."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,91 @@
+{
+  "questionId": "q422",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 1155-1 du Code du travail**, le fait de porter ou de tenter de porter atteinte à l’exercice régulier des fonctions de médiateur est puni :\n\n- d’**un an d’emprisonnement** ;\n- de **3 750 euros d’amende**.\n\nLa source fournie ne prévoit pas de sanction distincte relevant spécifiquement du droit du travail : elle énonce une **sanction pénale prévue par le Code du travail**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1155-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.22643100097775,
+      "vectorSearchMs": 649.1716440003365,
+      "jinaRerankingMs": 621.0508970003575,
+      "mappingMs": 0.028763998299837112,
+      "totalMs": 1473.5056800004095,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010929999873042107,
+      "contextBuilderMs": 0.01158599928021431,
+      "generationMs": 2415.73871400021,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3889.277217000723
+    },
+    "judge": {
+      "questionId": "q422",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement la peine prévue par l'article L. 1155-1 du Code du travail : un an d'emprisonnement et 3 750 euros d'amende. Elle ne répond toutefois pas au volet demandé relatif aux peines correctionnelles applicables en droit pénal (notamment les catégories de peines encourues par une personne physique), ce qui la rend partielle au regard de la référence. Toutes les affirmations formulées sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle vise expressément l’atteinte, ou la tentative d’atteinte, à l’exercice régulier des fonctions de médiateur et fixe les peines d’un an d’emprisonnement et 3 750 euros d’amende. Elle couvre l’ensemble des affirmations substantielles de la réponse générée, y compris le constat qu’elle prévoit une sanction pénale au sein du Code du travail sans distinguer une autre sanction de droit du travail."
+    }
+  },
+  "routing": {
+    "answer": "- **Au titre du Code du travail** : le fait de porter ou de tenter de porter atteinte à l’exercice régulier des fonctions du médiateur est puni d’**un an d’emprisonnement** et de **3 750 € d’amende**. **Article L. 1155-1 du Code du travail** [Source 1].\n\n- **Au titre du Code pénal** : si les faits consistent, pour une personne chargée par l’autorité judiciaire ou une juridiction administrative d’une mission de conciliation ou de médiation, à solliciter ou agréer indûment des offres, promesses, dons, présents ou avantages en vue d’accomplir ou de s’abstenir d’accomplir un acte lié à sa fonction, ils sont punis de **dix ans d’emprisonnement** et de **1 000 000 € d’amende**, cette amende pouvant être portée au double du produit tiré de l’infraction. Les mêmes peines s’appliquent à la personne qui cède à ces sollicitations ou propose ces avantages. **Article 434-9 du Code pénal** [Source 2].\n\nLes sources fournies ne permettent pas de préciser les règles d’un éventuel cumul entre ces sanctions.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1155-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2935.987755998969,
+      "routingCalls": 1,
+      "embeddingMs": 266.9537450000644,
+      "vectorSearchMs": 299.945086998865,
+      "jinaRerankingMs": 548.6675040014088,
+      "mappingMs": 0.024447999894618988,
+      "totalMs": 4051.6056689992547,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04330400004982948,
+      "contextBuilderMs": 0.022067999467253685,
+      "generationMs": 3700.9340399987996,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7752.616499999538
+    },
+    "judge": {
+      "questionId": "q422",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La sanction du code du travail est exactement correcte. La réponse pénale fondée sur l'article 434-9 est également fidèle au contexte, mais elle vise spécifiquement la corruption d'une personne investie d'une mission judiciaire ou administrative de médiation, et non de façon générale l'atteinte à l'exercice régulier des fonctions du médiateur visée par la question. Elle ne reprend pas non plus les catégories générales de peines correctionnelles attendues dans la référence. Toutes les affirmations essentielles sont néanmoins explicitement appuyées par les deux sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et établit exactement la peine prévue par le code du travail pour l’atteinte à l’exercice régulier des fonctions du médiateur. La source 2 est pertinente pour une hypothèse pénale spécifique concernant la corruption d’une personne chargée d’une mission de médiation par l’autorité judiciaire ou une juridiction administrative, mais elle ne traite pas de manière générale de toute atteinte à l’exercice régulier des fonctions de médiateur. Elle couvre néanmoins intégralement les affirmations pénales effectivement formulées dans la réponse, y compris les peines et l’extension à l’auteur de l’offre ou de la cession aux sollicitations. L’affirmation sur l’absence de précision quant au cumul est compatible avec le fait que les sources ne le traitent pas."
+    }
+  },
+  "failureStage": "generation"
+}

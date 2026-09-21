@@ -1,0 +1,95 @@
+{
+  "questionId": "q360",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour éviter la **nullité de la société**, le contrat constitutif ou les statuts doivent principalement respecter deux exigences :\n\n- les fondateurs ne doivent pas être tous incapables ;\n- la société doit comprendre au moins **deux associés**, lorsque la loi impose ce nombre minimal.\n\nEn effet, selon l’**article 1844-10 du Code civil**, la nullité de la société ne peut résulter que de l’incapacité de tous les fondateurs ou de la violation des dispositions imposant un nombre minimal de deux associés [Source 1].\n\nLes statuts doivent également éviter de contenir des clauses contraires à une disposition impérative du droit des sociétés. Toutefois, lorsque la violation de cette disposition n’est pas sanctionnée par la nullité de la société, la clause est simplement **réputée non écrite**. De même, la seule violation des statuts ne constitue pas, en principe, une cause de nullité, sauf disposition légale contraire [Source 1].\n\nS’agissant de la responsabilité pénale, les éléments fournis ne prévoient pas une condition particulière que les statuts devraient contenir pour éviter cette responsabilité. Ils concernent plutôt les conséquences d’une **dissolution de la personne morale** :\n\n- la violation, par une personne physique, des obligations résultant d’une peine prononcée contre la personne morale est punie de **deux ans d’emprisonnement et 30 000 euros d’amende** ;\n- le maintien ou la reconstitution, ouverte ou déguisée, d’une personne morale dissoute est puni de **trois ans d’emprisonnement et 45 000 euros d’amende** ;\n- lorsque la dissolution a été prononcée pour une infraction commise en récidive, ou pour l’infraction de maintien ou de reconstitution, ces peines sont portées à **cinq ans d’emprisonnement et 75 000 euros d’amende**, conformément à l’**article 434-43 du Code pénal** [Source 2].\n\nAinsi, la validité des statuts relève de l’**article 1844-10 du Code civil**, tandis que la récidive aggrave les sanctions pénales applicables aux personnes physiques qui violent les obligations liées à la dissolution ou reconstituent la personne morale dissoute. Les sources fournies ne permettent pas de préciser davantage les conditions de la responsabilité pénale propre de la personne morale.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1844-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-43"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 242.9725150000304,
+      "vectorSearchMs": 591.1045089997351,
+      "jinaRerankingMs": 511.2124969996512,
+      "mappingMs": 0.03140200022608042,
+      "totalMs": 1345.3545439997688,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009883999824523926,
+      "contextBuilderMs": 0.033740000799298286,
+      "generationMs": 5102.8344019996,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6448.247609000653
+    },
+    "judge": {
+      "questionId": "q360",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne traite pas les exigences pertinentes de l’article L125-8 du Code de commerce (mention expresse de l’absence de privilège ou nantissement des fonds, ou de la levée de l’opposition, sous peine de nullité et responsabilité solidaire des signataires) et ne donne pas la règle de l’article 132-15 du Code pénal sur le décuplement du maximum de l’amende pour une personne morale en récidive de contravention de 5e classe dans l’année. Elle substitue des règles générales de nullité des sociétés et des sanctions relatives à la dissolution. En revanche, ses affirmations sont fidèlement appuyées par les deux extraits de contexte fournis, même si ce contexte est inadéquat pour répondre à la question. Elle tente bien de répondre et ne s’abstient pas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne répondent pas directement aux deux points précis de la question : elles ne contiennent ni l’exigence de mention prévue à l’article L125-8 du Code de commerce, ni la règle de l’article 132-15 du Code pénal sur le décuplement de l’amende en cas de récidive d’une contravention de 5e classe par une personne morale. Elles sont donc très insuffisantes, malgré une pertinence marginale sur la nullité des sociétés et une aggravation liée à une dissolution prononcée pour récidive. En revanche, les affirmations importantes effectivement formulées dans la réponse générée sont, dans l’ensemble, directement étayées par les extraits : causes de nullité et clauses réputées non écrites (source 1), ainsi que sanctions liées à la dissolution, au maintien ou à la reconstitution d’une personne morale et leur aggravation (source 2)."
+    }
+  },
+  "routing": {
+    "answer": "Pour éviter la nullité, le contrat constitutif ou les statuts doivent contenir expressément l’une des mentions suivantes :\n\n- soit qu’aucun fonds n’est grevé du privilège ou d’un nantissement prévu aux chapitres Ier à III du titre IV du livre concerné ;\n- soit, si un fonds est grevé, qu’aucune opposition n’a été formée avant l’adhésion d’un membre, ou qu’une mainlevée a été ordonnée par justice.\n\nCes exigences sont prévues **à peine de nullité** et sous la **responsabilité solidaire des signataires** par l’article L125-8 du Code de commerce [Source 1].\n\nS’agissant de la responsabilité pénale de la personne morale, l’article 414-7 du Code pénal prévoit que la personne morale pénalement responsable des infractions visées encourt, outre l’amende, les peines applicables aux personnes morales prévues à l’article 131-39 du même code. L’interdiction d’activité prévue au 2° de cet article porte sur l’activité dans laquelle ou à l’occasion de laquelle l’infraction a été commise [Source 2].\n\nEn revanche, les sources fournies ne précisent pas les règles particulières applicables à la **récidive** ni son incidence sur ces peines. Elles permettent seulement de distinguer la nullité du contrat ou des statuts, d’une part, et les sanctions pénales encourues par la personne morale, d’autre part.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L125-8"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "414-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1637.9914340004325,
+      "routingCalls": 1,
+      "embeddingMs": 259.9762039994821,
+      "vectorSearchMs": 273.9816709998995,
+      "jinaRerankingMs": 542.6910970006138,
+      "mappingMs": 0.026525000110268593,
+      "totalMs": 2714.695921000093,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06434500031173229,
+      "contextBuilderMs": 0.016547000035643578,
+      "generationMs": 3329.03607199993,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6043.827882999554
+    },
+    "judge": {
+      "questionId": "q360",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les mentions exigées par l'article L125-8 du Code de commerce, ainsi que la nullité et la responsabilité solidaire des signataires. En revanche, elle ne répond pas à l'élément essentiel relatif à la récidive de la personne morale : la règle attendue est celle de l'article 132-15 du Code pénal, prévoyant la multiplication par dix du maximum de l'amende en cas de nouvelle contravention de 5e classe dans le délai d'un an. La référence à l'article 414-7 est fondée sur le contexte mais ne traite pas cette récidive. Toutes les affirmations substantielles de la réponse sont néanmoins soutenues par les deux sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre les conditions statutaires, la nullité et la responsabilité solidaire. La source 2 est pertinente pour le régime général des peines des personnes morales, mais ne répond pas à la question essentielle de la récidive, faute de contenir la règle de l'article 132-15. Les sources sont donc seulement partiellement suffisantes pour la question globale. En revanche, elles couvrent les affirmations effectivement formulées : les mentions imposées et leurs conséquences sont couvertes par la source 1, et les peines applicables à la personne morale ainsi que la limitation de l'interdiction d'activité sont couvertes par la source 2 ; le constat d'absence d'information sur la récidive est justifié par le contenu fourni."
+    }
+  },
+  "failureStage": "generation"
+}

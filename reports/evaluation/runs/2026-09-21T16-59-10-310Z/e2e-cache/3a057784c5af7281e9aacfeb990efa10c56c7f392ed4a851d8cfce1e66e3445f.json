@@ -1,0 +1,103 @@
+{
+  "questionId": "q369",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un consommateur bénéficie de garanties importantes, mais la gratuité n’est pas toujours totale.\n\n- **Principe général :** le numéro destiné à obtenir la bonne exécution du contrat ou à traiter une réclamation **ne peut pas être surtaxé**. Il doit être indiqué dans le contrat et dans la correspondance du professionnel (**Article L121-16 du Code de la consommation [Source 1]**).\n\n- **Fournisseurs de services de communications électroniques :** le service après-vente, d’assistance technique ou de réclamation doit être accessible par un **numéro non géographique, fixe et non surtaxé**. Aucun coût complémentaire au coût de la communication téléphonique ne peut être facturé (**Article L224-38 du Code de la consommation [Source 2]**).\n\n- **Contenus et services numériques :** la même règle s’applique : numéro non géographique, fixe et non surtaxé, sans coût complémentaire autre que celui de la communication téléphonique (**Article L224-25-8 du Code de la consommation [Source 3]**).\n\n- **Attente avant la prise en charge :** lorsque le consommateur appelle le service du fournisseur avec le service de communications vocales auquel il a souscrit auprès de ce même fournisseur, **aucune somme ne peut lui être facturée avant sa mise en relation avec un interlocuteur prenant effectivement en charge sa demande** (**Articles L224-38 et L224-25-8 du Code de la consommation [Sources 2 et 3]**).\n\nAinsi, le consommateur peut être certain que le numéro ne doit pas être surtaxé et qu’aucun frais supplémentaire ne doit être ajouté au prix normal de la communication. En revanche, les textes prévoient que le **coût ordinaire de la communication téléphonique** peut subsister, sauf dans la situation particulière d’attente auprès de son propre fournisseur prévue par les articles L224-38 et L224-25-8.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-16"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-38"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 258.3458869997412,
+      "vectorSearchMs": 685.1565279997885,
+      "jinaRerankingMs": 557.0654480000958,
+      "mappingMs": 0.02639900054782629,
+      "totalMs": 1500.6204020008445,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01205699983984232,
+      "contextBuilderMs": 0.019208000041544437,
+      "generationMs": 4293.087879000232,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5793.751800999977
+    },
+    "judge": {
+      "questionId": "q369",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle générale de l'article L121-16 : le numéro pour l'exécution du contrat ou une réclamation ne peut être surtaxé, tout en précisant que le coût ordinaire de la communication peut subsister. Elle ajoute à juste titre les régimes spécifiques applicables aux fournisseurs de communications électroniques et aux contenus ou services numériques, y compris la gratuité de l'attente dans les conditions prévues. Toutes ces affirmations sont explicitement soutenues par les trois sources du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. La source 1 établit la règle générale d’absence de surtaxe et l’obligation de mention du numéro dans le contrat et la correspondance. Les sources 2 et 3 couvrent précisément les régimes particuliers invoqués pour les communications électroniques et les contenus ou services numériques, y compris l’absence de coût complémentaire, la persistance possible du seul coût de communication et la gratuité avant la mise en relation dans les conditions indiquées. Toutes les affirmations importantes de la réponse sont ainsi soutenues."
+    }
+  },
+  "routing": {
+    "answer": "Un consommateur peut être certain que le numéro destiné à obtenir la bonne exécution d’un contrat ou à traiter une réclamation **ne sera pas surtaxé**. Ce numéro doit en outre être indiqué dans le contrat et dans la correspondance du professionnel — **Article L121-16 du Code de la consommation [Source 1]**.\n\nToutefois, cette règle ne signifie pas nécessairement que l’appel est entièrement gratuit : elle interdit la surtaxe, mais le coût normal de la communication téléphonique peut rester dû.\n\nPour les **fournisseurs de services de communications électroniques** et les professionnels fournissant des **contenus ou services numériques**, les garanties sont plus précises :\n\n- le service doit être accessible par un numéro **non géographique, fixe et non surtaxé** ;\n- aucun coût complémentaire au coût de la communication téléphonique ne peut être facturé ;\n- lorsque le consommateur appelle avec le service téléphonique du fournisseur ou du professionnel concerné, **aucune somme ne peut lui être facturée avant sa mise en relation avec un interlocuteur prenant effectivement en charge sa demande** — **Articles L224-38 et L224-25-8 du Code de la consommation [Sources 2 et 3]**.\n\nAinsi, hors ces régimes particuliers, le consommateur est assuré de ne pas payer de surtaxe, mais pas nécessairement de bénéficier d’un appel totalement gratuit. Les sources fournies ne permettent pas d’affirmer qu’un numéro est toujours gratuit dans tous les cas.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-16"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-38"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1377.1336400005966,
+      "routingCalls": 1,
+      "embeddingMs": 234.77981499955058,
+      "vectorSearchMs": 94.28540800046176,
+      "jinaRerankingMs": 556.5642450004816,
+      "mappingMs": 0.0235829995945096,
+      "totalMs": 2262.8154610004276,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010599999688565731,
+      "contextBuilderMs": 0.017729999497532845,
+      "generationMs": 3527.1318720001727,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5789.985301999375
+    },
+    "judge": {
+      "questionId": "q369",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle générale de l’article L121-16 : le numéro pour l’exécution du contrat ou une réclamation ne peut être surtaxé et doit figurer dans le contrat et la correspondance. Elle précise justement que l’absence de surtaxe n’implique pas nécessairement la gratuité totale de l’appel. Les précisions additionnelles relatives aux fournisseurs de communications électroniques et aux contenus ou services numériques sont exactes et explicitement étayées par les sources 2 et 3."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes. La source 1 fonde la règle générale d’absence de surtaxe et l’obligation de mention dans le contrat et la correspondance. Les sources 2 et 3 couvrent précisément les régimes particuliers invoqués, y compris le numéro non géographique, fixe et non surtaxé, l’absence de coût additionnel à la communication et l’absence de facturation avant mise en relation effective dans les conditions qu’elles prévoient. L’ensemble couvre les affirmations importantes de la réponse, notamment la distinction entre absence de surtaxe et gratuité totale."
+    }
+  },
+  "failureStage": "none"
+}

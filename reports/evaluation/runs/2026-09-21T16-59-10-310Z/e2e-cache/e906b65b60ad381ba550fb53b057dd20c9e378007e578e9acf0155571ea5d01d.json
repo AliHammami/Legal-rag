@@ -1,0 +1,87 @@
+{
+  "questionId": "q125",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du titre s’appliquent aux salariés définis à l’article **L. 7211-2 du Code du travail**.\n\nEn sont exclus les **concierges attachés à la personne même du propriétaire**. Ceux-ci relèvent des dispositions du **titre II applicables aux employés de maison**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.7053270000033,
+      "vectorSearchMs": 563.3644989999011,
+      "jinaRerankingMs": 518.6524569997564,
+      "mappingMs": 0.06403299979865551,
+      "totalMs": 1321.8196809999645,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011719000060111284,
+      "contextBuilderMs": 0.011493999976664782,
+      "generationMs": 1642.6590539999306,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2964.5137050002813
+    },
+    "judge": {
+      "questionId": "q125",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d’application et l’exclusion prévus par l’article L. 7211-1 : salariés définis à l’article L. 7211-2, exclusion des concierges attachés à la personne même du propriétaire, relevant du titre II applicable aux employés de maison. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 7211-1, qui répond précisément à la question : elle identifie les salariés visés par renvoi à l’article L. 7211-2 et prévoit expressément l’exclusion des concierges attachés à la personne même du propriétaire, relevant du titre II applicable aux employés de maison. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Les dispositions du titre mentionné à l’article L. 7211-1 du Code du travail s’appliquent aux salariés définis à l’article L. 7211-2.\n\nEn sont exclus les concierges attachés à la personne même du propriétaire. Ceux-ci relèvent des dispositions du titre II applicables aux employés de maison. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1012.4123609997332,
+      "routingCalls": 1,
+      "embeddingMs": 239.40771100018173,
+      "vectorSearchMs": 237.95575999980792,
+      "jinaRerankingMs": 501.8566510002129,
+      "mappingMs": 0.02343200007453561,
+      "totalMs": 1991.6833509998396,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010077999904751778,
+      "contextBuilderMs": 0.01107200002297759,
+      "generationMs": 1287.0723180002533,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3278.786720999982
+    },
+    "judge": {
+      "questionId": "q125",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d'application prévu : les salariés définis à l'article L. 7211-2, à l'exclusion des concierges attachés à la personne même du propriétaire, qui relèvent du titre II applicable aux employés de maison. Tous les éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 7211-1 visé par la question. Elle identifie expressément les salariés concernés (ceux définis à l'article L. 7211-2), l'exclusion des concierges attachés à la personne même du propriétaire et leur rattachement au titre II applicable aux employés de maison. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,98 @@
+{
+  "questionId": "q440",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La juridiction compétente dépend de la nature du litige :\n\n- **Procédure relevant de l’article L. 420-7 du Code de commerce** :\n  - personne **ni commerçante ni artisane** : tribunal judiciaire de Paris ou tribunal judiciaire de Saint-Pierre selon le ressort [Source 2] ;\n  - personne **commerçante ou artisane** : tribunal de commerce de Paris ou de Saint-Pierre selon le ressort [Source 3].\n  - L’appel relève de la **cour d’appel de Paris** [Source 1].\n\n- **Fixation du prix d’un bail commercial révisé ou renouvelé** : président du tribunal judiciaire du lieu de situation de l’immeuble [Source 4].\n\n- **Procédure collective** :\n  - débiteur commerçant ou artisan : tribunal de commerce ;\n  - dans les autres cas : tribunal judiciaire [Source 5].\n\nLes éléments fournis ne permettent donc pas de déterminer une juridiction unique sans connaître la nature du litige et la qualité du débiteur ou de la personne concernée.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R420-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 9-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R145-23"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 353.4030140005052,
+      "vectorSearchMs": 675.1377790011466,
+      "jinaRerankingMs": 524.9874709993601,
+      "mappingMs": 0.028145000338554382,
+      "totalMs": 1553.5903660003096,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010144000872969627,
+      "contextBuilderMs": 0.16751099936664104,
+      "generationMs": 3051.9209620002657,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4605.719345999882
+    },
+    "judge": {
+      "questionId": "q440",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question est trop indéterminée pour désigner une juridiction unique. La réponse le reconnaît explicitement, tout en présentant de manière conditionnelle les règles de compétence correspondant aux différents cas couverts par le contexte. Ces affirmations sont soutenues par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "Les sources sont directement pertinentes pour plusieurs hypothèses de compétence juridictionnelle et permettent d’étayer le constat qu’une juridiction unique ne peut être déterminée sans qualification du litige. Elles couvrent les règles évoquées pour les procédures de l’article L. 420-7, les baux commerciaux et les procédures collectives. Toutefois, les annexes 9-4 et 9-5 indiquent un siège à Paris avec un ressort incluant celui du tribunal supérieur d’appel de Saint-Pierre ; elles ne soutiennent pas clairement l’affirmation selon laquelle le tribunal judiciaire ou le tribunal de commerce de Saint-Pierre serait lui-même compétent. Cette imprécision limite légèrement la couverture."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1024.475819999352,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1024.4767699986696,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1024.4858919996768
+    },
+    "judge": {
+      "questionId": "q440",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question ne contient aucun fait permettant d'identifier une juridiction compétente. La réponse s'abstient explicitement et indique correctement qu'une réponse fiable est impossible sur cette base."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. L'abstention est cohérente avec l'absence de contexte, mais aucune source ne permet d'étayer les constats formulés dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

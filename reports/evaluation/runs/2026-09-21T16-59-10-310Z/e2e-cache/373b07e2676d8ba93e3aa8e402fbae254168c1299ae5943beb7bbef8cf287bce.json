@@ -1,0 +1,87 @@
+{
+  "questionId": "q384",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L111-6 du Code de la consommation** :\n\n- Le **producteur** doit informer le **vendeur professionnel** de la durée pendant laquelle les mises à jour logicielles qu’il fournit resteront compatibles avec les fonctionnalités du bien.\n- Le **vendeur professionnel** doit mettre cette information à la disposition du consommateur.\n- Le **producteur** doit également informer le consommateur, de manière lisible et compréhensible, des caractéristiques essentielles de chaque mise à jour, notamment :\n  - l’espace de stockage nécessaire ;\n  - son impact sur les performances du bien ;\n  - l’évolution des fonctionnalités du bien résultant de la mise à jour.  \n  [Source 1 — Article L111-6 du Code de la consommation]\n\nLe texte précise que les modalités d’application doivent être fixées par décret.\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code de commerce** relative aux rapports publics des sociétés d’exploitation des ressources. Il n’est donc pas possible de déterminer, à partir des seules sources disponibles, comment ces obligations s’articuleraient avec celles prévues pour ces sociétés.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 257.7311879992485,
+      "vectorSearchMs": 669.4055690001696,
+      "jinaRerankingMs": 565.0907889995724,
+      "mappingMs": 0.027697999961674213,
+      "totalMs": 1492.2828790005296,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010540999472141266,
+      "contextBuilderMs": 0.020539999939501286,
+      "generationMs": 3343.08536899928,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4835.414625999518
+    },
+    "judge": {
+      "questionId": "q384",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément toutes les obligations prévues par l’article L111-6 du code de la consommation : information du vendeur par le producteur sur la durée de compatibilité, mise à disposition au consommateur, puis information directe du consommateur sur les caractéristiques essentielles des mises à jour. En revanche, elle ne fournit pas l’articulation demandée avec l’obligation de rapport public prévue par le code de commerce, alors que celle-ci est un élément essentiel de la question et de la référence. Son constat d’absence de source pertinente dans le contexte est toutefois exact : le contexte ne contient que l’article L111-6. Toutes les affirmations substantielles sont donc fondées sur le contexte. Il ne s’agit pas d’une abstention globale, car elle répond effectivement à une partie substantielle de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie (article L111-6 du code de la consommation) est directement pertinente pour les obligations d'information relatives aux mises à jour logicielles et suffit à établir l'absence, dans le contexte, de disposition du code de commerce sur les rapports publics mentionnés. Elle est toutefois incomplète pour répondre positivement à l'ensemble de la question, faute de source sur l'article L232-6-2 du code de commerce. Les affirmations importantes de la réponse générée sont toutes couvertes : les informations dues au vendeur et au consommateur, les exemples de caractéristiques essentielles, le renvoi au décret, ainsi que le constat d'absence de disposition pertinente dans les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L111-6 du Code de la consommation** :\n\n- Le **producteur** doit informer le **vendeur professionnel** de la durée pendant laquelle les mises à jour logicielles qu’il fournit restent compatibles avec les fonctionnalités du bien.\n- Le **vendeur professionnel** doit mettre cette information à la disposition du consommateur.\n- Le producteur doit également informer directement le consommateur, de manière lisible et compréhensible, des caractéristiques essentielles de chaque mise à jour, notamment :\n  - l’espace de stockage nécessaire ;\n  - l’impact sur les performances du bien ;\n  - l’évolution des fonctionnalités apportée par la mise à jour.\n\nLes modalités d’application doivent être précisées par décret. [Source 1]\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code de commerce** relative aux rapports publics des sociétés d’exploitation des ressources. Il ne permet donc pas de déterminer comment ces obligations s’articuleraient avec celles concernant ces rapports.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1432.7560629993677,
+      "routingCalls": 1,
+      "embeddingMs": 241.92379400040954,
+      "vectorSearchMs": 306.5356510002166,
+      "jinaRerankingMs": 614.4819009993225,
+      "mappingMs": 0.02555900067090988,
+      "totalMs": 2595.7638479992747,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02884799987077713,
+      "contextBuilderMs": 0.012070000171661377,
+      "generationMs": 2216.1397150000557,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4811.952980000526
+    },
+    "judge": {
+      "questionId": "q384",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les obligations prévues à l’article L111-6 du code de la consommation, y compris l’information directe du consommateur sur les caractéristiques essentielles des mises à jour. Elle ne répond toutefois pas au volet relatif à l’article L232-6-2 du code de commerce ni à l’articulation entre les deux régimes, pourtant attendu par la question et la référence. Cette omission est justifiée au regard du contexte, qui ne contient effectivement aucune disposition du code de commerce. Toutes les affirmations positives sont directement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour les obligations d'information relatives aux mises à jour logicielles prévues par l'article L111-6 du code de la consommation et couvre l'ensemble des affirmations positives de la réponse (durée de compatibilité, mise à disposition par le vendeur, information directe du consommateur sur les caractéristiques, décret). Elle ne contient aucune disposition du code de commerce sur les rapports publics des sociétés d'exploitation des ressources, mais elle permet de soutenir le constat d'absence de cet élément dans le contexte fourni. La pertinence globale n'est pas maximale car la question comporte aussi ce second volet, non documenté par les sources."
+    }
+  },
+  "failureStage": "generation"
+}

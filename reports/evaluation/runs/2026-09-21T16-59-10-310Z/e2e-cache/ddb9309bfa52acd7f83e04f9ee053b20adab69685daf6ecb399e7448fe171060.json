@@ -1,0 +1,103 @@
+{
+  "questionId": "q039",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le fait est puni de **dix ans d’emprisonnement** et de **150 000 euros d’amende**. Il s’agit donc d’une peine privative de liberté assortie d’une peine d’amende. **Article 511-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.17525099997874,
+      "vectorSearchMs": 700.7462069999892,
+      "jinaRerankingMs": 492.7734010000713,
+      "mappingMs": 0.032180999987758696,
+      "totalMs": 1425.7571059999755,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01317000004928559,
+      "contextBuilderMs": 0.020939999958500266,
+      "generationMs": 2259.349552000058,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3685.1526340000564
+    },
+    "judge": {
+      "questionId": "q039",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la peine prévue pour le fait visé : dix ans d’emprisonnement et 150 000 euros d’amende. Elle qualifie correctement les deux composantes de la peine et cite l’article 511-1, explicitement présent dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise exactement le fait de se prêter à un prélèvement de cellules ou de gamètes afin de faire naître un enfant génétiquement identique à une autre personne, et prévoit explicitement dix ans d’emprisonnement et 150 000 euros d’amende. Elle couvre intégralement les affirmations de la réponse, y compris la nature privative de liberté et pécuniaire des sanctions."
+    }
+  },
+  "routing": {
+    "answer": "Le fait de se prêter à ce prélèvement est puni de **dix ans d’emprisonnement** et de **150 000 euros d’amende**. Il s’agit donc d’une peine d’emprisonnement assortie d’une peine d’amende, et non d’une réclusion criminelle [Source 1 — Article 511-1 du Code pénal].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "511-1-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "214-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1644.4581459999317,
+      "routingCalls": 1,
+      "embeddingMs": 381.99634899990633,
+      "vectorSearchMs": 66.29629099997692,
+      "jinaRerankingMs": 539.6010820000665,
+      "mappingMs": 0.04248800000641495,
+      "totalMs": 2632.4237740000244,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0176370000699535,
+      "contextBuilderMs": 0.023344000102952123,
+      "generationMs": 2082.703513000044,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4715.179690000019
+    },
+    "judge": {
+      "questionId": "q039",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les peines prévues par l’article 511-1 : dix ans d’emprisonnement et 150 000 euros d’amende. La précision selon laquelle il ne s’agit pas d’une réclusion criminelle est cohérente avec le texte fourni et distingue correctement cette infraction de celle de l’article 214-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement applicable au comportement visé et énonce exactement dix ans d’emprisonnement et 150 000 euros d’amende. Elle couvre pleinement l’affirmation principale. La précision sur l’absence de réclusion criminelle est cohérente avec la qualification expresse d’emprisonnement dans cette source, et la source 3 fournit en outre un contraste explicite avec une infraction distincte punie de réclusion criminelle."
+    }
+  },
+  "failureStage": "none"
+}

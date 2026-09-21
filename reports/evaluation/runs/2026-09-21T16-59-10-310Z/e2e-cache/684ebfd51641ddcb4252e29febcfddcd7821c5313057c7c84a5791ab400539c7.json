@@ -1,0 +1,87 @@
+{
+  "questionId": "q228",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après l’article L443-1 du Code de commerce, les publicités destinées aux consommateurs, diffusées sur tout support ou visibles de l’extérieur du lieu de vente, qui annoncent une réduction de prix ou un prix promotionnel sur des produits alimentaires périssables doivent :\n\n- préciser la **nature des produits** proposés ;\n- préciser leur **origine** ;\n- indiquer la **période de validité** de l’offre ;\n- faire apparaître la mention de l’origine dans des caractères d’une taille **au moins égale à celle du prix**.\n\nEn outre, le terme **« gratuit »** ne peut pas être utilisé comme outil marketing ou promotionnel dans le cadre d’une relation commerciale concernant un produit alimentaire.\n\nLorsque l’ampleur ou la fréquence des promotions est susceptible de désorganiser les marchés, leur périodicité et leur durée peuvent être fixées par arrêté interministériel ou, à défaut, préfectoral. Le non-respect de ces règles est puni d’une amende de **15 000 €**. [Source 1 — Article L443-1 du Code de commerce]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 346.19430099986494,
+      "vectorSearchMs": 674.5782730001956,
+      "jinaRerankingMs": 561.6561380000785,
+      "mappingMs": 0.058461000211536884,
+      "totalMs": 1582.5186180006713,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011461999267339706,
+      "contextBuilderMs": 0.05760199949145317,
+      "generationMs": 2831.672543999739,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4414.271716000512
+    },
+    "judge": {
+      "questionId": "q228",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les conditions essentielles du I de l’article L443-1 : nature, origine, durée de l’offre et taille des caractères relatifs à l’origine. Elle mentionne aussi correctement l’interdiction du terme « gratuit ». Les précisions additionnelles sur la réglementation de la périodicité et de la durée des promotions, ainsi que l’amende de 15 000 €, sont également explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L443-1 pertinent. Elle couvre toutes les conditions citées pour la publicité des prix promotionnels (nature, origine, période de l’offre, taille des caractères), l’interdiction de « gratuit », ainsi que les précisions additionnelles sur la fixation de la périodicité/durée des promotions et l’amende de 15 000 €."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’**article L443-1 du Code de commerce**, toute publicité destinée aux consommateurs, quel que soit son support, ou visible depuis l’extérieur du lieu de vente, annonçant une réduction de prix ou un prix promotionnel sur des produits alimentaires périssables doit :\n\n- préciser **la nature des produits** proposés ;\n- indiquer **leur origine** ;\n- mentionner **la période pendant laquelle l’offre est valable** ;\n- présenter la mention de l’origine avec des caractères **d’une taille au moins égale à celle du prix**.\n\nEn outre, le terme **« gratuit »** ne peut pas être utilisé comme outil marketing ou promotionnel dans le cadre d’une relation commerciale portant sur un produit alimentaire.\n\nLorsque l’ampleur ou la fréquence des promotions est susceptible de désorganiser les marchés, leur périodicité et leur durée peuvent être fixées par arrêté interministériel ou, à défaut, préfectoral. [Source 1]\n\nLe non-respect des trois premières obligations est puni d’une **amende de 15 000 €**, et la cessation de la publicité illicite peut être ordonnée. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2253.887845000252,
+      "routingCalls": 1,
+      "embeddingMs": 819.712896999903,
+      "vectorSearchMs": 226.9555289996788,
+      "jinaRerankingMs": 586.865214000456,
+      "mappingMs": 0.04257300030440092,
+      "totalMs": 3887.494265000336,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010909000411629677,
+      "contextBuilderMs": 0.011890999972820282,
+      "generationMs": 3194.6099280007184,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7082.139123999514
+    },
+    "judge": {
+      "questionId": "q228",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement toutes les conditions visées : nature, origine, période de validité et taille des caractères de l’origine égale (formulée comme « au moins égale », ce qui reste compatible) à celle du prix, ainsi que l’interdiction de l’emploi de « gratuit ». Les précisions additionnelles sur l’encadrement des promotions, l’amende et la cessation de publicité sont exactes et explicitement présentes dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement l’article L443-1 cité par la réponse et traite précisément des publicités annonçant une réduction ou un prix promotionnel sur des produits alimentaires périssables. Elle couvre toutes les affirmations importantes : nature, origine, période de l’offre, taille des caractères relatifs à l’origine, interdiction du terme « gratuit », encadrement éventuel de la périodicité et de la durée des promotions, amende de 15 000 € et possibilité d’ordonner la cessation de la publicité."
+    }
+  },
+  "failureStage": "none"
+}

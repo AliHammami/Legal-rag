@@ -1,0 +1,86 @@
+{
+  "questionId": "q488",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’ouverture d’une crèche.\n\nElles prévoient seulement :\n\n- pour l’obtention d’un **agrément de services à la personne**, des moyens humains, matériels et financiers suffisants, l’engagement de respecter un cahier des charges, l’absence de certaines condamnations ou sanctions concernant les dirigeants, ainsi que, lorsque l’activité concerne des mineurs, l’absence d’inscription au fichier judiciaire des auteurs d’infractions sexuelles — **Article R7232-6 du Code du travail [Source 1]** ;\n- une autorisation préfectorale préalable pour engager ou produire un enfant de moins de seize ans dans certaines activités — **Article R7124-1 du Code du travail [Source 2]**.\n\nCes dispositions ne précisent pas les règles propres à la création et au fonctionnement d’une crèche.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7124-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.4496480000089,
+      "vectorSearchMs": 839.5075500000094,
+      "jinaRerankingMs": 541.4843790000014,
+      "mappingMs": 0.03446000000985805,
+      "totalMs": 1588.11230600001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.038004000001819804,
+      "contextBuilderMs": 0.24467600000207312,
+      "generationMs": 2309.061941000007,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3897.6033659999957
+    },
+    "judge": {
+      "questionId": "q488",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas de déterminer les conditions propres d’ouverture d’une crèche. Les précisions complémentaires sur l’agrément de services à la personne et l’autorisation concernant certaines activités d’enfants sont fidèles aux deux sources et indiquent correctement qu’elles ne répondent pas à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne traitent pas directement de l’ouverture ou du fonctionnement d’une crèche, mais elles sont suffisamment pertinentes pour étayer l’abstention : la première concerne un agrément de services à la personne, et la seconde l’autorisation d’employer ou produire des mineurs dans certaines activités. La réponse décrit fidèlement les conditions figurant à l’article R7232-6 et l’autorisation préfectorale prévue à l’article R7124-1, puis constate correctement que ces textes ne donnent pas les règles propres aux crèches. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1392.264857000002,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1392.2883810000058,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1392.3603159999911
+    },
+    "judge": {
+      "questionId": "q488",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, conformément à l'attente, car aucun contexte n'est fourni et la question sur les conditions d'ouverture d'une crèche est hors du périmètre du Code pénal. Elle ne formule aucune prétention juridique non étayée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc pas de source pertinente pour répondre directement aux conditions d’ouverture d’une crèche. Toutefois, la réponse est une abstention et se limite à constater l’absence de contexte/corpus et de recherche ; elle ne formule aucune affirmation juridique de fond nécessitant une couverture documentaire."
+    }
+  },
+  "failureStage": "none"
+}

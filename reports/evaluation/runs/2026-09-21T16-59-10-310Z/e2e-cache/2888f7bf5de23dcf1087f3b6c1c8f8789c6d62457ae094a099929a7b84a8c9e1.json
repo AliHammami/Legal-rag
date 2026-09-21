@@ -1,0 +1,119 @@
+{
+  "questionId": "q017",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsque le dommage **n’est pas léger**, l’article 322-1, I, du **Code pénal** prévoit une peine de **deux ans d’emprisonnement et 30 000 euros d’amende** [Source 5].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R635-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-4-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R631-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 510.3772510000272,
+      "vectorSearchMs": 962.5053380000172,
+      "jinaRerankingMs": 548.9455149999703,
+      "mappingMs": 0.03880300000309944,
+      "totalMs": 2021.9266889999853,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013544000044930726,
+      "contextBuilderMs": 0.03256999998120591,
+      "generationMs": 1456.4043759999913,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3478.403357000032
+    },
+    "judge": {
+      "questionId": "q017",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement les deux peines prévues par l’article 322-1, I, pour une destruction, dégradation ou détérioration n’ayant pas causé seulement un dommage léger. Ces éléments sont explicitement énoncés dans la source 5 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 reproduit directement l’article 322-1, I, et énonce expressément que la destruction, dégradation ou détérioration d’un bien appartenant à autrui est punie de deux ans d’emprisonnement et de 30 000 euros d’amende, sauf dommage léger. Elle est donc parfaitement pertinente et couvre l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Lorsque le dommage **n’est pas léger**, la destruction, la dégradation ou la détérioration d’un bien appartenant à autrui est punie de **deux ans d’emprisonnement et de 30 000 euros d’amende**, selon l’article 322-1, I du Code pénal [Source 5].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R635-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-4-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R631-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1315.498695999966,
+      "routingCalls": 1,
+      "embeddingMs": 279.5938390000374,
+      "vectorSearchMs": 37.38401099998737,
+      "jinaRerankingMs": 552.3353360000183,
+      "mappingMs": 0.02581699995789677,
+      "totalMs": 2184.867109999992,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012719999998807907,
+      "contextBuilderMs": 0.035096999956294894,
+      "generationMs": 1796.602452000021,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3981.527422999963
+    },
+    "judge": {
+      "questionId": "q017",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement les peines prévues par l'article 322-1, I pour un dommage non léger : deux ans d'emprisonnement et 30 000 euros d'amende. Elle répond directement à la question et est explicitement étayée par la source 5 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 5 reproduit directement l'article 322-1, I : elle vise la destruction, dégradation ou détérioration d'un bien appartenant à autrui et prévoit deux ans d'emprisonnement et 30 000 euros d'amende, sauf dommage léger. Elle est donc exactement pertinente et couvre intégralement l'affirmation de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q375",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### 1. Responsabilités dans le contrat d’appui au projet d’entreprise\n\nLe contrat doit fixer le programme de préparation ainsi que les engagements respectifs des parties, en distinguant les stipulations applicables avant et après le début de l’activité économique. Il précise également les moyens mis à la disposition du bénéficiaire et les engagements qu’il peut prendre envers les tiers, ainsi que la partie qui en assume la charge financière [Source 2].\n\nS’agissant de la responsabilité envers les tiers :\n\n- **Avant l’immatriculation**, la personne morale responsable de l’appui est responsable des dommages causés par le bénéficiaire à l’occasion du programme d’appui et de préparation [Source 1] ;\n- **Après l’immatriculation**, elle garantit la responsabilité du bénéficiaire à l’occasion du contrat d’appui, à condition que celui-ci ait respecté les clauses du contrat jusqu’à son terme [Source 1].\n\n### 2. Compétence juridictionnelle en cas de consignation lors d’un ajournement de prononcé\n\nLe contexte fourni ne contient aucune disposition du **Code pénal** relative à la consignation en cas d’ajournement du prononcé, ni aucune règle permettant d’identifier la juridiction compétente. Il n’est donc pas possible de répondre à cette seconde partie à partir des seules sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L127-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.1890900004655,
+      "vectorSearchMs": 661.2161240000278,
+      "jinaRerankingMs": 574.3362260004506,
+      "mappingMs": 0.028101999312639236,
+      "totalMs": 1453.8416320001706,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013333999551832676,
+      "contextBuilderMs": 0.017114000394940376,
+      "generationMs": 3253.1596949994564,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4707.041894000024
+    },
+    "judge": {
+      "questionId": "q375",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément le régime de responsabilité prévu à l’article L127-6 du code de commerce, ainsi que des éléments contractuels issus de R127-1. En revanche, elle ne répond pas au volet relatif à l’ajournement du prononcé et à la consignation, alors que l’élément essentiel attendu est que la juridiction peut imposer cette consignation et en fixer le montant, le délai et la date de renvoi. L’abstention sur ce second volet est pleinement justifiée par l’absence de source pénale dans le contexte, de sorte que les affirmations formulées sont toutes fondées sur le contexte. Toutefois, l’abstention n’est pas correcte au regard de l’indicateur attendu, qui est false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour le volet commercial : L127-6 couvre la responsabilité envers les tiers avant immatriculation et la garantie après immatriculation, tandis que R127-1 couvre les stipulations contractuelles mentionnées. Elles ne fournissent toutefois aucune disposition du code pénal sur l'ajournement avec consignation, qui constitue un volet important de la question. Toutes les affirmations effectivement formulées dans la réponse sont néanmoins couvertes par les sources : les développements commerciaux le sont directement, et le constat d'absence de disposition pénale dans le contexte est cohérent avec les seules sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Dans le **contrat d’appui au projet d’entreprise**, les responsabilités sont définies de la manière suivante :\n\n- Le contrat fixe le programme d’accompagnement ainsi que les **engagements respectifs des parties**, en distinguant la période antérieure et postérieure au début de l’activité économique (**Article R. 127-1, 1° du Code de commerce [Source 2]**).\n- Il précise les moyens mis à disposition du bénéficiaire, leur utilisation et, le cas échéant, la rétribution de la personne morale accompagnatrice (**Article R. 127-1, 2° et 3° du Code de commerce [Source 2]**).\n- Il détermine les engagements du bénéficiaire envers les tiers et la partie qui en assume la charge financière (**Article R. 127-1, 4° du Code de commerce [Source 2]**).\n- Avant l’immatriculation, la personne morale responsable de l’appui est responsable envers les tiers des dommages causés par le bénéficiaire à l’occasion du programme d’appui. Après l’immatriculation, elle garantit la responsabilité liée au contrat d’appui, à condition que le bénéficiaire ait respecté ses clauses jusqu’à son terme (**Article L. 127-6 du Code de commerce [Source 1]**).\n\nEn revanche, les sources fournies ne contiennent **aucune disposition du Code pénal** relative à la compétence de la juridiction ou à la consignation en cas d’ajournement du prononcé. Il n’est donc pas possible de répondre juridiquement à cette seconde partie à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L127-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1674.3584640007466,
+      "routingCalls": 1,
+      "embeddingMs": 267.4346889993176,
+      "vectorSearchMs": 259.1944140000269,
+      "jinaRerankingMs": 541.2909840000793,
+      "mappingMs": 0.04483199957758188,
+      "totalMs": 2742.3551419992,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.050325000658631325,
+      "contextBuilderMs": 0.026518000289797783,
+      "generationMs": 3710.3683089995757,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6452.814511000179
+    },
+    "judge": {
+      "questionId": "q375",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La partie relative au contrat d’appui est correcte et précisément étayée : elle reprend la responsabilité de la personne morale avant immatriculation et sa garantie après immatriculation sous condition du respect des clauses, ainsi que les précisions réglementaires sur le contenu du contrat. En revanche, la réponse ne fournit pas l’élément demandé sur l’article 132-70-3 du code pénal : la possibilité pour la juridiction d’ajourner le prononcé en ordonnant une consignation, avec fixation du montant, du délai et de la date de renvoi. Elle est donc incomplète et seulement partiellement correcte au regard de la question entière. Toutes ses affirmations positives sont bien fondées sur le contexte fourni, et l’absence de disposition pénale dans ce contexte est correctement constatée. Toutefois, l’abstention sur la seconde partie n’est pas conforme à l’attente d’une réponse complète alors que l’expected abstention est false."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour la première partie relative au contrat d’appui : elles couvrent tant le contenu contractuel (R. 127-1) que la responsabilité envers les tiers avant immatriculation et la garantie après immatriculation (L. 127-6). Elles ne permettent toutefois pas de répondre au volet pénal portant sur la consignation lors d’un ajournement du prononcé, aucune disposition du code pénal n’étant fournie. Elles sont donc seulement partiellement suffisantes pour la question entière. En revanche, elles couvrent toutes les affirmations effectivement formulées dans la réponse générée : les développements sur le contrat sont étayés et le constat de l’absence de source pénale est supporté par le corpus fourni."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,119 @@
+{
+  "questionId": "q334",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les articles **L. 511-1 et L. 511-6 du Code de la consommation** ne figurent pas dans le contexte fourni. Il n’est donc pas possible de déterminer précisément, sur cette seule base, les pouvoirs des agents prévus par ces deux articles.\n\nLes dispositions disponibles indiquent toutefois que :\n\n- certains agents habilités disposent des pouvoirs prévus aux sections 1 à 3 du chapitre II du titre V du livre V et peuvent mettre en œuvre les mesures de l’article L. 521-1 ainsi que celles de la section 2 du chapitre Ier du titre II [Source 5] ;\n- les agents visés à l’article L. 511-5 disposent des pouvoirs prévus à la section 1, aux sous-sections 1 à 5 de la section 2 et à la section 3 du chapitre II du titre V [Source 1] ;\n- les agents mentionnés à l’article L. 511-22 disposent des pouvoirs définis aux sections 1 et 2 du chapitre II du titre V et peuvent également mettre en œuvre certaines mesures prévues par l’article L. 521-1 [Source 2] ;\n- il est interdit de faire obstacle à l’exercice de leurs fonctions [Source 3] ;\n- certaines opérations de visite et de saisie peuvent être réalisées par les agents de catégories A et B, sur demande du ministre chargé de l’économie, dans les conditions de l’article L. 512-51 [Source 4].\n\nPour répondre spécifiquement aux articles **L. 511-1 et L. 511-6**, il faudrait disposer de leur texte.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-51"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.66986600030214,
+      "vectorSearchMs": 638.3564640004188,
+      "jinaRerankingMs": 547.2952310005203,
+      "mappingMs": 0.03147100005298853,
+      "totalMs": 1381.4100479995832,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010781999677419662,
+      "contextBuilderMs": 0.031883000396192074,
+      "generationMs": 3118.055577000603,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4499.518964000046
+    },
+    "judge": {
+      "questionId": "q334",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question sur les pouvoirs prévus par les articles L. 511-1 et L. 511-6 et refuse de conclure, alors qu’une réponse était attendue. Les informations subsidiaires citées sont néanmoins fidèles aux extraits de contexte fournis (articles L. 511-5, L. 511-15, L. 511-22, L. 512-4 et L. 512-51)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les extraits sont issus du même ensemble normatif et portent sur les habilitations et pouvoirs d'autres catégories d'agents (L. 511-5, L. 511-15, L. 511-22) ainsi que sur certaines mesures d'enquête. Ils sont donc seulement indirectement pertinents : aucun ne contient le texte des articles L. 511-1 ou L. 511-6 demandé. Les affirmations subsidiaires de la réponse sont globalement étayées par les sources citées, notamment les pouvoirs de L. 511-5, L. 511-22 et les visites et saisies de L. 512-51. En revanche, les sources ne couvrent pas directement les pouvoirs propres aux articles visés ni ne démontrent textuellement leur absence du contexte."
+    }
+  },
+  "routing": {
+    "answer": "Selon **l’article L511-1 du Code de la consommation**, la recherche et la constatation des infractions et manquements s’effectuent conformément :\n\n- aux **habilitations** prévues par le livre V ;\n- aux **pouvoirs d’enquête** définis par ce même livre.  \n[Source 2]\n\nToutefois, le texte de **l’article L511-6** n’est pas fourni dans le contexte. Il n’est donc pas possible de préciser les pouvoirs particuliers qu’il attribue aux agents sans disposer de cette disposition.\n\nÀ titre complémentaire, l’article L511-5 prévoit, pour les agents qu’il vise, l’utilisation des pouvoirs définis à certaines sections du chapitre II du titre Ier du livre V, ainsi que la mise en œuvre de mesures prévues à la section 1 de ce chapitre [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L511-15"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-51"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1715.4288649996743,
+      "routingCalls": 1,
+      "embeddingMs": 235.25625499989837,
+      "vectorSearchMs": 83.96235600020736,
+      "jinaRerankingMs": 534.7605379996821,
+      "mappingMs": 0.03430800046771765,
+      "totalMs": 2569.473403999582,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010747000575065613,
+      "contextBuilderMs": 0.03180200047791004,
+      "generationMs": 2551.114764000289,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5120.642002999783
+    },
+    "judge": {
+      "questionId": "q334",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la règle générale de l'article L511-1 : les recherches et constatations s'exercent selon les habilitations et pouvoirs d'enquête du livre V. Elle ne précise toutefois pas le régime visé par l'article L511-6, qui constitue un élément essentiel de la question, en indiquant à juste titre que ce texte n'est pas présent dans le contexte. Les précisions accessoires sur l'article L511-5 sont soutenues par le contexte, mais ne compensent pas l'absence de réponse sur L511-6."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et permet d’établir la règle générale de l’article L. 511-1. En revanche, aucune source ne reproduit l’article L. 511-6, pourtant expressément visé par la question : les sources sont donc insuffisantes pour répondre entièrement à celle-ci. La source 1, relative à L. 511-5, est seulement complémentaire. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : L. 511-1 est cité fidèlement, l’absence de L. 511-6 dans le contexte est constatée correctement, et le complément sur L. 511-5 est étayé par la source 1."
+    }
+  },
+  "failureStage": "generation"
+}

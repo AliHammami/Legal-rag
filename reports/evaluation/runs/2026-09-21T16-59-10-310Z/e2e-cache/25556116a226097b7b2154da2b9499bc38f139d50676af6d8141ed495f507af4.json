@@ -1,0 +1,103 @@
+{
+  "questionId": "q333",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne contient pas le contenu de l’article **L. 455-1** ni les conditions propres à la cessation de plein droit des mesures de suspension qu’il prévoit. Il n’est donc pas possible de répondre précisément à la question sans ajouter une source non fournie.\n\nÀ titre distinct, les sources indiquent seulement que :\n\n- la suspension d’un contrat de crédit renouvelable prend fin de plein droit si l’emprunteur ne demande pas sa levée dans l’année suivant la suspension, le contrat étant alors résilié [Source 2] ;\n- la suspension provisoire visée par le Code de commerce cesse de plein droit dans le cas prévu par l’article L. 811-13, avec notification par le procureur de la République [Source 3].\n\nCes dispositions ne permettent pas d’établir les conditions applicables à l’article L. 455-1.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "443"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-82"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-53"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 180.06717400066555,
+      "vectorSearchMs": 622.8155699996278,
+      "jinaRerankingMs": 515.4006940005347,
+      "mappingMs": 0.03359699994325638,
+      "totalMs": 1318.3858319995925,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02100399974733591,
+      "contextBuilderMs": 0.036120000295341015,
+      "generationMs": 3182.7784679997712,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4501.233185000718
+    },
+    "judge": {
+      "questionId": "q333",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les conditions demandées (absence de décision de la chambre de l'instruction ou de la cour d'appel dans le délai d'un mois et, au plus tard, quarante jours après le prononcé). Elle s'abstient donc à tort alors qu'une réponse était attendue. En revanche, son constat selon lequel le contexte ne contient pas l'article L. 455-1 est exact, et les descriptions des sources 2 et 3 sont fidèles au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne porte sur l'article L. 455-1 ni sur les délais et la décision de la chambre de l'instruction ou de la cour d'appel demandés. Les sources 2 et 3 concernent bien d'autres régimes de suspension et sont donc insuffisantes pour répondre directement à la question. En revanche, elles couvrent les constats effectivement formulés par la réponse : la source 2 prévoit la résiliation de plein droit d'un crédit renouvelable après un an sans demande de levée, et la source 3 traite de la cessation d'une suspension provisoire relevant de l'article L. 811-13. Elles ne permettent pas d'établir les conditions de l'article L. 455-1, comme l'indique la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L455-1 du Code de la consommation [Source 1]**, les mesures de suspension de commercialisation cessent de plein droit dans deux hypothèses :\n\n- en cas de **décision de non-lieu ou de relaxe** ;\n- lorsque la chambre de l’instruction ou la cour d’appel, saisie d’un recours contre une décision relative à la mainlevée, **ne statue pas dans le délai d’un mois**, et en tout état de cause **au plus tard dans les quarante jours suivant le prononcé de la décision**.\n\nLa suspension reste toutefois exécutoire malgré un appel jusqu’à la réalisation de l’une de ces conditions.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L455-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L312-82"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1759.1592190004885,
+      "routingCalls": 1,
+      "embeddingMs": 855.0470359995961,
+      "vectorSearchMs": 77.53227599989623,
+      "jinaRerankingMs": 533.1538450000808,
+      "mappingMs": 0.032154000364243984,
+      "totalMs": 3224.9616769999266,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010900000110268593,
+      "contextBuilderMs": 0.019841999746859074,
+      "generationMs": 2596.1147180004045,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5821.11632199958
+    },
+    "judge": {
+      "questionId": "q333",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux causes de cessation de plein droit prévues par l’article L455-1 : la décision de non-lieu ou de relaxe, ainsi que l’absence de décision de la chambre de l’instruction ou de la cour d’appel dans le délai d’un mois, au plus tard quarante jours après le prononcé. Ces éléments, y compris le caractère exécutoire nonobstant appel, sont expressément supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L455-1 et énonce expressément la cessation en cas de non-lieu ou de relaxe, ainsi que la cessation de plein droit en l'absence de décision dans le délai d'un mois et, au plus tard, quarante jours après le prononcé. Elle couvre aussi l'affirmation selon laquelle la mesure demeure exécutoire nonobstant appel. La source 2 est hors sujet mais n'est pas mobilisée par la réponse."
+    }
+  },
+  "failureStage": "none"
+}

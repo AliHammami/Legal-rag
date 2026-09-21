@@ -1,0 +1,95 @@
+{
+  "questionId": "q083",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La donation entre vifs faite par contrat de mariage ne peut bénéficier aux **enfants à naître** que dans les cas prévus au **chapitre VI** du Code civil. En dehors de ces exceptions, elle est exclue à leur profit. [Source 1 — Article 1081 du Code civil]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1081"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1086"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.36507000005804,
+      "vectorSearchMs": 563.6226379999425,
+      "jinaRerankingMs": 499.6563750000205,
+      "mappingMs": 0.03531900001689792,
+      "totalMs": 1264.7107320001815,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011348000029101968,
+      "contextBuilderMs": 0.018951999954879284,
+      "generationMs": 1703.2427330000792,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.9964850000106
+    },
+    "judge": {
+      "questionId": "q083",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la restriction de l’article 1081 : la donation ne peut profiter aux enfants à naître que dans les cas énoncés au chapitre VI. La précision selon laquelle elle est exclue hors de ces exceptions est une reformulation directement déduite du texte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1081) est directement pertinente : elle énonce expressément que la donation entre vifs faite par contrat de mariage ne peut avoir lieu au profit des enfants à naître que dans les cas du chapitre VI. Elle couvre intégralement l'affirmation de la réponse, y compris l'exclusion hors de ces cas, qui découle directement du texte. La source 2 est connexe mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "La donation entre vifs de biens présents faite par contrat de mariage aux époux ne peut pas bénéficier aux enfants à naître, sauf dans les cas expressément prévus au chapitre VI du titre concerné. **Article 1081 du Code civil [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1081"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1086"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1115.8850049998146,
+      "routingCalls": 1,
+      "embeddingMs": 252.95366099989042,
+      "vectorSearchMs": 56.94475500006229,
+      "jinaRerankingMs": 487.3336600000039,
+      "mappingMs": 0.03382599982433021,
+      "totalMs": 1913.1780710001476,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010682000080123544,
+      "contextBuilderMs": 0.017761999974027276,
+      "generationMs": 1365.9388279998675,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3279.1563490000553
+    },
+    "judge": {
+      "questionId": "q083",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la restriction de l'article 1081 : le bénéfice des enfants à naître n'est admis que dans les cas énoncés au chapitre VI. Elle précise correctement qu'il s'agit d'une donation entre vifs de biens présents faite par contrat de mariage et est entièrement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, article 1081 du Code civil, est directement pertinente et énonce exactement la restriction demandée : la donation entre vifs de biens présents faite par contrat de mariage aux époux ne peut profiter aux enfants à naître que dans les cas du chapitre VI. Elle couvre intégralement l'affirmation principale de la réponse. La source 2 est également liée au même régime mais n'est pas nécessaire à la justification de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

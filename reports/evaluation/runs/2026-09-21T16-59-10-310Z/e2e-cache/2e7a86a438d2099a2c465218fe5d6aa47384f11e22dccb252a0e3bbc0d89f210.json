@@ -1,0 +1,95 @@
+{
+  "questionId": "q177",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L224-1 du Code de commerce encadre la dénomination sociale d’une société par actions de trois manières :\n\n- elle doit comporter une dénomination sociale ;\n- cette dénomination doit être précédée ou suivie de la mention de la forme sociale ;\n- elle doit également être précédée ou suivie de l’indication du montant du capital social.\n\nLe nom d’un ou plusieurs associés peut être intégré à la dénomination sociale. Toutefois, dans une société en commandite par actions, le nom des associés commanditaires ne peut pas y figurer.\n\n**Article L224-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L224-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R123-238"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.52882800018415,
+      "vectorSearchMs": 694.2201919998042,
+      "jinaRerankingMs": 570.9331559999846,
+      "mappingMs": 0.09174699988216162,
+      "totalMs": 1452.808989000041,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01142500014975667,
+      "contextBuilderMs": 0.06350899999961257,
+      "generationMs": 2335.3611420001835,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3788.2566510001197
+    },
+    "judge": {
+      "questionId": "q177",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les exigences de l’article L224-1 : désignation par une dénomination sociale, mention de la forme sociale et du capital, possibilité d’inclure le nom d’associés, avec l’exception des commanditaires dans une SCA. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L224-1 et énonce explicitement toutes les règles mentionnées dans la réponse (dénomination sociale, mention de la forme et du capital, inclusion possible du nom d’associés, exception des associés commanditaires en SCA). La source 2 est également connexe mais non nécessaire. Toutes les affirmations importantes sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "L’article **L224-1 du Code de commerce** encadre la dénomination sociale d’une société par actions sur plusieurs points :\n\n- elle doit être précédée ou suivie de la **mention de la forme sociale** de la société ;\n- elle doit également être accompagnée de l’**indication du montant du capital social** ;\n- le nom d’un ou plusieurs associés peut être intégré à la dénomination sociale ;\n- toutefois, dans une **société en commandite par actions**, le nom des associés commanditaires ne peut pas y figurer.\n\nAinsi, la dénomination sociale doit permettre d’identifier la forme de la société et le montant de son capital, tout en respectant l’interdiction spécifique concernant le nom des commanditaires. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L224-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R123-238"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1227.6321129999124,
+      "routingCalls": 1,
+      "embeddingMs": 243.34951800014824,
+      "vectorSearchMs": 173.62465200014412,
+      "jinaRerankingMs": 551.3223949996755,
+      "mappingMs": 0.030691000167280436,
+      "totalMs": 2195.9999460000545,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016119999811053276,
+      "contextBuilderMs": 0.019453000277280807,
+      "generationMs": 2103.1442260001786,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4299.197210000362
+    },
+    "judge": {
+      "questionId": "q177",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les exigences de l’article L224-1 : mention de la forme sociale et du capital, possibilité d’inclure le nom d’associés, et exception pour les commanditaires d’une SCA. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit précisément les règles de l’article L224-1 relatives à la mention de la forme sociale et du capital, à l’inclusion possible du nom d’associés et à l’exception des associés commanditaires en SCA. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

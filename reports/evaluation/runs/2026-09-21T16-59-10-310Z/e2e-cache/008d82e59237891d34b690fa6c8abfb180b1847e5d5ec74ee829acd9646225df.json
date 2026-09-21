@@ -1,0 +1,87 @@
+{
+  "questionId": "q191",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L231-1 du Code de commerce, cette clause peut être prévue :\n\n- dans les sociétés qui **n’ont pas la forme de société anonyme** ;\n- dans **toute société coopérative**.\n\nElle permet une augmentation du capital social par des versements successifs des associés ou par l’admission de nouveaux associés. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L231-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 205.69038900034502,
+      "vectorSearchMs": 698.0511349998415,
+      "jinaRerankingMs": 529.1452719997615,
+      "mappingMs": 0.027280999813228846,
+      "totalMs": 1432.9424379998818,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013293999712914228,
+      "contextBuilderMs": 0.011200000066310167,
+      "generationMs": 1845.1438529998995,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3278.1230910001323
+    },
+    "judge": {
+      "questionId": "q191",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux catégories prévues par l’article L231-1 : les sociétés n’ayant pas la forme de société anonyme et toute société coopérative. Elle décrit également correctement le mécanisme d’augmentation par versements successifs ou admission de nouveaux associés. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L231-1 et répond précisément à la question : elle vise les sociétés n’ayant pas la forme de société anonyme ainsi que toute société coopérative. Elle couvre également l’affirmation complémentaire sur les versements successifs ou l’admission de nouveaux associés."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L231-1 du Code de commerce, cette clause peut être prévue dans les statuts :\n\n- des sociétés qui n’ont pas la forme de société anonyme ;\n- de toute société coopérative.\n\nElle permet une augmentation du capital social par versements successifs des associés ou par admission de nouveaux associés. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L231-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1534.2177410000004,
+      "routingCalls": 1,
+      "embeddingMs": 264.3740389999002,
+      "vectorSearchMs": 170.19403100013733,
+      "jinaRerankingMs": 531.509987000376,
+      "mappingMs": 0.03971200017258525,
+      "totalMs": 2500.3630029996857,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010556000284850597,
+      "contextBuilderMs": 0.011763000395148993,
+      "generationMs": 1901.696837999858,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.091525000054
+    },
+    "judge": {
+      "questionId": "q191",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux catégories prévues par l'article L231-1 : les sociétés autres que les sociétés anonymes et toute société coopérative. Elle précise correctement le mécanisme d'augmentation par versements successifs ou admission de nouveaux associés. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L231-1 et vise exactement les formes de sociétés demandées : les sociétés n’ayant pas la forme de société anonyme et toute société coopérative. Elle couvre également l’affirmation complémentaire selon laquelle l’augmentation peut résulter de versements successifs ou de l’admission de nouveaux associés."
+    }
+  },
+  "failureStage": "none"
+}

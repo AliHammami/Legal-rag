@@ -1,0 +1,95 @@
+{
+  "questionId": "q111",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 711 du Code civil, la propriété des biens s’acquiert et se transmet :\n\n- par succession ;\n- par donation entre vifs ;\n- par donation testamentaire ;\n- par l’effet des obligations. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "711"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "712"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.78660400025547,
+      "vectorSearchMs": 625.0843879999593,
+      "jinaRerankingMs": 590.430904999841,
+      "mappingMs": 0.03571499977260828,
+      "totalMs": 1416.3687189999036,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012529000174254179,
+      "contextBuilderMs": 0.025911000091582537,
+      "generationMs": 990.6019540000707,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2407.0207369998097
+    },
+    "judge": {
+      "questionId": "q111",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les quatre modes énoncés à l’article 711 : succession, donation entre vifs, donation testamentaire et effet des obligations. Toutes les affirmations sont directement étayées par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 711 du Code civil et énonce exactement les modes d'acquisition et de transmission demandés. Elle couvre toutes les affirmations de la réponse générée. La source 2 est accessoire et n'est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 711 du Code civil, la propriété des biens s’acquiert et se transmet :\n\n- par succession ;\n- par donation entre vifs ;\n- par donation testamentaire ;\n- par l’effet des obligations.\n\nL’article 712 ajoute qu’elle peut également s’acquérir par accession ou incorporation, ainsi que par prescription, mais ces modes ne sont pas mentionnés dans l’article 711 [Source 1] [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "711"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "712"
+      }
+    ],
+    "profiling": {
+      "routingMs": 978.4893169999123,
+      "routingCalls": 1,
+      "embeddingMs": 221.46579500008374,
+      "vectorSearchMs": 72.04989799996838,
+      "jinaRerankingMs": 518.11829699995,
+      "mappingMs": 0.03010200010612607,
+      "totalMs": 1790.2013949998654,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012258000206202269,
+      "contextBuilderMs": 0.01890499982982874,
+      "generationMs": 1688.1169920000248,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3478.3598730000667
+    },
+    "judge": {
+      "questionId": "q111",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les modes prévus par l’article 711 : succession, donation entre vifs ou testamentaire, et effet des obligations. Le complément sur l’article 712 est exact, explicitement présenté comme distinct de l’article 711, et intégralement soutenu par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 711 et couvre tous les modes demandés : succession, donation entre vifs ou testamentaire, et effet des obligations. La source 2 est pertinente pour le complément explicite relatif à l'article 712 et soutient les mentions d'accession ou incorporation et de prescription. L'ensemble couvre toutes les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

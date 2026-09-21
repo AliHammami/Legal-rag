@@ -1,0 +1,95 @@
+{
+  "questionId": "q127",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L4221-1 du Code du travail**, les établissements et locaux de travail doivent :\n\n- être aménagés de façon à garantir la **sécurité des travailleurs** ;\n- être maintenus dans un **état constant de propreté** ;\n- présenter des conditions d’**hygiène et de salubrité** propres à assurer la **santé des travailleurs**.\n\nLes conditions d’application sont déterminées par des décrets en Conseil d’État [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R4534-138"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 237.2369300001301,
+      "vectorSearchMs": 612.6774579999037,
+      "jinaRerankingMs": 497.13949699979275,
+      "mappingMs": 0.0315849999897182,
+      "totalMs": 1347.115999000147,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011723000090569258,
+      "contextBuilderMs": 0.01957100024446845,
+      "generationMs": 1825.6004170002416,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3172.7645839997567
+    },
+    "judge": {
+      "questionId": "q127",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois exigences de l’article L4221-1 : sécurité, propreté constante, et hygiène/salubrité assurant la santé. La mention supplémentaire des décrets en Conseil d’État est également explicitement prévue par le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est exactement l’article L4221-1 visé par la question. Elle soutient intégralement les trois exigences énoncées (sécurité, propreté constante, hygiène et salubrité assurant la santé) ainsi que la précision sur les décrets en Conseil d’État. La source 2 est accessoire, mais ne nuit pas à la couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article **L4221-1 du Code du travail**, les établissements et locaux de travail doivent :\n\n- être aménagés de manière à garantir la **sécurité des travailleurs** ;\n- être maintenus dans un **état constant de propreté** ;\n- présenter des conditions d’**hygiène et de salubrité** propres à assurer la **santé des travailleurs**.\n\nLes conditions d’application sont déterminées par des décrets en Conseil d’État. [Source 1]\n\nPour certains locaux de travail fermés sur les chantiers, ces exigences sont notamment précisées par des règles relatives à l’aération, l’assainissement, l’ambiance thermique, la sécurité et l’aménagement des lieux de travail. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4221-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R4534-138"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1310.3989329999313,
+      "routingCalls": 1,
+      "embeddingMs": 201.78454999998212,
+      "vectorSearchMs": 270.690921000205,
+      "jinaRerankingMs": 529.7075149999,
+      "mappingMs": 0.04120599990710616,
+      "totalMs": 2313.4885959997773,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015456999652087688,
+      "contextBuilderMs": 0.026998999994248152,
+      "generationMs": 2198.169422000181,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4511.714364999905
+    },
+    "judge": {
+      "questionId": "q127",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois exigences de l’article L4221-1 : sécurité, propreté constante, et conditions d’hygiène et de salubrité assurant la santé. Elle ajoute correctement que les conditions d’application sont fixées par des décrets en Conseil d’État. La précision sur certains locaux fermés de chantier est conforme au second extrait de contexte et ne contredit pas la réponse à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L4221-1 et couvre intégralement les trois conditions énoncées (sécurité, propreté constante, hygiène et salubrité assurant la santé) ainsi que le renvoi aux décrets en Conseil d’État. La source 2 est pertinente pour la précision additionnelle, limitée à certains locaux fermés de chantier, et couvre les règles mentionnées sur l’aération, l’assainissement, l’ambiance thermique, la sécurité et l’aménagement."
+    }
+  },
+  "failureStage": "none"
+}

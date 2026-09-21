@@ -1,0 +1,95 @@
+{
+  "questionId": "q329",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les personnes morales reconnues pénalement responsables du délit prévu à l’**article L. 452-1 du Code de la consommation**, dans les conditions de l’article 121-2 du Code pénal, encourent :\n\n- **l’amende**, selon les modalités de l’article 131-38 du Code pénal ;\n- les peines prévues aux **2° à 9° de l’article 131-39 du Code pénal**.\n\nL’interdiction prévue au **2° de l’article 131-39** porte sur l’activité dans l’exercice ou à l’occasion de laquelle l’infraction a été commise. **Article L. 452-2 du Code de la consommation [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L452-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "435-15"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-47"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.8495199996978,
+      "vectorSearchMs": 780.7135840002447,
+      "jinaRerankingMs": 511.21656300034374,
+      "mappingMs": 0.04147000052034855,
+      "totalMs": 1485.8586840005592,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013586999848484993,
+      "contextBuilderMs": 0.04104499984532595,
+      "generationMs": 2118.3993610003963,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3604.326887000352
+    },
+    "judge": {
+      "questionId": "q329",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les sanctions prévues : amende selon l’article 131-38 et peines des 2° à 9° de l’article 131-39, avec la précision exacte sur la portée de l’interdiction du 2°. Toutes ces affirmations sont explicitement contenues dans la source 1. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise expressément les personnes morales responsables du délit de l’article L. 452-1 et énonce l’amende selon l’article 131-38, les peines des 2° à 9° de l’article 131-39, ainsi que la portée de l’interdiction du 2°. Elle couvre donc toutes les affirmations importantes de la réponse générée. Les sources 2 et 3 ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Les personnes morales reconnues pénalement responsables du délit prévu à l’article L. 452-1 du Code de la consommation encourent :\n\n- une amende, selon les modalités prévues par l’article 131-38 du Code pénal ;\n- les peines complémentaires prévues aux 2° à 9° de l’article 131-39 du Code pénal.\n\nLorsque l’interdiction prévue au 2° de l’article 131-39 est prononcée, elle porte sur l’activité dans l’exercice ou à l’occasion de laquelle l’infraction a été commise.\n\n**Fondement : article L452-2 du Code de la consommation [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L452-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1930.349003000185,
+      "routingCalls": 1,
+      "embeddingMs": 180.84344699978828,
+      "vectorSearchMs": 84.94153800047934,
+      "jinaRerankingMs": 535.4548159996048,
+      "mappingMs": 0.025200000032782555,
+      "totalMs": 2731.7040109997615,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01103800069540739,
+      "contextBuilderMs": 0.011547999456524849,
+      "generationMs": 1574.9505150001496,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4306.6866349997
+    },
+    "judge": {
+      "questionId": "q329",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les sanctions prévues : amende selon l'article 131-38, peines des 2° à 9° de l'article 131-39, et précision sur le champ de l'interdiction du 2°. Toutes ces affirmations sont explicitement contenues dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 452-2 vise expressément les personnes morales responsables du délit de l’article L. 452-1. Elle couvre explicitement l’amende selon l’article 131-38, les peines des 2° à 9° de l’article 131-39, ainsi que la portée de l’interdiction mentionnée au 2°."
+    }
+  },
+  "failureStage": "none"
+}

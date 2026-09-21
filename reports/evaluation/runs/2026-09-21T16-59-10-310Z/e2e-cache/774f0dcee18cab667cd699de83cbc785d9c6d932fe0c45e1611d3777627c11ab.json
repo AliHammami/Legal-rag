@@ -1,0 +1,103 @@
+{
+  "questionId": "q253",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L314-1, I du Code monétaire et financier**, un compte de paiement est **un compte détenu au nom d’une ou plusieurs personnes et utilisé pour l’exécution d’opérations de paiement** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.67352299951017,
+      "vectorSearchMs": 604.9735199995339,
+      "jinaRerankingMs": 576.0521790003404,
+      "mappingMs": 0.07728900015354156,
+      "totalMs": 1405.8106990000233,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011374999769032001,
+      "contextBuilderMs": 0.04279000032693148,
+      "generationMs": 1353.4761999994516,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2759.352195999585
+    },
+    "judge": {
+      "questionId": "q253",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition donnée au I de l’article L314-1 : compte détenu au nom d’une ou plusieurs personnes et utilisé aux fins de l’exécution d’opérations de paiement. Elle est entièrement étayée par la source 1 et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement le I de l'article L. 314-1 et énonce exactement la définition demandée. Elle couvre intégralement l'affirmation de la réponse générée. Les sources 2 et 3 sont accessoires, mais leur présence n'affecte pas la pertinence ni la couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L314-1 du Code monétaire et financier, un compte de paiement est **un compte détenu au nom d’une ou de plusieurs personnes et utilisé pour l’exécution d’opérations de paiement** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D314-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1124.9013030007482,
+      "routingCalls": 1,
+      "embeddingMs": 206.45799899939448,
+      "vectorSearchMs": 138.93179200030863,
+      "jinaRerankingMs": 586.2976120002568,
+      "mappingMs": 0.032414999790489674,
+      "totalMs": 2056.655824000016,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013024999760091305,
+      "contextBuilderMs": 0.028870999813079834,
+      "generationMs": 1183.3356109997258,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3240.0422369996086
+    },
+    "judge": {
+      "questionId": "q253",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition du I de l’article L314-1 : compte détenu au nom d’une ou plusieurs personnes et utilisé aux fins de l’exécution d’opérations de paiement. Elle répond directement à la question et est intégralement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement le I de l’article L. 314-1 et contient exactement la définition reprise dans la réponse générée. Elle est donc parfaitement pertinente et couvre intégralement l’affirmation formulée."
+    }
+  },
+  "failureStage": "none"
+}

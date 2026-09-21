@@ -1,0 +1,95 @@
+{
+  "questionId": "q019",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le blanchiment est **réputé occulte quels que soient les faits matériels qui le caractérisent**, conformément à l’article 324-1 du Code pénal, qui renvoie à l’article 9-1 du Code de procédure pénale. [Source 1]\n\nIl s’agit notamment :\n\n- de faciliter, par tout moyen, la justification mensongère de l’origine de biens ou revenus provenant d’un crime ou d’un délit ;\n- ou de concourir à une opération de placement, de dissimulation ou de conversion du produit direct ou indirect d’un crime ou d’un délit.\n\nLe blanchiment est alors puni, selon l’article 324-1 du Code pénal, de **cinq ans d’emprisonnement et de 375 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "324-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "324-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 247.5586460000486,
+      "vectorSearchMs": 604.6473289999994,
+      "jinaRerankingMs": 526.675774000003,
+      "mappingMs": 0.03795600001467392,
+      "totalMs": 1378.949559999979,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011364999983925372,
+      "contextBuilderMs": 0.01860000001033768,
+      "generationMs": 2918.536320000014,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4297.526983999996
+    },
+    "judge": {
+      "questionId": "q019",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le blanchiment est réputé occulte quels que soient les faits matériels qui le caractérisent, et énonce les peines de cinq ans d’emprisonnement et 375 000 euros d’amende. Les précisions sur les deux formes de blanchiment sont exactes et directement reprises du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle énonce expressément que le blanchiment est réputé occulte quels que soient les faits matériels qui le caractérisent, définit les deux modalités mentionnées et prévoit la peine de cinq ans d’emprisonnement et 375 000 euros d’amende. Elle couvre donc l’ensemble des affirmations importantes de la réponse. La source 2 est non nécessaire mais ne nuit pas à l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Le blanchiment est qualifié de **fait occulte quels que soient les faits matériels qui le caractérisent**, conformément à l’article 324-1 du Code pénal. Il s’agit notamment :\n\n- de faciliter, par tout moyen, la justification mensongère de l’origine de biens ou revenus provenant d’un crime ou d’un délit ayant procuré un profit direct ou indirect ;\n- ou d’apporter son concours à une opération de placement, de dissimulation ou de conversion du produit d’un crime ou d’un délit.\n\nDans tous ces cas, le blanchiment est réputé occulte au sens de l’article 9-1 du Code de procédure pénale. Il est puni de **cinq ans d’emprisonnement et de 375 000 euros d’amende** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "324-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "324-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1830.2431080000242,
+      "routingCalls": 1,
+      "embeddingMs": 252.34733200003393,
+      "vectorSearchMs": 75.107388000004,
+      "jinaRerankingMs": 530.7069829999818,
+      "mappingMs": 0.0427800000179559,
+      "totalMs": 2688.4820090000285,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0162830000044778,
+      "contextBuilderMs": 0.015529000025708228,
+      "generationMs": 2943.53102200001,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5632.056822000013
+    },
+    "judge": {
+      "questionId": "q019",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le blanchiment est réputé occulte quels que soient les faits matériels qui le caractérisent et mentionne exactement les peines de cinq ans d’emprisonnement et 375 000 euros d’amende. Les précisions sur les deux formes de blanchiment et le renvoi à l’article 9-1 du CPP sont explicitement supportés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 324-1 : elle établit que le blanchiment est réputé occulte quels que soient les faits matériels qui le caractérisent, décrit les deux modalités visées et prévoit les peines de cinq ans d'emprisonnement et 375 000 euros d'amende. Elle couvre donc l'ensemble des affirmations importantes de la réponse. La source 2 est accessoire mais reste juridiquement liée aux peines du blanchiment."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q138",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 6222-1 du Code du travail, il faut :\n\n- avoir **au moins 16 ans et au plus 29 ans révolus** au début de l’apprentissage ;\n- toutefois, un jeune d’**au moins 15 ans** peut débuter un contrat d’apprentissage s’il a accompli la scolarité du premier cycle de l’enseignement secondaire [Source 1].\n\nLes jeunes qui atteignent 15 ans avant la fin de l’année civile peuvent également commencer leur formation sous statut scolaire, dans un lycée professionnel ou un centre de formation d’apprentis, selon les conditions réglementaires prévues [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-12-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.76508999988437,
+      "vectorSearchMs": 681.0727220000699,
+      "jinaRerankingMs": 533.4331589997746,
+      "mappingMs": 0.026719000190496445,
+      "totalMs": 1438.330943999812,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0111799999140203,
+      "contextBuilderMs": 0.01587000023573637,
+      "generationMs": 1686.379368999973,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3124.7626789999194
+    },
+    "judge": {
+      "questionId": "q138",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les seuils d’âge et l’exception des jeunes d’au moins 15 ans ayant accompli le premier cycle du secondaire. Elle ajoute correctement la possibilité d’inscription sous statut scolaire avant la fin de l’année civile des 15 ans, explicitement prévue par le contexte. Toutes les affirmations importantes sont étayées par la source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 6222-1 visé par la question et couvre l’ensemble des affirmations de la réponse : plage d’âge de seize à vingt-neuf ans révolus, exception à partir de quinze ans sous condition de scolarité accomplie, ainsi que l’inscription sous statut scolaire avant le terme de l’année civile des quinze ans. La source 2 est accessoire mais également cohérente avec les conditions d’âge mentionnées."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L6222-1 du Code du travail :\n\n- En principe, il faut être âgé de **16 à 29 ans révolus au début de l’apprentissage**.\n- Une personne âgée d’**au moins 15 ans** peut également débuter un contrat d’apprentissage si elle justifie avoir **accompli la scolarité du premier cycle de l’enseignement secondaire**.\n- Les jeunes qui atteignent **15 ans avant la fin de l’année civile** peuvent commencer leur formation sous statut scolaire, dans un lycée professionnel ou un CFA, selon les conditions réglementaires applicables.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6222-12-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1229.113264999818,
+      "routingCalls": 1,
+      "embeddingMs": 259.01444200007245,
+      "vectorSearchMs": 233.64872499974445,
+      "jinaRerankingMs": 517.7620980003849,
+      "mappingMs": 0.023761000018566847,
+      "totalMs": 2239.58945700014,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010294999927282333,
+      "contextBuilderMs": 0.014258000068366528,
+      "generationMs": 1605.713836000301,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3845.3378110001795
+    },
+    "judge": {
+      "questionId": "q138",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit correctement les conditions d’âge prévues par l’article L6222-1 : de 16 à 29 ans révolus au début de l’apprentissage, avec l’exception dès 15 ans après accomplissement du premier cycle du secondaire. Elle ajoute correctement la règle relative aux jeunes atteignant 15 ans avant la fin de l’année civile, en précisant qu’il s’agit d’une inscription sous statut scolaire et non directement d’un engagement comme apprenti. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l’article L6222-1 visé par la question. Elle couvre la règle générale (16 à 29 ans révolus), l’exception dès 15 ans sous condition de scolarité accomplie, ainsi que la précision ajoutée sur l’inscription sous statut scolaire avant la fin de l’année civile des 15 ans. La source 2 est également cohérente mais n’est pas nécessaire à la réponse."
+    }
+  },
+  "failureStage": "none"
+}

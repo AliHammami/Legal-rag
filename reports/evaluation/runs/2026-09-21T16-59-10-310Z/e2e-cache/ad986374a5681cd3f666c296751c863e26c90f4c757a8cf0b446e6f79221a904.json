@@ -1,0 +1,87 @@
+{
+  "questionId": "q206",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Elles s’appliquent également à toute personne qui, directement ou par personne interposée, a exercé en fait la direction, l’administration ou la gestion de ces sociétés, sous le couvert ou à la place de leurs représentants légaux. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L246-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.88960699969903,
+      "vectorSearchMs": 666.2465269998647,
+      "jinaRerankingMs": 519.3794269999489,
+      "mappingMs": 0.1115390001796186,
+      "totalMs": 1407.6661679996178,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017804000061005354,
+      "contextBuilderMs": 0.01371400011703372,
+      "generationMs": 1251.165566000156,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2658.875568999909
+    },
+    "judge": {
+      "questionId": "q206",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle prévue par le contexte : elle vise toute personne ayant exercé en fait, directement ou par personne interposée, la direction, l’administration ou la gestion des sociétés sous le couvert ou à la place des représentants légaux. Elle répond entièrement à la question et est explicitement étayée par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement la disposition applicable et répond exactement à la question : elle étend l’application des articles visés à toute personne ayant exercé en fait, directement ou par personne interposée, la direction, l’administration ou la gestion des sociétés sous le couvert ou à la place des représentants légaux. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Elles s’appliquent également à toute personne qui, directement ou par personne interposée, a exercé en fait la direction, l’administration ou la gestion d’une société anonyme, d’une société européenne ou d’une société en commandite par actions, sous le couvert ou à la place de ses représentants légaux. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L246-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2457.750115999952,
+      "routingCalls": 1,
+      "embeddingMs": 240.17026000004262,
+      "vectorSearchMs": 198.4182219998911,
+      "jinaRerankingMs": 489.2659579999745,
+      "mappingMs": 0.03144599962979555,
+      "totalMs": 3385.7191169997677,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012303999625146389,
+      "contextBuilderMs": 0.014798999764025211,
+      "generationMs": 1326.5863599996082,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4712.3507129997015
+    },
+    "judge": {
+      "questionId": "q206",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement le champ personnel prévu : toute personne ayant exercé de fait, directement ou par personne interposée, la direction, l’administration ou la gestion des sociétés concernées sous le couvert ou à la place des représentants légaux. Elle est entièrement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L. 246-2) répond directement à la question et énonce précisément l’extension aux personnes ayant exercé de fait, directement ou par personne interposée, la direction, l’administration ou la gestion des sociétés concernées sous le couvert ou à la place des représentants légaux. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

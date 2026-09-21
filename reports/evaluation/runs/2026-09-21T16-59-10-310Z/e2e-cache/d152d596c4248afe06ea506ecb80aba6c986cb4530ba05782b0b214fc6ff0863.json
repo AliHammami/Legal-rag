@@ -1,0 +1,95 @@
+{
+  "questionId": "q312",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’un nouveau contrat de crédit regroupe des crédits mentionnés à l’article L. 312-1, il est soumis au **chapitre II** du titre concerné du Code de la consommation. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 513.0018400000408,
+      "vectorSearchMs": 620.4812289997935,
+      "jinaRerankingMs": 526.3357490003109,
+      "mappingMs": 0.028586999513208866,
+      "totalMs": 1659.875539000146,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01359499990940094,
+      "contextBuilderMs": 0.015076999552547932,
+      "generationMs": 1411.702967000194,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3071.6160260001197
+    },
+    "judge": {
+      "questionId": "q312",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la conséquence prévue par l’article L. 314-10 : le nouveau contrat est soumis au chapitre II. Elle répond directement à la question et cette affirmation est explicitement étayée par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article L. 314-10) est directement pertinente : elle vise précisément le regroupement de crédits mentionnés à l'article L. 312-1 et prévoit explicitement que le nouveau contrat est soumis au chapitre II. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Lorsqu’un nouveau contrat regroupe des crédits mentionnés à l’article L. 312-1, il est soumis au **chapitre II** du titre concerné du Code de la consommation, conformément à l’**article L. 314-10 du Code de la consommation** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1907.8740400001407,
+      "routingCalls": 1,
+      "embeddingMs": 222.21682500001043,
+      "vectorSearchMs": 50.64743599947542,
+      "jinaRerankingMs": 548.5104910004884,
+      "mappingMs": 0.027614000253379345,
+      "totalMs": 2729.3026320002973,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01128000020980835,
+      "contextBuilderMs": 0.018946999683976173,
+      "generationMs": 1329.9956469992176,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4059.3381619993597
+    },
+    "judge": {
+      "questionId": "q312",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la conséquence prévue : le nouveau contrat est soumis au chapitre II. Cette affirmation, ainsi que la référence à l’article L. 314-10, est explicitement supportée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise exactement le regroupement de crédits mentionnés à l'article L. 312-1 et énonce que le nouveau contrat est soumis au chapitre II. Elle couvre intégralement l'affirmation de la réponse, y compris la référence à l'article L. 314-10."
+    }
+  },
+  "failureStage": "none"
+}

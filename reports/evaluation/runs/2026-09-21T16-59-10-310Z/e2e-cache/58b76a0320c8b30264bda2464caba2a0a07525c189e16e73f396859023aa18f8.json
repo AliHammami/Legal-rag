@@ -1,0 +1,94 @@
+{
+  "questionId": "q474",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’éligibilité à l’AAH (allocation aux adultes handicapés).\n\nElles indiquent seulement :\n\n- la définition du travailleur handicapé, dont les possibilités d’obtenir ou de conserver un emploi sont réduites par l’altération d’une ou plusieurs fonctions [Source 4] ;\n- une condition de résidence stable et régulière en France pour la personne aidée [Source 2] ;\n- une règle spécifique concernant l’invalidité liée au plan d’épargne avenir climat, qui exige notamment un taux d’incapacité d’au moins 80 % et l’absence d’activité professionnelle [Source 3].\n\nAucune disposition fournie ne précise les conditions propres à l’AAH, notamment celles relatives au taux d’incapacité, à l’âge, aux ressources ou à la résidence.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D5213-53"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3142-17"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D221-119-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5213-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.26813999935985,
+      "vectorSearchMs": 653.4984300006181,
+      "jinaRerankingMs": 590.9459850005805,
+      "mappingMs": 0.02451399900019169,
+      "totalMs": 1473.7674360014498,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009292999282479286,
+      "contextBuilderMs": 0.02840599976480007,
+      "generationMs": 2180.885753000155,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3654.7103119995445
+    },
+    "judge": {
+      "questionId": "q474",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner des conditions d’éligibilité à l’AAH, faute de dispositions pertinentes dans le contexte. Elle distingue correctement les règles présentes, qui concernent le travailleur handicapé, la personne aidée et un plan d’épargne, sans les assimiler aux conditions de l’AAH. Les précisions sur les critères habituellement pertinents pour l’AAH sont formulées comme des éléments absents du contexte, non comme des règles affirmées sur le fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont hors du champ direct de l’AAH, mais elles sont pertinentes pour justifier l’abstention : elles portent respectivement sur une subvention d’installation, le congé de proche aidant, l’invalidité pour un plan d’épargne avenir climat et la définition du travailleur handicapé, sans énoncer de régime propre à l’AAH. Elles couvrent les caractérisations factuelles de la réponse concernant les sources 2, 3 et 4 ainsi que le constat qu’aucune disposition fournie ne fixe les conditions d’éligibilité à l’AAH."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1180.4951450005174,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1180.49624799937,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1180.5063240006566
+    },
+    "judge": {
+      "questionId": "q474",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, comme attendu pour une question sur l'AAH sans contexte fourni et hors périmètre du Code pénal. Elle ne formule aucune condition non étayée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, donc aucune pertinence documentaire ne peut être attribuée. Toutefois, la réponse se limite à constater l’absence de contexte et de recherche, sans formuler d’affirmation factuelle sur les conditions d’éligibilité ; cette abstention est entièrement cohérente avec l’absence de sources."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q252",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’extrait fourni de l’**article L313-1 du Code de la consommation** ne définit pas directement l’« opération de crédit » et ne précise pas quelles opérations lui sont assimilées. Il renvoie, pour la définition des contrats de crédit, au **6° de l’article L311-1**, dont le contenu n’est pas fourni.\n\nEn revanche, l’article L313-1 détermine le champ d’application des dispositions du chapitre. Sont notamment concernés les contrats de crédit destinés à financer :\n\n- l’acquisition ou la construction d’immeubles à usage d’habitation ou à usage professionnel et d’habitation ;\n- l’acquisition de terrains destinés à cette construction ;\n- certains travaux de réparation, d’amélioration ou d’entretien ;\n- l’acquisition en propriété ou en jouissance de ces immeubles, ainsi que la souscription ou l’achat de parts ou actions de sociétés donnant vocation à leur attribution ;\n- les crédits garantis par une hypothèque, une sûreté comparable ou un droit lié à un bien immobilier à usage d’habitation ;\n- certains crédits souscrits par des personnes morales de droit privé lorsqu’ils ne financent pas une activité professionnelle.  \n\n[Article L313-1 du Code de la consommation, Source 1]\n\nLe contexte ne permet donc pas d’identifier précisément la définition de l’opération de crédit ni les opérations légalement assimilées.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 166.49866000004113,
+      "vectorSearchMs": 640.3048740001395,
+      "jinaRerankingMs": 668.4591549998149,
+      "mappingMs": 0.02676100004464388,
+      "totalMs": 1475.3247170001268,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010714000090956688,
+      "contextBuilderMs": 0.020018000155687332,
+      "generationMs": 3638.858808000572,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5114.223970999941
+    },
+    "judge": {
+      "questionId": "q252",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée de l’opération de crédit ni les opérations assimilées (crédit-bail et location avec option d’achat). Elle se limite à constater, correctement au regard du contexte fourni, que l’article reproduit renvoie à l’article L. 311-1 et expose son champ d’application. Cette abstention est inappropriée puisque la question appelait une réponse de fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit un article L313-1 du Code de la consommation portant sur le champ d’application de contrats de crédit, et non la définition demandée de l’opération de crédit ni les opérations assimilées. Elle est donc très insuffisante pour répondre au fond à la question. En revanche, elle couvre les constats de la réponse générée : absence de définition directe dans l’extrait, renvoi au 6° de l’article L. 311-1 et énumération du champ d’application de cet extrait."
+    }
+  },
+  "routing": {
+    "answer": "L’article L313-1 du Code monétaire et financier définit l’opération de crédit comme tout acte par lequel une personne, agissant à titre onéreux :\n\n- met ou promet de mettre des fonds à la disposition d’une autre personne ;\n- ou prend, dans l’intérêt de celle-ci, un engagement par signature, tel qu’un aval, un cautionnement ou une garantie.\n\nSont assimilés aux opérations de crédit :\n\n- le crédit-bail ;\n- de manière générale, toute opération de location assortie d’une option d’achat.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1740.9651399999857,
+      "routingCalls": 1,
+      "embeddingMs": 218.15241799969226,
+      "vectorSearchMs": 231.3376240003854,
+      "jinaRerankingMs": 609.9305119998753,
+      "mappingMs": 0.036336000077426434,
+      "totalMs": 2800.456841999665,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01279400009661913,
+      "contextBuilderMs": 0.011459000408649445,
+      "generationMs": 1603.2227090001106,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4403.713375999592
+    },
+    "judge": {
+      "questionId": "q252",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition légale, y compris la condition d’exercice à titre onéreux et l’engagement par signature dans l’intérêt du bénéficiaire. Elle énumère également les deux catégories d’opérations assimilées : crédit-bail et location assortie d’une option d’achat. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L313-1 du Code monétaire et financier et répond exactement à la question. Elle couvre intégralement les éléments affirmés : condition d’exercice à titre onéreux, mise ou promesse de mise à disposition de fonds, engagement par signature dans l’intérêt d’autrui, ainsi que l’assimilation du crédit-bail et des locations assorties d’une option d’achat."
+    }
+  },
+  "failureStage": "none"
+}

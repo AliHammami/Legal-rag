@@ -1,0 +1,87 @@
+{
+  "questionId": "q146",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les enseignements du centre de formation d’apprentis peuvent être dispensés au sein d’un établissement d’enseignement, dans le cadre d’une **unité de formation par apprentissage (UFA)**.\n\nCette UFA doit être créée par une **convention conclue entre l’établissement d’enseignement et le centre de formation d’apprentis**. L’établissement d’enseignement assume ensuite la **responsabilité pédagogique des formations dispensées par l’UFA**. Ainsi, même si les enseignements relèvent du dispositif de formation de l’apprentissage, leur organisation et leur responsabilité pédagogiques au sein de l’unité incombent à l’établissement d’enseignement. [Source 1 — Article L6233-1 du Code du travail]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.99723799992353,
+      "vectorSearchMs": 675.4191820002161,
+      "jinaRerankingMs": 556.2143910001032,
+      "mappingMs": 0.05857999995350838,
+      "totalMs": 1453.7178410002962,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019551999866962433,
+      "contextBuilderMs": 0.025377000216394663,
+      "generationMs": 1944.3696010001004,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3398.144525999669
+    },
+    "judge": {
+      "questionId": "q146",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois éléments de l'article fourni : possibilité de dispenser les enseignements du CFA dans un établissement via une UFA, création de cette UFA par convention entre l'établissement et le CFA, et responsabilité pédagogique de l'établissement pour les formations dispensées par l'UFA. Elle répond directement à la question sans ajout matériel non étayé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle traite expressément de la dispense des enseignements d'un CFA dans un établissement d'enseignement via une UFA, de la création de cette unité par convention entre l'établissement et le CFA, et de la responsabilité pédagogique de l'établissement. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Les enseignements du centre de formation d’apprentis (CFA) peuvent être dispensés au sein d’un établissement d’enseignement, dans une **unité de formation par apprentissage (UFA)**.\n\nCette unité est créée dans le cadre d’une **convention conclue entre l’établissement d’enseignement et le CFA**. Cette convention constitue donc le cadre de mise en place de l’UFA et de l’organisation des enseignements.\n\nSur le plan pédagogique, la responsabilité incombe à **l’établissement d’enseignement** : il assure la responsabilité pédagogique des formations dispensées par son UFA, même si ces formations relèvent des enseignements du CFA.  \n**Article L6233-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2067.70134399971,
+      "routingCalls": 1,
+      "embeddingMs": 331.38660399988294,
+      "vectorSearchMs": 275.1997969998047,
+      "jinaRerankingMs": 538.2469179998152,
+      "mappingMs": 0.035666000097990036,
+      "totalMs": 3212.597781000193,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010873000137507915,
+      "contextBuilderMs": 0.018887999933212996,
+      "generationMs": 2029.3357210000977,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5241.975285999943
+    },
+    "judge": {
+      "questionId": "q146",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois éléments essentiels : possibilité de dispenser les enseignements du CFA dans une UFA au sein d’un établissement, création de l’UFA par convention entre l’établissement et le CFA, et responsabilité pédagogique assumée par l’établissement pour les formations de son UFA. Toutes les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement les dispositions applicables : enseignements du CFA dispensés dans un établissement via une UFA, création de cette unité par convention entre l'établissement et le CFA, et responsabilité pédagogique de l'établissement pour les formations dispensées par son UFA. Elle couvre l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

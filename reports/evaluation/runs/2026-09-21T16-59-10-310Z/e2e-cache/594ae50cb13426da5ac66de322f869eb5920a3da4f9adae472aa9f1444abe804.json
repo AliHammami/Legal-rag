@@ -1,0 +1,87 @@
+{
+  "questionId": "q023",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 314-1 du Code pénal, l’abus de confiance est caractérisé lorsque les conditions suivantes sont réunies :\n\n1. **Des fonds, valeurs ou un bien quelconque ont été remis** à une personne ;\n2. Cette personne les a **acceptés à charge** :\n   - de les rendre ;\n   - de les représenter ; ou\n   - d’en faire un usage déterminé ;\n3. Elle les a ensuite **détournés** ;\n4. Le détournement a été commis **au préjudice d’autrui**.\n\nL’article prévoit une peine de **cinq ans d’emprisonnement et 375 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 262.1047139999573,
+      "vectorSearchMs": 648.1835280000232,
+      "jinaRerankingMs": 528.2618279999588,
+      "mappingMs": 0.027686999994330108,
+      "totalMs": 1438.615986000048,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01066600001649931,
+      "contextBuilderMs": 0.010330000019166619,
+      "generationMs": 2285.2638889999944,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3723.910852000001
+    },
+    "judge": {
+      "questionId": "q023",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les éléments constitutifs prévus par l’article 314-1 : remise de fonds, valeurs ou bien, acceptation avec obligation de restitution, représentation ou usage déterminé, détournement et préjudice d’autrui. La mention complémentaire de la peine est exacte et expressément contenue dans le contexte. Toutes les affirmations importantes sont donc fondées sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 314-1 du Code pénal, qui répond précisément aux conditions constitutives demandées. Elle couvre l’ensemble des éléments énumérés dans la réponse (remise, acceptation avec obligation de rendre/représenter/faire un usage déterminé, détournement et préjudice d’autrui) ainsi que la peine complémentaire mentionnée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 314-1 du Code pénal, l’abus de confiance suppose la réunion des conditions suivantes :\n\n1. **La remise préalable** de fonds, de valeurs ou d’un bien quelconque à une personne ;\n2. **L’acceptation de cette remise** avec l’obligation :\n   - de rendre le bien,\n   - de le représenter, ou\n   - d’en faire un usage déterminé ;\n3. **Le détournement** de ces fonds, valeurs ou biens par la personne qui les a reçus ;\n4. **Un préjudice causé à autrui** par ce détournement.\n\nL’abus de confiance est puni de cinq ans d’emprisonnement et de 375 000 euros d’amende. **Article 314-1 du Code pénal [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "314-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 814.9881670000032,
+      "routingCalls": 1,
+      "embeddingMs": 219.74233300000196,
+      "vectorSearchMs": 31.512921000015922,
+      "jinaRerankingMs": 531.0160940000205,
+      "mappingMs": 0.026354000030551106,
+      "totalMs": 1597.3158469999908,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010478999989572912,
+      "contextBuilderMs": 0.05653100000927225,
+      "generationMs": 2506.8739349999814,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4104.267769999977
+    },
+    "judge": {
+      "questionId": "q023",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les éléments constitutifs énoncés à l’article 314-1 : remise et acceptation assortie d’une obligation de restitution, de représentation ou d’usage déterminé, détournement et préjudice d’autrui. La précision sur la peine est également exacte et expressément présente dans le contexte, bien qu’elle ne soit pas nécessaire pour répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 314-1 du Code pénal, qui définit l'abus de confiance et énonce sa peine. Elle est donc précisément pertinente. Elle couvre toutes les conditions énumérées dans la réponse (remise et acceptation, obligation de rendre/représenter/faire un usage déterminé, détournement et préjudice d'autrui) ainsi que la sanction mentionnée."
+    }
+  },
+  "failureStage": "none"
+}

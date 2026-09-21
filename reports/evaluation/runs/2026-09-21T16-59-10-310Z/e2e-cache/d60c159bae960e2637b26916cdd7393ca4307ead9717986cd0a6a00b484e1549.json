@@ -1,0 +1,87 @@
+{
+  "questionId": "q180",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L225-1 du Code de commerce, une société anonyme se caractérise principalement par :\n\n- un capital divisé en actions ;\n- des associés qui ne supportent les pertes qu’à concurrence de leurs apports, ce qui limite leur responsabilité financière ;\n- la possibilité d’être constituée entre au moins deux associés.\n\n[Article L225-1 du Code de commerce — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.75217199977487,
+      "vectorSearchMs": 634.704204000067,
+      "jinaRerankingMs": 525.9803929999471,
+      "mappingMs": 0.034330000169575214,
+      "totalMs": 1400.520559000317,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0137339998036623,
+      "contextBuilderMs": 0.011451000347733498,
+      "generationMs": 1559.4539310000837,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2960.016240000259
+    },
+    "judge": {
+      "questionId": "q180",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois caractéristiques énoncées par l'article L225-1 : capital divisé en actions, limitation de la contribution aux pertes au montant des apports, et constitution entre deux associés ou plus. Ces affirmations sont toutes explicitement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L225-1 du Code de commerce demandé. Elle énonce explicitement le capital divisé en actions, la limitation de la contribution aux pertes à concurrence des apports et la constitution entre deux associés ou plus, couvrant toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L225-1 du Code de commerce, une société anonyme se caractérise principalement par :\n\n- un capital divisé en actions ;\n- des associés dont la responsabilité financière est limitée au montant de leurs apports ;\n- une constitution entre au moins deux associés.\n\n[Article L225-1 du Code de commerce — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1229.3402259997092,
+      "routingCalls": 1,
+      "embeddingMs": 253.55050599994138,
+      "vectorSearchMs": 205.32667799992487,
+      "jinaRerankingMs": 561.0051620001905,
+      "mappingMs": 0.02624299982562661,
+      "totalMs": 2249.2804589997977,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014365999959409237,
+      "contextBuilderMs": 0.015027999877929688,
+      "generationMs": 1540.1078889998607,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3789.4672400001436
+    },
+    "judge": {
+      "questionId": "q180",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois caractéristiques prévues par l’article L225-1 : capital divisé en actions, pertes limitées à concurrence des apports, et constitution entre deux associés ou plus. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L225-1 du Code de commerce et énonce explicitement les trois caractéristiques demandées : capital divisé en actions, pertes supportées à concurrence des apports et constitution entre deux associés ou plus. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

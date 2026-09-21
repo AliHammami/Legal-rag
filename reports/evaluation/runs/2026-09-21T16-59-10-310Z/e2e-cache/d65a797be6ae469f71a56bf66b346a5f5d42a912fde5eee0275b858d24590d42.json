@@ -1,0 +1,82 @@
+{
+  "questionId": "q243",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’un titulaire effectue un retrait de fonds avant la dixième année, le plan est clôturé. [Source 1 — Article L221-20 du Code monétaire et financier]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L221-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 180.1160810003057,
+      "vectorSearchMs": 562.2915300000459,
+      "jinaRerankingMs": 586.3436070000753,
+      "mappingMs": 0.02817499917000532,
+      "totalMs": 1328.812370000407,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014093000441789627,
+      "contextBuilderMs": 0.01234699971973896,
+      "generationMs": 1226.4254230000079,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2555.2761559998617
+    },
+    "judge": {
+      "questionId": "q243",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement qu’un retrait avant la dixième année entraîne la clôture du plan. Cette affirmation est explicitement soutenue par le contexte, qui précise que seuls les retraits au-delà de la dixième année n’entraînent pas cette clôture."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : elle prévoit explicitement que tout retrait entraîne la clôture du plan et précise l’exception applicable au-delà de la dixième année. Elle couvre entièrement l’affirmation de la réponse selon laquelle un retrait avant la dixième année clôture le plan."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 2921.4193810001016,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 2921.420706000179,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 2921.4281559996307
+    },
+    "judge": {
+      "questionId": "q243",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse refuse de répondre alors que la question appelle une conséquence précise : un retrait avant la dixième année entraîne la clôture du plan. Elle ne fournit aucun élément substantiel attendu. Son constat d'absence de contexte est cohérent avec le contexte effectivement vide, mais il s'agit néanmoins d'une abstention alors qu'aucune abstention n'était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n’est fournie. Il n’existe donc aucune source pertinente pour répondre à la conséquence d’un retrait avant la dixième année, ni pour étayer les constats d’ambiguïté ou de hors périmètre formulés dans la réponse générée."
+    }
+  },
+  "failureStage": "generation"
+}

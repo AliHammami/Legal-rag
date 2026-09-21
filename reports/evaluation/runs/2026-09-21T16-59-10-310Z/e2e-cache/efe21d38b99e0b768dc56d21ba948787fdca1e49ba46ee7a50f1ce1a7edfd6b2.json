@@ -1,0 +1,119 @@
+{
+  "questionId": "q128",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L4228-1 du Code du travail, **un décret en Conseil d’État** établit les conditions de détermination de l’effectif salarié et les règles de franchissement des seuils d’effectif [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1231-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4228-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4461-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6331-1-A"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.13817800022662,
+      "vectorSearchMs": 619.8492000000551,
+      "jinaRerankingMs": 488.5418889997527,
+      "mappingMs": 0.03505800012499094,
+      "totalMs": 1334.5922210002318,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009752999991178513,
+      "contextBuilderMs": 0.02978699980303645,
+      "generationMs": 1103.5980770001188,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2438.2390709999017
+    },
+    "judge": {
+      "questionId": "q128",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l'autorité prévue par l'article L4228-1 : un décret en Conseil d'État. Elle répond directement et intégralement à la question, et cette affirmation est explicitement étayée par la Source 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est l'article L4228-1 visé par la question et énonce explicitement qu'un décret en Conseil d'État fixe les conditions de détermination de l'effectif salarié et des règles de franchissement des seuils. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L4228-1 du Code du travail, ces conditions sont fixées par **un décret en Conseil d’État** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1231-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4228-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4461-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6331-1-A"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4621-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1637.7955429996364,
+      "routingCalls": 1,
+      "embeddingMs": 214.10224100016057,
+      "vectorSearchMs": 263.1991570000537,
+      "jinaRerankingMs": 540.8427839996293,
+      "mappingMs": 0.04503999976441264,
+      "totalMs": 2656.0229749996215,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013766999822109938,
+      "contextBuilderMs": 0.034597999881953,
+      "generationMs": 1338.2784319999628,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3994.3615919998847
+    },
+    "judge": {
+      "questionId": "q128",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement qu’un décret en Conseil d’État fixe ces conditions. Cette affirmation correspond exactement à l’article L4228-1 reproduit dans la source 2 et répond entièrement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article L. 4228-1 et énonce expressément qu'un décret en Conseil d'État fixe les conditions de détermination de l'effectif salarié et des règles de franchissement des seuils. Elle est donc parfaitement pertinente et couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

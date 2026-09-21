@@ -1,0 +1,91 @@
+{
+  "questionId": "q198",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article D. 230-1 du Code de commerce**, pris pour l’application de l’article L. 230-1, la taille d’une société est déterminée selon trois critères :\n\n- **Le total du bilan**, correspondant à la somme des montants nets des éléments d’actif ;\n- **Le montant net du chiffre d’affaires**, correspondant aux ventes de produits et services liés à l’activité courante, après déduction des réductions sur ventes, de la TVA et des taxes assimilées ;\n- **Le nombre moyen de salariés employés au cours de l’exercice**, calculé selon les modalités prévues par le Code de la sécurité sociale, avec une règle particulière lorsque l’exercice ne coïncide pas avec l’année civile précédente. [Source 1]\n\nLes seuils sont les suivants :\n\n| Catégorie | Total du bilan | Chiffre d’affaires net | Salariés moyens |\n|---|---:|---:|---:|\n| Micro-entreprise | 450 000 € | 900 000 € | 10 |\n| Petite entreprise | 7 500 000 € | 15 000 000 € | 50 |\n| Moyenne ou grande entreprise | 25 000 000 € | 50 000 000 € | 250 |\n\nSauf disposition contraire, les seuils sont considérés comme franchis à la clôture de **deux exercices consécutifs**, sur la base des derniers comptes annuels arrêtés. **Article D. 230-1 du Code de commerce [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "D230-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 209.10801100032404,
+      "vectorSearchMs": 646.5075660003349,
+      "jinaRerankingMs": 543.1192789999768,
+      "mappingMs": 0.02345799980685115,
+      "totalMs": 1398.7940199999139,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010214000009000301,
+      "contextBuilderMs": 0.010534999892115593,
+      "generationMs": 3206.8822319996543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4605.711577000096
+    },
+    "judge": {
+      "questionId": "q198",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois critères pertinents : total du bilan, montant net du chiffre d’affaires et nombre moyen de salariés. Elle ajoute des définitions et seuils exacts et bien appuyés par le contexte. Toutefois, elle n’indique pas l’élément essentiel de la référence selon lequel la taille est déterminée à partir de deux de ces trois critères ; sa formulation « selon trois critères » peut laisser entendre que les trois doivent nécessairement être remplis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source D. 230-1 est directement pertinente : elle fixe les trois critères de taille, leurs définitions, les seuils par catégorie et la règle de franchissement sur deux exercices. Elle couvre toutes les affirmations substantielles de la réponse générée, y compris les modalités d'appréciation des salariés. Elle ne contient toutefois pas explicitement la règle selon laquelle la qualification repose sur deux des trois critères, mais cette omission concerne la réponse par rapport à la question/référence, non une affirmation non couverte de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 230-1 du Code de commerce, la taille d’une société est déterminée selon trois critères, appréciés à la date de clôture de l’exercice :\n\n- le total du bilan ;\n- le montant net du chiffre d’affaires ;\n- le nombre moyen de salariés employés au cours de l’exercice.\n\nLa société est classée dans une catégorie — micro, petite, moyenne ou grande entreprise — en fonction du dépassement ou du non-dépassement d’au moins deux de ces trois seuils [Article L230-1 du Code de commerce, Source 2].\n\nLes seuils applicables sont fixés par décret [Article L230-1 du Code de commerce, Source 2]. Ils sont notamment définis à l’article D230-1 du Code de commerce [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "D230-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L230-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5147.649663000368,
+      "routingCalls": 1,
+      "embeddingMs": 230.02572699962184,
+      "vectorSearchMs": 269.59518299996853,
+      "jinaRerankingMs": 535.1263959999196,
+      "mappingMs": 0.03976800013333559,
+      "totalMs": 6182.464594000019,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011969999875873327,
+      "contextBuilderMs": 0.042092999909073114,
+      "generationMs": 1804.8619420002215,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7987.3904550001025
+    },
+    "judge": {
+      "questionId": "q198",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois critères (total du bilan, chiffre d’affaires net et nombre moyen de salariés) et précise, conformément à l’article L. 230-1, que la qualification repose sur le dépassement ou le non-dépassement d’au moins deux de ces trois seuils à la clôture de l’exercice. Ces éléments sont explicitement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article L. 230-1) répond directement à la question : elle énonce les trois critères, leur appréciation à la clôture de l’exercice, la règle des deux critères sur trois, les catégories concernées et le renvoi au décret. La source 1 (article D. 230-1) est également pertinente pour étayer l’affirmation relative à la fixation réglementaire des seuils et à leurs modalités. Toutes les affirmations importantes de la réponse sont couvertes par ces sources."
+    }
+  },
+  "failureStage": "none"
+}

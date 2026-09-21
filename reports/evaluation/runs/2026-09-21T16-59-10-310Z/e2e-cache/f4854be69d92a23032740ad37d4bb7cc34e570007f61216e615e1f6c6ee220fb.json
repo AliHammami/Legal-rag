@@ -1,0 +1,90 @@
+{
+  "questionId": "q465",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La règle dépend de la qualité de la personne concernée :\n\n- **Juges des tribunaux de commerce** : ils doivent prévenir ou faire cesser immédiatement toute situation de conflit d’intérêts. Le conflit est défini comme une interférence susceptible d’influencer ou de paraître influencer l’exercice indépendant, impartial et objectif de leurs fonctions (**article L. 722-20 du Code de commerce** [Source 1]).\n\n- **Courtiers de marchandises assermentés** : en cas de conflit d’intérêts avec une partie, ils doivent s’abstenir de participer à la délibération (**article R. 131-39 du Code de commerce** [Source 2]).\n\n- **Prestataires de services d’investissement** : ils doivent mettre en place des mesures pour détecter, éviter ou gérer les conflits d’intérêts et empêcher qu’ils portent atteinte aux intérêts de leurs clients. Si ces mesures sont insuffisantes, ils doivent informer clairement le client, avant d’agir, de la nature et de la source du conflit ainsi que des mesures prises pour en limiter les risques (**article L. 533-10, 3° du Code monétaire et financier** [Source 3]).",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L722-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R131-39"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L533-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 254.33356500044465,
+      "vectorSearchMs": 694.7178279999644,
+      "jinaRerankingMs": 590.1847549993545,
+      "mappingMs": 0.02827499993145466,
+      "totalMs": 1539.2944239992648,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.07746100053191185,
+      "contextBuilderMs": 0.042959000915288925,
+      "generationMs": 2776.613769000396,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4316.04534399882
+    },
+    "judge": {
+      "questionId": "q465",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale et ne précise ni la qualité de la personne concernée ni le régime juridique visé ; une abstention ou une demande de précision était attendue. La réponse fournit néanmoins des règles exactes pour trois catégories distinctes, mais elle ne peut pas déterminer laquelle s'applique au cas non précisé. Toutes les affirmations substantielles sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour les régimes particuliers effectivement présentés dans la réponse (juges des tribunaux de commerce, courtiers assermentés et prestataires de services d’investissement). Elles ne permettent toutefois pas de dégager une règle générale applicable à une question non contextualisée ni de justifier l’absence d’abstention, ce qui limite leur pertinence globale au regard de la question générale. En revanche, elles couvrent intégralement les affirmations substantielles formulées : prévention ou cessation et définition du conflit, abstention du courtier, ainsi que détection, évitement/gestion et information du client par le prestataire."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1280.2814700007439,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1280.2847049999982,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1280.2973939999938
+    },
+    "judge": {
+      "questionId": "q465",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question ne peut pas être traitée de manière fiable à partir des éléments fournis. La réponse reconnaît explicitement cette impossibilité et s'abstient, conformément à l'attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie. Dans ce cas d’abstention attendue, l’absence de corpus permet de constater que la question ne peut pas être traitée de manière fiable à partir du contexte disponible. La réponse se limite à ce constat et n’avance aucune règle juridique non étayée."
+    }
+  },
+  "failureStage": "none"
+}

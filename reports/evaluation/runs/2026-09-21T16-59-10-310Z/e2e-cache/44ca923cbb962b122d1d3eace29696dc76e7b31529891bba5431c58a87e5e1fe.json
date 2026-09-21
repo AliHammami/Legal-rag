@@ -1,0 +1,98 @@
+{
+  "questionId": "q493",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne permet pas d’identifier avec certitude les règles applicables à une **assemblée générale de copropriété** au sens général. Il contient toutefois les règles suivantes, selon la structure concernée :\n\n- **Quorum de deux tiers** : l’assemblée ne peut délibérer que si les membres présents ou représentés atteignent les deux tiers des membres en exercice, ou si les présents représentent les deux tiers des droits de vote. À défaut, une nouvelle assemblée doit être convoquée dans les quinze jours et peut délibérer sans quorum. Elle ne peut statuer que sur les questions inscrites à l’ordre du jour — **Article R711-64 du Code de commerce [Source 1]**.\n\n- **Copropriété ou indivision d’actions** : les copropriétaires d’actions indivises sont représentés par l’un d’eux ou par un mandataire unique. En cas de désaccord, le mandataire est désigné par la justice. Le droit de vote appartient en principe à l’usufruitier pour les assemblées ordinaires et au nu-propriétaire pour les assemblées extraordinaires, sous réserve des statuts — **Article L225-110 du Code de commerce [Source 2]**.\n\n- **Autres règles de quorum** : dans une autre forme de société, l’assemblée exige la présence ou la représentation des trois quarts des associés ; à défaut, une seconde assemblée peut délibérer avec le tiers des associés — **Article R814-120 du Code de commerce [Source 3]**. Dans une autre encore, la seconde assemblée peut délibérer avec deux associés présents — **Article R821-129 du Code de commerce [Source 5]**.\n\n- **Convocation** : l’assemblée est notamment réunie au moins une fois par an et peut être demandée par des associés représentant au moins la moitié des associés ou le quart du capital — **Article R814-118 du Code de commerce [Source 4]**.\n\nAinsi, les sources ne fournissent pas les règles générales propres à la copropriété immobilière ; elles concernent principalement des assemblées d’associés ou la copropriété d’actions indivises.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R711-64"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-110"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-120"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-118"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-129"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.29152200001408,
+      "vectorSearchMs": 931.4782270000142,
+      "jinaRerankingMs": 542.1468899999745,
+      "mappingMs": 0.03846399998292327,
+      "totalMs": 1667.0378379999893,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014811000000918284,
+      "contextBuilderMs": 0.05801099998643622,
+      "generationMs": 4546.214915000019,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6213.576459999982
+    },
+    "judge": {
+      "questionId": "q493",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique clairement que le contexte ne permet pas de donner les règles générales d’une assemblée de copropriété immobilière et distingue les dispositions commerciales non pertinentes. Les règles citées sont fidèlement rattachées aux sources fournies et présentées comme concernant d’autres structures."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les sources sont pertinentes en ce qu’elles montrent qu’elles traitent d’assemblées de sociétés, de membres ou de copropriété d’actions, et non des règles générales de copropriété immobilière. La réponse attribue correctement à chaque source les règles citées (quorums, seconde assemblée, ordre du jour, représentation d’actions indivises et convocation) et en tire un constat de périmètre compatible avec leur contenu."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 928.2693049999943,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 928.2794140000187,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 928.3027330000186
+    },
+    "judge": {
+      "questionId": "q493",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La question relève du droit de la copropriété et aucun contexte n’est fourni. La réponse s’abstient explicitement et indique qu’aucun corpus pertinent ne permet une réponse fiable, conformément à l’abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc pas de source pertinente pour répondre directement aux règles d’assemblée générale de copropriété. Toutefois, la réponse générée se limite à constater l’absence de contexte et de corpus pertinent, constat directement vérifiable par l’absence de sources ; ses affirmations importantes sont ainsi couvertes dans le cadre de cette abstention."
+    }
+  },
+  "failureStage": "none"
+}

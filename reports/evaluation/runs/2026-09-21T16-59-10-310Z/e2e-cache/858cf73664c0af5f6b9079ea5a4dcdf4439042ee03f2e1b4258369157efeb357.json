@@ -1,0 +1,91 @@
+{
+  "questionId": "q377",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L1222-10 du Code du travail** [Source 1], l’employeur doit envers le salarié en télétravail :\n\n1. **L’informer** de toute restriction concernant l’utilisation des équipements, outils informatiques ou services de communication électronique, ainsi que des sanctions encourues en cas de non-respect ;\n2. **Lui accorder une priorité** pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences, et l’informer de la disponibilité de ce poste ;\n3. **Organiser chaque année un entretien** portant notamment sur ses conditions d’activité et sa charge de travail.\n\nLe contexte fourni ne contient aucune disposition du **Code pénal** relative à l’acquisition de la réhabilitation d’une personne condamnée. Il ne permet donc pas de répondre à cette seconde partie.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.12438500020653,
+      "vectorSearchMs": 625.2444169996306,
+      "jinaRerankingMs": 573.4645770005882,
+      "mappingMs": 0.024532999843358994,
+      "totalMs": 1408.885272999294,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009415999986231327,
+      "contextBuilderMs": 0.011819000355899334,
+      "generationMs": 1927.10676600039,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3336.031305000186
+    },
+    "judge": {
+      "questionId": "q377",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue avec exactitude et de façon complète les trois obligations de l’article L1222-10 du code du travail, toutes explicitement présentes dans le contexte. En revanche, elle ne répond pas sur le fond à la seconde partie relative à la réhabilitation, alors que celle-ci constitue un élément essentiel de la question et que la référence indique les règles de l’article 133-13 du code pénal. Son refus de compléter cette partie est toutefois pleinement justifié par l’absence de tout extrait du code pénal dans le contexte : la réponse est donc entièrement fondée sur le contexte fourni. Elle répond réellement à une partie substantielle de la question plutôt que de s’abstenir globalement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente et bien ciblée pour les obligations de l’employeur envers le télétravailleur : elle contient expressément les trois obligations reprises dans la réponse. Elle est en revanche absente pour la seconde partie relative à la réhabilitation pénale, ce qui limite sa pertinence globale au regard de la question à deux volets. La réponse indique précisément cette absence de disposition pénale dans le contexte ; toutes ses affirmations substantielles, y compris ce constat d’insuffisance, sont donc couvertes par les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "## Obligations de l’employeur envers un salarié en télétravail\n\nSelon l’**article L1222-10 du Code du travail**, l’employeur doit :\n\n1. **Informer le salarié** de toute restriction concernant l’utilisation des équipements, outils informatiques ou services de communication électronique, ainsi que des sanctions encourues en cas de non-respect ;\n2. **Accorder une priorité** au salarié pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences, et l’informer de la disponibilité de tels postes ;\n3. **Organiser chaque année un entretien** portant notamment sur les conditions d’activité du salarié et sa charge de travail.  \n[Source 1]\n\n## Acquisition de la réhabilitation\n\nSelon l’**article 133-13 du Code pénal**, la réhabilitation est acquise de plein droit à une personne physique condamnée si, pendant les délais prévus, elle ne fait l’objet d’aucune nouvelle condamnation à une peine criminelle ou correctionnelle :\n\n- **Amende ou jours-amende** : après un délai de **trois ans**, calculé notamment à partir du paiement de l’amende ou du montant global des jours-amende ;\n- **Condamnation unique à un emprisonnement n’excédant pas un an**, ou à une autre peine que celles expressément exclues par le texte : après **cinq ans** à compter de l’exécution de la peine ou de la prescription ;\n- **Condamnation unique à un emprisonnement n’excédant pas dix ans**, ou condamnations multiples dont la durée totale ne dépasse pas cinq ans : après **dix ans** à compter de l’expiration de la peine ou de la prescription.\n\nCes délais sont **doublés en cas de récidive légale**. Pour les condamnations assorties notamment d’un sursis, d’un sursis probatoire ou d’un sursis avec obligation d’accomplir un travail d’intérêt général, le délai court à compter de la date à laquelle la condamnation devient non avenue.  \n[Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "133-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2459.301042000763,
+      "routingCalls": 1,
+      "embeddingMs": 377.45231799967587,
+      "vectorSearchMs": 302.42416299972683,
+      "jinaRerankingMs": 565.2881999993697,
+      "mappingMs": 0.029407000169157982,
+      "totalMs": 3704.5516029996797,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.039045000448822975,
+      "contextBuilderMs": 0.020755999721586704,
+      "generationMs": 3361.985251000151,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7066.606686000712
+    },
+    "judge": {
+      "questionId": "q377",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les trois obligations de l'article L1222-10 et les conditions de réhabilitation de plein droit prévues à l'article 133-13 : absence de nouvelle condamnation criminelle ou correctionnelle, délais de trois, cinq et dix ans avec leurs principales règles de point de départ, doublement en récidive légale et règle applicable aux sursis. Toutes les affirmations importantes sont explicitement soutenues par les deux extraits de contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et reproduit les trois obligations spécifiques de l’employeur en télétravail invoquées dans la réponse. La source 2 est directement pertinente et couvre les conditions de la réhabilitation de plein droit, les trois catégories de délais et leurs points de départ, le doublement en récidive légale ainsi que la règle applicable aux condamnations avec sursis. Toutes les affirmations importantes de la réponse sont explicitement étayées."
+    }
+  },
+  "failureStage": "none"
+}

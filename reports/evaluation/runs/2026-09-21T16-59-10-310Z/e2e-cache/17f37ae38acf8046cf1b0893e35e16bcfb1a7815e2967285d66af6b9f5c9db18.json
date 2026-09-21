@@ -1,0 +1,95 @@
+{
+  "questionId": "q097",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans une obligation conditionnelle, la différence tient à l’effet de la réalisation de l’événement futur et incertain :\n\n- **Condition suspensive** : l’obligation ne devient pure et simple que si la condition se réalise. [Source 1]  \n  *Exemple :* une vente conclue sous réserve de l’obtention d’un prêt ; la vente ne produit pleinement ses effets qu’en cas d’obtention du prêt.\n\n- **Condition résolutoire** : l’obligation existe, mais sa réalisation entraîne son anéantissement. [Source 1]  \n  *Exemple :* un contrat qui prend fin si un événement prévu survient.\n\nEn outre, la condition suspensive est réputée accomplie si la partie intéressée à son échec en a empêché la réalisation ; inversement, la condition résolutoire est réputée défaillie si la partie intéressée à sa réalisation l’a provoquée. **Article 1304-3 du Code civil** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 871.0595240001567,
+      "vectorSearchMs": 651.2626960000489,
+      "jinaRerankingMs": 513.1208609999157,
+      "mappingMs": 0.026736999861896038,
+      "totalMs": 2035.5019679998513,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009733000071719289,
+      "contextBuilderMs": 0.017340000020340085,
+      "generationMs": 2416.411608000053,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4451.951924999943
+    },
+    "judge": {
+      "questionId": "q097",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue exactement les effets des deux conditions, conformément à l’article 1304 du Code civil et à la référence : la condition suspensive rend l’obligation pure et simple, tandis que la condition résolutoire l’anéantit. Les précisions supplémentaires sur l’article 1304-3 sont exactes et explicitement étayées par le contexte. Les exemples sont cohérents et n’altèrent pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 1304 du Code civil) répond directement à la distinction demandée et couvre les deux affirmations centrales : l’accomplissement de la condition suspensive rend l’obligation pure et simple, tandis que celui de la condition résolutoire entraîne son anéantissement. La source 2 (article 1304-3) est pertinente pour la précision additionnelle sur les conditions réputées accomplies ou défaillies et la couvre explicitement. Les exemples sont des illustrations générales cohérentes avec les effets décrits, sans ajouter d’affirmation juridique essentielle non couverte."
+    }
+  },
+  "routing": {
+    "answer": "Dans une obligation conditionnelle :\n\n- **La condition suspensive** retarde les effets de l’obligation : l’obligation devient pure et simple si l’événement futur et incertain se réalise. [Source 1]  \n  *Exemple : une vente conclue sous réserve de l’obtention d’un prêt.*\n\n- **La condition résolutoire** permet à l’obligation de produire ses effets, mais son accomplissement entraîne ensuite son anéantissement. [Source 1]  \n  *Exemple : un contrat qui prend fin si un événement prévu survient.*\n\nEn outre, la condition suspensive est réputée accomplie si la partie intéressée à sa réalisation l’en a empêchée ; inversement, la condition résolutoire est réputée défaillie si sa réalisation a été provoquée par la partie qui y avait intérêt. **Article 1304-3 du Code civil** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.634279999882,
+      "routingCalls": 1,
+      "embeddingMs": 213.63215399999171,
+      "vectorSearchMs": 126.41659300005995,
+      "jinaRerankingMs": 495.9181559998542,
+      "mappingMs": 0.026399000082165003,
+      "totalMs": 1962.6549829998985,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013453999999910593,
+      "contextBuilderMs": 0.017853999976068735,
+      "generationMs": 2031.0466209999286,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3993.7427950000856
+    },
+    "judge": {
+      "questionId": "q097",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la distinction de l’article 1304 : l’accomplissement de la condition suspensive rend l’obligation pure et simple, tandis que celui de la condition résolutoire entraîne son anéantissement. Elle répond complètement à la question et l’ajout relatif à l’article 1304-3 est exact et explicitement soutenu par le contexte. Les exemples sont cohérents avec les définitions fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et énonce exactement la distinction demandée entre conditions suspensive et résolutoire. La source 2 est pertinente pour l’ajout relatif aux effets d’une obstruction ou provocation intéressée. Les affirmations juridiques essentielles de la réponse sont explicitement couvertes par ces deux sources ; les exemples illustratifs restent cohérents avec les définitions citées."
+    }
+  },
+  "failureStage": "none"
+}

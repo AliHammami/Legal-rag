@@ -1,0 +1,99 @@
+{
+  "questionId": "q416",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de manquement à **l’obligation d’informer sur la durée de disponibilité des pièces détachées**, une **amende administrative** est prévue :\n\n- jusqu’à **3 000 € pour une personne physique** ;\n- jusqu’à **15 000 € pour une personne morale**.\n\nCette amende est prononcée selon les conditions prévues au chapitre II du titre II du livre V du Code de la consommation. **Article L. 131-2 du Code de la consommation [Source 1]**\n\nÀ distinguer du manquement à l’**obligation de disponibilité effective** des pièces détachées, passible d’une amende pouvant atteindre :\n\n- **15 000 € pour une personne physique** ;\n- **75 000 € pour une personne morale**.\n\n**Article L. 131-3 du Code de la consommation [Source 2]**\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code monétaire et financier** concernant les responsabilités imposées aux banquiers. Il n’est donc pas possible de répondre sur ce point à partir des sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.95469100028276,
+      "vectorSearchMs": 699.6451199986041,
+      "jinaRerankingMs": 524.9291059989482,
+      "mappingMs": 0.042698001489043236,
+      "totalMs": 1443.604674000293,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011424999684095383,
+      "contextBuilderMs": 0.020442001521587372,
+      "generationMs": 2645.0282860007137,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4088.6796300001442
+    },
+    "judge": {
+      "questionId": "q416",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne correctement les plafonds d'amende applicables au défaut d'information sur la disponibilité des pièces détachées (3 000 € pour une personne physique et 15 000 € pour une personne morale). Elle ajoute à juste titre, sur la base du contexte, la sanction distincte liée au défaut de disponibilité effective. En revanche, elle ne fournit pas les sanctions et responsabilités des banquiers attendues par la question et la référence. Cette omission est néanmoins explicitement justifiée par l'absence de toute source pertinente dans le contexte. Toutes les affirmations juridiques formulées sont étayées par les deux extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour la sanction du manquement à l'information sur la durée de disponibilité des pièces détachées et, accessoirement, pour distinguer la sanction du défaut de disponibilité effective. Elles ne contiennent toutefois aucune disposition du code monétaire et financier relative aux banquiers, alors que ce volet constitue une partie importante de la question. En revanche, elles couvrent toutes les affirmations juridiques effectivement formulées dans la réponse générée, y compris l'affirmation selon laquelle le contexte fourni ne permet pas de répondre sur le volet bancaire."
+    }
+  },
+  "routing": {
+    "answer": "### Code de la consommation\n\nDeux manquements sont distingués :\n\n- **Manquement à l’obligation d’informer sur la durée de disponibilité des pièces détachées** : amende administrative maximale de **3 000 € pour une personne physique** et **15 000 € pour une personne morale**, selon l’**article L. 131-2 du Code de la consommation** [Source 1].\n- **Manquement à l’obligation de disponibilité des pièces détachées** : amende administrative maximale de **15 000 € pour une personne physique** et **75 000 € pour une personne morale**, selon l’**article L. 131-3 du Code de la consommation** [Source 2].\n\nCes amendes sont prononcées selon les modalités prévues au chapitre II du titre II du livre V du Code de la consommation.\n\n### Responsabilités des banquiers\n\nLe **Code monétaire et financier** prévoit, pour le **tiré**, une amende de **12 000 €** notamment lorsqu’il :\n\n1. indique une provision inférieure à celle qui existe et est disponible ;\n2. rejette un chèque pour insuffisance ou indisponibilité de provision sans fournir les indications requises ;\n3. ne déclare pas certains incidents de paiement et infractions ;\n4. contrevient aux articles mentionnés par le texte, notamment les articles L. 131-72, L. 131-73 et L. 163-6.\n\nCes obligations et cette sanction résultent de l’**article L. 163-10 du Code monétaire et financier** [Source 3].\n\nLes sources fournies ne permettent toutefois pas d’établir un lien entre les sanctions relatives aux pièces détachées et les obligations bancaires : il s’agit de régimes distincts.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.9604020006955,
+      "routingCalls": 1,
+      "embeddingMs": 615.615810001269,
+      "vectorSearchMs": 236.32100199908018,
+      "jinaRerankingMs": 515.3467900007963,
+      "mappingMs": 0.02641899883747101,
+      "totalMs": 2596.2985370010138,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05326000042259693,
+      "contextBuilderMs": 0.022040000185370445,
+      "generationMs": 3532.1335930004716,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6128.517978999764
+    },
+    "judge": {
+      "questionId": "q416",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne correctement les plafonds d’amende de 3 000 € et 15 000 € pour le manquement à l’information sur la durée de disponibilité des pièces détachées. Elle ajoute, de façon exacte mais non nécessaire, la sanction distincte relative au manquement à l’obligation de disponibilité. En revanche, elle ne répond pas aux responsabilités bancaires attendues par la référence : l’amende de 7,5 € liée aux formules de chèques en blanc et la responsabilité pour refus injustifié de paiement d’un chèque régulier sont absentes. Elle traite à la place d’infractions du tiré sanctionnées de 12 000 €, qui sont bien étayées par le contexte mais ne répondent que partiellement à la question telle qu’attendue. Toutes les affirmations juridiques importantes formulées sont supportées par les extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes pour les sanctions du code de la consommation relatives aux pièces détachées. La source 3 est pertinente pour certaines obligations du tiré et leur sanction, mais elle ne fournit pas les dispositions relatives aux responsabilités bancaires spécifiquement attendues dans la question (formules de chèques en blanc et refus injustifié de paiement). Les sources sont donc seulement partiellement suffisantes pour la question complète. En revanche, les affirmations juridiques effectivement formulées dans la réponse générée — montants et conditions des amendes des articles L. 131-2 et L. 131-3, ainsi que les cas sanctionnés par l’article L. 163-10 — sont couvertes par les extraits fournis."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,99 @@
+{
+  "questionId": "q317",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L421-2 du Code de la consommation, les produits destinés aux consommateurs doivent respecter le **règlement (UE) 2023/988 du 10 mai 2023 relatif à la sécurité générale des produits**. [Source 1]\n\nCe règlement modifie le règlement (UE) n° 1025/2012 et la directive (UE) 2020/1828, et abroge la directive 2001/95/CE ainsi que la directive 87/357/CEE.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L421-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R412-43-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.22682600002736,
+      "vectorSearchMs": 659.0058979997411,
+      "jinaRerankingMs": 546.050520000048,
+      "mappingMs": 0.027483999729156494,
+      "totalMs": 1413.3362289993092,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012622999958693981,
+      "contextBuilderMs": 0.020564000122249126,
+      "generationMs": 1452.138975000009,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2865.517861000262
+    },
+    "judge": {
+      "questionId": "q317",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le règlement (UE) 2023/988 du 10 mai 2023 et reproduit correctement ses principales modifications et abrogations. Toutes ces informations sont explicitement présentes dans le contexte de l'article L421-2. Elle répond directement à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article L421-2 visé par la question et énonce explicitement le règlement (UE) 2023/988 du 10 mai 2023, son objet, les textes qu'il modifie et ceux qu'il abroge. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée. Les sources 2 et 3 sont accessoires mais ne nuisent pas à la pertinence globale."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L421-2 du Code de la consommation, les produits destinés aux consommateurs doivent respecter le **règlement (UE) 2023/988 du Parlement européen et du Conseil du 10 mai 2023 relatif à la sécurité générale des produits**. Celui-ci modifie le règlement (UE) n° 1025/2012 et la directive (UE) 2020/1828, et abroge la directive 2001/95/CE ainsi que la directive 87/357/CEE. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L421-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L422-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1122.4413149999455,
+      "routingCalls": 1,
+      "embeddingMs": 206.57380700018257,
+      "vectorSearchMs": 47.853236000053585,
+      "jinaRerankingMs": 571.082552999258,
+      "mappingMs": 0.029132000170648098,
+      "totalMs": 1948.0083050001413,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01438200008124113,
+      "contextBuilderMs": 0.019160999916493893,
+      "generationMs": 1406.6133070001379,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3354.6651119999588
+    },
+    "judge": {
+      "questionId": "q317",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le règlement (UE) 2023/988, sa date, son objet, ainsi que les textes qu'il modifie et abroge. Ces éléments sont tous explicitement présents dans le contexte de l'article L421-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L421-2 et mentionne explicitement le règlement (UE) 2023/988, sa date, son objet, ainsi que les textes modifiés et abrogés. Elle couvre l'ensemble des affirmations importantes de la réponse générée. La source 2 est également cohérente mais n'est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q173",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’elle est consultée sur la politique de l’emploi, la Commission comprend :\n\n- des représentants de l’État ;\n- un représentant du Conseil d’État, en particulier le président de sa section sociale ;\n- six représentants des organisations d’employeurs représentatives au niveau national interprofessionnel ;\n- dix représentants titulaires des organisations syndicales de salariés représentatives au même niveau ;\n- des représentants des régions, des départements et des collectivités ultramarines.  \n\nS’agissant des consultations relatives aux projets de loi, d’ordonnance ou de décret concernant l’emploi, l’orientation et la formation professionnelle, s’ajoutent notamment les ministres chargés de l’emploi, de la formation professionnelle, de l’éducation nationale et de l’enseignement supérieur, ainsi que huit représentants des régions et collectivités ultramarines et deux représentants des départements. [Source 1] [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2272-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2272-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 238.66066200006753,
+      "vectorSearchMs": 626.5284739998169,
+      "jinaRerankingMs": 580.7082520001568,
+      "mappingMs": 0.03620099974796176,
+      "totalMs": 1445.9756729998626,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01037900010123849,
+      "contextBuilderMs": 0.02060500020161271,
+      "generationMs": 3168.9618430002593,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4614.978955999948
+    },
+    "judge": {
+      "questionId": "q173",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la composition générale applicable lors des consultations en matière de politique de l’emploi : représentants de l’État et du Conseil d’État, représentants patronaux et syndicaux nationaux, ainsi que représentants des régions, départements et collectivités ultramarines. Les précisions chiffrées et institutionnelles sont conformes à l’article réglementaire fourni. Le complément relatif aux projets de loi, d’ordonnance et de décret est exact et explicitement étayé par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. La source 1 énonce la composition légale de la Commission et l’ajout des représentants des régions, départements et collectivités ultra-marines lors des consultations en politique de l’emploi. La source 2 couvre précisément les précisions apportées par la réponse (présidence de la section sociale du Conseil d’État, six représentants employeurs, dix représentants syndicaux) ainsi que la composition complémentaire pour les projets de loi, d’ordonnance et de décret relatifs à l’emploi, l’orientation et la formation professionnelle. Toutes les affirmations importantes sont donc étayées."
+    }
+  },
+  "routing": {
+    "answer": "Lorsqu’elle est consultée sur la politique de l’emploi, la Commission comprend :\n\n- le ministre chargé du travail ou son représentant, qui la préside ;\n- les ministres chargés de l’agriculture et de l’économie, ou leurs représentants ;\n- le président de la section sociale du Conseil d’État ;\n- six représentants des organisations d’employeurs et dix représentants des organisations syndicales de salariés représentatives au niveau national interprofessionnel ;\n- le ministre chargé de l’emploi, celui chargé de la formation professionnelle, celui chargé de l’éducation nationale et celui chargé de l’enseignement supérieur, ou leurs représentants ;\n- huit représentants des régions et des collectivités ultramarines exerçant les compétences régionales en matière de formation professionnelle ;\n- deux représentants des départements.\n\nCette composition résulte de l’article R. 2272-1 du Code du travail [Source 2]. Plus généralement, l’article L. 2272-1 du Code du travail prévoit l’adjonction de représentants des régions, des départements et des collectivités ultramarines lorsque la commission est consultée dans le domaine de la politique de l’emploi, de l’orientation et de la formation professionnelle [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2272-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2272-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1305.6835010000505,
+      "routingCalls": 1,
+      "embeddingMs": 200.99560700030997,
+      "vectorSearchMs": 298.1913199997507,
+      "jinaRerankingMs": 588.8785190000199,
+      "mappingMs": 0.026406999677419662,
+      "totalMs": 2393.804428999778,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012089000083506107,
+      "contextBuilderMs": 0.015929999761283398,
+      "generationMs": 3926.503779000137,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6320.34505299991
+    },
+    "judge": {
+      "questionId": "q173",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne la composition de base et les membres additionnels applicables lors des consultations relatives à l’emploi, à l’orientation et à la formation professionnelle. Ces éléments sont conformes aux articles L. 2272-1 et R. 2272-1 reproduits dans le contexte, avec un niveau de détail supérieur à la référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. L'article L. 2272-1 établit la composition générale et l'ajout de représentants des régions, départements et collectivités ultra-marines pour les consultations en matière de politique de l'emploi. L'article R. 2272-1 couvre précisément l'ensemble des membres détaillés dans la réponse, y compris la présidence, les ministres, le Conseil d'Etat, les effectifs des représentants employeurs et salariés, ainsi que les représentants territoriaux ajoutés lors des consultations concernées."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q234",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L224-10 du Code monétaire et financier**, à partir de la cinquième année précédant l’échéance de son plan d’épargne retraite d’entreprise, le titulaire peut interroger le gestionnaire afin d’obtenir des renseignements sur :\n\n- **ses droits** ;\n- **les modalités de restitution de l’épargne** adaptées à sa situation ;\n- le cas échéant, **la confirmation du rythme de réduction des risques financiers** applicable à son allocation.  \n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-30"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.8044610004872,
+      "vectorSearchMs": 639.9159679999575,
+      "jinaRerankingMs": 573.3218349991366,
+      "mappingMs": 0.02749700006097555,
+      "totalMs": 1402.1052310001105,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013242000713944435,
+      "contextBuilderMs": 0.021045999601483345,
+      "generationMs": 1566.1461249999702,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2968.29814199917
+    },
+    "judge": {
+      "questionId": "q234",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois renseignements prévus par l’article L224-10 : les droits, les modalités de restitution adaptées à la situation du titulaire et, le cas échéant, la confirmation du rythme de réduction des risques financiers. Ces éléments sont explicitement présents dans le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l’article L. 224-10 directement visé par la question et énonce précisément les trois catégories de renseignements reprises dans la réponse : droits, modalités de restitution appropriées à la situation, et, le cas échéant, rythme de réduction des risques financiers. Elle couvre entièrement les affirmations importantes. La source 2 est redondante et concerne un plan individuel, mais n’est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "À partir de la cinquième année précédant l’échéance, le titulaire peut interroger le gestionnaire afin d’obtenir :\n\n- des informations sur ses droits ;\n- des informations sur les modalités de restitution de l’épargne adaptées à sa situation ;\n- le cas échéant, la confirmation du rythme de réduction des risques financiers prévu dans son allocation.\n\nCette possibilité est prévue par l’article L. 224-10 du Code monétaire et financier [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-30"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1518.062546000816,
+      "routingCalls": 1,
+      "embeddingMs": 190.22382399998605,
+      "vectorSearchMs": 139.81739699933678,
+      "jinaRerankingMs": 559.8058089995757,
+      "mappingMs": 0.028343000449240208,
+      "totalMs": 2407.9651339994743,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011587999761104584,
+      "contextBuilderMs": 0.019694999791681767,
+      "generationMs": 1583.2481490001082,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3991.2546690003946
+    },
+    "judge": {
+      "questionId": "q234",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois renseignements visés par l'article L. 224-10 : les droits du titulaire, les modalités de restitution adaptées à sa situation et, le cas échéant, le rythme de réduction des risques financiers. Ces éléments sont explicitement présents dans le contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article L. 224-10 visé par la question et énonce expressément les trois éléments repris dans la réponse : information sur les droits, modalités de restitution appropriées à la situation et, le cas échéant, confirmation du rythme de réduction des risques financiers. Elle couvre également le point temporel à compter de la cinquième année. La source 2 est redondante mais cohérente."
+    }
+  },
+  "failureStage": "none"
+}

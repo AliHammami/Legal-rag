@@ -1,0 +1,87 @@
+{
+  "questionId": "q069",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le propriétaire du fonds inférieur doit :\n\n- **Recevoir les eaux** qui s’écoulent naturellement du fonds supérieur, sans intervention humaine ;\n- **Ne pas construire de digue** ou tout autre ouvrage faisant obstacle à cet écoulement.\n\nIl s’agit d’une obligation résultant de la servitude naturelle d’écoulement des eaux prévue par **l’article 640 du Code civil** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "640"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 252.77142599993385,
+      "vectorSearchMs": 681.0036599999294,
+      "jinaRerankingMs": 497.71187400002964,
+      "mappingMs": 0.03992700017988682,
+      "totalMs": 1431.5554590001702,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020004000049084425,
+      "contextBuilderMs": 0.014380000066012144,
+      "generationMs": 1536.095734000206,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2967.696687000105
+    },
+    "judge": {
+      "questionId": "q069",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux obligations prévues à l’article 640 du Code civil : recevoir les eaux découlant naturellement du fonds supérieur et ne pas ériger d’ouvrage, notamment une digue, faisant obstacle à leur écoulement. Ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 640 du Code civil, qui énonce précisément les deux obligations du propriétaire du fonds inférieur : recevoir les eaux découlant naturellement du fonds supérieur sans intervention humaine et ne pas élever de digue empêchant leur écoulement. Elle couvre également la qualification de servitude naturelle d’écoulement invoquée dans la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 640 du Code civil, le propriétaire du fonds inférieur doit :\n\n- recevoir les eaux qui s’écoulent naturellement du fonds supérieur, sans intervention humaine ;\n- ne pas construire de digue ni effectuer d’aménagement empêchant cet écoulement naturel.\n\nEn contrepartie, le propriétaire du fonds supérieur ne doit pas aggraver la servitude du fonds inférieur. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "640"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.4096359999385,
+      "routingCalls": 1,
+      "embeddingMs": 261.4767620000057,
+      "vectorSearchMs": 56.96127900015563,
+      "jinaRerankingMs": 510.4871160001494,
+      "mappingMs": 0.0343170000705868,
+      "totalMs": 2262.3950549999718,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010624999878928065,
+      "contextBuilderMs": 0.010607999982312322,
+      "generationMs": 1649.239146999782,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3911.6646920000203
+    },
+    "judge": {
+      "questionId": "q069",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les obligations du propriétaire du fonds inférieur prévues à l’article 640 : recevoir les eaux découlant naturellement, sans intervention humaine, et ne pas élever de digue ou réaliser d’aménagement empêchant l’écoulement. La précision sur l’interdiction d’aggraver la servitude vise le propriétaire supérieur, est correcte et explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 640 du Code civil, qui régit précisément l’obligation du fonds inférieur de recevoir les eaux découlant naturellement du fonds supérieur et l’interdiction d’élever une digue empêchant leur écoulement. Elle couvre également l’affirmation complémentaire selon laquelle le propriétaire supérieur ne doit pas aggraver la servitude."
+    }
+  },
+  "failureStage": "none"
+}

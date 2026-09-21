@@ -1,0 +1,98 @@
+{
+  "questionId": "q432",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les conditions de validité dépendent de l’acte concerné.\n\n### 1. Contrat de droit civil\n\nSelon l’**article 1128 du Code civil**, trois conditions sont nécessaires :\n\n- le consentement des parties ;\n- leur capacité de contracter ;\n- un contenu licite et certain.  \n[Source 1]\n\nLorsqu’une obligation est soumise à une condition, celle-ci doit également être licite ; à défaut, l’obligation est nulle, conformément à l’**article 1304-1 du Code civil**. [Source 4]\n\n### 2. Accord d’entreprise ou d’établissement\n\nL’**article L2232-12 du Code du travail** subordonne principalement la validité de l’accord :\n\n- à sa signature par l’employeur ou son représentant ;\n- et par une ou plusieurs organisations syndicales représentatives ayant recueilli **plus de 50 %** des suffrages exprimés au premier tour des dernières élections des titulaires du CSE. [Source 2]\n\nÀ défaut d’atteindre 50 %, une procédure de consultation des salariés peut être engagée si l’accord a été signé par des organisations ayant recueilli **plus de 30 %** des suffrages, sous réserve du respect des délais et conditions prévus par le texte. [Source 2]\n\n### 3. Conditions particulières prévues par décret\n\nLorsqu’un texte renvoie à des modalités réglementaires, celles-ci peuvent être fixées par décret en Conseil d’État, conformément à l’**article L2135-18 du Code du travail**. [Source 3]\n\nPour le dispositif visé par l’**article R5132-18 du Code du travail**, les seuils indiqués sont :\n\n- **16 heures** ;\n- **480 heures**.  \n[Source 5]\n\nLe contexte ne permet toutefois pas de déterminer avec certitude quel acte ou dispositif est précisément visé par la question.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1128"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2232-12"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2135-18"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1304-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R5132-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 369.3498509991914,
+      "vectorSearchMs": 630.8180799987167,
+      "jinaRerankingMs": 525.1006899997592,
+      "mappingMs": 0.042642999440431595,
+      "totalMs": 1525.3407079987228,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014097999781370163,
+      "contextBuilderMs": 0.031897999346256256,
+      "generationMs": 3801.7787679992616,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5327.178233999759
+    },
+    "judge": {
+      "questionId": "q432",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question ne précise pas l’acte ou le dispositif concerné et appelait une abstention ou une demande de précision. La réponse fournit néanmoins des conditions applicables à plusieurs régimes distincts, sans pouvoir déterminer lequel est pertinent, ce qu’elle reconnaît seulement à la fin. Les éléments juridiques avancés sont toutefois fidèlement étayés par les extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent bien sur des conditions de validité, mais elles relèvent de régimes distincts (contrat civil, accord collectif, dispositions du Code du travail) sans élément permettant d’identifier lequel répond à la question non précisée. Elles sont donc seulement partiellement pertinentes pour cette demande, qui appelait une abstention ou une précision. En revanche, les affirmations juridiques effectivement formulées dans la réponse sont, pour l’essentiel, directement étayées par les extraits cités, y compris les seuils et mécanismes mentionnés."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1023.8580080009997,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1023.8589559998363,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1023.8673400003463
+    },
+    "judge": {
+      "questionId": "q432",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est trop vague pour permettre une réponse juridique fiable. La réponse reconnaît explicitement cette impossibilité et s'abstient conformément à l'attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une abstention : le contexte ne contient aucun élément permettant d’identifier l’objet des « conditions de validité » ni de fonder une réponse juridique. La réponse se limite à constater cette insuffisance et ne formule aucune affirmation juridique de fond nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

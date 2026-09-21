@@ -1,0 +1,87 @@
+{
+  "questionId": "q381",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 2422 du Code civil**, en cas de :\n\n- saisie immobilière ;\n- procédure de sauvegarde, de redressement judiciaire ou de liquidation judiciaire ;\n- procédure de traitement du surendettement des particuliers ;\n\nles inscriptions hypothécaires produisent les effets prévus par les dispositions correspondantes du **Code des procédures civiles d’exécution**, du **Code de la consommation** et du **Code de commerce**. Dans les départements du Bas-Rhin, du Haut-Rhin et de la Moselle, leurs effets sont régis, en cas d’exécution forcée immobilière, par la loi du 1er juin 1924. **Article 2422 du Code civil [Source 1]**\n\nEn revanche, le contexte ne contient pas le texte de l’**article L2132-5 du Code du travail**. Il ne permet donc pas de préciser les fonctions des syndicats professionnels ni de répondre complètement à la question sur ce fondement.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2422"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 192.39455399941653,
+      "vectorSearchMs": 672.9746889993548,
+      "jinaRerankingMs": 539.6303070001304,
+      "mappingMs": 0.025887999683618546,
+      "totalMs": 1405.120649999939,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010475999675691128,
+      "contextBuilderMs": 0.011415999382734299,
+      "generationMs": 2548.2743170000613,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3953.426880000159
+    },
+    "judge": {
+      "questionId": "q381",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément les effets des inscriptions hypothécaires prévus par l’article 2422, y compris la règle particulière applicable en Alsace-Moselle. Elle ne répond toutefois pas à la seconde partie essentielle de la question, relative aux fonctions des syndicats professionnels prévues à l’article L2132-5 du code du travail. Toutes les affirmations formulées sont directement étayées par le contexte fourni, qui ne contient effectivement pas cet article. L’abstention partielle ne satisfait pas l’attente d’une réponse complète alors que EXPECTED ABSTENTION est faux."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la première partie de la question et permet d'étayer précisément les effets des inscriptions hypothécaires, y compris le régime particulier dans le Bas-Rhin, le Haut-Rhin et la Moselle. Elle ne contient toutefois aucun élément sur l'article L2132-5 du code du travail, donc elle est insuffisante pour répondre entièrement à la question. La réponse générée se limite, pour cette seconde partie, à constater explicitement cette absence ; toutes ses affirmations substantielles sont ainsi couvertes par la source ou par l'absence constatée dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 2422 du Code civil, en cas de :\n\n- saisie immobilière ;\n- procédure de sauvegarde, de redressement judiciaire ou de liquidation judiciaire ;\n- procédure de traitement des situations de surendettement des particuliers ;\n\nles inscriptions hypothécaires produisent les effets prévus par les dispositions spéciales applicables, notamment celles du livre III du Code des procédures civiles d’exécution, du livre VII du Code de la consommation et des titres II à IV du livre VI du Code de commerce. [Source 1]\n\nEn cas d’exécution forcée immobilière dans le Bas-Rhin, le Haut-Rhin et la Moselle, leurs effets sont régis par la loi du 1er juin 1924. [Source 1]\n\nEn revanche, le texte de l’article L2132-5 du Code du travail n’est pas fourni dans le contexte. Il n’est donc pas possible de déterminer, à partir des seules sources disponibles, les fonctions des syndicats professionnels ni de préciser les effets qu’il rattache aux inscriptions hypothécaires.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2422"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1843.2046219995245,
+      "routingCalls": 1,
+      "embeddingMs": 202.99187800008804,
+      "vectorSearchMs": 382.449924999848,
+      "jinaRerankingMs": 573.764044999145,
+      "mappingMs": 0.021961000747978687,
+      "totalMs": 3002.463491000235,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02584000024944544,
+      "contextBuilderMs": 0.011978000402450562,
+      "generationMs": 2359.361746999435,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5361.872329000384
+    },
+    "judge": {
+      "questionId": "q381",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les effets des inscriptions hypothécaires prévus par l’article 2422, y compris le régime particulier applicable en Alsace-Moselle. Elle ne fournit toutefois pas les fonctions des syndicats professionnels prévues par l’article L2132-5, qui constituent une partie essentielle de la question. Cette omission est justifiée par l’absence de cet article dans le contexte fourni. Toutes les affirmations positives sont directement étayées par la source disponible."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour l’article 2422 du code civil et couvre précisément les procédures mentionnées ainsi que le régime particulier applicable dans le Bas-Rhin, le Haut-Rhin et la Moselle. En revanche, aucune source relative à l’article L2132-5 du code du travail n’est fournie, alors que cette disposition constitue une partie importante de la question. Les affirmations positives de la réponse sont toutes étayées par la source 1, et son constat d’impossibilité de répondre sur les fonctions des syndicats est cohérent avec l’absence de cette source dans le contexte."
+    }
+  },
+  "failureStage": "generation"
+}

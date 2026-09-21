@@ -1,0 +1,111 @@
+{
+  "questionId": "q376",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "## 1. Télétravail — Code du travail\n\nL’**article L1222-9 du Code du travail** définit le télétravail comme une organisation dans laquelle un travail pouvant être exécuté dans les locaux de l’employeur est effectué volontairement hors de ces locaux, au moyen des technologies de l’information et de la communication. Le salarié concerné est qualifié de télétravailleur, que le télétravail soit prévu dès l’embauche ou mis en place ultérieurement. [Source 3]\n\nSa mise en place s’effectue :\n\n- en priorité dans le cadre d’un **accord collectif** ;\n- à défaut, dans le cadre d’une **charte élaborée par l’employeur après avis du comité social et économique**, s’il existe ;\n- en l’absence d’accord collectif ou de charte, par un accord entre le salarié et l’employeur, formalisé par tout moyen.\n\nLorsqu’un travailleur handicapé ou un salarié aidant demande à télétravailler, l’employeur doit motiver, le cas échéant, sa décision de refus. [Source 3]\n\nL’accord collectif ou la charte doit notamment préciser :\n\n1. les conditions de passage au télétravail et de retour au travail sans télétravail ;\n2. les modalités d’acceptation des conditions de mise en œuvre ;\n3. les modalités de contrôle du temps de travail ou de régulation de la charge de travail ;\n4. les plages horaires durant lesquelles l’employeur peut habituellement contacter le salarié. [Source 3]\n\n## 2. Instruments de paiement réservés aux faibles montants — Code monétaire et financier\n\nL’**article L133-28 du Code monétaire et financier** prévoit qu’un décret fixe les montants maximaux de paiement, de dépenses ou de stockage des fonds permettant de considérer certains instruments comme réservés aux paiements de faibles montants. [Source 1]\n\nPour ces instruments, le prestataire de services de paiement peut convenir avec le payeur de modalités particulières, notamment :\n\n- l’impossibilité de révoquer l’ordre de paiement après sa transmission ou après le consentement à l’opération ;\n- l’application de délais d’exécution différents de ceux prévus à l’article L. 133-13 ;\n- l’absence de notification du refus de l’ordre lorsque le payeur en a connaissance au moment de sa passation ;\n- la non-application de certaines règles relatives au blocage du compte ou de l’instrument lorsque le prestataire ne peut pas techniquement procéder à ce blocage ;\n- la non-application de plusieurs règles relatives notamment au remboursement, à l’authentification ou à la preuve de l’autorisation de l’opération lorsque l’instrument est anonyme ou que cette preuve est impossible pour des raisons inhérentes à l’instrument. [Source 1]\n\nAinsi, le Code du travail encadre principalement la définition et la mise en place du télétravail, tandis que le Code monétaire et financier prévoit, pour les instruments de faible montant, des seuils réglementaires et des dérogations pouvant être convenues entre le prestataire et le payeur.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-28"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R733-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-9"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.39643200021237,
+      "vectorSearchMs": 606.7097090007737,
+      "jinaRerankingMs": 594.1365080000833,
+      "mappingMs": 0.14367799926549196,
+      "totalMs": 1432.4195490004495,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012558000162243843,
+      "contextBuilderMs": 0.030503000132739544,
+      "generationMs": 5117.343913000077,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6549.8202720005065
+    },
+    "judge": {
+      "questionId": "q376",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les articles L1222-9 du code du travail et L133-28 du code monétaire et financier. Elle restitue fidèlement la définition, les modalités de mise en place et le contenu de l’accord ou de la charte relatifs au télétravail. Elle expose également les seuils réglementaires et les dérogations conventionnelles applicables aux instruments de paiement de faibles montants. Les affirmations importantes sont explicitement étayées par les sources 1 et 3 du contexte, et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 3 (article L1222-9 du code du travail) et 1 (article L133-28 du code monétaire et financier) sont directement pertinentes et correspondent exactement aux deux volets de la question. Elles étayent l'ensemble des affirmations substantielles de la réponse : définition et modalités de mise en place du télétravail, contenu de l'accord ou de la charte, ainsi que seuils réglementaires et dérogations applicables aux instruments de paiement de faibles montants."
+    }
+  },
+  "routing": {
+    "answer": "## 1. Télétravail — Code du travail\n\nL’**article L. 1222-9 du Code du travail** définit le télétravail comme une organisation dans laquelle un travail qui aurait pu être effectué dans les locaux de l’employeur est réalisé, de manière volontaire, hors de ces locaux, au moyen des technologies de l’information et de la communication. Le salarié qui exerce ainsi son activité est qualifié de télétravailleur [Source 3].\n\nLe télétravail est normalement mis en place :\n\n- par un **accord collectif** ;\n- ou, à défaut, par une **charte élaborée par l’employeur après avis du comité social et économique**, s’il existe ;\n- en l’absence d’accord ou de charte, par un accord entre le salarié et l’employeur, formalisé par tout moyen [Source 3].\n\nL’accord collectif ou la charte doit notamment préciser :\n\n1. les conditions de passage au télétravail et de retour à une exécution du contrat sans télétravail ;\n2. les modalités d’acceptation par le salarié ;\n3. les modalités de contrôle du temps de travail ou de régulation de la charge de travail ;\n4. les plages horaires pendant lesquelles l’employeur peut habituellement contacter le télétravailleur [Source 3].\n\nLorsqu’une demande est formulée par un travailleur handicapé ou un salarié aidant, l’employeur doit motiver, le cas échéant, sa décision de refus [Source 3].\n\n## 2. Instruments de paiement de faibles montants — Code monétaire et financier\n\nL’**article L. 133-28 du Code monétaire et financier** concerne les instruments de paiement conçus pour respecter certains seuils de paiement, de dépenses ou de stockage de fonds. Un décret fixe les montants maximaux en dessous desquels ces instruments sont considérés comme réservés aux paiements de faibles montants [Source 1].\n\nPour ces instruments, le prestataire de services de paiement peut convenir avec le payeur de modalités spécifiques, notamment :\n\n- l’impossibilité de révoquer l’ordre de paiement après sa transmission ou après le consentement à l’opération ;\n- l’application de délais d’exécution différents de ceux prévus par l’article L. 133-13 du même code ;\n- l’absence de notification du refus de l’ordre lorsque l’utilisateur en avait connaissance au moment de sa passation ;\n- la non-application de certaines règles relatives au blocage du compte ou de l’instrument lorsque le prestataire ne peut pas techniquement procéder à ce blocage ;\n- la non-application de certaines règles relatives à la responsabilité, à l’autorisation et à la preuve de l’opération lorsque l’instrument est utilisé anonymement ou que le prestataire ne peut pas établir qu’elle a été autorisée [Source 1].\n\nAinsi, le régime des paiements de faibles montants repose sur des **seuils réglementaires** et permet, par accord avec le payeur, des adaptations de plusieurs règles ordinaires de fonctionnement et de responsabilité des instruments de paiement.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-28"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R733-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1222-9"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L314-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2049.4329989999533,
+      "routingCalls": 1,
+      "embeddingMs": 223.4855379993096,
+      "vectorSearchMs": 438.6795300003141,
+      "jinaRerankingMs": 597.6032100003213,
+      "mappingMs": 0.07189400028437376,
+      "totalMs": 3309.2990370001644,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03453699965029955,
+      "contextBuilderMs": 0.02078399993479252,
+      "generationMs": 5898.558117000386,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9207.922701999545
+    },
+    "judge": {
+      "questionId": "q376",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les articles L. 1222-9 du code du travail et L. 133-28 du code monétaire et financier. Elle expose la définition, les modalités de mise en place et le contenu de l'accord ou de la charte de télétravail, ainsi que les seuils et principales dérogations applicables aux instruments de paiement de faibles montants. Toutes les affirmations importantes sont directement étayées par les sources 1 et 3 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 3 (article L. 1222-9 du code du travail) et 1 (article L. 133-28 du code monétaire et financier) sont directement pertinentes et correspondent exactement aux deux volets de la question. Elles étayent la définition du télétravail, ses modalités de mise en place, le contenu de l'accord ou de la charte et le refus motivé dans certains cas, ainsi que les seuils réglementaires et l'ensemble des dérogations principales applicables aux instruments de paiement de faibles montants. Les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q079",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 893 du Code civil, la libéralité est l’acte par lequel une personne dispose gratuitement de tout ou partie de ses biens ou de ses droits au profit d’une autre personne. Elle peut être effectuée uniquement :\n\n- par une donation entre vifs ;\n- ou par un testament.\n\n[Article 893 du Code civil — Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.62308500008658,
+      "vectorSearchMs": 664.4550509999972,
+      "jinaRerankingMs": 497.81388100003824,
+      "mappingMs": 0.0333980000577867,
+      "totalMs": 1394.9681649999693,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01475499989464879,
+      "contextBuilderMs": 0.011652000015601516,
+      "generationMs": 1365.9110139999539,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2760.91719800001
+    },
+    "judge": {
+      "questionId": "q079",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition de l'article 893 du Code civil et énumère exactement les deux modalités prévues : donation entre vifs ou testament. Toutes les affirmations sont explicitement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique est l’article 893 du Code civil, directement pertinent : elle donne explicitement la définition de la libéralité et précise qu’elle ne peut être faite que par donation entre vifs ou testament. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 893 du Code civil, la libéralité est l’acte par lequel une personne dispose gratuitement de tout ou partie de ses biens ou de ses droits au profit d’une autre personne [Source 1].\n\nElle peut être effectuée uniquement par :\n\n- une donation entre vifs ;\n- un testament [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1150.4149859999306,
+      "routingCalls": 1,
+      "embeddingMs": 350.5852409999352,
+      "vectorSearchMs": 63.16883700015023,
+      "jinaRerankingMs": 491.92558300006203,
+      "mappingMs": 0.0822209999896586,
+      "totalMs": 2056.234812000068,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011187999974936247,
+      "contextBuilderMs": 0.01106299995444715,
+      "generationMs": 1118.1286649999674,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3174.3949159998447
+    },
+    "judge": {
+      "questionId": "q079",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement la définition de l’article 893 du Code civil et indique exhaustivement les deux seules formes prévues : donation entre vifs et testament. Toutes les affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 893 du Code civil, qui définit la libéralité et énonce limitativement ses deux modalités : la donation entre vifs et le testament. Elle couvre explicitement toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

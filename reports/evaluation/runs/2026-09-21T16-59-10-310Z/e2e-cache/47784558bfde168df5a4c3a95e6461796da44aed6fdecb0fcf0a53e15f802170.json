@@ -1,0 +1,95 @@
+{
+  "questionId": "q005",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 221-12 du Code pénal**, la disparition forcée consiste en :\n\n- l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne ;\n- commise par un ou plusieurs agents de l’État, ou avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État ;\n- dans des conditions soustrayant la personne à la protection de la loi ;\n- suivie de sa disparition, accompagnée soit du refus de reconnaître la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nCette infraction est punie de la **réclusion criminelle à perpétuité**. La période de sûreté est également applicable selon les modalités prévues par l’article 132-23 du Code pénal [Source 1].\n\nDes peines complémentaires peuvent aussi être prononcées, notamment l’interdiction de détenir ou porter une arme et la confiscation d’armes, sous réserve de la possibilité pour la cour d’assises de ne pas les prononcer dans certaines circonstances [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-12"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.91899900000135,
+      "vectorSearchMs": 805.9995170000038,
+      "jinaRerankingMs": 545.3038809999998,
+      "mappingMs": 0.191556000005221,
+      "totalMs": 1564.4542999999976,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.021520000009331852,
+      "contextBuilderMs": 0.02612500000395812,
+      "generationMs": 2005.726874999993,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3570.2584769999958
+    },
+    "judge": {
+      "questionId": "q005",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit fidèlement tous les éléments constitutifs de la disparition forcée prévus à l'article 221-12 et indique correctement la réclusion criminelle à perpétuité. Elle mentionne aussi, de façon exacte et étayée par le contexte, la période de sûreté ainsi que certaines peines complémentaires de l'article 221-14. Elle répond bien à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle définit exhaustivement la disparition forcée au sens de l'article 221-12, prévoit la réclusion criminelle à perpétuité et l'applicabilité de la période de sûreté. La source 2 est également pertinente pour l'ajout relatif aux peines complémentaires, dont l'interdiction de détenir ou porter une arme et la confiscation, avec la faculté de dispense par la cour d'assises. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 221-12 du Code pénal, la disparition forcée consiste en :\n\n- l’arrestation, la détention, l’enlèvement ou toute autre privation de liberté d’une personne ;\n- commise par des agents de l’État, ou par des personnes agissant avec l’autorisation, l’appui ou l’acquiescement des autorités de l’État ;\n- dans des conditions soustrayant la personne à la protection de la loi ;\n- suivie de sa disparition et accompagnée soit du refus de reconnaître la privation de liberté, soit de la dissimulation de son sort ou du lieu où elle se trouve.\n\nCette infraction est punie de la **réclusion criminelle à perpétuité**. Les règles relatives à la période de sûreté sont également applicables [Article 221-12 du Code pénal — Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-12"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1367.3552889999992,
+      "routingCalls": 1,
+      "embeddingMs": 238.1310530000046,
+      "vectorSearchMs": 63.2549030000082,
+      "jinaRerankingMs": 566.1530080000084,
+      "mappingMs": 0.029727000001003034,
+      "totalMs": 2234.972470000008,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.025328000003355555,
+      "contextBuilderMs": 0.02890299999853596,
+      "generationMs": 2207.4571219999925,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4442.515837999992
+    },
+    "judge": {
+      "questionId": "q005",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les éléments constitutifs prévus par l’article 221-12 (privation de liberté, implication ou acquiescement des autorités étatiques, soustraction à la protection de la loi, disparition et déni ou dissimulation) et indique correctement la réclusion criminelle à perpétuité. La mention de l’applicabilité des règles de période de sûreté est également explicitement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article 221-12 visé par la question. Elle couvre l'ensemble des éléments constitutifs énoncés dans la réponse, la peine de réclusion criminelle à perpétuité et l'applicabilité des règles relatives à la période de sûreté. La source 2 est additionnelle mais non nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

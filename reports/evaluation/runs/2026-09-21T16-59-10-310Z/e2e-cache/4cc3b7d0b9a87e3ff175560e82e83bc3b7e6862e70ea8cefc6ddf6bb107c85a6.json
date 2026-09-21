@@ -1,0 +1,91 @@
+{
+  "questionId": "q373",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de non-respect des obligations applicables à l’offre de coffre-fort numérique, le fournisseur est **passible des sanctions prévues aux articles L. 132-2 et L. 132-3 du Code de la consommation**, conformément à l’article L. 122-22 du même code [Source 1].\n\nToutefois, le contexte fourni ne reproduit pas le contenu des articles L. 132-2 et L. 132-3. Il ne permet donc pas de préciser :\n\n- la nature exacte des sanctions encourues ;\n- les éventuelles interdictions professionnelles ou autres mesures prononcées ;\n- les conséquences particulières d’une condamnation pénale ou les règles applicables à un condamné.\n\nIl est donc seulement possible d’affirmer que le non-respect peut entraîner les sanctions renvoyées par l’article L. 122-22, sans en détailler la portée à partir des éléments disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L122-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.14325200021267,
+      "vectorSearchMs": 676.8825260000303,
+      "jinaRerankingMs": 624.1838180003688,
+      "mappingMs": 0.03794199973344803,
+      "totalMs": 1511.2754819998518,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012885000556707382,
+      "contextBuilderMs": 0.01878300029784441,
+      "generationMs": 2479.362917000428,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3990.681470000185
+    },
+    "judge": {
+      "questionId": "q373",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le renvoi de l’article L. 122-22 du code de la consommation vers les sanctions des articles L. 132-2 et L. 132-3. Elle est également prudente en indiquant que la nature précise de ces sanctions ne peut pas être déterminée à partir du seul contexte fourni. En revanche, elle ne traite pas réellement du volet relatif aux sanctions ou interdictions visant un condamné dans un contexte pénal, pourtant demandé et abordé dans la référence. Toutes ses affirmations importantes sont toutefois directement étayées par l’unique source du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le volet relatif au fournisseur de coffre-fort numérique : elle établit le renvoi de l'article L. 122-22 aux sanctions des articles L. 132-2 et L. 132-3. Elle ne permet pas de traiter le volet pénal concernant les sanctions ou interdictions applicables à un condamné, ni de détailler les sanctions renvoyées. Toutefois, la réponse générée n'affirme pas ces éléments : elle constate explicitement que le contexte ne les reproduit pas et ne permet pas de les préciser. Toutes ses affirmations substantielles sont donc couvertes par la source."
+    }
+  },
+  "routing": {
+    "answer": "Pour le fournisseur d’un coffre-fort numérique, les conséquences dépendent de la situation concernée :\n\n- **Non-respect des obligations propres au coffre-fort numérique** : le fournisseur qui se prévaut d’une offre relevant de l’article L. 103 du Code des postes et des communications électroniques et qui ne respecte pas les obligations applicables est **passible des sanctions prévues aux articles L. 132-2 et L. 132-3 du Code de la consommation**. Le contenu de ces sanctions n’est toutefois pas fourni dans le contexte. **Article L. 122-22 du Code de la consommation [Source 1].**\n\n- **Mesures pénales visant les comptes en ligne d’un condamné** : pour certains délits, le tribunal peut prononcer la **suspension des comptes d’accès à des services de plateforme en ligne utilisés pour commettre l’infraction**, pour une durée maximale de six mois, portée à un an en cas de récidive légale. Pendant cette période, le condamné ne peut plus utiliser les comptes suspendus ni en créer de nouveaux sur les mêmes services. **Article 131-35-1, I, du Code pénal [Source 2].**\n\n- **Obligations du fournisseur concerné par cette suspension** : après notification de la décision, le fournisseur doit bloquer les comptes visés. Il peut également prendre des mesures strictement nécessaires et proportionnées pour bloquer d’autres comptes détenus par la personne condamnée et empêcher la création de nouveaux comptes, dans le respect de la législation informatique et libertés. **Article 131-35-1, I, du Code pénal [Source 2].**\n\n- **Sanction du fournisseur** : le fournisseur qui ne bloque pas les comptes faisant l’objet d’une suspension encourt **75 000 euros d’amende**. **Article 131-35-1, I, du Code pénal [Source 2].**\n\nLe contexte ne permet toutefois pas d’affirmer qu’un fournisseur de coffre-fort numérique est automatiquement soumis à cette obligation pénale : le texte vise les **fournisseurs de services de plateforme en ligne** concernés par une décision de suspension. Il faut donc que le service de coffre-fort entre dans le champ de cette disposition et qu’une décision de suspension lui soit effectivement notifiée.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L122-22"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-35-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2686.608385000378,
+      "routingCalls": 1,
+      "embeddingMs": 279.6884770002216,
+      "vectorSearchMs": 135.17435100022703,
+      "jinaRerankingMs": 560.2911040000618,
+      "mappingMs": 0.08244900032877922,
+      "totalMs": 3661.8812440000474,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.2747840005904436,
+      "contextBuilderMs": 0.02443300001323223,
+      "generationMs": 4713.727307999507,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 8375.925095999613
+    },
+    "judge": {
+      "questionId": "q373",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les sanctions applicables au fournisseur de coffre-fort numérique au titre de l’article L. 122-22 du code de la consommation et les obligations/sanctions d’un fournisseur de plateforme en ligne lorsqu’une suspension de comptes est notifiée. Elle indique exactement la durée de suspension, l’interdiction pour le condamné, l’obligation de blocage et l’amende de 75 000 euros, tout en précisant à juste titre qu’un coffre-fort numérique n’est pas automatiquement assimilé à un service de plateforme en ligne. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 vise directement le fournisseur de coffre-fort numérique et renvoie expressément aux sanctions des articles L. 132-2 et L. 132-3 du code de la consommation. La source 2 couvre directement la suspension des comptes de plateforme, sa durée, les interdictions imposées au condamné, la signification aux fournisseurs, leur obligation de blocage, les mesures complémentaires possibles et l’amende de 75 000 euros en cas de manquement. La réserve selon laquelle un coffre-fort numérique n’est pas automatiquement inclus dans le champ des services de plateforme est cohérente avec le périmètre explicite de la source 2."
+    }
+  },
+  "failureStage": "none"
+}

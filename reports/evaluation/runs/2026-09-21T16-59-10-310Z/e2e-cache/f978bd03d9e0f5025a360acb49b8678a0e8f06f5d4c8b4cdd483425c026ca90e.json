@@ -1,0 +1,95 @@
+{
+  "questionId": "q371",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Consentement exprès et paiements supplémentaires\n\nAvant la conclusion d’un contrat de vente ou de prestation de services, le professionnel doit obtenir le **consentement exprès** du consommateur pour tout paiement supplémentaire venant s’ajouter au prix du bien ou du service principal. **Article L121-17 du Code de la consommation [Source 1].**\n\nLe consentement ne peut donc pas résulter du simple fait que le consommateur n’a pas refusé une option payante. Si un paiement supplémentaire a été accepté par défaut, pour une option non sollicitée, le consommateur peut demander le **remboursement des sommes versées** à ce titre. **Article L121-17 du Code de la consommation [Source 1].**\n\nCes règles s’appliquent également à certains contrats de fourniture d’eau, de gaz, d’électricité, de chauffage urbain et de contenu numérique non fourni sur support matériel, dans les conditions prévues par l’article. **Article L121-17 du Code de la consommation [Source 1].**\n\n### Période d’essai d’un contrat de travail à durée indéterminée\n\nLe contexte fourni ne contient **aucune disposition relative à la durée maximale ou aux limites de renouvellement d’une période d’essai pour un contrat de travail à durée indéterminée**. Il n’est donc pas possible de répondre à cette partie sur la base des sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 274.0345290005207,
+      "vectorSearchMs": 761.4857130004093,
+      "jinaRerankingMs": 575.2571649998426,
+      "mappingMs": 0.052028000354766846,
+      "totalMs": 1610.858943999745,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011393999680876732,
+      "contextBuilderMs": 0.012401999905705452,
+      "generationMs": 3202.5159089993685,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4813.40895000007
+    },
+    "judge": {
+      "questionId": "q371",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement les règles de l’article L121-17 sur le consentement exprès et le remboursement des paiements supplémentaires obtenus par défaut. Elle ne fournit toutefois aucune des durées maximales de période d’essai en CDI attendues (2, 3 et 4 mois selon les catégories). Cette abstention est pleinement justifiée par le contexte, qui ne contient que l’article L121-17 : les affirmations formulées sont donc toutes étayées. Néanmoins, l’abstention n’était pas attendue et la question n’est pas entièrement traitée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L121-17 est directement pertinente et couvre précisément les règles relatives au consentement exprès, au paiement obtenu par défaut et au remboursement, ainsi que son champ d’application particulier. Elle ne fournit toutefois aucune règle sur la période d’essai en CDI, qui constitue une partie importante de la question. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les règles de consommation sont reprises fidèlement et le constat d’absence de disposition sur le CDI correspond au seul contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "### Paiements supplémentaires dans un contrat de vente ou de prestation de services\n\n- **Obligation du professionnel :** avant la conclusion du contrat, il doit obtenir le **consentement exprès** du consommateur pour tout paiement supplémentaire venant s’ajouter au prix du bien ou du service principal (**Article L121-17 du Code de la consommation [Source 1]**).\n- **Interdiction du consentement par défaut :** le professionnel ne peut pas considérer que le consommateur a accepté une option payante simplement parce qu’il ne s’y est pas opposé expressément.\n- **Droit au remboursement :** si le paiement supplémentaire résulte d’un consentement donné par défaut, le consommateur peut demander le **remboursement des sommes versées** au titre de cette option (**Article L121-17 du Code de la consommation [Source 1]**).\n\n### Période d’essai dans un contrat de travail à durée indéterminée\n\nLes sources fournies ne précisent pas les **durées maximales chiffrées** applicables à la période d’essai d’un contrat à durée indéterminée.\n\nElles indiquent toutefois que les durées fixées par les articles L. 1221-19 et L. 1221-21 du Code du travail ont un caractère impératif, sauf :\n\n- des durées plus courtes prévues par un accord collectif conclu après le 25 juin 2008 ;\n- des durées plus courtes prévues dans la lettre d’engagement ou le contrat de travail.\n\n(**Article L1221-22 du Code du travail [Source 3]**)\n\nLa règle détaillée de durée fournie par le contexte concerne uniquement le **contrat à durée déterminée** : la période d’essai est limitée à deux semaines ou à un mois selon la durée du CDD (**Article L1242-10 du Code du travail [Source 2]**). Elle ne permet pas de déterminer la durée applicable à un CDI.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-17"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1242-10"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1477.2809410002083,
+      "routingCalls": 1,
+      "embeddingMs": 360.54118300043046,
+      "vectorSearchMs": 377.83267999999225,
+      "jinaRerankingMs": 568.5071620000526,
+      "mappingMs": 0.025167000479996204,
+      "totalMs": 2784.224451000802,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.038685000501573086,
+      "contextBuilderMs": 0.02089700009673834,
+      "generationMs": 3914.5532210003585,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6698.849499000236
+    },
+    "judge": {
+      "questionId": "q371",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie sur les paiements supplémentaires restitue correctement l'obligation de consentement exprès et le droit au remboursement en cas de consentement par défaut. Pour le CDI, la réponse ne fournit pas les plafonds demandés (2 mois pour ouvriers/employés, 3 mois pour agents de maîtrise/techniciens et 4 mois pour cadres), mais elle indique correctement que ces durées chiffrées ne figurent pas dans le contexte et mentionne les dérogations à la baisse issues de l'article L1221-22. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les règles relatives au consentement exprès et au remboursement des paiements supplémentaires. Pour la période d’essai en CDI, la source 3 est pertinente pour les dérogations à des durées plus courtes et permet de constater que les plafonds chiffrés de l’article L. 1221-19 ne sont pas fournis. La source 2 concerne le CDD et non le CDI, mais elle est correctement présentée comme inapplicable à la détermination de la durée d’essai en CDI. Les affirmations importantes effectivement formulées dans la réponse sont ainsi couvertes par les sources."
+    }
+  },
+  "failureStage": "generation"
+}

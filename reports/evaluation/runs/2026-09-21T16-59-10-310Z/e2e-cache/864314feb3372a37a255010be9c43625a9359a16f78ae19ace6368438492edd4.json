@@ -1,0 +1,86 @@
+{
+  "questionId": "q223",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L341-1 du Code de commerce vise les contrats conclus avec :\n\n- une **personne physique** ; ou\n- une **personne morale de droit privé regroupant des commerçants**,\n\nà l’exclusion de celles mentionnées aux chapitres V et VI du titre II visé par l’article. [Source 1]\n\nLe texte fourni étant tronqué, il ne permet pas de préciser davantage le champ complet de l’article.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L341-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L654-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.70602700021118,
+      "vectorSearchMs": 644.7280409997329,
+      "jinaRerankingMs": 537.016987000592,
+      "mappingMs": 0.027009000070393085,
+      "totalMs": 1388.508282000199,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012232000008225441,
+      "contextBuilderMs": 0.016818000003695488,
+      "generationMs": 3522.920851999894,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4911.471192000434
+    },
+    "judge": {
+      "questionId": "q223",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les catégories visées : personne physique ou personne morale de droit privé regroupant des commerçants, avec l’exclusion des entités mentionnées aux chapitres V et VI du titre II. Ces éléments sont directement présents dans le contexte. La précision sur le caractère tronqué de l’extrait est cohérente avec le contexte et ne constitue pas une abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reprend explicitement les personnes physiques et les personnes morales de droit privé regroupant des commerçants, ainsi que l’exclusion relative aux chapitres V et VI du titre II. Elle couvre les affirmations essentielles de la réponse. La source 2 est hors sujet mais n’est pas nécessaire à la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 3174.685162999667,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 3174.6864350000396,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 3174.6935750003904
+    },
+    "judge": {
+      "questionId": "q223",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’apporte aucune réponse au champ d’application des contrats visés par l’article L341-1 et refuse à tort alors qu’une réponse était attendue. L’absence de contexte rend toutefois l’affirmation selon laquelle le contexte ne permet pas de répondre cohérente avec le contexte effectivement fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 1,
+      "explanation": "Aucune source n’est fournie. Elles ne peuvent donc pas être pertinentes pour répondre à la question. Elles sont toutefois cohérentes avec le constat limité de la réponse selon lequel le contexte disponible ne permet pas de répondre, sans couvrir l’affirmation d’ambiguïté ou de hors périmètre."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,98 @@
+{
+  "questionId": "q011",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour les personnes physiques coupables des infractions prévues par le **sous-titre visé à l’article 213-1 du Code pénal**, les peines complémentaires encourues sont les suivantes :\n\n1. **Interdiction des droits civiques, civils et de famille** : durée maximale de **15 ans**.\n\n2. **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale** dans le cadre de laquelle l’infraction a été commise : durée maximale de l’interdiction temporaire de **10 ans**.\n\n3. **Interdiction de séjour** : durée maximale de **15 ans**.\n\n4. **Confiscation** de tout ou partie des biens appartenant au condamné ou dont il a la libre disposition, sous réserve des droits du propriétaire de bonne foi : **aucune durée maximale**, puisqu’il s’agit d’une mesure de confiscation et non d’une interdiction temporaire.\n\n5. **Interdiction d’exercer une fonction publique, une activité professionnelle ou sociale, ou de diriger, administrer, gérer ou contrôler une entreprise ou société commerciale ou industrielle** : ces interdictions peuvent être **prononcées cumulativement**. L’extrait fourni ne précise toutefois pas leur durée maximale propre.  \n\n**Fondement : Article 213-1 du Code pénal [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "213-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "215-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "422-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "462-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "227-29"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 227.2126419999986,
+      "vectorSearchMs": 666.9234289999877,
+      "jinaRerankingMs": 582.5850710000086,
+      "mappingMs": 0.026602999976603314,
+      "totalMs": 1476.7765239999862,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009709999983897433,
+      "contextBuilderMs": 0.031867000012425706,
+      "generationMs": 5384.1561930000025,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6860.986172000004
+    },
+    "judge": {
+      "questionId": "q011",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les cinq catégories de peines prévues à l’article 213-1 : interdiction des droits civiques, civils et de famille (15 ans), interdiction liée à une fonction ou activité ayant permis l’infraction (10 ans), interdiction de séjour (15 ans), confiscation, et interdictions d’exercice incluant l’activité commerciale ou industrielle ainsi que la direction ou gestion d’entreprise. Elle précise justement que la confiscation n’a pas de durée et que le texte fourni ne fixe pas de maximum propre pour les interdictions du 5°, tout en indiquant leur possible cumul. Toutes les affirmations importantes sont appuyées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle est l’article 213-1 expressément invoqué et énumère les cinq peines applicables aux personnes physiques pour les infractions du sous-titre, avec les plafonds de 15 ans, 10 ans et 15 ans ainsi que le cumul des interdictions d’exercice. Elle couvre également la formulation sur la confiscation, sans durée prévue dans le texte, et l’absence de plafond explicitement indiqué au 5°."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 2675.5896930000163,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 2675.597013999999,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 2675.613138000015
+    },
+    "judge": {
+      "questionId": "q011",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit aucune des peines accessoires ni leurs durées maximales, alors que la question appelle une réponse juridique précise et qu'une réponse était attendue. Elle abstient à tort. Son constat selon lequel le contexte vide ne permet pas de fonder une réponse est toutefois entièrement supporté par le contexte effectivement fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. Elles ne peuvent donc ni être pertinentes pour répondre à la question ni couvrir l'abstention formulée ou les peines accessoires et durées maximales demandées."
+    }
+  },
+  "failureStage": "generation"
+}

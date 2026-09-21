@@ -1,0 +1,87 @@
+{
+  "questionId": "q081",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1048 du Code civil, grever une libéralité d’une charge signifie assortir le don ou le legs d’une obligation particulière.\n\nCette charge peut imposer au donataire ou au légataire :\n\n- de conserver les biens ou droits reçus ;\n- puis, à son décès, de les transmettre à un second gratifié désigné dans l’acte.\n\nIl s’agit donc d’une transmission successive : le premier bénéficiaire reçoit la libéralité, mais ne peut pas librement disposer des biens concernés puisqu’il doit les préserver et les transmettre ultérieurement au bénéficiaire désigné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1048"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.01545999990776,
+      "vectorSearchMs": 645.016469999915,
+      "jinaRerankingMs": 483.6592280000914,
+      "mappingMs": 0.03599000000394881,
+      "totalMs": 1346.7655680000316,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014328000135719776,
+      "contextBuilderMs": 0.010769000044092536,
+      "generationMs": 1415.3604429999832,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2762.161756000016
+    },
+    "judge": {
+      "questionId": "q081",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le mécanisme prévu par l’article 1048 : obligation de conserver les biens ou droits objet de la libéralité et de les transmettre au décès du premier gratifié à un second gratifié désigné dans l’acte. Toutes les affirmations essentielles sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1048 du Code civil, qui définit précisément la charge évoquée et énonce les obligations de conservation des biens ou droits puis de transmission, au décès du premier gratifié, à un second gratifié désigné dans l’acte. Elle couvre les affirmations essentielles de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1048 du Code civil, grever une libéralité d’une charge signifie assortir une donation ou un legs d’une obligation particulière.\n\nCette charge peut imposer au donataire ou au légataire :\n\n- de **conserver les biens ou droits reçus** ;\n- puis de **les transmettre à son décès** à un second gratifié désigné dans l’acte.\n\nIl s’agit donc d’une transmission successive : le premier bénéficiaire reçoit la libéralité, mais ne peut pas disposer librement des biens concernés puisqu’il doit les préserver et les remettre ultérieurement au second bénéficiaire désigné. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1048"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1535.9917859998532,
+      "routingCalls": 1,
+      "embeddingMs": 245.32967999996617,
+      "vectorSearchMs": 87.87680700002238,
+      "jinaRerankingMs": 491.31490499991924,
+      "mappingMs": 0.04970100009813905,
+      "totalMs": 2360.5972120000515,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011451000114902854,
+      "contextBuilderMs": 0.017183999996632338,
+      "generationMs": 1839.8421809999272,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4200.479149000021
+    },
+    "judge": {
+      "questionId": "q081",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement le mécanisme prévu par l’article 1048 : obligation de conserver les biens ou droits et de les transmettre au décès du premier gratifié à un second gratifié désigné. L’explication de la transmission successive est cohérente avec le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article 1048 définit précisément la charge grevant une libéralité et énonce les obligations de conservation des biens ou droits puis de transmission, au décès du premier gratifié, à un second gratifié désigné dans l’acte. Elle couvre les affirmations essentielles de la réponse, y compris la qualification de mécanisme de transmission successive."
+    }
+  },
+  "failureStage": "none"
+}

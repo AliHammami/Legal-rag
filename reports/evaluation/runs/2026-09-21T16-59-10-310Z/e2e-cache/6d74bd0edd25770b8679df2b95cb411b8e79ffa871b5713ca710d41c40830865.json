@@ -1,0 +1,103 @@
+{
+  "questionId": "q175",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L222-1 du Code de commerce ne concerne pas la société en nom collectif, mais les associés d’une société en commandite :  \n\n- les associés commanditaires ne sont responsables des dettes sociales qu’à concurrence du montant de leur apport ;\n- leur apport ne peut pas être réalisé en industrie. [Source 1]\n\nDans une société en nom collectif, il n’existe donc pas, au sens de l’article L222-1, d’« associés commanditaires » : les associés ont tous la qualité de commerçant et répondent indéfiniment et solidairement des dettes sociales, après mise en demeure infructueuse de la société. **Article L221-1 du Code de commerce** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L222-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-162-16"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L222-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.32940299995244,
+      "vectorSearchMs": 598.820700999815,
+      "jinaRerankingMs": 522.6164409997873,
+      "mappingMs": 0.08660000003874302,
+      "totalMs": 1344.9519609999843,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010639999993145466,
+      "contextBuilderMs": 0.06468300009146333,
+      "generationMs": 2542.9409830002114,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3888.00076800026
+    },
+    "judge": {
+      "questionId": "q175",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse relève correctement que l’article L222-1 vise la société en commandite et non la société en nom collectif. Elle donne exactement la règle applicable aux commanditaires (responsabilité limitée à l’apport, sans apport en industrie) et précise correctement le régime des associés d’une SNC. Toutes ces affirmations sont explicitement étayées par les sources 1 et 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes : la source 1 énonce le régime des commanditaires prévu par l'article L222-1 (responsabilité limitée à l'apport et exclusion de l'apport en industrie), tandis que la source 2 couvre le régime propre aux associés d'une SNC (qualité de commerçant, responsabilité indéfinie et solidaire, mise en demeure préalable de la société). Elles étayent l'ensemble des affirmations importantes de la réponse. Les sources 3 et 4 ne sont pas nécessaires."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L222-1 du Code de commerce, les associés commanditaires ne répondent des dettes sociales qu’à concurrence du montant de leur apport. Leur apport ne peut toutefois pas être constitué d’un apport en industrie. [Source 1]\n\nPrécision : les associés commanditaires concernent une société en commandite ; dans une société en nom collectif, les associés ont la qualité de commerçant et répondent indéfiniment et solidairement des dettes sociales, conformément à l’article L221-1 du Code de commerce. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L222-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L221-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1651.9781650002114,
+      "routingCalls": 1,
+      "embeddingMs": 256.6290199998766,
+      "vectorSearchMs": 231.99211200000718,
+      "jinaRerankingMs": 514.0207960000262,
+      "mappingMs": 0.06913900002837181,
+      "totalMs": 2654.7217629998922,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012159999925643206,
+      "contextBuilderMs": 0.01580699998885393,
+      "generationMs": 1953.7143729999661,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4608.472930000164
+    },
+    "judge": {
+      "questionId": "q175",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle de l’article L222-1 : responsabilité des commanditaires limitée au montant de leur apport, sans apport en industrie. Elle corrige utilement l’ambiguïté de la question en distinguant la société en commandite de la SNC, et cette précision est explicitement fondée sur l’article L221-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement la règle de l’article L222-1 relative aux associés commanditaires : responsabilité limitée au montant de l’apport et exclusion de l’apport en industrie. La source 2 est également directement pertinente pour la précision apportée sur la société en nom collectif, notamment la qualité de commerçant et la responsabilité indéfinie et solidaire des associés. Toutes les affirmations juridiques importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "failureStage": "none"
+}

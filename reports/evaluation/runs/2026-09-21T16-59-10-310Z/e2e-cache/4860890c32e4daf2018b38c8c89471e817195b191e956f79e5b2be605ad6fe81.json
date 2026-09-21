@@ -1,0 +1,111 @@
+{
+  "questionId": "q281",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne contiennent pas l’article **L465-1 du Code monétaire et financier**. Il n’est donc pas possible de déterminer, sur cette seule base, le traitement juridique de l’usage d’une information privilégiée selon cet article.\n\nÀ titre limité, le contexte prévoit que la diffusion ou la conservation d’informations obtenues en application de l’article **L131-86 du Code monétaire et financier** est punie des peines prévues par l’article **226-21 du Code pénal**, soit cinq ans d’emprisonnement et 300 000 euros d’amende [Sources 1 et 4]. Cela ne permet toutefois pas de répondre précisément à la question concernant l’usage d’une information privilégiée au sens de l’article L465-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-21"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-17"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-22"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-12"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-16-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 257.957825999707,
+      "vectorSearchMs": 663.903428000398,
+      "jinaRerankingMs": 519.6477479999885,
+      "mappingMs": 0.028411000035703182,
+      "totalMs": 1441.5791379995644,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.09293599985539913,
+      "contextBuilderMs": 0.03799199964851141,
+      "generationMs": 2667.461777999997,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4109.184200000018
+    },
+    "judge": {
+      "questionId": "q281",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne donne pas le traitement prévu par l'article L465-1 (notamment l'incrimination, les peines et l'exception de comportement légitime) et ne répond donc pas à la question. Elle constate correctement que cet article n'apparaît pas dans le contexte et l'information annexe relative aux articles L163-12 et 226-21 est bien étayée par les sources, mais elle est hors sujet. L'abstention n'était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur l’article L465-1 ni sur l’usage d’une information privilégiée : elles concernent des données personnelles et l’article L163-12. Elles sont donc essentiellement hors sujet pour répondre directement à la question, tout en permettant de constater que le contexte fourni ne contient pas L465-1. En revanche, elles couvrent les affirmations effectivement formulées dans la réponse : l’absence de L465-1 dans les sources fournies, ainsi que la règle de L163-12 renvoyant aux peines de l’article 226-21 (cinq ans et 300 000 euros)."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L. 465-1 du Code monétaire et financier, l’usage d’une information privilégiée constitue un délit lorsqu’une personne qui la détient :\n\n- réalise, directement ou indirectement, pour elle-même ou pour autrui, une ou plusieurs opérations ;\n- ou annule ou modifie un ou plusieurs ordres passés avant qu’elle ne détienne cette information ;\n\nà condition que ces opérations portent sur les instruments financiers ou crypto-actifs concernés par l’information privilégiée. [Source 3]\n\nCe délit est puni de **cinq ans d’emprisonnement** et de **100 millions d’euros d’amende**. L’amende peut être portée jusqu’au **décuple de l’avantage retiré du délit**, sans pouvoir être inférieure à cet avantage. [Source 3]\n\nL’infraction peut être commise notamment par un dirigeant ou assimilé de l’émetteur, une personne détenant une participation dans celui-ci, une personne ayant obtenu l’information dans le cadre de sa profession ou de ses fonctions, ou toute personne disposant sciemment d’une information privilégiée. [Source 3]\n\nEn revanche, le **simple fait de détenir** une information privilégiée ne suffit pas à caractériser l’infraction lorsque le comportement de la personne est légitime au sens de l’article 9 du règlement européen mentionné par le texte. [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L465-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1536.1503879996017,
+      "routingCalls": 1,
+      "embeddingMs": 227.62779499962926,
+      "vectorSearchMs": 172.60044899955392,
+      "jinaRerankingMs": 529.1201250003651,
+      "mappingMs": 0.037117999978363514,
+      "totalMs": 2465.568300000392,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01549999974668026,
+      "contextBuilderMs": 0.023132999427616596,
+      "generationMs": 3371.056162999943,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5836.673388999887
+    },
+    "judge": {
+      "questionId": "q281",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les comportements incriminés par l'article L. 465-1 (opérations, annulation ou modification d'ordres), les personnes visées, le lien avec les instruments financiers ou crypto-actifs concernés, les peines et la règle d'amende, ainsi que l'exception de comportement légitime au sens de l'article 9 du règlement 596/2014. Tous ces éléments sont directement étayés par la Source 3. Elle répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement l'article L. 465-1 pertinent. Elle couvre les comportements incriminés (opérations, annulation ou modification d'ordres), les personnes visées, le lien avec les instruments financiers ou crypto-actifs, les peines et le mécanisme de majoration de l'amende, ainsi que la réserve relative au comportement légitime au sens de l'article 9 du règlement (UE) n° 596/2014. Les affirmations importantes de la réponse générée sont donc étayées."
+    }
+  },
+  "failureStage": "none"
+}

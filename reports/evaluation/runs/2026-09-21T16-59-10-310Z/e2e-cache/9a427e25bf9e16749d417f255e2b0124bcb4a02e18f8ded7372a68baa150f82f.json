@@ -1,0 +1,87 @@
+{
+  "questionId": "q032",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 131-1 du Code pénal, les personnes physiques peuvent encourir :\n\n- la réclusion criminelle ou la détention criminelle à perpétuité ;\n- une durée maximale de 30 ans ;\n- une durée maximale de 20 ans ;\n- une durée maximale de 15 ans.\n\nPour les peines à temps, la durée minimale est de 10 ans. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 271.58385000005364,
+      "vectorSearchMs": 569.892552999896,
+      "jinaRerankingMs": 582.416639000061,
+      "mappingMs": 0.03248699998948723,
+      "totalMs": 1423.9536360000493,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01018600002862513,
+      "contextBuilderMs": 0.010780000011436641,
+      "generationMs": 1339.966955000069,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2763.9562480000313
+    },
+    "judge": {
+      "questionId": "q032",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les quatre durées prévues par l’article 131-1 (perpétuité, trente, vingt et quinze ans au plus) et précise le minimum de dix ans pour les peines à temps. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 131-1 et énumère exactement les peines et durées demandées : perpétuité, trente, vingt et quinze ans au plus, ainsi que le minimum de dix ans pour les peines à temps. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 131-1 du Code pénal, les personnes physiques peuvent encourir :\n\n- la réclusion criminelle ou la détention criminelle **à perpétuité** ;\n- une durée maximale de **30 ans** ;\n- une durée maximale de **20 ans** ;\n- une durée maximale de **15 ans**.\n\nPour les peines à temps, la durée est d’au moins **10 ans**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 921.0893860000651,
+      "routingCalls": 1,
+      "embeddingMs": 253.86698200006504,
+      "vectorSearchMs": 30.085322999977507,
+      "jinaRerankingMs": 586.7097660000436,
+      "mappingMs": 0.05132700002286583,
+      "totalMs": 1791.82859499997,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013727999990805984,
+      "contextBuilderMs": 0.013878999976441264,
+      "generationMs": 1312.9524179999717,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3104.818964000093
+    },
+    "judge": {
+      "questionId": "q032",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les quatre catégories de peines prévues par l’article 131-1 (perpétuité, trente ans au plus, vingt ans au plus, quinze ans au plus) et précise correctement le minimum de dix ans pour les peines à temps. Toutes les affirmations sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 131-1 et énumère exactement les quatre durées de réclusion ou détention criminelle (perpétuité, trente, vingt et quinze ans au plus), ainsi que le minimum de dix ans pour les peines à temps. Elle est pleinement pertinente et couvre toutes les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

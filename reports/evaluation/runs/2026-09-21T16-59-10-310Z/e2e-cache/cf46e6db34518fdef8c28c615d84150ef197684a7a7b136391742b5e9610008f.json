@@ -1,0 +1,87 @@
+{
+  "questionId": "q325",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L451-1 du Code de la consommation, l’opérateur encourt **un an d’emprisonnement et 150 000 euros d’amende** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.50619899947196,
+      "vectorSearchMs": 601.9889759998769,
+      "jinaRerankingMs": 505.5448810001835,
+      "mappingMs": 0.033097000792622566,
+      "totalMs": 1296.1054169991985,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01153700053691864,
+      "contextBuilderMs": 0.011684000492095947,
+      "generationMs": 1159.5072839995846,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2455.65836900007
+    },
+    "judge": {
+      "questionId": "q325",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la sanction prévue par l’article L451-1 : un an d’emprisonnement et 150 000 euros d’amende. Tous les éléments essentiels sont présents et directement étayés par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L451-1 et vise expressément le défaut d'information prévu à l'article L. 411-2. Elle établit exactement les deux sanctions affirmées dans la réponse : un an d'emprisonnement et 150 000 euros d'amende."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L451-1 du Code de la consommation, l’opérateur encourt **un an d’emprisonnement et 150 000 euros d’amende** s’il ne procède pas à l’information prévue à l’article L411-2 [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5425.321812000126,
+      "routingCalls": 1,
+      "embeddingMs": 183.64770199917257,
+      "vectorSearchMs": 79.00325199961662,
+      "jinaRerankingMs": 478.1396510004997,
+      "mappingMs": 0.024791999720036983,
+      "totalMs": 6166.161659000441,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011278999969363213,
+      "contextBuilderMs": 0.011773000471293926,
+      "generationMs": 1205.012872000225,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7371.2071829997
+    },
+    "judge": {
+      "questionId": "q325",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les deux sanctions prévues par l’article L451-1 : un an d’emprisonnement et 150 000 euros d’amende. Elle répond directement à la question et est intégralement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 451-1 et vise expressément le défaut d’information prévu à l’article L. 411-2. Elle établit intégralement les deux sanctions affirmées dans la réponse : un an d’emprisonnement et 150 000 euros d’amende."
+    }
+  },
+  "failureStage": "none"
+}

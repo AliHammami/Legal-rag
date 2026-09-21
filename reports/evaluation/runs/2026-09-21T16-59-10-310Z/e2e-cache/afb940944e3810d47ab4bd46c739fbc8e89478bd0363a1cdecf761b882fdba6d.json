@@ -1,0 +1,95 @@
+{
+  "questionId": "q166",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L2253-1 du Code du travail**, une convention de branche peut notamment définir les garanties applicables aux salariés dans les matières suivantes [Source 1] :\n\n1. Les salaires minima hiérarchiques ;\n2. Les classifications ;\n3. La mutualisation des fonds de financement du paritarisme ;\n4. La mutualisation des fonds de la formation professionnelle ;\n5. Les garanties collectives complémentaires prévues à l’article L. 912-1 du Code de la sécurité sociale ;\n6. Certaines mesures relatives à la durée du travail, à la répartition et à l’aménagement des horaires ;\n7. Certaines mesures relatives aux contrats à durée déterminée et aux contrats de travail temporaire ;\n8. Certaines mesures relatives au contrat à durée indéterminée de chantier ou d’opération ;\n9. L’égalité professionnelle entre les femmes et les hommes ;\n10. Les conditions et durées de renouvellement de la période d’essai ;\n11. Les modalités de poursuite des contrats de travail entre deux entreprises lorsque l’article L. 1224-1 ne s’applique pas ;\n12. Les cas de mise à disposition d’un salarié temporaire auprès d’une entreprise utilisatrice ;\n13. La rémunération minimale du salarié porté et le montant de l’indemnité d’apport d’affaire.\n\nLa branche a notamment pour mission de définir ces conditions d’emploi et de travail ainsi que les garanties applicables aux salariés [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2232-5-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 245.26356200035661,
+      "vectorSearchMs": 607.718523000367,
+      "jinaRerankingMs": 554.063550000079,
+      "mappingMs": 0.03394899982959032,
+      "totalMs": 1407.1142110000364,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011649999767541885,
+      "contextBuilderMs": 0.023548999801278114,
+      "generationMs": 2377.060697999783,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3784.2210459997877
+    },
+    "judge": {
+      "questionId": "q166",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les treize matières énumérées par l’article L2253-1, y compris les éléments plus précis absents de la réponse de référence (CDI de chantier, mise à disposition de salarié temporaire et indemnité d’apport d’affaire). Toutes les affirmations principales sont explicitement étayées par les sources fournies. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l'article L. 2253-1, qui répond précisément à la question et étaye les treize matières listées dans la réponse générée. La source 2 soutient également l'affirmation finale sur la mission de la branche de définir les conditions d'emploi et de travail et les garanties applicables. Toutes les affirmations importantes sont couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L2253-1 du Code du travail**, une convention de branche peut notamment définir les garanties applicables aux salariés dans les matières suivantes :\n\n1. Les salaires minima hiérarchiques ;\n2. Les classifications ;\n3. La mutualisation des fonds de financement du paritarisme ;\n4. La mutualisation des fonds de la formation professionnelle ;\n5. Les garanties collectives complémentaires ;\n6. La durée du travail, ainsi que la répartition et l’aménagement des horaires ;\n7. Les contrats à durée déterminée et les contrats de travail temporaire ;\n8. Le contrat à durée indéterminée de chantier ou d’opération ;\n9. L’égalité professionnelle entre les femmes et les hommes ;\n10. Les conditions et la durée de renouvellement de la période d’essai ;\n11. Les modalités de poursuite des contrats de travail entre deux entreprises lorsque l’article L. 1224-1 ne s’applique pas ;\n12. Les cas de mise à disposition d’un salarié temporaire auprès d’une entreprise utilisatrice ;\n13. La rémunération minimale du salarié porté et le montant de l’indemnité d’apport d’affaire.\n\n**Article L2253-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2253-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2232-5-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.0969700003043,
+      "routingCalls": 1,
+      "embeddingMs": 202.33316799998283,
+      "vectorSearchMs": 250.7537420000881,
+      "jinaRerankingMs": 555.9654230000451,
+      "mappingMs": 0.03205399960279465,
+      "totalMs": 2339.2284419997595,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010125000029802322,
+      "contextBuilderMs": 0.020684000104665756,
+      "generationMs": 2163.1252160002477,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4502.3943239999935
+    },
+    "judge": {
+      "questionId": "q166",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement les treize matières prévues à l’article L. 2253-1, y compris le CDI de chantier, la mise à disposition de salariés temporaires et l’indemnité d’apport d’affaire. Toutes ces affirmations sont directement soutenues par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L. 2253-1 visé par la question et énumère expressément les treize matières reprises dans la réponse générée. Elle couvre notamment les salaires minima, classifications, mutualisations, garanties complémentaires, durée et aménagement du travail, CDD/intérim, CDI de chantier, égalité professionnelle, période d’essai, poursuite des contrats, mise à disposition et portage salarial. La source 2 est cohérente mais non nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

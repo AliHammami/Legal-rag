@@ -1,0 +1,95 @@
+{
+  "questionId": "q119",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une personne morale ou une entreprise individuelle est soumise à agrément lorsqu’elle exerce :\n\n1. **La garde d’enfants âgés de moins d’une limite fixée par arrêté** conjoint des ministres chargés de l’emploi et de la famille ;  \n2. **Les activités relevant du 2° de l’article L. 7231-1 du Code du travail**, sauf celles dont la liste est fixée par décret et qui ne mettent pas en cause la sécurité des personnes.  \n   \nCes activités doivent en outre respecter des **critères de qualité**. [Source 1 — Article L7232-1 du Code du travail]\n\nPour obtenir l’agrément, le préfet vérifie notamment que :\n\n- le demandeur dispose des moyens humains, matériels et financiers nécessaires ;\n- il s’engage à respecter le cahier des charges applicable ;\n- ses dirigeants n’ont pas fait l’objet de certaines condamnations ou sanctions leur interdisant de gérer ou d’exercer une activité commerciale ;\n- lorsque l’activité concerne des mineurs, les personnes concernées ne sont pas inscrites au fichier judiciaire national automatisé des auteurs d’infractions sexuelles, ou dans un fichier équivalent pour certains ressortissants européens.  \n\n[Source 2 — Article R7232-6 du Code du travail]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7232-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.83230100013316,
+      "vectorSearchMs": 582.6168939997442,
+      "jinaRerankingMs": 591.3975070002489,
+      "mappingMs": 0.033239000011235476,
+      "totalMs": 1404.9130009999499,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011525999754667282,
+      "contextBuilderMs": 0.019077000208199024,
+      "generationMs": 3097.8201540000737,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4502.777296999935
+    },
+    "judge": {
+      "questionId": "q119",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux catégories d'activités soumises à agrément et l'exception prévue. Elle ajoute, de façon exacte et explicitement distinguée comme conditions d'obtention de l'agrément, les conditions de l'article R. 7232-6. Toutes les affirmations importantes sont étayées par les deux sources du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement aux conditions d’assujettissement à l’agrément (garde d’enfants sous l’âge fixé et activités du 2° de L. 7231-1, avec exception) et mentionne les critères de qualité. La source 2 est directement pertinente pour les conditions d’octroi ajoutées dans la réponse (moyens, cahier des charges, absence de certaines interdictions, contrôle relatif aux mineurs). Toutes les affirmations importantes de la réponse sont explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Une personne morale ou une entreprise individuelle est soumise à agrément lorsqu’elle exerce les activités de services à la personne suivantes :\n\n- la garde d’enfants en dessous d’un âge fixé par arrêté ministériel ;\n- les activités relevant du 2° de l’article L. 7231-1 du Code du travail, sauf celles exclues par décret parce qu’elles ne mettent pas en cause la sécurité des personnes.  \n**Article L. 7232-1 du Code du travail [Source 1]**\n\nPour obtenir cet agrément, elle doit en outre remplir les conditions suivantes :\n\n1. disposer de moyens humains, matériels et financiers suffisants, en propre ou au sein de son réseau ;\n2. s’engager à respecter le cahier des charges applicable ;\n3. avoir des dirigeants — ou, s’il s’agit d’une entreprise individuelle, l’entrepreneur individuel — n’ayant pas fait l’objet de certaines condamnations ou sanctions leur interdisant de gérer ou d’exercer une activité commerciale ;\n4. lorsque l’activité concerne des mineurs, ne pas être inscrit, pour les personnes concernées, au fichier judiciaire national automatisé des auteurs d’infractions sexuelles, ou dans un document équivalent pour certains ressortissants européens.  \n**Article R. 7232-6 du Code du travail [Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7232-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R7232-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.6876719999127,
+      "routingCalls": 1,
+      "embeddingMs": 237.4508650000207,
+      "vectorSearchMs": 300.3489310001023,
+      "jinaRerankingMs": 595.6412269999273,
+      "mappingMs": 0.03162900032475591,
+      "totalMs": 2465.1914070001803,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010087000206112862,
+      "contextBuilderMs": 0.017267999704927206,
+      "generationMs": 3270.8849310004152,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5736.113628000021
+    },
+    "judge": {
+      "questionId": "q119",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux catégories d’activités qui rendent l’agrément obligatoire : la garde d’enfants sous la limite d’âge réglementaire et les activités du 2° de l’article L. 7231-1, sous réserve des exclusions fixées par décret liées à l’absence d’enjeu de sécurité. Elle ajoute les conditions d’obtention de l’agrément prévues par l’article R. 7232-6 ; cette précision excède légèrement le cœur de la question mais est exacte et intégralement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement aux conditions d’assujettissement à l’agrément visées par la question. La source 2 est également pertinente pour les conditions d’obtention ajoutées dans la réponse. Toutes les affirmations importantes, y compris les quatre conditions complémentaires et leurs précisions, sont étayées par les deux extraits."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,90 @@
+{
+  "questionId": "q294",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L. 212-2 du Code de la consommation**, les dispositions de l’article **L. 212-1** sont étendues aux **contrats conclus entre des professionnels et des non-professionnels** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L212-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L743-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R212-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 205.31160499993712,
+      "vectorSearchMs": 685.3631269996986,
+      "jinaRerankingMs": 606.2249149996787,
+      "mappingMs": 0.021851999685168266,
+      "totalMs": 1496.9691969994456,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009522000327706337,
+      "contextBuilderMs": 0.0186789995059371,
+      "generationMs": 1062.3698260001838,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2559.378020999953
+    },
+    "judge": {
+      "questionId": "q294",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l’extension prévue par l’article L. 212-2 : les contrats conclus entre professionnels et non-professionnels. Cette affirmation est explicitement étayée par la source 1 du contexte. Elle répond directement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit explicitement l'article L. 212-2 et énonce que les dispositions de l'article L. 212-1 s'appliquent également aux contrats conclus entre professionnels et non-professionnels. Elle couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 4289.72260200046,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 4289.723704000004,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 4289.738969000056
+    },
+    "judge": {
+      "questionId": "q294",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’apporte pas l’information demandée : l’article L. 212-2 étend les dispositions aux contrats conclus entre des professionnels et des non-professionnels. Elle refuse de répondre alors qu’une réponse était attendue. L’affirmation selon laquelle le contexte fourni ne permet pas de répondre est cohérente avec l’absence de contexte, mais les mentions d’ambiguïté, de hors-périmètre et d’absence de recherche ne sont pas établies par ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n’est fournie. Il n’existe donc aucun support permettant de répondre directement à la question ni de justifier les affirmations d’abstention formulées dans la réponse générée."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q102",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une **société en participation** présente les caractéristiques suivantes :\n\n- elle **n’est pas immatriculée** ;\n- elle **n’a pas la personnalité morale** ;\n- elle **n’est pas soumise à publicité** ;\n- son existence peut être **prouvée par tous moyens** ;\n- les associés déterminent librement son **objet**, son **fonctionnement** et ses **conditions**.\n\nCes libertés sont toutefois limitées : les associés ne peuvent pas déroger aux dispositions impératives suivantes :\n\n- les articles **1832**, **1832-1**, **1833**, **1836, alinéa 2**, **1844, alinéa 1er**, et **1844-1, alinéa 2**, du **Code civil** ;\n- l’article **L. 411-1 du Code monétaire et financier**.\n\nCes règles résultent de l’**article 1871 du Code civil** [Source 1]. Le contenu de chacune de ces dispositions n’étant pas reproduit dans le contexte, il n’est pas possible d’en préciser davantage la portée ici.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1871"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 184.34505099989474,
+      "vectorSearchMs": 680.4839510000311,
+      "jinaRerankingMs": 559.4893889999948,
+      "mappingMs": 0.025718000018969178,
+      "totalMs": 1424.3716930001974,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010523000033572316,
+      "contextBuilderMs": 0.011131000006571412,
+      "generationMs": 3655.6577510000207,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5080.067544999998
+    },
+    "judge": {
+      "questionId": "q102",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les caractéristiques et les limites impératives prévues par l’article 1871 reproduit dans le contexte. Elle répond intégralement à la question, sans ajout factuel non étayé ; la réserve finale sur l’absence de reproduction du contenu des articles cités est elle-même cohérente avec le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1871 du Code civil, qui énonce l’ensemble des caractéristiques demandées de la société en participation (absence d’immatriculation, de personnalité morale et de publicité, preuve par tous moyens, liberté d’organisation) ainsi que la liste précise des dispositions impératives auxquelles les associés ne peuvent déroger. Elle couvre également l’affirmation selon laquelle le contenu détaillé des articles cités n’est pas fourni dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "D’après les sources fournies, les caractéristiques et règles applicables varient selon la profession concernée.\n\n### 1. Caractéristiques de la société en participation\n\n- Sa constitution doit faire l’objet d’un avis publié dans un support habilité à recevoir les annonces légales. Cet avis indique notamment la dénomination, l’objet et, le cas échéant, l’adresse du siège ou le lieu d’exercice des associés, selon le régime concerné — Article R821-155 du Code de commerce [Source 1].\n- Pour les sociétés en participation d’administrateurs judiciaires ou de mandataires judiciaires, la constitution doit être publiée au *Bulletin officiel des annonces civiles et commerciales*. L’avis indique la dénomination sociale et la liste des associés — Article R814-155 du Code de commerce [Source 2].\n- Pour les greffiers de tribunal de commerce, la société en participation n’est pas titulaire d’un office. Chaque associé continue d’exercer ses fonctions au sein de son propre office — Article R743-135 du Code de commerce [Source 5].\n- Dans ce dernier cas, chaque associé doit faire figurer son appartenance à la société et la dénomination de celle-ci dans ses actes professionnels et ses correspondances — Article R743-135 du Code de commerce [Source 5].\n\n### 2. Règles auxquelles les associés ne peuvent pas déroger\n\nLes sources permettent d’identifier les obligations impératives suivantes :\n\n- Les associés exerçant au sein de la société doivent consacrer à celle-ci toute leur activité professionnelle et s’informer mutuellement de cette activité — Article R814-86 du Code de commerce [Source 3].\n- La convention constitutive doit respecter les règles applicables à la profession. La Commission nationale d’inscription et de discipline peut mettre les associés en demeure de modifier cette convention lorsqu’elle n’est pas conforme — Article R814-156 du Code de commerce [Source 4].\n- Pour les greffiers de tribunal de commerce, les associés ne peuvent pas attribuer à la société la qualité de titulaire d’un office : chacun doit continuer à exercer dans l’office dont il est titulaire — Article R743-135 du Code de commerce [Source 5]. Ils doivent également respecter l’obligation de mention dans les actes professionnels et les correspondances.\n\nLes extraits fournis ne permettent toutefois pas d’énumérer l’ensemble des règles impératives applicables à toutes les sociétés en participation ni de déterminer précisément leur régime juridique général au-delà de ces obligations.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-155"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-155"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-86"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-156"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R743-135"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2717.004402999999,
+      "routingCalls": 1,
+      "embeddingMs": 257.6661910000257,
+      "vectorSearchMs": 229.10345600009896,
+      "jinaRerankingMs": 555.7003699999768,
+      "mappingMs": 0.030294999945908785,
+      "totalMs": 3759.549195999978,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010628000134602189,
+      "contextBuilderMs": 0.037351000122725964,
+      "generationMs": 6070.574138000142,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 9830.17994599999
+    },
+    "judge": {
+      "questionId": "q102",
+      "correctness": 1,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne donne pas le régime général de la société en participation attendu : absence d’immatriculation, d’autorité de publicité et de personnalité morale, preuve par tous moyens, liberté conventionnelle, ainsi que la liste des dispositions impératives des articles cités. Elle traite à la place de règles spéciales applicables à certaines professions réglementées, dont l’obligation de publicité contredit le principe général attendu. Ces affirmations sectorielles sont toutefois fidèlement appuyées par les cinq sources fournies. Le modèle répond effectivement, même de manière erronée et hors du cadre général de la question ; il ne s’abstient donc pas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources portent bien sur des sociétés en participation, mais uniquement dans des régimes professionnels réglementés particuliers (administrateurs/mandataires judiciaires et greffiers), sans fournir le régime général demandé ni la liste des dispositions impératives de droit commun. Elles sont donc seulement partiellement pertinentes pour la question générale. En revanche, les affirmations effectivement formulées dans la réponse générée — formalités de publication propres à ces professions, exercice au sein des offices, mentions professionnelles, activité professionnelle et contrôle de conformité de la convention — sont toutes appuyées par les extraits cités. Le constat final selon lequel les extraits ne permettent pas d’énumérer le régime impératif général est également cohérent avec le corpus."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q256",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L316-1 du Code monétaire et financier**, le consommateur dispose des droits suivants :\n\n- Il peut **recourir gratuitement à un médiateur** pour rechercher une solution amiable à un litige l’opposant à un établissement de crédit, une société de financement, un établissement de monnaie électronique, un établissement de paiement ou un prestataire de services d’information sur les comptes.\n- Le litige doit concerner les **services fournis** ou l’**exécution de contrats** relevant des titres visés par cet article, ainsi que certains produits mentionnés aux titres I et II du livre II.  \n[Article L316-1 du Code monétaire et financier — Source 2]\n\nConcernant les obligations du médiateur :\n\n- Il doit établir un **compte rendu annuel d’activité**.\n- Ce compte rendu doit être transmis au président de la commission d’évaluation et de contrôle de la médiation de la consommation, au gouverneur de la Banque de France et au président du comité consultatif mentionné par l’article L614-1.  \n[Article L316-1 du Code monétaire et financier — Source 2]\n\nPlus généralement, les obligations applicables au médiateur de la consommation sont précisées par l’**article L613-1 du Code de la consommation** : il doit exercer sa mission avec diligence, compétence, indépendance et impartialité, dans le cadre d’une procédure transparente, efficace et équitable. Il doit notamment posséder des aptitudes en médiation et des connaissances juridiques, être nommé pour au moins trois ans, être rémunéré indépendamment du résultat de la médiation et éviter les conflits d’intérêts ou les signaler. Il doit également établir chaque année un rapport d’activité. [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L612-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L316-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L613-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 186.55228000041097,
+      "vectorSearchMs": 701.9224259993061,
+      "jinaRerankingMs": 569.474324000068,
+      "mappingMs": 0.025016999803483486,
+      "totalMs": 1458.0130369998515,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010629000142216682,
+      "contextBuilderMs": 0.0182109996676445,
+      "generationMs": 3432.31105499994,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4890.3650669995695
+    },
+    "judge": {
+      "questionId": "q256",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le droit du consommateur à une médiation gratuite, les catégories d'établissements concernées, le champ des litiges visés et l'obligation de compte rendu annuel avec ses destinataires. Les précisions supplémentaires sur les exigences générales du médiateur sont expressément étayées par la source 3 et sont cohérentes avec le renvoi de l'article L316-1 au Code de la consommation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement l’article L316-1 demandé et couvre le droit de recours gratuit, les professionnels concernés, le champ des litiges, ainsi que l’obligation de compte rendu annuel et ses destinataires. La source 3 est pertinente pour les précisions générales ajoutées sur les obligations du médiateur de la consommation et couvre ces affirmations. La source 1 est également pertinente au cadre général, bien qu’elle ne soit pas nécessaire aux affirmations formulées."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L316-1 du Code monétaire et financier :\n\n- **Droit du consommateur à la médiation** : tout consommateur peut recourir **gratuitement** à un médiateur pour résoudre un litige avec :\n  - un établissement de crédit ;\n  - une société de financement ;\n  - un établissement de monnaie électronique ;\n  - un établissement de paiement ;\n  - ou un prestataire de services d’information sur les comptes.\n\n- **Périmètre des litiges** : le litige doit concerner les services fournis ou l’exécution de contrats conclus dans le cadre des titres visés par l’article, ainsi que les produits mentionnés aux titres Ier et II du livre II du Code monétaire et financier. La médiation s’exerce dans les conditions prévues par le chapitre II du titre Ier du livre VI du Code de la consommation.\n\n- **Obligation du médiateur** : chaque médiateur doit établir un **compte rendu annuel d’activité** et le transmettre :\n  - au président de la commission d’évaluation et de contrôle de la médiation de la consommation ;\n  - au gouverneur de la Banque de France ;\n  - au président du comité consultatif mentionné par le texte.\n\nAinsi, le texte garantit au consommateur un accès gratuit à la médiation et impose aux médiateurs une obligation annuelle de rendre compte de leur activité. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L316-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2047.6061380002648,
+      "routingCalls": 1,
+      "embeddingMs": 164.09073399938643,
+      "vectorSearchMs": 191.79965699929744,
+      "jinaRerankingMs": 553.2562020001933,
+      "mappingMs": 0.023963999934494495,
+      "totalMs": 2956.8287920001894,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011568999849259853,
+      "contextBuilderMs": 0.011036999523639679,
+      "generationMs": 2881.520259000361,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5838.380760000087
+    },
+    "judge": {
+      "questionId": "q256",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le droit gratuit du consommateur à recourir à un médiateur, les catégories d'établissements concernées, le champ des litiges, le renvoi aux conditions du Code de la consommation et l'obligation de compte rendu annuel avec ses trois destinataires. Toutes les affirmations importantes sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L316-1 visé par la question. Elle est précisément pertinente et couvre l’ensemble des affirmations importantes de la réponse : gratuité et bénéficiaire du recours, catégories de professionnels concernés, champ des litiges, renvoi au Code de la consommation, obligation de compte rendu annuel et ses trois destinataires."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,98 @@
+{
+  "questionId": "q445",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les documents à remettre au client sont notamment :\n\n- **Le contrat écrit**, sur papier ou sur un autre support durable. Il doit être rédigé en français lorsque le consommateur réside en France ou lorsque le professionnel exerce son activité en France. [Source 1 — Article L224-76 du Code de la consommation]\n- **Une ou plusieurs copies complètes du contrat**, remises au moment de sa conclusion. [Source 4 — Article L224-78 du Code de la consommation]\n- **Un formulaire distinct de rétractation**, conforme au modèle réglementaire, intégré aux documents contractuels. [Source 4 — Article L224-78 du Code de la consommation]\n- **Les informations précontractuelles**, communiquées en temps utile avant tout engagement : identité du professionnel, description des biens ou services, prix, durée, modalités de rétractation et de résiliation, interdiction des paiements d’avances, langues du contrat, possibilité de médiation, etc. [Source 5 — Article L224-73 du Code de la consommation]\n- **La notice d’emploi et les instructions d’installation**, ainsi que, le cas échéant, **le contrat de garantie commerciale**, lors de la délivrance ou de la mise en service du bien. [Source 2 — Article L216-4 du Code de la consommation]\n- **Un exemplaire des conventions habituellement proposées**, si une personne intéressée en fait la demande. [Source 3 — Article L114-1 du Code de la consommation]\n\nEn outre, les pages relatives au droit de rétractation et à l’interdiction des paiements d’avance doivent être **signées par le consommateur**. [Source 4 — Article L224-78 du Code de la consommation]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-76"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L114-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-78"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-73"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 208.07152500003576,
+      "vectorSearchMs": 648.05757500045,
+      "jinaRerankingMs": 507.21188000030816,
+      "mappingMs": 0.027962999418377876,
+      "totalMs": 1363.3944389987737,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010879000648856163,
+      "contextBuilderMs": 0.024646000936627388,
+      "generationMs": 3242.780434999615,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4606.222665000707
+    },
+    "judge": {
+      "questionId": "q445",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale et ne précise ni le type de contrat, ni le régime juridique concerné ; une abstention était attendue. La réponse applique sans le préciser un régime très particulier du Code de la consommation (notamment les contrats visés aux articles L. 224-69 et L. 224-70) et le présente comme une liste générale de documents à remettre au client. Les affirmations formulées sont toutefois, pour l’essentiel, bien étayées par les extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les sources portent bien sur des obligations de remise de documents, mais elles relèvent de régimes distincts et, pour les articles L. 224-73 à L. 224-78, d’une catégorie particulière de contrats de consommation. Elles ne permettent donc pas de répondre de façon générale à une question non contextualisée sur les documents à remettre « au client » ; elles auraient plutôt dû conduire à demander des précisions ou à s’abstenir. Les énoncés factuels de la liste sont néanmoins presque tous étayés par les extraits cités (contrat, copies, formulaire, informations précontractuelles, notice, conventions et signatures). La présentation de ces obligations comme une liste générale applicable sans préciser les conditions et le champ des articles n’est pas couverte."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1259.32049700059,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1259.321451999247,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1259.3364499993622
+    },
+    "judge": {
+      "questionId": "q445",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question ne précise ni le domaine ni le cadre juridique applicable. La réponse reconnaît explicitement l'impossibilité de répondre de manière fiable et s'abstient conformément à l'attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, donc aucune pertinence documentaire ne peut être établie. Toutefois, la réponse générée se limite à constater l'absence de contexte, l'ambiguïté de la question et l'absence de recherche ; ces constats sont cohérents avec le dossier vide et ne formulent aucune affirmation juridique nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

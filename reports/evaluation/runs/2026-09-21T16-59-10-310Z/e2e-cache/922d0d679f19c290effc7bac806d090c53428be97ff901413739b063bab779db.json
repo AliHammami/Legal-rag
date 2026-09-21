@@ -1,0 +1,91 @@
+{
+  "questionId": "q352",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En référé, le juge peut ordonner **toutes mesures propres à faire cesser l’atteinte** à la présomption d’innocence, notamment :\n\n- **l’insertion d’une rectification** ;\n- **la diffusion d’un communiqué**.\n\nCes mesures sont ordonnées **aux frais de la personne physique ou morale responsable**, sans préjudice de l’indemnisation du dommage subi. Cela s’applique lorsqu’une personne est publiquement présentée comme coupable avant toute condamnation, alors que les faits font l’objet d’une enquête ou d’une instruction judiciaire — **article 9-1 du Code civil [Source 1]**.\n\nEn revanche, la source fournie ne contient aucune disposition relative aux **obligations d’un commerçant non immatriculé**. Il n’est donc pas possible d’y répondre à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 262.32986600045115,
+      "vectorSearchMs": 618.0893859993666,
+      "jinaRerankingMs": 549.952177000232,
+      "mappingMs": 0.0327350003644824,
+      "totalMs": 1430.5443289997056,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015565999783575535,
+      "contextBuilderMs": 0.012000000104308128,
+      "generationMs": 2250.773597999476,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3681.359864000231
+    },
+    "judge": {
+      "questionId": "q352",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les mesures de référé prévues par l’article 9-1 du code civil (rectification, communiqué, aux frais du responsable, sans préjudice des dommages). Elle ne donne toutefois pas la règle attendue sur le commerçant non immatriculé, ce qui la rend partielle au regard de la question et de la référence. Cette omission est néanmoins explicitement justifiée par l’absence de tout contexte relatif au code de commerce : toutes les affirmations effectivement formulées sont donc bien étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie (article 9-1 du code civil) est directement pertinente pour le volet relatif aux mesures de référé en cas d’atteinte à la présomption d’innocence et couvre les mesures citées, leurs conditions, les frais à la charge du responsable et la réserve de l’indemnisation. Elle ne porte pas sur le commerçant non immatriculé, mais elle permet de constater que ce second point ne peut pas être traité à partir du contexte fourni. Les affirmations effectivement formulées dans la réponse sont donc couvertes."
+    }
+  },
+  "routing": {
+    "answer": "### Atteinte à la présomption d’innocence\n\nEn référé, le juge peut ordonner toute mesure destinée à faire cesser l’atteinte, notamment :\n\n- l’insertion d’une rectification ;\n- la diffusion d’un communiqué.\n\nCes mesures peuvent être ordonnées même avant toute condamnation et aux frais de la personne physique ou morale responsable, sans préjudice de la réparation du dommage subi. **Article 9-1 du Code civil [Source 1].**\n\n### Commerçant non immatriculé\n\nLorsqu’un commerçant, personne physique, ne demande pas son immatriculation dans le délai requis, le juge peut lui enjoindre de la demander. Cette injonction peut être prononcée d’office, à la demande du procureur de la République ou de toute personne justifiant d’un intérêt, et peut être assortie d’une astreinte. **Article L123-3 du Code de commerce [Source 2].**\n\nPar ailleurs, pour une personne déjà immatriculée qui n’aurait pas demandé les mentions, rectifications ou la radiation nécessaires, le juge peut également lui enjoindre de régulariser sa situation, éventuellement sous astreinte. **Article L123-3 du Code de commerce [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2049.149222000502,
+      "routingCalls": 1,
+      "embeddingMs": 224.4743470000103,
+      "vectorSearchMs": 295.3024929994717,
+      "jinaRerankingMs": 512.7864619996399,
+      "mappingMs": 0.039619000628590584,
+      "totalMs": 3081.8017210001126,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.2876160005107522,
+      "contextBuilderMs": 0.029161999933421612,
+      "generationMs": 3158.8360799998045,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6240.968301000074
+    },
+    "judge": {
+      "questionId": "q352",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie relative à la présomption d’innocence est correcte et reprend les mesures expressément prévues par l’article 9-1 du Code civil. En revanche, la réponse ne donne pas la conséquence essentielle attendue pour le commerçant non immatriculé au titre de l’article L123-8 : il ne peut pas se prévaloir de cette qualité envers les tiers ou les administrations, tout en restant soumis aux responsabilités correspondantes. Elle évoque à la place la procédure d’injonction d’immatriculation de l’article L123-3, qui est exacte et bien fondée sur le contexte, mais ne répond que partiellement au second volet tel qu’attendu. Toutes les affirmations importantes sont néanmoins supportées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement les mesures de référé relatives à la présomption d’innocence. La source 2 est pertinente pour les injonctions d’immatriculation, les régularisations et l’astreinte effectivement évoquées dans la réponse. Elle ne couvre toutefois pas l’obligation ou les effets spécifiques du défaut d’immatriculation vis-à-vis des tiers et administrations attendus au titre de l’article L123-8 ; les sources sont donc globalement pertinentes mais pas parfaitement ciblées sur l’ensemble de la question. Toutes les affirmations substantielles de la réponse générée sont néanmoins étayées par les deux sources."
+    }
+  },
+  "failureStage": "generation"
+}

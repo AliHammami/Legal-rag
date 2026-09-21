@@ -1,0 +1,95 @@
+{
+  "questionId": "q176",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L. 223-1 du Code de commerce ne prévoit pas une procédure de « nomination » de l’associé unique. Il dispose que :\n\n- la SARL peut être instituée par **une seule personne** ;\n- cette personne est alors dénommée **« associé unique »** ;\n- elle exerce les pouvoirs normalement dévolus à l’assemblée des associés.\n\nL’article précise également que l’associé unique peut être une **personne physique** assumant personnellement la gérance, notamment dans le cadre des statuts types et des formalités de publicité allégées prévus par le texte. [Source 1]\n\nAinsi, la condition essentielle est que la société ne comporte qu’une seule personne ; les sources fournies ne prévoient pas d’autres conditions particulières de nomination.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-31"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.46241899998859,
+      "vectorSearchMs": 752.4064790001139,
+      "jinaRerankingMs": 554.0263700000942,
+      "mappingMs": 0.04894200013950467,
+      "totalMs": 1538.0050190002657,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01396500039845705,
+      "contextBuilderMs": 0.023907000198960304,
+      "generationMs": 2863.953040999826,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.009630000219
+    },
+    "judge": {
+      "questionId": "q176",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement qu’il ne s’agit pas d’une « nomination » formelle : l’associé unique existe lorsque la SARL ne comporte qu’une seule personne et il exerce les pouvoirs de l’assemblée. Elle mentionne aussi la gérance personnelle par un associé unique personne physique. Elle reste toutefois moins précise que la référence sur l’application des statuts types, sauf production de statuts différents lors de la demande d’immatriculation. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 223-1 et énonce qu’une SARL à une seule personne désigne celle-ci comme associé unique, qu’elle exerce les pouvoirs de l’assemblée, ainsi que le régime des statuts types, de la gérance personnelle par l’associé unique personne physique et des formalités allégées. Elle couvre les affirmations importantes de la réponse générée, y compris l’absence de procédure autonome de « nomination », déduite du fait que la qualité résulte de l’existence d’une seule personne dans la société. La source 2 n’est pas nécessaire à cette réponse mais reste connexe au statut de l’associé unique."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’**article L223-1 du Code de commerce**, une SARL peut être constituée par **une seule personne**. Dans ce cas, cette personne est désignée comme l’**« associé unique »** et ne supporte les pertes qu’à concurrence de son apport. Elle exerce les pouvoirs normalement dévolus à l’assemblée des associés. [Source 1]\n\nLe texte ne prévoit pas d’autre condition particulière de nomination de l’associé unique. Il précise seulement que, lorsque l’associé unique est une **personne physique assumant personnellement la gérance**, des statuts types et des formalités de publicité allégées peuvent s’appliquer. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L223-31"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.0456110001542,
+      "routingCalls": 1,
+      "embeddingMs": 249.7180410004221,
+      "vectorSearchMs": 286.6006829999387,
+      "jinaRerankingMs": 546.5130999996327,
+      "mappingMs": 0.03029099991545081,
+      "totalMs": 2413.9513240000233,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010420999955385923,
+      "contextBuilderMs": 0.022274000104516745,
+      "generationMs": 2910.6810530000366,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5324.674515999854
+    },
+    "judge": {
+      "questionId": "q176",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement qu’une SARL peut n’avoir qu’une seule personne, alors qualifiée d’associé unique, et que celui-ci exerce les pouvoirs de l’assemblée. Elle mentionne aussi le cas de l’associé unique personne physique assurant personnellement la gérance et l’existence de statuts types. Elle omet toutefois de préciser explicitement la règle selon laquelle ces statuts types s’appliquent par défaut, sauf production de statuts différents lors de la demande d’immatriculation. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l’article L223-1 directement visé par la question. Elle établit qu’une SARL peut comporter une seule personne, alors dénommée associé unique, qui exerce les pouvoirs de l’assemblée et ne supporte les pertes qu’à concurrence de ses apports. Elle couvre aussi le régime applicable lorsque l’associé unique personne physique assume personnellement la gérance, incluant les statuts types, la possibilité de produire des statuts différents lors de l’immatriculation et les formalités de publicité allégées. Les affirmations importantes de la réponse sont donc couvertes."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q348",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La commission tente en priorité de **concilier les parties afin d’élaborer un plan conventionnel de redressement**, approuvé par le débiteur et ses principaux créanciers. **[Source 1 — article L732-1 du Code de la consommation]**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L732-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 231.80502699967474,
+      "vectorSearchMs": 688.4145889999345,
+      "jinaRerankingMs": 555.8165269996971,
+      "mappingMs": 0.07374200038611889,
+      "totalMs": 1476.1441970001906,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014072000049054623,
+      "contextBuilderMs": 0.012891000136733055,
+      "generationMs": 1386.6062179999426,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2862.797035000287
+    },
+    "judge": {
+      "questionId": "q348",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'action prioritaire prévue : la commission s'efforce de concilier les parties afin d'élaborer un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers. Tous les éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique est directement pertinente : l'article L. 732-1 vise expressément le cas où le débiteur est propriétaire d'un bien immobilier et relève de l'article L. 724-1. Elle énonce exactement l'action décrite dans la réponse, à savoir l'effort de conciliation des parties en vue d'un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers."
+    }
+  },
+  "routing": {
+    "answer": "La commission tente en priorité de **concilier le débiteur et ses principaux créanciers** afin d’élaborer un **plan conventionnel de redressement approuvé par eux**.  \n\n**Article L732-1 du Code de la consommation [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L732-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1980.0783470002934,
+      "routingCalls": 1,
+      "embeddingMs": 202.4285249998793,
+      "vectorSearchMs": 77.48689999990165,
+      "jinaRerankingMs": 535.6544000003487,
+      "mappingMs": 0.042213999666273594,
+      "totalMs": 2795.718728000298,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012721999548375607,
+      "contextBuilderMs": 0.011939000338315964,
+      "generationMs": 1118.5994969997555,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3914.3551819995046
+    },
+    "judge": {
+      "questionId": "q348",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'action prioritaire prévue : concilier les parties, en particulier le débiteur et ses principaux créanciers, afin d'élaborer un plan conventionnel de redressement approuvé par eux. Elle est entièrement étayée par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l’article L. 732-1, qui vise exactement l’hypothèse décrite (débiteur propriétaire d’un bien immobilier dans la situation de l’article L. 724-1) et prévoit que la commission s’efforce de concilier les parties afin d’élaborer un plan conventionnel de redressement approuvé par le débiteur et ses principaux créanciers. Elle couvre entièrement l’affirmation de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

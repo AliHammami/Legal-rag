@@ -1,0 +1,103 @@
+{
+  "questionId": "q075",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 901 du Code civil, une libéralité est valable si :\n\n- son auteur est **sain d’esprit** ;\n- son consentement n’a pas été vicié par **l’erreur, le dol ou la violence**.\n\nÀ défaut, la libéralité est nulle. **Article 901 du Code civil [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "901"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1078-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 238.0838470000308,
+      "vectorSearchMs": 581.6936330001336,
+      "jinaRerankingMs": 524.7184010001365,
+      "mappingMs": 0.027159000048413873,
+      "totalMs": 1344.5527660001535,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013904999941587448,
+      "contextBuilderMs": 0.019764000084251165,
+      "generationMs": 1624.5726199999917,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2969.170349000022
+    },
+    "judge": {
+      "questionId": "q075",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l'article 901 : être sain d'esprit et disposer d'un consentement non vicié par l'erreur, le dol ou la violence. Elle indique correctement la nullité en cas de vice du consentement. Toutes ces affirmations sont explicitement supportées par la source 2 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 901 du Code civil et répond exactement à la question. Elle couvre l'exigence d'être sain d'esprit, les vices du consentement (erreur, dol, violence) et la nullité de la libéralité en cas de consentement vicié."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 901 du Code civil, une libéralité est valable si :\n\n- son auteur est **sain d’esprit** ;\n- son consentement n’a pas été vicié par **l’erreur, le dol ou la violence**.\n\nÀ défaut, la libéralité est nulle. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "893"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "901"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1078-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1533.7166039999574,
+      "routingCalls": 1,
+      "embeddingMs": 235.60371099994518,
+      "vectorSearchMs": 55.854095000075176,
+      "jinaRerankingMs": 488.8200890000444,
+      "mappingMs": 0.030442999908700585,
+      "totalMs": 2314.0552749999333,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012104999972507358,
+      "contextBuilderMs": 0.020986000075936317,
+      "generationMs": 1354.5871959999204,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3668.6858329998795
+    },
+    "judge": {
+      "questionId": "q075",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions prévues par l’article 901 : être sain d’esprit et disposer d’un consentement exempt d’erreur, de dol ou de violence. Elle indique correctement la nullité en cas de vice du consentement. Toutes ces affirmations sont explicitement supportées par la Source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 901 du Code civil et répond précisément à la question. Elle couvre l’ensemble des affirmations de la réponse générée : exigence d’être sain d’esprit, absence d’erreur, de dol ou de violence, et nullité de la libéralité en cas de vice du consentement."
+    }
+  },
+  "failureStage": "none"
+}

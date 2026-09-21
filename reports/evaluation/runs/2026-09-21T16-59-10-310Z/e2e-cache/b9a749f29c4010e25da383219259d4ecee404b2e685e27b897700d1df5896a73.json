@@ -1,0 +1,103 @@
+{
+  "questionId": "q323",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L. 414-1 du Code de la consommation**, l’agrément n’est pas requis lorsque l’établissement traite par ionisation des denrées **figurant sur une liste définie par décret en Conseil d’État** [Source 1].\n\nLe contexte fourni ne précise toutefois pas quelles sont les denrées concernées par cette liste. En dehors de cette exception, l’agrément est délivré par le préfet du département aux établissements remplissant les conditions réglementaires [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L414-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 173.0168690001592,
+      "vectorSearchMs": 565.9362530000508,
+      "jinaRerankingMs": 506.76107999961823,
+      "mappingMs": 0.07354100048542023,
+      "totalMs": 1245.8212169995531,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010910999961197376,
+      "contextBuilderMs": 0.02155200019478798,
+      "generationMs": 2541.6631930004805,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3787.5282360007986
+    },
+    "judge": {
+      "questionId": "q323",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement l’exception prévue par l’article L. 414-1 : l’agrément n’est pas requis pour les denrées inscrites sur une liste définie par décret en Conseil d’État. La précision sur l’absence de détail de la liste dans le contexte et l’information additionnelle sur la délivrance préfectorale de l’agrément sont toutes deux correctement supportées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et énonce exactement la condition d'exemption d'agrément : le traitement porte sur des denrées figurant sur une liste définie par décret en Conseil d'État. Elle permet aussi de soutenir l'affirmation que le contexte ne précise pas le contenu de cette liste. La source 3 couvre l'affirmation complémentaire selon laquelle l'agrément est délivré par le préfet aux établissements satisfaisant aux conditions réglementaires. Toutes les affirmations importantes de la réponse sont donc couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L. 414-1 du Code de la consommation**, l’agrément n’est pas requis lorsque l’établissement traite par ionisation des denrées **figurant sur une liste définie par décret en Conseil d’État** [Source 1].\n\nÀ défaut d’inscription sur cette liste, l’établissement doit obtenir l’agrément prévu par cet article, délivré par le préfet du département [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L414-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-4"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R414-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3465.878518000245,
+      "routingCalls": 1,
+      "embeddingMs": 202.6873599998653,
+      "vectorSearchMs": 85.3816980002448,
+      "jinaRerankingMs": 567.316753000021,
+      "mappingMs": 0.028436999768018723,
+      "totalMs": 4321.320789999329,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015545999631285667,
+      "contextBuilderMs": 0.018283000215888023,
+      "generationMs": 8899.787541999482,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 13221.155145000666
+    },
+    "judge": {
+      "questionId": "q323",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la condition prévue à l’article L. 414-1 : l’absence d’agrément lorsque les denrées traitées figurent sur une liste définie par décret en Conseil d’État. Le complément sur l’agrément préfectoral hors de cette hypothèse est conforme au contexte et ne contredit pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la règle de l’article L. 414-1 et couvre la condition d’exemption d’agrément liée à la liste fixée par décret en Conseil d’État. La source 3 couvre également l’affirmation complémentaire selon laquelle l’agrément est délivré par le préfet. Les sources sont directement pertinentes et couvrent les affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

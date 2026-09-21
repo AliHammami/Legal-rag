@@ -1,0 +1,95 @@
+{
+  "questionId": "q314",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L314-22 du Code de la consommation**, les prêteurs doivent, lors de l’élaboration, de l’octroi et de l’exécution d’un contrat de crédit :\n\n- agir de manière **honnête** ;\n- agir de manière **équitable** ;\n- agir de manière **transparente** ;\n- agir de manière **professionnelle** ;\n- agir **au mieux des droits et des intérêts de l’emprunteur**.\n\nEn outre, l’octroi du crédit doit reposer :\n\n- sur les informations relatives à la **situation de l’emprunteur** ;\n- sur toute **demande spécifique** formulée par celui-ci ;\n- sur des **hypothèses raisonnables concernant les risques** que la durée du contrat de crédit peut faire peser sur l’emprunteur.\n\nCes obligations s’appliquent également aux services accessoires et aux services de conseil liés au crédit. **Article L314-22 du Code de la consommation [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 241.34725200012326,
+      "vectorSearchMs": 649.8871520003304,
+      "jinaRerankingMs": 610.416745999828,
+      "mappingMs": 0.030195999890565872,
+      "totalMs": 1501.7070199996233,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012848000042140484,
+      "contextBuilderMs": 0.02241199929267168,
+      "generationMs": 2899.341412999667,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4401.091717000119
+    },
+    "judge": {
+      "questionId": "q314",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement toutes les obligations prévues à l’article L. 314-22 : comportement honnête, équitable, transparent et professionnel, au mieux des droits et intérêts de l’emprunteur, ainsi que les bases requises pour l’octroi du crédit. Elle mentionne correctement l’extension aux services de conseil et services accessoires. Toutes les affirmations sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 314-22 et couvre l'ensemble des obligations énoncées dans la réponse : comportement honnête, équitable, transparent et professionnel, protection des droits et intérêts de l'emprunteur, ainsi que les informations et hypothèses devant fonder l'octroi. Elle couvre aussi explicitement les services de conseil et services accessoires. La source 2 est complémentaire mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L. 314-22 du Code de la consommation**, les prêteurs doivent, lors de l’élaboration, de l’octroi et de l’exécution d’un contrat de crédit :\n\n- agir de manière **honnête, équitable, transparente et professionnelle** ;\n- agir **au mieux des droits et des intérêts de l’emprunteur** ;\n- fonder l’octroi du crédit sur les **informations relatives à la situation de l’emprunteur** ;\n- prendre en compte toute **demande spécifique formulée par l’emprunteur** ;\n- tenir compte d’**hypothèses raisonnables concernant les risques liés à la durée du crédit**.\n\nCes obligations s’appliquent également aux services accessoires et aux services de conseil liés au crédit. **Article L. 314-22 du Code de la consommation [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2787.576593999751,
+      "routingCalls": 1,
+      "embeddingMs": 153.38933199923486,
+      "vectorSearchMs": 74.86471199989319,
+      "jinaRerankingMs": 597.4032389996573,
+      "mappingMs": 0.03184700012207031,
+      "totalMs": 3613.2913189996034,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011527999304234982,
+      "contextBuilderMs": 0.018401999957859516,
+      "generationMs": 2694.45688899979,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6307.7900170003995
+    },
+    "judge": {
+      "questionId": "q314",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement toutes les obligations prévues par l’article L. 314-22 : comportement honnête, équitable, transparent et professionnel, protection optimale des droits et intérêts de l’emprunteur, ainsi que fondement de l’octroi sur sa situation, ses demandes spécifiques et des hypothèses raisonnables de risque liées à la durée. La précision sur les services de conseil et accessoires est également explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 314-22 visé par la question et étaye l’ensemble des obligations énoncées dans la réponse, y compris l’extension aux services de conseil et services accessoires. La source 2 est connexe mais non nécessaire ; elle ne réduit pas la pertinence ni la couverture complètes apportées par la source 1."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,86 @@
+{
+  "questionId": "q496",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions de la **retraite pour inaptitude**.\n\n- La **Source 1** concerne le versement d’une cotisation liée notamment au licenciement pour inaptitude, lorsque l’employeur ne peut pas procéder au reclassement ou lorsque le médecin du travail constate l’inaptitude à tout poste dans l’entreprise — **Article L321-13 du Code du travail** [Source 1]. Elle ne traite pas de l’ouverture des droits à une retraite pour inaptitude.\n- La **Source 2** concerne la **mise à la retraite par l’employeur**, notamment l’âge requis et la procédure d’interrogation du salarié — **Article L1237-5 du Code du travail** [Source 2]. Elle ne fixe pas les conditions de la retraite pour inaptitude.\n\nIl faudrait disposer des dispositions applicables du **Code de la sécurité sociale** relatives à la retraite pour inaptitude pour répondre précisément.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L321-13"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1237-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 229.14400099997874,
+      "vectorSearchMs": 911.8611730000121,
+      "jinaRerankingMs": 561.0210740000475,
+      "mappingMs": 0.02679500001249835,
+      "totalMs": 1702.899112999963,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014755999960470945,
+      "contextBuilderMs": 0.0265829999698326,
+      "generationMs": 3390.4154009999475,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5093.7826179999975
+    },
+    "judge": {
+      "questionId": "q496",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner des conditions non établies par le contexte. Elle distingue correctement le licenciement pour inaptitude et la mise à la retraite par l’employeur de la retraite pour inaptitude, et indique que les dispositions pertinentes du Code de la sécurité sociale manquent. Toutes ces observations sont étayées par les deux sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne traitent pas directement des conditions de la retraite pour inaptitude, mais elles sont pertinentes pour justifier l’abstention : la source 1 porte sur le licenciement pour inaptitude et le reclassement, tandis que la source 2 porte sur la mise à la retraite par l’employeur et ses conditions procédurales. Elles couvrent les constats de la réponse selon lesquels ces dispositifs sont distincts et ne fixent pas les conditions de la retraite pour inaptitude. La mention du besoin de dispositions du Code de la sécurité sociale est cohérente avec l’absence de telles dispositions dans le contexte."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1353.5625430000364,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1353.5644859999884,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1353.5761320000165
+    },
+    "judge": {
+      "questionId": "q496",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement en indiquant que le contexte est insuffisant et que la question est hors périmètre ou ambiguë. En l'absence totale de contexte et avec une abstention attendue, cette abstention est appropriée et entièrement fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc pas de source pertinente pour répondre directement à la question. Toutefois, la réponse générée se limite à constater l’absence de contexte et de recherche ; ce constat est intégralement cohérent avec l’absence de sources."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,91 @@
+{
+  "questionId": "q372",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’interdiction concerne les professionnels qui acceptent certains moyens de paiement : ils ne peuvent appliquer des conditions différentes aux opérations de paiement en raison de la localisation, sur le territoire national :\n\n- de la résidence du consommateur ;\n- de son compte de paiement ;\n- du prestataire de services de paiement ;\n- ou du lieu d’émission de l’instrument de paiement.\n\nCette interdiction s’applique lorsque les conditions prévues sont réunies : service de paiement entrant dans les catégories visées, exigences d’authentification satisfaites et paiement effectué dans une devise acceptée par le professionnel. Il s’agit donc d’interdire une différence de traitement fondée sur ces éléments géographiques, lorsque le moyen de paiement est accepté par le professionnel — Article L121-23, 3° du Code de la consommation [Source 1].\n\nToutefois, pour des raisons objectives, le professionnel peut suspendre la livraison du bien ou l’exécution du service jusqu’à confirmation que l’opération de paiement a bien été engagée.\n\nLe texte fourni ne précise pas la responsabilité du prestataire de services de paiement en cas de mauvaise exécution de l’opération. Il renvoie seulement à l’article L. 133-4 du Code monétaire et financier concernant les exigences d’authentification. Les sources disponibles ne permettent donc pas de déterminer les obligations ou la responsabilité du prestataire en cas de mauvaise exécution.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 228.62500899937004,
+      "vectorSearchMs": 666.543227000162,
+      "jinaRerankingMs": 592.9486400000751,
+      "mappingMs": 0.03648499958217144,
+      "totalMs": 1488.1818610001355,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010211000218987465,
+      "contextBuilderMs": 0.011905000545084476,
+      "generationMs": 3732.6628560004756,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5220.878170000389
+    },
+    "judge": {
+      "questionId": "q372",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement l'interdiction de discrimination liée à la localisation pour les opérations de paiement et ses conditions, ainsi que l'exception permettant de suspendre la livraison ou prestation. En revanche, elle ne répond pas à la seconde partie de la question relative à la responsabilité du prestataire en cas de mauvaise exécution, alors que la réponse de référence indique les règles de l'article L. 133-22 du code monétaire et financier. Son abstention sur ce point est néanmoins entièrement justifiée par le contexte fourni, qui ne contient pas cet article ni ces règles."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour la première partie de la question : elle énonce l’interdiction de conditions de paiement différenciées selon la localisation, ses conditions d’application et la possibilité de suspendre la livraison ou la prestation pour des raisons objectives. Elle ne contient toutefois aucune règle sur la responsabilité en cas de mauvaise exécution, notamment celle de l’article L. 133-22 du code monétaire et financier, ce qui la rend insuffisante pour répondre intégralement à la question. En revanche, toutes les affirmations effectivement formulées dans la réponse générée, y compris le constat d’absence de précision sur cette responsabilité dans le texte fourni, sont appuyées par la source."
+    }
+  },
+  "routing": {
+    "answer": "L’interdiction vise à empêcher un professionnel de traiter différemment les consommateurs en raison de la localisation :\n\n- de leur résidence ;\n- de leur compte de paiement ;\n- de leur prestataire de services de paiement ;\n- ou du lieu d’émission de leur instrument de paiement.\n\nElle concerne notamment l’accès aux services électroniques, l’accès à certains services non électroniques fournis dans la zone d’activité du professionnel, ainsi que les opérations de paiement. Le professionnel ne peut donc pas appliquer des conditions différentes — par exemple un refus ou des modalités de paiement distinctes — lorsque le paiement utilise un service de paiement visé par le texte, que les exigences d’authentification sont remplies et que la devise est acceptée par le professionnel. **Article L121-23 du Code de la consommation [Source 1].**\n\nCette interdiction n’exclut toutefois pas la possibilité de proposer, de manière non discriminatoire, des conditions générales ou des prix différents selon certaines zones géographiques ou catégories de clients. Pour des raisons objectives, le professionnel peut également suspendre la livraison ou la prestation jusqu’à confirmation de la bonne mise en œuvre du paiement. **Article L121-23 du Code de la consommation [Source 1].**\n\nS’agissant de la mauvaise exécution d’une opération de paiement initiée par le bénéficiaire, ou par le payeur par l’intermédiaire du bénéficiaire :\n\n1. le prestataire de services de paiement du bénéficiaire est responsable envers celui-ci de la bonne transmission de l’ordre au prestataire du payeur ;\n2. en cas de défaut de transmission, il doit retransmettre immédiatement l’ordre ;\n3. le prestataire du payeur devient alors responsable de la bonne exécution de l’opération ;\n4. dès que les fonds sont mis à la disposition du prestataire du bénéficiaire, celui-ci redevient responsable du traitement immédiat de l’opération.\n\nCes responsabilités s’exercent sous réserve des dispositions mentionnées dans l’article. **Article L133-22 du Code monétaire et financier [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1742.7706059999764,
+      "routingCalls": 1,
+      "embeddingMs": 186.61114600021392,
+      "vectorSearchMs": 228.98504300042987,
+      "jinaRerankingMs": 600.7732950001955,
+      "mappingMs": 0.042318000458180904,
+      "totalMs": 2759.2128119999543,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04753100033849478,
+      "contextBuilderMs": 0.021371000446379185,
+      "generationMs": 4054.310686000623,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6813.609324999154
+    },
+    "judge": {
+      "questionId": "q372",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement l’interdiction de discrimination liée notamment à la résidence, au compte ou au prestataire de paiement, ainsi que ses conditions et exceptions. Elle restitue fidèlement le régime de responsabilité prévu au II de l’article L133-22 pour les opérations initiées par le bénéficiaire ou via celui-ci. Toutefois, elle ne couvre pas pleinement le régime général attendu de mauvaise exécution, notamment la répartition de responsabilité jusqu’à réception des fonds et les conséquences de restitution/crédit du montant. Toutes les affirmations importantes sont étayées par les extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "Les deux sources sont directement pertinentes : la source 1 porte sur l’interdiction de différencier les conditions de paiement selon des critères de localisation et ses exceptions, tandis que la source 2 établit précisément le régime de responsabilité pour les opérations initiées par le bénéficiaire ou via celui-ci. Elles étayent l’essentiel des affirmations de la réponse, notamment les conditions tenant au moyen de paiement, à l’authentification et à la devise, ainsi que la retransmission de l’ordre et le basculement de responsabilité. La couverture n’est toutefois pas totale : l’extrait de la source 1 ne contient pas explicitement les premiers alinéas posant l’interdiction générale d’accès différencié aux services électroniques et non électroniques, bien que les catégories de services y apparaissent."
+    }
+  },
+  "failureStage": "generation"
+}

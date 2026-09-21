@@ -1,0 +1,91 @@
+{
+  "questionId": "q364",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La source fournie ne contient aucune disposition relative à l’immatriculation au registre du commerce. Elle ne permet donc pas d’établir que cette immatriculation aurait une influence particulière sur le respect de la présomption d’innocence.\n\nEn revanche, l’**article 9-1 du Code civil** protège toute personne contre le fait d’être publiquement présentée comme coupable avant toute condamnation, lorsque les faits font l’objet d’une enquête ou d’une instruction judiciaire. Le juge peut alors ordonner, y compris en référé, une rectification ou la diffusion d’un communiqué, aux frais du responsable, sans préjudice de la réparation du dommage [Source 1].\n\nLe texte ne prévoit aucune exception ni condition liée à l’exercice d’une activité commerciale ou à l’immatriculation au registre du commerce.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 254.76505400054157,
+      "vectorSearchMs": 628.5889289993793,
+      "jinaRerankingMs": 546.057804999873,
+      "mappingMs": 0.026624000631272793,
+      "totalMs": 1429.4703590003774,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011414000764489174,
+      "contextBuilderMs": 0.024428999982774258,
+      "generationMs": 2256.480155000463,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3686.000757999718
+    },
+    "judge": {
+      "questionId": "q364",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement la protection issue de l’article 9-1 du Code civil et les mesures pouvant être ordonnées. Elle ne traite toutefois pas l’effet de l’immatriculation tel qu’attendu par la référence, notamment la règle relative à la qualité de commerçant et l’absence d’exonération de responsabilité. Cette omission est due au fait que le contexte ne contient que l’article 9-1 : les affirmations formulées sont entièrement étayées par ce contexte, y compris l’absence de condition d’immatriculation dans ce texte. Le modèle répond néanmoins à la question dans la limite explicite des sources et ne s’abstient pas indûment."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour la partie relative à la présomption d’innocence et aux mesures judiciaires de cessation de l’atteinte, mais elle ne contient aucune règle sur l’immatriculation au registre du commerce ni sur la qualité de commerçant : elle est donc insuffisante pour traiter pleinement le lien demandé. En revanche, elle couvre les affirmations effectivement formulées par la réponse : le contenu de l’article 9-1, les mesures possibles, ainsi que le constat que ce texte ne prévoit pas de condition ou d’exception tenant à l’activité commerciale ou à l’immatriculation."
+    }
+  },
+  "routing": {
+    "answer": "L’immatriculation au registre du commerce produit uniquement une **présomption de qualité de commerçant** pour la personne physique immatriculée. Cette présomption peut être combattue par les tiers ou les administrations, et ceux-ci ne peuvent pas s’en prévaloir s’ils savaient que la personne n’était pas commerçante — **Article L123-7 du Code de commerce [Source 2]**.\n\nElle ne constitue donc **en aucun cas une présomption de culpabilité** et ne permet pas de présenter publiquement la personne comme coupable d’une infraction avant toute condamnation. Une telle présentation peut porter atteinte à son droit au respect de la présomption d’innocence, consacré par **l’article 9-1 du Code civil [Source 1]**.\n\nDans ce cas, le juge peut notamment ordonner, y compris en référé, la publication d’une rectification ou la diffusion d’un communiqué afin de faire cesser l’atteinte, aux frais de la personne responsable, sans préjudice de la réparation du dommage subi. Les sources fournies ne permettent pas de préciser si l’immatriculation pourrait avoir une incidence sur la responsabilité de l’auteur de la présentation publique.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "9-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2959.667696000077,
+      "routingCalls": 1,
+      "embeddingMs": 328.91236199997365,
+      "vectorSearchMs": 281.77389399986714,
+      "jinaRerankingMs": 516.7755749998614,
+      "mappingMs": 0.028630999848246574,
+      "totalMs": 4087.1930980002508,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.11448699980974197,
+      "contextBuilderMs": 0.018554000183939934,
+      "generationMs": 2916.065957000479,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7003.402420999482
+    },
+    "judge": {
+      "questionId": "q364",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement la présomption de qualité de commerçant issue de l’immatriculation de la présomption d’innocence. Elle explique à juste titre que l’immatriculation ne saurait justifier une présentation publique comme coupable avant condamnation, rappelle les mesures prévues par l’article 9-1 du Code civil et précise prudemment la limite des sources sur une éventuelle incidence de l’immatriculation sur la responsabilité."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente pour établir l’effet juridique de l’immatriculation d’une personne physique : une présomption de qualité de commerçant, susceptible de preuve contraire dans les conditions indiquées. La source 1 est directement pertinente pour la protection contre une présentation publique comme coupable avant condamnation et pour les mesures judiciaires possibles. Elles couvrent l’ensemble des affirmations substantielles de la réponse, y compris la limite explicitement formulée quant à l’absence d’élément source sur une incidence de l’immatriculation concernant la responsabilité de l’auteur de l’atteinte."
+    }
+  },
+  "failureStage": "none"
+}

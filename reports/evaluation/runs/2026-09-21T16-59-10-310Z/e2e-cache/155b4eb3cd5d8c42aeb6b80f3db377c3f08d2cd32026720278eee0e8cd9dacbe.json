@@ -1,0 +1,119 @@
+{
+  "questionId": "q021",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 312-1 du Code pénal, obtenir par menace la remise d’un bien quelconque constitue une extorsion. La peine encourue est de **sept ans d’emprisonnement et 100 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-12-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 268.34838700003456,
+      "vectorSearchMs": 672.6050120000145,
+      "jinaRerankingMs": 508.36664299998665,
+      "mappingMs": 0.02595199999632314,
+      "totalMs": 1449.3782900000224,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009710000013001263,
+      "contextBuilderMs": 0.023339999956078827,
+      "generationMs": 1040.0895739999833,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2489.5123669999884
+    },
+    "judge": {
+      "questionId": "q021",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l'infraction d'extorsion visée par l'article 312-1 et indique exactement les peines prévues : sept ans d'emprisonnement et 100 000 euros d'amende. Ces éléments sont explicitement contenus dans la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article 312-1, définit l'extorsion comme l'obtention par menace de violences de la remise d'un bien quelconque et prévoit expressément sept ans d'emprisonnement et 100 000 euros d'amende. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 312-1 du Code pénal**, le fait d’obtenir par menace la remise d’un bien quelconque constitue une **extorsion**. La peine encourue est de **sept ans d’emprisonnement et 100 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "312-12-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.385242999997,
+      "routingCalls": 1,
+      "embeddingMs": 269.35341199999675,
+      "vectorSearchMs": 30.317536999995355,
+      "jinaRerankingMs": 494.1823619999923,
+      "mappingMs": 0.031298000016249716,
+      "totalMs": 2125.303240999987,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015829000039957464,
+      "contextBuilderMs": 0.024285999999847263,
+      "generationMs": 1151.4435129999765,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3276.846372
+    },
+    "judge": {
+      "questionId": "q021",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l'infraction comme une extorsion et indique exactement les peines prévues par l'article 312-1 : sept ans d'emprisonnement et 100 000 euros d'amende. Ces éléments sont explicitement présents dans le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 312-1 : elle définit l'extorsion comme l'obtention par menace, notamment, de la remise d'un bien quelconque et prévoit explicitement sept ans d'emprisonnement ainsi que 100 000 euros d'amende. Elle couvre donc intégralement la qualification et la peine affirmées."
+    }
+  },
+  "failureStage": "none"
+}

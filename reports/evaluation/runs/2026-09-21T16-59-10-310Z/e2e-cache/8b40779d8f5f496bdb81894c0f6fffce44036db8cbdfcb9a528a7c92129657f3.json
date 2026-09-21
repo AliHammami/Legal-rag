@@ -1,0 +1,103 @@
+{
+  "questionId": "q390",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Peuvent organiser et réaliser des ventes volontaires de meubles aux enchères publiques :\n\n- des opérateurs exerçant à titre individuel ou sous la forme juridique de leur choix, dans les conditions prévues par le Code de commerce, sauf exceptions prévues à l’article L. 321-36 du même code [Source 1] ;\n- des personnes physiques ou morales remplissant les conditions de l’Article L321-4 du Code de commerce [Source 2].\n\n### Conditions applicables\n\nPour une personne physique, le commissaire-priseur doit notamment :\n\n- être français ou ressortissant de l’Union européenne ou de l’Espace économique européen ;\n- ne pas avoir fait l’objet de certaines condamnations ou sanctions incompatibles avec l’exercice de la profession ;\n- disposer de la qualification, du titre, du diplôme ou de l’habilitation requis ;\n- avoir déclaré son activité auprès du Conseil des maisons de vente [Source 2].\n\nPour une personne morale, la maison de vente doit notamment être constituée dans l’Union européenne ou l’Espace économique européen, disposer d’un établissement en France et compter parmi ses dirigeants, associés ou salariés au moins une personne remplissant les conditions professionnelles requises [Source 2].\n\n### Cas particulier des notaires\n\nLes notaires peuvent également organiser et réaliser des ventes volontaires de meubles aux enchères publiques, à condition :\n\n- de satisfaire aux conditions de formation fixées par voie réglementaire ;\n- d’exercer cette activité uniquement dans les communes où aucun commissaire de justice n’est établi d’office ;\n- de l’exercer à titre accessoire, dans le cadre de leur office et selon les règles professionnelles qui leur sont applicables ;\n- de ne pas réaliser de ventes volontaires aux enchères publiques de marchandises en gros ;\n- de ne pouvoir être mandatés que par le propriétaire des biens [Source 1].\n\nPour être habilités à diriger ces ventes, les notaires doivent avoir suivi, à leurs frais, une formation préalable de **soixante heures** portant sur la réglementation, la pratique et la déontologie des ventes aux enchères. Cette formation est organisée par le Conseil des maisons de vente, après avis du Conseil supérieur du notariat, et donne lieu à la délivrance d’un certificat d’accomplissement [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R321-18-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 227.9507820000872,
+      "vectorSearchMs": 650.2973440000787,
+      "jinaRerankingMs": 563.3894419996068,
+      "mappingMs": 0.05030700005590916,
+      "totalMs": 1441.7176840007305,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016599999740719795,
+      "contextBuilderMs": 0.03453600034117699,
+      "generationMs": 3927.2706660004333,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5369.052748000249
+    },
+    "judge": {
+      "questionId": "q390",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les opérateurs, les conditions générales des personnes physiques et morales, ainsi que la formation de 60 heures des notaires. Elle commet toutefois une erreur d’interprétation importante : la restriction géographique (« dans les communes où aucun commissaire de justice n’est établi d’office ») concerne l’exception relative aux ventes de marchandises en gros, et non l’ensemble de l’activité des notaires. Elle présente à tort cette restriction comme une condition générale de leur exercice. Les autres éléments essentiels sont globalement présents et majoritairement appuyés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L. 321-2 identifie les opérateurs et le régime particulier des notaires, L. 321-4 détaille les conditions applicables aux personnes physiques et morales, et R. 321-18-1 établit la formation préalable de 60 heures. Elles couvrent l’ensemble des affirmations importantes de la réponse générée, y compris l’exception relative aux marchandises en gros et aux communes sans office de commissaire de justice. L’interprétation potentiellement erronée de la portée de cette exception relève de l’exactitude de la réponse, non d’un défaut de couverture des sources."
+    }
+  },
+  "routing": {
+    "answer": "Peuvent organiser et réaliser des ventes volontaires de meubles aux enchères publiques, y compris par voie électronique :\n\n- **des opérateurs exerçant à titre individuel ou sous la forme juridique de leur choix**, dans les conditions prévues par le Code de commerce [Source 1] ;\n- **des personnes physiques**, à condition notamment d’être française ou ressortissante de l’Union européenne ou de l’Espace économique européen, de ne pas avoir fait l’objet de certaines condamnations ou sanctions incompatibles avec l’activité, de disposer de la qualification ou du titre requis et d’avoir déclaré préalablement leur activité auprès du Conseil des maisons de vente [Source 2] ;\n- **des personnes morales**, si elles sont constituées conformément à la législation d’un État membre de l’Union européenne ou de l’Espace économique européen, disposent d’un établissement en France et comptent parmi leurs dirigeants, associés ou salariés au moins une personne remplissant les conditions requises pour les personnes physiques [Source 2].\n\n### Conditions propres aux notaires\n\nLes notaires peuvent également organiser et réaliser ces ventes, mais seulement :\n\n- s’ils remplissent les conditions de formation fixées par voie réglementaire ;\n- **dans les communes où il n’est pas établi d’office de commissaire de justice** ;\n- à titre **accessoire**, dans le cadre de leur office et selon les règles qui leur sont applicables ;\n- à l’exclusion des ventes volontaires aux enchères publiques de marchandises en gros ;\n- et uniquement lorsqu’ils sont mandatés par le propriétaire des biens [Source 1].\n\nPour diriger ces ventes, les notaires doivent avoir suivi, à leurs frais, une **formation préalable de soixante heures** portant sur la réglementation, la pratique et la déontologie des ventes aux enchères. Cette formation est organisée par le Conseil des maisons de vente, après avis du Conseil supérieur du notariat, et donne lieu à la délivrance d’un certificat d’accomplissement [Source 3 — Article R321-18-1 du Code de commerce].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L321-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R321-18-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.4407420000061,
+      "routingCalls": 1,
+      "embeddingMs": 419.56472999975085,
+      "vectorSearchMs": 222.17987799923867,
+      "jinaRerankingMs": 567.3417429998517,
+      "mappingMs": 0.022644000127911568,
+      "totalMs": 2437.619665999897,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010222000069916248,
+      "contextBuilderMs": 0.0320210000500083,
+      "generationMs": 3704.4417439997196,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6142.115891999565
+    },
+    "judge": {
+      "questionId": "q390",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les opérateurs autorisés et détaille les conditions de formation, d’exercice accessoire dans l’office et de mandat par le propriétaire applicables aux notaires. Les développements sur les personnes physiques et morales sont également conformes au contexte. Une imprécision affecte toutefois le régime des notaires : le texte vise l’exception relative aux ventes de marchandises en gros dans les communes dépourvues d’office de commissaire de justice ; la réponse la reformule comme une condition générale imposant que toute activité notariale ait lieu dans de telles communes, et comme une exclusion générale des marchandises en gros. Cette interprétation est donc trop restrictive. Toutes les informations factuelles ajoutées proviennent néanmoins largement des sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L.321-2 répond au principe des opérateurs habilités et au régime particulier des notaires, L.321-4 étaye les conditions applicables aux personnes physiques et morales, et R.321-18-1 justifie précisément la formation notariale de soixante heures, son organisation et le certificat. Elles couvrent la quasi-totalité des affirmations importantes de la réponse, y compris les conditions de mandat, d'exercice accessoire et de formation des notaires. La reformulation de la restriction territoriale et de l'exception concernant les marchandises en gros peut être juridiquement trop restrictive, mais elle repose sur le texte de la source 1 plutôt que sur une affirmation non sourcée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q147",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les mesures d’application du titre mentionné à l’article L6234-1 sont déterminées par **un décret en Conseil d’État** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6234-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6324-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.7431819997728,
+      "vectorSearchMs": 663.8147640000097,
+      "jinaRerankingMs": 474.2906069997698,
+      "mappingMs": 0.031058999709784985,
+      "totalMs": 1368.9114359999076,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013926000334322453,
+      "contextBuilderMs": 0.014661000110208988,
+      "generationMs": 1022.2408239999786,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2391.1903119999915
+    },
+    "judge": {
+      "questionId": "q147",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l'organe prévu par l'article L6234-1 : un décret en Conseil d'État. Elle répond directement à la question et est explicitement étayée par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle correspond exactement à l’article L6234-1 et énonce qu’un décret en Conseil d’État détermine les mesures d’application du présent titre. Elle couvre intégralement l’affirmation de la réponse générée. La source 2 est redondante et porte sur un autre chapitre, mais n’affecte pas la suffisance de la source 1."
+    }
+  },
+  "routing": {
+    "answer": "Les mesures d’application du titre mentionné à l’article L6234-1 sont déterminées par **un décret en Conseil d’État** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6234-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6324-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.2178670000285,
+      "routingCalls": 1,
+      "embeddingMs": 193.93188699986786,
+      "vectorSearchMs": 259.32987899985164,
+      "jinaRerankingMs": 478.1460410002619,
+      "mappingMs": 0.028333999682217836,
+      "totalMs": 2262.6800319999456,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012796999886631966,
+      "contextBuilderMs": 0.013778999913483858,
+      "generationMs": 1220.512911000289,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3483.233512000181
+    },
+    "judge": {
+      "questionId": "q147",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l’organe prévu par l’article L6234-1 : un décret en Conseil d’État. Elle répond directement et est explicitement soutenue par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle correspond exactement à l’article L6234-1 et énonce qu’un décret en Conseil d’État détermine les mesures d’application du titre. Elle couvre intégralement l’affirmation de la réponse générée. La source 2 est redondante et porte sur un autre article, mais n’est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

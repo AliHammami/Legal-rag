@@ -1,0 +1,87 @@
+{
+  "questionId": "q013",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le génocide est défini comme le fait, en exécution d’un plan concerté visant à détruire totalement ou partiellement un groupe national, ethnique, racial, religieux ou déterminé selon tout autre critère arbitraire, de commettre ou faire commettre contre ses membres l’un des actes suivants :\n\n- atteinte volontaire à la vie ;\n- atteinte grave à l’intégrité physique ou psychique ;\n- soumission à des conditions d’existence susceptibles d’entraîner la destruction du groupe ;\n- mesures visant à entraver les naissances ;\n- transfert forcé d’enfants.\n\nLe génocide est puni de la réclusion criminelle à perpétuité, conformément à l’article 211-1 du Code pénal [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.1493040000205,
+      "vectorSearchMs": 935.2582640000037,
+      "jinaRerankingMs": 560.9641360000242,
+      "mappingMs": 0.02727800002321601,
+      "totalMs": 1739.451071999967,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013049000001046807,
+      "contextBuilderMs": 0.010884999996051192,
+      "generationMs": 1740.3238199999905,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3479.8140689999564
+    },
+    "judge": {
+      "questionId": "q013",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement la définition de l’article 211-1 : plan concerté, destruction totale ou partielle d’un groupe protégé, liste complète des cinq actes constitutifs, puis indique exactement la peine de réclusion criminelle à perpétuité. Toutes les affirmations essentielles sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article 211-1 du Code pénal, qui définit le génocide, énumère les cinq catégories d’actes et prévoit expressément la réclusion criminelle à perpétuité. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le génocide est défini comme le fait, **en exécution d’un plan concerté visant à détruire totalement ou partiellement un groupe national, ethnique, racial, religieux ou déterminé selon tout autre critère arbitraire**, de commettre ou faire commettre contre ses membres l’un des actes suivants :\n\n- atteinte volontaire à la vie ;\n- atteinte grave à l’intégrité physique ou psychique ;\n- soumission à des conditions d’existence propres à entraîner la destruction du groupe ;\n- mesures visant à entraver les naissances ;\n- transfert forcé d’enfants.\n\nLe génocide est puni de **la réclusion criminelle à perpétuité**. Les deux premiers alinéas de l’article 132-23 relatifs à la période de sûreté lui sont également applicables. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "211-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1436.029834999994,
+      "routingCalls": 1,
+      "embeddingMs": 416.19603599997936,
+      "vectorSearchMs": 39.64209199999459,
+      "jinaRerankingMs": 548.318116999988,
+      "mappingMs": 0.04897899995557964,
+      "totalMs": 2440.2770369999926,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01576300000306219,
+      "contextBuilderMs": 0.022539000026881695,
+      "generationMs": 1708.257866,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4148.5904510000255
+    },
+    "judge": {
+      "questionId": "q013",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la définition légale : plan concerté, intention de destruction totale ou partielle d’un groupe visé, et les cinq catégories d’actes énumérées. Elle indique exactement la peine de réclusion criminelle à perpétuité. La précision supplémentaire relative à la période de sûreté est également explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 211-1 du Code pénal, qui définit le génocide, énumère les cinq actes constitutifs, prévoit la réclusion criminelle à perpétuité et mentionne l’application des deux premiers alinéas de l’article 132-23 relatifs à la période de sûreté. Elle couvre donc toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

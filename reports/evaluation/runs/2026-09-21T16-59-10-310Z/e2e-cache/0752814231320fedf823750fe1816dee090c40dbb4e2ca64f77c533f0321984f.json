@@ -1,0 +1,87 @@
+{
+  "questionId": "q219",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L322-1 du Code de commerce, ces ventes sont réalisées par les **officiers ministériels préposés à la vente forcée du mobilier**, selon les formes prescrites [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.34678700007498,
+      "vectorSearchMs": 644.8270969996229,
+      "jinaRerankingMs": 519.6732779992744,
+      "mappingMs": 0.04271499998867512,
+      "totalMs": 1390.9614810002968,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01631200034171343,
+      "contextBuilderMs": 0.013218000531196594,
+      "generationMs": 1066.991888999939,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2457.99508399982
+    },
+    "judge": {
+      "questionId": "q219",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les officiers ministériels préposés à la vente forcée du mobilier. Elle est pleinement appuyée par le contexte. Elle omet seulement les renvois explicites aux articles L. 221-4 du code des procédures civiles d'exécution et 945 du code de procédure civile, sans que cela n'empêche de répondre au cœur de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L322-1 et répond explicitement à la question en désignant les officiers ministériels préposés à la vente forcée du mobilier. Elle couvre intégralement l’affirmation centrale de la réponse générée, y compris la précision selon laquelle les ventes sont réalisées selon les formes prescrites."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L322-1 du Code de commerce, ces ventes sont réalisées par les **officiers ministériels préposés à la vente forcée du mobilier**, selon les formes prescrites [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L322-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1712.745876999572,
+      "routingCalls": 1,
+      "embeddingMs": 218.67488399986178,
+      "vectorSearchMs": 271.5123960003257,
+      "jinaRerankingMs": 533.6126229995862,
+      "mappingMs": 0.031140999868512154,
+      "totalMs": 2736.60947799962,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012500000186264515,
+      "contextBuilderMs": 0.013038000091910362,
+      "generationMs": 917.376660999842,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3654.024089000188
+    },
+    "judge": {
+      "questionId": "q219",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les officiers ministériels préposés à la vente forcée du mobilier. Elle est directement fondée sur le contexte. Elle omet toutefois la précision selon laquelle les ventes sont réalisées conformément aux articles L. 221-4 du code des procédures civiles d'exécution et 945 du code de procédure civile, élément présent dans la référence mais secondaire au regard de la question « qui »."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L322-1 et répond explicitement à la question en désignant les officiers ministériels préposés à la vente forcée du mobilier. Elle couvre intégralement l'affirmation de la réponse générée, y compris la mention des formes prescrites."
+    }
+  },
+  "failureStage": "none"
+}

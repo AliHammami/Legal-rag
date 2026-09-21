@@ -1,0 +1,111 @@
+{
+  "questionId": "q260",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article L353-1 du Code monétaire et financier sanctionne de **six mois d’emprisonnement et de 7 500 € d’amende** les faits suivants [Source 2] :\n\n1. **Exercer le démarchage bancaire ou financier sans carte de démarchage**, lorsque cette carte est exigée par l’article L. 341-8 [Source 2].\n\n2. **Ne pas communiquer à la personne démarchée les informations et documents requis**, dans les conditions prévues notamment aux articles L. 341-12 et L. 341-6 [Source 2].\n\n3. **Ne pas respecter les règles relatives à la signature du contrat**, prévues à l’article L. 341-14 [Source 2].\n\n4. **Ne pas permettre l’exercice du délai de rétractation**, prévu à l’article L. 341-16, sauf dérogations prévues par cet article [Source 2].\n\n5. **Recevoir des ordres ou des fonds avant l’expiration du délai de quarante-huit heures**, lorsque le démarchage porte sur certains services d’investissement ou instruments financiers mentionnés aux articles L. 321-1 et L. 211-1 [Source 2].\n\nLe contexte fourni commence également un **6°**, mais son contenu est tronqué (« 8° ou »). Il n’est donc pas possible d’en exposer précisément le cas sanctionné à partir des sources disponibles.\n\nÀ titre complémentaire, le défaut de certaines informations exigées peut relever d’une **contravention de cinquième classe** lorsqu’il s’agit des informations visées à l’article R. 353-1 du Code monétaire et financier [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R353-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L341-61"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-41"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 197.9889719998464,
+      "vectorSearchMs": 605.5986959999427,
+      "jinaRerankingMs": 564.9638000000268,
+      "mappingMs": 0.023163999430835247,
+      "totalMs": 1368.60243599955,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009681999683380127,
+      "contextBuilderMs": 0.07204899936914444,
+      "generationMs": 3966.781606999226,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5335.476828999817
+    },
+    "judge": {
+      "questionId": "q260",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les cinq cas intégralement visibles à l’article L. 353-1 : absence de carte lorsque requise, défaut de communication des informations et documents, méconnaissance des règles de signature, atteinte au droit de rétractation et réception prématurée d’ordres ou fonds. Elle indique correctement la peine commune de six mois d’emprisonnement et 7 500 euros d’amende. Elle signale avec prudence que le 6° est tronqué dans le contexte et ne prétend pas en connaître le contenu. Les affirmations principales, ainsi que la mention complémentaire de la contravention de cinquième classe, sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit l’article L. 353-1 et étaye la peine commune ainsi que les cinq cas détaillés dans la réponse (carte, informations/documents, signature, rétractation, réception d’ordres ou fonds avant 48 heures). Elle permet également de constater que le 6° est tronqué. La source 3 couvre précisément la précision complémentaire relative à la contravention de cinquième classe. Les autres sources ne sont pas nécessaires aux affirmations formulées."
+    }
+  },
+  "routing": {
+    "answer": "L’article **L353-1 du Code monétaire et financier** prévoit, pour plusieurs manquements liés au démarchage bancaire ou financier, une peine de **six mois d’emprisonnement et 7 500 euros d’amende** [Source 2].\n\nLes cas mentionnés dans l’extrait sont les suivants :\n\n1. **Exercer le démarchage sans carte de démarchage**, lorsque l’activité est réalisée dans les conditions prévues à l’article L. 341-8 [Source 2] ;\n\n2. **Ne pas communiquer à la personne démarchée les informations et documents requis**, notamment ceux prévus aux articles L. 341-12 et L. 341-6 [Source 2] ;\n\n3. **Ne pas respecter les règles relatives à la signature du contrat**, prévues à l’article L. 341-14 [Source 2] ;\n\n4. **Ne pas permettre l’exercice du délai de rétractation** prévu à l’article L. 341-16, sous réserve des exceptions prévues par cet article [Source 2] ;\n\n5. **Recevoir des ordres ou des fonds avant l’expiration du délai de quarante-huit heures**, lorsque le démarchage porte sur certains services d’investissement ou instruments financiers [Source 2].\n\nL’extrait fourni commence également un **6°**, mais il est incomplet. Il ne permet donc pas d’en exposer précisément le contenu. L’article L353-1 doit ainsi être compris, au vu du contexte fourni, comme sanctionnant ces comportements par **six mois d’emprisonnement et 7 500 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L353-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R353-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.7468369994313,
+      "routingCalls": 1,
+      "embeddingMs": 171.53927400056273,
+      "vectorSearchMs": 175.61628099996597,
+      "jinaRerankingMs": 559.8763560000807,
+      "mappingMs": 0.04617500025779009,
+      "totalMs": 2340.857971000485,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018965999595820904,
+      "contextBuilderMs": 0.03935000021010637,
+      "generationMs": 3392.400872000493,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5733.333595000207
+    },
+    "judge": {
+      "questionId": "q260",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les cinq cas explicitement fournis par l’article L. 353-1 et indique correctement la peine commune de six mois d’emprisonnement et 7 500 euros d’amende. Elle est entièrement étayée par le contexte. La mention prudente du 6° tronqué est appropriée et n’ajoute aucune information non supportée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit l’article L. 353-1 et énonce la peine commune ainsi que les cinq cas détaillés dans la réponse. Elle couvre aussi l’observation selon laquelle le 6° est tronqué dans l’extrait. Les sources 1 et 3 ne sont pas nécessaires, mais n’affectent pas la pertinence ni la couverture de la source principale."
+    }
+  },
+  "failureStage": "none"
+}

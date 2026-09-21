@@ -1,0 +1,98 @@
+{
+  "questionId": "q495",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les extraits fournis ne permettent pas de présenter l’ensemble des règles du RGPD, mais ils font apparaître les principales obligations suivantes :\n\n- **Minimisation des données** : l’exercice d’un droit de communication doit respecter le principe de minimisation des données prévu à l’article 5 du RGPD. Les données doivent donc être limitées à ce qui est nécessaire au regard de la finalité poursuivie. [Source 3]\n\n- **Sécurité du traitement** : le responsable du traitement doit mettre en œuvre les mesures prescrites notamment par les articles 24, 25, 30 et 32 du RGPD. Le fait de ne pas les mettre en œuvre peut constituer un délit puni de **cinq ans d’emprisonnement et de 300 000 euros d’amende**, selon l’article 226-17 du Code pénal. [Source 1]\n\n- **Information des personnes** : lorsque la loi l’exige, la personne doit notamment être informée de :\n  - l’identité du responsable du traitement ;\n  - la finalité du traitement ;\n  - le caractère obligatoire ou facultatif des réponses ;\n  - les conséquences d’un défaut de réponse ;\n  - les destinataires des données ;\n  - ses droits d’opposition, d’interrogation, d’accès et de rectification ;\n  - les éventuels transferts vers un État extérieur à l’Union européenne.  \n  Ces obligations figurent à l’article R625-10 du Code pénal. Leur non-respect est puni de l’amende prévue pour les contraventions de 5e classe. [Source 5]\n\n- **Droit d’accès et de réponse** : la personne peut demander la confirmation que ses données sont traitées, obtenir des informations sur le traitement, recevoir une copie de ses données et connaître, le cas échéant, la logique d’une décision automatisée produisant des effets juridiques à son égard. Le défaut de réponse ou le refus injustifié peut être puni d’une contravention de 5e classe, conformément à l’article R625-11 du Code pénal. [Source 4]\n\n- **Rectification et conservation** : dans le régime particulier applicable aux données relatives aux propriétaires de titres, les personnes morales peuvent demander la rectification des données inexactes et le complément des données incomplètes. Ces données ne peuvent être conservées que pendant douze mois après que le responsable du traitement a appris que la personne n’était plus propriétaire des titres, conformément à l’article L228-3-6 du Code de commerce. [Source 2]\n\nEn résumé, les extraits mettent en évidence quatre exigences : **informer les personnes, limiter les données collectées, garantir la sécurité des traitements et permettre l’exercice des droits d’accès et de rectification**. Les sources fournies ne détaillent toutefois pas l’ensemble des règles du RGPD, notamment toutes les bases juridiques des traitements ou l’ensemble des droits des personnes.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-17"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L228-3-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5312-13-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R625-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 192.49427299998933,
+      "vectorSearchMs": 1011.4210589999857,
+      "jinaRerankingMs": 585.6833700000134,
+      "mappingMs": 0.03748300002189353,
+      "totalMs": 1789.7103490000009,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020122000016272068,
+      "contextBuilderMs": 0.03650399998878129,
+      "generationMs": 5452.314374000009,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7242.100247000024
+    },
+    "judge": {
+      "questionId": "q495",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement plusieurs obligations et sanctions figurant dans les extraits, et précise que ceux-ci ne permettent pas d’exposer l’ensemble du RGPD. Toutefois, la question très générale appelait une abstention, comme attendu : malgré sa réserve, la réponse tente de présenter des « principales obligations » et donne une réponse de fond. Elle demeure nécessairement incomplète sur les règles générales du RGPD (bases légales, ensemble des principes et droits, gouvernance, violations, etc.). Les affirmations importantes sont globalement étayées par les sources fournies, y compris les sanctions et les régimes particuliers mentionnés."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les sources sont partiellement pertinentes : elles portent bien sur certaines obligations liées aux données personnelles et citent ponctuellement le RGPD, mais elles ne permettent pas de répondre de façon complète à une question générale sur l’ensemble des règles du RGPD. Elles soutiennent globalement les affirmations détaillées de la réponse (sanctions, information, accès, conservation et rectification dans le régime spécial des titres). La définition développée de la minimisation (« limitées à ce qui est nécessaire au regard de la finalité ») n’est toutefois pas explicitée dans l’extrait, et le droit de rectification/conservation cité relève d’un champ particulier, correctement signalé mais non généralisable à toutes les règles RGPD."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 919.6755330000015,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 919.676953999995,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 919.686160000012
+    },
+    "judge": {
+      "questionId": "q495",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, ce qui est attendu puisque le contexte est vide et que la question porte sur le RGPD, hors du périmètre indiqué. Elle ne formule aucune règle juridique non étayée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui permet de constater directement l’absence de corpus exploitable. Pour cette abstention attendue, la réponse se limite à indiquer que le contexte disponible ne permet pas de répondre et n’avance aucune affirmation juridique de fond nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

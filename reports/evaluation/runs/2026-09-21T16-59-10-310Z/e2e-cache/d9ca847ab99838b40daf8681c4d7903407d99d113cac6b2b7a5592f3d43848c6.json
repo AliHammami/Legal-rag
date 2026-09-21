@@ -1,0 +1,99 @@
+{
+  "questionId": "q320",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne reproduit pas le contenu de l’**article L. 441-3 du Code de la consommation**. Il indique seulement que les délits prévus par cet article sont punis de deux ans d’emprisonnement et de 300 000 € d’amende, pouvant être portée à 5 % du chiffre d’affaires moyen annuel [Source 3].\n\nIl n’est donc pas possible de déterminer, à partir des sources fournies :\n\n- quelles techniques sont interdites par l’article L. 441-3 ;\n- dans quel cas un professionnel peut être exempté de l’obligation correspondante.\n\nIl faudrait disposer du texte de l’article L. 441-3 lui-même.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L521-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 245.59013099968433,
+      "vectorSearchMs": 572.1390170007944,
+      "jinaRerankingMs": 605.3788740001619,
+      "mappingMs": 0.02529700007289648,
+      "totalMs": 1423.1610629996285,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010192000307142735,
+      "contextBuilderMs": 0.028874999843537807,
+      "generationMs": 2192.9620410008356,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3616.1736830007285
+    },
+    "judge": {
+      "questionId": "q320",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit ni les techniques interdites ni l’exception prévue, alors que la question appelle ces deux éléments et que l’abstention n’était pas attendue. Elle décrit toutefois fidèlement les limites du contexte : celui-ci ne contient pas le texte de l’article L. 441-3 et la source 3 ne mentionne que les sanctions applicables."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 concerne bien l'article L. 441-3, mais uniquement par renvoi aux sanctions pénales applicables ; elle ne fournit ni les techniques interdites ni les conditions d'exemption demandées. Les sources 1 et 2 sont hors sujet. En revanche, les affirmations de la réponse générée sont correctement couvertes par le corpus : la source 3 établit les peines évoquées et aucune source ne reproduit le contenu normatif de l'article L. 441-3, ce qui étaye le constat d'insuffisance formulé."
+    }
+  },
+  "routing": {
+    "answer": "Les extraits fournis ne reproduisent pas le contenu de l’**article L. 441-3 du Code de la consommation**. Ils indiquent seulement que les délits prévus par cet article sont punis de deux ans d’emprisonnement et de 300 000 € d’amende, éventuellement portée à 5 % du chiffre d’affaires moyen annuel [Source 2].\n\nL’**article L. 121-23 du Code de la consommation** concerne, dans l’extrait fourni, certaines interdictions liées à la localisation du consommateur et aux opérations de paiement, mais il ne précise pas les techniques visées par l’article L. 441-3 ni une éventuelle exception à l’obligation [Source 1].\n\nIl n’est donc pas possible de répondre suffisamment à la question sans le texte complet de l’article L. 441-3.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-23"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 11270.535521999933,
+      "routingCalls": 1,
+      "embeddingMs": 196.8729449994862,
+      "vectorSearchMs": 79.1378750000149,
+      "jinaRerankingMs": 579.149238999933,
+      "mappingMs": 0.03298899997025728,
+      "totalMs": 12125.757641999982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010776999406516552,
+      "contextBuilderMs": 0.11958599928766489,
+      "generationMs": 3141.9894420001656,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 15267.892106000334
+    },
+    "judge": {
+      "questionId": "q320",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’indique ni les techniques interdites ni l’exception applicable, alors que la question appelait ces deux éléments. Elle constitue une abstention alors qu’une réponse était attendue. En revanche, ses affirmations sur les limites des extraits fournis et sur le contenu des sources citées sont fidèlement fondées sur le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est indirectement pertinente puisqu’elle vise expressément l’article L. 441-3 et ses sanctions, mais elle ne contient ni les techniques interdites ni les exceptions demandées. La source 1 est hors sujet quant au fond de la question. Les sources sont donc insuffisantes pour répondre directement. En revanche, elles couvrent les affirmations de la réponse générée : la source 2 établit les peines mentionnées et la source 1 porte bien sur des règles de localisation/paiement sans préciser le contenu de L. 441-3 ; l’absence du texte matériel de cet article dans les extraits justifie le constat d’insuffisance formulé."
+    }
+  },
+  "failureStage": "generation"
+}

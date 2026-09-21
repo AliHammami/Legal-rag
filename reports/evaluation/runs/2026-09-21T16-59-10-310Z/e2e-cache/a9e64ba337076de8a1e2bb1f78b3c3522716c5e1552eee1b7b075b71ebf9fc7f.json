@@ -1,0 +1,95 @@
+{
+  "questionId": "q240",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L213-0-1 du Code monétaire et financier**, les émetteurs peuvent acquérir et conserver, afin de favoriser leur liquidité :\n\n1. **Les titres de créance négociables** ;\n2. **Les titres de créance ne donnant pas accès au capital**, admis aux négociations sur un marché réglementé ou sur un système multilatéral de négociation répondant aux règles de protection des investisseurs ;\n3. **Les obligations ne donnant pas accès au capital**, lorsqu’elles sont émises par un établissement de crédit, une entreprise d’investissement ou une société de financement.\n\nPour cette troisième catégorie, les titres peuvent également être souscrits ou acquis et conservés par leur émetteur lorsque celui-ci dispose de l’un de ces statuts. **Article L213-0-1 du Code monétaire et financier [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D213-0-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L213-0-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 259.06115600001067,
+      "vectorSearchMs": 584.5929360007867,
+      "jinaRerankingMs": 584.4696939997375,
+      "mappingMs": 0.05314699932932854,
+      "totalMs": 1428.2101900000125,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011850999668240547,
+      "contextBuilderMs": 0.01962399948388338,
+      "generationMs": 2460.2207980006933,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3888.4785269992426
+    },
+    "judge": {
+      "questionId": "q240",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère exactement les trois catégories prévues par l’article L. 213-0-1 : titres de créances négociables ; titres de créance sans accès au capital admis sur un marché réglementé ou un système multilatéral répondant aux exigences de protection des investisseurs ; obligations sans accès au capital émises par les établissements de crédit, entreprises d’investissement ou sociétés de financement. La précision sur la souscription ou l’acquisition par l’émetteur doté de ces statuts pour la troisième catégorie est également conforme au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 213-0-1 et énumère précisément les trois catégories de titres visées, ainsi que la condition particulière applicable aux titres du 3° lorsque l’émetteur a le statut requis. Elle couvre donc toutes les affirmations importantes de la réponse générée. La source 1 est complémentaire mais non nécessaire à cette couverture."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L213-0-1 du Code monétaire et financier, les émetteurs peuvent acquérir et conserver :\n\n1. **Les titres de créance négociables** ;\n2. **Les titres de créance ne donnant pas accès au capital**, admis aux négociations sur un marché réglementé ou sur un système multilatéral de négociation répondant aux règles de protection des investisseurs ;\n3. **Les obligations ne donnant pas accès au capital**, émises par des établissements de crédit, des entreprises d’investissement ou des sociétés de financement.\n\nCes acquisitions ou conservations peuvent notamment avoir pour objectif de favoriser la liquidité des titres. Pour les titres mentionnés au 3°, la souscription ou l’acquisition et la conservation par l’émetteur sont prévues lorsque celui-ci est un établissement de crédit, une entreprise d’investissement ou une société de financement. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "D213-0-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L213-0-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1125.281863999553,
+      "routingCalls": 1,
+      "embeddingMs": 191.75745000038296,
+      "vectorSearchMs": 172.1690360000357,
+      "jinaRerankingMs": 595.458267999813,
+      "mappingMs": 0.03506399970501661,
+      "totalMs": 2084.7731760004535,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011051000095903873,
+      "contextBuilderMs": 0.021689999848604202,
+      "generationMs": 2369.7492720000446,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4454.565928000025
+    },
+    "judge": {
+      "questionId": "q240",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les trois catégories prévues par l’article L. 213-0-1 : titres de créances négociables, titres de créance sans accès au capital admis sur un marché réglementé ou un système multilatéral répondant aux exigences mentionnées, et obligations sans accès au capital émises par les établissements de crédit, entreprises d’investissement ou sociétés de financement. Les précisions sur la finalité de liquidité et le régime particulier du 3° sont également conformes au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 213-0-1 et énumère précisément les trois catégories de titres visées, les conditions d’admission ou de statut applicables, la finalité de liquidité ainsi que le régime particulier de souscription/acquisition pour les titres du 3°. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée. La source 1 est complémentaire mais non nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

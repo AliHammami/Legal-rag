@@ -1,0 +1,86 @@
+{
+  "questionId": "q157",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne contiennent pas l’article **L2221-1 du Code du travail**. Elles indiquent toutefois que le livre concerné définit :\n\n- les règles d’ordre public ;\n- le champ de la négociation collective ;\n- les règles supplétives applicables en l’absence d’accord.\n\n[Source 1] [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3111-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.56423800019547,
+      "vectorSearchMs": 649.6671239999123,
+      "jinaRerankingMs": 475.10010899975896,
+      "mappingMs": 0.03402800019830465,
+      "totalMs": 1347.3969640000723,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013382000382989645,
+      "contextBuilderMs": 0.014553999993950129,
+      "generationMs": 2088.004342999775,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3435.439720999915
+    },
+    "judge": {
+      "questionId": "q157",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 2,
+      "abstentionCorrect": true,
+      "explanation": "La réponse ne donne pas l’objet du livre visé par l’article L2221-1, qui porte sur les relations collectives entre employeurs et salariés et le droit à la négociation collective. Elle s’appuie sur les articles L3111-3 et R3111-1, relatifs à un autre livre, et transpose à tort leur contenu au « livre concerné ». Les affirmations sur le contenu des sources sont bien reprises du contexte, mais leur application à la question n’est pas fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Les deux sources portent sur les articles L3111-3 et R3111-1, non sur l'article L2221-1 ni sur le livre visé par la question. Elles ne permettent donc pas d'établir l'objet principal demandé. Elles couvrent textuellement les règles mentionnées dans la réponse, mais ne soutiennent pas l'affirmation qu'elles concernent le livre défini à l'article L2221-1."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 2019.8579449998215,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 2019.8650320000015,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 2019.8728509997018
+    },
+    "judge": {
+      "questionId": "q157",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 2,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n'apporte aucun élément sur l'objet du livre visé par l'article L2221-1 et refuse de répondre alors qu'une réponse était attendue. L'absence de contexte justifie le constat qu'aucune réponse ne peut être fondée sur celui-ci, mais les affirmations selon lesquelles la question serait ambiguë ou hors périmètre ne sont pas étayées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. Elles ne peuvent donc ni être pertinentes pour déterminer l'objet du livre visé à l'article L2221-1, ni étayer les affirmations d'abstention, notamment le caractère ambigu ou hors périmètre de la question."
+    }
+  },
+  "failureStage": "generation"
+}

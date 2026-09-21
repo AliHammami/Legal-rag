@@ -1,0 +1,87 @@
+{
+  "questionId": "q205",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L245-11 du Code de commerce, les faits suivants sont punis des mêmes peines :\n\n- empêcher un obligataire de participer à une assemblée générale d’obligataires ;\n- s’accorder, garantir ou promettre des avantages particuliers pour voter dans un certain sens ou ne pas participer au vote ;\n- accorder, garantir ou promettre ces avantages particuliers.\n\nLes peines encourues sont **deux ans d’emprisonnement et 9 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L245-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 249.93029600009322,
+      "vectorSearchMs": 601.2599700000137,
+      "jinaRerankingMs": 548.0095570003614,
+      "mappingMs": 0.03571900026872754,
+      "totalMs": 1399.26432200009,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015103999990969896,
+      "contextBuilderMs": 0.015588999725878239,
+      "generationMs": 1567.5480430000462,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2966.853355000261
+    },
+    "judge": {
+      "questionId": "q205",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues (deux ans d’emprisonnement et 9 000 euros d’amende) et décrit correctement les comportements visés. Toutes les affirmations sont directement étayées par le contexte de l’article L245-11 du Code de commerce."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L245-11 du Code de commerce, qui vise précisément l’empêchement d’un obligataire de participer à l’assemblée générale ainsi que les avantages particuliers destinés à influencer ou éviter un vote. Elle énonce expressément les peines de deux ans d’emprisonnement et 9 000 euros d’amende et couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L245-11 du Code de commerce, les faits suivants sont punis des mêmes peines :\n\n- empêcher un obligataire de participer à une assemblée générale d’obligataires ;\n- accorder, garantir ou promettre des avantages particuliers pour influencer un vote ou empêcher la participation au vote.\n\nLes peines encourues sont **deux ans d’emprisonnement et 9 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L245-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2046.579977999907,
+      "routingCalls": 1,
+      "embeddingMs": 228.08253099955618,
+      "vectorSearchMs": 177.05008100019768,
+      "jinaRerankingMs": 541.9827379998751,
+      "mappingMs": 0.028981999959796667,
+      "totalMs": 2993.751724000089,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01182299992069602,
+      "contextBuilderMs": 0.01163900038227439,
+      "generationMs": 1305.7089770003222,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4299.496217000298
+    },
+    "judge": {
+      "questionId": "q205",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement les peines prévues (deux ans d’emprisonnement et 9 000 euros d’amende) et décrit correctement les deux comportements visés. Toutes les affirmations sont directement étayées par l’article L245-11 fourni dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l’article L245-11 directement applicable. Elle énonce expressément les deux comportements mentionnés (empêcher un obligataire de participer et accorder/garantir/promettre des avantages pour orienter ou empêcher un vote) ainsi que les peines de deux ans d’emprisonnement et 9 000 euros d’amende. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

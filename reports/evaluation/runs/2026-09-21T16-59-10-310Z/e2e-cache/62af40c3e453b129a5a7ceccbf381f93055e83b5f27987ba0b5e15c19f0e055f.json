@@ -1,0 +1,95 @@
+{
+  "questionId": "q031",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 130-1 du Code pénal, la peine poursuit principalement deux objectifs :\n\n1. **Sanctionner l’auteur de l’infraction** ;\n2. **Favoriser son amendement, son insertion ou sa réinsertion**.\n\nCes objectifs s’inscrivent dans une finalité plus large de **protection de la société**, de **prévention de nouvelles infractions** et de **restauration de l’équilibre social**, dans le respect des intérêts de la victime. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "130-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 193.01659099990502,
+      "vectorSearchMs": 637.4255589999957,
+      "jinaRerankingMs": 586.795691999956,
+      "mappingMs": 0.04005200008396059,
+      "totalMs": 1417.334995000041,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01114600000437349,
+      "contextBuilderMs": 0.01767700002528727,
+      "generationMs": 1448.0125470000785,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2865.3845119999023
+    },
+    "judge": {
+      "questionId": "q031",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les deux fonctions de la peine et les trois finalités associées, y compris le respect des intérêts de la victime. Toutes les affirmations sont explicitement supportées par l'article 130-1 présent dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l'article 130-1 directement visé par la question et reproduit explicitement les deux fonctions de la peine, ainsi que les finalités de protection de la société, de prévention des nouvelles infractions, de restauration de l'équilibre social et le respect des intérêts de la victime. Elle couvre donc l'ensemble des affirmations importantes de la réponse générée. La source 2 est cohérente mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 130-1 du Code pénal, la peine poursuit trois objectifs principaux :\n\n1. **Protéger la société** ;\n2. **Prévenir la commission de nouvelles infractions** ;\n3. **Restaurer l’équilibre social**, dans le respect des intérêts de la victime.\n\nElle a également deux fonctions : **sanctionner l’auteur de l’infraction** et **favoriser son amendement, son insertion ou sa réinsertion**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "130-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1020.2490119999275,
+      "routingCalls": 1,
+      "embeddingMs": 248.77074099995662,
+      "vectorSearchMs": 28.335944999940693,
+      "jinaRerankingMs": 593.3732229999732,
+      "mappingMs": 0.0424689999781549,
+      "totalMs": 1890.8009770000353,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01101600006222725,
+      "contextBuilderMs": 0.01740399992559105,
+      "generationMs": 1971.2229560000123,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3862.0618280000053
+    },
+    "judge": {
+      "questionId": "q031",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois finalités énoncées par l'article 130-1 (protection de la société, prévention de nouvelles infractions, restauration de l'équilibre social dans le respect des intérêts de la victime) et ses deux fonctions (sanction et amendement/insertion/réinsertion). Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement et intégralement l'article 130-1 pertinent : elle énonce les trois finalités de la peine, y compris le respect des intérêts de la victime, ainsi que ses deux fonctions. Elle couvre donc toutes les affirmations importantes de la réponse générée. La source 2 est seulement contextuelle mais reste cohérente avec le renvoi à l'article 130-1."
+    }
+  },
+  "failureStage": "none"
+}

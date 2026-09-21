@@ -1,0 +1,87 @@
+{
+  "questionId": "q133",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les articles **L. 5212-2 à L. 5212-17 du Code du travail** s’appliquent à **tout employeur occupant au moins 20 salariés**, y compris les **établissements publics industriels et commerciaux**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.09936900017783,
+      "vectorSearchMs": 658.8831680002622,
+      "jinaRerankingMs": 572.2889960003085,
+      "mappingMs": 0.03413299983367324,
+      "totalMs": 1453.3390069999732,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011055999901145697,
+      "contextBuilderMs": 0.014194999821484089,
+      "generationMs": 1312.8614110001363,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2766.2355659999885
+    },
+    "judge": {
+      "questionId": "q133",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement le champ d'application prévu par l'article L. 5212-1 : tout employeur occupant au moins vingt salariés, y compris les établissements publics industriels et commerciaux. Cette affirmation est explicitement soutenue par le contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 5212-1 et énonce explicitement que les articles L. 5212-2 à L. 5212-17 s'appliquent à tout employeur occupant au moins vingt salariés, y compris les établissements publics industriels et commerciaux. Elle est donc parfaitement pertinente et couvre intégralement l'affirmation de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Les articles **L. 5212-2 à L. 5212-17 du Code du travail** s’appliquent à **tout employeur occupant au moins 20 salariés**, y compris les **établissements publics industriels et commerciaux**. [Source 1]\n\nLa mobilisation en faveur de l’emploi des travailleurs handicapés concerne toutefois **tous les employeurs**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1133.5480780000798,
+      "routingCalls": 1,
+      "embeddingMs": 198.08088199980557,
+      "vectorSearchMs": 271.9195179999806,
+      "jinaRerankingMs": 531.4550529997796,
+      "mappingMs": 0.028371999971568584,
+      "totalMs": 2135.0657930001616,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011235999874770641,
+      "contextBuilderMs": 0.010767000261694193,
+      "generationMs": 1317.2445480003953,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3452.3436060003005
+    },
+    "judge": {
+      "questionId": "q133",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les employeurs visés : tout employeur occupant au moins vingt salariés, y compris les établissements publics industriels et commerciaux. Elle ajoute correctement que la mobilisation concerne tous les employeurs, ce qui est explicitement indiqué dans le contexte. Toutes les affirmations sont directement soutenues par la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 5212-1 et répond explicitement à la question : les articles L. 5212-2 à L. 5212-17 s'appliquent à tout employeur occupant au moins vingt salariés, y compris les établissements publics industriels et commerciaux. Elle couvre également l'affirmation additionnelle selon laquelle la mobilisation concerne tous les employeurs."
+    }
+  },
+  "failureStage": "none"
+}

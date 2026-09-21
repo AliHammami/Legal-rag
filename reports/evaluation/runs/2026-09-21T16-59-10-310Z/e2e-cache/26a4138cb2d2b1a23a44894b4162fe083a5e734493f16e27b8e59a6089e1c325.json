@@ -1,0 +1,86 @@
+{
+  "questionId": "q429",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La convention ou l’accord doit obligatoirement être établi **par écrit** : à défaut, il est frappé de **nullité**, conformément à l’article L. 2231-3 du Code du travail [Source 2].\n\nLe contexte ne fournit pas d’autres formalités générales de conclusion. Il précise seulement que, pour un accord conclu selon la modalité prévue au 4° du I de l’article L. 3312-5, une demande de renégociation doit être formalisée par l’un des documents mentionnés à l’article D. 3345-1, 3° du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3313-7-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2231-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 181.95363899879158,
+      "vectorSearchMs": 636.8133889995515,
+      "jinaRerankingMs": 542.4917059987783,
+      "mappingMs": 0.030365999788045883,
+      "totalMs": 1361.3198400009423,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013896999880671501,
+      "contextBuilderMs": 0.03282199986279011,
+      "generationMs": 2117.759399998933,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3479.1379979997873
+    },
+    "judge": {
+      "questionId": "q429",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse tente de répondre à une question générale alors que l’abstention était attendue, faute de précision sur le type d’accord et le régime juridique applicable. Elle énonce correctement, et sur le fondement du contexte, la règle de l’article L. 2231-3 du Code du travail pour les conventions ou accords relevant de ce cadre, mais la présente indûment comme une formalité générale applicable à tout « accord ». Les affirmations formulées sont néanmoins directement étayées par les deux sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les affirmations effectivement formulées : la source 2 établit l'exigence d'un acte écrit à peine de nullité pour la convention ou l'accord, et la source 1 établit la formalisation de la demande de renégociation dans le cas précis visé. Elles couvrent donc l'ensemble des affirmations substantielles de la réponse. Toutefois, pour une question générale et une abstention attendue, elles ne suffisent pas à déterminer les formalités applicables à tout type d'accord ni à justifier entièrement une réponse générale."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1436.0063499994576,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1436.0076460000128,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1436.0155350007117
+    },
+    "judge": {
+      "questionId": "q429",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question, très générale, ne permet pas d'identifier le type d'accord ni le régime juridique applicable. La réponse s'abstient explicitement et indique correctement qu'aucune réponse fiable ne peut être fournie sur cette base."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une abstention fondée sur l’absence de corpus pertinent. La réponse ne formule aucune affirmation juridique de fond et constate uniquement l’impossibilité de répondre de manière fiable dans ce contexte."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,86 @@
+{
+  "questionId": "q482",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de dresser une liste exhaustive des obligations environnementales applicables aux ICPE. Elles permettent toutefois d’identifier les obligations suivantes :\n\n1. **En cas de cessation d’activité**  \n   La cessation d’activité d’une ou plusieurs ICPE donne lieu à des obligations spécifiques, mentionnées à l’article **R. 663-27 du Code de commerce**. Un émolument est prévu à ce titre, dont le montant dépend du régime de l’installation :  \n   - **470,25 €** si l’installation est soumise à déclaration ;  \n   - **1 410,75 €** si au moins une installation est soumise à autorisation ou à enregistrement ;  \n   - **4 232,25 €** si au moins une installation figure sur une liste prévue au IV de l’article L. 515-8 du Code de l’environnement.  \n   [Source 1 — Article A. 663-24 du Code de commerce]\n\n2. **Obligations d’information dans le rapport de gestion**  \n   Pour les sociétés exploitant au moins une installation figurant sur la liste prévue à l’article **L. 515-36 du Code de l’environnement**, le rapport mentionné à l’article **L. 232-1 du Code de commerce** doit :  \n   - informer sur la politique de prévention du risque d’accident technologique ;  \n   - rendre compte de la capacité de la société à couvrir sa responsabilité civile envers les biens et les personnes ;  \n   - préciser les moyens prévus pour gérer l’indemnisation des victimes en cas d’accident technologique engageant sa responsabilité.  \n   [Source 2 — Article L. 232-1-1 du Code de commerce]\n\nCes extraits ne précisent pas le contenu concret des obligations de mise en sécurité, de dépollution ou de remise en état lors de la cessation d’une ICPE.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A663-24"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 216.38354800082743,
+      "vectorSearchMs": 691.514414999634,
+      "jinaRerankingMs": 557.2988280002028,
+      "mappingMs": 0.03172999992966652,
+      "totalMs": 1465.254001999274,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013940000906586647,
+      "contextBuilderMs": 0.018198000267148018,
+      "generationMs": 3236.5217589996755,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4701.826695000753
+    },
+    "judge": {
+      "questionId": "q482",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reconnaît que les extraits ne permettent pas une liste exhaustive, mais elle tente néanmoins de répondre à une question large d’obligations ICPE avec des éléments très partiels. Les obligations environnementales essentielles ne sont pas fournies. Les informations sur le rapport de gestion sont bien étayées par le contexte pour certaines sociétés. En revanche, le premier extrait établit surtout un émolument lié à des obligations de cessation, sans décrire ces obligations elles-mêmes ; présenter cette tarification comme une obligation environnementale concrète est donc insuffisamment fondé. Puisqu’une abstention était attendue, cette réponse partielle ne constitue pas une abstention correcte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les deux sources sont liées de manière limitée aux ICPE : la première porte sur l’émolument applicable au titre d’obligations de cessation d’activité, sans décrire ces obligations, et la seconde concerne une obligation d’information très spécifique pour certaines sociétés exploitantes. Elles ne permettent donc pas de répondre globalement aux obligations environnementales applicables aux ICPE, mais elles sont suffisamment pertinentes pour constater le caractère incomplet du contexte. Les montants de l’émolument et les trois mentions requises dans le rapport de gestion sont couverts. En revanche, la présentation d’obligations concrètes de cessation est seulement indirectement étayée, puisque la source ne détaille pas leur contenu."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1229.9639600012451,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1229.9651659987867,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1229.973246999085
+    },
+    "judge": {
+      "questionId": "q482",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "L’absence totale de contexte ne permet pas de répondre de manière fiable aux obligations environnementales applicables aux ICPE. La réponse l’indique explicitement et s’abstient correctement, conformément à l’attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc aucune source pertinente au sens strict pour répondre à la question. Toutefois, la réponse se limite à constater l’absence de contexte et de corpus identifié, sans formuler d’affirmation juridique sur les ICPE ; l’absence de sources est ainsi cohérente avec cette abstention et couvre les constats formulés."
+    }
+  },
+  "failureStage": "none"
+}

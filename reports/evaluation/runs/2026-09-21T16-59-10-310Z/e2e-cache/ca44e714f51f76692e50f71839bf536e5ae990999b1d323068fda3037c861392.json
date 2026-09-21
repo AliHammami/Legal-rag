@@ -1,0 +1,119 @@
+{
+  "questionId": "q182",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L227-1 du Code de commerce**, les règles applicables aux sociétés anonymes s’appliquent à la société par actions simplifiée **seulement dans la mesure où elles sont compatibles avec les dispositions particulières propres aux SAS** [Source 1].\n\nCette application connaît plusieurs exclusions. Ne sont notamment pas applicables à la SAS :\n\n- l’article **L224-2** ;\n- le deuxième alinéa de l’article **L225-14** ;\n- les articles **L225-17 à L225-102** ;\n- les articles **L225-103 à L225-126** ;\n- l’article **L225-243** ;\n- le I de l’article **L233-8** ;\n- l’article **L236-17**.\n\nEn outre, lorsque les règles des sociétés anonymes attribuent des pouvoirs au conseil d’administration ou à son président, ces attributions sont exercées par **le président de la SAS** ou par le ou les dirigeants que les statuts désignent à cette fin [Source 1].\n\nAinsi, l’article L227-1 organise une **application subsidiaire et adaptée** des règles des sociétés anonymes : elles complètent le régime de la SAS, sauf incompatibilité avec ses règles propres ou exclusion expresse. Certaines règles de responsabilité des sociétés anonymes sont également rendues applicables au président et aux dirigeants de la SAS par l’article **L227-8 du Code de commerce** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L227-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L227-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L227-2-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 257.9155899998732,
+      "vectorSearchMs": 564.8552799997851,
+      "jinaRerankingMs": 518.2792510003783,
+      "mappingMs": 0.03284900030121207,
+      "totalMs": 1341.126426000148,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01384500041604042,
+      "contextBuilderMs": 0.03141599986702204,
+      "generationMs": 2951.9878000002354,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4293.173196999822
+    },
+    "judge": {
+      "questionId": "q182",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement le principe de l’article L227-1 : application des règles des SA sous réserve de compatibilité avec le régime propre des SAS et des exclusions expressément énumérées. Elle mentionne aussi correctement la règle d’attribution des pouvoirs normalement dévolus au conseil d’administration ou à son président. L’ajout relatif à l’article L227-8 est exact et directement supporté par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre le principe d’application des règles des SA sous réserve de compatibilité, l’ensemble des exclusions citées et la dévolution des attributions du conseil d’administration ou de son président aux dirigeants désignés de la SAS. La source 2 couvre explicitement l’affirmation complémentaire relative à l’application des règles de responsabilité au président et aux dirigeants de la SAS. Les affirmations importantes de la réponse sont donc couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon **l’article L227-1 du Code de commerce [Source 1]**, les règles applicables aux sociétés anonymes s’appliquent à la société par actions simplifiée (SAS) **uniquement dans la mesure où elles sont compatibles avec les dispositions particulières propres aux SAS**.\n\nCette application comporte deux principales limites :\n\n- certaines dispositions sont expressément exclues : l’article **L224-2**, le deuxième alinéa de **L225-14**, les articles **L225-17 à L225-102**, **L225-103 à L225-126**, **L225-243**, le I de **L233-8** et l’article **L236-17** du Code de commerce ;\n- les attributions normalement exercées par le conseil d’administration ou son président sont exercées, dans la SAS, par **le président de la société ou les dirigeants désignés par les statuts**.\n\nAinsi, les règles des sociétés anonymes constituent un régime supplétif pour la SAS : elles s’appliquent lorsqu’elles sont compatibles et lorsqu’aucune disposition spécifique aux SAS ne prévoit une règle différente.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L227-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L227-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L227-2-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R226-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1053.5119499997236,
+      "routingCalls": 1,
+      "embeddingMs": 233.61657999968156,
+      "vectorSearchMs": 256.58116299984977,
+      "jinaRerankingMs": 525.3542420002632,
+      "mappingMs": 0.02481700014322996,
+      "totalMs": 2069.1195169999264,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010300999972969294,
+      "contextBuilderMs": 0.022803000174462795,
+      "generationMs": 2596.625839999877,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4665.787105999887
+    },
+    "judge": {
+      "questionId": "q182",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement le principe de compatibilité des règles de SA avec le régime particulier de la SAS, énumère fidèlement les exclusions prévues par l'article L227-1 et précise correctement la dévolution des attributions du conseil d'administration ou de son président au président ou aux dirigeants statutaires de la SAS. Ces éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle contient précisément l'article L. 227-1, énonce la condition de compatibilité, liste les exclusions citées et prévoit le transfert des attributions du conseil d'administration ou de son président au président ou aux dirigeants désignés par les statuts. Elle couvre donc toutes les affirmations importantes de la réponse. Les autres sources ne sont pas nécessaires à cette couverture."
+    }
+  },
+  "failureStage": "none"
+}

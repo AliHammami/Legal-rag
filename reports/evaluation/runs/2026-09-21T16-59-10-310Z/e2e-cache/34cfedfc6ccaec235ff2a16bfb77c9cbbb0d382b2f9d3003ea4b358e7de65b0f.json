@@ -1,0 +1,87 @@
+{
+  "questionId": "q110",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 721 du Code civil, lorsque le défunt n’a pas prévu de libéralités, la succession est dévolue selon la loi. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "721"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 237.6368889999576,
+      "vectorSearchMs": 625.1099330000579,
+      "jinaRerankingMs": 520.901417999994,
+      "mappingMs": 0.029613999649882317,
+      "totalMs": 1383.7623939998448,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010009000077843666,
+      "contextBuilderMs": 0.011617999989539385,
+      "generationMs": 1175.1208469998091,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2558.914613999892
+    },
+    "judge": {
+      "questionId": "q110",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle énoncée à l’article 721 : à défaut de libéralités du défunt, la succession est dévolue selon la loi. Elle répond pleinement à la question et est explicitement étayée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 721 du Code civil et répond exactement à la question. Elle couvre entièrement l’affirmation selon laquelle, en l’absence de libéralités du défunt, la succession est dévolue selon la loi."
+    }
+  },
+  "routing": {
+    "answer": "Lorsque le défunt n’a pas prévu de libéralités, les successions sont dévolues **selon la loi** — article 721 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "721"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1536.3408559998497,
+      "routingCalls": 1,
+      "embeddingMs": 249.4594020000659,
+      "vectorSearchMs": 70.33372500026599,
+      "jinaRerankingMs": 478.74934599967673,
+      "mappingMs": 0.0384740000590682,
+      "totalMs": 2334.96137000015,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014037000015377998,
+      "contextBuilderMs": 0.014924999792128801,
+      "generationMs": 1047.821545000188,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3382.8240229999647
+    },
+    "judge": {
+      "questionId": "q110",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle énoncée à l’article 721 : en l’absence de libéralités, la succession est dévolue selon la loi. Cette affirmation est directement et intégralement supportée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 721 du Code civil et répond exactement à la question : en l’absence de libéralités, les successions sont dévolues selon la loi. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

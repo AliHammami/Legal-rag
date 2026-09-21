@@ -1,0 +1,115 @@
+{
+  "questionId": "q008",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’extrait fourni de l’**article 226-1 du Code pénal**, les éléments constitutifs visibles sont :\n\n- **Un élément matériel** : le fait, « au moyen d’un procédé quelconque », de **capter, enregistrer ou transmettre** des paroles ;\n- **Un élément intentionnel** : l’acte doit être commis **volontairement** ;\n- **L’absence de consentement** : les paroles doivent être captées, enregistrées ou transmises **sans le consentement de leur auteur** ;\n- **Une atteinte à la vie privée d’autrui** : l’acte doit porter atteinte à l’intimité de la vie privée d’une autre personne.\n\nL’extrait de l’article 226-1 étant incomplet — il s’interrompt après « des paroles prononcées à » — il ne permet pas de présenter exhaustivement toutes les hypothèses prévues par cet article, notamment celles relatives au lieu ou aux images. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-33-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.40782299998682,
+      "vectorSearchMs": 685.4591070000024,
+      "jinaRerankingMs": 548.6533779999882,
+      "mappingMs": 0.030303000006824732,
+      "totalMs": 1469.6120589999773,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010532999993301928,
+      "contextBuilderMs": 0.0308870000008028,
+      "generationMs": 2921.037214000011,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4390.729101000004
+    },
+    "judge": {
+      "questionId": "q008",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les éléments visibles dans l’extrait : procédé quelconque, captation/enregistrement/transmission de paroles, caractère volontaire, absence de consentement et atteinte à la vie privée. Elle omet toutefois la précision attendue selon laquelle les paroles sont prononcées à l’insu de leur auteur. La réserve sur le caractère tronqué de l’extrait est justifiée, mais l’affirmation selon laquelle l’article prévoit notamment des hypothèses relatives au lieu ou aux images n’est pas établie explicitement par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "La source 2 est directement pertinente : elle reproduit le début de l’article 226-1 et étaye les éléments matériels, intentionnels, l’atteinte à l’intimité de la vie privée et l’absence de consentement mentionnés dans la réponse. Elle justifie aussi le constat que l’extrait est tronqué. En revanche, elle ne permet pas d’étayer explicitement l’affirmation selon laquelle les autres hypothèses de l’article concernent « le lieu ou les images » ; la couverture est donc majoritaire mais non complète."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’extrait disponible de l’**article 226-1 du Code pénal**, l’atteinte à l’intimité de la vie privée suppose :\n\n- **un acte intentionnel** : l’auteur agit « volontairement » ;\n- **l’utilisation d’un procédé quelconque** ;\n- **une atteinte à l’intimité de la vie privée d’autrui** ;\n- **la captation, l’enregistrement ou la transmission**, sans le consentement de leur auteur, de paroles prononcées — l’extrait fourni s’interrompant à cet endroit. [Source 2]\n\nL’extrait ne permet toutefois pas de présenter la liste complète des comportements visés par l’article 226-1, ni toutes les conditions relatives aux lieux ou aux images. Il est donc insuffisant pour déterminer exhaustivement les éléments constitutifs de l’infraction.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-2-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-3-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 920.4711580000003,
+      "routingCalls": 1,
+      "embeddingMs": 201.05812100000912,
+      "vectorSearchMs": 58.53602199998568,
+      "jinaRerankingMs": 547.4272209999908,
+      "mappingMs": 0.04219500001636334,
+      "totalMs": 1727.585048000008,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013321999984327704,
+      "contextBuilderMs": 0.026901000004727393,
+      "generationMs": 2777.2673050000158,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4504.916323000012
+    },
+    "judge": {
+      "questionId": "q008",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les éléments explicitement présents dans l’extrait : procédé quelconque, caractère volontaire, atteinte à la vie privée d’autrui et captation/enregistrement/transmission de paroles sans consentement. Elle indique à juste titre que l’extrait est tronqué et ne permet pas d’exposer exhaustivement les autres modalités de l’article, notamment celles relatives aux images et aux lieux. Cette réserve rend la réponse factuellement prudente, mais l’empêche d’être pleinement exhaustive."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : elle reproduit le début de l’article 226-1 et permet d’étayer les éléments relevés dans la réponse (procédé quelconque, caractère volontaire, atteinte à l’intimité de la vie privée d’autrui, captation/enregistrement/transmission de paroles sans consentement). Son caractère tronqué justifie également le constat selon lequel elle ne permet pas d’établir exhaustivement toutes les modalités de l’infraction. Les autres sources ne sont pas nécessaires à ces affirmations."
+    }
+  },
+  "failureStage": "none"
+}

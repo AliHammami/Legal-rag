@@ -1,0 +1,95 @@
+{
+  "questionId": "q282",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L466-1 du Code monétaire et financier**, les autorités judiciaires compétentes peuvent solliciter l’avis de l’Autorité des marchés financiers (AMF), à tout moment de la procédure, lorsque les poursuites concernent :\n\n- des infractions mettant en cause des sociétés dont les titres financiers sont admis aux négociations sur un marché réglementé ou offerts au public sur un système multilatéral de négociation ;\n- ou des infractions commises à l’occasion d’opérations portant sur un marché d’instruments financiers ou sur les actifs mentionnés au II de l’article L421-1.\n\nLa demande d’avis est toutefois **obligatoire** lorsque les poursuites sont engagées sur le fondement des **articles L465-1 à L465-3-3 du Code monétaire et financier**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L466-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L621-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.31933999992907,
+      "vectorSearchMs": 635.2493169996887,
+      "jinaRerankingMs": 558.5005710003898,
+      "mappingMs": 0.03487499989569187,
+      "totalMs": 1405.134432000108,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012353000231087208,
+      "contextBuilderMs": 0.01843899954110384,
+      "generationMs": 2860.9768340000883,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4266.1629309998825
+    },
+    "judge": {
+      "questionId": "q282",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement les deux hypothèses de poursuites visées par l’article L. 466-1, précise que l’avis peut être demandé à tout moment de la procédure et indique correctement son caractère obligatoire pour les poursuites fondées sur les articles L. 465-1 à L. 465-3-3. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 466-1 et couvre l'ensemble des conditions exposées : catégories d'infractions concernées, possibilité de demander l'avis à tout stade de la procédure et caractère obligatoire de cet avis pour les poursuites engagées en application des articles L. 465-1 à L. 465-3-3. La source 2 est accessoire mais cohérente avec le sujet."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L466-1 du Code monétaire et financier**, les autorités judiciaires peuvent solliciter l’avis de l’Autorité des marchés financiers, à tout moment de la procédure, lorsque les poursuites concernent :\n\n- des infractions mettant en cause des sociétés dont les titres financiers sont admis aux négociations sur un marché réglementé ou offerts au public sur un système multilatéral de négociation ;\n- ou des infractions commises à l’occasion d’opérations portant sur un marché d’instruments financiers ou sur les actifs mentionnés au II de l’article L421-1.\n\nToutefois, la demande d’avis est **obligatoire** lorsque les poursuites sont engagées sur le fondement des **articles L465-1 à L465-3-3 du Code monétaire et financier**, qui sont expressément visés par le texte. [Source 1]\n\nL’article L621-20 précise par ailleurs que les juridictions civiles, pénales ou administratives peuvent inviter le président de l’AMF ou son représentant à présenter des conclusions à l’audience, sans préjudice de l’article L466-1. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L466-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L621-20"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1536.6148239998147,
+      "routingCalls": 1,
+      "embeddingMs": 204.12352100014687,
+      "vectorSearchMs": 211.925909999758,
+      "jinaRerankingMs": 571.2124140001833,
+      "mappingMs": 0.03365799970924854,
+      "totalMs": 2523.940518000163,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011628000065684319,
+      "contextBuilderMs": 0.018094999715685844,
+      "generationMs": 3415.3928129998967,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5939.374533000402
+    },
+    "judge": {
+      "questionId": "q282",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux hypothèses dans lesquelles les autorités judiciaires peuvent demander l’avis de l’AMF, précise que cette demande peut intervenir à tout stade de la procédure et indique justement son caractère obligatoire pour les poursuites engagées en application des articles L. 465-1 à L. 465-3-3. Ces éléments sont directement étayés par la source 1. La précision additionnelle sur l’article L. 621-20 est exacte et explicitement supportée par la source 2, bien qu’elle ne soit pas nécessaire pour répondre à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l’article L. 466-1 et couvre les deux catégories d’infractions concernées, la possibilité de demander l’avis à tout stade de la procédure et le caractère obligatoire de la demande pour les poursuites fondées sur les articles L. 465-1 à L. 465-3-3. La source 2 soutient exactement la précision additionnelle relative aux conclusions de l’AMF devant les juridictions. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "failureStage": "none"
+}

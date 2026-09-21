@@ -1,0 +1,87 @@
+{
+  "questionId": "q275",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La responsabilité dépend de l’auteur du prospectus :\n\n- **Prospectus établi par l’émetteur** : la responsabilité de l’ensemble des informations incombe à **l’émetteur**. [Source 1]  \n- **Garant éventuel** : il est également responsable des informations couvertes par sa garantie et le concernant. [Source 1]  \n- **Cession de titres par une entité autre que l’émetteur** : cette entité est également responsable des informations relatives à sa description, à ses liens avec l’émetteur ou son groupe, ainsi qu’à la cession de ses titres, lorsque les conditions prévues sont réunies. [Source 1]  \n- **Prospectus non établi par l’émetteur** : la responsabilité incombe à **l’offreur** ou à **la personne qui sollicite l’admission aux négociations sur un marché réglementé**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L412-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 198.09527799952775,
+      "vectorSearchMs": 633.4101060004905,
+      "jinaRerankingMs": 536.8131240000948,
+      "mappingMs": 0.025151999667286873,
+      "totalMs": 1368.4160420000553,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05327200051397085,
+      "contextBuilderMs": 0.01212799921631813,
+      "generationMs": 1840.4095280002803,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3208.9033359996974
+    },
+    "judge": {
+      "questionId": "q275",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement tous les cas prévus : prospectus établi par l’émetteur, responsabilité du garant limitée aux informations couvertes par sa garantie, responsabilité de l’entité cédante sous les conditions applicables, et prospectus non établi par l’émetteur. Toutes ces affirmations sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement les dispositions de l’article L. 412-1, II, applicables au prospectus établi en application du règlement (UE) n° 2017/1129. Elle couvre explicitement chacun des cas affirmés : responsabilité de l’émetteur, responsabilité du garant limitée aux informations relevant de sa garantie, responsabilité de l’entité cédante sous conditions, et responsabilité de l’offreur ou du demandeur d’admission lorsque le prospectus n’est pas établi par l’émetteur."
+    }
+  },
+  "routing": {
+    "answer": "La responsabilité dépend de l’auteur du prospectus :\n\n- **Prospectus établi par l’émetteur** : elle incombe à **l’émetteur** pour l’ensemble des informations fournies. Le **garant éventuel** est également responsable des informations couvertes par sa garantie et le concernant. [Source 1 — Article L412-1 du Code monétaire et financier]\n- **Cession de titres de capital par une entité autre que l’émetteur** : cette entité est également responsable des informations relatives à sa description, à ses liens avec l’émetteur ou son groupe, et à la cession de ses titres, dans les conditions prévues par le règlement général de l’Autorité des marchés financiers. [Source 1]\n- **Prospectus non établi par l’émetteur** : la responsabilité incombe à **l’offreur** ou à **la personne qui sollicite l’admission aux négociations sur un marché réglementé**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L412-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1328.916958000511,
+      "routingCalls": 1,
+      "embeddingMs": 230.71651200018823,
+      "vectorSearchMs": 123.0784070007503,
+      "jinaRerankingMs": 555.7518910001963,
+      "mappingMs": 0.02847099956125021,
+      "totalMs": 2238.5813819998875,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011675000190734863,
+      "contextBuilderMs": 0.02153200004249811,
+      "generationMs": 2163.9134619999677,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4402.536790999584
+    },
+    "judge": {
+      "questionId": "q275",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement tous les régimes de responsabilité prévus : émetteur, garant dans la limite des informations couvertes par sa garantie, entité cédante pour les informations la concernant lors d'une cession de titres de capital, et offreur ou demandeur d'admission lorsque le prospectus n'est pas établi par l'émetteur. Les affirmations sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 412-1, II du Code monétaire et financier, qui régit précisément la responsabilité des informations dans un prospectus relevant du règlement (UE) n° 2017/1129. Elle couvre toutes les affirmations importantes : responsabilité de l'émetteur, du garant dans le champ de sa garantie, de l'entité cédante pour les informations spécifiées sous les conditions prévues, et de l'offreur ou du demandeur d'admission lorsque le prospectus n'est pas établi par l'émetteur."
+    }
+  },
+  "failureStage": "none"
+}

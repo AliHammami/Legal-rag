@@ -1,0 +1,99 @@
+{
+  "questionId": "q424",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La protection repose sur plusieurs garanties complémentaires :\n\n- **Information et consentement préalable** : lorsqu’un professionnel recueille le numéro de téléphone d’un consommateur, il doit l’informer que toute sollicitation téléphonique commerciale nécessite son consentement préalable, sauf exception liée à l’exécution d’un contrat en cours. Si le numéro est recueilli lors de la conclusion d’un contrat, celui-ci doit rappeler clairement cette interdiction de démarcher sans consentement. **Article L223-2 du Code de la consommation [Source 1]**.\n\n- **Confidentialité des données téléphoniques** : les données transmises par les opérateurs doivent être recueillies et conservées selon des modalités garantissant leur confidentialité jusqu’à leur destruction. **Article R450-5 du Code de commerce [Source 3]**.\n\n- **Protection lors de certains traitements à l’étranger** : lorsqu’un traitement relève du dispositif prévu par l’article L561-20 du Code monétaire et financier, le pays concerné doit assurer un niveau de protection suffisant de la vie privée, des libertés et des droits fondamentaux. **Article L561-20 du Code monétaire et financier [Source 2]**.\n\nAinsi, les sources prévoient à la fois un contrôle par le consommateur de l’utilisation commerciale de son numéro et des exigences de confidentialité concernant la conservation et le traitement des données.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L561-20"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R450-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.7008580006659,
+      "vectorSearchMs": 713.6596460007131,
+      "jinaRerankingMs": 547.8887889999896,
+      "mappingMs": 0.021719999611377716,
+      "totalMs": 1488.2977960016578,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010232999920845032,
+      "contextBuilderMs": 0.021692000329494476,
+      "generationMs": 2921.3236499987543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4409.6772739999
+    },
+    "judge": {
+      "questionId": "q424",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse fournit des règles réelles de protection des données téléphoniques et de consentement au démarchage, mais elle ne répond que partiellement à la combinaison visée par la question et la référence. Elle omet notamment la protection de l’intimité de la vie privée par l’article 9 du code civil et les mesures judiciaires possibles, ainsi que l’obligation d’accessibilité du service téléphonique aux personnes handicapées prévue par l’article L112-8 du code de la consommation. Les affirmations qu’elle avance sont toutefois étayées par les trois extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente sur le consentement préalable au démarchage téléphonique. La source 3 est pertinente pour l'exigence de confidentialité des données transmises par les opérateurs. La source 2 mentionne bien une protection suffisante de la vie privée dans le cadre spécifique auquel elle se rapporte, mais son lien avec la gestion d'un service téléphonique destiné aux consommateurs est indirect. Les sources ne couvrent pas les éléments centraux attendus relatifs à l'article 9 du code civil et aux mesures judiciaires contre une atteinte à l'intimité, ni l'accessibilité des services téléphoniques prévue par l'article L112-8 du code de la consommation. En revanche, elles étayent les affirmations effectivement formulées dans la réponse générée, y compris ses réserves de champ pour le traitement visé par L561-20."
+    }
+  },
+  "routing": {
+    "answer": "La protection repose sur deux exigences complémentaires :\n\n- **Protection contre le démarchage téléphonique** : lorsqu’une entreprise recueille le numéro de téléphone d’un consommateur, elle doit l’informer que toute sollicitation commerciale par téléphone nécessite son **consentement préalable**, sauf notamment lorsqu’elle intervient dans le cadre de l’exécution d’un contrat en cours. Si le numéro est recueilli lors de la conclusion d’un contrat, celui-ci doit rappeler clairement et de manière compréhensible cette interdiction. **Article L223-2 du Code de la consommation [Source 1].**\n\n- **Protection de la personne vulnérable** : lorsqu’il s’agit d’une personne protégée, celle-ci doit recevoir, de la personne chargée de sa protection, une information adaptée à son état sur sa situation, les actes concernés, leur utilité, leur urgence, leurs effets et les conséquences d’un refus. **Article 457-1 du Code civil [Source 2].**\n\nAinsi, la vie privée est protégée, d’une part, par le contrôle du consommateur sur l’utilisation commerciale de son numéro de téléphone et, d’autre part, par une information adaptée de la personne protégée afin qu’elle puisse comprendre les actes la concernant et les conséquences de son refus. Les sources ne précisent toutefois pas qu’une entreprise de service téléphonique serait directement tenue des obligations prévues par l’article 457-1 du Code civil.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L223-2"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "457-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2560.188631998375,
+      "routingCalls": 1,
+      "embeddingMs": 316.2326250001788,
+      "vectorSearchMs": 147.12758000008762,
+      "jinaRerankingMs": 547.2034339997917,
+      "mappingMs": 0.034696999937295914,
+      "totalMs": 3570.813018999994,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.036879999563097954,
+      "contextBuilderMs": 0.020347999408841133,
+      "generationMs": 3303.798992998898,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6874.679450999945
+    },
+    "judge": {
+      "questionId": "q424",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse traite du consentement au démarchage téléphonique et de l’information des personnes protégées, mais elle ne répond pas aux mécanismes essentiels attendus : l’article 9 du Code civil (mesures judiciaires pour faire cesser une atteinte à l’intimité) et l’article L112-8 du Code de la consommation (accessibilité du service téléphonique pour les personnes handicapées). Elle est néanmoins fidèlement fondée sur les deux extraits fournis : l’obligation d’information et de consentement préalable au démarchage est conforme à la source 1, et la règle d’information de la personne protégée est conforme à la source 2. Elle ne s’abstient pas et tente bien de répondre."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour le démarchage téléphonique des consommateurs et l’exigence de consentement préalable. La source 2 concerne l’information due à une personne protégée par la personne chargée de sa protection ; elle n’est pas spécifiquement relative à une entreprise fournissant un service téléphonique, ni à la vie privée au sens strict. Les sources restent donc seulement partiellement pertinentes au regard de la question globale. En revanche, elles couvrent les affirmations factuelles importantes effectivement formulées dans la réponse : le contenu de l’obligation d’information et de consentement issue de l’article L223-2, le contenu de l’information adaptée prévue par l’article 457-1, ainsi que l’absence d’obligation directe explicitement mise à la charge de l’entreprise par cette dernière source."
+    }
+  },
+  "failureStage": "generation"
+}

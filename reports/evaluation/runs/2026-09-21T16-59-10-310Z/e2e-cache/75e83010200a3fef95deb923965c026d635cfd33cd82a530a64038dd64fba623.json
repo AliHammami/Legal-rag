@@ -1,0 +1,99 @@
+{
+  "questionId": "q409",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Toute personne doit apporter son concours à la justice afin de contribuer à la manifestation de la vérité. Cette obligation peut être mise en œuvre lorsqu’elle a été **légalement requise**.\n\nEn cas de refus **sans motif légitime**, la personne peut être contrainte d’exécuter cette obligation, notamment :\n\n- sous astreinte ;\n- par une amende civile ;\n- sans préjudice de l’octroi éventuel de dommages et intérêts.\n\nCes règles résultent de l’**article 10 du Code civil** [Source 1].\n\nLe contexte fourni ne contient toutefois aucune disposition relative aux protections particulières accordées aux consommateurs. Il n’est donc pas possible de préciser si, ni dans quelle mesure, ces protections limiteraient ou aménageraient cette obligation.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 243.69204499945045,
+      "vectorSearchMs": 686.1118419989944,
+      "jinaRerankingMs": 547.1193279996514,
+      "mappingMs": 0.03368400037288666,
+      "totalMs": 1476.9874560013413,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014365999028086662,
+      "contextBuilderMs": 0.03160099871456623,
+      "generationMs": 2496.286489000544,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3973.332743000239
+    },
+    "judge": {
+      "questionId": "q409",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les conditions et conséquences prévues par l’article 10 du Code civil : obligation de concours à la justice, nécessité d’une réquisition légale, refus sans motif légitime, astreinte, amende civile et éventuels dommages-intérêts. Elle ne traite toutefois pas la dimension relative aux protections issues de la législation de la consommation mentionnée dans la question et la référence, se limitant à indiquer à juste titre que le contexte fourni ne contient aucune disposition à ce sujet. Toutes les affirmations juridiques formulées sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 (article 10 du Code civil) est directement pertinente et couvre intégralement les affirmations de la réponse sur l'obligation de concours à la justice, la réquisition légale, le refus sans motif légitime, l'astreinte, l'amende civile et les dommages et intérêts. Elle ne couvre pas les protections issues du droit de la consommation, mais la réponse ne formule aucune affirmation positive sur ce point et constate seulement l'absence de disposition correspondante dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Une personne est tenue de collaborer avec la justice principalement dans les situations suivantes :\n\n- **Témoignage sur l’innocence d’une personne** : celui qui connaît la preuve de l’innocence d’une personne détenue provisoirement ou poursuivie pour crime ou délit doit en apporter **aussitôt le témoignage** aux autorités judiciaires ou administratives. Le fait de s’en abstenir volontairement est puni de **trois ans d’emprisonnement et de 45 000 euros d’amende** — Article 434-11 du Code pénal [Source 2].\n- **Témoignage tardif** : la personne qui témoigne tardivement mais **spontanément** est exemptée de peine — Article 434-11 du Code pénal [Source 2].\n- **Réquisition** : il est également obligatoire de répondre, sauf motif légitime, à une réquisition émanant d’un magistrat ou d’un officier de police judiciaire agissant dans ses fonctions. Cette obligation peut aussi concerner une réquisition administrative en cas d’atteinte à l’ordre public, de sinistre ou de toute situation présentant un danger pour les personnes — Article R642-1 du Code pénal [Source 3].\n\nEn cas de refus ou de négligence **sans motif légitime** de répondre à une telle réquisition, la personne encourt l’amende prévue pour les **contraventions de la deuxième classe** — Article R642-1 du Code pénal [Source 3].\n\nCes obligations connaissent toutefois des protections ou exceptions :\n\n- L’obligation de témoigner sur l’innocence ne s’applique pas notamment à certains proches de l’auteur ou du complice de l’infraction, au conjoint ou partenaire vivant notoirement en situation maritale avec lui, ainsi qu’aux personnes astreintes au secret dans les conditions prévues par l’article 226-13 — Article 434-11 du Code pénal [Source 2].\n- Le secret professionnel ne fait pas obstacle à la divulgation d’informations par des **agents habilités** lorsqu’elle vise à prévenir un danger grave ou immédiat pour la santé ou la sécurité des consommateurs — Article L512-22 du Code de la consommation [Source 4].\n- Le consommateur ayant accepté, dans les conditions prévues par la loi, l’exercice d’une action devant une juridiction pénale est considéré comme exerçant les droits reconnus à la partie civile ; les significations et notifications lui sont alors adressées par l’intermédiaire de l’association — Article L622-3 du Code de la consommation [Source 1].\n\nAinsi, le refus n’est sanctionnable que dans le cadre précis d’une obligation légale de témoignage ou d’une réquisition, et les motifs légitimes ainsi que les exceptions liées aux liens familiaux ou au secret protégé doivent être pris en compte.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L622-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "434-11"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R642-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L512-22"
+      }
+    ],
+    "profiling": {
+      "routingMs": 5121.491054000333,
+      "routingCalls": 1,
+      "embeddingMs": 233.4375250004232,
+      "vectorSearchMs": 112.89921200089157,
+      "jinaRerankingMs": 529.7113869991153,
+      "mappingMs": 0.022531000897288322,
+      "totalMs": 5997.588459998369,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04324899986386299,
+      "contextBuilderMs": 0.033032000064849854,
+      "generationMs": 4829.231637999415,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 10826.907004000619
+    },
+    "judge": {
+      "questionId": "q409",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse traite d'obligations pénales spécifiques (témoignage de l'innocence et réponse aux réquisitions), mais elle omet la règle générale attendue de l'article 10 du code civil, ainsi que ses conséquences propres (astreinte ou amende civile). Elle n'évoque pas non plus la protection pertinente de l'article L112-5 du code de la consommation relative à la prise de position formelle de l'administration sur l'information des prix. Les éléments développés sont pour l'essentiel appuyés par le contexte, notamment les articles 434-11, R642-1, L512-22 et L622-3, mais la formulation « poursuivie » diverge du texte fourni, qui vise une personne « détenue provisoirement ou jugée », et les protections de consommation citées ne répondent pas réellement au volet attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les sources 2 et 3 sont directement pertinentes pour les obligations pénales particulières développées dans la réponse (signalement de la preuve d’innocence et réponse aux réquisitions), et les sources 1 et 4 appuient les deux mécanismes consuméristes mentionnés. Elles ne couvrent toutefois pas la règle générale visée par la question, relative au concours dû à la justice, ni ses conséquences propres, et ne fournissent pas la protection des professionnels relative à une prise de position administrative sur l’information des prix. La plupart des affirmations factuelles de la réponse sont textuellement soutenues par les sources ; néanmoins, « poursuivie » ne correspond pas exactement à « détenue provisoirement ou jugée » dans la source 2, et la conclusion selon laquelle le refus ne serait sanctionnable que dans ces cadres précis est plus large que ce que ces seules sources permettent d’établir."
+    }
+  },
+  "failureStage": "generation"
+}

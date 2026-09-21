@@ -1,0 +1,99 @@
+{
+  "questionId": "q132",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte ne fournit pas le contenu de l’article **L. 5221-1 du Code du travail** ni le titre auquel il se rapporte. Il n’est donc pas possible d’identifier les textes qui primeraient sur les dispositions de ce titre.\n\nLa seule règle dérogatoire indiquée est celle de **l’article L. 1225-11 du Code du travail**, selon laquelle les dispositions du paragraphe concerné ne font pas obstacle à l’application des articles suivants :\n\n- **L. 1225-4**, relatif à la protection contre la rupture du contrat d’une salariée enceinte ;\n- **L. 1225-17**, relatif au congé de maternité ;\n- **L. 1225-29**, relatif à l’interdiction d’emploi prénatal et postnatal ;\n- **L. 1226-2**, relatif à l’inaptitude non professionnelle ;\n- **L. 1226-10**, relatif à l’inaptitude d’origine professionnelle ;\n- **L. 4624-3 et L. 4624-4**, relatifs aux mesures individuelles proposées par le médecin du travail.  \n\n[Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1225-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.87360100029036,
+      "vectorSearchMs": 610.8230160004459,
+      "jinaRerankingMs": 541.6715449998155,
+      "mappingMs": 0.024854999966919422,
+      "totalMs": 1360.4224209999666,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01007699966430664,
+      "contextBuilderMs": 0.021977999713271856,
+      "generationMs": 3040.315855999943,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4400.780499000102
+    },
+    "judge": {
+      "questionId": "q132",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les textes visés par l'article L. 5221-1 et répond à la place sur l'article L. 1225-11, qui est sans rapport avec la question. Elle constitue donc une abstention alors qu'une réponse était attendue. Toutefois, son constat que le contexte ne contient pas L. 5221-1 et sa restitution des dispositions de L. 1225-11 sont fidèles au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne sont pas pertinentes pour répondre à la question sur l’article L. 5221-1 : elles portent respectivement sur L. 7221-2 et L. 1225-11, sans lien avec la primauté de traités, conventions ou accords sur le titre concerné. En revanche, les affirmations effectivement formulées par la réponse générée sur l’absence de L. 5221-1 dans le contexte et sur le contenu de L. 1225-11 sont cohérentes avec les sources fournies, dont la source 2 couvre la liste des articles cités."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’**article L. 5221-1 du Code du travail**. Il ne permet donc pas d’identifier les dispositions qui primeraient sur le titre concerné par cet article.\n\nLa seule règle de priorité explicitement mentionnée figure à l’**article L. 1225-11 du Code du travail** : les dispositions du paragraphe concerné ne font pas obstacle à l’application notamment des articles **L. 1225-4, L. 1225-17, L. 1225-29, L. 1226-2, L. 1226-10, L. 4624-3 et L. 4624-4** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3321-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1225-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7221-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2354.214391999878,
+      "routingCalls": 1,
+      "embeddingMs": 261.79189999960363,
+      "vectorSearchMs": 321.15089499996975,
+      "jinaRerankingMs": 556.2292609997094,
+      "mappingMs": 0.03162200003862381,
+      "totalMs": 3493.447321999818,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01133000012487173,
+      "contextBuilderMs": 0.02304700016975403,
+      "generationMs": 3367.4565369999036,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6860.947430000175
+    },
+    "judge": {
+      "questionId": "q132",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas les textes visés par l’article L. 5221-1, à savoir les traités, conventions ou accords régulièrement ratifiés ou approuvés et publiés, notamment les traités communautaires et les actes pris pour leur application. Elle se limite à constater l’absence de cet article dans le contexte et ajoute une règle sans rapport issue de l’article L. 1225-11. Cette constatation et la restitution de la source 2 sont néanmoins fidèles au contexte fourni, d’où une groundedness élevée. Elle n’apporte pas de réponse effective alors qu’une réponse était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne contient l’article L. 5221-1 ni les textes qui y priment. La source 2 est seulement marginalement liée à une idée de non-obstacle/priorité, mais concerne un autre paragraphe du Code du travail ; les sources 1 et 3 sont hors sujet. En revanche, la réponse générée est fidèle aux sources fournies : l’absence de L. 5221-1 dans ce contexte est constatée correctement et le contenu attribué à l’article L. 1225-11 est couvert par la source 2."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,103 @@
+{
+  "questionId": "q311",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La fiche standardisée d’information doit être fournie **lors de la première simulation** à toute personne à qui est proposée, ou qui sollicite, une assurance destinée à garantir le remboursement :\n\n- d’un prêt mentionné au 1° de l’article L. 313-1 du Code de la consommation ; ou\n- d’un prêt destiné à financer la réparation, l’amélioration ou l’entretien d’un immeuble à usage d’habitation ou à usage professionnel et d’habitation,\n\nà condition que le crédit soit :\n\n- **supérieur à 75 000 euros** ; et\n- garanti par une hypothèque, une sûreté comparable portant sur un bien immobilier à usage d’habitation, ou un droit lié à un tel bien.\n\nCes conditions résultent de l’**article L. 313-10 du Code de la consommation** [Source 1].\n\nLa fiche doit notamment :\n\n1. présenter clairement les principales caractéristiques de l’assurance et décrire les types de garanties proposées ;\n2. indiquer, le cas échéant, les garanties minimales exigées par le prêteur ;\n3. préciser les garanties que l’emprunteur envisage de choisir ainsi que la part du capital emprunté à couvrir ;\n4. fournir une estimation personnalisée du coût de l’assurance envisagée, comprenant :\n   - le coût en euros par période de paiement ;\n   - le coût total de l’assurance sur la durée envisagée du prêt ;\n   - le taux annuel effectif de l’assurance relatif à la totalité du prêt ;\n5. mentionner la possibilité de souscrire l’assurance auprès de l’assureur de son choix, ainsi que les conditions et délais applicables.\n\nL’article L. 313-10 impose également que la fiche précise les types de garanties proposées et la possibilité de choisir son assureur dans les conditions prévues aux articles L. 313-29 et L. 313-30 du Code de la consommation [Source 1]. Ces précisions sont détaillées par les articles R. 313-8 et R. 313-9 du même code [Sources 2 et 3].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 329.82436600048095,
+      "vectorSearchMs": 625.7221919996664,
+      "jinaRerankingMs": 588.3031890001148,
+      "mappingMs": 0.021435000002384186,
+      "totalMs": 1543.9067780002952,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00979700032621622,
+      "contextBuilderMs": 0.018005999736487865,
+      "generationMs": 4995.5187100004405,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6539.461505999789
+    },
+    "judge": {
+      "questionId": "q311",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les conditions de remise prévues par l’article L. 313-10 : première simulation, personne sollicitant ou se voyant proposer l’assurance, types de prêts concernés, seuil supérieur à 75 000 euros et exigence d’une garantie immobilière. Elle mentionne également les deux éléments explicitement exigés par cet article concernant le contenu de la fiche : liberté de choisir l’assureur selon les articles L. 313-29 et L. 313-30, et types de garanties proposées. Les précisions supplémentaires sur le contenu proviennent bien des articles R. 313-8 et R. 313-9 inclus dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement aux conditions de remise et aux mentions expressément prévues par l’article L. 313-10. Les sources 2 et 3, directement rattachées à cette fiche, justifient les précisions supplémentaires données sur son contenu (caractéristiques, garanties minimales, capital couvert, estimation de coût et liberté de choix de l’assureur). Elles couvrent l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Une fiche standardisée d’information doit être remise **lors de la première simulation** à toute personne qui sollicite ou à qui est proposée une assurance destinée à garantir le remboursement :\n\n- soit d’un prêt mentionné au 1° de l’article L. 313-1 du Code de la consommation ;\n- soit d’un crédit destiné à financer la réparation, l’amélioration ou l’entretien d’un immeuble à usage d’habitation ou à usage professionnel et d’habitation ;\n\nà condition que le crédit :\n\n- soit **supérieur à 75 000 euros** ;\n- et soit garanti par une hypothèque, une sûreté comparable portant sur un bien immobilier à usage d’habitation, ou un droit lié à un tel bien.\n\nCes conditions résultent de l’**article L. 313-10 du Code de la consommation** [Source 1].\n\nLa fiche doit être rédigée de manière **claire et lisible** et présenter les principales caractéristiques de l’assurance [Source 3]. Elle doit notamment contenir :\n\n1. la définition et la description des garanties proposées ;\n2. le cas échéant, les garanties minimales exigées par le prêteur ;\n3. les garanties que l’emprunteur envisage de choisir et la part du capital emprunté à couvrir ;\n4. une estimation personnalisée du coût de l’assurance, comprenant :\n   - le coût en euros par période de paiement ;\n   - le coût total sur la durée envisagée du prêt ;\n   - le taux annuel effectif de l’assurance ;\n5. la mention de la possibilité de souscrire l’assurance auprès de l’assureur de son choix, ainsi que les conditions et délais applicables [Source 2].\n\nEnfin, l’article L. 313-10 impose que la fiche mentionne cette possibilité de choisir librement son assureur et précise les types de garanties proposées [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R313-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1842.2456530006602,
+      "routingCalls": 1,
+      "embeddingMs": 203.9274639999494,
+      "vectorSearchMs": 75.75093200057745,
+      "jinaRerankingMs": 563.3183459993452,
+      "mappingMs": 0.03152900002896786,
+      "totalMs": 2685.3095329999924,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011971999891102314,
+      "contextBuilderMs": 0.02417099941521883,
+      "generationMs": 4312.654784999788,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6998.008558000438
+    },
+    "judge": {
+      "questionId": "q311",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les conditions de remise lors de la première simulation : personne sollicitant ou se voyant proposer l’assurance, catégories de prêts visées, seuil de 75 000 euros et exigence de garantie immobilière. Elle mentionne aussi la liberté de choix de l’assureur, les types de garanties et, de façon pertinente, les précisions réglementaires du contexte relatives au contenu de la fiche. Toutes les affirmations importantes sont étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L. 313-10 fixe les conditions de remise, la possibilité de choisir l'assureur et les types de garanties ; R. 313-8 et R. 313-9 précisent respectivement la présentation et le contenu détaillé de la fiche. Elles couvrent l'ensemble des affirmations importantes de la réponse, y compris les conditions de seuil et de garantie immobilière ainsi que les rubriques détaillées relatives aux garanties et au coût."
+    }
+  },
+  "failureStage": "none"
+}

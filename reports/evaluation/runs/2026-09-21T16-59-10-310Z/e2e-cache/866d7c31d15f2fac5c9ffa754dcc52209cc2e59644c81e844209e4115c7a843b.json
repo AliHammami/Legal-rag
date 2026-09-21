@@ -1,0 +1,119 @@
+{
+  "questionId": "q414",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon le Code de la consommation, la sanction dépend de l’obligation d’information précontractuelle méconnue :\n\n- pour les obligations mentionnées aux **1° à 4° et 6° de l’article L. 111-1**, ainsi qu’aux articles **L. 111-2 et L. 111-3**, l’amende administrative peut atteindre **3 000 € pour une personne physique** et **15 000 € pour une personne morale** — **Article L. 131-1 du Code de la consommation** [Source 3] ;\n- pour l’obligation mentionnée au **5° de l’article L. 111-1**, elle peut atteindre **15 000 € pour une personne physique** et **75 000 € pour une personne morale** — **Article L. 131-1-1 du Code de la consommation** [Source 1].\n\nDans les deux cas, l’amende est prononcée selon les conditions prévues au **chapitre II du titre II du livre V** du Code de la consommation.\n\nEn revanche, le contexte fourni ne contient aucune disposition du **Code de commerce** relative aux indications inexactes données pour l’immatriculation. Il ne permet donc pas de préciser la sanction complémentaire applicable dans cette situation.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-3-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L641-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 240.86608999967575,
+      "vectorSearchMs": 620.4568250011653,
+      "jinaRerankingMs": 547.9922059997916,
+      "mappingMs": 0.022804999724030495,
+      "totalMs": 1409.391548000276,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013336999341845512,
+      "contextBuilderMs": 0.0332069993019104,
+      "generationMs": 2902.851696001366,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4312.3050539996475
+    },
+    "judge": {
+      "questionId": "q414",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les plafonds de 3 000 € et 15 000 € correspondant aux obligations visées par l’article L. 131-1, et ajoute de façon exacte le régime distinct de l’article L. 131-1-1, tous deux étayés par le contexte. Elle ne donne toutefois pas la sanction prévue par le code de commerce (4 500 € d’amende et six mois d’emprisonnement en cas de mauvaise foi), qui constitue une partie essentielle de la question. Son constat selon lequel cette disposition n’est pas dans le contexte est justifié. Elle répond néanmoins substantiellement à la question et ne s’abstient pas globalement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les sanctions du code de la consommation citées dans la réponse, notamment les articles L. 131-1 et L. 131-1-1. Elles ne contiennent toutefois aucune disposition du code de commerce sur les indications inexactes lors de l'immatriculation, alors que cet aspect est essentiel à la question : la pertinence globale est donc seulement partielle. En revanche, elles couvrent les affirmations effectivement formulées : les montants, les catégories d'obligations visées et les conditions de prononcé sont reproduits par les sources 1 et 3, et l'absence de disposition pertinente du code de commerce dans le contexte fourni justifie le constat de non-précision sur ce point."
+    }
+  },
+  "routing": {
+    "answer": "Le **Code de la consommation** prévoit une **amende administrative** en cas de manquement aux obligations d’information précontractuelle :\n\n- jusqu’à **3 000 € pour une personne physique** et **15 000 € pour une personne morale** pour les obligations visées à l’article L. 131-1 du Code de la consommation [Source 4] ;\n- jusqu’à **15 000 € pour une personne physique** et **75 000 € pour une personne morale** lorsque le manquement concerne l’obligation prévue au 5° de l’article L. 111-1, conformément à l’article L. 131-1-1 du Code de la consommation [Source 2].\n\nCette amende est prononcée selon les conditions prévues au chapitre II du titre II du livre V du même code.\n\nEn complément, le **Code de commerce** sanctionne pénalement les indications inexactes ou incomplètes données de mauvaise foi pour une immatriculation :\n\n- au registre du commerce et des sociétés : **4 500 € d’amende et six mois d’emprisonnement**, avec une possible privation des droits de vote et d’éligibilité pendant cinq ans au maximum — Article L. 123-5 du Code de commerce [Source 1] ;\n- au registre national des entreprises : même peine de **4 500 € d’amende et six mois d’emprisonnement** — Article L. 123-38 du Code de commerce [Source 3] ;\n- pour l’immatriculation au registre spécial mentionné à l’article R. 134-6 : **amende de cinquième classe** — Article R. 134-14 du Code de commerce [Source 5].\n\nAinsi, l’amende administrative du Code de la consommation peut se cumuler, selon les faits concernés, avec les sanctions pénales prévues par le Code de commerce en cas de fausses indications liées à l’immatriculation.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-38"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L131-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R134-14"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1330.9406870007515,
+      "routingCalls": 1,
+      "embeddingMs": 194.5701499991119,
+      "vectorSearchMs": 271.7032260000706,
+      "jinaRerankingMs": 1066.4263889994472,
+      "mappingMs": 0.02468300051987171,
+      "totalMs": 2863.691087000072,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0461370013654232,
+      "contextBuilderMs": 0.02927500009536743,
+      "generationMs": 3629.698361998424,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6493.479969998822
+    },
+    "judge": {
+      "questionId": "q414",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne correctement les plafonds de 3 000 € et 15 000 € pour les manquements d’information précontractuelle visés par L. 131-1, ainsi que la sanction de 4 500 € et six mois d’emprisonnement pour les indications inexactes ou incomplètes données de mauvaise foi au registre national des entreprises. Elle mentionne aussi, à juste titre au regard du contexte, le régime renforcé de L. 131-1-1 et les dispositions relatives au RCS et au registre spécial, bien que ces précisions soient périphériques. Toutes ces informations sont étayées par les sources citées. En revanche, l’affirmation finale selon laquelle les sanctions « peuvent se cumuler » n’est pas établie par le contexte fourni et introduit une conclusion juridique supplémentaire."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "Les sources sont directement pertinentes : elles couvrent les plafonds d’amende administrative des articles L. 131-1 et L. 131-1-1 du code de la consommation, ainsi que les sanctions pour indications inexactes ou incomplètes de mauvaise foi lors de formalités d’immatriculation (RCS et registre national des entreprises). Elles étayent aussi les précisions périphériques sur le registre spécial et la peine complémentaire. En revanche, aucune source ne permet d’établir l’affirmation finale selon laquelle l’amende administrative et les sanctions pénales « peuvent se cumuler » ; la couverture est donc très large mais non totale."
+    }
+  },
+  "failureStage": "none"
+}

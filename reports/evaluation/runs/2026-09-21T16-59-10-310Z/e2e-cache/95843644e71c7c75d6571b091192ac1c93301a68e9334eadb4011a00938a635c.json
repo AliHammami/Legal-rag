@@ -1,0 +1,90 @@
+{
+  "questionId": "q442",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui, mais les conditions dépendent de la nature de la relation contractuelle :\n\n- **Contrat à durée indéterminée** : chaque partie peut y mettre fin unilatéralement, à tout moment, sous réserve du respect du préavis prévu au contrat ou, à défaut, d’un délai raisonnable (**article 1211 du Code civil** [Source 3]).\n\n- **Louage de services sans durée déterminée** : il peut également cesser par la volonté de l’une des parties. Toutefois, cette résiliation peut donner lieu à des dommages-intérêts, selon notamment les usages, la nature des services et le préjudice subi (**article 1780 du Code civil** [Source 1]).\n\n- **Marché à forfait** : le maître peut le résilier unilatéralement, même si les travaux ont commencé, mais il doit indemniser l’entrepreneur de ses dépenses, de ses travaux et du gain qu’il aurait pu réaliser (**article 1794 du Code civil** [Source 2]).\n\nAinsi, la résiliation unilatérale est en principe possible, mais elle peut être soumise à un préavis et entraîner une indemnisation. Le contexte ne permet pas de déterminer quelle règle précise s’applique sans connaître la nature du contrat concerné.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1780"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1794"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1211"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 232.4047640003264,
+      "vectorSearchMs": 683.5291269998997,
+      "jinaRerankingMs": 531.7206500004977,
+      "mappingMs": 0.03005100041627884,
+      "totalMs": 1447.7165529988706,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012212999165058136,
+      "contextBuilderMs": 0.022582998499274254,
+      "generationMs": 2857.9029680006206,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4305.6668390017
+    },
+    "judge": {
+      "questionId": "q442",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse expose correctement plusieurs régimes de résiliation unilatérale et précise à juste titre que la règle applicable dépend de la nature du contrat. Elle reste toutefois nécessairement générale faute d'identification de la relation concernée. Toutes les affirmations juridiques substantielles sont directement appuyées par les trois extraits de contexte. Cependant, l'abstention était attendue : malgré sa réserve finale, la réponse fournit une réponse de fond et ne s'abstient donc pas clairement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour les trois hypothèses juridiques énoncées : contrat à durée indéterminée (art. 1211), louage de services sans durée déterminée (art. 1780) et marché à forfait (art. 1794). Elles couvrent les conditions de rupture unilatérale, le préavis raisonnable ou contractuel, ainsi que les conséquences indemnitaires. Elles soutiennent également la réserve finale selon laquelle la règle applicable dépend de la nature du contrat, même si elles ne permettent pas d'identifier le régime applicable à une relation non précisée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1402.8469919990748,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1402.8481809999794,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1402.8606690000743
+    },
+    "judge": {
+      "questionId": "q442",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est trop ambiguë pour recevoir une réponse juridique fiable. La réponse reconnaît explicitement cette insuffisance et s'abstient conformément à l'attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie. Pour cette question d'abstention, l'absence de corpus permet précisément de constater que le contexte ne fournit aucun fondement juridique pour répondre. La réponse se limite à ce constat d'insuffisance et n'avance aucune affirmation juridique nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

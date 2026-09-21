@@ -1,0 +1,87 @@
+{
+  "questionId": "q142",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’autorité administrative peut s’opposer à l’engagement d’apprentis lorsqu’il est établi, par les autorités chargées du contrôle de l’exécution du contrat d’apprentissage, que l’employeur méconnaît :\n\n- les obligations prévues par le livre du Code du travail relatif à l’apprentissage ;\n- les dispositions du Code du travail applicables aux jeunes travailleurs ou aux apprentis ;\n- ou les stipulations du contrat d’apprentissage.\n\nCette opposition suppose donc un manquement de l’employeur constaté par les autorités de contrôle compétentes. [Source 1 — Article L6225-1 du Code du travail]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 225.42657399969175,
+      "vectorSearchMs": 609.6088470001705,
+      "jinaRerankingMs": 548.5297750001773,
+      "mappingMs": 0.05805500037968159,
+      "totalMs": 1383.6536570000462,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014617000240832567,
+      "contextBuilderMs": 0.012002000119537115,
+      "generationMs": 1514.144675000105,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2897.8368790000677
+    },
+    "judge": {
+      "questionId": "q142",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les trois sources possibles d’obligations méconnues (livre relatif à l’apprentissage, autres dispositions applicables aux jeunes travailleurs ou apprentis, contrat) et précise correctement que le manquement doit être établi par les autorités de contrôle compétentes. Tous ces éléments sont explicitement soutenus par l’article L6225-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article L6225-1 du Code du travail, répond directement à la question et énonce précisément les conditions de l’opposition administrative. Elle couvre toutes les affirmations importantes de la réponse générée : constat par les autorités chargées du contrôle, méconnaissance des obligations du livre relatif à l’apprentissage, des dispositions applicables aux jeunes travailleurs ou apprentis, ou du contrat d’apprentissage."
+    }
+  },
+  "routing": {
+    "answer": "L’autorité administrative peut s’opposer à l’engagement d’un apprenti lorsque les autorités chargées du contrôle de l’exécution du contrat d’apprentissage établissent que l’employeur ne respecte pas ses obligations :\n\n- prévues par le livre du Code du travail relatif à l’apprentissage ;\n- prévues par les autres dispositions du Code du travail applicables aux jeunes travailleurs ou aux apprentis ;\n- ou stipulées dans le contrat d’apprentissage.\n\nCette opposition suppose donc un constat de manquement de l’employeur par les autorités de contrôle. **Article L6225-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6225-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1155.948332999833,
+      "routingCalls": 1,
+      "embeddingMs": 216.12341500027105,
+      "vectorSearchMs": 295.095323999878,
+      "jinaRerankingMs": 493.88420099997893,
+      "mappingMs": 0.027714999858289957,
+      "totalMs": 2161.106279999949,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015395000111311674,
+      "contextBuilderMs": 0.012827000115066767,
+      "generationMs": 2139.9610009999014,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4301.106403000187
+    },
+    "judge": {
+      "questionId": "q142",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les trois sources possibles d'obligations méconnues prévues par l'article L6225-1 et précise correctement que le manquement doit être établi par les autorités chargées du contrôle de l'exécution du contrat. Toutes les affirmations sont directement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L6225-1 du Code du travail, qui répond précisément aux conditions d'opposition administrative à l'engagement d'apprentis. Elle couvre l'ensemble des affirmations de la réponse générée : constat par les autorités de contrôle et méconnaissance d'obligations issues du livre relatif à l'apprentissage, des règles applicables aux jeunes travailleurs ou apprentis, ou du contrat d'apprentissage."
+    }
+  },
+  "failureStage": "none"
+}

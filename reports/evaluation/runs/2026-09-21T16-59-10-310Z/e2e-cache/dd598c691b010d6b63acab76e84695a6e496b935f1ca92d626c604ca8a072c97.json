@@ -1,0 +1,91 @@
+{
+  "questionId": "q395",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 2332 du Code civil**, les créances privilégiées sur certains meubles comprennent, en plus de celles prévues par des lois spéciales :\n\n1. **Les sommes dues au titre d’un bail ou de l’occupation d’un immeuble**, garanties sur le mobilier garnissant les lieux et appartenant au débiteur, y compris le mobilier d’exploitation et la récolte de l’année, le cas échéant ;\n2. **Les frais de conservation d’un meuble**, garantis sur ce meuble ;\n3. **Le prix de vente d’un meuble**, garanti sur ce meuble ;\n4. **Les créances résultant du contrat de travail de l’auxiliaire salarié d’un travailleur à domicile**, garanties sur les sommes dues à ce travailleur par les donneurs d’ouvrage. [Source 1]\n\nEn revanche, le contexte fourni ne contient **aucune disposition du Code de commerce relative aux restrictions applicables aux contrats des vendeurs à domicile indépendants**. Il n’est donc pas possible de répondre à cette seconde partie à partir des seules sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 278.72369299829006,
+      "vectorSearchMs": 671.2135610003024,
+      "jinaRerankingMs": 603.676957000047,
+      "mappingMs": 0.019619999453425407,
+      "totalMs": 1553.661047000438,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010134998708963394,
+      "contextBuilderMs": 0.011601999402046204,
+      "generationMs": 2232.8342589996755,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3786.549638999626
+    },
+    "judge": {
+      "questionId": "q395",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de manière détaillée les quatre catégories de privilèges de l’article 2332 du Code civil. En revanche, elle ne fournit pas les restrictions prévues par l’article L135-2 du Code de commerce relatives aux vendeurs à domicile indépendants, qui constituent une partie essentielle de la question. Cette abstention est néanmoins entièrement justifiée par le contexte effectivement fourni, limité à l’article 2332 : toutes les affirmations substantielles de la réponse sont donc fondées sur ce contexte. Comme une abstention n’était pas attendue et que la seconde partie n’est pas traitée, l’abstention n’est pas correcte au sens demandé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente et reproduit intégralement les quatre catégories de créances privilégiées visées à l’article 2332 du Code civil. Elle ne couvre toutefois pas la seconde branche essentielle de la question, relative aux restrictions prévues par le Code de commerce pour les vendeurs à domicile indépendants, ce qui limite la pertinence globale. Toutes les affirmations substantielles effectivement formulées dans la réponse générée sur l’article 2332 sont couvertes par la source, et le constat d’absence de disposition commerciale dans le contexte est conforme au corpus de sources fourni, qui ne contient que cet article du Code civil."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 2332 du Code civil**, les créances privilégiées sur certains meubles comprennent notamment :\n\n1. les sommes dues au titre d’un bail ou de l’occupation d’un immeuble, garanties sur le mobilier garnissant les lieux et appartenant au débiteur ;\n2. les frais de conservation d’un meuble, garantis sur ce meuble ;\n3. le prix de vente d’un meuble, garanti sur celui-ci ;\n4. les créances résultant du contrat de travail de l’auxiliaire salarié d’un travailleur à domicile, garanties sur les sommes dues à ce travailleur par les donneurs d’ouvrage.  \n[Article 2332 du Code civil, Source 1]\n\nS’agissant du **vendeur de meubles**, l’article L624-11 du Code de commerce prévoit que le privilège prévu au 3° de l’article 2332 du Code civil, ainsi que l’action résolutoire, ne peuvent être exercés que dans les limites fixées par les articles L624-12 à L624-18 du Code de commerce. [Article L624-11 du Code de commerce, Source 2]\n\nToutefois, les sources fournies ne contiennent pas de disposition spécifique concernant les **contrats des vendeurs à domicile indépendants** ni le détail des restrictions prévues par les articles L624-12 à L624-18. Il n’est donc pas possible de préciser davantage ces restrictions à partir du seul contexte disponible.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L624-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1740.7860549986362,
+      "routingCalls": 1,
+      "embeddingMs": 218.05959699861705,
+      "vectorSearchMs": 294.13797299936414,
+      "jinaRerankingMs": 552.8812779989094,
+      "mappingMs": 0.01820100098848343,
+      "totalMs": 2805.925530999899,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.1107879988849163,
+      "contextBuilderMs": 0.016425998881459236,
+      "generationMs": 2928.5192449986935,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5734.581642000005
+    },
+    "judge": {
+      "questionId": "q395",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon détaillée les quatre catégories de créances privilégiées prévues par l’article 2332 du Code civil. En revanche, elle ne répond pas aux restrictions propres aux contrats des vendeurs à domicile indépendants de l’article L135-2 du Code de commerce : elle traite à la place du privilège du vendeur de meubles prévu à l’article L624-11, qui est un sujet distinct. Cette digression est néanmoins conforme au contexte fourni, lequel ne contient effectivement pas l’article L135-2. Toutes les affirmations factuelles importantes sont donc étayées par le contexte, mais la seconde partie attendue manque."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre l’article 2332 du Code civil. La source 2 est pertinente uniquement pour l’affirmation additionnelle de la réponse relative au privilège du vendeur de meubles (L. 624-11), mais elle ne traite pas des contrats des vendeurs à domicile indépendants visés par la question, ni des restrictions de l’article L. 135-2 du Code de commerce. Les sources sont donc seulement partiellement suffisantes pour la question. En revanche, les affirmations effectivement formulées dans la réponse — contenu de l’article 2332, règle de L. 624-11 et constat que le contexte ne fournit pas les règles sur les vendeurs à domicile indépendants — sont étayées par les sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

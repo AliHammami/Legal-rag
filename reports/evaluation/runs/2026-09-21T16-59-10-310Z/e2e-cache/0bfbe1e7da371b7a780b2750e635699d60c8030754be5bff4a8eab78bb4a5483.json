@@ -1,0 +1,90 @@
+{
+  "questionId": "q453",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "D’après les sources fournies, la **faillite personnelle** entraîne principalement :\n\n- **L’interdiction de diriger, gérer, administrer ou contrôler**, directement ou indirectement :\n  - toute entreprise commerciale ou artisanale ;\n  - toute exploitation agricole ;\n  - toute entreprise exerçant une autre activité indépendante ;\n  - toute personne morale.  \n  Cette interdiction résulte de l’**article L. 653-2 du Code de commerce** [Source 1].\n\n- **La possibilité d’une incapacité d’exercer une fonction publique élective**. Le tribunal peut la prononcer pour une durée égale à celle de la faillite personnelle, dans la limite de **cinq ans**. Lorsque la décision est définitive, cette incapacité prend effet à compter de sa notification par le ministère public à l’intéressé, conformément à l’**article L. 653-10 du Code de commerce** [Source 3].\n\nLes sources fournies ne permettent pas de préciser les autres effets éventuels de la faillite personnelle. La disposition du Code de la consommation relative à la suspension concerne une autre procédure et ne permet pas de compléter cette réponse [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L722-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L653-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.76079399883747,
+      "vectorSearchMs": 641.2105869986117,
+      "jinaRerankingMs": 530.2130270004272,
+      "mappingMs": 0.028488000854849815,
+      "totalMs": 1393.237113000825,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010611999779939651,
+      "contextBuilderMs": 0.018780000507831573,
+      "generationMs": 2495.301785999909,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3888.5794149991125
+    },
+    "judge": {
+      "questionId": "q453",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse fournit des effets exacts de la faillite personnelle, mais elle répond à une notion particulière alors que la question générale sur la « faillite » est ambiguë et appelait une abstention. Les deux effets mentionnés sont explicitement étayés par les articles L. 653-2 et L. 653-10 du Code de commerce présents dans le contexte. Elle reste toutefois incomplète pour une question générale et ne reconnaît pas l'impossibilité de répondre fiablement au-delà de ce sous-cas."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 3 sont directement pertinentes pour les effets expressément attribués à la faillite personnelle : l'interdiction de diriger ou gérer (L. 653-2) et l'éventuelle incapacité d'exercer une fonction publique élective, avec sa durée et sa prise d'effet (L. 653-10). La source 2, relative à une suspension dans une autre procédure, permet de soutenir le constat qu'elle ne complète pas les effets de la faillite personnelle. Les affirmations importantes de la réponse sont ainsi couvertes par les extraits fournis, même si ces sources ne permettent pas de répondre exhaustivement à la question générale et ambiguë sur la « faillite »."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1738.829639999196,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1738.83044099994,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1738.839076999575
+    },
+    "judge": {
+      "questionId": "q453",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, comme attendu en l'absence totale de contexte et pour une question non couverte de manière fiable. Elle ne formule aucune affirmation juridique non étayée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, donc aucune source ne peut être pertinente pour répondre directement à la question. Toutefois, la réponse générée se limite à constater l’absence de contexte, de corpus pertinent identifié et de recherche juridique ; ces constats sont cohérents avec l’absence totale de sources et ne comportent aucune affirmation juridique nécessitant un support documentaire."
+    }
+  },
+  "failureStage": "none"
+}

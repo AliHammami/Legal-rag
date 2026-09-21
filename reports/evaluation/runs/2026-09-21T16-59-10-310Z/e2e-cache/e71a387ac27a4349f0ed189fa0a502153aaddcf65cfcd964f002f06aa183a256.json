@@ -1,0 +1,90 @@
+{
+  "questionId": "q449",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte ne définit pas précisément la notion de « pratique abusive ». Selon la qualification retenue :\n\n- **Pratique commerciale agressive** : deux ans d’emprisonnement et **300 000 € d’amende**. L’amende peut être portée à **10 % du chiffre d’affaires moyen annuel**. En cas de condamnation, l’affichage ou la diffusion de la décision peut également être ordonné. **Article L132-11 du Code de la consommation [Source 1]**\n\n- **Pratique commerciale trompeuse** : deux ans d’emprisonnement et **300 000 € d’amende**. L’amende peut être portée à **10 % du chiffre d’affaires moyen annuel** ou à **50 % des dépenses publicitaires ou de réalisation de la pratique** ; ce dernier taux peut atteindre **80 %** pour certaines allégations environnementales. Si l’infraction est commise en ligne ou via un support numérique, la peine est portée à **cinq ans d’emprisonnement et 750 000 € d’amende**. **Article L132-2 du Code de la consommation [Source 3]**\n\nLes sources fournies ne permettent donc pas de déterminer une sanction unique sans connaître la qualification exacte de la pratique.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-11"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-9"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L132-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.6401540003717,
+      "vectorSearchMs": 975.1396479997784,
+      "jinaRerankingMs": 544.0499259997159,
+      "mappingMs": 0.01955600082874298,
+      "totalMs": 1733.887966999784,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011097999289631844,
+      "contextBuilderMs": 0.01925400085747242,
+      "generationMs": 2955.0845650006086,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4689.035432999954
+    },
+    "judge": {
+      "questionId": "q449",
+      "correctness": 2,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse relève correctement que « pratique abusive » n’est pas une qualification juridique suffisamment précise et qu’aucune sanction unique ne peut être déterminée sans qualification. Toutefois, alors qu’une abstention était attendue, elle fournit néanmoins des sanctions pour deux infractions distinctes du Code de la consommation, sans pouvoir établir qu’elles correspondent à la notion visée. Les sanctions énoncées sont fidèlement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les sources 1 et 3 sont pertinentes pour les qualifications précises de pratiques commerciales agressives et trompeuses, mais elles ne définissent pas ni ne rattachent la notion générale de « pratique abusive » à ces qualifications. Elles ne permettent donc pas de fournir directement la sanction demandée ni d’établir de façon certaine que ces deux hypothèses épuisent les sens possibles du terme. Elles couvrent néanmoins fidèlement les peines conditionnelles détaillées dans la réponse. La conclusion selon laquelle aucune sanction unique ne peut être déterminée est seulement indirectement étayée par l’existence de ces qualifications distinctes."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 778.1216460000724,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 778.1229750011116,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 778.1354179996997
+    },
+    "judge": {
+      "questionId": "q449",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question ne précise ni l'infraction ni le texte applicable. La réponse signale explicitement l'impossibilité de répondre de manière fiable, ce qui constitue l'abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie. Dans le cadre d'une abstention attendue, l'absence de corpus permet de constater que le contexte ne contient aucun élément juridique permettant d'identifier la « pratique abusive » visée ni sa sanction. La réponse se limite à ce constat d'insuffisance et est donc entièrement couverte par le contexte disponible."
+    }
+  },
+  "failureStage": "none"
+}

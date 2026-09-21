@@ -1,0 +1,99 @@
+{
+  "questionId": "q047",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 712-1 du Code pénal**, la diffusion des décisions judiciaires peut être assurée :\n\n- par le **Journal officiel de la République française** ;\n- par le **Journal officiel du territoire** ;\n- par une ou plusieurs **publications de presse** ;\n- ou par un ou plusieurs **services de communication audiovisuelle**.\n\nLes supports de diffusion sont **désignés par la juridiction**. Ils ne peuvent pas s’opposer à cette diffusion. [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R8211-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R522-4"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "712-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L621-11"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 1026.6461839999538,
+      "vectorSearchMs": 632.846911999979,
+      "jinaRerankingMs": 512.6822260000044,
+      "mappingMs": 0.028020999976433814,
+      "totalMs": 2172.2389510000357,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017087000072933733,
+      "contextBuilderMs": 0.023975000018253922,
+      "generationMs": 2022.8709609999787,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4195.16036400001
+    },
+    "judge": {
+      "questionId": "q047",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les quatre moyens de diffusion prévus (Journal officiel de la République française, Journal officiel du territoire, publications de presse et services de communication audiovisuelle), précise que les supports sont désignés par la juridiction et qu'ils ne peuvent s'y opposer. Ces éléments sont explicitement contenus dans la source 3."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 reproduit directement le texte de l’article 712-1 et vise exactement la question. Elle couvre tous les moyens de diffusion énumérés dans la réponse, la désignation des publications ou services par la juridiction, ainsi que l’impossibilité pour ceux-ci de s’opposer à la diffusion."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 712-1 du Code pénal, la diffusion des décisions judiciaires peut être assurée :\n\n- par le **Journal officiel de la République française** ;\n- par le **Journal officiel du territoire** ;\n- par une ou plusieurs **publications de presse** ;\n- ou par un ou plusieurs **services de communication audiovisuelle**.\n\nLes publications ou services chargés de cette diffusion sont **désignés par la juridiction**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "712-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.5028170000296,
+      "routingCalls": 1,
+      "embeddingMs": 263.80543199996464,
+      "vectorSearchMs": 36.81200599996373,
+      "jinaRerankingMs": 549.555634999997,
+      "mappingMs": 0.10752399999182671,
+      "totalMs": 2078.8216699999757,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011994000058621168,
+      "contextBuilderMs": 0.011932000052183867,
+      "generationMs": 1902.700524999993,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3981.5564920000033
+    },
+    "judge": {
+      "questionId": "q047",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère correctement les quatre moyens de diffusion et précise que les publications ou services sont désignés par la juridiction. Elle omet seulement la précision selon laquelle ils ne peuvent pas s’opposer à cette diffusion. Toutes les affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le contenu pertinent de l’article 712-1 : les quatre modalités de diffusion et la désignation des publications ou services par la juridiction. Elle couvre toutes les affirmations importantes de la réponse générée. L’absence, dans la réponse, de la mention selon laquelle les destinataires ne peuvent s’opposer à la diffusion ne constitue pas un défaut de couverture des affirmations effectivement formulées."
+    }
+  },
+  "failureStage": "none"
+}

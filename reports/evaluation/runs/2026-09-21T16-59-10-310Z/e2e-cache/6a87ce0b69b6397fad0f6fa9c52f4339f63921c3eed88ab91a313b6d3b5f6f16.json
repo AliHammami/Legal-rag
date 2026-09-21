@@ -1,0 +1,95 @@
+{
+  "questionId": "q268",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L421-1 du Code monétaire et financier, un marché réglementé d’instruments financiers est **un système multilatéral** qui facilite la rencontre, selon des règles non discrétionnaires, de multiples intérêts acheteurs et vendeurs exprimés par des tiers, afin de conclure des contrats portant sur des instruments financiers admis à la négociation [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L421-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L420-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 210.83970400039107,
+      "vectorSearchMs": 656.5017320001498,
+      "jinaRerankingMs": 611.0728810001165,
+      "mappingMs": 0.03512199968099594,
+      "totalMs": 1478.4776179995388,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012443000450730324,
+      "contextBuilderMs": 0.021211999468505383,
+      "generationMs": 1171.6001819996163,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2650.124323999509
+    },
+    "judge": {
+      "questionId": "q268",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le marché réglementé comme un système multilatéral et reprend les éléments constitutifs de l’article L421-1 : rencontre d’intérêts acheteurs et vendeurs de tiers, règles non discrétionnaires et conclusion de contrats sur les instruments admis à la négociation. Toutes ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 421-1 et répond précisément à la question : le marché réglementé est un système multilatéral assurant ou facilitant, selon des règles non discrétionnaires, la rencontre d'intérêts acheteurs et vendeurs de tiers. Elle couvre également les précisions ajoutées dans la réponse sur la conclusion de contrats portant sur les instruments admis à la négociation. La source 2 est cohérente mais non nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L421-1 du Code monétaire et financier, un marché réglementé d’instruments financiers est **un système multilatéral** qui assure ou facilite la rencontre, selon des règles non discrétionnaires, de multiples intérêts acheteurs et vendeurs exprimés par des tiers [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L421-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L420-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1062.1296500004828,
+      "routingCalls": 1,
+      "embeddingMs": 192.6753679998219,
+      "vectorSearchMs": 132.01359399966896,
+      "jinaRerankingMs": 641.2203700002283,
+      "mappingMs": 0.03484500013291836,
+      "totalMs": 2028.1110650002956,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012389000505208969,
+      "contextBuilderMs": 0.021298999898135662,
+      "generationMs": 1760.569563000463,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3788.723768000491
+    },
+    "judge": {
+      "questionId": "q268",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la qualification de système multilatéral ainsi que les éléments essentiels de l’article L421-1 : rencontre de multiples intérêts acheteurs et vendeurs de tiers selon des règles non discrétionnaires. Ces affirmations sont explicitement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article L. 421-1 et établit explicitement qu’un marché réglementé est un système multilatéral facilitant ou assurant, selon des règles non discrétionnaires, la rencontre d’intérêts acheteurs et vendeurs de tiers. Elle couvre toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

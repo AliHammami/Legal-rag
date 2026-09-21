@@ -1,0 +1,95 @@
+{
+  "questionId": "q038",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Pour une personne physique condamnée pour sévices graves ou actes de cruauté envers un animal domestique, les peines complémentaires possibles sont :\n\n- **L’interdiction de détenir un animal**, à titre définitif ou pour une durée déterminée ;\n- **L’interdiction d’exercer une activité professionnelle ou sociale**, définitivement ou temporairement, pour une durée maximale de **cinq ans**, lorsque les facilités procurées par cette activité ont été sciemment utilisées pour préparer ou commettre l’infraction. Cette interdiction ne peut pas concerner l’exercice d’un mandat électif ou de responsabilités syndicales.\n\nCes peines sont prévues par **l’article 521-1 du Code pénal** [Source 1].\n\nPar ailleurs, en cas de condamnation du propriétaire — ou lorsque celui-ci est inconnu — le tribunal statue sur le sort de l’animal et peut notamment en prononcer la **confiscation**, avec remise à une fondation ou association de protection animale habilitée [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 224.92314400000032,
+      "vectorSearchMs": 608.2757299999939,
+      "jinaRerankingMs": 576.5801499999361,
+      "mappingMs": 0.02344200003426522,
+      "totalMs": 1409.8326909999596,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009278999990783632,
+      "contextBuilderMs": 0.015207999967969954,
+      "generationMs": 3608.2237939999904,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5018.08979499992
+    },
+    "judge": {
+      "questionId": "q038",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux peines complémentaires prévues : l’interdiction de détenir un animal et l’interdiction d’exercer une activité professionnelle ou sociale, avec leurs modalités (caractère définitif ou temporaire, plafond de cinq ans pour l’activité, condition d’utilisation consciente des facilités de l’activité, exception pour mandat électif et responsabilités syndicales). Ces éléments sont explicitement supportés par le contexte. La précision additionnelle sur la confiscation et le sort de l’animal est également directement prévue par le contexte et ne contredit pas la réponse à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise les sévices graves ou actes de cruauté sur un animal domestique et énonce explicitement les deux peines complémentaires, leurs modalités, la limite de cinq ans pour l'interdiction d'activité, la condition liée à l'utilisation consciente des facilités de l'activité et les exceptions. Elle couvre également l'affirmation additionnelle sur le sort de l'animal et sa confiscation éventuelle. La source 2 est redondante et concerne une autre infraction, mais n'affecte pas la suffisance de la source 1."
+    }
+  },
+  "routing": {
+    "answer": "Pour une personne physique condamnée pour sévices graves ou acte de cruauté envers un animal domestique, l’**Article 521-1 du Code pénal** prévoit les peines complémentaires suivantes :\n\n- **Interdiction de détenir un animal**, à titre définitif ou pour une durée non précisée par le texte ;\n- **Interdiction d’exercer une activité professionnelle ou sociale** lorsque les facilités procurées par cette activité ont été sciemment utilisées pour préparer ou commettre l’infraction. Cette interdiction peut être définitive ou temporaire, cette dernière étant limitée à **cinq ans**.\n\nCette interdiction professionnelle ou sociale ne peut pas porter sur l’exercice d’un **mandat électif** ou de **responsabilités syndicales**. [Source 1]\n\nPar ailleurs, en cas de condamnation du propriétaire ou lorsque celui-ci est inconnu, le tribunal statue sur le sort de l’animal et peut notamment en prononcer la **confiscation** au profit d’une fondation ou association de protection animale. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "522-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1230.3978260000004,
+      "routingCalls": 1,
+      "embeddingMs": 226.5461049999576,
+      "vectorSearchMs": 55.816396000096574,
+      "jinaRerankingMs": 595.2217699999455,
+      "mappingMs": 0.025624000001698732,
+      "totalMs": 2108.0369189999765,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009771000011824071,
+      "contextBuilderMs": 0.0883400000166148,
+      "generationMs": 3115.994972000015,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5224.140682999976
+    },
+    "judge": {
+      "questionId": "q038",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les deux peines complémentaires prévues : l’interdiction de détenir un animal, définitive ou non, et l’interdiction d’exercer une activité professionnelle ou sociale, définitive ou limitée à cinq ans, sous la condition d’utilisation consciente des facilités de l’activité pour préparer ou commettre l’infraction. Elle mentionne aussi correctement les exclusions relatives au mandat électif et aux responsabilités syndicales. La précision additionnelle sur la confiscation et le sort de l’animal est bien soutenue par le contexte, même si elle ne constitue pas le cœur de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle vise expressément les sévices graves ou actes de cruauté envers un animal domestique et énonce les peines complémentaires applicables aux personnes physiques. Elle couvre l’interdiction de détenir un animal, l’interdiction d’activité professionnelle ou sociale, ses conditions, sa durée maximale de cinq ans lorsqu’elle est temporaire, ainsi que l’exception pour les mandats électifs et responsabilités syndicales. Elle couvre également l’affirmation additionnelle relative au sort et à la confiscation de l’animal."
+    }
+  },
+  "failureStage": "none"
+}

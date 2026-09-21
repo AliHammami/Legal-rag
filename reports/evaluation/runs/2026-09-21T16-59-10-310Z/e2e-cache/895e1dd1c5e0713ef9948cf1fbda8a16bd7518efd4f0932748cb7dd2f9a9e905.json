@@ -1,0 +1,95 @@
+{
+  "questionId": "q207",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les présidents, administrateurs, directeurs généraux ou gérants doivent :\n\n- **Mentionner dans le rapport annuel présenté aux associés** toute prise de participation réalisée au cours de l’exercice dans une société ayant son siège en France lorsque cette participation représente plus du vingtième, du dixième, du cinquième, du tiers ou de la moitié du capital ou des droits de vote, ainsi que toute prise de contrôle d’une telle société. Cette information doit également figurer, le cas échéant, dans le rapport des commissaires aux comptes. **Article L. 233-6 du Code de commerce [Source 2]**\n- **Rendre compte, dans le même rapport, de l’activité et des résultats** de la société elle-même, de ses filiales et des sociétés qu’elle contrôle, **par branche d’activité**. Lorsque des comptes consolidés sont établis et publiés, ce compte rendu peut être intégré au rapport sur la gestion du groupe. **Article L. 233-6 du Code de commerce [Source 2]**\n- **Inclure dans l’annexe des comptes** le tableau prévu à l’article L. 233-15, destiné à faire apparaître la situation des filiales et participations. **Article L. 247-1, I, 3° du Code de commerce [Source 1]**\n\nLe non-respect de ces obligations est puni d’une **amende de 18 000 euros** pour les présidents, administrateurs, directeurs généraux ou gérants. **Article L. 247-1, I, du Code de commerce [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L247-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.6476270002313,
+      "vectorSearchMs": 573.4861710001715,
+      "jinaRerankingMs": 546.275920000393,
+      "mappingMs": 0.024879999924451113,
+      "totalMs": 1334.4778150003403,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009982999879866838,
+      "contextBuilderMs": 0.02485600020736456,
+      "generationMs": 4005.8267129999585,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5340.349920999724
+    },
+    "judge": {
+      "questionId": "q207",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose les trois obligations prévues : mention des prises de participation ou de contrôle, compte rendu de l’activité et des résultats par branche d’activité, et insertion du tableau des filiales et participations dans l’annexe. Elle indique aussi correctement l’amende de 18 000 euros. Ces éléments sont directement étayés par le contexte. La référence à l’article L. 233-6 pour certains seuils est moins précise que l’article L. 247-1, qui mentionne aussi les droits de vote et le seuil des deux tiers, mais le contenu demeure supporté par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 3,
+      "explanation": "Les deux sources sont directement pertinentes : L. 233-6 énonce les obligations de mention des participations/du contrôle et de compte rendu par branche d’activité, tandis que L. 247-1 prévoit l’amende, l’obligation relative au tableau annexe et les mentions du commissaire aux comptes. La couverture est très largement assurée, mais la réponse attribue à la source 2 les seuils fondés sur les droits de vote et omet le seuil des deux tiers, alors que ces éléments figurent dans la source 1 et non dans L. 233-6."
+    }
+  },
+  "routing": {
+    "answer": "Les présidents, administrateurs, directeurs généraux ou gérants doivent :\n\n- **Mentionner dans le rapport présenté aux associés sur les opérations de l’exercice** toute prise de participation dans une société ayant son siège en France lorsque cette participation représente plus du vingtième, du dixième, du cinquième, du tiers ou de la moitié du capital de cette société, ainsi que toute prise de contrôle de celle-ci. Cette mention doit également figurer, le cas échéant, dans le rapport des commissaires aux comptes. **Article L233-6 du Code de commerce [Source 2]**\n- **Rendre compte, dans ce même rapport, de l’activité et des résultats** de la société elle-même, de ses filiales et des sociétés qu’elle contrôle, en les présentant par branche d’activité. Lorsque des comptes consolidés sont établis et publiés, ce compte rendu peut être intégré au rapport sur la gestion du groupe. **Article L233-6 du Code de commerce [Source 2]**\n- **Inclure dans l’annexe de la société le tableau prévu à l’article L233-15**, destiné à faire apparaître la situation des filiales et participations. **Article L247-1, I, 3° du Code de commerce [Source 1]**\n\nLe non-respect de ces obligations est sanctionné par une **amende de 18 000 euros** pour les dirigeants concernés. **Article L247-1, I, du Code de commerce [Source 1]** La source 1 mentionne également, pour l’application de cette sanction, le seuil des **deux tiers** du capital ou des droits de vote.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L247-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L233-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 3073.144762999844,
+      "routingCalls": 1,
+      "embeddingMs": 220.7537940000184,
+      "vectorSearchMs": 273.2720050001517,
+      "jinaRerankingMs": 567.4905590000562,
+      "mappingMs": 0.025588999968022108,
+      "totalMs": 4134.727971999906,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010917000006884336,
+      "contextBuilderMs": 0.016466000117361546,
+      "generationMs": 3852.3239810001105,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7987.090472000185
+    },
+    "judge": {
+      "questionId": "q207",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les trois obligations visées : mention des prises de participation ou prises de contrôle, compte rendu de l’activité et des résultats par branche d’activité, et inclusion du tableau relatif aux filiales et participations dans l’annexe. Elle indique aussi correctement l’amende de 18 000 euros. Les seuils sont globalement correctement présentés, avec la précision du seuil des deux tiers issue de l’article L247-1. Toutes les affirmations essentielles sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : L. 233-6 énonce les obligations de mention des participations/prises de contrôle et de compte rendu de l’activité et des résultats, tandis que L. 247-1 couvre ces obligations, l’inclusion du tableau de l’article L. 233-15 et l’amende de 18 000 euros. Elles étayent toutes les affirmations importantes de la réponse, y compris la précision selon laquelle le seuil des deux tiers figure dans L. 247-1."
+    }
+  },
+  "failureStage": "none"
+}

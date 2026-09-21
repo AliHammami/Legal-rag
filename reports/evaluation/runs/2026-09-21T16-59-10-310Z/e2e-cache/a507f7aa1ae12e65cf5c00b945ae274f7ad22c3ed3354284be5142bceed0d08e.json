@@ -1,0 +1,103 @@
+{
+  "questionId": "q087",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’enrichissement injustifié doit être indemnisé lorsque les conditions suivantes sont réunies :\n\n- une personne bénéficie d’un **enrichissement** ;\n- cet enrichissement est réalisé **au détriment d’une autre personne**, qui subit un appauvrissement ;\n- l’enrichissement ne résulte ni de l’accomplissement d’une obligation par l’appauvri, ni d’une intention libérale [Source 2] ;\n- la situation ne relève pas de la **gestion d’affaires** ou du **paiement de l’indu** [Source 1].\n\nDans ce cas, l’enrichi doit verser une indemnité à l’appauvri. En principe, son montant correspond à la **moindre des deux valeurs** de l’enrichissement et de l’appauvrissement, conformément à l’article 1303 du Code civil [Source 1].\n\nL’évaluation s’effectue comme suit : l’appauvrissement est constaté au jour de la dépense et l’enrichissement est apprécié selon ce qui subsiste au jour de la demande, ces deux valeurs étant évaluées au jour du jugement. Toutefois, si l’enrichi est de mauvaise foi, l’indemnité est égale à la **plus élevée** des deux valeurs [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 377.5032750000246,
+      "vectorSearchMs": 592.8388970000669,
+      "jinaRerankingMs": 545.3989249998704,
+      "mappingMs": 0.03033900004811585,
+      "totalMs": 1515.8145030001178,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010366999777033925,
+      "contextBuilderMs": 0.020661999937146902,
+      "generationMs": 4868.152990999864,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6384.026330000022
+    },
+    "judge": {
+      "questionId": "q087",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les hypothèses d'enrichissement injustifié (appauvrissement corrélatif, absence d'accomplissement d'une obligation ou d'intention libérale, exclusion de la gestion d'affaires et du paiement de l'indu) et la règle de l'indemnité égale à la moindre des valeurs. Les précisions sur les dates d'évaluation et la mauvaise foi sont exactes et intégralement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l'article 1303 pose le principe, exclut la gestion d'affaires et le paiement de l'indu, et fixe l'indemnité à la moindre des valeurs ; l'article 1303-1 définit le caractère injustifié ; l'article 1303-4 couvre les modalités d'évaluation et l'exception de mauvaise foi. Elles étayent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "L’enrichissement injustifié doit être indemnisé lorsque les conditions suivantes sont réunies :\n\n- une personne s’est enrichie ;\n- cet enrichissement a été réalisé au détriment d’une autre, qui s’est appauvrie ;\n- l’enrichissement ne résulte ni de l’exécution d’une obligation par l’appauvri ni d’une intention libérale ;\n- la situation ne relève pas de la gestion d’affaires ou du paiement de l’indu.  \n  [Articles 1303 et 1303-1 du Code civil — Sources 1 et 2]\n\nEn principe, l’indemnité est égale à la **moindre des deux valeurs** entre :\n\n- le montant de l’enrichissement ;\n- le montant de l’appauvrissement.  \n\n[Article 1303 du Code civil — Source 1]\n\nL’évaluation s’effectue au jour du jugement. L’appauvrissement est apprécié au jour de la dépense, tandis que l’enrichissement est apprécié selon ce qui subsiste au jour de la demande. Toutefois, si l’enrichi est de mauvaise foi, l’indemnité correspond à la **plus forte** de ces deux valeurs. [Article 1303-4 du Code civil — Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-1"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1303-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 964.5606690000277,
+      "routingCalls": 1,
+      "embeddingMs": 208.2845779999625,
+      "vectorSearchMs": 93.02274200017564,
+      "jinaRerankingMs": 487.97468900005333,
+      "mappingMs": 0.04698000010102987,
+      "totalMs": 1753.9185079999734,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015970000065863132,
+      "contextBuilderMs": 0.023704999824985862,
+      "generationMs": 3366.831545999972,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5120.801433000015
+    },
+    "judge": {
+      "questionId": "q087",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement les hypothèses d’un enrichissement injustifié (enrichissement au détriment d’un appauvri, hors gestion d’affaires et paiement de l’indu, et sans obligation exécutée ni intention libérale) ainsi que la règle de la moindre des deux valeurs. Elle ajoute avec exactitude les modalités d’évaluation et l’exception de mauvaise foi prévues par l’article 1303-4. Toutes les affirmations sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l’article 1303 fixe le champ et la règle de la moindre des deux valeurs, l’article 1303-1 définit le caractère injustifié, et l’article 1303-4 encadre l’évaluation et l’exception de mauvaise foi. Elles couvrent l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

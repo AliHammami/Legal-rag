@@ -1,0 +1,86 @@
+{
+  "questionId": "q452",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les règles dépendent du type de publicité :\n\n- **Produits alimentaires périssables** : toute publicité destinée aux consommateurs, diffusée sur un support quelconque ou visible depuis l’extérieur du lieu de vente, qui mentionne une réduction de prix ou un prix promotionnel doit préciser :\n  - la nature et l’origine des produits ;\n  - la période pendant laquelle l’offre est maintenue.  \n  La mention de l’origine doit être écrite dans une taille de caractères égale à celle du prix. **Article L443-1, I du Code de commerce [Source 1]**\n\n- Le terme **« gratuit »** ne peut pas être utilisé comme outil marketing ou promotionnel dans le cadre d’une relation commerciale pour la promotion d’un produit alimentaire. **Article L443-1, I du Code de commerce [Source 1]**\n\n- Lorsque l’ampleur ou la fréquence des promotions est susceptible de désorganiser les marchés, un arrêté interministériel ou, à défaut, préfectoral peut fixer leur périodicité et leur durée. **Article L443-1, I du Code de commerce [Source 1]**\n\n- La violation de ces règles est punie d’une **amende de 15 000 €**. La cessation de la publicité irrégulière peut également être ordonnée. **Article L443-1, I du Code de commerce [Source 1]**\n\n- **Fruits et légumes frais** : lorsque le fournisseur et l’acheteur ont convenu d’un prix de cession, l’annonce du prix hors du lieu de vente est autorisée :\n  - au plus tôt trois jours avant le début de l’application du prix ;\n  - pendant une durée maximale de cinq jours à compter de cette date.  \n  L’accord doit être constaté dans un contrat écrit signé, dont chaque partie détient un exemplaire avant la diffusion de l’annonce. **Article L443-1, II du Code de commerce [Source 1]**\n\n- **Publicité comparative** : une publicité comparant des biens ou services avec ceux d’un concurrent n’est licite que si elle n’est pas trompeuse, concerne des biens ou services répondant aux mêmes besoins ou objectifs et compare objectivement des caractéristiques essentielles, pertinentes, vérifiables et représentatives ; le prix peut être comparé. **Article L122-1 du Code de la consommation [Source 2]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L122-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 396.89451000094414,
+      "vectorSearchMs": 1288.920910000801,
+      "jinaRerankingMs": 579.1498060002923,
+      "mappingMs": 0.030825000256299973,
+      "totalMs": 2265.056041000411,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014462999999523163,
+      "contextBuilderMs": 0.02378700114786625,
+      "generationMs": 3924.4959270004183,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6189.646227000281
+    },
+    "judge": {
+      "questionId": "q452",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement plusieurs règles sectorielles issues du contexte (promotions de denrées périssables, fruits et légumes frais, publicité comparative). Toutefois, la question est générale et le contexte ne permet pas d’établir de manière fiable les règles générales de publicité ou d’affichage des prix ; la réponse aurait donc dû signaler cette limite plutôt que présenter ces dispositions particulières comme une réponse aux règles de publicité des prix. Toutes les affirmations juridiques importantes sont néanmoins directement étayées par les deux sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les règles sectorielles effectivement énoncées (promotions de produits alimentaires périssables, annonces de prix des fruits et légumes frais et publicité comparative incluant le prix). Elles ne permettent toutefois pas de répondre de façon générale à la question très large sur les règles de publicité des prix, ni de justifier explicitement une abstention fondée sur l’insuffisance du contexte. En revanche, toutes les affirmations juridiques importantes de la réponse générée sont directement couvertes par le contenu des sources."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1227.8004630003124,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1227.801523000002,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1227.8151620011777
+    },
+    "judge": {
+      "questionId": "q452",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et l'abstention était attendue. La réponse indique clairement qu'elle ne peut pas répondre de manière fiable faute de contexte ou de corpus pertinent, sans avancer de règle juridique non fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, donc aucune pertinence documentaire ne peut être établie. Toutefois, la réponse est une abstention motivée par l’absence de contexte et de corpus : l’absence même de sources couvre ce constat et aucune affirmation juridique de fond n’est formulée."
+    }
+  },
+  "failureStage": "none"
+}

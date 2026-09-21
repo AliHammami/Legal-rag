@@ -1,0 +1,87 @@
+{
+  "questionId": "q324",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’opérateur doit informer **sans délai** :\n\n- celui qui lui a fourni les produits ;\n- ceux à qui il les a cédés.\n\nL’information doit être transmise **par tout moyen permettant d’en justifier**, dès qu’il a connaissance de la non-conformité portant sur une qualité substantielle des produits. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L411-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.1812979998067,
+      "vectorSearchMs": 632.4998420001939,
+      "jinaRerankingMs": 622.9431010000408,
+      "mappingMs": 0.03712699934840202,
+      "totalMs": 1442.6923240004107,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013464000076055527,
+      "contextBuilderMs": 0.013755999505519867,
+      "generationMs": 1457.1067860005423,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2899.8390420004725
+    },
+    "judge": {
+      "questionId": "q324",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'obligation prévue : information sans délai, par un moyen dont l'opérateur peut justifier, du fournisseur et des acquéreurs des produits concernés. Tous les éléments sont explicitement étayés par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L411-2 et répond précisément à la question. Elle couvre l'ensemble des affirmations importantes : la connaissance d'une non-conformité portant sur une qualité substantielle après acquisition ou cession, l'information sans délai, par des moyens dont l'opérateur peut justifier, du fournisseur et des personnes auxquelles les produits ont été cédés."
+    }
+  },
+  "routing": {
+    "answer": "L’opérateur doit en informer **sans délai** :\n\n- celui qui lui a fourni les produits ;\n- ceux auxquels il les a cédés.\n\nL’information doit être transmise **par tout moyen permettant d’en justifier**, dès lors qu’il a connaissance d’une non-conformité portant sur une qualité substantielle des produits. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L411-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1945.3274150006473,
+      "routingCalls": 1,
+      "embeddingMs": 217.73755199927837,
+      "vectorSearchMs": 95.31043600011617,
+      "jinaRerankingMs": 557.6537979999557,
+      "mappingMs": 0.025427999906241894,
+      "totalMs": 2816.1129470001906,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012652999721467495,
+      "contextBuilderMs": 0.011737000197172165,
+      "generationMs": 1279.4721129992977,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4095.6171910008416
+    },
+    "judge": {
+      "questionId": "q324",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement l'obligation prévue : information sans délai, par un moyen dont l'opérateur peut justifier, du fournisseur et des acquéreurs/cocontractants auxquels les produits ont été cédés. Tous les éléments sont explicitement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L411-2 et vise exactement la situation décrite. Elle couvre l’ensemble des affirmations importantes de la réponse : connaissance d’une non-conformité portant sur une qualité substantielle, information sans délai, par tout moyen justifiable, du fournisseur et des personnes auxquelles les produits ont été cédés."
+    }
+  },
+  "failureStage": "none"
+}

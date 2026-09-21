@@ -1,0 +1,86 @@
+{
+  "questionId": "q499",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne précisent pas les règles applicables à la chasse pendant la période de nidification.\n\nElles indiquent seulement que **la faculté de chasser est régie par des lois particulières** — **article 715 du Code civil [Source 1]**. L’article 1812 du Code civil concerne le preneur et les bêtes du troupeau, sans rapport avec la chasse [Source 2].\n\nIl faudrait donc disposer des dispositions spéciales applicables à la chasse et à la protection des oiseaux pendant leur période de nidification.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "715"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1812"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 341.6106359999976,
+      "vectorSearchMs": 827.027574000007,
+      "jinaRerankingMs": 505.24539999995613,
+      "mappingMs": 0.05078200000571087,
+      "totalMs": 1673.99963700003,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014884000003803521,
+      "contextBuilderMs": 0.028394000022672117,
+      "generationMs": 2109.9984040000127,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3784.055854999984
+    },
+    "judge": {
+      "questionId": "q499",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient correctement de donner des règles non présentes dans le contexte. Elle relève exactement que l’article 715 renvoie à des lois particulières et que l’article 1812 est sans rapport avec la chasse ou la nidification. Toutes les affirmations importantes sont directement étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour une abstention, les sources sont suffisamment pertinentes : l'article 715 indique directement que la chasse relève de lois particulières, ce qui justifie que les extraits fournis ne donnent pas les règles demandées. L'article 1812 est effectivement relatif au preneur et au troupeau et ne fournit pas de règle sur la chasse. Les constats importants de la réponse sont ainsi couverts par les deux sources."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1339.9944760000217,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1339.9968679999583,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1340.007940999989
+    },
+    "judge": {
+      "questionId": "q499",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, conformément à l'attente. Le contexte est vide et ne permet pas de répondre de manière fiable aux règles de chasse durant la nidification. L'affirmation selon laquelle aucune recherche juridique n'a été effectuée est cohérente avec l'absence de contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie. Dans le cadre d’une abstention attendue, cette absence de contexte permet de justifier le constat que les éléments disponibles ne permettent pas de répondre ni d’identifier un corpus pertinent. Les affirmations d’abstention et d’absence de recherche sont cohérentes avec le dossier fourni."
+    }
+  },
+  "failureStage": "none"
+}

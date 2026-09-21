@@ -1,0 +1,95 @@
+{
+  "questionId": "q052",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 521-2 prévoit que la pratique d’expériences ou de recherches sur des animaux sans respecter les prescriptions applicables localement est **punie des peines prévues à l’article 521-1**. La nature exacte de ces peines n’est pas précisée dans les sources fournies. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "716-16"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 202.78443599981256,
+      "vectorSearchMs": 667.106066999957,
+      "jinaRerankingMs": 537.8570499999914,
+      "mappingMs": 0.026534000178799033,
+      "totalMs": 1407.8010150000919,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.00982099981047213,
+      "contextBuilderMs": 0.01847900007851422,
+      "generationMs": 2039.0346099999733,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3446.873874000041
+    },
+    "judge": {
+      "questionId": "q052",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la sanction prévue : les peines de l’article 521-1. Elle répond pleinement à la question et sa précision selon laquelle la nature de ces peines n’est pas indiquée dans les sources est exacte au regard du contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement l'article 521-2 et indiquent que les faits sont punis des peines prévues à l'article 521-1. Elles couvrent intégralement l'affirmation centrale de la réponse. Elles ne précisent pas le contenu des peines de l'article 521-1, ce qui soutient également la réserve formulée sur l'absence de détail dans les sources."
+    }
+  },
+  "routing": {
+    "answer": "L’article 521-2 prévoit que cette pratique est **punie des peines prévues à l’article 521-1 du Code pénal**. Les sources fournies ne précisent toutefois pas le montant ou la nature de ces peines. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "716-16"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2455.122097999789,
+      "routingCalls": 1,
+      "embeddingMs": 250.03522199997678,
+      "vectorSearchMs": 67.60674800002016,
+      "jinaRerankingMs": 555.8816050000023,
+      "mappingMs": 0.0283610001206398,
+      "totalMs": 3328.7130799998995,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011011000024154782,
+      "contextBuilderMs": 0.01563400006853044,
+      "generationMs": 1687.8356880000792,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5016.587262999965
+    },
+    "judge": {
+      "questionId": "q052",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement la sanction prévue : les peines de l’article 521-1. La précision selon laquelle les sources ne détaillent pas la nature ou le montant de ces peines est conforme au contexte fourni, qui ne reproduit pas l’article 521-1. Elle répond effectivement à la question sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources reproduisent directement la règle de l’article 521-2 : la pratique d’expériences ou recherches sur des animaux en méconnaissance des prescriptions applicables est punie des peines prévues à l’article 521-1. Elles couvrent donc intégralement l’affirmation principale de la réponse. Elles ne détaillent pas les peines de l’article 521-1, ce qui soutient également la précision selon laquelle leur montant ou leur nature n’est pas précisé dans les sources fournies."
+    }
+  },
+  "failureStage": "none"
+}

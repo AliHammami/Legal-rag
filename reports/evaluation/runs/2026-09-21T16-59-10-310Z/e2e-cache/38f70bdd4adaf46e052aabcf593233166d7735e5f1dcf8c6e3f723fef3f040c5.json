@@ -1,0 +1,99 @@
+{
+  "questionId": "q362",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les congés de formation des salariés exerçant des responsabilités syndicales sont encadrés par plusieurs limites :\n\n- **Limite individuelle** : chaque salarié concerné ne peut prendre plus de **18 jours de congé par an** au titre de la formation économique, sociale, environnementale et syndicale, conformément à l’**article L. 2145-1 du Code du travail** [Source 2].\n- **Limite collective** : le nombre total de jours de congé pris chaque année par l’ensemble des salariés de l’établissement est plafonné par voie réglementaire, en fonction de l’effectif de l’établissement.\n- **Limites spécifiques** : l’arrêté réglementaire fixe également, selon l’effectif, le nombre maximal de jours pouvant être utilisés par les salariés exerçant des responsabilités syndicales, ainsi que le pourcentage maximal de salariés pouvant être simultanément absents, conformément à l’**article L. 2145-8 du Code du travail** [Source 1].\n\nEn revanche, les sources fournies ne contiennent aucune disposition relative à la possibilité, pour une juridiction, **d’ajourner le prononcé d’une peine**. Il n’est donc pas possible d’en préciser les conditions à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 190.2443829998374,
+      "vectorSearchMs": 687.7024989994243,
+      "jinaRerankingMs": 552.6564659997821,
+      "mappingMs": 0.033680000342428684,
+      "totalMs": 1430.669495000504,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.08696500025689602,
+      "contextBuilderMs": 0.027691999450325966,
+      "generationMs": 3230.404755999334,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4661.200585000217
+    },
+    "judge": {
+      "questionId": "q362",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon étayée les limites individuelles (18 jours) et collectives prévues par les articles L. 2145-1 et L. 2145-8 du Code du travail. Elle n'apporte toutefois aucune des conditions d'ajournement du prononcé de la peine prévues à l'article 132-60 du Code pénal (reclassement en voie d'acquisition, réparation en cours, cessation prochaine du trouble et présence à l'audience), qui constituent une partie essentielle de la question. Son refus de répondre sur ce point est bien justifié par le contexte fourni, lequel ne contient aucune source pénale, d'où une groundedness maximale. Néanmoins, puisque l'abstention n'était pas attendue et que la question comporte ce second volet, la réponse ne répond pas pleinement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour le volet relatif aux congés de formation syndicale : elles établissent la limite individuelle de dix-huit jours ainsi que les plafonds collectifs et d'absences simultanées fixés selon l'effectif. En revanche, aucune source ne traite de l'ajournement du prononcé de la peine, qui constitue un volet important de la question ; les sources sont donc seulement partiellement suffisantes pour répondre à l'ensemble de la question. Les affirmations effectivement formulées dans la réponse générée sont couvertes : les limites exposées correspondent aux textes fournis et le constat selon lequel ces sources ne comportent pas de disposition sur l'ajournement est cohérent avec leur contenu."
+    }
+  },
+  "routing": {
+    "answer": "### Congés pour formation des salariés exerçant des responsabilités syndicales\n\n- Un salarié exerçant des fonctions syndicales ne peut prendre plus de **18 jours de congé de formation par an** [Source 2 — Article L2145-1 du Code du travail].\n- Au niveau de l’établissement, le nombre total de jours de congés pris par l’ensemble des salariés au titre de ces formations est plafonné par voie réglementaire, en fonction de l’effectif de l’établissement [Source 1 — Article L2145-8 du Code du travail].\n- L’arrêté réglementaire fixe également, selon l’effectif :\n  - le nombre maximal de jours pouvant être utilisés par les **animateurs** et les salariés exerçant des responsabilités syndicales ;\n  - le pourcentage maximal de salariés pouvant être simultanément absents au titre de ces congés [Source 1].\n\nLes extraits fournis ne précisent toutefois pas les valeurs chiffrées de ces plafonds collectifs.\n\n### Ajournement du prononcé d’une peine\n\nLa juridiction peut ajourner le prononcé de la peine à l’égard d’une **personne physique** lorsqu’il apparaît opportun d’ordonner des investigations, éventuellement complémentaires, sur sa personnalité ou sa situation matérielle, familiale et sociale, afin de permettre le prononcé d’une peine adaptée [Source 3 — Article 132-70-1 du Code pénal].\n\nLa juridiction doit alors :\n\n- fixer dans sa décision la date à laquelle elle statuera sur la peine ;\n- ordonner, s’il y a lieu, le placement de la personne sous contrôle judiciaire, sous assignation à résidence avec surveillance électronique ou en détention provisoire, selon la situation de l’intéressé [Source 3].\n\nLa décision sur la peine doit intervenir au plus tard dans les **quatre mois** suivant l’ajournement. Ce délai peut être prolongé une fois pour une durée maximale de quatre mois, sous réserve des délais plus courts applicables lorsque la personne est placée en détention provisoire [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-70-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1374.6432940000668,
+      "routingCalls": 1,
+      "embeddingMs": 343.3562000002712,
+      "vectorSearchMs": 307.9096389999613,
+      "jinaRerankingMs": 549.1841609999537,
+      "mappingMs": 0.030900999903678894,
+      "totalMs": 2575.1535900002345,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.22317800018936396,
+      "contextBuilderMs": 0.030214999802410603,
+      "generationMs": 4582.257459000684,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7157.677763000131
+    },
+    "judge": {
+      "questionId": "q362",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie relative aux congés syndicaux est correcte : elle mentionne la limite individuelle de 18 jours et les plafonds collectifs réglementaires dépendant de l’effectif, y compris les absences simultanées. En revanche, pour l’ajournement, la réponse expose le régime de l’article 132-70-1 (investigations en vue d’une peine adaptée) plutôt que les conditions essentielles attendues de l’article 132-60 : reclassement en voie d’acquisition, dommage en cours de réparation, cessation prochaine du trouble et présence de l’intéressé. Elle est donc seulement partiellement correcte et incomplète sur ce volet. Toutes les affirmations formulées sont toutefois directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 sont directement pertinentes pour les limites des congés de formation syndicale : plafond individuel de 18 jours et plafonds collectifs réglementaires selon l’effectif, incluant les absences simultanées. La source 3 est pertinente pour un cas d’ajournement fondé sur des investigations, mais elle ne couvre pas les conditions générales de l’article 132-60 mentionnées dans la réponse de référence ; les sources sont donc globalement suffisantes mais incomplètes au regard de l’ensemble de la question. En revanche, toutes les affirmations effectivement formulées dans la réponse générée sont directement étayées par les extraits fournis, y compris les modalités et délais de l’ajournement prévu à l’article 132-70-1."
+    }
+  },
+  "failureStage": "generation"
+}

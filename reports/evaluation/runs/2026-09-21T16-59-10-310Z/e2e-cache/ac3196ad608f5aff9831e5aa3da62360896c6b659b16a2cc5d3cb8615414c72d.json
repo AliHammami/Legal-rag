@@ -1,0 +1,95 @@
+{
+  "questionId": "q163",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les **salariés et les employeurs, ou leurs représentants**, peuvent bénéficier des formations communes visant à améliorer les pratiques du dialogue social dans les entreprises. Ces formations peuvent également être suivies par des **magistrats judiciaires ou administratifs** ainsi que par d’autres **agents de la fonction publique**. [Source 1]\n\nElles sont dispensées par des **centres, instituts ou organismes de formation**. L’**Institut national du travail, de l’emploi et de la formation professionnelle** contribue à leur création et à leur mise en œuvre. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.6659769997932,
+      "vectorSearchMs": 633.6210880000144,
+      "jinaRerankingMs": 519.3318219999783,
+      "mappingMs": 0.025156000163406134,
+      "totalMs": 1388.6815189998597,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06724900007247925,
+      "contextBuilderMs": 0.03532300004735589,
+      "generationMs": 1477.6294610002078,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2866.4233389999717
+    },
+    "judge": {
+      "questionId": "q163",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les salariés et les employeurs ou leurs représentants comme bénéficiaires, ainsi que les centres, instituts ou organismes de formation comme dispensateurs. Elle ajoute, sans erreur, que des magistrats et d'autres agents publics peuvent suivre ces formations, et que l'Institut national du travail, de l'emploi et de la formation professionnelle concourt à leur création et mise en œuvre. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle identifie expressément les salariés, employeurs ou leurs représentants comme bénéficiaires, les centres, instituts ou organismes de formation comme dispensateurs, et précise les possibilités de suivi par des magistrats et agents publics ainsi que le concours de l'Institut national du travail, de l'emploi et de la formation professionnelle. Toutes les affirmations importantes de la réponse générée sont ainsi explicitement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Peuvent bénéficier de ces formations :\n\n- les salariés et les employeurs, ou leurs représentants respectifs ;\n- les magistrats judiciaires ou administratifs et, le cas échéant, d’autres agents de la fonction publique [Source 1 ; Source 2].\n\nLes formations sont dispensées par des centres, instituts ou organismes de formation. L’Institut national du travail, de l’emploi et de la formation professionnelle contribue à leur création et à leur mise en œuvre [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2212-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2212-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1171.802967000287,
+      "routingCalls": 1,
+      "embeddingMs": 261.33081900002435,
+      "vectorSearchMs": 235.0553109999746,
+      "jinaRerankingMs": 516.8136590002105,
+      "mappingMs": 0.038453000131994486,
+      "totalMs": 2185.098679000046,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015525999944657087,
+      "contextBuilderMs": 0.02183500025421381,
+      "generationMs": 1751.9186869999394,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3937.0651250001974
+    },
+    "judge": {
+      "questionId": "q163",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les salariés, les employeurs ou leurs représentants comme bénéficiaires principaux, ainsi que la possibilité de suivi par des magistrats et agents publics. Elle indique correctement que les formations sont dispensées par des centres, instituts ou organismes de formation et mentionne à juste titre le concours de l'Institut national du travail, de l'emploi et de la formation professionnelle. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes. La source 1 identifie les bénéficiaires, les organismes dispensant les formations, le concours de l'Institut national du travail, de l'emploi et de la formation professionnelle, ainsi que la possibilité pour les magistrats et agents publics de les suivre. La source 2 confirme ces catégories et précise leur participation éventuelle. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

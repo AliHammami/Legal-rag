@@ -1,0 +1,87 @@
+{
+  "questionId": "q460",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Selon l’article 544 du Code civil, la propriété confère principalement deux droits :\n\n- **Le droit de jouir** de la chose ;\n- **Le droit d’en disposer**, c’est-à-dire de décider de son usage ou de son devenir.\n\nCes droits s’exercent de la manière la plus absolue, sous réserve de ne pas adopter un usage interdit par les lois ou les règlements. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "544"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 279.0837000012398,
+      "vectorSearchMs": 921.598965998739,
+      "jinaRerankingMs": 530.0772859994322,
+      "mappingMs": 0.13254399970173836,
+      "totalMs": 1730.939299998805,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01860699988901615,
+      "contextBuilderMs": 0.02367600053548813,
+      "generationMs": 1338.8497850000858,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3069.8511039987206
+    },
+    "judge": {
+      "questionId": "q460",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement l’article 544 du Code civil : droit de jouir et de disposer de la chose, sous réserve des usages prohibés par les lois ou règlements. Elle est complète et entièrement fondée sur le contexte. Toutefois, l’abstention était attendue ; le modèle a répondu au lieu de signaler que la question était hors du périmètre du Code pénal."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 544 du Code civil, qui répond précisément à la question en définissant les prérogatives du propriétaire : jouir et disposer de la chose, sous la réserve des usages prohibés. Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 544 du Code civil, la propriété confère deux droits principaux :\n\n- **Le droit de jouir** de la chose ;\n- **Le droit d’en disposer**, c’est-à-dire de décider de son usage ou de son sort.\n\nCes droits s’exercent de la manière la plus absolue, sous réserve de ne pas faire un usage interdit par les lois ou les règlements. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "544"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1257.6996100004762,
+      "routingCalls": 1,
+      "embeddingMs": 240.18892600014806,
+      "vectorSearchMs": 133.26562000066042,
+      "jinaRerankingMs": 509.79942299984396,
+      "mappingMs": 0.030755000188946724,
+      "totalMs": 2141.021516000852,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011504000052809715,
+      "contextBuilderMs": 0.01252400130033493,
+      "generationMs": 1547.626685000956,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3688.6829099990427
+    },
+    "judge": {
+      "questionId": "q460",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement l’article 544 du Code civil fourni : la propriété comprend le droit de jouir et de disposer des choses, sous réserve des usages prohibés. Elle est donc correcte, complète et entièrement fondée sur le contexte. Toutefois, l’abstention était attendue ; le modèle a répondu au fond au lieu de signaler que la question était hors périmètre du contexte juridique pénal attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 544 du Code civil, qui répond précisément à la question en définissant la propriété comme le droit de jouir et de disposer des choses, sous réserve des usages prohibés par les lois ou règlements. Elle couvre l’ensemble des affirmations substantielles de la réponse générée, y compris la réserve légale."
+    }
+  },
+  "failureStage": "abstention"
+}

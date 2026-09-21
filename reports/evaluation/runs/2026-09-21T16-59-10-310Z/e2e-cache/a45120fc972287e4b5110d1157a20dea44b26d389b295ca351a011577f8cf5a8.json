@@ -1,0 +1,90 @@
+{
+  "questionId": "q487",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer l’ensemble des règles de l’élection présidentielle.\n\nElles prévoient seulement, pour certaines élections professionnelles ou ordinales :\n\n- les déclarations de candidature doivent être remises contre récépissé ou envoyées en recommandé avec accusé de réception dans le délai prévu ; pour certaines élections, ce délai est fixé à un mois avant l’ouverture du scrutin [Source 2] ;\n- les bulletins de vote doivent mentionner le nom et le prénom du candidat, ainsi que son greffe et, le cas échéant, son organisation professionnelle ou syndicat [Source 2] ;\n- la date du scrutin et l’heure de clôture sont fixées par le bureau du Conseil national, et les candidatures doivent être déposées au plus tard trois semaines avant le scrutin dans le processus décrit [Source 3] ;\n- pour les élections de listes, les sièges sont attribués au quotient électoral puis, si nécessaire, à la plus forte moyenne [Source 3] ;\n- certaines opérations électorales sont soumises aux articles L. 10 et L. 67 du Code électoral, sans que le contenu de ces articles soit fourni [Source 1].\n\nEn revanche, aucune source ne précise le mode d’élection du président, les conditions d’éligibilité, le nombre de tours, la majorité requise ou les modalités de proclamation. Il est donc impossible de décrire davantage les règles de l’élection présidentielle à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2122-10-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R741-13"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "Annexe 8-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.28101799999422,
+      "vectorSearchMs": 1118.163652000003,
+      "jinaRerankingMs": 604.1584799999982,
+      "mappingMs": 0.14934500001254492,
+      "totalMs": 1957.805892999997,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.026612999994540587,
+      "contextBuilderMs": 0.047292999995988794,
+      "generationMs": 3508.9262600000075,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5466.831604000006
+    },
+    "judge": {
+      "questionId": "q487",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas de déterminer les règles de l’élection présidentielle et refuse à juste titre d’en déduire les éléments essentiels. Les précisions additionnelles portent clairement sur d’autres élections et sont toutes étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne portent pas sur l’élection présidentielle, mais sur des opérations électorales professionnelles ou ordinales et un renvoi général au code électoral. Elles sont donc pertinentes pour justifier l’abstention et constater que le contexte est hors périmètre, sans permettre une réponse directe sur l’élection présidentielle. Les règles spécifiques citées dans la réponse (dépôt des candidatures, contenu des bulletins, calendrier, attribution des sièges et renvoi aux articles L. 10 et L. 67) sont couvertes par les sources, tout comme le constat que les éléments présidentiels essentiels ne figurent pas dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 883.0507579999976,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 883.0544280000031,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 883.1038439999975
+    },
+    "judge": {
+      "questionId": "q487",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement en indiquant que le contexte est insuffisant et que la question est hors du périmètre disponible. Cela correspond à l’abstention attendue ; aucune affirmation juridique non fondée n’est formulée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une abstention : la réponse ne formule aucune règle juridique et constate seulement l’absence de contexte/corpus pertinent et de recherche. Ces constats sont directement vérifiables à partir de l’absence de sources fournie."
+    }
+  },
+  "failureStage": "none"
+}

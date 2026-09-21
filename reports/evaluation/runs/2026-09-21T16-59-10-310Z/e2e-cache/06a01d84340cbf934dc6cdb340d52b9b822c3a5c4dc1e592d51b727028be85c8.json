@@ -1,0 +1,91 @@
+{
+  "questionId": "q367",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "## Résolution du contrat en cas de défaut de délivrance\n\nSelon l’**article L. 216-6 du Code de la consommation** [Source 1], le consommateur dispose de plusieurs moyens :\n\n1. **Mise en demeure préalable**  \n   Il doit, en principe, mettre le professionnel en demeure de délivrer le bien dans un **délai supplémentaire raisonnable**. Si le professionnel ne s’exécute pas dans ce délai, le consommateur peut résoudre le contrat.\n\n2. **Notification de la résolution**  \n   La résolution est notifiée au professionnel par une lettre ou un écrit. Le contrat est considéré comme résolu à la **réception** de cette notification, sauf si le professionnel a exécuté son obligation entre-temps.\n\n3. **Résolution immédiate dans certains cas**  \n   Le consommateur peut résoudre immédiatement le contrat :\n   - si le professionnel refuse de délivrer le bien ou s’il est manifeste qu’il ne le délivrera pas ;\n   - si le bien n’est pas délivré à la date ou à l’expiration du délai prévu et que cette date ou ce délai constituait une **condition essentielle du contrat**, en raison des circonstances de sa conclusion ou d’une demande expresse du consommateur avant la conclusion du contrat.\n\nLe consommateur peut également suspendre le paiement de tout ou partie du prix dans les conditions prévues par les articles 1219 et 1220 du Code civil. La résolution ne fait pas obstacle à l’éventuelle demande de dommages et intérêts [Source 1].\n\n## Sociétés coopératives de commerçants de détail\n\nLe contexte fourni ne contient aucune disposition relative à la **forme**, au **fonctionnement**, à la **responsabilité** ou à la **constitution** des sociétés coopératives de commerçants de détail. Il ne permet donc pas de répondre juridiquement à cette seconde partie sans ajouter une source extérieure.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.58068399969488,
+      "vectorSearchMs": 671.5892810001969,
+      "jinaRerankingMs": 594.1940489998087,
+      "mappingMs": 0.024612000212073326,
+      "totalMs": 1488.441968000494,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010385999456048012,
+      "contextBuilderMs": 0.010669000446796417,
+      "generationMs": 3665.2495980001986,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5153.721749000251
+    },
+    "judge": {
+      "questionId": "q367",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La première partie est correctement et précisément exposée : mise en demeure avec délai supplémentaire raisonnable, notification et effet de la résolution, hypothèses de résolution immédiate, suspension du prix et dommages-intérêts. Ces éléments correspondent à l'article L. 216-6. En revanche, la seconde partie de la question, relative au régime des sociétés coopératives de commerçants de détail, n'est pas traitée : la réponse n'indique notamment ni les formes SARL ou SA à capital variable ni les textes régissant leur fonctionnement. L'abstention sur ce point est bien justifiée par l'absence de contexte pertinent, et toutes les affirmations substantielles sont fondées sur le contexte fourni. Toutefois, l'abstention attendue était false et la réponse ne répond pas intégralement à la question composée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source L.216-6 est directement pertinente et suffisante pour la première partie relative à la suspension du prix, à la mise en demeure, à la résolution, à sa prise d’effet, aux cas de résolution immédiate et aux dommages-intérêts. Elle ne contient toutefois aucune disposition sur les sociétés coopératives de commerçants de détail : une source essentielle manque donc pour répondre intégralement à la question composée. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les développements sur la délivrance sont fidèles à la source, et le constat d’absence de dispositions coopératives dans le contexte fourni est justifié par son contenu."
+    }
+  },
+  "routing": {
+    "answer": "### 1. Résolution du contrat en cas de défaut de délivrance\n\nSelon l’**article L. 216-6 du Code de la consommation [Source 1]**, le consommateur doit en principe :\n\n1. **Mettre en demeure le professionnel** d’effectuer la délivrance du bien dans un délai supplémentaire raisonnable ;\n2. Si le professionnel ne s’exécute pas dans ce délai, **résoudre le contrat** ;\n3. Informer le professionnel de cette résolution par lettre ou écrit.\n\nLa résolution prend effet **à la réception de cette notification par le professionnel**, sauf si celui-ci s’est exécuté entre-temps.\n\nLa résolution peut toutefois être **immédiate**, sans délai supplémentaire, lorsque :\n\n- le professionnel refuse de délivrer le bien ou qu’il est manifeste qu’il ne le délivrera pas ;\n- la délivrance devait intervenir à une date ou dans un délai constituant une **condition essentielle du contrat**, soit en raison des circonstances de sa conclusion, soit parce que le consommateur l’avait expressément demandé avant la conclusion du contrat.\n\nLe consommateur peut également suspendre le paiement de tout ou partie du prix dans les conditions prévues aux articles 1219 et 1220 du Code civil. Ces droits ne privent pas le consommateur de la possibilité de demander des dommages et intérêts.\n\n### 2. Sociétés ou groupements de commerçants détaillants\n\nL’**article L. 124-15 du Code de commerce [Source 2]** prévoit que tout groupement de commerçants détaillants exerçant certaines activités visées à l’article L. 124-1 doit, lorsqu’il n’a pas adopté la forme d’une société coopérative de commerçants détaillants, être constitué sous l’une des formes suivantes :\n\n- société anonyme ;\n- société à responsabilité limitée ;\n- groupement d’intérêt économique ;\n- groupement européen d’intérêt économique.\n\nEn cas de constitution en violation de cette obligation, le ministère public ou toute personne intéressée peut saisir le président du tribunal compétent statuant en référé afin d’obtenir une injonction de régularisation, éventuellement sous astreinte.\n\nLe contexte fourni ne contient toutefois pas de dispositions précisant le fonctionnement propre des sociétés coopératives de commerçants détaillants ni les règles de responsabilité applicables à leurs membres.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L216-6"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L124-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1538.1433659996837,
+      "routingCalls": 1,
+      "embeddingMs": 224.2456499999389,
+      "vectorSearchMs": 279.66958700027317,
+      "jinaRerankingMs": 633.4271109998226,
+      "mappingMs": 0.0267340000718832,
+      "totalMs": 2675.5411819992587,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.039448999799788,
+      "contextBuilderMs": 0.021216999739408493,
+      "generationMs": 4640.518458999693,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7316.129940000363
+    },
+    "judge": {
+      "questionId": "q367",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La première partie restitue correctement le mécanisme de l’article L. 216-6 : mise en demeure avec délai supplémentaire raisonnable, notification de la résolution, effet à réception, cas de résolution immédiate, suspension du prix et préservation des dommages-intérêts. En revanche, la seconde partie ne répond pas au cadre propre des sociétés coopératives de commerçants de détail attendu (forme SARL ou SA à capital variable, règles de fonctionnement applicables et exclusivité de la dénomination). Elle décrit seulement le régime des groupements n’ayant pas adopté la forme coopérative, prévu par L. 124-15. Cette partie demeure toutefois correctement fondée sur le contexte fourni et indique à juste titre que celui-ci ne contient pas les règles spécifiques demandées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement le mécanisme de suspension du prix et de résolution prévu à l’article L. 216-6. La source 2 est liée au régime des groupements de commerçants détaillants et permet de traiter le cas des groupements n’ayant pas adopté la forme coopérative, mais elle ne fournit pas le cadre propre des sociétés coopératives demandé (forme à capital variable, règles de fonctionnement et responsabilité), pour lequel une source telle que L. 124-3 manquerait. En revanche, les affirmations effectivement formulées dans la réponse sont couvertes : la première partie par la source 1, la présentation de L. 124-15 par la source 2, et le constat d’absence, dans le contexte fourni, des règles spécifiques aux coopératives."
+    }
+  },
+  "failureStage": "generation"
+}

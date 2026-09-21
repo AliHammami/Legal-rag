@@ -1,0 +1,90 @@
+{
+  "questionId": "q441",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas d’identifier les **critères de loyauté applicables**.\n\nElles mentionnent seulement :\n\n- des critères de représentativité des organisations de travailleurs des plateformes : valeurs républicaines, indépendance, transparence financière, ancienneté, audience, influence, effectifs et cotisations — **Article L. 7343-3 du Code du travail** [Source 2] ;\n- le contrôle, par le ministre chargé du travail, du montant des cotisations afin d’établir la réalité de l’adhésion — **Article R. 2152-11 du Code du travail** [Source 1] ;\n- des critères relatifs à l’activité conventionnelle d’une organisation — **Article R. 2261-15 du Code du travail** [Source 3].\n\nLa notion de **« critères de loyauté »** n’est toutefois pas définie dans les extraits transmis. Il faudrait notamment disposer de l’article auquel la question fait référence, ainsi que des dispositions concernées.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2152-11"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7343-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R2261-15"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.15926500037313,
+      "vectorSearchMs": 701.1285139992833,
+      "jinaRerankingMs": 581.8369940016419,
+      "mappingMs": 0.021111998707056046,
+      "totalMs": 1484.1747169997543,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01178400032222271,
+      "contextBuilderMs": 0.018993999809026718,
+      "generationMs": 2608.3981870003045,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4092.6161299999803
+    },
+    "judge": {
+      "questionId": "q441",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient clairement de fournir des « critères de loyauté » faute de définition ou de disposition pertinente dans le contexte. Elle distingue correctement les critères effectivement présents (représentativité, cotisations, activité conventionnelle) de la notion demandée, sans prétendre que ceux-ci répondent à la question. Toutes les précisions citées sont soutenues par les extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Dans le cadre d’une abstention attendue, les sources sont suffisamment pertinentes pour constater qu’elles traitent de représentativité, de cotisations et de critères d’activité conventionnelle, sans définir ni énoncer des « critères de loyauté ». Elles permettent donc de justifier l’absence de réponse directe. Elles couvrent l’ensemble des constats factuels de la réponse générée : le contenu de L. 7343-3, le contrôle des cotisations prévu par R. 2152-11 et les critères visés par R. 2261-15."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1296.8139299992472,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1296.814896998927,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1296.8245860002935
+    },
+    "judge": {
+      "questionId": "q441",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est trop ambiguë pour identifier de manière fiable les « critères de loyauté » visés. La réponse s'abstient explicitement et justifie correctement l'impossibilité de répondre sur la base du contexte disponible."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une abstention : le contexte vide ne permet pas d’identifier ni de vérifier les « critères de loyauté » visés. Les constats de la réponse générée sur l’absence de corpus et l’impossibilité de répondre sont ainsi intégralement supportés par l’absence de sources."
+    }
+  },
+  "failureStage": "none"
+}

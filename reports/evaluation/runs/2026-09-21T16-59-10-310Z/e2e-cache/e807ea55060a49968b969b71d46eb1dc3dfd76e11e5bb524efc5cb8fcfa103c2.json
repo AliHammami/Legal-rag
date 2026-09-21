@@ -1,0 +1,103 @@
+{
+  "questionId": "q236",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L225-2 du Code monétaire et financier**, l’affectation des versements dépend de la forme du sous-compte français :\n\n- **Sous-compte ouvert sous la forme d’un compte-titres** : les versements sont affectés à l’acquisition de titres financiers offrant une protection suffisante de l’épargne investie et figurant sur une liste fixée par voie réglementaire, en tenant compte des modalités de gestion financière du plan.\n\n- **Sous-compte ouvert sous la forme d’un contrat d’assurance de groupe** lié à la cessation d’activité professionnelle : les versements sont affectés à l’acquisition de droits exprimés en euros, en parts de provision de diversification, en unités de rente ou en unités de compte constituées des titres financiers mentionnés ci-dessus, sous réserve de l’article L. 131-1 du Code des assurances.\n\n**Article L225-2 du Code monétaire et financier [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L225-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L225-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R225-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 254.02124099992216,
+      "vectorSearchMs": 613.6280060000718,
+      "jinaRerankingMs": 598.1425149999559,
+      "mappingMs": 0.025665000081062317,
+      "totalMs": 1465.8510549999774,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011936000548303127,
+      "contextBuilderMs": 0.01976799964904785,
+      "generationMs": 2011.1126779997721,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3477.0090410001576
+    },
+    "judge": {
+      "questionId": "q236",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les deux formes de sous-compte prévues par l'article L225-2 : compte-titres et contrat d'assurance de groupe. Elle reprend fidèlement les affectations respectives, y compris la condition de protection suffisante, la liste réglementaire, la prise en compte de la gestion financière, les catégories de droits et la réserve de l'article L. 131-1 du Code des assurances. Toutes les affirmations importantes sont explicitement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l'article L. 225-2 visé par la question et énonce précisément les deux règles d'affectation selon que le sous-compte a donné lieu à l'ouverture d'un compte-titres ou à l'adhésion à un contrat d'assurance de groupe. Elle couvre l'ensemble des affirmations importantes de la réponse : protection suffisante, liste réglementaire, modalités de gestion financière, catégories de droits et réserve de l'article L. 131-1 du code des assurances."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L225-2 du Code monétaire et financier :\n\n- **Lorsque le sous-compte est ouvert sous la forme d’un compte-titres**, les versements sont affectés à l’acquisition de titres financiers offrant une protection suffisante de l’épargne investie et figurant sur une liste fixée par voie réglementaire, en tenant compte des modalités de gestion financière du plan.\n- **Lorsque le sous-compte repose sur un contrat d’assurance de groupe** lié à la cessation d’activité professionnelle, les versements sont affectés à l’acquisition :\n  - de droits exprimés en euros ;\n  - de droits exprimés en parts de provision de diversification ;\n  - de droits exprimés en unités de rente ;\n  - ou de droits exprimés en unités de compte constituées des titres financiers mentionnés ci-dessus, sous réserve de l’article L. 131-1 du Code des assurances.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L225-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L225-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R225-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1812.5464209998026,
+      "routingCalls": 1,
+      "embeddingMs": 151.08019100036472,
+      "vectorSearchMs": 187.26061300002038,
+      "jinaRerankingMs": 590.3661399995908,
+      "mappingMs": 0.04201100021600723,
+      "totalMs": 2741.3252860000357,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.030477000400424004,
+      "contextBuilderMs": 0.027815000154078007,
+      "generationMs": 2686.9143019998446,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5428.310556999408
+    },
+    "judge": {
+      "questionId": "q236",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux hypothèses prévues par l’article L225-2 : compte-titres (titres financiers offrant une protection suffisante et inscrits sur une liste réglementaire) et contrat d’assurance de groupe (droits en euros, parts de provision de diversification, unités de rente ou unités de compte composées des titres visés, sous réserve de l’article L. 131-1). Toutes les précisions importantes sont directement soutenues par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article L. 225-2 visé par la question et décrit exactement les deux modalités d'affectation selon que le sous-compte relève d'un compte-titres ou d'un contrat d'assurance de groupe. Elle couvre toutes les affirmations substantielles de la réponse générée, y compris la liste des droits et la réserve relative à l'article L. 131-1 du code des assurances."
+    }
+  },
+  "failureStage": "none"
+}

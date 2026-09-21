@@ -1,0 +1,82 @@
+{
+  "questionId": "q470",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne précise pas les formalités nécessaires pour **déposer une demande de brevet d’invention**.\n\nIl indique seulement que :\n\n- les **ventes ou cessions** d’un fonds de commerce comprenant des brevets doivent être inscrites à l’INPI pour être opposables aux tiers ;\n- les **nantissements** de fonds comprenant des brevets doivent également être inscrits à l’INPI ;\n- la transmission des brevets compris dans la cession d’un fonds reste soumise aux règles des articles L. 613-8 et suivants du Code de la propriété intellectuelle.\n\nCes dispositions relèvent de la **transmission ou du nantissement** d’un brevet, et non de son dépôt initial. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L143-17"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.18299399875104,
+      "vectorSearchMs": 648.2516890000552,
+      "jinaRerankingMs": 585.1452399995178,
+      "mappingMs": 0.02238999865949154,
+      "totalMs": 1433.6310469992459,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01027199998497963,
+      "contextBuilderMs": 0.012620000168681145,
+      "generationMs": 2327.382596001029,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3761.0506570003927
+    },
+    "judge": {
+      "questionId": "q470",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de répondre sur les formalités de dépôt, car le contexte ne traite que de l’inscription à l’INPI des cessions, ventes ou nantissements liés à un fonds de commerce et de la transmission des brevets. Elle distingue correctement ces opérations du dépôt initial et ses affirmations sont intégralement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour justifier l’abstention : elle traite exclusivement des inscriptions à l’INPI relatives aux ventes, cessions et nantissements de fonds comprenant des brevets, ainsi que de la transmission des brevets cédés, sans fournir de formalités de dépôt initial. Elle couvre les constats factuels de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 983.64178000018,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 983.6427829992026,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 983.6507619991899
+    },
+    "judge": {
+      "questionId": "q470",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et correctement : le contexte est vide et ne permet pas de répondre de manière fiable à une question sur les formalités de dépôt d'un brevet, qui relève en outre d'un domaine hors du périmètre indiqué."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, donc aucune pertinence directe ne peut être établie. Toutefois, la réponse générée se limite à constater l'absence de contexte, l'absence de corpus pertinent identifié et l'absence de recherche ; ces constats sont entièrement compatibles avec le dossier de sources vide."
+    }
+  },
+  "failureStage": "none"
+}

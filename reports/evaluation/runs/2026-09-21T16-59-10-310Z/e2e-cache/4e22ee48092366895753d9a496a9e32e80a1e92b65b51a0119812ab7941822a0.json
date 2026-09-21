@@ -1,0 +1,119 @@
+{
+  "questionId": "q230",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L441-1 du Code de commerce**, les conditions générales de vente doivent notamment comprendre :\n\n- les **conditions de règlement** ;\n- les **éléments de détermination du prix**, notamment :\n  - le **barème des prix unitaires** ;\n  - les **éventuelles réductions de prix**.\n\nLa liste est introduite par le terme « notamment », ce qui indique qu’elle n’est pas nécessairement exhaustive. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-5"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R221-2"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 181.47101000044495,
+      "vectorSearchMs": 805.6852080002427,
+      "jinaRerankingMs": 595.7330500008538,
+      "mappingMs": 0.052295999601483345,
+      "totalMs": 1583.037216000259,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01832900010049343,
+      "contextBuilderMs": 0.054413000121712685,
+      "generationMs": 2012.2579770004377,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3595.3861469998956
+    },
+    "judge": {
+      "questionId": "q230",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les éléments visés par l’article L441-1 : conditions de règlement, barème des prix unitaires et éventuelles réductions de prix. La précision selon laquelle « notamment » rend la liste non exhaustive est correcte et directement fondée par le contexte. Elle répond pleinement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement le I de l’article L441-1 du Code de commerce, précisément visé par la question. Elle établit les conditions de règlement et les éléments de détermination du prix, dont le barème des prix unitaires et les éventuelles réductions de prix. L’emploi de « notamment » dans cette source couvre également l’observation selon laquelle l’énumération n’est pas exhaustive."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L441-1 du Code de commerce**, les conditions générales de vente doivent notamment comporter :\n\n- les **conditions de règlement** ;\n- les **éléments permettant de déterminer le prix**, notamment :\n  - le **barème des prix unitaires** ;\n  - les **éventuelles réductions de prix**.  \n\nLa liste est introduite par le terme « notamment », ce qui indique qu’elle n’est pas nécessairement exhaustive. **Article L441-1 du Code de commerce [Source 1]**.\n\nLorsque le prix d’un service ne peut pas être déterminé à l’avance ou indiqué avec exactitude, le prestataire doit également communiquer, sur demande, soit la **méthode de calcul du prix**, soit un **devis suffisamment détaillé** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-4"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L443-8"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L441-1-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1687.9225780004635,
+      "routingCalls": 1,
+      "embeddingMs": 182.89727800060064,
+      "vectorSearchMs": 194.5623190002516,
+      "jinaRerankingMs": 640.9964119996876,
+      "mappingMs": 0.026785999536514282,
+      "totalMs": 2706.435349000618,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011812999844551086,
+      "contextBuilderMs": 0.026171999983489513,
+      "generationMs": 2761.74296399951,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5468.225088000298
+    },
+    "judge": {
+      "questionId": "q230",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les mentions énumérées à l’article L441-1 : conditions de règlement, barème des prix unitaires et éventuelles réductions de prix. Elle précise correctement le caractère non exhaustif de cette énumération. L’ajout relatif à la méthode de calcul ou au devis lorsqu’un prix de service ne peut être déterminé à l’avance est également fidèle au contexte, bien qu’il dépasse légèrement le cœur de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L441-1 visé par la question. Elle couvre toutes les affirmations substantielles de la réponse : les conditions de règlement, les éléments de détermination du prix (barème des prix unitaires et réductions de prix), le caractère non exhaustif induit par « notamment », ainsi que la communication de la méthode de calcul ou d’un devis détaillé lorsque le prix d’un service ne peut être déterminé à l’avance. Les autres sources ne sont pas nécessaires à cette réponse."
+    }
+  },
+  "failureStage": "none"
+}

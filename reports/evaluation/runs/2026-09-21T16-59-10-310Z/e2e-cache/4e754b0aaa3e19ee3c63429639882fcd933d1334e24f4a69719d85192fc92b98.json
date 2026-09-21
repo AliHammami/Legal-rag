@@ -1,0 +1,86 @@
+{
+  "questionId": "q288",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans le chapitre mentionné, le terme **« banquier »** désigne les **établissements de crédit ainsi que les institutions, services ou personnes habilités à tenir des comptes sur lesquels des chèques peuvent être tirés**. [Sources 1 et 2]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R131-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L131-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 164.3126320000738,
+      "vectorSearchMs": 627.7641030000523,
+      "jinaRerankingMs": 573.2744209999219,
+      "mappingMs": 0.027085999958217144,
+      "totalMs": 1365.4122280003503,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012012000195682049,
+      "contextBuilderMs": 0.020269999280571938,
+      "generationMs": 1185.3600040003657,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2550.8197419997305
+    },
+    "judge": {
+      "questionId": "q288",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition figurant dans les deux sources du contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources définissent directement et explicitement le terme « banquier » dans le chapitre concerné. Elles couvrent intégralement l’unique affirmation importante de la réponse générée, qui reprend fidèlement leur formulation."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1743.8474010005593,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1743.8483830001205,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1743.8615239998326
+    },
+    "judge": {
+      "questionId": "q288",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée alors qu'une réponse était attendue : le terme désigne les établissements de crédit ainsi que les institutions, services ou personnes habilités à tenir des comptes permettant de tirer des chèques. L'absence de contexte justifie qu'elle ne puisse pas s'appuyer sur celui-ci, mais les affirmations supplémentaires sur l'ambiguïté, le périmètre et l'absence de recherche ne sont pas établies par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n’est fournie. Elles ne peuvent donc ni être pertinentes pour la définition demandée du terme « banquier », ni couvrir les affirmations d’abstention formulées dans la réponse générée."
+    }
+  },
+  "failureStage": "generation"
+}

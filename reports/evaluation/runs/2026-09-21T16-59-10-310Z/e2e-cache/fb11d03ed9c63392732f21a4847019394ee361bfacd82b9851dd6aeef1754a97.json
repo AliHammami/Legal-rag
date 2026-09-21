@@ -1,0 +1,99 @@
+{
+  "questionId": "q407",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Dans les entreprises d’au moins 50 salariés, l’employeur doit :\n\n- publier chaque année l’ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes ;\n- publier également les actions mises en œuvre pour supprimer ces écarts ;\n- respecter les modalités et la méthodologie fixées par décret.\n\nCes indicateurs sont rendus publics sur le site internet du ministère chargé du travail, selon des conditions déterminées par décret. **Article L. 1142-8 du Code du travail [Source 1].**\n\nEn cas d’absence de publication, une pénalité peut être appliquée. Elle peut atteindre **1 % des rémunérations et gains** versés pendant les périodes concernées. Il s’agit d’une **pénalité administrative**, dont le montant est fixé par l’autorité administrative, et non d’une sanction pénale. **Article L. 2242-8 du Code du travail [Source 2].**\n\nEn revanche, les sources fournies ne contiennent aucune disposition relative aux **sanctions pénales applicables en cas de violation délibérée des règles de sécurité ayant entraîné une incapacité de travail**. Il n’est donc pas possible de répondre à cette seconde partie à partir du contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 353.47188599966466,
+      "vectorSearchMs": 696.8168870005757,
+      "jinaRerankingMs": 576.9875770006329,
+      "mappingMs": 0.029914001002907753,
+      "totalMs": 1627.3334880005568,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013808000832796097,
+      "contextBuilderMs": 0.028304999694228172,
+      "generationMs": 2493.373896000907,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4120.764183999971
+    },
+    "judge": {
+      "questionId": "q407",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de manière précise les obligations annuelles de publication prévues par l’article L. 1142-8, ainsi que la pénalité administrative liée à l’absence de publication. Elle ne répond toutefois pas à la seconde partie essentielle de la question : la sanction pénale applicable est d’un an d’emprisonnement et 15 000 euros d’amende pour une ITT inférieure ou égale à trois mois en cas de violation manifestement délibérée. Les affirmations formulées sont entièrement étayées par le contexte fourni, qui ne contient effectivement aucune disposition pénale sur ce point. Néanmoins, l’abstention sur cette seconde question rend la réponse partielle alors qu’une réponse complète était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre précisément les obligations annuelles de publication des indicateurs et actions relatifs aux écarts de rémunération, ainsi que leur publication sur le site du ministère. La source 2 est pertinente pour l'affirmation additionnelle sur la pénalité applicable en cas d'absence de publication, son plafond de 1 % et sa fixation par l'autorité administrative. Aucune source ne traite de la sanction pénale liée à une violation délibérée des règles de sécurité et à une incapacité de travail ; la réponse constate explicitement cette absence sans formuler de sanction non étayée. Ainsi, les affirmations effectivement formulées sont couvertes, mais les sources ne permettent pas de répondre directement à l'intégralité de la question, d'où une pertinence globale de 3."
+    }
+  },
+  "routing": {
+    "answer": "Dans les entreprises d’au moins 50 salariés, l’employeur doit :\n\n- publier chaque année l’ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes ;\n- publier également les actions mises en œuvre pour supprimer ces écarts ;\n- respecter les modalités et la méthodologie définies par décret.\n\nCes indicateurs sont rendus publics sur le site internet du ministère chargé du travail, selon les conditions fixées par décret. **Article L. 1142-8 du Code du travail [Source 1].**\n\nL’absence de publication peut également entraîner une pénalité administrative pouvant atteindre **1 % des rémunérations et gains** versés pendant les périodes concernées, son montant étant fixé par l’autorité administrative en fonction notamment des efforts et des motifs de défaillance de l’entreprise. **Article L. 2242-8 du Code du travail [Source 3].**\n\nPar ailleurs, lorsqu’une personne cause à autrui, par la violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité imposée par la loi ou le règlement, une incapacité totale de travail inférieure ou égale à trois mois, elle encourt une sanction pénale de **un an d’emprisonnement et 15 000 euros d’amende**. **Article 222-20 du Code pénal [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1142-8"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-20"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2242-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1506.9792619999498,
+      "routingCalls": 1,
+      "embeddingMs": 189.86333999969065,
+      "vectorSearchMs": 440.8477669991553,
+      "jinaRerankingMs": 614.2117490004748,
+      "mappingMs": 0.030623000115156174,
+      "totalMs": 2751.9740669988096,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 2.0692999996244907,
+      "contextBuilderMs": 0.034685999155044556,
+      "generationMs": 3287.145176000893,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6041.24171599932
+    },
+    "judge": {
+      "questionId": "q407",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les obligations annuelles de publication des indicateurs et des actions, leur publication sur le site du ministère, ainsi que la peine d’un an d’emprisonnement et 15 000 € d’amende pour l’ITT inférieure ou égale à trois mois résultant d’une violation manifestement délibérée. La mention supplémentaire de la pénalité administrative est exacte et directement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 2 répondent directement aux deux volets de la question : obligations annuelles de publication et de mise à disposition des indicateurs (L. 1142-8), ainsi que l'infraction et les peines pour incapacité totale de travail inférieure ou égale à trois mois résultant d'une violation manifestement délibérée d'une obligation de sécurité (art. 222-20). La source 3 est également pertinente pour l'affirmation supplémentaire relative à la pénalité administrative en cas d'absence de publication. Toutes les affirmations importantes de la réponse générée sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

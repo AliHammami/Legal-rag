@@ -1,0 +1,107 @@
+{
+  "questionId": "q002",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les sources fournies ne contiennent pas l’article 223-1 ni les éléments constitutifs de l’infraction visée. Elles mentionnent seulement :\n\n- la violation de l’article L. 221-10-1 du Code de la consommation, punie d’un an d’emprisonnement et de 150 000 € d’amende [Source 1] ;\n- la violation de l’article L. 413-2 du même code, également punie d’un an d’emprisonnement et de 150 000 € d’amende [Source 2].\n\nIl n’est donc pas possible, à partir du seul contexte fourni, d’identifier l’infraction punie d’un an d’emprisonnement et de 15 000 € d’amende ni d’en exposer les éléments constitutifs.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L242-7-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L451-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 795.1462800000008,
+      "vectorSearchMs": 866.7641769999973,
+      "jinaRerankingMs": 494.41472700000304,
+      "mappingMs": 0.03684899999643676,
+      "totalMs": 2156.5152299999972,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01807099999859929,
+      "contextBuilderMs": 0.024932000000262633,
+      "generationMs": 2315.7844190000033,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4472.377686
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’expose pas les éléments constitutifs demandés par l’article 223-1 et ne répond donc pas à la question, alors que la réponse attendue est l’exposition directe d’autrui à un risque immédiat de mort ou de blessures graves par violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité. En revanche, son constat selon lequel le contexte fourni ne contient pas l’article 223-1 est exact et entièrement fondé sur les deux extraits fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources ne sont pas pertinentes pour répondre directement aux éléments constitutifs prévus par l’article 223-1 : elles portent sur des articles du Code de la consommation et des amendes de 150 000 euros. Elles permettent toutefois d’étayer le constat factuel de la réponse générée selon lequel le contexte fourni ne contient que ces dispositions et ne permet pas d’identifier les éléments demandés. Les références, peines et constats d’insuffisance formulés dans la réponse sont couverts par les extraits."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas le texte de l’**article 223-1 du Code pénal**. Il n’est donc pas possible d’identifier, à partir des seules sources fournies, les éléments constitutifs de l’infraction concernée.\n\nLes sources indiquent seulement plusieurs infractions différentes punies d’un an d’emprisonnement et de 15 000 euros d’amende, notamment l’usurpation d’identité (**article 226-4-1 du Code pénal** [Source 3]) et certaines atteintes à une personne vulnérable (**article 225-16-2 du Code pénal** [Source 1]), mais elles ne permettent pas de répondre à la question relative à l’article 223-1.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-16-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-22-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "226-4-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "725-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1341.0984339999995,
+      "routingCalls": 1,
+      "embeddingMs": 203.64574999999604,
+      "vectorSearchMs": 87.18456000000151,
+      "jinaRerankingMs": 531.5869119999988,
+      "mappingMs": 0.03488999999535736,
+      "totalMs": 2163.6115219999992,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.10294100000464823,
+      "contextBuilderMs": 0.10029000000213273,
+      "generationMs": 2129.067919000001,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4292.962619999998
+    },
+    "judge": {
+      "questionId": "q002",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit aucun des éléments constitutifs demandés par l'article 223-1 et ne répond donc pas à la question, alors qu'une réponse était attendue. En revanche, son constat selon lequel le texte de l'article 223-1 ne figure pas dans le contexte est exact, et les exemples d'autres infractions citées sont bien présents dans les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source ne contient l'article 223-1 ni ses éléments constitutifs : elles sont donc hors sujet pour répondre directement à la question. En revanche, elles permettent de constater que le corpus fourni ne contient pas cet article et étayent les exemples cités dans la réponse : l'article 225-16-2 (source 1) et l'article 226-4-1 relatif à l'usurpation d'identité (source 3) prévoient bien chacun une peine d'un an d'emprisonnement et 15 000 euros d'amende."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,90 @@
+{
+  "questionId": "q484",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’accès au **barreau** ou à la profession d’avocat.\n\nElles concernent principalement :\n\n- l’accès à l’examen du stage professionnel prévu à l’article L. 811-5 du Code de commerce, notamment les diplômes exigés par l’**article R. 811-7 du Code de commerce** [Source 1] ;\n- l’inscription sur la liste des mandataires judiciaires et les conditions liées à cette profession, prévues notamment par l’**article L. 812-3 du Code de commerce** [Source 3] et l’**article R. 812-15 du Code de commerce** [Source 2].\n\nAucune source fournie ne traite des conditions d’accès à la profession d’avocat ou de l’inscription au barreau.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R811-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R812-15"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L812-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 363.59545200131834,
+      "vectorSearchMs": 685.0014110002667,
+      "jinaRerankingMs": 577.6982499994338,
+      "mappingMs": 0.02473899908363819,
+      "totalMs": 1626.3512059990317,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018866999074816704,
+      "contextBuilderMs": 0.029102999716997147,
+      "generationMs": 2568.3386380001903,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4194.750056000426
+    },
+    "judge": {
+      "questionId": "q484",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse abstient explicitement de répondre sur les conditions d’accès au barreau, car le contexte ne contient que des dispositions du Code de commerce relatives aux administrateurs/mandataires judiciaires et à leurs examens ou inscriptions. Cette justification est exacte, complète et entièrement fondée sur les sources."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources portent sur l'accès au stage professionnel ou l'inscription des mandataires judiciaires au titre du Code de commerce, et non sur l'accès à la profession d'avocat ou l'inscription au barreau. Elles sont donc suffisantes et directement utiles pour justifier l'abstention et le constat de hors périmètre. Les descriptions factuelles de chaque source dans la réponse sont couvertes par leurs contenus."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1552.8377909995615,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1552.838681999594,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1552.8466940000653
+    },
+    "judge": {
+      "questionId": "q484",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et l'abstention était attendue. La réponse indique explicitement qu'elle ne peut pas répondre de manière fiable faute de contexte ou de corpus pertinent, sans avancer de conditions non étayées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, ce qui établit directement l'absence de contexte documentaire permettant de répondre. La réponse s'abstient et se limite à constater l'absence de corpus pertinent et de recherche ; ces constats sont intégralement cohérents avec les sources vides."
+    }
+  },
+  "failureStage": "none"
+}

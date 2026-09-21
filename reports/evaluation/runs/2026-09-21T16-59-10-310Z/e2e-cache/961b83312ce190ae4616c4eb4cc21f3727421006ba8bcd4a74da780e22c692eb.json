@@ -1,0 +1,107 @@
+{
+  "questionId": "q423",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En cas de **refus de paiement d’un chèque par le tiré au motif d’une opposition du tireur**, la sanction prévue est uniquement une **amende de 6 000 euros** : aucune peine d’emprisonnement n’est prévue par l’Article L163-1 du Code monétaire et financier [Source 1].\n\nEn revanche, certaines infractions liées au fait de faire obstacle au paiement ou d’émettre des chèques malgré une interdiction sont punies au maximum de :\n\n- **5 ans d’emprisonnement** ;\n- **375 000 euros d’amende**,\n\nnotamment en cas de retrait de la provision ou de défense faite au tiré de payer, ainsi qu’en cas d’émission de chèques malgré une injonction ou une interdiction [Source 2] [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.14266699925065,
+      "vectorSearchMs": 699.8250799998641,
+      "jinaRerankingMs": 554.4563040006906,
+      "mappingMs": 0.028436999768018723,
+      "totalMs": 1477.4786720015109,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01674099825322628,
+      "contextBuilderMs": 0.026688000187277794,
+      "generationMs": 5484.367080999538,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6961.94841199927
+    },
+    "judge": {
+      "questionId": "q423",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement le refus de paiement par le tiré motivé par une opposition, puni de la seule amende de 6 000 euros (sans emprisonnement), des infractions connexes prévues aux articles L. 163-2 et L. 163-7, punies de cinq ans d'emprisonnement et 375 000 euros d'amende. Elle est pleinement étayée par le contexte. Elle diverge toutefois de la référence quant à l'évocation de peines pouvant aller jusqu'à dix ans, sans que ce maximum ne soit établi par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : L. 163-1 établit l’amende de 6 000 euros pour le refus de paiement par le tiré fondé sur l’opposition du tireur, tandis que L. 163-2 et L. 163-7 prévoient cinq ans d’emprisonnement et 375 000 euros d’amende pour les infractions connexes décrites. Elles couvrent l’ensemble des affirmations importantes de la réponse générée, y compris l’absence de peine d’emprisonnement dans le seul texte de L. 163-1 et les maxima cités pour les autres comportements."
+    }
+  },
+  "routing": {
+    "answer": "En cas de **refus de paiement d’un chèque par le tiré au motif que le tireur a fait opposition**, le **refus lui-même n’est pas puni d’emprisonnement**. Il est puni d’une **amende de 6 000 euros**, lorsque le refus intervient en dehors des cas prévus par l’article L. 131-35, deuxième alinéa, du Code monétaire et financier — **Article L. 163-1 du Code monétaire et financier [Source 1]**.\n\nEn revanche, le fait, après l’émission du chèque, de retirer la provision ou de faire défense au tiré de payer, avec l’intention de porter atteinte aux droits d’autrui, est puni au maximum de :\n\n- **5 ans d’emprisonnement** ;\n- **375 000 euros d’amende**.\n\n— **Article L. 163-2 du Code monétaire et financier [Source 2]**.\n\nAinsi, pour le **refus de paiement visé directement**, la sanction pécuniaire applicable est une **amende maximale de 6 000 euros**, sans peine d’emprisonnement prévue par la source fournie.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L163-7"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "R642-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2151.097739001736,
+      "routingCalls": 1,
+      "embeddingMs": 203.952260999009,
+      "vectorSearchMs": 209.2534010000527,
+      "jinaRerankingMs": 527.5189309995621,
+      "mappingMs": 0.020664000883698463,
+      "totalMs": 3091.881126999855,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04448099993169308,
+      "contextBuilderMs": 0.0203699991106987,
+      "generationMs": 3770.9067970011383,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6862.864428998902
+    },
+    "judge": {
+      "questionId": "q423",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, au regard du contexte, l’amende de 6 000 euros applicable au tiré qui refuse indûment le paiement et précise qu’aucun emprisonnement n’est prévu pour cette infraction spécifique. Elle mentionne aussi correctement les cinq ans d’emprisonnement et 375 000 euros d’amende prévus par l’article L. 163-2 pour des faits distincts liés au retrait de provision ou à la défense frauduleuse de payer. Toutefois, elle ne reprend pas l’élément de la référence relatif à des peines pouvant aller jusqu’à dix ans, de sorte qu’elle ne répond qu’imparfaitement à la formulation sur les peines maximales d’emprisonnement. Toutes ses affirmations juridiques importantes sont néanmoins directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources L. 163-1 et L. 163-2 du Code monétaire et financier sont directement pertinentes : la première établit l’amende de 6 000 euros pour le refus indu de paiement par le tiré, et la seconde prévoit cinq ans d’emprisonnement et 375 000 euros d’amende pour les faits distincts de retrait de provision ou de défense de payer dans l’intention de porter atteinte aux droits d’autrui. Elles couvrent l’ensemble des affirmations juridiques importantes de la réponse générée. Les sources 3 et 4 ne sont pas mobilisées et ne sont pas nécessaires à cette couverture."
+    }
+  },
+  "failureStage": "generation"
+}

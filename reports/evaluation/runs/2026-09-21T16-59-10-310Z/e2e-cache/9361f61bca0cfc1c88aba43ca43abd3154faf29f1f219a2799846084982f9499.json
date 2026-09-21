@@ -1,0 +1,91 @@
+{
+  "questionId": "q396",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 2332-2 du Code civil, les privilèges généraux s’exercent dans l’ordre prévu à l’article 2331 du même code. Deux exceptions sont prévues :\n\n- le privilège du Trésor public est classé selon les lois qui le concernent ;\n- le privilège des caisses de sécurité sociale vient au même rang que celui des salariés.\n\nLorsque plusieurs créanciers privilégiés se trouvent au même rang, ils sont payés par concurrence, c’est-à-dire proportionnellement entre eux [Source 1].\n\nEn revanche, le contexte fourni ne contient aucune disposition du Code du travail relative à la preuve en matière de discrimination. Il ne permet donc pas de préciser les règles applicables sur ce point.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.337344000116,
+      "vectorSearchMs": 664.8453170005232,
+      "jinaRerankingMs": 547.6056770011783,
+      "mappingMs": 0.028731999918818474,
+      "totalMs": 1418.8465670011938,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011125000193715096,
+      "contextBuilderMs": 0.012710999697446823,
+      "generationMs": 2368.651582999155,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3787.5361010003835
+    },
+    "judge": {
+      "questionId": "q396",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et complètement la hiérarchie des privilèges généraux prévue par l’article 2332-2 du Code civil, y compris les exceptions et le paiement par concurrence. Elle ne répond toutefois pas à la seconde partie relative à la preuve de la discrimination (charge pour le défendeur de démontrer des motifs objectifs étrangers à toute discrimination et pouvoir d’instruction du juge). Cette omission est justifiée par l’absence de tout extrait du Code du travail dans le contexte : les affirmations juridiques effectivement formulées sont entièrement fondées sur le contexte. La réponse ne constitue pas une abstention globale puisqu’elle répond à la première partie et explicite la limite contextuelle pour la seconde."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour la première partie, relative à l’ordre des privilèges généraux : elle couvre l’ordre de l’article 2331, les deux exceptions et le paiement par concurrence. Elle ne fournit toutefois aucune règle sur la preuve de la discrimination au titre du Code du travail, qui constitue une partie importante de la question. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les énoncés sur les privilèges sont explicitement fondés sur la source, et le constat d’absence de disposition pertinente du Code du travail correspond au périmètre du contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "### Hiérarchie des privilèges généraux\n\nSelon l’article 2332-2 du Code civil, les privilèges généraux s’exercent dans l’ordre prévu par l’article 2331 du même code. Deux exceptions sont prévues :\n\n- le privilège du Trésor public, dont le rang est fixé par les lois qui le concernent ;\n- le privilège des caisses de sécurité sociale, qui vient au même rang que celui des salariés.\n\nLorsque plusieurs créanciers bénéficiaires d’un privilège se trouvent au même rang, ils sont payés par concurrence, c’est-à-dire proportionnellement selon les sommes disponibles. **Article 2332-2 du Code civil [Source 1].**\n\n### Preuve en cas de discrimination\n\nEn cas de litige relatif à une discrimination fondée notamment sur le sexe, la situation de famille ou la grossesse :\n\n1. le candidat à un emploi, à un stage ou à une formation, ou le salarié, doit présenter des éléments de fait laissant supposer l’existence d’une discrimination ;\n2. si ces éléments sont présentés, il appartient à la partie défenderesse de démontrer que sa décision repose sur des éléments objectifs étrangers à toute discrimination ;\n3. le juge forme sa conviction et peut ordonner, si nécessaire, les mesures d’instruction utiles.\n\n**Article L1144-1 du Code du travail [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-2"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1144-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.8706149999052,
+      "routingCalls": 1,
+      "embeddingMs": 401.62298100069165,
+      "vectorSearchMs": 378.59931799955666,
+      "jinaRerankingMs": 538.9867700003088,
+      "mappingMs": 0.024020999670028687,
+      "totalMs": 2548.128703000024,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.12015300057828426,
+      "contextBuilderMs": 0.023048998787999153,
+      "generationMs": 2879.389008998871,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5427.671566000208
+    },
+    "judge": {
+      "questionId": "q396",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie sur les privilèges généraux reprend correctement l'ordre de l'article 2331, les exceptions du Trésor public et des caisses de sécurité sociale, ainsi que le paiement par concurrence. La partie sur la preuve expose correctement le mécanisme probatoire et le rôle du juge, mais elle cite et applique l'article L1144-1, limité aux discriminations liées notamment au sexe, à la situation de famille ou à la grossesse, plutôt que le régime général de l'article L1134-1 visé par la référence. Toutes les affirmations importantes sont néanmoins directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre exactement la hiérarchie des privilèges généraux, les exceptions et le paiement par concurrence. La source 2 est pertinente pour le mécanisme probatoire en matière de discrimination, mais elle vise spécifiquement les litiges relevant des articles L. 1142-1 et L. 1142-2 (sexe, situation de famille, grossesse), et non le régime général de l'article L. 1134-1 évoqué par la question. Elle est néanmoins entièrement adaptée aux affirmations effectivement formulées dans la réponse générée, qui a limité son propos à ce champ particulier."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q098",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1254 du Code civil, lorsqu’une sanction civile est susceptible de se cumuler avec une amende administrative ou pénale infligée pour les mêmes faits, **le montant global des amendes prononcées ne peut pas dépasser le maximum légal le plus élevé** [Source 1].\n\nLa limitation porte donc sur le cumul des montants d’amendes : ils doivent rester dans la limite du plafond légal le plus élevé applicable.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1254"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 226.78857700014487,
+      "vectorSearchMs": 653.3007380000781,
+      "jinaRerankingMs": 562.7439649999142,
+      "mappingMs": 0.038133000023663044,
+      "totalMs": 1442.902460000012,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014780999859794974,
+      "contextBuilderMs": 0.011036999989300966,
+      "generationMs": 1523.6750140001532,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2966.6127349999733
+    },
+    "judge": {
+      "questionId": "q098",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la limitation prévue : en cas de cumul avec une amende administrative ou pénale pour les mêmes faits, le total des amendes ne peut excéder le maximum légal le plus élevé. Cette affirmation est explicitement étayée par le contexte. La mention de l’article 1254 du Code civil est également conforme au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 1254 et énonce explicitement la règle applicable au cumul d'une sanction civile avec une amende administrative ou pénale pour les mêmes faits : le montant global des amendes ne dépasse pas le maximum légal le plus élevé. Elle couvre intégralement les affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 1254 du Code civil**, lorsque la sanction civile est cumulable avec une amende administrative ou pénale prononcée pour les mêmes faits, **le montant global des amendes prononcées ne peut pas dépasser le maximum légal le plus élevé** applicable [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1254"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.266998999985,
+      "routingCalls": 1,
+      "embeddingMs": 241.977555999998,
+      "vectorSearchMs": 68.49411499989219,
+      "jinaRerankingMs": 509.18961600004695,
+      "mappingMs": 0.057533000130206347,
+      "totalMs": 1946.0150100002065,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015075000002980232,
+      "contextBuilderMs": 0.015458000125363469,
+      "generationMs": 1331.0329090000596,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3277.0885850000195
+    },
+    "judge": {
+      "questionId": "q098",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la limitation prévue : en cas de cumul pour les mêmes faits, le montant global des amendes ne peut dépasser le maximum légal le plus élevé. Cette affirmation est explicitement reprise dans le contexte, et la réponse répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article 1254 et énonce expressément la règle applicable au cumul d'une sanction civile avec une amende administrative ou pénale pour les mêmes faits : le montant global des amendes ne peut dépasser le maximum légal le plus élevé. Elle couvre intégralement l'affirmation centrale de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

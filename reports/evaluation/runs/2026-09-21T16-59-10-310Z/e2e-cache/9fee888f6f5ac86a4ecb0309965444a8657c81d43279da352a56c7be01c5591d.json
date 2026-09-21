@@ -1,0 +1,86 @@
+{
+  "questionId": "q101",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les dispositions du chapitre s’appliquent **à toutes les sociétés civiles**. Il peut toutefois y être dérogé lorsqu’un **statut légal particulier**, applicable à certaines sociétés civiles, prévoit des règles différentes — Article 1845 du Code civil [Source 1].\n\nPlus généralement, ces dispositions s’appliquent à toutes les sociétés sauf si la loi en dispose autrement en raison de leur **forme ou de leur objet** — Article 1834 du Code civil [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1845"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1834"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 249.9573429999873,
+      "vectorSearchMs": 636.788184999954,
+      "jinaRerankingMs": 534.7163849999197,
+      "mappingMs": 0.03330400004051626,
+      "totalMs": 1422.2253920000512,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010058999992907047,
+      "contextBuilderMs": 0.01470800000242889,
+      "generationMs": 2162.7085080000106,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3584.969899999909
+    },
+    "judge": {
+      "questionId": "q101",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement la règle de l'article 1845 : applicabilité à toutes les sociétés civiles, avec dérogation possible par le statut légal particulier de certaines d'entre elles. Le complément relatif à l'article 1834 est également fidèle au contexte et ne contredit pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question : elle prévoit l'application à toutes les sociétés civiles et la dérogation par un statut légal particulier. La source 2 est également pertinente pour le complément général formulé dans la réponse sur les dérogations légales tenant à la forme ou à l'objet. Les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 3945.3914629998617,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 3945.3998400000855,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 3945.407842000015
+    },
+    "judge": {
+      "questionId": "q101",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne répond pas à la question alors qu'une réponse était attendue : les dispositions visent toutes les sociétés civiles, sous réserve des statuts légaux particuliers pouvant y déroger. L'absence de contexte justifie qu'elle signale une impossibilité de fonder une réponse, mais les affirmations sur l'ambiguïté, le hors-périmètre et l'absence de recherche ne sont pas établies par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. Elles ne peuvent donc ni répondre à la question sur les sociétés civiles visées et les dérogations statutaires, ni étayer l'abstention ou ses constats d'absence de corpus pertinent."
+    }
+  },
+  "failureStage": "generation"
+}

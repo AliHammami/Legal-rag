@@ -1,0 +1,103 @@
+{
+  "questionId": "q244",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Un membre représentant les adhérents ne peut pas délibérer — c’est-à-dire qu’il ne participe pas avec voix délibérative — lorsque le conseil de surveillance prend une décision concernant :\n\n- le mécanisme de garantie des dépôts ;\n- le mécanisme de garantie des investisseurs ;\n- le mécanisme de garantie des cautions.\n\nCette exclusion résulte de l’**article L. 322-10 du Code monétaire et financier** [Source 1].\n\nDes règles particulières s’appliquent toutefois selon le mécanisme représenté :\n\n- le représentant des adhérents au mécanisme de garantie des cautions qui ne sont pas établissements de crédit ne participe pas aux délibérations relatives à la garantie des dépôts ou des investisseurs (**article L. 313-50-1 du Code monétaire et financier**) [Source 2] ;\n- les représentants des adhérents au mécanisme de garantie des titres qui ne sont pas établissements de crédit ne participent pas aux décisions relatives à la garantie des dépôts ou des cautions (**article L. 322-4 du Code monétaire et financier**) [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L322-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-50-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L322-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 202.10583300050348,
+      "vectorSearchMs": 677.7160700000823,
+      "jinaRerankingMs": 549.4294489994645,
+      "mappingMs": 0.027426999993622303,
+      "totalMs": 1429.3097950005904,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01067500002682209,
+      "contextBuilderMs": 0.02386699989438057,
+      "generationMs": 3586.8587659997866,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5016.214226000011
+    },
+    "judge": {
+      "questionId": "q244",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les trois types de décisions visés : garantie des dépôts, des investisseurs et des cautions. Les précisions supplémentaires sur les représentants liés aux cautions et aux titres sont également conformes aux sources 2 et 3 du contexte. Elle répond directement à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question et couvre l’affirmation principale : le représentant ne délibère pas lors de décisions relatives aux garanties des dépôts, des investisseurs ou des cautions. Les sources 2 et 3 sont également directement pertinentes pour les précisions additionnelles sur les représentants des mécanismes de cautions et de titres, et couvrent ces affirmations."
+    }
+  },
+  "routing": {
+    "answer": "Un représentant des adhérents ne peut pas participer **avec voix délibérative** lorsque le conseil de surveillance délibère sur un mécanisme de garantie autre que celui qu’il représente, selon les cas :\n\n- **Représentant des adhérents au mécanisme de garantie visé à l’article L. 322-5** : il ne dispose pas de voix délibérative lorsque les décisions concernent la garantie des dépôts, la garantie des investisseurs ou la garantie des cautions — **Article L. 322-10 du Code monétaire et financier** [Source 1].\n- **Représentant des adhérents au mécanisme de garantie des cautions qui ne sont pas établissements de crédit** : il ne dispose pas de voix délibérative lorsque les délibérations concernent la garantie des dépôts ou la garantie des investisseurs — **Article L. 313-50-1 du Code monétaire et financier** [Source 2].\n- **Représentants des adhérents au mécanisme de garantie des titres qui ne sont pas établissements de crédit** : ils ne disposent pas de voix délibérative lorsque les décisions concernent la garantie des dépôts ou la garantie des cautions — **Article L. 322-4 du Code monétaire et financier** [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L322-10"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-50-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L322-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.0610389998183,
+      "routingCalls": 1,
+      "embeddingMs": 330.1089530000463,
+      "vectorSearchMs": 198.11092599947006,
+      "jinaRerankingMs": 540.2862919997424,
+      "mappingMs": 0.032091000117361546,
+      "totalMs": 2399.628631999716,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010924999602138996,
+      "contextBuilderMs": 0.020936000160872936,
+      "generationMs": 2746.2817210005596,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5145.954305999912
+    },
+    "judge": {
+      "questionId": "q244",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La première puce répond correctement à la question : le représentant visé ne participe pas avec voix délibérative aux décisions concernant les garanties des dépôts, des investisseurs ou des cautions. Les deux autres puces sont hors du périmètre précis de la question et l'introduction (« autre que celui qu’il représente ») est une formulation potentiellement imprécise, mais les affirmations sont toutes étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : la source 1 répond exactement au cas visé par la question et énumère les décisions excluant la voix délibérative. Les sources 2 et 3, bien que relatives à d'autres catégories de représentants et donc non nécessaires à la réponse stricte, étayent correctement les précisions additionnelles de la réponse générée. Toutes les affirmations substantielles sont couvertes par les textes cités."
+    }
+  },
+  "failureStage": "none"
+}

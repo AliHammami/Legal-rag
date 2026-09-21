@@ -1,0 +1,91 @@
+{
+  "questionId": "q386",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les personnes physiques ou morales qui collectent, modèrent ou diffusent des avis en ligne doivent fournir aux utilisateurs une information **loyale, claire et transparente** sur les modalités de publication et de traitement des avis.\n\nElles doivent notamment :\n\n- préciser si les avis font l’objet d’un contrôle ;\n- lorsque tel est le cas, indiquer les principales caractéristiques de ce contrôle ;\n- afficher la date de publication de chaque avis ainsi que ses éventuelles mises à jour ;\n- indiquer, aux auteurs d’avis non publiés, les raisons du rejet ;\n- mettre gratuitement à la disposition des responsables des produits ou services concernés une fonctionnalité permettant de signaler, de manière motivée, un doute sur l’authenticité d’un avis.\n\nCes obligations résultent de l’**article L. 111-7-2 du Code de la consommation** [Source 1]. Leurs modalités et leur contenu doivent être précisés par décret, après avis de la CNIL.\n\nEn revanche, le contexte fourni ne contient aucune règle relative à la **gestion des comptes de dépôt des clients dans les établissements de crédit**. Il ne permet donc pas d’expliquer comment ces obligations seraient complétées par de telles règles.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 241.53306800033897,
+      "vectorSearchMs": 665.4036090001464,
+      "jinaRerankingMs": 643.3947159992531,
+      "mappingMs": 0.024877000600099564,
+      "totalMs": 1550.3880059998482,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010476999916136265,
+      "contextBuilderMs": 0.011467999778687954,
+      "generationMs": 2746.7935359999537,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4297.215011999942
+    },
+    "judge": {
+      "questionId": "q386",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse expose correctement et de façon détaillée les obligations de l’article L. 111-7-2 relatives aux avis en ligne. Elle ne répond toutefois pas au second volet essentiel de la question : la convention écrite et les conditions générales et tarifaires applicables au compte de dépôt prévues pour les établissements de crédit. Cette omission rend la réponse seulement partielle, même si son choix de ne pas extrapoler est entièrement fondé sur le contexte fourni, qui ne contient que l’article relatif aux avis en ligne."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour le premier volet sur les avis en ligne et permet aussi de constater qu’aucune règle sur les comptes de dépôt en établissement de crédit n’est présente dans le contexte. La réponse generated s’abstient explicitement sur ce second volet plutôt que d’avancer une affirmation non sourcée. Toutes ses affirmations importantes (obligations relatives aux avis et insuffisance du contexte pour les comptes de dépôt) sont ainsi couvertes par la source et par son absence de contenu bancaire."
+    }
+  },
+  "routing": {
+    "answer": "Les personnes physiques ou morales qui collectent, modèrent ou diffusent des avis en ligne doivent fournir aux utilisateurs une information **loyale, claire et transparente** sur les modalités de publication et de traitement des avis. Elles doivent notamment :\n\n- préciser si les avis font l’objet d’un contrôle et, le cas échéant, en présenter les principales caractéristiques ;\n- afficher la date de chaque avis ainsi que ses éventuelles mises à jour ;\n- informer l’auteur d’un avis non publié des raisons de son rejet ;\n- mettre gratuitement à disposition des responsables des produits ou services concernés une fonctionnalité leur permettant de signaler, de manière motivée, un doute sur l’authenticité d’un avis.\n\nCes obligations résultent de l’**article L. 111-7-2 du Code de la consommation** [Source 1]. Le contenu et les modalités de ces informations doivent être précisés par décret, après avis de la CNIL.\n\nEn revanche, le contexte fourni ne contient pas de règles relatives à la **gestion des comptes de dépôt des clients dans les établissements de crédit**. Il contient seulement une disposition concernant les **établissements de paiement** : ceux-ci doivent communiquer à leurs clients, ainsi qu’à toute personne qui en fait la demande, les informations utiles sur les modalités de protection des fonds collectés, informer les clients de toute modification et s’interdire l’usage publicitaire de ces informations, conformément à l’**article L. 522-18 du Code monétaire et financier** [Source 2].\n\nLa complémentarité avec les règles propres aux comptes de dépôt dans les établissements de crédit ne peut donc pas être précisée à partir des sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L522-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1538.6105040004477,
+      "routingCalls": 1,
+      "embeddingMs": 191.5971460007131,
+      "vectorSearchMs": 222.71626799926162,
+      "jinaRerankingMs": 550.2469870001078,
+      "mappingMs": 0.030179000459611416,
+      "totalMs": 2503.235980999656,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04694000072777271,
+      "contextBuilderMs": 0.019346999935805798,
+      "generationMs": 3438.1862850002944,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5941.498113000765
+    },
+    "judge": {
+      "questionId": "q386",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon détaillée les obligations de l’article L. 111-7-2. Elle n’apporte toutefois pas l’élément attendu sur l’article L. 312-1-1 du code monétaire et financier, à savoir la convention écrite relative au compte de dépôt et à ses conditions générales et tarifaires ; elle ne répond donc que partiellement à la question comparative. Cette omission est néanmoins justifiée au regard du contexte réellement fourni, qui ne contient que l’article L. 522-18 sur les établissements de paiement. Toutes les affirmations positives importantes sont supportées par les sources."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre précisément les obligations relatives aux avis en ligne. La source 2 ne traite pas des comptes de dépôt dans les établissements de crédit ni de l'article L. 312-1-1, mais elle est pertinente pour étayer le constat que le seul texte bancaire/financier fourni concerne les établissements de paiement et la protection des fonds. Les affirmations détaillées sur les avis sont toutes couvertes par la source 1, et la réserve formulée sur l'absence de règles relatives aux comptes de dépôt est cohérente avec le périmètre des sources fournies."
+    }
+  },
+  "failureStage": "generation"
+}

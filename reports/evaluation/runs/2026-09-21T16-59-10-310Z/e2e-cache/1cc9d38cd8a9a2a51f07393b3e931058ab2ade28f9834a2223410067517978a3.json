@@ -1,0 +1,87 @@
+{
+  "questionId": "q211",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Une telle offre au public est autorisée uniquement si elle présente les caractéristiques d’une offre définie :\n\n- soit au **1° de l’article L. 411-2 du Code monétaire et financier** ;\n- soit au **3° de l’article L. 411-2 du Code monétaire et financier**.\n\nC’est l’exception prévue par l’**article L. 253-1 du Code de commerce** à l’interdiction générale des offres au public portant sur les droits de membre d’un groupement européen d’intérêt économique [Source 1].\n\nLe contenu détaillé des catégories d’offres visées aux 1° et 3° de l’article L. 411-2 n’étant pas fourni, il n’est pas possible de préciser davantage leurs caractéristiques à partir du contexte disponible. À défaut de remplir ces conditions, les contrats conclus ou les droits créés sont frappés de nullité.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.73483499977738,
+      "vectorSearchMs": 614.8566470001824,
+      "jinaRerankingMs": 568.8478459999897,
+      "mappingMs": 0.027445000130683184,
+      "totalMs": 1423.5000700000674,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009542000014334917,
+      "contextBuilderMs": 0.014737000223249197,
+      "generationMs": 2670.7945759999566,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4094.329785999842
+    },
+    "judge": {
+      "questionId": "q211",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement les deux conditions alternatives prévues par l’article L. 253-1 : l’offre doit relever des caractéristiques définies au 1° ou au 3° de l’article L. 411-2 du code monétaire et financier. La précision sur la nullité en l’absence de respect de l’interdiction est également directement appuyée par le contexte. L’absence de détail sur ces catégories est correctement signalée comme non documentée dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 253-1 du code de commerce, qui pose l’interdiction et son exception : l’offre est autorisée lorsqu’elle répond aux caractéristiques des offres définies au 1° ou au 3° de l’article L. 411-2 du code monétaire et financier. Elle couvre également l’affirmation relative à la nullité des contrats conclus ou droits créés en cas de violation de l’interdiction. Le constat selon lequel le détail des catégories du L. 411-2 n’est pas fourni est également justifié par le contenu limité de la source."
+    }
+  },
+  "routing": {
+    "answer": "Malgré l’interdiction générale, l’offre au public de droits de membre d’un groupement européen d’intérêt économique est autorisée uniquement si elle présente les caractéristiques d’une offre définie :\n\n- au **1° de l’article L. 411-2 du Code monétaire et financier**, ou\n- au **3° de l’article L. 411-2 du Code monétaire et financier**.\n\nCette exception est prévue par l’**article L. 253-1 du Code de commerce** [Source 1]. Le contexte fourni ne précise toutefois pas le contenu des 1° et 3° de l’article L. 411-2 ; il ne permet donc pas de détailler davantage les caractéristiques exigées.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 11773.377051999792,
+      "routingCalls": 1,
+      "embeddingMs": 403.8970169997774,
+      "vectorSearchMs": 278.20918300002813,
+      "jinaRerankingMs": 556.9070569998585,
+      "mappingMs": 0.024596999865025282,
+      "totalMs": 13012.439325999934,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010036999825388193,
+      "contextBuilderMs": 0.015730999875813723,
+      "generationMs": 2017.9474730002694,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 15030.422255999874
+    },
+    "judge": {
+      "questionId": "q211",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux conditions alternatives prévues par l'article L. 253-1 : l'offre doit présenter les caractéristiques d'une offre définie au 1° ou au 3° de l'article L. 411-2 du code monétaire et financier. Elle est entièrement étayée par le contexte et répond à la question, tout en indiquant correctement que le contenu détaillé de ces renvois n'est pas fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L. 253-1 et énonce expressément l'exception à l'interdiction : l'offre est autorisée lorsqu'elle répond aux caractéristiques des offres définies au 1° ou au 3° de l'article L. 411-2 du code monétaire et financier. Elle couvre également le constat selon lequel le contenu de ces deux renvois n'est pas précisé dans le contexte fourni."
+    }
+  },
+  "failureStage": "none"
+}

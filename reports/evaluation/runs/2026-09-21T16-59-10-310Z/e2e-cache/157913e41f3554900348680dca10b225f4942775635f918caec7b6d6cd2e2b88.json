@@ -1,0 +1,87 @@
+{
+  "questionId": "q215",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le droit attaché aux titres donnant accès au capital acquis par la société elle-même est **annulé par la société émettrice**.  \n\n**Article L225-149-2 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-149-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.72248400002718,
+      "vectorSearchMs": 636.6676499997266,
+      "jinaRerankingMs": 550.3250510003418,
+      "mappingMs": 0.03268800023943186,
+      "totalMs": 1410.7776210000739,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010517000220716,
+      "contextBuilderMs": 0.013130999635905027,
+      "generationMs": 1108.0489180004224,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2518.8609310002066
+    },
+    "judge": {
+      "questionId": "q215",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle applicable : les droits attachés aux titres acquis par la société émettrice sont annulés par celle-ci. Cette affirmation, ainsi que la référence à l'article L225-149-2 du Code de commerce, est explicitement supportée par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l'article L225-149-2 vise expressément les droits attachés aux titres donnant accès au capital acquis par la société émettrice et prévoit qu'ils sont annulés par celle-ci. Elle couvre intégralement l'affirmation essentielle de la réponse ainsi que la référence législative citée."
+    }
+  },
+  "routing": {
+    "answer": "Le droit attaché aux titres donnant accès au capital acquis par la société émettrice est **annulé par cette société**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L225-149-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1758.1078519998118,
+      "routingCalls": 1,
+      "embeddingMs": 251.94715999998152,
+      "vectorSearchMs": 240.0155969997868,
+      "jinaRerankingMs": 561.6865829997696,
+      "mappingMs": 0.03555099992081523,
+      "totalMs": 2811.841601999942,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012622999958693981,
+      "contextBuilderMs": 0.012014000210911036,
+      "generationMs": 1505.6596610001288,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4317.535190999974
+    },
+    "judge": {
+      "questionId": "q215",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse correspond exactement à la règle applicable : les droits attachés aux titres acquis par la société émettrice sont annulés par celle-ci. Elle est pleinement étayée par le contexte fourni (article L225-149-2) et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source cite directement l'article L225-149-2, qui prévoit expressément que les droits attachés aux titres donnant accès au capital acquis par la société émettrice sont annulés par celle-ci. Elle est exactement pertinente et couvre intégralement l'affirmation de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

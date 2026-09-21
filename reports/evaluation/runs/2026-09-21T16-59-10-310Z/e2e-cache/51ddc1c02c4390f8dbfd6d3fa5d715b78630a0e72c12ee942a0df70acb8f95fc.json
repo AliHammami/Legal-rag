@@ -1,0 +1,87 @@
+{
+  "questionId": "q037",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La peine est portée à **cinq ans d’emprisonnement** lorsque les sévices graves ou l’acte de cruauté **ont entraîné la mort de l’animal**. L’amende est alors portée à **75 000 euros**.\n\nC’est prévu par l’**article 521-1 du Code pénal** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 383.9493149999762,
+      "vectorSearchMs": 625.2113210000098,
+      "jinaRerankingMs": 600.7095499999123,
+      "mappingMs": 0.026445999974384904,
+      "totalMs": 1609.926249000011,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011598999961279333,
+      "contextBuilderMs": 0.01137699990067631,
+      "generationMs": 1682.024534999975,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3291.9826480000047
+    },
+    "judge": {
+      "questionId": "q037",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement la condition d’aggravation : les sévices graves ou actes de cruauté doivent avoir entraîné la mort de l’animal. Elle ajoute correctement l’amende de 75 000 euros et la référence à l’article 521-1, tous deux explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 521-1 du Code pénal et énonce expressément que lorsque les sévices graves ou actes de cruauté ont entraîné la mort de l’animal, les peines sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée, y compris la référence à l’article."
+    }
+  },
+  "routing": {
+    "answer": "La peine encourue peut être portée à **cinq ans d’emprisonnement** lorsque les sévices graves ou l’acte de cruauté envers l’animal domestique, apprivoisé ou tenu en captivité **ont entraîné la mort de l’animal**. L’amende est alors portée à **75 000 euros**.\n\n**Article 521-1 du Code pénal [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "521-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1222.083944000071,
+      "routingCalls": 1,
+      "embeddingMs": 193.5795990000479,
+      "vectorSearchMs": 34.60730399994645,
+      "jinaRerankingMs": 597.8705580000533,
+      "mappingMs": 0.02354999992530793,
+      "totalMs": 2048.191995000001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009603000013157725,
+      "contextBuilderMs": 0.010720000020228326,
+      "generationMs": 1324.0428740000352,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3372.2633480000077
+    },
+    "judge": {
+      "questionId": "q037",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement que la peine est portée à cinq ans lorsque les sévices graves ou actes de cruauté ont entraîné la mort de l’animal. Elle ajoute correctement l’amende de 75 000 euros. Ces éléments sont explicitement prévus par le contexte de l’article 521-1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 521-1 du Code pénal et énonce explicitement que lorsque les sévices graves ou actes de cruauté ont entraîné la mort de l’animal, les peines sont portées à cinq ans d’emprisonnement et 75 000 euros d’amende. Elle couvre donc l’ensemble des affirmations importantes de la réponse."
+    }
+  },
+  "failureStage": "none"
+}

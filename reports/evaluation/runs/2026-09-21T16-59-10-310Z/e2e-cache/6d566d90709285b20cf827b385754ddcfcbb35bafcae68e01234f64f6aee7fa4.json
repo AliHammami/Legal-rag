@@ -1,0 +1,95 @@
+{
+  "questionId": "q436",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui. Un contrat peut être annulé en cas de vice du consentement : les vices du consentement constituent une cause de nullité relative du contrat, conformément à l’article 1131 du Code civil [Source 2].\n\nCette annulation constitue une exception au principe selon lequel un contrat ne peut être modifié ou révoqué que du consentement mutuel des parties ou pour les causes autorisées par la loi, prévu à l’article 1193 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1131"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.5115909986198,
+      "vectorSearchMs": 687.5922910012305,
+      "jinaRerankingMs": 479.8886259999126,
+      "mappingMs": 0.028867999091744423,
+      "totalMs": 1368.046460999176,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011936001479625702,
+      "contextBuilderMs": 0.016127999871969223,
+      "generationMs": 1190.346286000684,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2558.4320790003985
+    },
+    "judge": {
+      "questionId": "q436",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse est juridiquement correcte, complète et directement étayée par les articles 1131 et 1193 du Code civil présents dans le contexte. Toutefois, l'abstention était attendue : le système répond au fond au lieu d'indiquer que la question est hors du périmètre du Code pénal ou que le contexte ne permet pas de répondre dans ce cadre."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour la réponse produite : l’article 1131 énonce expressément que les vices du consentement entraînent la nullité relative du contrat, et l’article 1193 énonce le principe de modification ou révocation par consentement mutuel, sous réserve des causes autorisées par la loi. Elles couvrent les affirmations juridiques importantes de la réponse. Bien que l’abstention fût attendue dans le cadre annoncé, les sources suffisent pleinement à étayer la réponse affirmative effectivement générée."
+    }
+  },
+  "routing": {
+    "answer": "Oui. Les vices du consentement constituent une cause de nullité relative du contrat, conformément à l’article 1131 du Code civil [Source 2].\n\nToutefois, cette nullité ne résulte pas simplement d’une modification ou d’une révocation unilatérale du contrat : les contrats ne peuvent être modifiés ou révoqués que d’un commun accord ou dans les cas prévus par la loi, selon l’article 1193 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1193"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1131"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1625.2177860010415,
+      "routingCalls": 1,
+      "embeddingMs": 231.49087600037456,
+      "vectorSearchMs": 56.63347500003874,
+      "jinaRerankingMs": 485.61122800037265,
+      "mappingMs": 0.030073000118136406,
+      "totalMs": 2399.017183000222,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013152001425623894,
+      "contextBuilderMs": 0.015758000314235687,
+      "generationMs": 1345.9653910007328,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3745.023482998833
+    },
+    "judge": {
+      "questionId": "q436",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse est juridiquement correcte et complète au regard des extraits fournis : l’article 1131 établit que les vices du consentement causent la nullité relative. La précision sur l’article 1193 est également fidèle au contexte, quoique non indispensable. Cependant, l’abstention était attendue et la réponse répond substantiellement à la question au lieu de signaler l’insuffisance ou le hors-périmètre du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 répond directement à la question en établissant que les vices du consentement constituent une cause de nullité relative du contrat. La source 1 est pertinente pour la précision ajoutée sur la modification ou la révocation des contrats par consentement mutuel ou dans les cas légaux. Les deux affirmations juridiques importantes de la réponse sont explicitement couvertes par les extraits fournis."
+    }
+  },
+  "failureStage": "abstention"
+}

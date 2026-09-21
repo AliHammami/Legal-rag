@@ -1,0 +1,95 @@
+{
+  "questionId": "q313",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le prêteur doit maintenir les conditions de l’offre pendant **au moins trente jours** :\n\n- à compter de son **émission** selon l’article L315-10 du Code de la consommation [Source 1] ;\n- à compter de sa **réception par l’emprunteur** selon l’article L313-34 du Code de la consommation [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 187.29808000009507,
+      "vectorSearchMs": 615.756626999937,
+      "jinaRerankingMs": 521.268396999687,
+      "mappingMs": 0.02773700002580881,
+      "totalMs": 1324.388908999972,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010534999892115593,
+      "contextBuilderMs": 0.01886500045657158,
+      "generationMs": 2011.3870670003816,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3335.8146150000393
+    },
+    "judge": {
+      "questionId": "q313",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement la durée minimale de trente jours et mentionne la règle correspondant à la référence (à compter de l’émission). Elle ajoute aussi, conformément au second extrait de contexte, le régime de l’article L313-34, où le délai court à compter de la réception par l’emprunteur. Cette juxtaposition sans préciser le champ d’application respectif des deux articles peut créer une légère ambiguïté, mais les affirmations sont exactes et entièrement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : elles énoncent l'obligation de maintenir les conditions de l'offre pendant au moins trente jours et précisent chacune leur point de départ. Elles couvrent intégralement les deux affirmations de la réponse générée, respectivement l'émission (source 1) et la réception par l'emprunteur (source 2)."
+    }
+  },
+  "routing": {
+    "answer": "Le prêteur est tenu de maintenir les conditions de l’offre pendant **au moins trente jours**.\n\n- Pour l’offre remise : délai de trente jours à compter de son émission — **Article L315-10 du Code de la consommation** [Source 1].\n- Pour l’offre envoyée : délai de trente jours à compter de sa réception par l’emprunteur — **Article L313-34 du Code de la consommation** [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L315-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L313-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2147.6062470003963,
+      "routingCalls": 1,
+      "embeddingMs": 250.5560760004446,
+      "vectorSearchMs": 93.40547099988908,
+      "jinaRerankingMs": 535.7996990000829,
+      "mappingMs": 0.027979999780654907,
+      "totalMs": 3027.4694339996204,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013969999738037586,
+      "contextBuilderMs": 0.015183000825345516,
+      "generationMs": 1884.3630290003493,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4911.869693999179
+    },
+    "judge": {
+      "questionId": "q313",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne correctement le délai minimal de trente jours. Elle précise à juste titre, conformément au contexte, que pour une offre remise le délai court à compter de l’émission (cas visé par la question et la référence), et distingue utilement le cas d’une offre envoyée, où il court à compter de la réception. Toutes les affirmations sont explicitement soutenues par les deux sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement au cas de l’offre remise et établit le maintien minimal de trente jours à compter de son émission. La source 2 est également pertinente pour la précision additionnelle relative à une offre envoyée et au point de départ à la réception. Toutes les affirmations substantielles de la réponse sont explicitement couvertes."
+    }
+  },
+  "failureStage": "none"
+}

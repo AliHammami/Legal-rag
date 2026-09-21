@@ -1,0 +1,82 @@
+{
+  "questionId": "q229",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L444-1-A du Code de commerce**, les chapitres Ier à III du titre concerné :\n\n- s’appliquent à **toute convention entre un fournisseur et un acheteur** portant sur des produits ou services **commercialisés sur le territoire français** ;\n- sont des dispositions **d’ordre public** ;\n- relèvent, pour les litiges concernant leur application, de la **compétence exclusive des tribunaux français**.\n\nCette compétence s’exerce toutefois sous réserve du respect du **droit de l’Union européenne** et des **traités internationaux** ratifiés ou approuvés par la France, et **sans exclure le recours à l’arbitrage**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L444-1-A"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 207.2652559997514,
+      "vectorSearchMs": 663.342307000421,
+      "jinaRerankingMs": 562.759324000217,
+      "mappingMs": 0.07666900008916855,
+      "totalMs": 1433.484372999519,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010418999940156937,
+      "contextBuilderMs": 0.0534680001437664,
+      "generationMs": 1628.5071260007098,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3062.0658549992368
+    },
+    "judge": {
+      "questionId": "q229",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la portée territoriale (conventions fournisseur-acheteur portant sur des produits ou services commercialisés en France) et la compétence exclusive des tribunaux français, avec les réserves relatives au droit de l’UE, aux traités internationaux et à l’arbitrage. L’ajout du caractère d’ordre public est exact et explicitement supporté par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L444-1-A et est exactement pertinente pour la portée territoriale et la compétence juridictionnelle demandées. Elle couvre toutes les affirmations importantes de la réponse : conventions fournisseur-acheteur, produits ou services commercialisés en France, caractère d’ordre public, compétence exclusive des tribunaux français, réserves liées au droit de l’Union européenne et aux traités internationaux, ainsi que le maintien du recours à l’arbitrage."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 6451.328552999534,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 6451.329690000042,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 6451.337699000724
+    },
+    "judge": {
+      "questionId": "q229",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 2,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit aucun élément sur l'application aux conventions portant sur des produits ou services commercialisés en France, ni sur la compétence exclusive des tribunaux français, les réserves liées au droit de l'UE et aux traités, ou l'exception d'arbitrage. Elle refuse de répondre alors qu'une réponse était attendue. L'affirmation générale selon laquelle le contexte vide ne permet pas de fonder une réponse est cohérente, mais les affirmations supplémentaires sur l'ambiguïté, le périmètre des codes et l'absence de recherche ne sont pas établies par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n’est fournie. Elles ne permettent donc ni de répondre à la portée territoriale et à la compétence juridictionnelle prévues par l’article L444-1-A, ni d’étayer les affirmations d’abstention de la réponse générée."
+    }
+  },
+  "failureStage": "generation"
+}

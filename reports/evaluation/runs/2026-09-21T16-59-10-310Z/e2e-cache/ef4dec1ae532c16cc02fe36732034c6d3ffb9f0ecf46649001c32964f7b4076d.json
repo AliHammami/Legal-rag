@@ -1,0 +1,95 @@
+{
+  "questionId": "q204",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’**article L. 241-2 du Code de commerce** réprime le fait, pour des gérants, **d’émettre directement ou par personne interposée, pour le compte de la société, des valeurs mobilières quelconques**, à l’exception des obligations émises dans les conditions prévues par l’article L. 223-11. [Source 1]\n\nLa sanction prévue est **un emprisonnement de six mois et une amende de 9 000 euros**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L241-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 284.86337000038475,
+      "vectorSearchMs": 582.705425999593,
+      "jinaRerankingMs": 542.722392000258,
+      "mappingMs": 0.025911000091582537,
+      "totalMs": 1410.3480519996956,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009775000158697367,
+      "contextBuilderMs": 0.02075600018724799,
+      "generationMs": 2477.971097999718,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3888.363614999689
+    },
+    "judge": {
+      "questionId": "q204",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement l'incrimination visée (émission, directe ou par personne interposée, de valeurs mobilières pour le compte de la société, sauf obligations relevant de l'article L. 223-11) et les deux peines prévues : six mois d'emprisonnement et 9 000 euros d'amende. Toutes ces affirmations sont explicitement contenues dans le contexte Source 1."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit intégralement l'article L. 241-2 visé par la question. Elle couvre toutes les affirmations importantes de la réponse générée, soit le comportement incriminé, l'exception relative aux obligations émises selon l'article L. 223-11, ainsi que les peines de six mois d'emprisonnement et 9 000 euros d'amende."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L. 241-2 du Code de commerce**, le délit consiste, pour des **gérants**, à émettre, directement ou par personne interposée, pour le compte de la société, des **valeurs mobilières quelconques**, sauf les obligations émises dans les conditions prévues par l’article L. 223-11 du même code.\n\nLa sanction prévue est :\n\n- **six mois d’emprisonnement** ;\n- **9 000 euros d’amende**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L241-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1535.2934050001204,
+      "routingCalls": 1,
+      "embeddingMs": 227.25468799984083,
+      "vectorSearchMs": 203.93862899998203,
+      "jinaRerankingMs": 555.4677450000308,
+      "mappingMs": 0.02983100013807416,
+      "totalMs": 2522.0152360000648,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01131899980828166,
+      "contextBuilderMs": 0.01886700000613928,
+      "generationMs": 1533.2396820001304,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4055.2947189998813
+    },
+    "judge": {
+      "questionId": "q204",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement le comportement incriminé, y compris l’exception relative aux obligations émises selon l’article L. 223-11, et reproduit les deux peines prévues. Toutes les affirmations importantes sont explicitement soutenues par la source 1 du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 241-2 visé et énonce exactement le comportement incriminé, son exception et les peines. Elle couvre toutes les affirmations importantes de la réponse générée. La source 2 est accessoire et n'est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

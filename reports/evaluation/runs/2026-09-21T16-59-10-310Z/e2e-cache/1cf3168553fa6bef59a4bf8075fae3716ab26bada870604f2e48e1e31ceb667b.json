@@ -1,0 +1,103 @@
+{
+  "questionId": "q394",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 2331 du Code civil**, les créances privilégiées sur la généralité des meubles comprennent :\n\n1. **Les frais de justice**, à condition qu’ils aient profité au créancier auquel le privilège est opposé ;\n2. **Les frais funéraires** ;\n3. **Certaines rémunérations et indemnités**, notamment :\n   - les rémunérations des salariés et apprentis pour les six derniers mois ;\n   - le salaire différé prévu par le Code rural et de la pêche maritime ;\n   - certaines créances du conjoint survivant ;\n   - les indemnités de fin de contrat et de précarité d’emploi ;\n   - les indemnités liées au préavis, aux congés payés et à certaines ruptures ou situations de licenciement.\n\nCes catégories sont prévues par l’**article 2331 du Code civil** [Source 2]. L’**article L. 3253-1 du Code du travail** renvoie d’ailleurs au 3° de cet article pour la garantie des créances résultant du contrat de travail [Source 3].\n\nEn revanche, le contexte fourni **ne contient aucune disposition du Code de la consommation ni du Code de l’action sociale et des familles** précisant une modification ou une adaptation des références aux articles du Code du travail ou du Code de l’action sociale. Il n’est donc pas possible de déterminer, à partir des seules sources fournies, quelles modifications spécifiques s’appliqueraient dans le Code de la consommation.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2331"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3253-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 239.15623199939728,
+      "vectorSearchMs": 659.9493559990078,
+      "jinaRerankingMs": 570.685413999483,
+      "mappingMs": 0.034967999905347824,
+      "totalMs": 1469.853192999959,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011695999652147293,
+      "contextBuilderMs": 0.04071799851953983,
+      "generationMs": 3545.812894999981,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5015.731239998713
+    },
+    "judge": {
+      "questionId": "q394",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les catégories de créances de l’article 2331 figurant dans le contexte, y compris les frais de justice, frais funéraires et les principales rémunérations et indemnités de travail. Elle ne répond toutefois pas à la seconde partie : les adaptations prévues par l’article L. 771-3 du Code de la consommation, notamment les substitutions de références aux codes du travail et de l’action sociale, ne sont pas fournies. Cette omission est justifiée par l’absence de ce texte dans le contexte : l’affirmation de ne pas pouvoir le déterminer est donc entièrement fondée. Le modèle répond néanmoins réellement à une partie substantielle de la question, de sorte qu’il ne s’agit pas d’une abstention indue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 2 et 3 sont directement pertinentes pour la première partie : l’article 2331 énumère les frais de justice, frais funéraires et les rémunérations/indemnités privilégiées, et l’article L. 3253-1 confirme son lien avec les créances de travail. En revanche, aucune source ne fournit l’article L. 771-3 du Code de la consommation ni les adaptations relatives au Code du travail et au Code de l’action sociale, qui constituent une partie importante de la question. Les sources sont donc seulement partiellement suffisantes pour répondre à la question complète. Elles couvrent néanmoins toutes les affirmations de la réponse générée : son exposé de l’article 2331 est fondé sur la source 2, le renvoi est fondé sur la source 3, et son constat d’impossibilité sur la seconde partie correspond à l’absence de ces dispositions dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’extrait fourni de l’**article 2331 du Code civil**, les créances privilégiées sur la généralité des meubles comprennent :\n\n1. **Les frais de justice**, à condition qu’ils aient profité au créancier auquel le privilège est opposé ;\n2. **Les frais funéraires** ;\n3. **Certaines rémunérations et indemnités**, notamment :\n   - les rémunérations des salariés et apprentis pour les six derniers mois ;\n   - le salaire différé agricole ;\n   - certaines créances du conjoint survivant ;\n   - les indemnités de fin de contrat et de précarité d’emploi ;\n   - les indemnités liées à l’inobservation du préavis ou à certains congés ;\n   - certaines indemnités de licenciement, dans les limites prévues par le texte ;\n   - diverses indemnités dues aux salariés en application des articles cités du Code du travail.\n\nCes catégories résultent de l’**article 2331 du Code civil** [Source 2].\n\nS’agissant du **Code de la consommation**, l’extrait fourni de l’article L. 771-2 se borne à indiquer les dates et textes ayant déterminé la rédaction de plusieurs articles. Il ne contient pas de disposition précisant une modification des références au **Code du travail** ou au **Code de l’action sociale et des familles**. En outre, l’extrait de l’article 2331 ne comporte pas de référence au Code de l’action sociale et des familles. Il n’est donc pas possible, à partir des sources fournies, d’identifier les modifications spécifiques demandées pour ces références [Source 3].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2331"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L771-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1537.9441480003297,
+      "routingCalls": 1,
+      "embeddingMs": 282.3431850001216,
+      "vectorSearchMs": 147.59084600023925,
+      "jinaRerankingMs": 592.008735999465,
+      "mappingMs": 0.021069001406431198,
+      "totalMs": 2559.9349429998547,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05196100100874901,
+      "contextBuilderMs": 0.024927999824285507,
+      "generationMs": 3688.062749000266,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6248.088545000181
+    },
+    "judge": {
+      "questionId": "q394",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et de façon assez détaillée les catégories de créances privilégiées prévues par l’article 2331, notamment les frais de justice, les frais funéraires et les diverses créances salariales et indemnités. En revanche, elle ne fournit pas les adaptations spécifiques du Code de la consommation attendues par la question et mentionnées dans la référence (renvois remplacés par des dispositions locales équivalentes et autres adaptations). Cette omission s’explique par le contexte effectivement fourni, qui ne contient que l’article L. 771-2 et non L. 771-3 : l’affirmation selon laquelle les modifications demandées ne peuvent pas être identifiées à partir des sources est donc pleinement fondée. La réponse répond néanmoins réellement à la partie documentée de la question et ne constitue pas une abstention globale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente et couvre les catégories énumérées au titre de l’article 2331 du Code civil. La source 3, bien qu’elle ne soit pas l’article L. 771-3 visé par la question, est pertinente pour étayer le constat prudent de la réponse : elle ne contient que des indications de rédaction d’articles et aucune adaptation des renvois au code du travail ou au code de l’action sociale et des familles. La source 1 est hors du champ des privilèges généraux, mais elle n’est pas utilisée pour fonder la réponse. Toutes les affirmations importantes de la réponse sont ainsi soutenues par les extraits fournis, y compris l’impossibilité d’identifier les modifications spécifiques demandées à partir de ce contexte."
+    }
+  },
+  "failureStage": "generation"
+}

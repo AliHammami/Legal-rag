@@ -1,0 +1,90 @@
+{
+  "questionId": "q481",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas d’exposer l’ensemble des règles relatives à la détention provisoire.\n\nElles indiquent seulement que, lorsque certaines peines d’emprisonnement sont prononcées et que la juridiction assortit sa décision de l’exécution provisoire, celle-ci peut ordonner le placement ou le maintien en détention du condamné, dans les conditions prévues aux articles 397-4 et 465-1 du Code de procédure pénale. Le juge de l’application des peines doit alors fixer les modalités d’exécution de la mesure dans un délai de cinq jours ouvrables, selon l’article 723-7-1 du même code [Source 1 — Article 132-25 du Code pénal].\n\nPar ailleurs, le fait, pour un agent de l’administration pénitentiaire, de recevoir ou de retenir une personne sans mandat, jugement ou ordre d’écrou conforme à la loi, ou de prolonger indûment une détention, constitue une infraction punie de deux ans d’emprisonnement et de 30 000 euros d’amende [Source 2 — Article 432-6 du Code pénal].\n\nLes conditions, la durée, le contrôle et les voies de recours propres à la détention provisoire ne sont pas précisées dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-25"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-6"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-63"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 255.5287800002843,
+      "vectorSearchMs": 648.446766000241,
+      "jinaRerankingMs": 585.2275670003146,
+      "mappingMs": 0.026938999071717262,
+      "totalMs": 1489.256535999477,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0102199986577034,
+      "contextBuilderMs": 0.03189400024712086,
+      "generationMs": 2655.6781680006534,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4144.990204999223
+    },
+    "judge": {
+      "questionId": "q481",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît clairement que le contexte ne permet pas d’exposer les règles générales de la détention provisoire. Les précisions complémentaires sont limitées à des éléments effectivement présents dans les sources et distinguent les informations manquantes (conditions, durée, contrôle et recours)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources ne traitent pas directement du régime général de la détention provisoire, mais elles sont suffisamment liées à la détention et à son encadrement pour justifier l’abstention : l’article 132-25 vise un placement ou maintien en détention du condamné dans un cadre d’exécution de peine, et l’article 432-6 sanctionne une détention irrégulière. Elles ne permettent toutefois pas d’exposer les conditions, durées, contrôles ou recours propres à la détention provisoire. Les affirmations concrètes de la réponse sur le placement ou maintien en détention, le délai de cinq jours ouvrables et l’infraction de détention irrégulière sont couvertes par les sources citées, et le constat de périmètre insuffisant est cohérent avec elles."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1200.128223998472,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1200.1291029993445,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1200.1369029991329
+    },
+    "judge": {
+      "questionId": "q481",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et une abstention était attendue. La réponse indique clairement qu'elle ne peut pas répondre de manière fiable faute de contexte pertinent. Elle ne formule aucune règle juridique non fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, mais l'abstention est attendue et la réponse se limite à constater l'absence de contexte ou de corpus pertinent. Elle ne formule aucune affirmation juridique de fond nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

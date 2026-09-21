@@ -1,0 +1,95 @@
+{
+  "questionId": "q378",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article L133-33 du Code monétaire et financier**, une demande de remboursement de monnaie électronique est possible **avant le terme prévu au contrat**, à condition qu’il ne s’agisse pas d’un cas de résiliation du contrat. Elle peut porter :\n\n- soit sur la totalité de la monnaie électronique détenue ;\n- soit sur une partie seulement de celle-ci.  \n  **[Source 1]**\n\nLe contexte fourni ne contient en revanche **aucune disposition du Code pénal relative aux sanctions de l’homicide involontaire**. Il ne permet donc pas de préciser les peines applicables.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-33"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-35"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.18406200036407,
+      "vectorSearchMs": 656.667290000245,
+      "jinaRerankingMs": 534.4542290000245,
+      "mappingMs": 0.03176799975335598,
+      "totalMs": 1412.3712879996747,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010433000512421131,
+      "contextBuilderMs": 0.01843699999153614,
+      "generationMs": 2627.535351000726,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4039.9475469999015
+    },
+    "judge": {
+      "questionId": "q378",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et complètement la règle de l'article L133-33 présente dans le contexte. Elle n'indique toutefois pas les sanctions de l'homicide involontaire attendues par la question et la référence. Son constat selon lequel le contexte fourni ne contient aucune disposition pénale pertinente est exact, et toutes ses affirmations sont donc fondées sur ce contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre précisément les conditions du remboursement anticipé (hors résiliation, total ou partiel). La source 2 concerne un remboursement après le terme dans un cas particulier et ne répond pas au volet pénal. Aucune source ne porte sur l’homicide involontaire ni ses sanctions, ce qui rend les sources globalement partielles pour la question complète. Toutefois, la réponse générée se limite sur ce point à constater l’absence de disposition pénale dans le contexte fourni, constat cohérent avec les sources ; ses affirmations sont donc couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon **l’article L133-33 du Code monétaire et financier**, lorsque la demande de remboursement intervient **avant le terme prévu au contrat**, et **hors le cas de résiliation du contrat**, elle peut porter :\n\n- soit sur la totalité de la monnaie électronique détenue ;\n- soit sur une partie seulement de celle-ci.  \n[Source 1]\n\nLe contexte précise également qu’après le terme, dans le délai d’un an, le remboursement est total dans certaines conditions pour les établissements exerçant des activités hybrides. **Article L133-35 du Code monétaire et financier** [Source 2].\n\nEn revanche, les sources fournies ne contiennent **aucune disposition du Code pénal relative aux sanctions de l’homicide involontaire**. Il n’est donc pas possible de préciser ces sanctions à partir du seul contexte disponible.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-33"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-35"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.4164479998872,
+      "routingCalls": 1,
+      "embeddingMs": 216.27546899951994,
+      "vectorSearchMs": 203.5456159999594,
+      "jinaRerankingMs": 526.3124090004712,
+      "mappingMs": 0.07819700054824352,
+      "totalMs": 2174.6745100002736,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03999600000679493,
+      "contextBuilderMs": 0.017992999404668808,
+      "generationMs": 2637.9658880000934,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4812.708700999618
+    },
+    "judge": {
+      "questionId": "q378",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les conditions de remboursement avant terme prévues à l’article L133-33 : hors résiliation, pour tout ou partie de la monnaie électronique détenue. Elle ne fournit toutefois pas les sanctions de l’homicide involontaire demandées, alors qu’elles constituent la seconde partie essentielle de la question. Son refus de les préciser est pleinement justifié par le contexte, qui ne contient aucune disposition pénale ; les affirmations formulées sont donc entièrement fondées sur les sources fournies. La réponse répond effectivement à une partie substantielle de la question et ne constitue pas une abstention globale."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour les conditions du remboursement avant terme. La source 2 est seulement accessoire, car elle traite d’un remboursement après le terme dans un cas particulier. Aucune source ne concerne les sanctions pénales de l’homicide involontaire, qui constitue une partie importante de la question : les sources sont donc seulement partiellement suffisantes pour répondre à la question complète. En revanche, elles couvrent les affirmations effectivement formulées par la réponse : les conditions avant terme sont reprises fidèlement de la source 1, la précision relative au délai postérieur au terme correspond à la source 2, et le constat d’absence de disposition pénale dans le contexte fourni justifie l’impossibilité annoncée de préciser les sanctions."
+    }
+  },
+  "failureStage": "generation"
+}

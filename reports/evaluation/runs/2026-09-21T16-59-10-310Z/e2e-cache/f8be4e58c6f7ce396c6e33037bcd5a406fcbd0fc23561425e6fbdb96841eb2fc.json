@@ -1,0 +1,98 @@
+{
+  "questionId": "q437",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Plusieurs règles protègent la partie considérée comme la plus faible :\n\n- **Salarié ou partie devant le conseil de prud’hommes** : les parties se défendent elles-mêmes, mais peuvent être **assistées ou représentées**. Cette faculté facilite l’accès à la défense de leurs droits. **Article R. 1453-1 du Code du travail [Source 1].**\n\n- **Consommateur vulnérable démarché à domicile** : il est interdit de profiter de la faiblesse ou de l’ignorance d’une personne pour lui faire souscrire un engagement, notamment lorsque celle-ci ne pouvait pas en mesurer la portée ou lorsqu’elle a subi une contrainte. **Article L. 121-8 du Code de la consommation [Source 3].**\n\n- **Consommateur dans un contrat international** : le consommateur ne peut pas être privé des protections applicables en matière de **clauses abusives** lorsqu’un contrat présente un lien étroit avec un État membre de l’Union européenne. **Article L. 232-1 du Code de la consommation [Source 4].**\n\n- **Consommateur dans un contrat à distance ou hors établissement** : il bénéficie également des protections issues de la directive relative aux droits des consommateurs lorsqu’un lien étroit existe avec un État membre. **Article L. 232-3 du Code de la consommation [Source 5].**\n\n- **Petite ou moyenne entreprise** : une PME peut, sous des conditions strictes, être dispensée de réparer solidairement certains préjudices causés par une pratique anticoncurrentielle, notamment si sa part de marché est inférieure à 5 % et si sa responsabilité compromettrait irrémédiablement sa viabilité économique. Cette protection ne joue toutefois pas dans certains cas, notamment si la PME a initié la pratique anticoncurrentielle. **Article L. 481-10 du Code de commerce [Source 2].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1453-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L481-10"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L121-8"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 241.18109099939466,
+      "vectorSearchMs": 634.7534449994564,
+      "jinaRerankingMs": 573.4165449999273,
+      "mappingMs": 0.025264998897910118,
+      "totalMs": 1449.4001799989492,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010023999959230423,
+      "contextBuilderMs": 0.03308900073170662,
+      "generationMs": 3626.5270490013063,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5075.981474999338
+    },
+    "judge": {
+      "questionId": "q437",
+      "correctness": 1,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop générale et devait donner lieu à une abstention ou à une demande de précision. La réponse tente néanmoins de répondre en énumérant des règles issues de plusieurs branches du droit, hors cadrage apparent du Code pénal. Les affirmations juridiques avancées sont, pour l’essentiel, fidèlement étayées par les extraits fournis, mais elles ne permettent pas de répondre de façon fiable à la question générale posée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La question, très générale et attendue en abstention, ne permet pas d’identifier un régime juridique ou une branche du droit précise. Les sources sont bien liées aux exemples sectoriels choisis (prud’hommes, abus de faiblesse lors de visites à domicile, protection du consommateur, PME en droit de la concurrence), mais elles ne sont pas suffisantes ni réellement ciblées pour répondre globalement à « quelles règles protègent la partie la plus faible ? », et ne justifient pas non plus l’absence d’abstention. En revanche, les affirmations importantes effectivement formulées dans la réponse sont presque toutes directement étayées par les extraits : assistance/représentation, conditions de l’abus de faiblesse, protections européennes des consommateurs et conditions/limites de la dérogation pour les PME."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1228.9780169986188,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1228.9788840003312,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1229.0018750000745
+    },
+    "judge": {
+      "questionId": "q437",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est trop générale pour recevoir une réponse juridique fiable. La réponse reconnaît explicitement cette absence de base contextuelle et s'abstient correctement, conformément à l'attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, ce qui est cohérent avec une abstention fondée sur l'absence de contexte ou de corpus pertinent. La réponse se limite à constater cette insuffisance et ne formule aucune affirmation juridique nécessitant un appui documentaire."
+    }
+  },
+  "failureStage": "none"
+}

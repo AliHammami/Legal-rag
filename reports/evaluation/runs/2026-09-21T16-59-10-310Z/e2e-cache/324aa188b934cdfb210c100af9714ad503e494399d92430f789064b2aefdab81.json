@@ -1,0 +1,103 @@
+{
+  "questionId": "q053",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 717-2 du Code pénal**, la manipulation artificielle à la hausse ou à la baisse des prix est punie de :\n\n- **2 ans d’emprisonnement** et **30 000 € d’amende** ;\n- lorsque les prix concernés sont ceux de **produits alimentaires** : **3 ans d’emprisonnement** et **45 000 € d’amende**.\n\nLes personnes physiques encourent également :\n\n- l’**interdiction des droits civiques, civils et de famille** ;\n- l’**affichage ou la diffusion de la décision de condamnation**.\n\n[Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "727-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L442-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.88642699993216,
+      "vectorSearchMs": 604.7957679999527,
+      "jinaRerankingMs": 550.3376420000568,
+      "mappingMs": 0.028385000070556998,
+      "totalMs": 1357.0809690000024,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010982000036165118,
+      "contextBuilderMs": 0.019012999953702092,
+      "generationMs": 1699.7000049999915,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3056.821680000052
+    },
+    "judge": {
+      "questionId": "q053",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les peines principales prévues par l’article 717-2 (deux ans et 30 000 €, portés à trois ans et 45 000 € pour les produits alimentaires) ainsi que les deux peines complémentaires applicables aux personnes physiques. Ces éléments sont explicitement supportés par la source 2 du contexte. Elle répond directement à la question sans s’abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement l’article 717-2 visé par la question. Elle prévoit explicitement les peines de deux ans d’emprisonnement et 30 000 € d’amende, leur aggravation à trois ans et 45 000 € pour les produits alimentaires, ainsi que les deux peines complémentaires mentionnées pour les personnes physiques. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 717-2 du Code pénal**, la manipulation artificielle à la hausse ou à la baisse du prix de biens, services ou effets publics ou privés est punie de :\n\n- **2 ans d’emprisonnement** et **30 000 € d’amende** ;\n- lorsque les prix concernent des **produits alimentaires**, **3 ans d’emprisonnement** et **45 000 € d’amende**.\n\nCes peines s’appliquent notamment lorsque la manipulation est réalisée par la diffusion d’informations mensongères ou calomnieuses, des offres destinées à troubler les cours, des sur-offres ou tout autre moyen frauduleux. [Source 2]\n\nLes personnes physiques encourent également :\n\n1. l’interdiction des droits civiques, civils et de famille, dans les conditions prévues par l’article 131-26 du Code pénal ;\n2. l’affichage ou la diffusion de la décision prononcée, dans les conditions prévues par l’article 131-35 du Code pénal. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "727-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "717-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1358.1804550001398,
+      "routingCalls": 1,
+      "embeddingMs": 239.88234899984673,
+      "vectorSearchMs": 33.40241299988702,
+      "jinaRerankingMs": 540.5206070002168,
+      "mappingMs": 0.02638299996033311,
+      "totalMs": 2172.038871000055,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01107599982060492,
+      "contextBuilderMs": 0.018213000148534775,
+      "generationMs": 2937.894243000075,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5109.976399000036
+    },
+    "judge": {
+      "questionId": "q053",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement les peines principales de l'article 717-2 (deux ans et 30 000 euros, portés à trois ans et 45 000 euros pour les produits alimentaires) ainsi que les deux peines complémentaires applicables aux personnes physiques. La description des moyens de manipulation est également conforme au contexte. Toutes les affirmations importantes sont directement supportées par la source 2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article 717-2 visé par la question. Elle établit les peines de deux ans et 30 000 euros, leur aggravation à trois ans et 45 000 euros pour les produits alimentaires, les procédés de manipulation mentionnés, ainsi que les deux peines complémentaires applicables aux personnes physiques. Elle couvre donc toutes les affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

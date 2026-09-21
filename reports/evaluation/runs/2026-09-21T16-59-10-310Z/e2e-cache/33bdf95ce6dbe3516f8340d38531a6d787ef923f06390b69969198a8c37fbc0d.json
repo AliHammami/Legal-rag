@@ -1,0 +1,90 @@
+{
+  "questionId": "q473",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de répondre à la question sur les règles de la **garde à vue** en procédure pénale.\n\nElles portent uniquement sur :\n\n- les obligations pouvant être imposées dans le cadre d’un suivi socio-judiciaire — **article 131-36-1 du Code pénal** [Source 3] ;\n- certaines obligations d’un condamné, notamment l’interdiction de se rapprocher d’une victime — **article 132-45 du Code pénal** [Source 1] ;\n- le gardien judiciaire en matière de saisie — **article 1962 du Code civil** [Source 2].\n\nAucune disposition relative aux conditions, à la durée, aux droits de la personne gardée à vue ou au contrôle de cette mesure n’est incluse dans le contexte.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "132-45"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1962"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-36-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 265.21699500083923,
+      "vectorSearchMs": 641.376642998308,
+      "jinaRerankingMs": 575.6252619996667,
+      "mappingMs": 0.028748000040650368,
+      "totalMs": 1482.2820139992982,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010539000853896141,
+      "contextBuilderMs": 0.02677999995648861,
+      "generationMs": 2300.5602950006723,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3782.8942879997194
+    },
+    "judge": {
+      "questionId": "q473",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement et à juste titre : le contexte ne contient aucune règle de procédure pénale relative à la garde à vue. Elle décrit correctement la nature des sources disponibles et précise les éléments pertinents absents (conditions, durée, droits et contrôle)."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont hors du champ de la garde à vue, mais elles sont directement pertinentes pour justifier l’abstention : elles portent respectivement sur des obligations de condamnés, le gardien judiciaire de biens saisis et le suivi socio-judiciaire. Elles permettent de constater que le contexte ne contient aucune règle relative à la garde à vue. Les caractérisations faites par la réponse sont couvertes par les extraits, et l’absence de dispositions sur les conditions, la durée, les droits ou le contrôle de la garde à vue est correctement relevée au regard du corpus fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 923.0709300003946,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 923.0719109997153,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 923.080333000049
+    },
+    "judge": {
+      "questionId": "q473",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question appelle une abstention. La réponse indique clairement qu’elle ne peut pas répondre de manière fiable faute de contexte/corpus pertinent, sans avancer de règle juridique non fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc pas de source juridiquement pertinente pour répondre directement sur la garde à vue. Toutefois, la réponse se limite à constater l’absence de contexte, de corpus pertinent et de recherche ; ce constat est entièrement cohérent avec le dossier de sources vide et ne comporte aucune affirmation juridique nécessitant une couverture documentaire."
+    }
+  },
+  "failureStage": "none"
+}

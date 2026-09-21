@@ -1,0 +1,95 @@
+{
+  "questionId": "q397",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### 1. Ordre d’exercice des privilèges spéciaux\n\nSelon l’article 2332-3 du Code civil, les privilèges spéciaux s’exercent dans l’ordre suivant :\n\n1. **Le privilège du conservateur**, lorsque les frais de conservation sont postérieurs à la naissance des autres privilèges ;\n2. **Le privilège du bailleur d’immeuble**, lorsque celui-ci ignorait l’existence des autres privilèges ;\n3. **Le privilège du conservateur**, lorsque les frais de conservation sont antérieurs à la naissance des autres privilèges ;\n4. **Le privilège du vendeur de meuble** ;\n5. **Le privilège du bailleur d’immeuble**, lorsque celui-ci connaissait l’existence des autres privilèges.\n\nEntre plusieurs conservateurs du même meuble, la préférence revient au **plus récent**. Le privilège de l’auxiliaire salarié d’un travailleur à domicile est assimilé à celui du vendeur de meuble.  \n**Article 2332-3 du Code civil [Source 1].**\n\n### 2. Fonds communs de placement d’entreprise\n\nLes fonds communs de placement constitués dans le cadre d’un accord de participation sont soumis aux règles applicables aux **fonds communs de placement d’entreprise** mentionnés aux articles **L. 214-164 et L. 214-165 du Code monétaire et financier**.\n\nEn outre, leur règlement peut prévoir que le fonds reçoit, à la demande d’un salarié disposant d’un droit de créance au titre de la participation, les sommes qui lui ont été attribuées. Ces sommes doivent alors être versées directement par l’entreprise dans un délai de **deux mois suivant la décision du salarié**.  \n**Article D3324-34 du Code du travail [Source 2].**\n\nLe contenu précis des règles des articles L. 214-164 et L. 214-165 du Code monétaire et financier n’étant pas fourni, il n’est pas possible d’en détailler davantage les conditions générales à partir du seul contexte disponible.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "D3324-34"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.34289300069213,
+      "vectorSearchMs": 657.295578001067,
+      "jinaRerankingMs": 579.535237999633,
+      "mappingMs": 0.173828000202775,
+      "totalMs": 1440.3920130003244,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013490000739693642,
+      "contextBuilderMs": 0.0334440004080534,
+      "generationMs": 3783.872100999579,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5224.324170999229
+    },
+    "judge": {
+      "questionId": "q397",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La partie relative à l'article 2332-3 du Code civil est exacte et complète : elle restitue correctement les cinq rangs, la préférence du conservateur le plus récent et l'assimilation de l'auxiliaire salarié. En revanche, la réponse ne fournit pas les conditions générales demandées au titre de l'article L. 214-163 du Code monétaire et financier : elle évoque à la place l'article D. 3324-34 du Code du travail et les articles L. 214-164 et L. 214-165, sans traiter notamment l'application de règles aux fonds concernés ni les compartiments. Les affirmations effectivement formulées sont néanmoins toutes appuyées par le contexte fourni. Elle répond substantiellement à la première partie de la question et ne constitue donc pas une abstention injustifiée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre exactement l’ordre d’exercice des privilèges prévu à l’article 2332-3 du Code civil. La source 2 concerne bien des fonds communs de placement d’entreprise, mais elle relève du Code du travail et renvoie aux articles L. 214-164 et L. 214-165 ; elle ne fournit pas les conditions générales de l’article L. 214-163 du Code monétaire et financier, notamment celles relatives aux fonds concernés et aux compartiments. Les sources manquent donc d’un élément essentiel pour répondre pleinement à la seconde partie de la question. En revanche, toutes les affirmations effectivement formulées dans la réponse générée — y compris la limite indiquée quant à l’absence du contenu des articles visés — sont étayées par les deux extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "### Privilèges spéciaux\n\nSelon l’**article 2332-3 du Code civil [Source 1]**, les privilèges spéciaux du bailleur d’immeuble, du conservateur et du vendeur de meuble s’exercent dans l’ordre suivant :\n\n1. Le privilège du conservateur lorsque les frais de conservation sont postérieurs à la naissance des autres privilèges ;\n2. Le privilège du bailleur d’immeuble qui ignorait l’existence des autres privilèges ;\n3. Le privilège du conservateur lorsque les frais de conservation sont antérieurs à la naissance des autres privilèges ;\n4. Le privilège du vendeur de meuble ;\n5. Le privilège du bailleur d’immeuble qui connaissait l’existence des autres privilèges.\n\nEntre les conservateurs d’un même meuble, la préférence revient au plus récent. Le privilège de l’auxiliaire salarié d’un travailleur à domicile est assimilé à celui du vendeur de meuble.\n\n### Fonds de placement\n\nLa source fournie ne concerne pas les fonds communs de placement d’entreprise, mais les **fonds de placement immobilier**. Selon l’**article L. 214-83 du Code monétaire et financier [Source 2]** :\n\n- les porteurs de parts ou leurs ayants droit ne peuvent pas provoquer le partage du fonds ;\n- ils ne sont tenus des dettes de la copropriété qu’à concurrence de l’actif du fonds et proportionnellement à leur quote-part.\n\nLes sources fournies ne permettent donc pas de préciser les conditions générales applicables aux fonds communs de placement d’entreprise.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2332-3"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-83"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1391.665372999385,
+      "routingCalls": 1,
+      "embeddingMs": 199.88345300033689,
+      "vectorSearchMs": 242.52493999898434,
+      "jinaRerankingMs": 533.6944360006601,
+      "mappingMs": 0.027289001271128654,
+      "totalMs": 2367.8702409993857,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.1261309999972582,
+      "contextBuilderMs": 0.024428999051451683,
+      "generationMs": 3433.6780009996146,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5801.712265999988
+    },
+    "judge": {
+      "questionId": "q397",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement l’ordre des privilèges prévu à l’article 2332-3 du Code civil, y compris la préférence du conservateur le plus récent et l’assimilation de l’auxiliaire salarié. Elle ne fournit toutefois pas les conditions applicables aux fonds communs de placement d’entreprise visées par la référence (art. L. 214-163), se limitant à constater à juste titre que le contexte ne contient que l’article L. 214-83 relatif aux fonds de placement immobilier. Toutes les affirmations formulées sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement l’ordre d’exercice des privilèges spéciaux, y compris les deux précisions complémentaires. La source 2 porte sur un fonds de placement immobilier et non sur les fonds communs de placement d’entreprise : elle ne permet pas de répondre au second volet au fond, mais elle permet de justifier le constat explicite de la réponse selon lequel le contexte fourni ne contient pas les règles demandées. Toutes les affirmations effectivement formulées dans la réponse sont ainsi étayées par les sources."
+    }
+  },
+  "failureStage": "generation"
+}

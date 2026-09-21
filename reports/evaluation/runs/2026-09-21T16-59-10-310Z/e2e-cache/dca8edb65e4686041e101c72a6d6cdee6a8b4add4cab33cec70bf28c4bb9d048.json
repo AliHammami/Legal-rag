@@ -1,0 +1,87 @@
+{
+  "questionId": "q413",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "En l’absence de registres d’état civil, ou lorsque ceux-ci sont perdus, les actes peuvent être prouvés :\n\n- par des **titres** ou des **témoins** ;\n- pour les mariages, naissances et décès, par les **registres et papiers émanant des père et mère décédés**, ainsi que par des témoins ;\n- lorsque les originaux ont été détruits ou ont disparu à la suite d’un **sinistre ou de faits de guerre**, par un **acte de notoriété**, jusqu’à la reconstitution ou la restitution des registres.\n\nL’acte de notoriété est délivré par un **notaire**. Il doit reposer sur les déclarations d’au moins **trois témoins** et sur tout autre document utile attestant de l’état civil de l’intéressé. Il est signé par le notaire et les témoins. Les requérants et témoins encourent les peines prévues par l’article 441-4 du Code pénal en cas de fausse déclaration. **Article 46 du Code civil [Source 1]**\n\nEn revanche, la source fournie ne contient aucune règle relative à l’**application immédiate des lois nouvelles** ni à son incidence sur la validité de ces actes. Il n’est donc pas possible de répondre à cette seconde partie à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "46"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 218.77717499993742,
+      "vectorSearchMs": 635.0908599998802,
+      "jinaRerankingMs": 501.6012389995158,
+      "mappingMs": 0.022297000512480736,
+      "totalMs": 1355.5219350010157,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011361001059412956,
+      "contextBuilderMs": 0.01129000075161457,
+      "generationMs": 2736.486903000623,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4092.040773000568
+    },
+    "judge": {
+      "questionId": "q413",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse expose correctement et de façon détaillée les modalités de preuve prévues par l’article 46 du Code civil. Elle ne répond toutefois pas au second volet essentiel de la question : l’effet de l’application immédiate des lois nouvelles sur la validité des actes accomplis sous la loi ancienne, tel qu’attendu au regard de l’article 112-4 du Code pénal. Toutes les affirmations positives sont étayées par le seul contexte fourni, qui ne contient effectivement que l’article 46. Néanmoins, l’abstention sur la seconde partie rend la réponse incomplète alors qu’une réponse complète était attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source (article 46 du Code civil) est directement pertinente et très précise pour le premier volet, relatif à la preuve des actes d’état civil en cas d’absence, de perte ou de destruction des registres, y compris l’acte de notoriété. En revanche, aucune source ne traite de l’application immédiate des lois nouvelles ni de la validité des actes accomplis sous une loi ancienne : elle est donc insuffisante pour répondre entièrement à la question. Les affirmations positives de la réponse générée sont néanmoins toutes couvertes par la source, et son constat selon lequel le contexte fourni ne permet pas de traiter le second volet est cohérent avec son contenu."
+    }
+  },
+  "routing": {
+    "answer": "En l’absence de registres d’état civil, ou lorsque ceux-ci sont perdus, les actes peuvent être prouvés :\n\n- par des **titres** ou des **témoins** ;\n- pour les mariages, naissances et décès, par les **registres et papiers provenant des parents décédés**, ainsi que par des témoins ;\n- lorsque les originaux ont été détruits ou ont disparu à la suite d’un sinistre ou de faits de guerre, par un **acte de notoriété**, jusqu’à la reconstitution ou la restitution des registres.\n\nL’acte de notoriété est délivré par un **notaire**, établi sur la base des déclarations d’au moins **trois témoins** et de tout document utile relatif à l’état civil de l’intéressé. Il doit être signé par le notaire et les témoins. Les requérants et les témoins encourent les peines prévues par l’article 441-4 du Code pénal en cas de fausse déclaration. [Source 1 — Article 46 du Code civil]\n\nEn revanche, la source fournie ne contient aucune règle concernant l’**application immédiate des lois nouvelles** ni son incidence sur la validité des actes d’état civil. Il n’est donc pas possible de répondre à ce second point à partir des seuls éléments fournis.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "46"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1535.9587990008295,
+      "routingCalls": 1,
+      "embeddingMs": 296.1852059997618,
+      "vectorSearchMs": 87.73652900010347,
+      "jinaRerankingMs": 522.4304689988494,
+      "mappingMs": 0.023086000233888626,
+      "totalMs": 2442.357235999778,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010360999032855034,
+      "contextBuilderMs": 0.015999000519514084,
+      "generationMs": 2780.907292999327,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5223.301203001291
+    },
+    "judge": {
+      "questionId": "q413",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon détaillée les modalités de preuve prévues par l’article 46 du code civil. En revanche, elle ne répond pas au second volet essentiel relatif à l’application immédiate des lois nouvelles : selon la référence, celle-ci ne remet pas en cause la validité des actes accomplis sous la loi ancienne. Cette omission rend la réponse partiellement correcte et incomplète. Toutes les affirmations effectivement formulées sont néanmoins directement étayées par le seul contexte fourni, qui ne contient effectivement pas la règle de l’article 112-4 du code pénal."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente pour le premier volet : elle détaille les modes de preuve en cas d'absence ou perte des registres, les actes de notoriété, les conditions de leur établissement et les sanctions citées. Elle ne contient aucune règle sur l'application immédiate des lois nouvelles, mais elle permet précisément d'étayer le constat explicite de la réponse selon lequel ce second point ne peut pas être traité à partir des seuls éléments fournis. Toutes les affirmations importantes effectivement formulées sont ainsi couvertes."
+    }
+  },
+  "failureStage": "generation"
+}

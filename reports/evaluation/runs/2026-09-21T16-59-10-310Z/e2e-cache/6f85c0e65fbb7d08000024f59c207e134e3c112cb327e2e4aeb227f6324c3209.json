@@ -1,0 +1,107 @@
+{
+  "questionId": "q385",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Ces obligations relèvent de deux régimes distincts :\n\n- **Droit de la consommation :** le fournisseur de place de marché en ligne doit fournir une information loyale, claire et transparente sur les conditions générales d’utilisation du service, les modalités de classement et, le cas échéant, les relations contractuelles, liens capitalistiques ou rémunérations influençant ce classement. **Article L. 111-7, II du Code de la consommation [Source 1].**\n- Il doit notamment rendre accessibles les principaux paramètres de classement et leur ordre d’importance, ainsi que les conditions et la nature du service de mise en relation. **Article D. 111-8, I, 1° et 3° du Code de la consommation [Source 3].**\n\nEn revanche, les restrictions relatives aux jours fériés concernent l’emploi de salariés et l’exploitation des lieux de vente au public. Lorsque l’emploi de salariés est interdit en application des articles visés par le texte, il est également interdit, pendant ces jours, de procéder à une exploitation industrielle, commerciale ou artisanale dans les lieux de vente au public, y compris pour les activités commerciales des coopératives ou associations. **Article L. 3134-11 du Code du travail [Source 2].**\n\nAinsi, d’après les sources fournies :\n\n1. **L’obligation d’informer sur le classement et les conditions d’utilisation ne neutralise pas les restrictions du Code du travail.** La transparence imposée aux consommateurs ne constitue pas une autorisation d’employer des salariés ou d’exploiter un lieu de vente un jour où cela est interdit.\n\n2. **Les deux obligations peuvent se cumuler.** Une place de marché doit respecter ses obligations d’information en ligne et, si son activité entre dans le champ de l’interdiction du Code du travail, respecter également les restrictions applicables aux jours fériés.\n\n3. **Le contexte ne permet pas de déterminer si une place de marché en ligne constitue, dans un cas concret, un « lieu de vente au public » ou si son activité implique l’exploitation visée par l’article L. 3134-11.** Les sources ne précisent pas davantage le régime applicable aux salariés travaillant à distance ou aux fonctions techniques de la plateforme.\n\nEn conséquence, l’interaction est principalement une **absence de dérogation** : les obligations d’information en ligne et les restrictions concernant l’emploi des salariés sont indépendantes, et la conformité à l’une ne dispense pas de respecter l’autre lorsqu’elle est applicable.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3134-11"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L133-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 230.9665599996224,
+      "vectorSearchMs": 681.9384500002488,
+      "jinaRerankingMs": 565.2279179999605,
+      "mappingMs": 0.03463299944996834,
+      "totalMs": 1478.2286649998277,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06706900056451559,
+      "contextBuilderMs": 0.03412899933755398,
+      "generationMs": 5380.9115549996495,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6859.251037999988
+    },
+    "judge": {
+      "questionId": "q385",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les deux régimes et explique leur cumul : l'obligation de transparence des places de marché n'emporte aucune dérogation aux interdictions applicables à l'emploi de salariés et à l'exploitation de lieux de vente au public. Elle restitue les obligations d'information prévues par L. 111-7 et D. 111-8, ainsi que la règle de L. 3134-11. La réserve sur l'applicabilité concrète à une plateforme en ligne est appropriée et fondée sur les limites du contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources 1 et 3 sont directement pertinentes pour les obligations d’information des places de marché, notamment les conditions d’utilisation, les paramètres de classement, leur ordre d’importance et les liens ou rémunérations influençant le classement. La source 2 est directement pertinente pour l’articulation avec les restrictions d’emploi et d’exploitation les jours concernés : elle prévoit expressément que l’interdiction d’employer des salariés entraîne l’interdiction d’exploiter certains lieux de vente au public. La réponse formule cette règle de manière conditionnelle, sans prétendre établir les jours précis ou le champ complet des articles L. 3134-4 à L. 3134-9, non reproduits. Ses conclusions sur le cumul des régimes, l’absence de dérogation implicite et l’incertitude sur l’application concrète à une plateforme en ligne sont couvertes par le contenu et les limites des sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Les deux ensembles de règles poursuivent des objectifs distincts et ne prévoient pas, dans les sources fournies, de mécanisme d’articulation directe.\n\n- **Information des consommateurs :** le fournisseur d’une place de marché doit fournir une information loyale, claire et transparente sur les conditions générales d’utilisation du service, ainsi que sur les modalités et principaux paramètres de classement des offres. Cette obligation résulte de l’**article L111-7 du Code de la consommation [Source 1]** et est précisée par l’**article D111-8 du même Code [Source 2]**, qui impose notamment d’indiquer les principaux paramètres de classement et leur ordre d’importance dans une rubrique directement accessible.\n\n- **Emploi les jours fériés :** lorsque l’activité relève des exploitations commerciales et que des salariés y sont employés, l’**article L3134-4 du Code du travail [Source 3]** interdit leur emploi le premier jour des fêtes de Noël, de Pâques et de Pentecôte et limite, pour les autres dimanches et jours fériés, leur travail à cinq heures, sous réserve des adaptations prévues par ce texte.\n\nAinsi, les obligations d’information sur l’utilisation de la plateforme et le classement des offres continuent de s’appliquer, tandis que les restrictions du Code du travail régissent séparément les conditions d’emploi des salariés. Les sources ne permettent pas d’établir qu’une restriction de travail un jour férié modifierait les informations à communiquer sur le classement ou les conditions d’utilisation, ni qu’une information fournie aux consommateurs permettrait de déroger aux règles relatives au travail des salariés.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L111-7"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D111-8"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3134-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1530.4314359994605,
+      "routingCalls": 1,
+      "embeddingMs": 297.75923899933696,
+      "vectorSearchMs": 329.1475189998746,
+      "jinaRerankingMs": 574.6765580000356,
+      "mappingMs": 0.05728599987924099,
+      "totalMs": 2732.1015659999102,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.06367599964141846,
+      "contextBuilderMs": 0.04338799975812435,
+      "generationMs": 4116.830014000647,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6849.054612999782
+    },
+    "judge": {
+      "questionId": "q385",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse distingue correctement les deux régimes, expose les obligations d’information prévues aux articles L111-7 et D111-8 du code de la consommation, ainsi que les restrictions de l’article L3134-4 du code du travail. Elle indique à juste titre qu’aucun mécanisme d’articulation directe ou de dérogation réciproque ne ressort des sources. Les affirmations importantes sont toutes étayées par le contexte, et la réponse traite effectivement la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L111-7 couvre l’obligation d’information sur les conditions d’utilisation, le classement et les liens d’intérêt ; D111-8 précise les paramètres de classement et leur accessibilité ; L3134-4 encadre l’emploi des salariés dans les exploitations commerciales les jours fériés et dimanches. Elles couvrent les affirmations substantielles de la réponse, y compris la distinction des deux régimes et l’absence de mécanisme d’articulation ou de dérogation directe identifiable dans les textes fournis."
+    }
+  },
+  "failureStage": "none"
+}

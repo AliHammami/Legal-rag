@@ -1,0 +1,87 @@
+{
+  "questionId": "q006",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 221-18 du Code pénal**, l’homicide routier est caractérisé lorsque deux conditions principales sont réunies :\n\n1. **L’auteur est le conducteur d’un véhicule terrestre à moteur** ;\n2. **Il a causé la mort d’autrui sans intention de la donner**, dans les conditions et selon les distinctions prévues à l’article 121-3 du Code pénal.\n\nEn outre, l’une au moins des circonstances suivantes doit être constatée :\n\n- violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité prévue par la loi ou le règlement ;\n- conduite en état d’ivresse manifeste, sous l’empire d’un état alcoolique ou refus de se soumettre aux vérifications d’alcoolémie ;\n- usage de stupéfiants ou refus des vérifications correspondantes ;\n- consommation volontaire, détournée ou manifestement excessive de certaines substances psychoactives ;\n- conduite sans permis, ou avec un permis annulé, invalidé, suspendu ou retenu ;\n- dépassement de la vitesse maximale autorisée d’au moins 30 km/h ;\n- délit de fuite ou absence de secours ou d’assistance après l’accident ;\n- infraction relative à l’usage du téléphone tenu en main ou au port à l’oreille d’un dispositif susceptible d’émettre du son.\n\nL’homicide routier est alors puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 234.78333899998688,
+      "vectorSearchMs": 970.8900220000069,
+      "jinaRerankingMs": 606.8145470000163,
+      "mappingMs": 0.048903999995673075,
+      "totalMs": 1812.5990590000001,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02745100000174716,
+      "contextBuilderMs": 0.026335000002291054,
+      "generationMs": 3743.2188430000097,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5555.926276000013
+    },
+    "judge": {
+      "questionId": "q006",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les conditions générales (conducteur d’un véhicule terrestre à moteur, mort d’autrui non intentionnelle, article 121-3) et énumère les huit circonstances reproduites dans le contexte fourni. La peine indiquée est également exacte et explicitement présente dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 221-18 et est parfaitement pertinente. Elle couvre les conditions générales citées (conducteur, véhicule terrestre à moteur, mort d’autrui sans intention, renvoi à l’article 121-3), chacune des huit circonstances énumérées dans la réponse, ainsi que la peine de sept ans d’emprisonnement et 100 000 euros d’amende."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 221-18 du Code pénal, l’homicide routier est caractérisé lorsque :\n\n1. **Un conducteur d’un véhicule terrestre à moteur cause la mort d’autrui** ;\n2. **La mort est causée sans intention de la donner**, dans les conditions prévues à l’article 121-3 du Code pénal ;\n3. **Au moins l’une des circonstances aggravantes suivantes est présente** :\n   - violation manifestement délibérée d’une obligation particulière de prudence ou de sécurité prévue par la loi ou le règlement ;\n   - conduite en état d’ivresse manifeste ou sous l’empire d’un état alcoolique, ou refus de se soumettre aux vérifications d’alcoolémie ;\n   - usage de stupéfiants ou refus des vérifications destinées à établir cet usage ;\n   - consommation volontaire, détournée ou manifestement excessive, de substances psychoactives ;\n   - conduite sans permis, ou avec un permis annulé, invalidé, suspendu ou retenu ;\n   - dépassement d’au moins 30 km/h de la vitesse maximale autorisée ;\n   - délit de fuite ou absence de secours ou d’assistance après l’accident ;\n   - usage interdit du téléphone tenu en main ou d’un dispositif porté à l’oreille susceptible d’émettre du son.\n\nL’homicide routier est puni de **sept ans d’emprisonnement et de 100 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1348.8044439999794,
+      "routingCalls": 1,
+      "embeddingMs": 230.3608049999748,
+      "vectorSearchMs": 93.48736100000679,
+      "jinaRerankingMs": 582.2372059999907,
+      "mappingMs": 0.03588999999919906,
+      "totalMs": 2255.0511799999804,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.02282100002048537,
+      "contextBuilderMs": 0.013080000004265457,
+      "generationMs": 3253.3558630000043,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5508.490401999996
+    },
+    "judge": {
+      "questionId": "q006",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les conditions générales (conducteur d’un véhicule terrestre à moteur, décès d’autrui non intentionnel, conditions de l’article 121-3) et les huit hypothèses reproduites dans le contexte, ainsi que la peine. Elle est entièrement étayée par le contexte fourni. Elle est toutefois incomplète par rapport à la référence, qui vise les violations des points 1° à 10° : la réponse ne mentionne que les points 1° à 8°."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 221-18 et est donc parfaitement pertinente. Elle couvre les conditions générales énoncées (conducteur d’un véhicule terrestre à moteur, mort d’autrui sans intention de la donner, renvoi à l’article 121-3), les huit hypothèses listées dans la réponse ainsi que la peine de sept ans d’emprisonnement et 100 000 euros d’amende. Les affirmations importantes de la réponse sont étayées par la source fournie."
+    }
+  },
+  "failureStage": "none"
+}

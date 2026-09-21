@@ -1,0 +1,87 @@
+{
+  "questionId": "q368",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### 1. Demande par une personne majeure\n\nUne personne majeure peut demander un changement de nom si son acte de naissance est détenu par un officier de l’état civil français. Elle peut s’adresser :\n\n- à l’officier de l’état civil de son lieu de résidence ; ou\n- à l’officier de l’état civil dépositaire de son acte de naissance.\n\nElle peut choisir de porter l’un des noms prévus aux premier et dernier alinéas de l’article 311-21 du Code civil. Ce choix ne peut être exercé qu’une seule fois, sans préjudice de la procédure prévue à l’article 61 du Code civil. **Article 61-3-1 du Code civil [Source 1]**\n\nLa demande ne devient effective qu’après une confirmation personnelle de l’intéressé devant l’officier de l’état civil. Cette confirmation doit intervenir au plus tôt un mois après la réception de la demande. Le changement est ensuite consigné dans le registre de l’état civil en cours. **Article 61-3-1 du Code civil [Source 1]**\n\n### 2. Changement fondé sur un nom acquis à l’étranger\n\nToute personne qui justifie d’un nom inscrit sur le registre de l’état civil d’un autre État peut demander à l’officier de l’état civil dépositaire de son acte de naissance établi en France de porter ce nom.\n\nLe changement est consigné par l’officier de l’état civil dans le registre de l’état civil en cours. **Article 61-3-1 du Code civil [Source 1]**\n\n### 3. Effets à l’égard des enfants\n\nLe changement de nom s’étend automatiquement aux enfants du bénéficiaire lorsqu’ils ont moins de treize ans.\n\nPour les enfants âgés de plus de treize ans, leur consentement personnel est nécessaire. Le texte ne prévoit pas, dans l’extrait fourni, de modalité particulière de recueil de ce consentement pour ces enfants. **Article 61-3-1 du Code civil [Source 1]**\n\nPour un enfant mineur concerné par la procédure relative à un nom inscrit dans l’état civil d’un autre État, la déclaration est effectuée conjointement par les deux parents exerçant l’autorité parentale, ou par le parent exerçant seul cette autorité. Si l’enfant a plus de treize ans, son consentement personnel est requis. **Article 61-3-1 du Code civil [Source 1]**\n\n### 4. Rôle de l’officier de l’état civil et du procureur de la République\n\nL’officier de l’état civil :\n\n- reçoit la demande ;\n- vérifie les conditions prévues par le texte ;\n- recueille, lorsque cela est requis, la confirmation de l’intéressé ou le consentement de l’enfant de plus de treize ans ;\n- consigne le changement dans le registre de l’état civil.\n\nEn cas de difficulté, il saisit le procureur de la République et en informe l’intéressé lorsque le procureur s’oppose à la demande.\n\nLe procureur de la République peut s’opposer au changement. Il peut également, lorsqu’il est saisi dans les mêmes conditions, ordonner lui-même le changement de nom. Le texte précise que le procureur compétent à cette fin est celui du lieu de naissance. **Article 61-3-1 du Code civil [Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-3-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.19592200033367,
+      "vectorSearchMs": 625.2703010002151,
+      "jinaRerankingMs": 564.5582670001313,
+      "mappingMs": 0.027705000713467598,
+      "totalMs": 1413.1412180000916,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01066499948501587,
+      "contextBuilderMs": 0.01142200082540512,
+      "generationMs": 5236.887240000069,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6650.065469999798
+    },
+    "judge": {
+      "questionId": "q368",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement les deux voies prévues par l’article 61-3-1 (choix d’un nom visé à l’article 311-21 et nom acquis dans un autre État), la limitation à un seul choix pour la première voie, la confirmation après un mois, l’inscription au registre, le rôle de l’officier d’état civil et du procureur, ainsi que les effets sur les enfants et le consentement après treize ans. Les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique, l’article 61-3-1 du Code civil, est directement pertinente : elle traite de la demande de changement de nom par un majeur, de la voie du nom acquis à l’étranger, des modalités de confirmation et d’inscription, des effets sur les enfants, ainsi que des rôles de l’officier d’état civil et du procureur. Elle couvre toutes les affirmations importantes de la réponse générée, y compris le délai minimal d’un mois, la condition de consentement après treize ans, la saisine du procureur en cas de difficulté, son pouvoir d’opposition et son pouvoir d’ordonner le changement."
+    }
+  },
+  "routing": {
+    "answer": "### 1. Demande par une personne majeure\n\nUne personne majeure peut demander un changement de nom dans deux hypothèses :\n\n- **Si son acte de naissance est détenu par un officier de l’état civil français**, elle peut demander à l’officier de l’état civil de son lieu de résidence ou à celui qui détient son acte de naissance de porter l’un des noms prévus par les premier et dernier alinéas de l’article 311-21 du Code civil. Ce choix ne peut être exercé **qu’une seule fois**, sans préjudice de la procédure prévue à l’article 61 du Code civil.  \n  **Article 61-3-1 du Code civil [Source 1].**\n\n- **Si elle justifie d’un nom inscrit dans le registre de l’état civil d’un autre État**, elle peut demander à l’officier de l’état civil dépositaire de son acte de naissance établi en France de porter le nom acquis dans cet autre État.  \n  **Article 61-3-1 du Code civil [Source 1].**\n\nDans le premier cas, la demande n’est pas immédiatement définitive : l’intéressé doit confirmer son choix devant l’officier de l’état civil **au plus tôt un mois après la réception de la demande**. Ce n’est qu’après cette confirmation que le changement est consigné dans le registre de l’état civil en cours.  \n**Article 61-3-1 du Code civil [Source 1].**\n\n### 2. Rôle de l’officier de l’état civil\n\nL’officier de l’état civil :\n\n- reçoit la demande, soit au lieu de résidence du demandeur, soit en qualité de dépositaire de l’acte de naissance, selon le cas ;\n- recueille, lorsque cela est nécessaire, la confirmation du choix après le délai d’un mois ;\n- consigne le changement de nom dans le registre de l’état civil en cours ;\n- saisit le procureur de la République en cas de difficultés.  \n  **Article 61-3-1 du Code civil [Source 1].**\n\n### 3. Rôle du procureur de la République\n\nEn cas de difficultés, l’officier de l’état civil saisit le procureur de la République. Celui-ci peut :\n\n- **s’opposer à la demande**, l’intéressé devant alors en être informé ;\n- lorsqu’il est saisi dans les mêmes conditions, **ordonner lui-même le changement de nom**, s’il s’agit du procureur de la République du lieu de naissance.  \n  **Article 61-3-1 du Code civil [Source 1].**\n\n### 4. Effets à l’égard des enfants\n\nLe changement de nom obtenu dans le cadre de cette procédure s’étend automatiquement aux enfants du bénéficiaire lorsqu’ils ont **moins de treize ans**.\n\nPour les enfants âgés de **plus de treize ans**, leur consentement personnel est requis.  \n**Article 61-3-1 du Code civil [Source 1].**\n\nLa source fournie précise également que, lorsqu’une déclaration concerne directement un enfant mineur dans l’hypothèse d’un nom acquis dans un autre État, elle est effectuée conjointement par les deux parents exerçant l’autorité parentale, ou par le parent exerçant seul cette autorité ; l’enfant doit alors consentir personnellement s’il a plus de treize ans. **Article 61-3-1 du Code civil [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-3-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1433.2976440005004,
+      "routingCalls": 1,
+      "embeddingMs": 377.7792779998854,
+      "vectorSearchMs": 107.36209900025278,
+      "jinaRerankingMs": 846.7797750001773,
+      "mappingMs": 0.02339000068604946,
+      "totalMs": 2765.269859000109,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010475999675691128,
+      "contextBuilderMs": 0.010912000201642513,
+      "generationMs": 5016.856561999768,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7782.158046999946
+    },
+    "judge": {
+      "questionId": "q368",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les deux voies de demande prévues, la limitation à un seul choix pour la première voie, la confirmation après un mois, les rôles de l’officier d’état civil et du procureur, ainsi que les effets sur les enfants et l’exigence de leur consentement au-delà de treize ans. Toutes les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source unique est directement pertinente : elle reproduit l’article 61-3-1 du Code civil, qui encadre les deux procédures de changement de nom évoquées, les conditions de confirmation, les compétences de l’officier d’état civil et du procureur, ainsi que les effets sur les enfants. Elle étaye toutes les affirmations substantielles de la réponse générée, y compris la règle du choix unique, le délai minimal d’un mois, l’opposition ou l’ordonnance du procureur et le consentement au-delà de treize ans."
+    }
+  },
+  "failureStage": "none"
+}

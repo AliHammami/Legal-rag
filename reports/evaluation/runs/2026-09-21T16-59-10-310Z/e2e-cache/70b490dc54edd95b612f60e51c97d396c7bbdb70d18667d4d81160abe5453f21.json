@@ -1,0 +1,95 @@
+{
+  "questionId": "q170",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le texte de l’**article L2262-1 du Code du travail** n’est pas fourni dans le contexte. Il n’est donc pas possible d’indiquer précisément, sur son fondement, qui est tenu de respecter l’application des conventions et accords.\n\nLa seule disposition fournie précise que les organisations et employeurs **liés par une convention ou un accord** doivent ne rien faire qui compromette son exécution loyale (**article L2262-4 du Code du travail** [Source 1]).",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2262-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 203.390980000142,
+      "vectorSearchMs": 655.4096329999156,
+      "jinaRerankingMs": 495.333564999979,
+      "mappingMs": 0.033105000387877226,
+      "totalMs": 1354.197269000113,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010282000061124563,
+      "contextBuilderMs": 0.01788900000974536,
+      "generationMs": 2017.1632590000518,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3371.397917999886
+    },
+    "judge": {
+      "questionId": "q170",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la règle demandée à l’article L2262-1, selon laquelle l’application est obligatoire pour les signataires ou membres des organisations ou groupements signataires. Elle se limite à une disposition distincte, l’article L2262-4, relative à l’exécution loyale. En revanche, ses affirmations sur l’absence de L2262-1 dans le contexte et sur le contenu de L2262-4 sont fidèles au contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est pertinente pour étayer l'affirmation effectivement formulée sur l'article L2262-4 et l'obligation de ne pas compromettre l'exécution loyale. Elle ne permet toutefois pas de répondre directement à la question relative à l'article L2262-1 ni de retrouver la catégorie précise des signataires ou membres d'organisations ou groupements signataires. La source 2, portant sur l'adhésion, est seulement périphérique. Les affirmations importantes de la réponse générée — absence de L2262-1 parmi les sources et contenu de L2262-4 — sont néanmoins couvertes par le contexte, en particulier par la source 1."
+    }
+  },
+  "routing": {
+    "answer": "Le texte de l’**article L2262-1 du Code du travail** n’est pas fourni : il n’est donc pas possible d’identifier précisément, sur cette seule base, les personnes tenues de respecter l’application des conventions et accords.\n\nLes sources indiquent seulement que les organisations et employeurs **liés par une convention ou un accord** doivent en assurer une exécution loyale (**article L2262-4 du Code du travail** [Source 1]). Elles précisent également quelles organisations ou quels employeurs peuvent y adhérer (**article L2261-3 du Code du travail** [Source 2]).",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2262-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2261-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1638.8769820001908,
+      "routingCalls": 1,
+      "embeddingMs": 346.9706879998557,
+      "vectorSearchMs": 289.2692830003798,
+      "jinaRerankingMs": 490.8641209998168,
+      "mappingMs": 0.03898199973627925,
+      "totalMs": 2766.0514810001478,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014175999909639359,
+      "contextBuilderMs": 0.019051999785006046,
+      "generationMs": 2558.2155400002375,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5324.311852000188
+    },
+    "judge": {
+      "questionId": "q170",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n'identifie pas les personnes visées par l'article L2262-1 et refuse de répondre alors qu'une réponse était attendue : tous les signataires ou membres des organisations ou groupements signataires. Elle est donc incorrecte et ne couvre aucun élément essentiel. En revanche, ses affirmations limitées aux articles L2262-4 et L2261-3 sont fidèlement appuyées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "Les deux sources portent sur les conventions et accords collectifs et sont donc connexes à la question, mais aucune ne contient l’article L2262-1 ni ne permet d’identifier directement les signataires ou membres d’organisations/groupements signataires visés par cet article. Elles sont insuffisantes pour répondre au fond. Elles couvrent toutefois largement les affirmations effectivement formulées : la source 1 établit l’obligation des organisations et employeurs liés de ne pas compromettre l’exécution loyale, et la source 2 traite des personnes ou organisations pouvant adhérer. La formulation « assurer une exécution loyale » est légèrement plus large que le texte de la source 1, qui impose de ne rien faire pour la compromettre."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,87 @@
+{
+  "questionId": "q262",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article L362-1 du Code monétaire et financier** :\n\n- Pour les manquements au **d du 3 et au 8 de l’article 5** du règlement (UE) n° 260/2012 :\n  - **3 000 € maximum** pour une personne physique ;\n  - **15 000 € maximum** pour une personne morale.\n\n- Pour les manquements aux **articles 8 et 9** du même règlement :\n  - **75 000 € maximum** pour une personne physique ;\n  - **375 000 € maximum** pour une personne morale.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L362-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 213.15746199991554,
+      "vectorSearchMs": 683.2349339993671,
+      "jinaRerankingMs": 525.4025039998814,
+      "mappingMs": 0.0797910001128912,
+      "totalMs": 1421.904199999757,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011072000488638878,
+      "contextBuilderMs": 0.015100999735295773,
+      "generationMs": 2876.834459000267,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4298.783572000451
+    },
+    "judge": {
+      "questionId": "q262",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux plafonds d’amende prévus : 3 000 € / 15 000 € pour les manquements visés au d du 3 et au 8 de l’article 5, et 75 000 € / 375 000 € pour les manquements aux articles 8 et 9. Ces éléments sont explicitement soutenus par le contexte. Elle répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est l'article L362-1 directement applicable et énonce explicitement les deux catégories de manquements ainsi que les plafonds d'amende pour personnes physiques et morales. Elle couvre intégralement les affirmations de la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Les amendes administratives maximales sont les suivantes :\n\n- **Manquements au d du 3 et au 8 de l’article 5 du règlement (UE) n° 260/2012** :\n  - **3 000 €** pour une personne physique ;\n  - **15 000 €** pour une personne morale.\n\n- **Manquements aux articles 8 et 9 du même règlement** :\n  - **75 000 €** pour une personne physique ;\n  - **375 000 €** pour une personne morale.\n\nCes montants sont prévus par l’**article L. 362-1 du Code monétaire et financier** [Source 1]. Le texte fourni mentionne également l’article 5 ter, mais ne précise pas le montant qui lui serait spécifiquement applicable.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L362-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1691.1612319992855,
+      "routingCalls": 1,
+      "embeddingMs": 211.06915799994022,
+      "vectorSearchMs": 124.11279999930412,
+      "jinaRerankingMs": 600.3986269999295,
+      "mappingMs": 0.04999000020325184,
+      "totalMs": 2626.8586020004004,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014283000491559505,
+      "contextBuilderMs": 0.014919999986886978,
+      "generationMs": 2535.3256590003148,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5162.223739000037
+    },
+    "judge": {
+      "questionId": "q262",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux plafonds prévus : 3 000 € / 15 000 € pour les manquements au d du 3 et au 8 de l’article 5, et 75 000 € / 375 000 € pour les manquements aux articles 8 et 9. Ces affirmations sont explicitement étayées par le contexte. La remarque sur l’article 5 ter est conforme au fait que le texte le mentionne sans lui associer explicitement un plafond distinct."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L. 362-1 énonce expressément les plafonds d’amende applicables aux manquements visés par le règlement (UE) n° 260/2012. Elle couvre intégralement les deux séries de montants indiquées dans la réponse, selon la qualité de personne physique ou morale, ainsi que le constat selon lequel l’article 5 ter est mentionné sans plafond spécifiquement attribué dans les subdivisions énumérées."
+    }
+  },
+  "failureStage": "none"
+}

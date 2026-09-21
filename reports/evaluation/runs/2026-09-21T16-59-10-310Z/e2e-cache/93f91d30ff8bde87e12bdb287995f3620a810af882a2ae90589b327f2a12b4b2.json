@@ -1,0 +1,103 @@
+{
+  "questionId": "q401",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "## 1. Compétence professionnelle des personnels de prêts\n\nSelon l’**article D. 314-23 du Code de la consommation** [Source 3], les prêteurs et intermédiaires de crédit doivent veiller à ce que les personnels concernés remplissent les conditions de compétence professionnelle par l’une des voies suivantes :\n\n1. **La détention d’un diplôme ou titre approprié**, notamment :\n   - un diplôme prévu par l’accord du 10 juin 2011 relatif à la formation professionnelle dans le secteur bancaire, à l’exception du BP banque ;\n   - un diplôme correspondant au **niveau 5** dans les domaines de la finance, de la banque, de la gestion, de l’économie, du droit ou de l’assurance ;\n   - un diplôme de commerce sanctionnant un cycle d’études supérieures de niveau I.\n\n   Les diplômes français doivent notamment être enregistrés au répertoire national des certifications professionnelles ou être délivrés au nom de l’État. Les diplômes étrangers doivent être reconnus par le Centre ENIC-NARIC France sur la base d’une attestation de comparabilité.\n\n2. **Le suivi d’une formation professionnelle adaptée aux opérations de crédit**, dispensée :\n   - soit auprès d’un établissement de crédit ou d’une société de financement ;\n   - soit auprès d’un organisme de formation choisi dans les conditions prévues par le texte.\n\nL’obligation doit en principe être satisfaite lors de la prise de fonction. Toutefois, un délai de six mois est prévu si le salarié occupe un poste adapté et exerce sous la responsabilité d’une personne remplissant elle-même les conditions requises, conformément à l’**article D. 314-24 du Code de la consommation** [Source 2].\n\n## 2. Règles applicables aux retraits sur un plan d’épargne en actions\n\nLa seule règle fournie par le contexte est que les **II et III de l’article L. 221-31** et l’**article L. 221-32 du Code monétaire et financier** sont applicables au plan d’épargne en actions destiné au financement des PME et des entreprises de taille intermédiaire, conformément à l’**article L. 221-32-3 du Code monétaire et financier** [Source 1].\n\nEn revanche, le contenu de l’article **L. 221-32** n’est pas reproduit dans les sources fournies. Il n’est donc pas possible de préciser les règles concrètes relatives aux retraits — notamment leurs effets ou les éventuelles conditions applicables — sans disposer du texte de cet article.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L221-32-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-24"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 349.45649700053036,
+      "vectorSearchMs": 726.4636740013957,
+      "jinaRerankingMs": 589.4880870003253,
+      "mappingMs": 0.031873999163508415,
+      "totalMs": 1665.468431999907,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018104998394846916,
+      "contextBuilderMs": 0.13307099975645542,
+      "generationMs": 4986.489958001301,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6652.165455000475
+    },
+    "judge": {
+      "questionId": "q401",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement et de façon détaillée les deux voies de compétence professionnelle prévues par l'article D. 314-23, ainsi que les conditions relatives aux diplômes et à la formation. Elle ne fournit toutefois pas les règles de fond relatives aux retraits sur un PEA attendues par la référence (clôture avant cinq ans et exceptions). Cette omission rend la réponse partielle au regard de la question, mais son constat selon lequel le contenu de L. 221-32 n'était pas présent dans le contexte est exact. Toutes les affirmations importantes sont étayées par les sources fournies, y compris le délai de six mois tiré de D. 314-24. La réponse ne constitue pas une abstention globale : elle répond effectivement à la partie sur D. 314-23 et expose la limite documentaire pour l'autre partie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les conditions de compétence professionnelle : D. 314-23 couvre les voies de diplôme et de formation, et D. 314-24 couvre le délai de six mois ajouté dans la réponse. En revanche, aucune source ne reproduit le contenu de L. 221-32 relatif aux retraits sur un PEA ; la source L. 221-32-3 établit seulement son applicabilité au PEA-PME. Les sources sont donc seulement partiellement suffisantes pour la question dans son ensemble. Elles couvrent néanmoins toutes les affirmations importantes effectivement formulées dans la réponse générée, y compris le constat, correctement fondé sur l'absence du texte de L. 221-32 dans le contexte, qu'il est impossible d'en détailler les règles de retrait."
+    }
+  },
+  "routing": {
+    "answer": "### Compétence professionnelle des personnels\n\nSelon l’**article D. 314-23 du Code de la consommation**, les prêteurs et les intermédiaires de crédit doivent veiller à ce que leurs personnels remplissent des conditions de compétence professionnelle résultant **de l’une des deux voies suivantes** :\n\n1. **La détention d’un diplôme approprié**, notamment :\n   - un diplôme prévu par l’accord du 10 juin 2011 relatif à la formation professionnelle dans le secteur bancaire, à l’exception du BP banque ;\n   - un diplôme sanctionnant un cycle d’études supérieures de niveau 5 dans les domaines de la finance, de la banque, de la gestion, de l’économie, du droit ou de l’assurance ;\n   - ou un diplôme de commerce sanctionnant un cycle d’études supérieures de niveau I.\n\n   Des conditions supplémentaires sont prévues selon que le diplôme a été obtenu en France ou à l’étranger : enregistrement ou délivrance conforme aux règles applicables en France, ou reconnaissance par le Centre ENIC-NARIC France pour un diplôme étranger. [Source 3]\n\n2. **Le suivi d’une formation professionnelle adaptée aux opérations de crédit**, dispensée :\n   - par un établissement de crédit ou une société de financement ;\n   - ou par un organisme de formation choisi dans les conditions prévues à l’article D. 314-26. [Source 3]\n\nEn outre, les personnels doivent normalement satisfaire à cette obligation lors de leur prise de fonction. Ils disposent toutefois d’un délai de six mois s’ils occupent un poste adapté et travaillent sous la responsabilité d’une personne remplissant elle-même les conditions requises. **Article D. 314-24 du Code de la consommation** [Source 2].\n\n### Retraits sur un plan d’épargne en actions\n\nLe contexte fourni ne reproduit pas le contenu de l’**article L. 221-32 du Code monétaire et financier**. Il ne permet donc pas de préciser les règles spécifiques applicables aux retraits sur un plan d’épargne en actions.\n\nIl ressort seulement que les dispositions des II et III de l’article L. 221-31 ainsi que celles de l’article L. 221-32 sont applicables au **plan d’épargne en actions destiné au financement des petites et moyennes entreprises et des entreprises de taille intermédiaire**. **Article L. 221-32-3 du Code monétaire et financier** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L221-32-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-24"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "D314-23"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1434.9203929994255,
+      "routingCalls": 1,
+      "embeddingMs": 219.79446299932897,
+      "vectorSearchMs": 278.62728600017726,
+      "jinaRerankingMs": 601.4854669999331,
+      "mappingMs": 0.025947999209165573,
+      "totalMs": 2534.879944000393,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0363209992647171,
+      "contextBuilderMs": 0.020896000787615776,
+      "generationMs": 4192.102493001148,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6727.058373000473
+    },
+    "judge": {
+      "questionId": "q401",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement et avec précision les deux voies de compétence professionnelle prévues par l'article D. 314-23, ainsi que les précisions relatives aux diplômes et à la formation. Elle répond correctement, au regard du contexte disponible, qu'aucune règle détaillée sur les retraits relevant de L. 221-32 ne peut être précisée, tout en mentionnant le seul élément contextuel relatif à l'applicabilité au PEA-PME. Toutefois, par rapport à la réponse de référence et à la question complète, elle n'énonce pas les règles substantielles attendues sur les retraits avant cinq ans, la clôture et les exceptions. Toutes ses affirmations importantes sont néanmoins étayées par les sources fournies, y compris le délai de six mois issu de D. 314-24."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 est directement pertinente et couvre précisément les conditions de compétence professionnelle prévues à l'article D. 314-23 ; la source 2 étaye le complément relatif au délai de six mois. En revanche, le texte de l'article L. 221-32, nécessaire pour répondre aux règles de retrait du PEA, n'est pas fourni : la source 1 ne fait que renvoyer à son applicabilité au PEA-PME. Les sources sont donc seulement partiellement suffisantes pour la question complète. Elles couvrent néanmoins les affirmations effectivement formulées dans la réponse générée, y compris le seul constat possible sur le PEA-PME et l'absence de détail disponible sur L. 221-32."
+    }
+  },
+  "failureStage": "generation"
+}

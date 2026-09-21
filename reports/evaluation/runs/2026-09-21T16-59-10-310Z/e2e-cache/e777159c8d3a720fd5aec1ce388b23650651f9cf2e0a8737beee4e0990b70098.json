@@ -1,0 +1,99 @@
+{
+  "questionId": "q093",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 1101 du Code civil définit le contrat comme un **accord de volontés** entre au moins deux personnes. Sa nature juridique repose donc sur la rencontre des volontés des parties, qui ont pour objectif de produire des effets obligatoires : **créer, modifier, transmettre ou éteindre des obligations**. [Source 1]\n\nEn principe, ces obligations ne concernent que les parties au contrat. Ainsi, selon l’article 1199 du Code civil, le contrat **ne crée d’obligations qu’entre les parties** : les tiers ne peuvent ni en demander l’exécution ni être contraints de l’exécuter, sous réserve des dispositions particulières prévues par la loi. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1101"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1199"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 248.10627299989574,
+      "vectorSearchMs": 615.4654719999526,
+      "jinaRerankingMs": 500.15545199997723,
+      "mappingMs": 0.036817000014707446,
+      "totalMs": 1363.8438570001163,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019401000114157796,
+      "contextBuilderMs": 0.020155000034719706,
+      "generationMs": 2104.8115850000177,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3468.705964999972
+    },
+    "judge": {
+      "questionId": "q093",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l’article 1101 (accord de volontés entre deux ou plusieurs personnes destiné à créer, modifier, transmettre ou éteindre des obligations) et explique adéquatement l’effet obligatoire inter partes, conforme à l’article 1199. Toutes les affirmations importantes sont explicitement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la définition du contrat donnée à l’article 1101 et couvre sa nature d’accord de volontés ainsi que les opérations sur les obligations. La source 2 est directement pertinente pour l’effet relatif du contrat invoqué dans la réponse et couvre explicitement l’absence d’obligations ou de droit à exécution pour les tiers, sous les réserves légales mentionnées."
+    }
+  },
+  "routing": {
+    "answer": "L’article 1101 du Code civil définit le contrat comme un **accord de volontés** entre au moins deux personnes. Sa nature juridique repose donc sur la rencontre des consentements, qui vise à **créer, modifier, transmettre ou éteindre des obligations** entre les parties. [Source 1]\n\nLe contrat produit principalement ses effets entre ceux qui l’ont conclu : il ne crée d’obligations qu’entre les parties. En principe, les tiers ne peuvent donc ni demander l’exécution du contrat ni être contraints de l’exécuter, sous réserve des exceptions prévues par la loi. **Article 1199 du Code civil** [Source 2]\n\nEnfin, les obligations contractuelles ne se limitent pas aux stipulations expressément écrites. Le contrat oblige également les parties à toutes les suites que lui donnent **l’équité, l’usage ou la loi**. **Article 1194 du Code civil** [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1101"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1199"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1194"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1865.869417999871,
+      "routingCalls": 1,
+      "embeddingMs": 206.77028100006282,
+      "vectorSearchMs": 90.21000099997036,
+      "jinaRerankingMs": 496.2388130000327,
+      "mappingMs": 0.029801999917253852,
+      "totalMs": 2659.1566610001028,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010009000077843666,
+      "contextBuilderMs": 0.021478999871760607,
+      "generationMs": 2485.17091100011,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5144.372328000143
+    },
+    "judge": {
+      "questionId": "q093",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l'article 1101 et explique adéquatement les effets obligatoires du contrat entre les parties, son inopposabilité de principe aux tiers et l'extension des obligations aux suites données par l'équité, l'usage ou la loi. Toutes les affirmations sont directement étayées par les trois extraits de contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : l'article 1101 définit la nature du contrat, tandis que les articles 1199 et 1194 précisent ses effets obligatoires entre les parties, à l'égard des tiers et quant aux suites du contrat. Elles couvrent l'ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

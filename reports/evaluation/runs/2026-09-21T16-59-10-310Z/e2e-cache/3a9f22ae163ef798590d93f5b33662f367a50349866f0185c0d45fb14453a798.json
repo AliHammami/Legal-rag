@@ -1,0 +1,103 @@
+{
+  "questionId": "q042",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 724-1 du Code pénal**, la destruction, la dégradation ou la détérioration est punie de **sept ans d’emprisonnement et de 100 000 € d’amende** lorsqu’elle porte sur :\n\n- un **immeuble ou un objet mobilier classé, inscrit ou protégé** en vertu de la réglementation applicable localement ;\n- une **découverte archéologique** faite au cours de fouilles ou fortuitement ;\n- un **terrain contenant des vestiges archéologiques** ;\n- un **objet conservé ou déposé dans un musée, une bibliothèque ou des archives** appartenant à une personne publique, chargée d’un service public ou reconnue d’utilité publique.\n\n[Article 724-1 du Code pénal — Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "724-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "714-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 162.04759700002614,
+      "vectorSearchMs": 651.5661100000143,
+      "jinaRerankingMs": 541.5951370000839,
+      "mappingMs": 0.03759399999398738,
+      "totalMs": 1355.269282000023,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010225000092759728,
+      "contextBuilderMs": 0.02814900001976639,
+      "generationMs": 2635.830495000002,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3991.147273999988
+    },
+    "judge": {
+      "questionId": "q042",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère fidèlement les quatre catégories prévues par l'article 724-1 : immeuble ou objet mobilier protégé, découverte archéologique, terrain avec vestiges archéologiques et objet conservé ou déposé dans les institutions visées. La formulation est entièrement supportée par la source 2 du contexte et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l'article 724-1 et énonce précisément les quatre circonstances mentionnées dans la réponse, ainsi que la peine de sept ans d'emprisonnement et 100 000 € d'amende. La source 1 apporte un contexte législatif proche mais n'est pas nécessaire ; la réponse est intégralement couverte par la source 2."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 724-1 du Code pénal**, la destruction, la dégradation ou la détérioration est punie de **sept ans d’emprisonnement et de 100 000 € d’amende** lorsqu’elle porte sur :\n\n- un immeuble ou un objet mobilier **classé, inscrit ou protégé** en vertu de la réglementation applicable localement ;\n- une **découverte archéologique** faite au cours de fouilles ou fortuitement ;\n- un **terrain contenant des vestiges archéologiques** ;\n- un objet conservé ou déposé dans un **musée, une bibliothèque ou des archives** appartenant à une personne publique, chargée d’un service public ou reconnue d’utilité publique.\n\n[Article 724-1 du Code pénal — Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "322-3-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "714-1"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "724-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1466.5499270000728,
+      "routingCalls": 1,
+      "embeddingMs": 237.46556000004057,
+      "vectorSearchMs": 55.3358040000312,
+      "jinaRerankingMs": 553.0298170000315,
+      "mappingMs": 0.030295999953523278,
+      "totalMs": 2312.448524999898,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010024999966844916,
+      "contextBuilderMs": 0.022094000014476478,
+      "generationMs": 2335.4722499999916,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4647.96305999998
+    },
+    "judge": {
+      "questionId": "q042",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énumère correctement et exhaustivement les quatre catégories de biens visées par l'article 724-1, avec la peine demandée. Les précisions sur les découvertes fortuites, le dépôt temporaire implicite et les institutions concernées sont conformes au contexte, en particulier à la Source 3. Elle répond directement à la question sans s'abstenir."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 3 est directement pertinente : elle reproduit précisément l'article 724-1 et énonce la peine ainsi que les quatre catégories de biens ou situations visées. Elle couvre l'ensemble des affirmations substantielles de la réponse générée, y compris les découvertes archéologiques lors de fouilles ou fortuites et les conditions relatives aux musées, bibliothèques et archives."
+    }
+  },
+  "failureStage": "none"
+}

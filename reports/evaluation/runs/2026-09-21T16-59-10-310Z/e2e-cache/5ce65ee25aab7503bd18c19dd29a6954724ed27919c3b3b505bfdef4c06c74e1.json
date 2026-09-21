@@ -1,0 +1,87 @@
+{
+  "questionId": "q095",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 1240 du Code civil, c’est tout fait quelconque d’une personne ayant causé un dommage à autrui qui oblige son auteur à le réparer, lorsqu’il est dû à sa faute. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1240"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 221.2789960000664,
+      "vectorSearchMs": 631.6465529999696,
+      "jinaRerankingMs": 546.0411890000105,
+      "mappingMs": 0.033300000010058284,
+      "totalMs": 1399.0272009999026,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01193399983458221,
+      "contextBuilderMs": 0.014664999907836318,
+      "generationMs": 1159.8841040001716,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2558.9475159998983
+    },
+    "judge": {
+      "questionId": "q095",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reformule fidèlement l’article 1240 : un fait causant un dommage à autrui oblige la personne par la faute de laquelle il est survenu à le réparer. Tous les éléments sont présents et directement soutenus par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 1240 du Code civil, qui répond précisément à la question. Elle couvre l’ensemble de l’affirmation générée : fait causant un dommage à autrui, obligation de réparation et condition tenant à la faute de son auteur."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 1240 du Code civil, c’est **tout fait quelconque de l’homme ayant causé un dommage à autrui** qui oblige son auteur fautif à le réparer. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1240"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1288.7340549998917,
+      "routingCalls": 1,
+      "embeddingMs": 196.03338399995118,
+      "vectorSearchMs": 56.786263999994844,
+      "jinaRerankingMs": 495.2815910000354,
+      "mappingMs": 0.03528900002129376,
+      "totalMs": 2036.8999459999613,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011194000020623207,
+      "contextBuilderMs": 0.01294599985703826,
+      "generationMs": 1095.3617869999725,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3132.297453999985
+    },
+    "judge": {
+      "questionId": "q095",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement la règle de l’article 1240 du Code civil : tout fait de l’homme causant un dommage à autrui oblige la personne par la faute de laquelle il est survenu à le réparer. L’ensemble est explicitement soutenu par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement le texte de l’article 1240 du Code civil, qui répond précisément à la question. Elle couvre l’affirmation selon laquelle tout fait de l’homme causant un dommage à autrui oblige la personne fautive à le réparer."
+    }
+  },
+  "failureStage": "none"
+}

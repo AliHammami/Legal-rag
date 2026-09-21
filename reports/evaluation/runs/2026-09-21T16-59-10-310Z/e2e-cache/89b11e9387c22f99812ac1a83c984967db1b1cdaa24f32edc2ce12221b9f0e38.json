@@ -1,0 +1,95 @@
+{
+  "questionId": "q187",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "À la clôture de chaque exercice, le conseil d’administration, le directoire ou les gérants doivent dresser :\n\n- **l’inventaire** ;\n- **les comptes annuels**, conformément aux dispositions applicables du Code de commerce.\n\n**Article L232-1 du Code de commerce [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.32917999988422,
+      "vectorSearchMs": 557.5242329998873,
+      "jinaRerankingMs": 520.8651680001058,
+      "mappingMs": 0.03320599999278784,
+      "totalMs": 1290.7848490001634,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011899000033736229,
+      "contextBuilderMs": 0.05469100037589669,
+      "generationMs": 1878.896480999887,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3169.759877999779
+    },
+    "judge": {
+      "questionId": "q187",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique exactement que doivent être dressés l’inventaire et les comptes annuels. Elle est conforme à la référence et directement étayée par l’article L232-1 fourni dans le contexte. La formulation « dispositions applicables du Code de commerce » est légèrement moins précise que la référence quant à la section visée, mais ne retire aucun élément essentiel."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle reproduit l'article L232-1 et énonce qu'à la clôture de chaque exercice doivent être dressés l'inventaire et les comptes annuels conformément aux dispositions citées. Elle couvre intégralement les affirmations essentielles de la réponse générée. La source 2 est non nécessaire mais n'affecte pas l'adéquation de la source principale."
+    }
+  },
+  "routing": {
+    "answer": "À la clôture de chaque exercice, le conseil d’administration, le directoire ou les gérants doivent dresser :\n\n- **l’inventaire** ;\n- **les comptes annuels**, conformément aux dispositions applicables du Code de commerce.\n\n[Article L232-1 du Code de commerce, Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L232-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R232-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1461.2021440002136,
+      "routingCalls": 1,
+      "embeddingMs": 220.87093599978834,
+      "vectorSearchMs": 175.14718500012532,
+      "jinaRerankingMs": 532.2612339998595,
+      "mappingMs": 0.033353999722748995,
+      "totalMs": 2389.5483740000054,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011649999767541885,
+      "contextBuilderMs": 0.01935099996626377,
+      "generationMs": 1936.6167310001329,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4326.205676999874
+    },
+    "judge": {
+      "questionId": "q187",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement l’inventaire et les comptes annuels, et mentionne leur conformité aux dispositions applicables du Code de commerce. Ces éléments sont directement soutenus par l’extrait de l’article L232-1 fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement la disposition pertinente de l'article L232-1 et établit que les organes visés dressent, à la clôture de chaque exercice, l'inventaire et les comptes annuels conformément aux dispositions indiquées. Elle couvre toutes les affirmations importantes de la réponse. La source 2 est accessoire et n'est pas nécessaire."
+    }
+  },
+  "failureStage": "none"
+}

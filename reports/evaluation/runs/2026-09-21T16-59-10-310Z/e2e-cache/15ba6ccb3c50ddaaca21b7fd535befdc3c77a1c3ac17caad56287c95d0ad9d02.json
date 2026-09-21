@@ -1,0 +1,98 @@
+{
+  "questionId": "q467",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas d’affirmer que le taux de l’impôt sur le revenu est de **30 %**.\n\nL’**article R. 3324-7 du Code du travail** prévoit un **taux moyen d’imposition**, calculé ainsi :\n\n> impôt sur le revenu dû ÷ revenus soumis à cet impôt × 100\n\nCe taux est ensuite plafonné au taux de droit commun de l’impôt sur les sociétés [Source 1].\n\nIl ne s’agit donc pas d’un taux fixe applicable à une tranche. Les taux mentionnés dans l’article R. 3252-2 du Code du travail concernent la **saisie ou la cession des rémunérations**, et non l’impôt sur le revenu [Source 4].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3324-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-68"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-135"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R3252-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-151"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 183.9453730005771,
+      "vectorSearchMs": 683.899346999824,
+      "jinaRerankingMs": 533.071520999074,
+      "mappingMs": 0.029211999848484993,
+      "totalMs": 1400.972942000255,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010190999135375023,
+      "contextBuilderMs": 0.03266599960625172,
+      "generationMs": 2217.2060059998184,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3618.2326079998165
+    },
+    "judge": {
+      "questionId": "q467",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse indique correctement que le contexte ne permet pas d'établir un taux de 30 % pour une tranche de l'impôt sur le revenu. Elle explique de façon fidèle que la seule disposition pertinente fournie décrit un taux moyen d'imposition de l'exploitant, et non un barème par tranches, et distingue correctement les taux de saisie des rémunérations. Elle constitue donc une abstention appropriée tout en exploitant correctement le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Pour justifier l’abstention, la source 1 est pertinente car elle traite bien d’un taux moyen d’impôt sur le revenu de l’exploitant et montre qu’il ne s’agit pas d’un barème fixe par tranche. La source 4 est également pertinente pour écarter les taux de saisissabilité des rémunérations, distincts de l’impôt sur le revenu. Les autres sources sont hors sujet. Les affirmations importantes de la réponse — formule et plafond du taux moyen, absence de taux fixe par tranche dans cette disposition, et objet de la source 4 — sont couvertes par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1250.96267599985,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1250.9636330008507,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1250.9733279999346
+    },
+    "judge": {
+      "questionId": "q467",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et indique que le contexte vide ne permet pas de répondre de manière fiable à une question fiscale hors périmètre. Cette abstention est appropriée et entièrement fondée sur l'absence de contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une réponse d’abstention fondée sur l’absence de contexte exploitable. La réponse ne formule aucune affirmation fiscale de fond et son constat d’absence de corpus pertinent est entièrement supporté par le contexte vide."
+    }
+  },
+  "failureStage": "none"
+}

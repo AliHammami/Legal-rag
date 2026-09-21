@@ -1,0 +1,86 @@
+{
+  "questionId": "q486",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Selon l’**article 545 du Code civil**, l’expropriation n’est possible que si deux conditions sont réunies :\n\n1. **Une cause d’utilité publique** ;\n2. **Le versement d’une indemnité juste et préalable** au propriétaire.\n\nAinsi, nul ne peut être contraint de céder sa propriété en dehors de ces conditions. **Les sources fournies ne précisent pas les conditions procédurales** permettant de déclarer un projet d’utilité publique ni les modalités de fixation de l’indemnité. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "A444-160"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "545"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 801.452025999999,
+      "vectorSearchMs": 835.8583010000002,
+      "jinaRerankingMs": 569.0090659999987,
+      "mappingMs": 0.019959000004746486,
+      "totalMs": 2206.395362999996,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017275999998673797,
+      "contextBuilderMs": 0.02671100000588922,
+      "generationMs": 2314.7123920000013,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4521.175491999995
+    },
+    "judge": {
+      "questionId": "q486",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse énonce correctement les deux garanties matérielles prévues par l’article 545 du Code civil : cause d’utilité publique et indemnité juste et préalable. Elle est intégralement étayée par la source 2 et précise à juste titre que celle-ci ne couvre pas les conditions procédurales. Toutefois, l’abstention était attendue : malgré cette réserve, elle répond au fond au lieu d’indiquer que le contexte ne permet pas de traiter de manière fiable l’ensemble des conditions de l’expropriation."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est directement pertinente : l’article 545 du Code civil énonce bien l’utilité publique et l’indemnité juste et préalable. La source 1 ne traite que des émoluments liés à certains règlements d’indemnité et n’éclaire pas les conditions de l’expropriation. Pour une question générale sur les conditions de l’expropriation, des sources procédurales importantes manquent, ce qui justifie une pertinence seulement partielle de l’ensemble. En revanche, les affirmations effectivement formulées dans la réponse sont couvertes par la source 2, et la réserve sur l’absence de précisions procédurales correspond au périmètre limité des sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1145.822027999995,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1145.828766999999,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1145.8472949999996
+    },
+    "judge": {
+      "questionId": "q486",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question relève du droit de l’expropriation, hors du périmètre du Code pénal. La réponse s’abstient explicitement de répondre faute de contexte fiable, conformément à l’abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc aucune source directement pertinente pour traiter les conditions de l’expropriation. Toutefois, la réponse générée se limite à constater l’absence de contexte et l’absence de recherche juridique ; ces constats sont entièrement cohérents avec le dossier de sources vide, sans affirmation juridique de fond à couvrir."
+    }
+  },
+  "failureStage": "none"
+}

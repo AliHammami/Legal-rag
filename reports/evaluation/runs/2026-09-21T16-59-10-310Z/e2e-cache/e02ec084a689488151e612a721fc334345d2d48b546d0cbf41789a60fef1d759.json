@@ -1,0 +1,94 @@
+{
+  "questionId": "q464",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les principes applicables en matière de preuve sont les suivants :\n\n1. **Principe de liberté de la preuve**  \n   En l’absence de disposition légale contraire, la preuve peut être rapportée par tout moyen : écrit, témoignage, présomption, etc.  \n   **Article 1358 du Code civil [Source 4].**\n\n2. **Validité encadrée des conventions sur la preuve**  \n   Les parties peuvent conclure des conventions relatives à la preuve lorsque celles-ci portent sur des droits dont elles ont la libre disposition. Toutefois, ces conventions ne peuvent :\n   - contredire une présomption irréfragable prévue par la loi ;\n   - modifier la valeur probante de l’aveu ou du serment ;\n   - établir au profit d’une partie une présomption irréfragable.  \n   **Article 1356 du Code civil [Source 3].**\n\n3. **Règles spéciales en matière de pratiques anticoncurrentielles**  \n   Les règles de preuve prévues aux articles L. 481-4 et L. 481-5 du Code de commerce s’appliquent également aux fournisseurs directs ou indirects de l’auteur de la pratique anticoncurrentielle lorsqu’ils invoquent un préjudice résultant d’une baisse du prix des biens ou services concernés.  \n   **Article L. 481-6 du Code de commerce [Source 1].**\n\n4. **Règles spéciales en droit du travail**  \n   En cas de litige relatif à l’application du chapitre concerné, les règles de preuve de l’article L. 1144-1 s’appliquent.  \n   **Article L. 3221-8 du Code du travail [Source 2].**\n\nAinsi, **le principe général est celui de la preuve par tout moyen**, sous réserve des règles particulières prévues par la loi et des limites imposées aux conventions relatives à la preuve.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L481-6"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3221-8"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1356"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1358"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 247.77647599950433,
+      "vectorSearchMs": 661.6950260009617,
+      "jinaRerankingMs": 531.2044859994203,
+      "mappingMs": 0.03159799985587597,
+      "totalMs": 1440.7327129989862,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010141000151634216,
+      "contextBuilderMs": 0.03468700125813484,
+      "generationMs": 2964.0624260008335,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4404.851797999814
+    },
+    "judge": {
+      "questionId": "q464",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La question est trop indéterminée pour identifier les principes de preuve pertinents, et l’évaluation attendait une abstention. La réponse tente néanmoins une synthèse de règles civiles, commerciales et sociales sans établir leur pertinence pour la question ni pour le Code pénal. Les affirmations formulées sont toutefois soutenues par les extraits de contexte fournis."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "Les sources reproduisent bien des règles sur la preuve, mais elles sont hétérogènes (Code civil, Code de commerce, Code du travail) et ne permettent pas d'identifier les principes applicables à une situation non précisée, ni spécialement au champ pénal. Elles ne justifient pas non plus l'absence d'abstention attendue. En revanche, les affirmations effectivement formulées dans la réponse sont directement soutenues par les extraits : liberté de la preuve (source 4), limites des conventions probatoires (source 3), ainsi que les deux règles sectorielles citées (sources 1 et 2)."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1741.3802160006016,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1741.3811170011759,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1741.3892149999738
+    },
+    "judge": {
+      "questionId": "q464",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est trop indéterminée pour identifier les principes ou règles de preuve applicables. La réponse reconnaît explicitement l’impossibilité de répondre de manière fiable, ce qui constitue l’abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie. Dans le cadre de cette abstention attendue, l'absence de corpus permet précisément de constater qu'aucun élément sourcé ne permet de répondre à une question trop indéterminée. La réponse se limite à ce constat et n'avance aucune affirmation juridique non couverte."
+    }
+  },
+  "failureStage": "none"
+}

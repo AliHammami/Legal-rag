@@ -1,0 +1,90 @@
+{
+  "questionId": "q454",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "La règle dépend du régime juridique concerné :\n\n- **Responsabilité des constructeurs** : les clauses qui excluent ou limitent les responsabilités prévues aux articles 1792, 1792-1 et 1792-2 du Code civil, ainsi que certaines garanties et la solidarité, sont **réputées non écrites**.  \n  **Article 1792-5 du Code civil [Source 1].**\n\n- **Responsabilité du fait des produits défectueux** : les clauses limitatives ou exonératoires sont en principe **interdites et réputées non écrites**. Toutefois, elles peuvent être valables entre professionnels lorsque les dommages concernent des biens qui ne sont pas principalement destinés à l’usage ou à la consommation privée de la victime.  \n  **Article 1245-14 du Code civil [Source 2].**\n\n- **Responsabilité du dépositaire** : elle ne peut être ni exclue ni limitée contractuellement ; tout accord contraire est **nul**.  \n  **Article L. 214-11-2 du Code monétaire et financier [Source 3].**\n\nAinsi, les clauses limitatives de responsabilité ne sont pas soumises à une règle unique dans les sources fournies : elles sont soit réputées non écrites, soit nulles, avec une exception spécifique en matière de produits défectueux entre professionnels.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1792-5"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1245-14"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-11-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 297.73152999952435,
+      "vectorSearchMs": 656.0372599996626,
+      "jinaRerankingMs": 562.5568240005523,
+      "mappingMs": 0.054041000083088875,
+      "totalMs": 1516.4136079996824,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01872200146317482,
+      "contextBuilderMs": 0.033521998673677444,
+      "generationMs": 3185.2708779983222,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4701.772531999275
+    },
+    "judge": {
+      "questionId": "q454",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse fournit des règles exactes mais sectorielles, tirées des trois extraits, sans pouvoir répondre à la question générale sur le régime applicable aux clauses limitatives de responsabilité. Le contexte ne permettait pas d'énoncer une règle générale fiable : une abstention était attendue. Toutes les affirmations juridiques importantes de la réponse sont toutefois directement soutenues par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour des régimes sectoriels de clauses limitatives de responsabilité et permettent de constater qu’elles prévoient des solutions distinctes (réputation non écrite, nullité, exception entre professionnels). Elles ne suffisent toutefois pas à répondre de façon générale à la question, ni à justifier une règle générale. Toutes les affirmations substantielles de la réponse générée sur les trois régimes, leurs sanctions et l’exception relative aux produits défectueux sont directement couvertes par les extraits."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1498.3039570003748,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1498.3055940009654,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1498.3139609992504
+    },
+    "judge": {
+      "questionId": "q454",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et l’abstention était attendue. La réponse indique clairement qu’elle ne peut pas répondre de manière fiable faute de contexte ou de corpus pertinent, sans avancer de règle juridique non étayée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie, donc aucune source ne peut être pertinente pour répondre directement à la question. Toutefois, l'abstention générée se fonde uniquement sur l'absence de contexte et de corpus fourni, constat directement vérifiable dans les éléments disponibles ; elle ne formule aucune affirmation juridique nécessitant une source."
+    }
+  },
+  "failureStage": "none"
+}

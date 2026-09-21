@@ -1,0 +1,95 @@
+{
+  "questionId": "q383",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Durées maximales d’inscription de l’hypothèque\n\nSelon l’**article 2429 du Code civil** :\n\n- **Échéance ou dernière échéance déterminée, inscription prise avant cette échéance** : l’inscription peut produire effet jusqu’à **un an au plus après l’échéance**, sans que sa durée totale puisse dépasser **cinquante ans** [Source 1].\n- **Échéance ou dernière échéance indéterminée**, ou hypothèque assortie d’une clause de rechargement : la durée maximale est de **cinquante ans à compter de la formalité** [Source 1].\n- **Échéance ou dernière échéance antérieure ou concomitante à l’inscription** : la durée maximale est de **dix ans à compter de la formalité** [Source 1].\n- Lorsque plusieurs créances sont garanties et relèvent de régimes différents, le créancier peut notamment prendre une inscription unique jusqu’à **la date la plus éloignée** [Source 1].\n\n### Alternatives à l’emprisonnement\n\nLe contexte fourni ne contient pas l’**article 131-5-1 du Code pénal**. Il ne permet donc pas d’identifier les alternatives à l’emprisonnement pouvant être prescrites pour un délit puni d’emprisonnement.\n\nLa seule disposition pénale fournie, l’**article 131-4 du Code pénal**, fixe l’échelle des peines d’emprisonnement, de **dix ans au plus à deux mois au plus**, mais ne précise pas les peines alternatives [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2429"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 249.36574899964035,
+      "vectorSearchMs": 745.5699729993939,
+      "jinaRerankingMs": 573.8287629997358,
+      "mappingMs": 0.029961000196635723,
+      "totalMs": 1568.8277319995686,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011237000115215778,
+      "contextBuilderMs": 0.019418000243604183,
+      "generationMs": 3959.4640089999884,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5528.332664000802
+    },
+    "judge": {
+      "questionId": "q383",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de façon détaillée les trois régimes de durée de l’inscription hypothécaire prévus à l’article 2429, ainsi que la règle relative aux créances multiples. En revanche, elle ne répond pas au second volet de la question : l’article 131-5-1 permet de prescrire, à titre de peine alternative, un stage d’une durée maximale d’un mois. L’absence de cet article dans le contexte justifie toutefois que la réponse ne l’invente pas : toutes ses affirmations positives sont soutenues par les sources fournies. Comme une réponse était attendue sur l’ensemble de la question, le refus de traiter le volet pénal rend l’abstention non conforme à l’attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre intégralement le volet relatif à l’article 2429 du code civil. La source 2 est seulement marginalement pertinente : elle concerne l’échelle des peines d’emprisonnement mais ne traite pas de l’article 131-5-1 ni des stages comme alternatives. Une source essentielle manque donc pour répondre au second volet de la question. En revanche, les affirmations effectivement formulées dans la réponse générée sont toutes étayées : les durées et le régime des créances multiples par la source 1, l’échelle de l’emprisonnement par la source 2, et le constat de l’absence de l’article 131-5-1 dans le contexte par les sources fournies."
+    }
+  },
+  "routing": {
+    "answer": "### Durées maximales d’inscription de l’hypothèque\n\nSelon l’**article 2429 du Code civil** :\n\n- **Échéance ou dernière échéance déterminée** : l’inscription peut produire effet jusqu’à **un an au plus après cette échéance**, sans pouvoir dépasser une durée totale de **cinquante ans** [Source 1].\n- **Échéance indéterminée** ou hypothèque assortie d’une clause de rechargement : la durée maximale est de **cinquante ans à compter de la formalité d’inscription** [Source 1].\n- **Échéance antérieure ou concomitante à l’inscription** : la durée maximale est de **dix ans à compter de la formalité** [Source 1].\n- Lorsque plusieurs créances sont garanties et relèvent de règles différentes, une inscription unique peut être prise jusqu’à la **date la plus éloignée**, ou des inscriptions distinctes peuvent être requises [Source 1].\n\n### Alternatives à l’emprisonnement\n\nLe contexte fourni ne contient pas l’**article 131-5-1 du Code pénal**. Il contient seulement l’**article 131-4 du Code pénal**, qui énumère les durées maximales des peines d’emprisonnement, de dix ans à deux mois [Source 2].\n\nIl n’est donc pas possible, à partir des seules sources fournies, d’indiquer quelles alternatives à l’emprisonnement peuvent être prescrites pour un délit puni d’emprisonnement.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "2429"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "131-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1285.0381749998778,
+      "routingCalls": 1,
+      "embeddingMs": 283.4828080004081,
+      "vectorSearchMs": 133.58627999946475,
+      "jinaRerankingMs": 566.1329789999872,
+      "mappingMs": 0.021309000439941883,
+      "totalMs": 2268.2890990003943,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04105700086802244,
+      "contextBuilderMs": 0.014487999491393566,
+      "generationMs": 4342.28173299972,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6610.636034999974
+    },
+    "judge": {
+      "questionId": "q383",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et de manière complète les règles de l’article 2429 du code civil, y compris le cas des créances multiples. En revanche, elle ne répond pas à la seconde partie de la question : l’article 131-5-1 permet de prescrire un stage, d’une durée maximale d’un mois, à accomplir dans les six mois suivant la condamnation définitive. Cette omission importante rend la réponse seulement partiellement correcte et incomplète. Les affirmations produites sont toutefois pleinement fondées sur le contexte fourni : celui-ci contient bien l’article 2429 mais pas l’article 131-5-1. L’abstention sur la seconde question n’est pas correcte au regard de l’attente d’une réponse, telle qu’établie par la référence."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre précisément l’ensemble des règles exposées sur les durées d’inscription de l’hypothèque. La source 2 ne traite pas de l’article 131-5-1 ni des alternatives à l’emprisonnement : elle est seulement pertinente pour constater qu’elle concerne l’article 131-4 et non l’article demandé. Ainsi, les sources sont insuffisantes pour répondre intégralement à la seconde partie de la question. En revanche, elles couvrent les affirmations effectivement formulées dans la réponse générée : les règles relatives à l’article 2429 sont reproduites fidèlement, et le constat que les extraits fournis ne contiennent pas l’article 131-5-1 est cohérent avec les sources listées."
+    }
+  },
+  "failureStage": "generation"
+}

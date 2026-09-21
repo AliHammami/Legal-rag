@@ -1,0 +1,95 @@
+{
+  "questionId": "q370",
+  "questionType": "single-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’employeur doit adresser, **au plus tard le 31 janvier de chaque année**, à l’organisme chargé du recouvrement des cotisations et contributions sociales dont il relève, une déclaration portant sur les événements intervenus au cours de l’année civile précédente.\n\nCette déclaration doit notamment indiquer :\n\n- le nombre de salariés partis en préretraite ou placés en cessation anticipée d’activité ;\n- leur âge ;\n- le montant de l’avantage qui leur est alloué ;\n- le nombre de mises à la retraite d’office à l’initiative de l’employeur. Selon l’**Article L1221-18 du Code du travail**, cela concerne les mises à la retraite intervenant dans les conditions des articles L. 1237-5 à L. 1237-10 ;\n- le nombre de salariés âgés d’au moins 55 ans licenciés ou ayant bénéficié d’une rupture conventionnelle, selon cette même disposition [Source 2].\n\nLa déclaration n’est obligatoire que dans les situations prévues par le texte applicable :\n\n- selon l’**Article L320-4 du Code du travail**, lorsque l’employeur compte au moins un salarié parti en préretraite ou placé en cessation anticipée d’activité au cours de l’année précédente [Source 1] ;\n- selon l’**Article L1221-18 du Code du travail**, également lorsque l’un de ces événements s’est produit, ou lorsqu’un salarié d’au moins 55 ans a été licencié ou a bénéficié d’une rupture conventionnelle au cours de l’année précédente [Source 2].\n\nLe modèle de déclaration est fixé par arrêté conjoint des ministres chargés de la sécurité sociale et de l’emploi [Sources 1 et 2].\n\nEn cas de défaut de production dans le délai requis, l’employeur encourt une pénalité égale à **600 fois le taux horaire du salaire minimum de croissance**. Cette pénalité est recouvrée par l’organisme chargé du recouvrement des cotisations et contributions sociales, et son produit est affecté à la Caisse nationale d’assurance vieillesse [Sources 1 et 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L320-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 290.4564169999212,
+      "vectorSearchMs": 761.7558480007574,
+      "jinaRerankingMs": 584.6280619995669,
+      "mappingMs": 0.030564000830054283,
+      "totalMs": 1636.906084000133,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012401999905705452,
+      "contextBuilderMs": 0.01667600031942129,
+      "generationMs": 4348.795703999698,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5985.758944999427
+    },
+    "judge": {
+      "questionId": "q370",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement le destinataire, l’échéance annuelle du 31 janvier, les informations déclaratives pertinentes (préretraite/cessation anticipée, âge, avantage, mises à la retraite et salariés de 55 ans ou plus concernés), ainsi que la pénalité de 600 fois le taux horaire du SMIC. Elle ajoute correctement les modalités de recouvrement et d’affectation, toutes explicitement présentes dans le contexte. Elle répond effectivement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : elles établissent l’obligation déclarative annuelle, son destinataire, son contenu, les catégories de salariés concernées, la condition d’application, le modèle réglementaire et la pénalité. La source 2 couvre précisément les affirmations de la réponse relatives aux salariés de 55 ans ou plus et aux ruptures conventionnelles ; la source 1 couvre également les autres modalités et la sanction. Toutes les affirmations importantes de la réponse, y compris le recouvrement de la pénalité et son affectation à la CNAV, sont explicitement étayées."
+    }
+  },
+  "routing": {
+    "answer": "L’employeur doit adresser, **au plus tard le 31 janvier de chaque année**, une déclaration à l’organisme chargé du recouvrement des cotisations et contributions sociales dont il relève. [Source 1] [Source 2]\n\nCette déclaration doit notamment préciser, pour l’année civile précédente :\n\n- le nombre de salariés partis en préretraite ou placés en cessation anticipée d’activité ;\n- leur âge ;\n- le montant de l’avantage qui leur est versé ;\n- le nombre de mises à la retraite à l’initiative de l’employeur.\n\nSelon le texte applicable figurant dans le contexte, elle doit également mentionner :\n\n- soit le nombre de salariés âgés d’au moins 60 ans licenciés, [Source 1]\n- soit le nombre de salariés âgés d’au moins 55 ans licenciés ou ayant bénéficié d’une rupture conventionnelle, ainsi que les mises à la retraite relevant des articles L. 1237-5 à L. 1237-10 du Code du travail. [Source 2]\n\nL’obligation ne concerne que les employeurs ayant connu, au cours de l’année précédente, au moins l’un des événements déclenchant la déclaration : départ en préretraite, cessation anticipée d’activité ou, selon le texte applicable, mise à la retraite, licenciement ou rupture conventionnelle dans les conditions prévues. [Source 1] [Source 2]\n\nLe modèle de déclaration est fixé par arrêté conjoint des ministres chargés de la sécurité sociale et de l’emploi. [Source 1] [Source 2]\n\nEn cas de défaut de production dans le délai prescrit, l’employeur encourt une pénalité égale à **600 fois le taux horaire du salaire minimum de croissance**. Cette pénalité est recouvrée par l’organisme chargé du recouvrement des cotisations et contributions sociales, et son produit est affecté à la Caisse nationale d’assurance vieillesse. [Source 1] [Source 2]\n\nLe contexte présentant deux versions de la disposition, il ne permet pas de déterminer laquelle est applicable à une situation temporelle précise.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L320-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1221-18"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2336.97742999997,
+      "routingCalls": 1,
+      "embeddingMs": 245.73505099955946,
+      "vectorSearchMs": 285.95410799980164,
+      "jinaRerankingMs": 566.5759159997106,
+      "mappingMs": 0.057665000669658184,
+      "totalMs": 3435.3470670003444,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.016018999740481377,
+      "contextBuilderMs": 0.03153400029987097,
+      "generationMs": 4205.182732999325,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7640.588948999532
+    },
+    "judge": {
+      "questionId": "q370",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement l’échéance annuelle du 31 janvier, le destinataire, les informations déclaratives essentielles, les conditions d’assujettissement et la pénalité de 600 fois le taux horaire du SMIC. Elle mentionne aussi le recouvrement et l’affectation, tous deux explicitement prévus au contexte. La présentation des divergences entre les deux versions textuelles est fidèle au contexte et n’altère pas la réponse."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : elles énoncent l’obligation déclarative annuelle, son destinataire, son contenu, les employeurs concernés et la pénalité applicable. Elles couvrent les affirmations importantes de la réponse, y compris les différences explicitement signalées entre les deux versions, le recouvrement de la pénalité, son affectation et le modèle fixé par arrêté."
+    }
+  },
+  "failureStage": "none"
+}

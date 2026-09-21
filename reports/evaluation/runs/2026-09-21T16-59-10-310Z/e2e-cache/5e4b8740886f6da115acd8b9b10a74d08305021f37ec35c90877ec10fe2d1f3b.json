@@ -1,0 +1,95 @@
+{
+  "questionId": "q418",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "- **Code de commerce :** le contrat constitutif ou les statuts doivent comporter une mention expresse concernant l’absence de privilège ou de nantissement, ou, s’il en existe, l’absence d’opposition préalable ou la mainlevée judiciaire. À défaut de cette mention, le contrat ou les statuts encourt la **nullité**. Cette obligation est en outre assortie de la **responsabilité solidaire des signataires**. — **Article L125-8 du Code de commerce [Source 2]**.\n\n- **Code du travail :** le salarié ayant commis des agissements de harcèlement moral est **passible d’une sanction disciplinaire**. La disposition fournie ne précise pas la nature ou le niveau de cette sanction. — **Article L1152-5 du Code du travail [Source 1]**.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1152-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L125-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 268.0920550003648,
+      "vectorSearchMs": 656.846792999655,
+      "jinaRerankingMs": 538.8295820001513,
+      "mappingMs": 0.025999000295996666,
+      "totalMs": 1463.8778429999948,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010611999779939651,
+      "contextBuilderMs": 0.018587999045848846,
+      "generationMs": 2806.566034000367,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4270.486233999953
+    },
+    "judge": {
+      "questionId": "q418",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux effets prévus : nullité et responsabilité solidaire des signataires en cas d'absence de la mention requise dans le contrat ou les statuts, ainsi que la passibilité d'une sanction disciplinaire pour le salarié auteur de harcèlement moral. Les précisions sur l'opposition et la mainlevée sont conformes au contexte, de même que les références d'articles."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes : l’article L125-8 du code de commerce traite précisément de la mention obligatoire, de la nullité et de la responsabilité solidaire des signataires, tandis que l’article L1152-5 du code du travail prévoit explicitement la sanction disciplinaire pour harcèlement moral. Elles couvrent l’ensemble des affirmations importantes de la réponse générée, y compris la précision selon laquelle la disposition relative au travail ne détaille pas la nature de la sanction."
+    }
+  },
+  "routing": {
+    "answer": "- **Code de commerce — Article L125-8** : le contrat constitutif ou les statuts doivent contenir une mention expresse concernant l’existence ou l’absence de privilège ou de nantissement. À défaut, ils encourent la **nullité**. Cette exigence est assortie de la **responsabilité solidaire des signataires**. [Source 2]\n\n- **Code du travail — Article L1152-5** : le salarié ayant commis des agissements de harcèlement moral est passible d’une **sanction disciplinaire**. Le texte ne précise pas la nature de cette sanction. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1152-5"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L125-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1742.2858239989728,
+      "routingCalls": 1,
+      "embeddingMs": 224.86053599976003,
+      "vectorSearchMs": 498.72920200042427,
+      "jinaRerankingMs": 537.1724239997566,
+      "mappingMs": 0.0202649999409914,
+      "totalMs": 3003.094528000802,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.036218998953700066,
+      "contextBuilderMs": 0.019050998613238335,
+      "generationMs": 2120.293871998787,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5123.454345000908
+    },
+    "judge": {
+      "questionId": "q418",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement les deux effets prévus : nullité et responsabilité solidaire des signataires en cas d'absence de la mention exigée par l'article L125-8 du code de commerce, ainsi que la passibilité d'une sanction disciplinaire pour le salarié auteur de harcèlement moral. Ces affirmations sont directement et entièrement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article L125-8 du code de commerce) est directement pertinente et énonce expressément l'exigence de mention, la nullité et la responsabilité solidaire des signataires. La source 1 (article L1152-5 du code du travail) répond directement à la seconde partie en prévoyant une sanction disciplinaire. Elles couvrent l'ensemble des affirmations importantes de la réponse générée, y compris l'absence de précision sur la nature de la sanction."
+    }
+  },
+  "failureStage": "none"
+}

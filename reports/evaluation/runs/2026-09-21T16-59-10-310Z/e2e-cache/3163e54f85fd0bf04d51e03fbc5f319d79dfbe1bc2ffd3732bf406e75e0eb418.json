@@ -1,0 +1,103 @@
+{
+  "questionId": "q048",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 713-3 vise les discriminations fondées sur **l’état de santé ou le handicap** lorsqu’elles prennent l’une des deux formes suivantes :\n\n- un **refus d’embauche** ;\n- un **licenciement**,\n\net que cette décision est fondée sur une **inaptitude médicalement constatée** dans le cadre des règles locales applicables à la médecine du travail ou à la fonction publique. [Source 1]\n\nAinsi, l’article ne vise pas toute décision défavorable liée à l’état de santé ou au handicap, mais uniquement celles reposant sur une inaptitude constatée médicalement dans ce cadre précis. Il reprend, pour le contexte concerné, l’exception prévue à l’article 225-3 du Code pénal. [Source 3]\n\nPar ailleurs, le Code du travail précise que les différences de traitement fondées sur une inaptitude constatée par le médecin du travail ne constituent pas une discrimination lorsqu’elles sont **objectives, nécessaires et appropriées**. Article L1133-3 du Code du travail [Source 4]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "713-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "723-3"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-3"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1133-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 194.2053929999238,
+      "vectorSearchMs": 624.6514599999646,
+      "jinaRerankingMs": 541.6262459999416,
+      "mappingMs": 0.03459799999836832,
+      "totalMs": 1360.5453240000643,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013152999919839203,
+      "contextBuilderMs": 0.048787000006996095,
+      "generationMs": 2939.0863919999683,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4299.704601000063
+    },
+    "judge": {
+      "questionId": "q048",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les deux hypothèses visées (refus d’embauche ou licenciement) et leur condition, à savoir une inaptitude médicalement constatée dans le cadre local applicable de la médecine du travail ou de la fonction publique. Ces éléments sont explicitement repris de la source 1. La précision sur le caractère dérogatoire au régime des discriminations est étayée par la source 3, et la mention du Code du travail est correctement attribuée et supportée par la source 4. Elle répond sans abstention à une question pour laquelle le contexte est suffisant."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et énonce exactement le régime local de l’article 713-3 : refus d’embauche ou licenciement fondé sur une inaptitude médicalement constatée dans le cadre local de la médecine du travail ou de la fonction publique. La source 3 étaye la référence à l’exception de l’article 225-3, et la source 4 couvre précisément la précision additionnelle relative aux différences de traitement objectives, nécessaires et appropriées constatées par le médecin du travail. Toutes les affirmations importantes de la réponse sont ainsi couvertes."
+    }
+  },
+  "routing": {
+    "answer": "L’article **713-3** n’est pas présent dans les sources fournies. Si la question vise l’**article L. 1133-3 du Code du travail**, il prévoit que :\n\n- en principe, l’état de santé ou le handicap ne peuvent justifier une exclusion du recrutement, une sanction ou un licenciement discriminatoire, conformément à l’**article L. 1132-1 du Code du travail** [Source 1] ;\n- toutefois, une différence de traitement fondée sur une **inaptitude constatée par le médecin du travail** en raison de l’état de santé ou du handicap n’est pas considérée comme discriminatoire lorsqu’elle est **objective, nécessaire et appropriée**, selon l’**article L. 1133-3 du Code du travail** [Source 2].\n\nAinsi, l’inaptitude médicalement constatée peut justifier une mesure particulière, mais seulement si ces trois conditions sont réunies.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1132-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1133-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1840.6210309999296,
+      "routingCalls": 1,
+      "embeddingMs": 522.6782740000635,
+      "vectorSearchMs": 284.31499400001485,
+      "jinaRerankingMs": 539.3515380000463,
+      "mappingMs": 0.03197800007183105,
+      "totalMs": 3187.022571999929,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010945999994874,
+      "contextBuilderMs": 0.018426999915391207,
+      "generationMs": 4593.7163550000405,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7780.776595000061
+    },
+    "judge": {
+      "questionId": "q048",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse traite un article différent (L. 1133-3 du Code du travail) plutôt que l’article 713-3 visé et ne reprend pas la référence aux dispositions locales de médecine du travail ou de fonction publique. Elle donne néanmoins une règle proche sur l’inaptitude médicalement constatée liée à l’état de santé ou au handicap et ses effets possibles sur le recrutement ou le licenciement. Les affirmations relatives aux articles L. 1132-1 et L. 1133-3 sont bien étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour la réponse effectivement générée : L. 1132-1 couvre l'interdiction d'écarter du recrutement ou de licencier en raison de l'état de santé ou du handicap, et L. 1133-3 couvre l'exception fondée sur une inaptitude constatée par le médecin du travail, sous les conditions d'objectivité, nécessité et caractère approprié. Elles couvrent l'ensemble des affirmations juridiques substantielles de la réponse, y compris le constat que l'article 713-3 n'est pas fourni parmi les sources. La pertinence n'est pas maximale car les sources concernent L. 1132-1 et L. 1133-3 du Code du travail, non l'article 713-3 expressément demandé."
+    }
+  },
+  "failureStage": "generation"
+}

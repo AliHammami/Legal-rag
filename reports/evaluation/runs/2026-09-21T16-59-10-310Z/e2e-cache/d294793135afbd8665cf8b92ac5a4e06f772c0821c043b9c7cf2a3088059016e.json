@@ -1,0 +1,99 @@
+{
+  "questionId": "q420",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre un **fichier national automatisé des interdits de gérer**. Ce fichier vise notamment à prévenir certaines infractions et à favoriser l’exécution des interdictions de gérer prononcées par les juridictions judiciaires. Sa tenue constitue une mission de service public, assurée par le Conseil national, à ses frais et sous sa responsabilité. [Source 1]\n\nLe fichier recense les faillites personnelles ainsi que les interdictions de diriger, gérer, administrer ou contrôler certaines entreprises ou personnes morales, lorsqu’elles résultent de décisions juridictionnelles passées en force de chose jugée. Il mentionne également le jugement ou l’arrêt ayant prononcé la mesure. [Source 1]\n\nEn revanche, les extraits fournis **ne précisent pas les peines criminelles encourues par les personnes physiques**. Ils renvoient seulement à certaines infractions prévues par le Code pénal et le Code de commerce, sans en indiquer la nature ni le quantum des peines. Il n’est donc pas possible de répondre précisément à cette seconde partie à partir des sources communiquées.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L128-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L741-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 166.5736869983375,
+      "vectorSearchMs": 658.9922789987177,
+      "jinaRerankingMs": 587.7763570006937,
+      "mappingMs": 0.024224000051617622,
+      "totalMs": 1413.3928209990263,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010854000225663185,
+      "contextBuilderMs": 0.021671999245882034,
+      "generationMs": 3197.9821840003133,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4611.419030999765
+    },
+    "judge": {
+      "questionId": "q420",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse décrit correctement, conformément au contexte, le rôle du Conseil national par la mise en œuvre et la tenue du fichier national automatisé des interdits de gérer, ainsi que les principales mesures qui y sont inscrites. Elle ne répond toutefois pas à la seconde partie essentielle de la question, relative aux peines criminelles applicables aux personnes physiques, alors que la référence attend notamment la réclusion ou détention criminelle à perpétuité ou à temps (trente, vingt ou quinze ans au plus, avec un minimum de dix ans à temps). Son refus est pleinement fondé au regard du seul contexte fourni, qui ne donne effectivement aucun quantum de peine : la groundedness est donc maximale. Néanmoins, puisque l'abstention n'était pas attendue et qu'une partie substantielle de la question reste sans réponse, l'abstention n'est pas correcte au sens demandé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour la première partie : elle établit la mise en œuvre par le Conseil national d’un fichier national automatisé des interdits de gérer, ses finalités antifraude et d’exécution des interdictions, son caractère de mission de service public, ainsi que les mesures inscrites et la mention de la décision judiciaire. En revanche, aucune source ne fournit les peines criminelles encourues par les personnes physiques : les références à des infractions ne comportent aucun quantum de peine. La source 2 est seulement contextuelle et n’apporte rien sur les peines. Les sources sont donc seulement partiellement suffisantes pour la question entière, mais elles couvrent les affirmations de la réponse générée, y compris le constat motivé que les extraits ne permettent pas de préciser les peines criminelles."
+    }
+  },
+  "routing": {
+    "answer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes principalement en mettant en œuvre le **fichier national automatisé des interdits de gérer**. Ce fichier a pour objectifs :\n\n- de lutter contre les fraudes ;\n- de prévenir certaines infractions prévues par le Code pénal et le Code de commerce ;\n- de favoriser l’exécution des interdictions de gérer prononcées par les juridictions judiciaires.\n\nLa tenue de ce fichier constitue une mission de service public, assurée par le Conseil national à ses frais et sous sa responsabilité. Y sont inscrites, lorsqu’elles résultent de décisions juridictionnelles passées en force de chose jugée, les faillites personnelles ainsi que les interdictions de diriger, gérer, administrer ou contrôler certaines entreprises ou personnes morales. Le jugement ou l’arrêt ayant prononcé la mesure est également mentionné. **Article L128-1 du Code de commerce [Source 1].**\n\nConcernant les personnes physiques reconnues coupables des infractions visées aux articles 450-1 et 450-1-1 du Code pénal, elles encourent notamment les peines complémentaires suivantes :\n\n1. l’interdiction des droits civiques, civils et de famille ;\n2. l’interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale à l’occasion de laquelle l’infraction a été commise ;\n3. l’interdiction d’exercer une profession commerciale ou industrielle, ou de diriger, administrer, gérer ou contrôler, directement ou indirectement, une entreprise commerciale, industrielle ou une société commerciale ;\n4. l’interdiction de séjour.\n\nLes interdictions professionnelles peuvent être prononcées cumulativement, et d’autres peines complémentaires peuvent également être prononcées selon les infractions préparées par le groupement ou l’entente. **Article 450-3 du Code pénal [Source 3].**\n\nLe contexte fourni ne précise pas les peines principales éventuellement encourues pour ces infractions, mais seulement ces peines complémentaires.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L128-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L741-2"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "450-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2046.125677999109,
+      "routingCalls": 1,
+      "embeddingMs": 356.7509640008211,
+      "vectorSearchMs": 257.78064600005746,
+      "jinaRerankingMs": 633.5233539994806,
+      "mappingMs": 0.01837499998509884,
+      "totalMs": 3294.2244770005345,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.043122999370098114,
+      "contextBuilderMs": 0.019342999905347824,
+      "generationMs": 3872.312580000609,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7166.609375
+    },
+    "judge": {
+      "questionId": "q420",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement le rôle du Conseil national via le fichier national automatisé des interdits de gérer, avec ses finalités et son contenu. En revanche, elle ne répond pas à la question sur les peines criminelles principales encourues par les personnes physiques (réclusion ou détention criminelle à perpétuité ou à temps, avec les durées prévues). Elle traite à la place de peines complémentaires propres aux infractions des articles 450-1 et 450-1-1. Les affirmations formulées sont néanmoins étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente pour expliquer la contribution du Conseil national des greffiers à la lutte contre les fraudes via le fichier national des interdits de gérer. La source 3 est directement pertinente pour les peines complémentaires effectivement décrites dans la réponse générée. Les sources ne fournissent toutefois pas les peines criminelles principales demandées (réclusion ou détention criminelle), ce qui explique que la réponse constate cette absence de précision. Toutes les affirmations importantes effectivement formulées sont couvertes par les sources citées."
+    }
+  },
+  "failureStage": "generation"
+}

@@ -1,0 +1,95 @@
+{
+  "questionId": "q410",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### 1. Critères d’exclusion de l’acquisition ou de la réintégration\n\nSelon l’**article 21-27 du Code civil [Source 1]**, une personne ne peut acquérir la nationalité française ou être réintégrée si elle :\n\n- a été condamnée pour un **crime ou délit portant atteinte aux intérêts fondamentaux de la Nation** ou pour un **acte de terrorisme** ;\n- a été condamnée, pour toute infraction, à une peine d’au moins **six mois d’emprisonnement ferme** ;\n- fait l’objet d’un **arrêté d’expulsion** non rapporté ou abrogé ;\n- fait l’objet d’une **interdiction du territoire français** qui n’a pas été entièrement exécutée ;\n- séjourne en France de manière **irrégulière** au regard des règles applicables au séjour des étrangers.\n\nCes exclusions ne s’appliquent notamment pas à certains mineurs susceptibles d’acquérir la nationalité française, ni aux personnes ayant bénéficié d’une réhabilitation ou dont la condamnation a été exclue du bulletin n° 2 du casier judiciaire [Source 1].\n\n### 2. Sanctions pour la fourniture de fausses informations\n\nLe fait de fournir, au profit des intérêts d’une puissance étrangère, d’une entreprise étrangère ou sous contrôle étranger, aux autorités civiles ou militaires françaises, des informations fausses susceptibles de les induire en erreur et de porter atteinte aux intérêts fondamentaux de la Nation constitue une infraction prévue par l’**article 411-10 du Code pénal [Source 2]**.\n\nLa peine prévue est de :\n\n- **sept ans d’emprisonnement** ;\n- **100 000 euros d’amende**.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "21-27"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "411-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 171.30177699960768,
+      "vectorSearchMs": 723.282358000055,
+      "jinaRerankingMs": 533.828038001433,
+      "mappingMs": 0.018459001556038857,
+      "totalMs": 1428.457939999178,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010141000151634216,
+      "contextBuilderMs": 0.02313699945807457,
+      "generationMs": 3479.852424999699,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4908.356083000079
+    },
+    "judge": {
+      "questionId": "q410",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La première partie restitue correctement et de façon détaillée les exclusions de l'article 21-27 du code civil. En revanche, la seconde partie ne répond pas aux fausses indications fournies dans le cadre des formalités commerciales d'immatriculation ou de radiation (article L123-5 du code de commerce, 4 500 euros d'amende et six mois d'emprisonnement, sous condition de mauvaise foi). Elle traite à la place de l'article 411-10 du code pénal, relatif à des informations fausses transmises aux autorités françaises au profit d'intérêts étrangers. Cette seconde réponse est néanmoins entièrement étayée par le contexte effectivement fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente et couvre les critères d’exclusion liés à la nationalité. En revanche, la source 2 porte sur la transmission d’informations fausses aux autorités françaises au profit d’intérêts étrangers (article 411-10 du code pénal), et non sur les fausses indications dans les formalités d’immatriculation ou de radiation commerciales visées par la question. Les sources couvrent néanmoins intégralement les affirmations effectivement formulées dans la réponse générée, y compris les éléments et peines de l’article 411-10."
+    }
+  },
+  "routing": {
+    "answer": "### Exclusion de l’acquisition ou de la réintégration de la nationalité française\n\nSelon l’**article 21-27 du Code civil**, sont notamment exclus :\n\n- les personnes condamnées pour un **crime ou délit portant atteinte aux intérêts fondamentaux de la Nation** ;\n- les personnes condamnées pour **acte de terrorisme** ;\n- les personnes condamnées, quelle que soit l’infraction, à une peine d’emprisonnement **au moins égale à six mois sans sursis**. [Source 1]\n\nL’exclusion concerne également les personnes faisant l’objet d’un arrêté d’expulsion non rapporté ou abrogé, d’une interdiction du territoire français non entièrement exécutée, ou dont le séjour en France est irrégulier. [Source 1]\n\nCes règles ne s’appliquent toutefois pas à certains mineurs, ni aux personnes ayant bénéficié d’une réhabilitation ou dont la condamnation a été exclue du bulletin n° 2 du casier judiciaire. [Source 1]\n\n### Sanctions en cas de fausses informations commerciales\n\nLe fait de fournir **de mauvaise foi** des indications inexactes ou incomplètes pour l’immatriculation, la modification de situation ou la radiation du registre national des entreprises est puni, selon l’**article L. 123-38 du Code de commerce**, de :\n\n- **4 500 euros d’amende** ;\n- **six mois d’emprisonnement**. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "21-27"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-38"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.2978509999812,
+      "routingCalls": 1,
+      "embeddingMs": 208.0574830006808,
+      "vectorSearchMs": 290.34990600124,
+      "jinaRerankingMs": 1036.7377570010722,
+      "mappingMs": 0.021121999248862267,
+      "totalMs": 2763.496396999806,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.10317200049757957,
+      "contextBuilderMs": 0.016587000340223312,
+      "generationMs": 2972.002865999937,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5735.630930000916
+    },
+    "judge": {
+      "questionId": "q410",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement l’ensemble des cas d’exclusion prévus par l’article 21-27 du code civil, y compris le terrorisme, les mesures d’éloignement et le séjour irrégulier, ainsi que les exceptions applicables. Elle indique aussi exactement les sanctions et les conditions de l’article L. 123-38 du code de commerce pour les indications commerciales inexactes ou incomplètes données de mauvaise foi. Toutes les affirmations importantes sont directement étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l’article 21-27 du code civil et couvre les condamnations excluantes, l’expulsion, l’interdiction du territoire, le séjour irrégulier ainsi que les exceptions mentionnées. La source 2 reproduit directement l’article L. 123-38 du code de commerce et couvre l’élément de mauvaise foi, les indications inexactes ou incomplètes, les démarches concernées et les deux sanctions. Toutes les affirmations importantes de la réponse générée sont étayées."
+    }
+  },
+  "failureStage": "none"
+}

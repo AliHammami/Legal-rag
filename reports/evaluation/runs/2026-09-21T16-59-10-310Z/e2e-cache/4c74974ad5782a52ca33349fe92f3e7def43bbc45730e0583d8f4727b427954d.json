@@ -1,0 +1,91 @@
+{
+  "questionId": "q280",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L. 464-2 du Code monétaire et financier, sont punis les membres des organes d’administration, de direction et de surveillance, ainsi que les dirigeants, salariés et préposés des entreprises de marché qui violent le secret professionnel institué par l’article L. 421-8. Ils encourent les peines prévues à l’article 226-13 du Code pénal, sous réserve de l’article 226-14 du même code. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L464-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L464-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 235.25254500005394,
+      "vectorSearchMs": 565.7744030002505,
+      "jinaRerankingMs": 532.8886110000312,
+      "mappingMs": 0.05868900008499622,
+      "totalMs": 1334.0125679997727,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.015538999810814857,
+      "contextBuilderMs": 0.022201000712811947,
+      "generationMs": 1864.5962749999017,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3198.665632000193
+    },
+    "judge": {
+      "questionId": "q280",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les personnes visées par l’article L. 464-2 (membres des organes d’administration, de direction et de surveillance, dirigeants, salariés et préposés des entreprises de marché) et mentionne correctement les peines de l’article 226-13, sous réserve de l’article 226-14. Tous ces éléments sont explicitement contenus dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement l’article L. 464-2 visé par la question. Elle identifie expressément toutes les catégories de personnes punies, le renvoi aux peines de l’article 226-13 du code pénal et la réserve relative à l’article 226-14. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée. La source 2 est non nécessaire mais ne nuit pas à l’évaluation."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte ne contient pas les articles **L. 421-8** et **L. 464-2** invoqués dans la question. Il ne permet donc pas d’identifier précisément la personne visée par ces dispositions.\n\nD’après l’**article L. 463-6 du Code de commerce**, est punie la divulgation, par **l’une des parties**, d’informations concernant une autre partie ou un tiers, lorsqu’elle n’en a eu connaissance qu’à la suite des communications ou consultations effectuées. La peine applicable est celle prévue à l’article 226-13 du Code pénal [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L463-6"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4197.855685000308,
+      "routingCalls": 1,
+      "embeddingMs": 173.0227630008012,
+      "vectorSearchMs": 230.40525399986655,
+      "jinaRerankingMs": 825.0557949999347,
+      "mappingMs": 0.024195999838411808,
+      "totalMs": 5426.421113000251,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01027199998497963,
+      "contextBuilderMs": 0.05805999971926212,
+      "generationMs": 2459.5794139998034,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7886.082554999739
+    },
+    "judge": {
+      "questionId": "q280",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n’identifie pas les personnes punies par l’article L. 464-2 et substitue une règle distincte de l’article L. 463-6, sans répondre à la question. Les affirmations faites sur l’article L. 463-6 sont toutefois fidèlement étayées par le seul contexte fourni. Comme une réponse était attendue, l’absence de réponse à la disposition visée rend l’abstention incorrecte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 1,
+      "sourceCoverage": 4,
+      "explanation": "La source porte sur l’article L. 463-6 du code de commerce, et non sur les articles L. 421-8 et L. 464-2 visés par la question : elle est donc essentiellement insuffisante pour répondre directement à la question. Elle permet toutefois de constater que le seul extrait fourni concerne une disposition distincte. Toutes les affirmations substantielles effectivement faites dans la réponse au sujet de l’article L. 463-6 (divulgation par une partie, informations obtenues lors des communications ou consultations, renvoi aux peines de l’article 226-13) sont fidèlement couvertes par cette source."
+    }
+  },
+  "failureStage": "generation"
+}

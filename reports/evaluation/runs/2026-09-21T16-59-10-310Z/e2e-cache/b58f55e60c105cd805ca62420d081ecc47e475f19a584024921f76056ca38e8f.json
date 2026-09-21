@@ -1,0 +1,87 @@
+{
+  "questionId": "q061",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "L’article 551 du Code civil pose un principe : tout élément qui s’unit ou s’incorpore à une chose devient la propriété du propriétaire de cette chose.\n\nIl renvoie toutefois aux règles « ci-après établies » pour déterminer précisément les modalités et les éventuelles limites de cette attribution. Ces règles ne figurant pas dans le contexte fourni, il n’est pas possible d’en préciser davantage le contenu. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "551"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.32766900002025,
+      "vectorSearchMs": 617.4836160000414,
+      "jinaRerankingMs": 501.81959099997766,
+      "mappingMs": 0.037117000203579664,
+      "totalMs": 1338.7080579998437,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010913999984040856,
+      "contextBuilderMs": 0.011703999945893884,
+      "generationMs": 2036.4830150001217,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3375.2234750001226
+    },
+    "judge": {
+      "questionId": "q061",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue fidèlement le principe de l’article 551 : ce qui s’unit ou s’incorpore à une chose appartient au propriétaire de celle-ci. Elle mentionne correctement le renvoi aux règles établies ci-après et n’invente pas leur contenu, absent du contexte. Elle répond donc à la question et est entièrement fondée sur la source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 551, qui répond exactement à la question : elle énonce l’attribution au propriétaire de ce qui s’unit ou s’incorpore à la chose et le renvoi aux règles établies ci-après. Elle couvre l’ensemble des affirmations importantes de la réponse générée, y compris l’absence, dans le contexte fourni, du contenu détaillé de ces règles."
+    }
+  },
+  "routing": {
+    "answer": "L’article 551 du Code civil pose le principe selon lequel **tout ce qui s’unit ou s’incorpore à une chose devient la propriété du propriétaire de cette chose**. Il s’agit d’un principe d’accession : l’élément incorporé suit la propriété du bien principal. [Source 1]\n\nToutefois, l’article précise que cette propriété s’exerce **« suivant les règles qui seront ci-après établies »**. Le contexte fourni ne contient pas ces règles complémentaires ; il ne permet donc pas d’en préciser le détail ni les éventuelles exceptions.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "551"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1227.2949059999082,
+      "routingCalls": 1,
+      "embeddingMs": 233.08476800005883,
+      "vectorSearchMs": 60.46795799979009,
+      "jinaRerankingMs": 479.86241799988784,
+      "mappingMs": 0.043842999963089824,
+      "totalMs": 2000.7813609999139,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014488999964669347,
+      "contextBuilderMs": 0.014422999927774072,
+      "generationMs": 1770.1411150000058,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3770.972349999938
+    },
+    "judge": {
+      "questionId": "q061",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue exactement le principe de l’article 551 : ce qui s’unit ou s’incorpore à une chose appartient à son propriétaire, selon les règles établies ultérieurement. La qualification comme principe d’accession est cohérente avec cet énoncé et n’ajoute pas de règle factuelle non étayée. Elle répond également prudemment quant à l’absence, dans le contexte, des règles complémentaires."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 551 et répond exactement à la question : elle énonce l’attribution au propriétaire de tout ce qui s’unit ou s’incorpore à la chose, ainsi que le renvoi aux règles établies ci-après. Elle couvre les affirmations essentielles de la réponse, y compris le constat que le détail de ces règles n’est pas présent dans le contexte fourni."
+    }
+  },
+  "failureStage": "none"
+}

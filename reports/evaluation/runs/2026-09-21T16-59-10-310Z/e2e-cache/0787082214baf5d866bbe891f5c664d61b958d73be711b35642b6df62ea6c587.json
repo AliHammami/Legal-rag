@@ -1,0 +1,95 @@
+{
+  "questionId": "q190",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L239-1 du Code de commerce**, peuvent être données à bail :\n\n- les **actions de sociétés par actions** ;\n- à condition qu’elles soient **nominatives** ;\n- **non négociables sur un marché réglementé** ;\n- **non inscrites aux opérations d’un dépositaire central** ;\n- et non soumises à une obligation de conservation ou à des délais d’indisponibilité prévus par les textes mentionnés à l’article.\n\nLa location doit en outre être prévue par les statuts et consentie au profit d’une personne physique. [Source 2]\n\nSont notamment exclues les actions détenues dans le cadre de la gestion du patrimoine privé bénéficiant d’un régime d’exonération fiscale, ainsi que celles détenues par certaines sociétés ou certains fonds d’investissement. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L313-7"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L239-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 159.77792799985036,
+      "vectorSearchMs": 617.9325430002064,
+      "jinaRerankingMs": 603.8026160001755,
+      "mappingMs": 0.032709999941289425,
+      "totalMs": 1381.5797119997442,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010352999903261662,
+      "contextBuilderMs": 0.01789400028064847,
+      "generationMs": 2096.574866999872,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3478.195531000383
+    },
+    "judge": {
+      "questionId": "q190",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les actions de sociétés par actions comme susceptibles d’être données à bail et énonce avec exactitude les conditions spécifiques applicables à la location d’actions, ainsi que les principales exclusions. Elle est entièrement étayée par le contexte. Toutefois, elle omet l’autre catégorie expressément visée par l’article : les parts sociales de SARL soumises à l’impôt sur les sociétés, ce qui limite sa complétude et constitue une omission mineure à importante au regard de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 reproduit directement l’article L. 239-1 du code de commerce et est donc parfaitement pertinente. Elle couvre toutes les affirmations de la réponse générée : catégories de titres visées, conditions propres aux actions (nominatives, non négociées sur marché réglementé, non inscrites auprès d’un dépositaire central, absence d’obligations de conservation ou d’indisponibilité), exigence statutaire, bénéficiaire personne physique et exclusions fiscales ou liées à certains véhicules d’investissement. L’omission des parts sociales de SARL dans la réponse est une question de complétude de la réponse, non de couverture de ses affirmations par les sources."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article **L. 239-1 du Code de commerce**, peuvent être données à bail :\n\n- les **actions de sociétés par actions**, si les statuts le prévoient ;\n- uniquement des **titres nominatifs** ;\n- des titres **non négociables sur un marché réglementé** ;\n- des titres **non inscrits aux opérations d’un dépositaire central** ;\n- des titres qui ne sont pas soumis à une obligation légale de conservation ou à certains délais d’indisponibilité ;\n- la location doit être consentie **au profit d’une personne physique**.\n\nSont notamment exclues les actions détenues dans certains cadres fiscaux ou financiers, notamment celles détenues par des fonds communs de placement à risques, des fonds communs de placement dans l’innovation ou des fonds d’investissement de proximité. [Source 2]\n\nEnfin, les actions louées ne peuvent faire l’objet ni d’une **sous-location**, ni d’un **prêt de titres**, à peine de nullité. [Source 2]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R239-1"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L239-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1248.0735969999805,
+      "routingCalls": 1,
+      "embeddingMs": 212.03408999973908,
+      "vectorSearchMs": 275.2625599997118,
+      "jinaRerankingMs": 573.5758509999141,
+      "mappingMs": 0.0340769998729229,
+      "totalMs": 2309.006255000364,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011524000205099583,
+      "contextBuilderMs": 0.020300999749451876,
+      "generationMs": 2626.6379789998755,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4935.689449999947
+    },
+    "judge": {
+      "questionId": "q190",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les conditions applicables à la location d’actions (prévision statutaire, titres nominatifs, non négociés sur marché réglementé, etc.) ainsi que l’interdiction de sous-location et de prêt de titres. Elle omet toutefois un élément central de l’article : les parts sociales de SARL soumises à l’impôt sur les sociétés peuvent également être données à bail. Elle ne reprend pas non plus l’ensemble des exclusions fiscales, mais celles citées sont exactes. Toutes les affirmations importantes sont étayées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 est le texte intégral de l'article L. 239-1 visé par la question. Elle étaye directement toutes les affirmations de la réponse générée : condition statutaire, personne physique bénéficiaire, caractéristiques des actions louables, exclusions mentionnées, et nullité en cas de sous-location ou de prêt de titres. La source 1 est périphérique mais n'est pas nécessaire aux affirmations formulées."
+    }
+  },
+  "failureStage": "none"
+}

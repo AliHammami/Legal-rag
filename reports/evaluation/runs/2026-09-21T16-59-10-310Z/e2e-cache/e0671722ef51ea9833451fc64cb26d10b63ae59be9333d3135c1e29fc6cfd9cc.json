@@ -1,0 +1,87 @@
+{
+  "questionId": "q140",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contrat d’apprentissage ou la déclaration mentionnée à l’article L. 6222-5 est transmis **à l’opérateur de compétences**.\n\nSa fonction est de **procéder au dépôt du contrat ou de la déclaration**, selon des conditions fixées par voie réglementaire, conformément à l’article L. 6224-1 du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6224-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 240.16004600003362,
+      "vectorSearchMs": 615.0915169999935,
+      "jinaRerankingMs": 559.4090089998208,
+      "mappingMs": 0.05829400010406971,
+      "totalMs": 1414.7545570000075,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012455000076442957,
+      "contextBuilderMs": 0.012072999961674213,
+      "generationMs": 1549.1857729996555,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2963.9771259999834
+    },
+    "judge": {
+      "questionId": "q140",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’opérateur de compétences comme destinataire et précise sa fonction de dépôt selon des conditions réglementaires. Ces deux éléments sont explicitement présents dans le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est directement pertinente : elle répond explicitement au destinataire du contrat ou de la déclaration (l’opérateur de compétences) et à sa fonction (procéder au dépôt selon des conditions réglementaires). Elle couvre l’ensemble des affirmations importantes de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contrat d’apprentissage ou la déclaration mentionnée à l’article L. 6222-5 est transmis à **l’opérateur de compétences**.\n\nSa fonction est de **procéder au dépôt** du contrat ou de la déclaration, selon des conditions fixées par voie réglementaire.\n\nIl s’agit de l’**article L. 6224-1 du Code du travail** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L6224-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1536.2947860001586,
+      "routingCalls": 1,
+      "embeddingMs": 245.74627099977806,
+      "vectorSearchMs": 272.95764299994335,
+      "jinaRerankingMs": 533.434681000188,
+      "mappingMs": 0.02235200023278594,
+      "totalMs": 2588.5428309999406,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012423000298440456,
+      "contextBuilderMs": 0.01093300012871623,
+      "generationMs": 1420.006618999876,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4008.581212999765
+    },
+    "judge": {
+      "questionId": "q140",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement l’opérateur de compétences comme destinataire et indique sa fonction exacte : procéder au dépôt dans des conditions réglementaires. Ces éléments sont explicitement présents dans le contexte. La mention de l’article L. 6224-1 est également conforme au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L. 6224-1, qui répond précisément aux deux éléments demandés : le destinataire est l’opérateur de compétences et sa fonction est de procéder au dépôt selon des conditions réglementaires. Elle couvre également la référence à l’article citée dans la réponse."
+    }
+  },
+  "failureStage": "none"
+}

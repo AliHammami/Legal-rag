@@ -1,0 +1,95 @@
+{
+  "questionId": "q024",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 311-10 du Code pénal**, le vol est puni de la **réclusion criminelle à perpétuité** lorsqu’il est précédé, accompagné ou suivi :\n\n- de **violences ayant entraîné la mort** ;\n- ou de **tortures ou d’actes de barbarie**.\n\nCette infraction est également punie de **150 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 198.8343000000459,
+      "vectorSearchMs": 626.0795289999805,
+      "jinaRerankingMs": 544.3286640000297,
+      "mappingMs": 0.03261699998984113,
+      "totalMs": 1369.3075780000072,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013378000003285706,
+      "contextBuilderMs": 0.018902999989222735,
+      "generationMs": 1928.6091540000052,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3297.975279999955
+    },
+    "judge": {
+      "questionId": "q024",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux circonstances aggravantes de l'article 311-10 : les violences ayant entraîné la mort, et les tortures ou actes de barbarie, lorsqu'elles précèdent, accompagnent ou suivent le vol. La mention supplémentaire de l'amende de 150 000 euros est exacte et explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 311-10 et vise exactement les circonstances demandées : violences ayant entraîné la mort, ou tortures ou actes de barbarie, lorsque celles-ci précèdent, accompagnent ou suivent le vol. Elle couvre également la mention additionnelle de l'amende de 150 000 euros. La source 2 est non nécessaire, mais n'altère pas la pertinence ni la couverture globales."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article 311-10 du Code pénal**, le vol est puni de la réclusion criminelle à perpétuité lorsqu’il est :\n\n- précédé, accompagné ou suivi de **violences ayant entraîné la mort** ;\n- précédé, accompagné ou suivi de **tortures ou d’actes de barbarie**.\n\nL’amende encourue est alors de **150 000 euros**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-10"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "311-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1175.21405400004,
+      "routingCalls": 1,
+      "embeddingMs": 222.94785800005775,
+      "vectorSearchMs": 54.33411699999124,
+      "jinaRerankingMs": 562.1743899999419,
+      "mappingMs": 0.05371100001502782,
+      "totalMs": 2014.7583340000128,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.017644000006839633,
+      "contextBuilderMs": 0.020267999963834882,
+      "generationMs": 1612.227169000078,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3627.0407240000204
+    },
+    "judge": {
+      "questionId": "q024",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie exactement les deux circonstances aggravantes de l'article 311-10 : les violences ayant entraîné la mort, ainsi que les tortures ou actes de barbarie, lorsqu'ils précèdent, accompagnent ou suivent le vol. La mention additionnelle de l'amende de 150 000 euros est exacte et explicitement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 reproduit directement l'article 311-10 et énonce exactement les deux circonstances aggravantes mentionnées dans la réponse, ainsi que la peine de réclusion criminelle à perpétuité et l'amende de 150 000 euros. Elle couvre donc l'ensemble des affirmations importantes. La source 2 est non nécessaire mais ne nuit pas à l'évaluation."
+    }
+  },
+  "failureStage": "none"
+}

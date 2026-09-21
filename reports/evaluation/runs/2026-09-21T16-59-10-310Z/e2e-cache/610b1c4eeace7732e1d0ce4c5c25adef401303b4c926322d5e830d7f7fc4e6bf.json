@@ -1,0 +1,87 @@
+{
+  "questionId": "q374",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni permet uniquement d’identifier :\n\n- **Article R. 127-1 du Code de commerce** : il fixe le contenu du contrat d’appui au projet d’entreprise, notamment :\n  - le programme de préparation et les engagements des parties ;\n  - les moyens mis à disposition du bénéficiaire ;\n  - la rétribution éventuelle de la personne morale d’appui ;\n  - les engagements du bénéficiaire envers les tiers et la prise en charge financière correspondante [Source 1].\n\nEn revanche, **aucune disposition du Code monétaire et financier n’est fournie** dans le contexte. Il n’est donc pas possible d’identifier l’article régissant les **droits au remboursement dans le cadre des opérations de paiement** sans ajouter une source non communiquée.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 805.6013700002804,
+      "vectorSearchMs": 676.3023220002651,
+      "jinaRerankingMs": 554.5690740002319,
+      "mappingMs": 0.028516999445855618,
+      "totalMs": 2036.5550419995561,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010267999954521656,
+      "contextBuilderMs": 0.016354999504983425,
+      "generationMs": 2249.6294560004026,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4286.224643999711
+    },
+    "judge": {
+      "questionId": "q374",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, au regard du contexte, l'article R. 127-1 et son objet, mais ne donne pas les articles attendus par la référence, à savoir L. 127-5 du code de commerce et L. 133-25-2 du code monétaire et financier. Elle est donc très incomplète et largement incorrecte quant à la réponse juridique demandée. En revanche, ses affirmations sont entièrement fondées sur le seul contexte fourni : celui-ci contient bien R. 127-1 et aucune disposition du code monétaire et financier. L'absence de réponse sur le second point est justifiée par cette absence de source, et non une abstention injustifiée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source R. 127-1 du code de commerce est directement liée au contrat d’appui au projet d’entreprise et permet de documenter ses clauses et conditions de contenu. Elle ne couvre toutefois pas l’article attendu sur les conditions spécifiques (L. 127-5) ni aucun aspect des droits au remboursement en matière d’opérations de paiement relevant du code monétaire et financier. En revanche, les affirmations effectivement formulées dans la réponse générée sur R. 127-1 sont couvertes par la source, et le constat qu’aucune disposition du code monétaire et financier n’est fournie est conforme au corpus de sources transmis."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne permet d’identifier qu’une disposition :\n\n- **Article R. 127-1 du Code de commerce** : il fixe le contenu obligatoire du contrat d’appui au projet d’entreprise, notamment le programme de préparation, les engagements des parties, les moyens mis à disposition, la rémunération de la personne morale et les engagements du bénéficiaire à l’égard des tiers [Source 1].\n\nEn revanche, aucune source fournie ne mentionne :\n\n- un autre article du **Code de commerce** relatif aux conditions spécifiques de ces contrats ;\n- un article du **Code monétaire et financier** concernant les droits à remboursement dans le cadre des opérations de paiement.\n\nIl n’est donc pas possible de préciser ces références juridiques à partir du seul contexte disponible.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R127-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1638.516962999478,
+      "routingCalls": 1,
+      "embeddingMs": 253.25490500032902,
+      "vectorSearchMs": 345.4047849997878,
+      "jinaRerankingMs": 541.1981780007482,
+      "mappingMs": 0.041234999895095825,
+      "totalMs": 2778.448626000434,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.030597999691963196,
+      "contextBuilderMs": 0.017256000079214573,
+      "generationMs": 2385.3521940000355,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5163.863455999643
+    },
+    "judge": {
+      "questionId": "q374",
+      "correctness": 1,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse identifie correctement, au regard du contexte, l’article R. 127-1 du code de commerce et son objet, mais elle ne fournit pas les références attendues : l’article L. 127-5 du code de commerce et l’article L. 133-25-2 du code monétaire et financier. Elle ne répond donc que très partiellement à la question. Ses affirmations factuelles sont toutefois entièrement étayées par l’unique extrait fourni. En revanche, elle s’abstient de répondre aux références demandées alors que l’abstention n’était pas attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement liée au contrat d’appui au projet d’entreprise et permet d’étayer l’article R. 127-1 cité dans la réponse. Elle ne fournit toutefois ni l’article du code de commerce visé par la question, ni aucune disposition du code monétaire et financier sur le remboursement des opérations de paiement : des sources essentielles manquent donc. En revanche, elle couvre les affirmations effectivement formulées par la réponse, qui décrit son contenu et constate l’absence, dans le contexte fourni, des autres références demandées."
+    }
+  },
+  "failureStage": "generation"
+}

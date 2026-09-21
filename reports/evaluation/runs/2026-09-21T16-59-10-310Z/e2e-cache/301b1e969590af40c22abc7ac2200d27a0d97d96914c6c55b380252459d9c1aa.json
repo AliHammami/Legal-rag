@@ -1,0 +1,87 @@
+{
+  "questionId": "q007",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Le contexte fourni ne reproduit pas le contenu de l’article 225-1 du Code pénal. Il indique seulement que la discrimination sanctionnée par l’article 225-2 est celle « définie aux articles 225-1 à 225-1-2 » [Source 1].\n\nIl n’est donc pas possible de donner la définition précise de la discrimination selon l’article 225-1 à partir des seules sources fournies.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 192.7371850000054,
+      "vectorSearchMs": 890.3066899999976,
+      "jinaRerankingMs": 596.733241000009,
+      "mappingMs": 0.03229499998269603,
+      "totalMs": 1679.8586810000124,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020244999992428347,
+      "contextBuilderMs": 0.0104750000173226,
+      "generationMs": 1521.2458449999976,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3201.164213000011
+    },
+    "judge": {
+      "questionId": "q007",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée à l’article 225-1 ni les critères de discrimination essentiels. Elle est toutefois entièrement fidèle au contexte fourni : celui-ci ne reproduit que l’article 225-2 et renvoie aux articles 225-1 à 225-1-2, sans en donner le contenu. Comme une abstention n’était pas attendue, le refus de répondre est incorrect au regard de ce critère."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est liée au régime pénal de la discrimination et mentionne explicitement que celle-ci est définie aux articles 225-1 à 225-1-2, mais elle ne contient pas la définition demandée ni les critères énumérés par l'article 225-1. Elle est néanmoins suffisante pour étayer les deux constats de la réponse générée : le renvoi de l'article 225-2 vers l'article 225-1 et l'absence, dans le contenu fourni, du texte définissant précisément la discrimination."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte fourni ne contient pas le texte de l’article 225-1 du Code pénal. Il indique seulement que l’article 225-2 réprime certaines discriminations « définies aux articles 225-1 à 225-1-2 » [Source 1].\n\nIl n’est donc pas possible de définir précisément la discrimination au sens de l’article 225-1 à partir des seules sources disponibles.",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "225-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1075.9998849999974,
+      "routingCalls": 1,
+      "embeddingMs": 256.85077199997613,
+      "vectorSearchMs": 52.60894199999166,
+      "jinaRerankingMs": 969.7258759999822,
+      "mappingMs": 0.043692999985069036,
+      "totalMs": 2355.280040999991,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.022221999999601394,
+      "contextBuilderMs": 0.012321999995037913,
+      "generationMs": 2175.379688999994,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4530.716037000006
+    },
+    "judge": {
+      "questionId": "q007",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la définition demandée de la discrimination au sens de l'article 225-1, alors que la question appelle une réponse de fond. Elle est toutefois correctement fondée sur le contexte fourni : celui-ci ne reproduit pas l'article 225-1 et mentionne seulement que l'article 225-2 vise des discriminations définies aux articles 225-1 à 225-1-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "La source est indirectement pertinente : l'article 225-2 renvoie expressément aux articles 225-1 à 225-1-2 et établit que le contexte ne reproduit pas la définition de l'article 225-1. Elle ne permet toutefois pas de répondre au fond à la question ni d'énoncer les critères de discrimination. Elle couvre intégralement les constats de la réponse générée, qui se limite précisément à relever ce renvoi et l'absence du texte de l'article 225-1 dans les sources."
+    }
+  },
+  "failureStage": "generation"
+}

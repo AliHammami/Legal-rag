@@ -1,0 +1,103 @@
+{
+  "questionId": "q169",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article **L2251-1 du Code du travail**, une convention ou un accord collectif peut :\n\n- prévoir des **stipulations plus favorables aux salariés** que les dispositions légales ;\n- mais il ne peut pas écarter les dispositions légales ayant un **caractère d’ordre public**. [Source 1]\n\nLa dérogation n’est donc possible que dans les limites autorisées par la loi. Par exemple, l’article **L3121-68 du Code du travail** permet, dans certains domaines relatifs à l’aménagement du temps de travail, de déroger à des dispositions réglementaires par convention ou accord collectif. [Source 2]\n\nLorsque la loi autorise expressément une telle dérogation, la violation des stipulations conventionnelles dérogatoires est sanctionnée comme la violation des dispositions légales correspondantes, conformément à l’article **L2263-1 du Code du travail**. [Source 3]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2251-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3121-68"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2263-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 191.4605050003156,
+      "vectorSearchMs": 626.7317229998298,
+      "jinaRerankingMs": 606.2578479996882,
+      "mappingMs": 0.0328840003348887,
+      "totalMs": 1424.5149609996006,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011084000114351511,
+      "contextBuilderMs": 0.02017700020223856,
+      "generationMs": 2464.7656870000064,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3889.32161899982
+    },
+    "judge": {
+      "questionId": "q169",
+      "correctness": 3,
+      "completeness": 4,
+      "groundedness": 3,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement la règle de l’article L2251-1 : clauses plus favorables possibles, sans dérogation aux dispositions d’ordre public. Les illustrations sont tirées du contexte. Toutefois, la présentation de l’article L2263-1 omet la condition selon laquelle il vise une convention ou un accord collectif étendu, ce qui élargit légèrement sa portée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement et intégralement à la question sur l’article L2251-1. Les sources 2 et 3 sont pertinentes pour les exemples complémentaires : la source 2 établit une dérogation conventionnelle expressément admise dans certains domaines du temps de travail, et la source 3 couvre le régime de sanction des stipulations dérogatoires lorsqu’une disposition législative expresse le permet. La réponse est donc presque entièrement étayée ; la formulation relative à la source 3 est globalement couverte, même si elle ne rappelle pas que cet article vise les accords ou conventions étendus."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L2251-1 du Code du travail, une convention ou un accord collectif peut prévoir des dispositions **plus favorables aux salariés** que celles prévues par la loi. En revanche, il ne peut pas écarter les dispositions légales qui ont un **caractère d’ordre public** [Source 1].\n\nAinsi, la dérogation est possible uniquement dans le respect de cette limite. Dans certaines matières, une disposition législative peut toutefois autoriser expressément un accord collectif étendu ou un accord d’entreprise à déroger à certaines règles légales ou réglementaires, comme pour l’aménagement des horaires et les astreintes prévu par l’article L3121-68 du Code du travail [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2251-1"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L3121-68"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2263-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1331.2097950000316,
+      "routingCalls": 1,
+      "embeddingMs": 196.5677240001969,
+      "vectorSearchMs": 309.11662200000137,
+      "jinaRerankingMs": 569.2225989997387,
+      "mappingMs": 0.04178400011733174,
+      "totalMs": 2406.191421999596,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012215999886393547,
+      "contextBuilderMs": 0.024457000195980072,
+      "generationMs": 2406.6741579999216,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4812.911568999756
+    },
+    "judge": {
+      "questionId": "q169",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce exactement la règle de l’article L2251-1 : les stipulations peuvent être plus favorables aux salariés, sans déroger aux dispositions d’ordre public. Le complément sur certaines dérogations expressément autorisées est cohérent avec les sources 2 et 3 et demeure correctement nuancé."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question et couvre intégralement la règle énoncée à l’article L2251-1 : stipulations plus favorables aux salariés admises, impossibilité de déroger aux dispositions d’ordre public. La source 2 est pertinente pour l’illustration complémentaire d’une dérogation expressément prévue en matière d’horaires et d’astreintes, et elle couvre cet exemple ainsi que ses limites matérielles. Les affirmations importantes de la réponse sont donc couvertes."
+    }
+  },
+  "failureStage": "none"
+}

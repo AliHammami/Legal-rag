@@ -1,0 +1,95 @@
+{
+  "questionId": "q279",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon **l’article L462-2 du Code monétaire et financier**, les sanctions relatives à la publicité pour la souscription de valeurs mobilières sont fixées par **l’article L245-2 du Code de commerce** [Source 1].\n\nToutefois, le contenu de l’article L245-2 n’est pas fourni dans les sources. Il n’est donc pas possible d’en préciser exactement la sanction.\n\nLa source disponible prévoit néanmoins que constitue une infraction, notamment, le fait d’émettre des valeurs mobilières offertes au public :\n\n- sans insertion préalable d’une notice au *Bulletin des annonces légales obligatoires* ;\n- sans reproduire les mentions obligatoires dans les documents ou annonces ;\n- sans préciser la signature de l’émetteur et l’admission éventuelle des valeurs à la négociation sur un marché réglementé.\n\nCes faits sont punis de **l’amende prévue pour les contraventions de la cinquième classe**. La même amende s’applique à l’intermédiaire qui ne respecte pas ces prescriptions. En cas de récidive, l’amende applicable est celle prévue pour la récidive d’une contravention de cinquième classe (**article R247-2 du Code de commerce**) [Source 2].\n\nCes dispositions ne s’appliquent pas aux offres au public mentionnées aux articles cités du Code monétaire et financier [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L462-2"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R247-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 212.39129499997944,
+      "vectorSearchMs": 616.2610080000013,
+      "jinaRerankingMs": 554.4185750000179,
+      "mappingMs": 0.03884200006723404,
+      "totalMs": 1383.1450470006093,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.018451000563800335,
+      "contextBuilderMs": 0.022253000177443027,
+      "generationMs": 3322.800782999955,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4705.998674000613
+    },
+    "judge": {
+      "questionId": "q279",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement que l’article L. 462-2 renvoie à l’article L. 245-2 du code de commerce pour les sanctions, conformément à la référence. Elle précise à juste titre que le contenu de cet article n’est pas présent dans le contexte. Les précisions supplémentaires relatives à l’article R. 247-2 sont fidèles au texte effectivement fourni et sont présentées comme provenant d’une autre source, sans les confondre explicitement avec le contenu de l’article L. 245-2."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en établissant le renvoi de l’article L. 462-2 vers l’article L. 245-2 du code de commerce. La source 2 est pertinente pour les précisions additionnelles sur les manquements de publicité et les amendes qu’elle prévoit. Toutes les affirmations factuelles importantes de la réponse, y compris l’absence du texte de l’article L. 245-2 dans les sources et le contenu attribué à l’article R. 247-2, sont étayées par les extraits fournis."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article L462-2 du Code monétaire et financier**, les sanctions applicables à la publicité pour la souscription de valeurs mobilières sont celles prévues par **l’article L245-2 du Code de commerce** [Source 1].\n\nToutefois, le contenu de cet article L245-2 n’est pas fourni dans le contexte : il n’est donc pas possible de préciser le montant de l’amende ou la nature de la peine sur la seule base des sources disponibles.\n\nÀ titre distinct, l’**article L231-10 du Code monétaire et financier** prévoit une peine de **cinq ans d’emprisonnement et 9 000 euros d’amende** pour certains faits frauduleux liés aux souscriptions ou versements, notamment la publication de souscriptions fictives ou de faits faux [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L462-2"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L231-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 4148.2335039991885,
+      "routingCalls": 1,
+      "embeddingMs": 176.1551080001518,
+      "vectorSearchMs": 207.07706100028008,
+      "jinaRerankingMs": 569.4131800001487,
+      "mappingMs": 0.035287000238895416,
+      "totalMs": 5100.951543999836,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013706999830901623,
+      "contextBuilderMs": 0.029709000140428543,
+      "generationMs": 2857.2790850000456,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7958.291381000541
+    },
+    "judge": {
+      "questionId": "q279",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement que les sanctions visées par l’article L. 462-2 sont celles de l’article L. 245-2 du code de commerce, conformément à la référence et au contexte. Elle précise à juste titre que le contenu détaillé de L. 245-2 n’est pas fourni. La mention distincte de l’article L. 231-10 est correctement présentée comme relevant d’autres faits frauduleux et est entièrement supportée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 répond directement à la question en renvoyant expressément les sanctions applicables à l’article L. 245-2 du code de commerce. Elle couvre donc l’affirmation centrale et justifie l’impossibilité de détailler les peines, faute de contenu de cet article dans les sources. La source 2 est distincte mais pertinente pour l’ajout explicitement présenté comme séparé, et elle couvre précisément la peine ainsi que les faits frauduleux mentionnés."
+    }
+  },
+  "failureStage": "none"
+}

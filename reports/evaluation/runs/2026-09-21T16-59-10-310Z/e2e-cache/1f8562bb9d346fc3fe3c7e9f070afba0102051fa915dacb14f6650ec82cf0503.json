@@ -1,0 +1,86 @@
+{
+  "questionId": "q500",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les conditions d’inscription au tableau de l’Ordre des médecins.\n\nElles concernent notamment :\n\n- une demande d’inscription auprès de la Haute autorité, accompagnée de pièces justificatives, avec un délai de quatre mois pour statuer [Source 2] ;\n- une commission nationale d’inscription et de discipline statuant selon les articles R. 811-33 à R. 811-35 [Source 1].\n\nAucune de ces dispositions ne vise l’Ordre des médecins ni les conditions propres à l’inscription au tableau médical.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R814-61"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R821-57"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 253.93158000003314,
+      "vectorSearchMs": 871.7916289999848,
+      "jinaRerankingMs": 569.0818609999842,
+      "mappingMs": 0.04266899998765439,
+      "totalMs": 1694.9372560000047,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.020992000005207956,
+      "contextBuilderMs": 0.03981799999019131,
+      "generationMs": 1943.7228599999798,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3638.7350790000055
+    },
+    "judge": {
+      "questionId": "q500",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient clairement de répondre sur les conditions d’inscription au tableau de l’Ordre des médecins, en constatant à juste titre que les sources concernent le Code de commerce, la Haute autorité et une commission nationale, non l’Ordre des médecins. Les précisions données sur les deux sources sont fidèles au contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont hors du champ de l’Ordre des médecins, mais elles sont pertinentes pour justifier l’abstention : elles portent respectivement sur une commission nationale d’inscription et de discipline et sur une demande auprès de la Haute autorité. Elles couvrent les constats de la réponse, y compris l’absence de disposition relative à l’Ordre des médecins dans le contexte fourni."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1220.1992000000319,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1220.2012020000257,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1220.2137280000024
+    },
+    "judge": {
+      "questionId": "q500",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, conformément à l'attente. En l'absence totale de contexte et pour une question relevant principalement du Code de la santé publique plutôt que du Code pénal, elle indique correctement qu'aucune réponse fiable ne peut être fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. L'absence de sources ne permet pas d'étayer les constats de la réponse sur l'ambiguïté, le périmètre ou l'absence de corpus pertinent, même si l'abstention est attendue."
+    }
+  },
+  "failureStage": "none"
+}

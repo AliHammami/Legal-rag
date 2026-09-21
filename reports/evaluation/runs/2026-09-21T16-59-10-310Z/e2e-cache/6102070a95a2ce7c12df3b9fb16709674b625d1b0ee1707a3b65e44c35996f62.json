@@ -1,0 +1,86 @@
+{
+  "questionId": "q475",
+  "questionType": "out-of-scope",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de déterminer les règles de classement des établissements scolaires.\n\n- L’article **R. 322-9 du Code de commerce** concerne le règlement intérieur de chaque établissement et sa communication préalable [Source 1].\n- L’article **L. 522-13 du Code de commerce** prévoit que des règlements types fixent les conditions de fonctionnement des établissements [Source 2].\n\nAucune de ces dispositions ne traite du classement des établissements scolaires.",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R322-9"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 211.84903299994767,
+      "vectorSearchMs": 683.5616870000958,
+      "jinaRerankingMs": 566.2140849996358,
+      "mappingMs": 0.020426999777555466,
+      "totalMs": 1461.6688259989023,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010976999998092651,
+      "contextBuilderMs": 0.016440998762845993,
+      "generationMs": 1915.7634599991143,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3377.4701559990644
+    },
+    "judge": {
+      "questionId": "q475",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement, conformément à l’attendu, car le contexte ne contient aucune règle relative au classement des établissements scolaires. Elle identifie correctement que les deux extraits concernent le règlement intérieur et les conditions de fonctionnement d’établissements relevant du Code de commerce, sans traiter d’un classement scolaire. Toutes les affirmations sont étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources, bien qu’elles ne portent pas sur des établissements scolaires ni sur leur classement, sont directement utiles pour justifier l’abstention : elles traitent respectivement d’un règlement intérieur et de conditions de fonctionnement d’établissements. Elles permettent donc de constater que le contexte fourni ne contient aucune règle relative au classement des établissements scolaires. Les constats formulés dans la réponse sont couverts par les extraits."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1022.9032719992101,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1022.904688000679,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1022.914009001106
+    },
+    "judge": {
+      "questionId": "q475",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question est hors du périmètre fourni. La réponse signale explicitement l'impossibilité de répondre de manière fiable, conformément à l'abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n'est fournie : il n'existe donc aucune source pertinente pour répondre directement à la question. Toutefois, la réponse se limite à constater l'absence de contexte, de corpus pertinent et de recherche ; ces constats sont entièrement cohérents avec l'absence de sources."
+    }
+  },
+  "failureStage": "none"
+}

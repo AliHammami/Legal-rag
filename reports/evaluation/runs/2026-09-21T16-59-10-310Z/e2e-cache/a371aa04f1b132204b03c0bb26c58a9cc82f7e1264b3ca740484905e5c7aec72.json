@@ -1,0 +1,95 @@
+{
+  "questionId": "q265",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Lorsqu’elle a des raisons claires et démontrables de considérer qu’un marché réglementé d’un autre État membre enfreint ses obligations, l’Autorité des marchés financiers suit la procédure suivante :\n\n1. **Elle en informe l’autorité compétente de l’État d’origine** du marché réglementé.\n2. Si, malgré les mesures prises par cette autorité — ou en raison de leur caractère inadéquat — le marché continue de fonctionner d’une manière clairement préjudiciable aux investisseurs ou au fonctionnement ordonné des marchés en France, l’AMF :\n   - **informe à nouveau l’autorité compétente de l’État d’origine** ;\n   - **prend les mesures appropriées** pour protéger les investisseurs ou préserver le bon fonctionnement des marchés.\n3. Ces mesures peuvent notamment consister à **interdire au marché réglementé de mettre ses moyens d’accès à la disposition de membres à distance établis en France**.\n4. L’AMF doit **notifier sa décision au marché réglementé concerné**, en la motivant dûment.\n\nCette procédure est prévue par l’**article L422-1, II, du Code monétaire et financier** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L422-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R632-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 206.6443670000881,
+      "vectorSearchMs": 633.2025380004197,
+      "jinaRerankingMs": 580.3369169998914,
+      "mappingMs": 0.03698399942368269,
+      "totalMs": 1420.2489679995924,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010948000475764275,
+      "contextBuilderMs": 0.02083900012075901,
+      "generationMs": 3083.3765740003437,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4503.668740999885
+    },
+    "judge": {
+      "questionId": "q265",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement la procédure de l’article L422-1, II : information de l’autorité de l’État d’origine, intervention de l’AMF si les mesures sont inadéquates ou inefficaces et que le fonctionnement demeure préjudiciable, possibilité d’interdire les moyens d’accès aux membres à distance établis en France, puis notification motivée au marché concerné. Toutes les affirmations essentielles sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, article L. 422-1, II du Code monétaire et financier, est directement pertinente et énonce précisément l’ensemble de la procédure décrite : information de l’autorité de l’État d’origine, condition tenant à l’inefficacité ou l’inadéquation de ses mesures et au préjudice persistant, prise de mesures appropriées, possibilité d’interdire les moyens d’accès aux membres à distance établis en France, et notification dûment motivée au marché concerné. La source 2 est hors sujet mais n’affecte pas la suffisance de la source 1."
+    }
+  },
+  "routing": {
+    "answer": "Lorsqu’elle estime, pour des raisons claires et démontrables, qu’un marché réglementé d’un autre État membre enfreint ses obligations, l’Autorité des marchés financiers :\n\n1. **En informe l’autorité compétente de l’État d’origine** du marché réglementé ;\n2. Si, malgré les mesures prises par cette autorité — ou en raison de leur caractère inadéquat — le marché continue de fonctionner d’une manière clairement préjudiciable aux investisseurs ou au fonctionnement ordonné des marchés en France, **prend les mesures appropriées**, après en avoir informé l’autorité de l’État d’origine ;\n3. Elle peut notamment **interdire au marché réglementé de mettre ses moyens d’accès à la disposition de membres à distance établis en France** ;\n4. Elle **notifie sa décision, dûment motivée, au marché réglementé concerné**.\n\nCette procédure est prévue par l’**article L422-1, II du Code monétaire et financier** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L422-1"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R632-3"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1712.6222480004653,
+      "routingCalls": 1,
+      "embeddingMs": 211.12519699987024,
+      "vectorSearchMs": 199.22557900007814,
+      "jinaRerankingMs": 543.6220519999042,
+      "mappingMs": 0.03025800082832575,
+      "totalMs": 2666.6565360007808,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010462000034749508,
+      "contextBuilderMs": 0.02097299974411726,
+      "generationMs": 2555.369061000645,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5222.068432000466
+    },
+    "judge": {
+      "questionId": "q265",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit exactement la séquence prévue à l’article L422-1, II : information de l’autorité de l’État d’origine, intervention de l’AMF si les mesures sont inadéquates ou inefficaces et que le fonctionnement demeure clairement préjudiciable, possibilité d’interdire les moyens d’accès aux membres à distance établis en France, puis notification motivée au marché concerné. Toutes ces affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, article L422-1 II du Code monétaire et financier, est directement pertinente et reproduit précisément la procédure décrite : information de l’autorité de l’État d’origine, conditions d’intervention ultérieure de l’AMF, mesures appropriées incluant l’interdiction des moyens d’accès pour les membres à distance, et notification motivée au marché concerné. Elle couvre toutes les affirmations importantes de la réponse. La source 2 est non nécessaire mais n’altère pas cette évaluation."
+    }
+  },
+  "failureStage": "none"
+}

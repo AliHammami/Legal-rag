@@ -1,0 +1,87 @@
+{
+  "questionId": "q361",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La formation des salariés appelés à exercer des responsabilités syndicales, ainsi que des adhérents syndicaux intervenant en faveur des salariés, peut être organisée :\n\n- par des centres spécialisés directement rattachés aux organisations syndicales représentatives ;\n- par des instituts internes aux universités ;\n- ou par d’autres organismes dont la spécialisation est assurée totalement ou partiellement en accord avec des organisations syndicales. Ces organismes doivent toutefois être agréés par le ministre chargé du Travail pour bénéficier des dispositions de l’article L. 2145-3 du Code du travail.\n\nCette organisation est prévue par l’article L. 2145-2 du Code du travail [Source 1].\n\nEn revanche, le texte fourni ne précise pas la responsabilité des membres des organes de direction des associations impliquées. Il ne permet donc pas de répondre sur ce point.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 264.7196380002424,
+      "vectorSearchMs": 607.2424210002646,
+      "jinaRerankingMs": 849.1395379994065,
+      "mappingMs": 0.023339000530540943,
+      "totalMs": 1721.1552179995924,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010560999624431133,
+      "contextBuilderMs": 0.011498000472784042,
+      "generationMs": 2970.53867899999,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4691.769425000064
+    },
+    "judge": {
+      "questionId": "q361",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse restitue correctement et précisément les modalités de formation prévues par l’article L. 2145-2. Elle omet toutefois la réponse attendue sur le régime de responsabilité des dirigeants associatifs, ce qui la rend partielle au regard de la question et de la référence. Cette omission est néanmoins justifiée au regard du contexte fourni, qui ne contient aucun texte sur cette responsabilité : les affirmations formulées sont entièrement fondées sur la source disponible. Le modèle répond effectivement à la partie documentée de la question plutôt que de refuser globalement de répondre."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source fournie est directement pertinente pour la partie relative à l’organisation de la formation syndicale et permet d’étayer précisément toutes les modalités énoncées, y compris la condition d’agrément. Elle ne traite pas de la responsabilité des dirigeants associatifs, mais elle permet de justifier le constat prudent de la réponse selon lequel le texte fourni ne précise pas ce point. La couverture des affirmations effectivement formulées est donc complète, bien que la source ne suffise pas à répondre positivement à l’ensemble de la question."
+    }
+  },
+  "routing": {
+    "answer": "La formation des salariés appelés à exercer des responsabilités syndicales est organisée selon trois modalités :\n\n1. **Par des centres spécialisés** directement rattachés aux organisations syndicales représentatives ;\n2. **Par des instituts internes aux universités** ;\n3. **Par des organismes spécialisés**, totalement ou partiellement, en accord avec des organisations syndicales. Ces organismes doivent toutefois avoir reçu **l’agrément du ministre chargé du Travail** pour bénéficier des dispositions de l’article L. 2145-3 du Code du travail.\n\nCette formation concerne également les adhérents d’une organisation syndicale amenés à intervenir en faveur des salariés — **Article L2145-2 du Code du travail [Source 1]**.\n\nEn revanche, la source fournie ne contient aucune disposition relative à la **responsabilité des membres des organes de direction des associations impliquées**. Il n’est donc pas possible de répondre à cette seconde partie à partir du seul contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2145-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2763.490183000453,
+      "routingCalls": 1,
+      "embeddingMs": 199.23391399998218,
+      "vectorSearchMs": 365.478353000246,
+      "jinaRerankingMs": 532.258716000244,
+      "mappingMs": 0.02546000014990568,
+      "totalMs": 3860.519189999439,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.05148699972778559,
+      "contextBuilderMs": 0.05708300042897463,
+      "generationMs": 2189.2602960001677,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6049.900148999877
+    },
+    "judge": {
+      "questionId": "q361",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue correctement et précisément les modalités de formation prévues par l’article L. 2145-2, y compris l’agrément ministériel des organismes spécialisés et l’extension aux adhérents syndicaux. Elle ne répond toutefois pas au volet relatif à la responsabilité des dirigeants associatifs, alors que cet élément est essentiel à la question et figure dans la référence. Son constat selon lequel ce second volet n’est pas documenté par le contexte est exact : toutes ses affirmations positives sont étayées par la seule source fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 3,
+      "explanation": "La source L2145-2 est directement pertinente et bien ciblée pour la première partie, relative aux modalités de formation syndicale, mais aucune source ne traite directement de la responsabilité des membres des organes de direction, d'administration ou de contrôle des associations. La réponse générée couvre fidèlement les modalités de formation et son constat d'absence de disposition sur la responsabilité associative dans le contexte est supporté par l'unique source fournie. Toutefois, la question comportant deux volets, les sources restent insuffisantes pour une réponse complète."
+    }
+  },
+  "failureStage": "generation"
+}

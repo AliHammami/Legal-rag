@@ -1,0 +1,91 @@
+{
+  "questionId": "q456",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui.\n\n- Toute personne responsable d’un préjudice écologique est tenue de le réparer, conformément à l’article 1246 du Code civil [Source 1].\n- Lorsque plusieurs personnes physiques ou morales ont contribué à une pratique anticoncurrentielle, elles sont solidairement tenues de réparer le préjudice qui en résulte, conformément à l’article L. 481-9 du Code de commerce [Source 2].\n\nLa réponse dépend donc de la nature du préjudice concerné.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1246"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L481-9"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 336.6838140003383,
+      "vectorSearchMs": 692.2929839994758,
+      "jinaRerankingMs": 505.97917100042105,
+      "mappingMs": 0.02295600064098835,
+      "totalMs": 1535.0183779988438,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.0115130003541708,
+      "contextBuilderMs": 0.03175799921154976,
+      "generationMs": 1841.401963999495,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3376.476428998634
+    },
+    "judge": {
+      "questionId": "q456",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse cite correctement deux règles présentes dans le contexte, mais la question est trop générale et le cas est explicitement marqué comme devant susciter une abstention. Elle répond néanmoins de façon affirmative en extrapolant à partir de cas particuliers, sans signaler qu'une réponse générale fiable exige de préciser la nature du préjudice et le fondement juridique applicable."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les deux sources sont directement pertinentes pour les deux hypothèses précises invoquées dans la réponse (préjudice écologique et pratique anticoncurrentielle) et en couvrent intégralement les énoncés. En revanche, elles ne sont pas suffisantes pour répondre de manière générale à la question très large posée, qui appelait une abstention ou une demande de précision : elles ne couvrent que des régimes particuliers de réparation."
+    }
+  },
+  "routing": {
+    "answer": "Oui. Toute personne responsable d’un préjudice écologique est tenue de le réparer, conformément à l’article 1246 du Code civil [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1246"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1544.3081980012357,
+      "routingCalls": 1,
+      "embeddingMs": 218.82337900064886,
+      "vectorSearchMs": 96.94713300094008,
+      "jinaRerankingMs": 510.6024500001222,
+      "mappingMs": 0.025314001366496086,
+      "totalMs": 2370.7385389991105,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011380000039935112,
+      "contextBuilderMs": 0.012742999941110611,
+      "generationMs": 897.2413170002401,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3268.0147580001503
+    },
+    "judge": {
+      "questionId": "q456",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reprend exactement la règle fournie par le contexte : toute personne responsable d’un préjudice écologique doit le réparer. Elle est donc correcte, complète et pleinement fondée pour cette formulation. Toutefois, l’abstention était attendue et la réponse répond de manière affirmative sans signaler que la question générale ne peut être tranchée de façon fiable à partir du seul contexte relatif au préjudice écologique."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 2,
+      "explanation": "La source est directement pertinente pour la règle particulière relative au préjudice écologique et couvre exactement l'affirmation formulée. Toutefois, la question est générale (« un préjudice ») et l'abstention était attendue : cette seule source ne permet pas de répondre de manière générale à la question. Elle est donc insuffisante pour justifier l'affirmation affirmative non limitée de la réponse générée."
+    }
+  },
+  "failureStage": "abstention"
+}

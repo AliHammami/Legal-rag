@@ -1,0 +1,86 @@
+{
+  "questionId": "q491",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les sources fournies ne permettent pas de présenter les règles générales de la commande publique applicables à un marché de travaux.\n\nElles établissent seulement que :\n\n- **L’Autorité des marchés financiers est soumise au Code de la commande publique** — Article R. 621-26 du Code monétaire et financier [Source 1].\n- L’**Article 1799-1 du Code civil** concerne les **marchés de travaux privés**. Il prévoit notamment une garantie de paiement au bénéfice de l’entrepreneur lorsque les sommes dues dépassent un seuil fixé par décret, ainsi que la possibilité de suspendre l’exécution du contrat après mise en demeure restée infructueuse pendant quinze jours [Source 2].\n\nCette disposition du Code civil ne décrit donc pas les règles de passation, de publicité, de mise en concurrence ou d’exécution propres aux marchés publics. Le contexte ne contient pas les articles nécessaires du Code de la commande publique pour répondre plus précisément.",
+    "sources": [
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R621-26"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1799-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 195.98548199998913,
+      "vectorSearchMs": 931.1975859999948,
+      "jinaRerankingMs": 542.5535479999962,
+      "mappingMs": 0.04833400002098642,
+      "totalMs": 1669.8472980000079,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.032524999987799674,
+      "contextBuilderMs": 0.04502099999808706,
+      "generationMs": 2703.204269000009,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4373.165752000001
+    },
+    "judge": {
+      "questionId": "q491",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement de donner les règles générales faute de contexte suffisant, ce qui est attendu. Elle décrit fidèlement les deux seules informations disponibles : l’assujettissement de l’AMF au Code de la commande publique et le régime de garantie de paiement des marchés privés de travaux prévu par l’article 1799-1 du Code civil. Elle distingue correctement ce dernier des règles de passation et d’exécution des marchés publics."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "Dans le cadre d’une abstention, les sources sont suffisamment pertinentes pour constater que le contexte ne contient pas les règles générales applicables aux marchés publics de travaux : la source 1 établit seulement l’assujettissement de l’AMF au Code de la commande publique, et la source 2 traite explicitement d’un marché de travaux privé. Elles couvrent les constats factuels formulés, y compris la garantie de paiement et la faculté de surseoir après quinze jours prévues par l’article 1799-1. Elles ne permettent pas de détailler les règles générales demandées, ce que la réponse indique correctement."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1155.9104890000017,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1155.9146860000037,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1155.9350879999984
+    },
+    "judge": {
+      "questionId": "q491",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement, comme attendu. En l'absence totale de contexte et de corpus pertinent fourni, elle indique correctement qu'une réponse fiable ne peut pas être donnée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : elles ne sont donc pas pertinentes pour répondre directement à la question. Toutefois, la réponse générée se limite à constater l’absence de contexte, de corpus pertinent et de recherche juridique ; l’absence même de sources est cohérente avec ce constat d’abstention et ne laisse aucune affirmation juridique non étayée."
+    }
+  },
+  "failureStage": "none"
+}

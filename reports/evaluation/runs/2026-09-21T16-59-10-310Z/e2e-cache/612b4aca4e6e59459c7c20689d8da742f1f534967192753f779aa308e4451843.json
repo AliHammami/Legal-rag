@@ -1,0 +1,82 @@
+{
+  "questionId": "q478",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’ouverture d’une officine de pharmacie. Il concerne uniquement l’agrément d’un établissement comme **magasin général** lorsqu’une ouverture est subordonnée à un décret ou à un arrêté ministériel — **Article L.522-8 du Code de commerce** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L522-8"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.94955500029027,
+      "vectorSearchMs": 695.6338500007987,
+      "jinaRerankingMs": 636.1150529999286,
+      "mappingMs": 0.0299260001629591,
+      "totalMs": 1546.7495680004358,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010215001180768013,
+      "contextBuilderMs": 0.01209300011396408,
+      "generationMs": 1313.0246609989554,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2859.8081459999084
+    },
+    "judge": {
+      "questionId": "q478",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse abstient correctement : le contexte ne traite que de l’agrément des magasins généraux au titre de l’article L.522-8 du Code de commerce et ne permet pas de répondre aux conditions d’ouverture d’une officine de pharmacie. La précision fournie est directement étayée par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source, bien que relative au Code de commerce et aux magasins généraux plutôt qu’aux officines de pharmacie, est directement pertinente pour justifier l’abstention : elle démontre que le seul contexte fourni porte sur l’agrément d’un magasin général en cas d’ouverture soumise à décret ou arrêté ministériel. Elle couvre ainsi l’ensemble des constats formulés par la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1328.8611479997635,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1328.8622190002352,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1328.8725009988993
+    },
+    "judge": {
+      "questionId": "q478",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s’abstient explicitement, comme attendu. En l’absence totale de contexte et pour une question relevant du droit pharmaceutique plutôt que du Code pénal, elle indique correctement qu’aucune réponse fiable ne peut être fournie."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n’est fournie. L’absence de sources ne permet ni d’établir le caractère hors périmètre ou insuffisant du contexte, ni de soutenir les constats formulés dans l’abstention."
+    }
+  },
+  "failureStage": "none"
+}

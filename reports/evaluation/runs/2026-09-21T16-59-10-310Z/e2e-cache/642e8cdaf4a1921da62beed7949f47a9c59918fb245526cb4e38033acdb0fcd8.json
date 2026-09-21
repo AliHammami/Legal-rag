@@ -1,0 +1,87 @@
+{
+  "questionId": "q480",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Selon l’**article 345 du Code civil**, l’adoption plénière est possible :\n\n- en principe, pour un enfant âgé de **moins de quinze ans** ;\n- à condition qu’il ait été **accueilli au foyer du ou des adoptants depuis au moins six mois** [Source 1].\n\nPar exception, si l’enfant a **plus de quinze ans**, l’adoption plénière peut encore être demandée, si les conditions sont remplies, **pendant sa minorité et dans les trois ans suivant sa majorité**, notamment :\n\n1. s’il a été accueilli avant ses quinze ans par des personnes qui ne remplissaient pas les conditions légales pour adopter ;\n2. s’il a fait l’objet d’une adoption simple avant ses quinze ans ;\n3. dans les cas prévus aux 2° et 3° de l’article 344 du Code civil ;\n4. dans les cas prévus à l’article 370-1-3 du Code civil [Source 1].\n\nLe contexte fourni ne précise pas les autres conditions générales relatives aux adoptants ou au consentement à l’adoption.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "345"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 177.34664900042117,
+      "vectorSearchMs": 698.0741780009121,
+      "jinaRerankingMs": 504.8955809995532,
+      "mappingMs": 0.04978900030255318,
+      "totalMs": 1380.3937999997288,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01405400037765503,
+      "contextBuilderMs": 0.018675999715924263,
+      "generationMs": 2526.8696459997445,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3907.312646999955
+    },
+    "judge": {
+      "questionId": "q480",
+      "correctness": 4,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement les conditions d’âge, d’accueil de six mois et les quatre hypothèses dérogatoires prévues par l’article 345 reproduit dans le contexte. Elle précise correctement que le contexte ne couvre pas les autres conditions générales éventuelles. Toutefois, l’abstention était attendue : la réponse apporte néanmoins une réponse juridique de fond, au lieu d’indiquer que la question ne pouvait pas être traitée de manière fiable dans le périmètre attendu."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente puisqu’elle reproduit l’article 345 du Code civil, relatif aux conditions d’âge, d’accueil au foyer et aux dérogations permettant l’adoption plénière après quinze ans. Elle ne couvre toutefois pas l’ensemble des conditions susceptibles d’être comprises dans une question générale sur l’adoption plénière, notamment celles relatives aux adoptants et aux consentements. Toutes les affirmations juridiques précises de la réponse sont fidèlement couvertes par la source, et la réserve finale indique explicitement cette limite du contexte."
+    }
+  },
+  "routing": {
+    "answer": "Selon **l’article 345 du Code civil [Source 1]**, l’adoption plénière est en principe possible lorsque :\n\n- l’enfant a **moins de quinze ans** ;\n- il est **accueilli au foyer du ou des adoptants depuis au moins six mois**.\n\nPar exception, si l’enfant a **plus de quinze ans**, l’adoption plénière peut encore être demandée, sous réserve que les conditions soient remplies :\n\n- pendant sa minorité ;\n- ou dans les **trois ans suivant sa majorité** ;\n\ndans les cas suivants :\n\n1. l’enfant a été accueilli avant l’âge de quinze ans par des personnes qui ne remplissaient pas les conditions légales pour adopter ;\n2. l’enfant a fait l’objet d’une adoption simple avant ses quinze ans ;\n3. les cas prévus aux 2° et 3° de l’article 344 du Code civil ;\n4. le cas prévu à l’article 370-1-3 du Code civil.\n\nLa source fournie ne précise pas les autres conditions relatives aux adoptants ou à la procédure.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "345"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1126.6420930009335,
+      "routingCalls": 1,
+      "embeddingMs": 208.34494999982417,
+      "vectorSearchMs": 102.04972300119698,
+      "jinaRerankingMs": 815.4347130004317,
+      "mappingMs": 0.021198999136686325,
+      "totalMs": 2252.5199400000274,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.009832000359892845,
+      "contextBuilderMs": 0.01840999908745289,
+      "generationMs": 2666.007262000814,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4918.564565999433
+    },
+    "judge": {
+      "questionId": "q480",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse restitue fidèlement les conditions d’âge, d’accueil de six mois et les exceptions prévues par l’article 345 du Code civil. Elle demeure toutefois partielle pour une question générale sur les conditions de l’adoption plénière, car le contexte ne couvre pas les conditions tenant aux adoptants et à la procédure. Elle le signale correctement. Malgré l’abstention attendue, elle répond de manière affirmative à partir d’un contexte insuffisant pour traiter l’ensemble de la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article 345 traite des conditions d’âge, de durée d’accueil et des exceptions permettant l’adoption plénière après quinze ans. Toutes les affirmations juridiques substantielles de la réponse reprennent fidèlement son contenu. Le constat final selon lequel la source ne précise pas les autres conditions relatives aux adoptants ou à la procédure est également supporté par le périmètre du seul extrait fourni."
+    }
+  },
+  "failureStage": "abstention"
+}

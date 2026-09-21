@@ -1,0 +1,82 @@
+{
+  "questionId": "q476",
+  "questionType": "out-of-scope",
+  "difficulty": "hard",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte fourni ne permet pas de déterminer les conditions d’attribution d’une parcelle par la SAFER.\n\nIl indique seulement que l’**attribution préférentielle** est de droit pour une exploitation agricole :\n\n- ne dépassant pas les limites de superficie fixées par décret en Conseil d’État ;\n- lorsque le maintien dans l’indivision n’a pas été ordonné.\n\nCes conditions résultent de l’**article 832 du Code civil** [Source 1]. Elles ne précisent toutefois pas la procédure ni les critères propres à une attribution par la SAFER.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "832"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 223.1856350004673,
+      "vectorSearchMs": 696.4267510008067,
+      "jinaRerankingMs": 805.1237859986722,
+      "mappingMs": 0.023027000948786736,
+      "totalMs": 1724.8367139995098,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01644199900329113,
+      "contextBuilderMs": 0.027103999629616737,
+      "generationMs": 1968.2434699982405,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3693.171065000817
+    },
+    "judge": {
+      "questionId": "q476",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reconnaît explicitement que le contexte ne permet pas de déterminer les conditions propres d’attribution d’une parcelle par la SAFER. Elle distingue correctement l’attribution préférentielle successorale relevant de l’article 832 du Code civil, dont les deux conditions citées sont intégralement supportées par le contexte, de la procédure SAFER non documentée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est pertinente pour justifier l’abstention : elle porte sur l’attribution préférentielle d’une exploitation agricole au titre de l’article 832 du Code civil, et non sur les conditions propres d’attribution par une SAFER. Elle couvre intégralement les deux conditions factuelles citées dans la réponse (limites de superficie et absence de maintien dans l’indivision) ainsi que la distinction formulée avec le régime SAFER non documenté."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1421.9632119983435,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1421.9641169998795,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1421.9726519994438
+    },
+    "judge": {
+      "questionId": "q476",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et la question porte sur les conditions d’attribution par une SAFER, sujet pour lequel aucune source pertinente n’est fournie. La réponse signale clairement l’impossibilité de répondre fiablement et s’abstient conformément à l’attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc pas de source pertinente pour répondre directement à la question. En revanche, l’absence totale de sources couvre le constat central de la réponse générée selon lequel le contexte disponible ne permet pas de répondre et qu’aucun corpus pertinent n’a été identifié."
+    }
+  },
+  "failureStage": "none"
+}

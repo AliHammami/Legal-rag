@@ -1,0 +1,82 @@
+{
+  "questionId": "q327",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Les modalités d’application des articles L. 433-3 à L. 433-7 sont fixées par **décret en Conseil d’État**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L433-10"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 179.6678070006892,
+      "vectorSearchMs": 588.193784000352,
+      "jinaRerankingMs": 479.6065210001543,
+      "mappingMs": 0.02411700040102005,
+      "totalMs": 1247.5252099996433,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011335999704897404,
+      "contextBuilderMs": 0.012391999363899231,
+      "generationMs": 1025.5925610000268,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2273.153781999834
+    },
+    "judge": {
+      "questionId": "q327",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la règle énoncée dans le contexte et correspond à la réponse de référence : les modalités sont fixées par décret en Conseil d’État."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1, l’article L. 433-10, répond directement à la question en indiquant explicitement que les modalités d’application des articles L. 433-3 à L. 433-7 sont fixées par décret en Conseil d’État. Elle couvre intégralement l’affirmation de la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1435.9839670006186,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1435.9848680002615,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1435.9928930001333
+    },
+    "judge": {
+      "questionId": "q327",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse n'apporte pas l'information demandée : les modalités sont fixées par décret en Conseil d'État. En l'absence totale de contexte, son constat d'impossibilité est fondé, mais l'abstention n'était pas attendue et la réponse est donc incorrecte et vide quant au fond."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. Elles ne permettent ni de répondre à la question sur l'autorité compétente, ni de soutenir les affirmations de la réponse générée concernant l'ambiguïté, le périmètre ou l'absence de corpus pertinent."
+    }
+  },
+  "failureStage": "generation"
+}

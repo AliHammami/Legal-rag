@@ -1,0 +1,87 @@
+{
+  "questionId": "q156",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article L2222-1 du Code du travail, le champ d’application professionnel des conventions et accords collectifs de travail est défini **en termes d’activités économiques**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2222-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 247.7963380003348,
+      "vectorSearchMs": 718.646617999766,
+      "jinaRerankingMs": 538.5654629999772,
+      "mappingMs": 0.0362320002168417,
+      "totalMs": 1505.0753509998322,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011260999832302332,
+      "contextBuilderMs": 0.010999999940395355,
+      "generationMs": 1116.5654279999435,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2621.67235300038
+    },
+    "judge": {
+      "questionId": "q156",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle générale selon laquelle le champ professionnel est défini en termes d'activités économiques. Elle omet toutefois la précision importante applicable aux professions agricoles, pour lesquelles ce champ peut aussi tenir compte du statut juridique des entreprises ou du régime de protection sociale des salariés. L'affirmation fournie est entièrement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L2222-1 et est donc parfaitement pertinente. Elle couvre entièrement l'affirmation de la réponse générée selon laquelle le champ d'application professionnel est défini en termes d'activités économiques. Elle contient aussi la précision relative aux professions agricoles, mais celle-ci n'est pas affirmée dans la réponse générée."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article L2222-1 du Code du travail, le champ d’application professionnel des conventions et accords collectifs de travail est défini en termes d’activités économiques [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2222-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 997.6416039997712,
+      "routingCalls": 1,
+      "embeddingMs": 241.59660899965093,
+      "vectorSearchMs": 266.24467300018296,
+      "jinaRerankingMs": 554.297535000369,
+      "mappingMs": 0.027307000011205673,
+      "totalMs": 2059.8376980000176,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.013831999618560076,
+      "contextBuilderMs": 0.010592999868094921,
+      "generationMs": 1263.0788259999827,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3322.9507659999654
+    },
+    "judge": {
+      "questionId": "q156",
+      "correctness": 3,
+      "completeness": 3,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement la règle générale selon laquelle le champ professionnel est défini par les activités économiques. Elle omet toutefois la précision prévue pour certaines professions agricoles, où le champ peut aussi tenir compte du statut juridique des entreprises ou du régime de protection sociale des salariés. L'affirmation produite est explicitement soutenue par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L2222-1 et énonce explicitement que le champ d'application professionnel est défini en termes d'activités économiques. Elle couvre donc entièrement l'affirmation effectivement formulée dans la réponse générée."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,94 @@
+{
+  "questionId": "q431",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Oui, une entreprise peut être tenue responsable des actes de ses représentants, selon les circonstances.\n\n- Lorsque le représentant agit **dans la limite de ses pouvoirs**, au nom et pour le compte de l’entreprise, celle-ci est seule tenue par l’engagement contracté : **article 1154 du Code civil [Source 4]**.\n- Si le représentant agit pour le compte de l’entreprise mais **contracte en son propre nom**, il est en principe seul engagé envers le cocontractant : **article 1154 du Code civil [Source 4]**.\n- L’entreprise peut également répondre des actes des personnes qu’elle emploie : **article 1797 du Code civil [Source 3]**.\n- En matière de droit du travail, l’employeur est civilement responsable des condamnations prononcées contre ses directeurs, gérants ou délégataires : **article L4741-7 du Code du travail [Source 1]**.\n- Enfin, la personne qui exerce en fait la direction ou la gestion d’une société peut être soumise aux mêmes obligations et sanctions que ses représentants légaux : **article L214-100 du Code monétaire et financier [Source 2]**.\n\nAinsi, la responsabilité de l’entreprise dépend notamment des pouvoirs du représentant, de la manière dont il a agi et du domaine juridique concerné.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L4741-7"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-100"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1797"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "1154"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 233.70129999890924,
+      "vectorSearchMs": 707.0071419999003,
+      "jinaRerankingMs": 504.5096469987184,
+      "mappingMs": 0.022491998970508575,
+      "totalMs": 1445.3295269999653,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010023999959230423,
+      "contextBuilderMs": 0.024709999561309814,
+      "generationMs": 3056.6763080004603,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4502.065043000504
+    },
+    "judge": {
+      "questionId": "q431",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse donne une réponse affirmative globalement juste et distingue utilement plusieurs hypothèses de représentation, d'emploi et de responsabilité de l'employeur. Elle reste toutefois partielle et très hétérogène au regard d'une question générale, notamment sans traiter le régime de responsabilité pénale des personnes morales. Toutes les affirmations juridiques importantes sont directement étayées par les extraits fournis. Cependant, une abstention était attendue et la réponse répond substantiellement malgré cette attente."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les quatre sources sont directement pertinentes pour les hypothèses invoquées : représentation contractuelle (art. 1154 du Code civil), responsabilité de l'entrepreneur du fait de ses employés (art. 1797), responsabilité civile de l'employeur pour ses directeurs, gérants ou délégataires (art. L4741-7 du Code du travail), et régime des dirigeants de fait (art. L214-100 du Code monétaire et financier). Elles étayent chacune des affirmations juridiques substantielles de la réponse. Bien que l'abstention fût attendue, les sources fournies permettent matériellement de répondre sur plusieurs cas, et couvrent les constats effectivement formulés."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1383.3171790000051,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1383.3180459998548,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1383.326146999374
+    },
+    "judge": {
+      "questionId": "q431",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et l'abstention était attendue. La réponse indique clairement qu'elle ne peut pas répondre de manière fiable faute de contexte ou de corpus pertinent, sans tenter de donner une règle juridique non fondée."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie : il n’existe donc pas de source directement pertinente pour répondre au fond. Toutefois, l’abstention générée se fonde précisément sur l’absence de contexte et de corpus, sans avancer d’affirmation juridique de fond ; ses constats sont entièrement cohérents avec les sources absentes."
+    }
+  },
+  "failureStage": "none"
+}

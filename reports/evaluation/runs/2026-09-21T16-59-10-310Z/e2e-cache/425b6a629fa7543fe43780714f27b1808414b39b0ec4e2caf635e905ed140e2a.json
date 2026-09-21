@@ -1,0 +1,91 @@
+{
+  "questionId": "q202",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "D’après l’**article L. 244-5 du Code de commerce**, les règles suivantes s’appliquent aux sociétés européennes :\n\n- Les **articles L. 242-1 à L. 242-30 du Code de commerce** sont applicables aux sociétés européennes.\n- Les **peines prévues pour les dirigeants et organes des sociétés anonymes** s’appliquent également aux fonctions correspondantes dans les sociétés européennes : président, administrateurs, directeurs généraux, membres du directoire et membres du conseil de surveillance.\n- L’**article L. 242-20 du Code de commerce**, relatif aux commissaires aux comptes, leur est également applicable.\n\nAinsi, l’article L. 244-5 transpose aux sociétés européennes le régime de règles et de sanctions prévu pour les sociétés anonymes et leurs organes. **[Source 1]**",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-5"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2351-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 217.95856099994853,
+      "vectorSearchMs": 608.6210429999046,
+      "jinaRerankingMs": 554.1303850002587,
+      "mappingMs": 0.029804000165313482,
+      "totalMs": 1380.7674190001562,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.04505299963057041,
+      "contextBuilderMs": 0.023984999861568213,
+      "generationMs": 2103.2241679998115,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3484.0713990000077
+    },
+    "judge": {
+      "questionId": "q202",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les trois règles de l'article L. 244-5 : applicabilité des articles L. 242-1 à L. 242-30, extension aux dirigeants des sociétés européennes des peines prévues pour les dirigeants de SA, et applicabilité de l'article L. 242-20 aux commissaires aux comptes. Toutes les affirmations importantes sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 1 est l'article L. 244-5 directement visé par la question et énonce explicitement les trois points repris dans la réponse : application des articles L. 242-1 à L. 242-30, extension des peines aux dirigeants correspondants des sociétés européennes, et application de l'article L. 242-20 aux commissaires aux comptes. Elle couvre donc toutes les affirmations importantes. La source 2 n'est pas nécessaire."
+    }
+  },
+  "routing": {
+    "answer": "D’après l’article L. 244-5 du Code de commerce :\n\n- Les articles **L. 242-1 à L. 242-30** sont applicables aux **sociétés européennes**.\n- Les peines prévues pour les dirigeants et organes des sociétés anonymes s’appliquent également aux personnes exerçant les fonctions correspondantes dans les sociétés européennes : président, administrateurs, directeurs généraux, membres du directoire et membres du conseil de surveillance.\n- L’article **L. 242-20** s’applique aux **commissaires aux comptes** des sociétés européennes.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L244-5"
+      }
+    ],
+    "profiling": {
+      "routingMs": 2385.9605760001577,
+      "routingCalls": 1,
+      "embeddingMs": 222.69368600007147,
+      "vectorSearchMs": 266.6452100002207,
+      "jinaRerankingMs": 527.1254329998046,
+      "mappingMs": 0.03262999979779124,
+      "totalMs": 3402.492046999745,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011847000103443861,
+      "contextBuilderMs": 0.018006999976933002,
+      "generationMs": 2229.496699000243,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5632.033026000019
+    },
+    "judge": {
+      "questionId": "q202",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit fidèlement les trois règles de l’article L. 244-5 : application des articles L. 242-1 à L. 242-30, extension des peines visant les dirigeants de SA aux dirigeants correspondants des sociétés européennes, et application de l’article L. 242-20 aux commissaires aux comptes. Toutes les affirmations sont explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement l’article L. 244-5 visé par la question. Elle énonce explicitement l’application des articles L. 242-1 à L. 242-30 aux sociétés européennes, l’extension des peines aux dirigeants correspondants et l’application de l’article L. 242-20 aux commissaires aux comptes. Toutes les affirmations importantes de la réponse sont couvertes."
+    }
+  },
+  "failureStage": "none"
+}

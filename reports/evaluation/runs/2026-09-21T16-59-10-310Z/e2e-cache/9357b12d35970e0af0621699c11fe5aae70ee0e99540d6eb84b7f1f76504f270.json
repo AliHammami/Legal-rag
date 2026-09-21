@@ -1,0 +1,87 @@
+{
+  "questionId": "q315",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article R452-1 du Code de la consommation**, sont interdits, lorsqu’ils concernent des produits dont l’importation est prohibée en méconnaissance de l’article L. 422-2 :\n\n- la détention en vue de la vente ;\n- la détention en vue de la distribution gratuite ;\n- la mise en vente ;\n- la vente ;\n- la distribution à titre gratuit.\n\nCes faits sont punis de l’amende prévue pour les contraventions de la 5e classe. La confiscation du produit ou de la chose ayant servi à commettre l’infraction peut également être prononcée [Source 1].\n\nLe contenu précis de l’interdiction d’importation prévue par l’article L. 422-2 n’est pas reproduit dans le contexte fourni.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R452-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 200.46000999957323,
+      "vectorSearchMs": 694.859927999787,
+      "jinaRerankingMs": 534.6495519997552,
+      "mappingMs": 0.04217800032347441,
+      "totalMs": 1430.0417160000652,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.014764999970793724,
+      "contextBuilderMs": 0.013004000298678875,
+      "generationMs": 2573.9190210001543,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4003.998936999589
+    },
+    "judge": {
+      "questionId": "q315",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement, à partir du contexte, les actes interdits (détention en vue de la vente ou d'une distribution gratuite, mise en vente, vente et distribution gratuite). Elle ne donne toutefois pas l'élément essentiel précisé par l'article L. 422-2 dans la référence : les produits visés sont ceux dont l'importation est prohibée par des décisions applicables de la Commission européenne relatives aux contrôles vétérinaires, ou qui ne respectent pas leurs prescriptions. Les mentions relatives aux sanctions et à la confiscation sont fondées sur le contexte mais sont périphériques à la question. Toutes les affirmations importantes de la réponse sont supportées par l'unique extrait fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source R452-1 est directement pertinente pour identifier les actes interdits (détention en vue de la vente ou de la distribution gratuite, mise en vente, vente, distribution gratuite) et pour les sanctions mentionnées dans la réponse. Elle ne reproduit toutefois pas le contenu matériel de l'article L. 422-2, notamment les critères précis tenant aux décisions de la Commission européenne et aux prescriptions applicables ; elle est donc moins bien ciblée qu'une source contenant L. 422-2. Toutes les affirmations effectivement formulées dans la réponse, y compris le constat que ce contenu précis n'est pas reproduit dans le contexte, sont couvertes par la source fournie."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’**article R452-1 du Code de la consommation [Source 1]**, sont interdits, lorsqu’ils concernent des produits dont l’importation est prohibée en méconnaissance de l’article L422-2 :\n\n- la détention en vue de la vente ;\n- la détention en vue de la distribution gratuite ;\n- la mise en vente ;\n- la vente ;\n- la distribution gratuite.\n\nLa violation de ces interdictions est punie d’une **amende de 5e classe**. Une **confiscation** de la chose ayant servi à commettre l’infraction ou qui en est le produit peut également être prononcée. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "R452-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1840.9806669997051,
+      "routingCalls": 1,
+      "embeddingMs": 226.92310000024736,
+      "vectorSearchMs": 76.91275000013411,
+      "jinaRerankingMs": 549.2898539993912,
+      "mappingMs": 0.023989000357687473,
+      "totalMs": 2694.1634889999405,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010501000098884106,
+      "contextBuilderMs": 0.014751000329852104,
+      "generationMs": 2730.289593999274,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5424.487307999283
+    },
+    "judge": {
+      "questionId": "q315",
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse identifie correctement les actes interdits (détention en vue de la vente ou de la distribution gratuite, mise en vente, vente et distribution gratuite) et les rattache aux produits dont l’importation est prohibée. Elle omet toutefois l’élément essentiel précisant quels produits sont visés par l’article L. 422-2, à savoir ceux dont l’importation est prohibée par des décisions applicables de la Commission européenne relatives aux contrôles vétérinaires ou qui ne respectent pas leurs prescriptions. Les sanctions ajoutées sont bien étayées par le contexte fourni, de même que les interdictions énoncées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "La source R452-1 est directement pertinente : elle énumère les comportements interdits liés aux produits dont l’importation est prohibée en méconnaissance de l’article L. 422-2, ainsi que les sanctions et la confiscation mentionnées dans la réponse. Elle couvre donc l’essentiel des affirmations générées. Toutefois, elle ne précise pas quels produits relèvent matériellement de l’article L. 422-2 (décisions de la Commission européenne applicables aux contrôles vétérinaires et non-conformité à leurs prescriptions), ce qui limite la couverture du fondement et du champ exact de l’interdiction."
+    }
+  },
+  "failureStage": "generation"
+}

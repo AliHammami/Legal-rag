@@ -1,0 +1,103 @@
+{
+  "questionId": "q070",
+  "questionType": "single-corpus",
+  "difficulty": "easy",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’**article 528 du Code civil**, sont meubles par leur nature les biens **qui peuvent se transporter d’un lieu à un autre** [Source 2].\n\nL’article 527 précise que les biens sont meubles soit **par leur nature**, soit **par la détermination de la loi** [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "527"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "528"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "535"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 214.2775679999031,
+      "vectorSearchMs": 621.474384999834,
+      "jinaRerankingMs": 510.2749139999505,
+      "mappingMs": 0.023376999888569117,
+      "totalMs": 1346.1212279999163,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010087999980896711,
+      "contextBuilderMs": 0.016787000000476837,
+      "generationMs": 1212.512088000076,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2558.670703999931
+    },
+    "judge": {
+      "questionId": "q070",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la définition prévue à l’article 528 : les meubles par leur nature peuvent se transporter d’un lieu à un autre. L’ajout relatif à l’article 527 est exact, pertinent et explicitement supporté par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 énonce directement la définition demandée des meubles par leur nature. La source 1 étaye correctement l'affirmation complémentaire sur les deux catégories de biens meubles. Les affirmations importantes de la réponse sont entièrement couvertes."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 528 du Code civil, un bien meuble par sa nature est un bien qui peut être transporté d’un lieu à un autre [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "527"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "528"
+      },
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "535"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1274.103497999953,
+      "routingCalls": 1,
+      "embeddingMs": 366.3496860000305,
+      "vectorSearchMs": 72.65452999994159,
+      "jinaRerankingMs": 488.86199699994177,
+      "mappingMs": 0.022868999978527427,
+      "totalMs": 2202.017946000211,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010089999996125698,
+      "contextBuilderMs": 0.01675099995918572,
+      "generationMs": 1042.7638429999352,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3244.818094999995
+    },
+    "judge": {
+      "questionId": "q070",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement la définition de l’article 528, présente dans le contexte, et répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source 2 (article 528) est directement pertinente et énonce exactement la définition reprise dans la réponse : les biens meubles par leur nature sont ceux qui peuvent se transporter d’un lieu à un autre. Elle couvre intégralement l’affirmation importante, y compris la référence à l’article 528."
+    }
+  },
+  "failureStage": "none"
+}

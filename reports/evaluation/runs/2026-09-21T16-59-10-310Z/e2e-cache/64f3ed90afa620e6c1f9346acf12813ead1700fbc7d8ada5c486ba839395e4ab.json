@@ -1,0 +1,107 @@
+{
+  "questionId": "q421",
+  "questionType": "multi-corpus",
+  "difficulty": "hard",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "### Harcèlement sexuel au travail\n\nLes faits de harcèlement sexuel peuvent entraîner :\n\n- **Une sanction disciplinaire** à l’encontre du salarié auteur des faits, conformément à l’**article L1153-6 du Code du travail** [Source 1].\n- **Des sanctions pénales** : l’**article 222-33 du Code pénal** prévoit, en principe, **deux ans d’emprisonnement et 30 000 € d’amende** [Source 3].\n- Ces peines sont portées à **trois ans d’emprisonnement et 45 000 € d’amende** dans plusieurs circonstances aggravantes, notamment lorsque les faits sont commis par une personne abusant de son autorité, sur un mineur de quinze ans, sur une personne vulnérable, par plusieurs personnes ou au moyen d’un service de communication en ligne ou d’un support numérique [Source 3].\n\nLe harcèlement sexuel peut résulter de propos ou comportements répétés à connotation sexuelle ou sexiste, mais aussi, même sans répétition, d’une pression grave visant à obtenir un acte de nature sexuelle [Source 3].\n\n### Contrôles, retenue et confiscation d’argent liquide\n\nCes mesures relèvent de l’**article L722-18 du Code monétaire et financier** et concernent la méconnaissance des obligations prévues aux articles L722-6 à L722-8 :\n\n- l’infraction est punie d’une **amende égale à 50 % de la somme concernée** ;\n- les agents des douanes peuvent prononcer la **retenue temporaire de la totalité de l’argent liquide**, pour une durée maximale de **30 jours**, renouvelable jusqu’à **90 jours** au maximum, avec notification des motifs ;\n- au terme de ces 90 jours, l’argent peut être **consigné jusqu’à douze mois** à compter du premier jour de la retenue, sur autorisation du procureur de la République, si les nécessités de l’enquête le justifient ;\n- les agents des douanes peuvent retenir ou copier les documents relatifs à l’argent liquide ;\n- l’argent peut être **saisi**, et sa **confiscation** peut être prononcée par la juridiction compétente lorsqu’il existe des éléments établissant ou permettant raisonnablement de penser que l’auteur est impliqué dans une ou plusieurs infractions douanières [Source 2].\n\nLes sources fournies ne précisent pas de lien entre les sanctions du harcèlement sexuel et les procédures de contrôle ou de confiscation d’argent liquide : ces deux régimes apparaissent distincts.",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1153-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L722-18"
+      },
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "222-33"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 201.17761800065637,
+      "vectorSearchMs": 660.0492219999433,
+      "jinaRerankingMs": 597.6166740003973,
+      "mappingMs": 0.029841000214219093,
+      "totalMs": 1458.9107200000435,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010995998978614807,
+      "contextBuilderMs": 0.02782200090587139,
+      "generationMs": 3870.7254830002785,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 5329.685891000554
+    },
+    "judge": {
+      "questionId": "q421",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse expose correctement la sanction disciplinaire applicable au salarié auteur de harcèlement sexuel et ajoute, de façon exacte et pertinente au regard du contexte, les peines pénales et circonstances aggravantes de l'article 222-33 du Code pénal. Elle restitue également les mesures relatives à l'argent liquide : amende de 50 %, retenue de 30 jours renouvelable jusqu'à 90 jours, consignation autorisée par le procureur dans la limite de 12 mois, retenue ou copie de documents, saisie et confiscation judiciaire sous les conditions prévues. Les affirmations importantes sont toutes étayées par les sources fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : L1153-6 couvre la sanction disciplinaire, 222-33 couvre la qualification et les peines pénales du harcèlement sexuel ainsi que les aggravations, et L722-18 couvre l'amende, la retenue, la consignation, les documents, la saisie et la confiscation d'argent liquide. Elles étayent l'ensemble des affirmations importantes de la réponse générée, y compris les durées et conditions procédurales."
+    }
+  },
+  "routing": {
+    "answer": "## 1. Harcèlement sexuel au travail\n\nTout salarié ayant commis des faits de harcèlement sexuel est passible d’une **sanction disciplinaire**. Le contexte fourni ne précise ni la nature ni l’échelle de ces sanctions.  \n**Article L. 1153-6 du Code du travail [Source 1].**\n\n## 2. Infractions relatives aux obligations sur l’argent liquide\n\n### Amende\n\nLa méconnaissance :\n\n- des obligations prévues aux articles L. 722-6 à L. 722-8 du Code monétaire et financier est punie d’une amende égale à **50 % de la somme concernée** ;\n- des obligations déclaratives prévues aux articles L. 152-1 à L. 152-1-2 et par le règlement européen applicable est également punie d’une amende égale à **50 % du montant de l’argent liquide concerné**.\n\n**Article L. 722-18 du Code monétaire et financier [Source 2] ; article L. 152-4, I, du Code monétaire et financier [Source 3].**\n\n### Retenue et consignation par les douanes\n\nLorsque l’infraction est constatée par les agents des douanes, ceux-ci peuvent :\n\n- retenir temporairement la totalité de l’argent liquide pendant une durée maximale de **30 jours**, renouvelable dans la limite de **90 jours** ;\n- notifier les motifs de cette retenue à l’auteur de l’infraction ;\n- au-delà de 90 jours, consigner l’argent liquide, avec l’autorisation du procureur de la République, pour une durée maximale de **12 mois à compter du premier jour de la retenue temporaire**, si les nécessités de l’enquête le justifient ;\n- retenir les documents relatifs à l’argent liquide ou en prendre copie.\n\n**Article L. 152-4, II, du Code monétaire et financier [Source 3] ; article L. 722-18 du même code [Source 2].**\n\n### Saisie et confiscation\n\nL’argent liquide peut être saisi par les agents des douanes et sa confiscation peut être prononcée par la juridiction compétente lorsqu’il existe les éléments ou raisons plausibles laissant penser que l’intéressé a commis, ou participé à, une ou plusieurs infractions douanières.\n\nLorsque l’argent liquide n’est plus disponible, la juridiction peut prononcer, à titre de confiscation, la condamnation au paiement d’une somme équivalente.\n\nEn cas de non-lieu ou de relaxe, les mesures ordonnées sont levées de plein droit aux frais du Trésor ; il en va de même en cas d’extinction de l’action relative aux sanctions fiscales.\n\n**Article L. 152-4, III, du Code monétaire et financier [Source 4] ; article L. 722-18 du même code [Source 2].**\n\nEnfin, la recherche, la constatation et la poursuite de ces infractions, ainsi que les investigations nécessaires à la confiscation, sont réalisées selon les conditions fixées par le **Code des douanes**. **Article L. 152-4, IV, du Code monétaire et financier [Source 4].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1153-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L722-18"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L152-4"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L152-4"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1741.5891559999436,
+      "routingCalls": 1,
+      "embeddingMs": 199.68565700016916,
+      "vectorSearchMs": 404.3981360010803,
+      "jinaRerankingMs": 598.4391539990902,
+      "mappingMs": 0.023176999762654305,
+      "totalMs": 2944.1803859993815,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.03736800141632557,
+      "contextBuilderMs": 0.026741998270154,
+      "generationMs": 5040.737849000841,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 7984.992104001343
+    },
+    "judge": {
+      "questionId": "q421",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse couvre correctement les deux volets : sanction disciplinaire pour le salarié auteur de harcèlement sexuel, amende de 50 %, retenue temporaire (30 jours renouvelable jusqu'à 90 jours), consignation avec autorisation du procureur dans la limite de 12 mois, rétention des documents, puis saisie et confiscation judiciaire. Les précisions additionnelles sur la confiscation par équivalent, la mainlevée en cas de non-lieu ou relaxe et l'application du code des douanes sont toutes explicitement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes : l'article L. 1153-6 couvre la sanction disciplinaire du salarié auteur de harcèlement sexuel, tandis que les articles L. 722-18 et L. 152-4 couvrent les amendes, la retenue temporaire, la consignation, la rétention de documents, la saisie, la confiscation, la confiscation par équivalent, la mainlevée et le régime d'enquête douanier. Toutes les affirmations substantielles de la réponse sont explicitement soutenues par ces extraits."
+    }
+  },
+  "failureStage": "none"
+}

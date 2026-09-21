@@ -1,0 +1,90 @@
+{
+  "questionId": "q435",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Les obligations du professionnel sont les suivantes :\n\n- **Assurer la bonne exécution du contrat à distance** : le professionnel est responsable de plein droit de l’exécution des obligations contractuelles, y compris lorsqu’elles sont exécutées par d’autres prestataires. Il ne peut s’exonérer que s’il prouve que l’inexécution résulte du consommateur, d’un tiers au contrat dans des circonstances imprévisibles et insurmontables, ou d’un cas de force majeure. **Article L221-15 du Code de la consommation [Source 1]**\n\n- **Ne pas utiliser certains contenus fournis ou créés par le consommateur** dans le cadre d’un contenu ou service numérique, sauf exceptions prévues par le texte, notamment lorsque le contenu a été généré conjointement et reste utilisable par d’autres consommateurs. **Article L224-25-22, 4° du Code de la consommation [Source 2]**\n\n- **Respecter les droits du consommateur sur ses contenus** : même s’il rend le contenu ou le service inaccessible ou désactive le compte utilisateur, le professionnel doit préserver les droits du consommateur à récupérer son contenu et à consulter ses factures. **Article L224-25-22 du Code de la consommation [Source 2]**\n\n- **Respecter la réglementation applicable aux données personnelles**, notamment le règlement européen n° 2016/679 et la loi du 6 janvier 1978. **Article L224-25-22 du Code de la consommation [Source 2]**\n\n- **Prouver qu’il a respecté ses obligations d’information** : la charge de cette preuve lui incombe. **Article L221-7 du Code de la consommation [Source 3]**\n\nLe contexte fourni ne permet toutefois pas de déterminer les éventuelles obligations correspondant aux dispositions précédant le 4° de l’article L224-25-22.",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-15"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L224-25-22"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L221-7"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 188.225379999727,
+      "vectorSearchMs": 650.3294440004975,
+      "jinaRerankingMs": 524.8755069989711,
+      "mappingMs": 0.030613001435995102,
+      "totalMs": 1363.4906469993293,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010367000475525856,
+      "contextBuilderMs": 0.021541999652981758,
+      "generationMs": 3444.18799899891,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4807.724897000939
+    },
+    "judge": {
+      "questionId": "q435",
+      "correctness": 2,
+      "completeness": 1,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse reprend correctement plusieurs obligations explicitement mentionnées dans les extraits fournis, mais elle répond de façon affirmative à une question trop générale, alors que le contexte est fragmentaire et ne permet pas d’identifier de manière fiable l’ensemble des obligations du « professionnel » ni même le régime précis visé. Elle aurait dû s’abstenir ou demander une précision. Les affirmations principales sont néanmoins étayées par les sources citées."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes pour les obligations spécifiques énoncées dans la réponse (exécution du contrat à distance, utilisation des contenus, données personnelles et preuve de l'information). Elles couvrent bien les affirmations formulées. Toutefois, la question est très générale et les extraits, fragmentaires et relevant de régimes distincts, ne permettent pas d'identifier exhaustivement les obligations du professionnel ni de répondre de manière générale ; ils étaient surtout insuffisants pour éviter une réponse affirmative extensive."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 820.3756879996508,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 820.3770410008729,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 820.389964999631
+    },
+    "judge": {
+      "questionId": "q435",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse s'abstient explicitement et indique que le contexte vide ne permet pas de répondre de manière fiable. Cela correspond à l'abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n’est fournie. L’absence de corpus est cohérente avec l’abstention, mais aucune source ne permet d’étayer les constats formulés sur le périmètre ou l’absence de recherche."
+    }
+  },
+  "failureStage": "none"
+}

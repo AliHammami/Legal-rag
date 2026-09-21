@@ -1,0 +1,87 @@
+{
+  "questionId": "q120",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La personne morale ou l’entreprise individuelle peut demander aux particuliers employeurs une **contribution destinée à représenter ses frais de gestion** lorsqu’elle :\n\n- assure le **placement de travailleurs** auprès de ces particuliers ; ou\n- accomplit, pour leur compte, les **formalités administratives ainsi que les déclarations sociales et fiscales** liées à l’emploi de ces travailleurs.\n\nL’article ne précise toutefois **ni le montant ni les modalités de calcul** de cette contribution. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 568.1945810001343,
+      "vectorSearchMs": 702.9422610001639,
+      "jinaRerankingMs": 567.1611240003258,
+      "mappingMs": 0.04327200027182698,
+      "totalMs": 1839.6556220003404,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010825000237673521,
+      "contextBuilderMs": 0.010747999884188175,
+      "generationMs": 2036.2112489999272,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3875.8999850000255
+    },
+    "judge": {
+      "questionId": "q120",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend correctement que la contribution peut représenter les frais de gestion liés soit au placement de travailleurs, soit à l'accomplissement pour le compte des particuliers employeurs des formalités administratives et déclarations sociales et fiscales. Elle précise également, sans contradiction avec le texte fourni, qu'aucun montant ni modalité de calcul n'y est indiqué. Toutes les affirmations importantes sont directement étayées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article L7233-1, qui répond exactement à la question en autorisant une contribution représentative des frais de gestion pour le placement ou l’accomplissement des formalités et déclarations pour le compte des employeurs. Elle couvre les conditions évoquées ainsi que la nature de la contribution. L’absence de précision sur le montant ou les modalités ressort également du contenu limité de l’article fourni."
+    }
+  },
+  "routing": {
+    "answer": "La personne morale ou l’entreprise individuelle peut demander aux particuliers employeurs une contribution correspondant à ses frais de gestion lorsqu’elle :\n\n- assure le placement de travailleurs auprès de personnes physiques employeurs ; ou\n- accomplit, pour le compte de ces employeurs, les formalités administratives ainsi que les déclarations sociales et fiscales liées à l’emploi de ces travailleurs.\n\nCette contribution doit donc être **représentative des frais de gestion** engagés. Le texte fourni ne précise toutefois ni son montant, ni ses modalités de calcul ou ses éventuelles limites.  \n**Article L7233-1 du Code du travail [Source 1].**",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L7233-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1762.7982750004157,
+      "routingCalls": 1,
+      "embeddingMs": 250.93973599979654,
+      "vectorSearchMs": 281.58638700004667,
+      "jinaRerankingMs": 551.915192999877,
+      "mappingMs": 0.1445490000769496,
+      "totalMs": 2847.4533059997484,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.019034000113606453,
+      "contextBuilderMs": 0.016130000352859497,
+      "generationMs": 2080.770625000354,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 4928.277985999826
+    },
+    "judge": {
+      "questionId": "q120",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend fidèlement les deux hypothèses prévues par l’article L7233-1 et précise correctement que la contribution est représentative des frais de gestion. L’indication selon laquelle le texte ne fixe ni montant ni modalités est cohérente avec le contexte fourni. Toutes les affirmations importantes sont directement supportées par la source."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source est directement pertinente : l’article L7233-1 vise expressément la personne morale ou l’entreprise individuelle assurant le placement de travailleurs auprès de personnes physiques employeurs ou accomplissant les formalités et déclarations pour leur compte. Elle couvre les affirmations essentielles de la réponse, notamment les deux hypothèses et le fait que la contribution est représentative des frais de gestion. L’absence de précision sur le montant ou les modalités peut également être constatée à partir du texte fourni, qui ne les mentionne pas."
+    }
+  },
+  "failureStage": "none"
+}

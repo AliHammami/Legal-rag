@@ -1,0 +1,87 @@
+{
+  "questionId": "q058",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Selon l’article 432-1 du Code pénal, la personne dépositaire de l’autorité publique qui, dans l’exercice de ses fonctions, prend des mesures destinées à faire échec à l’exécution de la loi encourt :\n\n- **cinq ans d’emprisonnement** ;\n- **75 000 euros d’amende**.\n\n[Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 222.88288799999282,
+      "vectorSearchMs": 620.3397820000537,
+      "jinaRerankingMs": 547.0714399998542,
+      "mappingMs": 0.024960000067949295,
+      "totalMs": 1390.3541470000055,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010482999961823225,
+      "contextBuilderMs": 0.010424999985843897,
+      "generationMs": 1164.808030999964,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 2555.19210799993
+    },
+    "judge": {
+      "questionId": "q058",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reprend exactement les deux sanctions prévues par l’article 432-1 (cinq ans d’emprisonnement et 75 000 euros d’amende). Elles sont explicitement énoncées dans le contexte fourni. Elle répond directement à la question, sans abstention."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 432-1 et énonce expressément les deux sanctions demandées : cinq ans d’emprisonnement et 75 000 euros d’amende. Elle couvre également les conditions mentionnées dans la réponse (personne dépositaire de l’autorité publique, exercice des fonctions et mesures visant à faire échec à l’exécution de la loi)."
+    }
+  },
+  "routing": {
+    "answer": "Selon l’article 432-1 du Code pénal, la personne dépositaire de l’autorité publique qui prend, dans l’exercice de ses fonctions, des mesures destinées à faire échec à l’exécution de la loi encourt :\n\n- **cinq ans d’emprisonnement** ;\n- **75 000 euros d’amende**. [Source 1]",
+    "sources": [
+      {
+        "corpusId": "code-penal",
+        "articleNumber": "432-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1026.7542149999645,
+      "routingCalls": 1,
+      "embeddingMs": 190.92993900016882,
+      "vectorSearchMs": 33.67626799992286,
+      "jinaRerankingMs": 522.5539289999288,
+      "mappingMs": 0.023652000119909644,
+      "totalMs": 1773.9632190000266,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010495999827980995,
+      "contextBuilderMs": 0.010101000079885125,
+      "generationMs": 1506.4678309999872,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3280.4613639998715
+    },
+    "judge": {
+      "questionId": "q058",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse reproduit exactement les deux sanctions prévues par l’article 432-1 (cinq ans d’emprisonnement et 75 000 euros d’amende) et elles sont explicitement établies par le contexte fourni. Elle répond directement à la question."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l’article 432-1 et énonce explicitement les deux sanctions demandées. Elle couvre intégralement les affirmations importantes de la réponse générée, y compris la condition d’exercice des fonctions et les peines de cinq ans d’emprisonnement et 75 000 euros d’amende."
+    }
+  },
+  "failureStage": "none"
+}

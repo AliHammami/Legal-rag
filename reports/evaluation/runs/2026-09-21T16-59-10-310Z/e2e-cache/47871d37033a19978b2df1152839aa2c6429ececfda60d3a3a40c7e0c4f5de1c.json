@@ -1,0 +1,87 @@
+{
+  "questionId": "q165",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "Oui. Une convention de branche peut prévoir des stipulations moins favorables aux salariés que celles d’une convention ou d’un accord couvrant un champ territorial plus large.\n\nCette possibilité existe **sauf si l’accord ou la convention de champ plus large prévoit expressément qu’il ne peut pas y être dérogé**, en totalité ou en partie. [Source 1]\n\nEn outre, si une convention ou un accord de niveau supérieur est conclu ultérieurement, les parties doivent adapter les stipulations moins favorables de l’accord antérieur **lorsque le nouvel accord de niveau supérieur le prévoit expressément** — Article L2252-1 du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2252-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 228.08156500011683,
+      "vectorSearchMs": 675.304080999922,
+      "jinaRerankingMs": 527.0477749998681,
+      "mappingMs": 0.03719499986618757,
+      "totalMs": 1430.5025379997678,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.011642000172287226,
+      "contextBuilderMs": 0.011754000093787909,
+      "generationMs": 2013.7256900002249,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3444.261061999947
+    },
+    "judge": {
+      "questionId": "q165",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond exactement à la question : elle affirme la possibilité de stipulations moins favorables et précise l’exception tenant à une interdiction expresse de dérogation par l’accord de champ plus large. Elle ajoute correctement la règle d’adaptation en cas d’accord supérieur ultérieur, prévue par l’article L2252-1. Toutes les affirmations sont directement supportées par le contexte fourni."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L2252-1 du Code du travail, qui répond précisément à la question : possibilité de stipulations moins favorables dans une convention de branche face à un accord de champ territorial ou professionnel plus large, sous réserve d'une clause expresse de non-dérogation. Elle couvre également l'affirmation additionnelle relative à l'adaptation des stipulations moins favorables lorsqu'un accord de niveau supérieur ultérieur le prévoit expressément."
+    }
+  },
+  "routing": {
+    "answer": "Oui. Une convention de branche peut prévoir des stipulations moins favorables aux salariés que celles d’une convention ou d’un accord couvrant un champ territorial plus large.\n\nCette possibilité existe sauf si l’accord de niveau supérieur prévoit expressément qu’il est interdit d’y déroger, en tout ou partie. [Source 1]\n\nEn outre, si une convention ou un accord de niveau supérieur est conclu ultérieurement et prévoit expressément l’adaptation des stipulations moins favorables, les parties doivent adapter l’accord ou la convention antérieur. Article L2252-1 du Code du travail [Source 1].",
+    "sources": [
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2252-1"
+      }
+    ],
+    "profiling": {
+      "routingMs": 1228.7503359997645,
+      "routingCalls": 1,
+      "embeddingMs": 233.47927299980074,
+      "vectorSearchMs": 234.4736130000092,
+      "jinaRerankingMs": 506.9339160001837,
+      "mappingMs": 0.17109900014474988,
+      "totalMs": 2203.8434170000255,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.01619199989363551,
+      "contextBuilderMs": 0.014510999899357557,
+      "generationMs": 1483.1262939996086,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3687.0118410000578
+    },
+    "judge": {
+      "questionId": "q165",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse répond correctement par l’affirmative et énonce la condition essentielle : l’absence de clause expresse de non-dérogation dans l’accord de niveau territorial ou professionnel supérieur. Elle ajoute correctement, conformément à l’article L2252-1 fourni, l’obligation d’adapter l’accord antérieur moins favorable lorsqu’un accord supérieur ultérieur le prévoit expressément. Toutes les affirmations sont directement supportées par le contexte."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "La source reproduit directement l'article L2252-1 du Code du travail, qui répond précisément à la question : une convention de branche peut contenir des stipulations moins favorables qu'un accord de champ territorial ou professionnel plus large, sauf clause expresse de non-dérogation. Elle couvre également l'affirmation additionnelle sur l'adaptation d'un accord antérieur moins favorable lorsqu'un accord de niveau supérieur ultérieur le prévoit expressément."
+    }
+  },
+  "failureStage": "none"
+}

@@ -1,0 +1,90 @@
+{
+  "questionId": "q330",
+  "questionType": "single-corpus",
+  "difficulty": "medium",
+  "expectedAbstention": false,
+  "baseline": {
+    "answer": "La violation de l’interdiction prévue à l’article L. 441-1 du Code de la consommation est punie de **trois ans d’emprisonnement et de 300 000 euros d’amende** [Source 1].\n\nLa peine est portée à :\n\n- **cinq ans d’emprisonnement et 600 000 euros d’amende** dans les circonstances aggravantes prévues à l’article L. 454-2 du Code de la consommation [Source 3] ;\n- **sept ans d’emprisonnement et 750 000 euros d’amende** si l’infraction a rendu la marchandise dangereuse pour la santé humaine ou animale, ou si elle a été commise en bande organisée, conformément à l’article L. 454-3 du Code de la consommation [Source 2].",
+    "sources": [
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-1"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-3"
+      },
+      {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L454-2"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 244.5596769992262,
+      "vectorSearchMs": 614.11399800051,
+      "jinaRerankingMs": 489.82713100034744,
+      "mappingMs": 0.04495500028133392,
+      "totalMs": 1348.5775450002402,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.012064999900758266,
+      "contextBuilderMs": 0.019169999286532402,
+      "generationMs": 1966.1981260003522,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 3314.8191590001807
+    },
+    "judge": {
+      "questionId": "q330",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse donne exactement la peine de droit commun prévue par l'article L. 454-1 pour la violation de l'interdiction de l'article L. 441-1 : trois ans d'emprisonnement et 300 000 euros d'amende. Les précisions supplémentaires sur les peines aggravées sont également conformes aux sources L. 454-2 et L. 454-3 fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Les trois sources sont directement pertinentes : elles visent expressément la violation de l’interdiction de l’article L. 441-1. La source 1 couvre intégralement la peine principale demandée (trois ans d’emprisonnement et 300 000 euros d’amende), tandis que les sources 2 et 3 couvrent précisément les deux précisions sur les régimes aggravés ajoutées dans la réponse."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1331.1875849999487,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1331.188605999574,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1331.1964589999989
+    },
+    "judge": {
+      "questionId": "q330",
+      "correctness": 0,
+      "completeness": 0,
+      "groundedness": 4,
+      "abstentionCorrect": false,
+      "explanation": "La réponse ne fournit pas la peine demandée alors qu'une réponse était attendue : trois ans d'emprisonnement et 300 000 euros d'amende. Elle est toutefois cohérente avec l'absence totale de contexte, puisqu'elle indique ne pas pouvoir répondre de manière fiable."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 0,
+      "sourceCoverage": 0,
+      "explanation": "Aucune source n'est fournie. Elles ne peuvent donc ni répondre à la question sur la peine prévue, ni étayer les affirmations d'ambiguïté, de hors périmètre ou d'absence de corpus pertinent formulées dans la réponse générée."
+    }
+  },
+  "failureStage": "generation"
+}

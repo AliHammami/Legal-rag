@@ -1,0 +1,94 @@
+{
+  "questionId": "q430",
+  "questionType": "ambiguous",
+  "difficulty": "medium",
+  "expectedAbstention": true,
+  "baseline": {
+    "answer": "Le contexte vise plusieurs procédures distinctes. Les droits du demandeur dépendent donc de la procédure concernée :\n\n- **Modification de la mention du sexe à l’état civil** : le demandeur peut saisir le tribunal judiciaire, faire état de son consentement libre et éclairé et produire des éléments de preuve. L’absence de traitement médical, d’opération chirurgicale ou de stérilisation ne peut justifier un refus. Si les conditions sont remplies, le tribunal ordonne la modification de la mention du sexe et, le cas échéant, des prénoms — **Article 61-6 du Code civil [Source 1]**.\n\n- **Procédure devant la commission des sanctions** : le demandeur est convoqué, peut être assisté ou représenté par la personne de son choix et peut présenter ses observations. La séance peut être publique s’il le demande et si le président l’accepte — **Article R. 621-41-4 du Code monétaire et financier [Source 2]**.\n\n- **Procédure devant le bureau de jugement prud’homal** : le demandeur doit comparaître, sauf motif légitime. En cas de non-comparution injustifiée, les conséquences prévues par l’article 468 du Code de procédure civile s’appliquent. Si la caducité est rapportée, il est informé de la nouvelle date d’audience — **Article R. 1454-21 du Code du travail [Source 3]**.\n\n- **Demande en revendication d’un bien** : le demandeur peut adresser sa demande à l’administrateur ou, à défaut, au débiteur, en envoyer une copie au mandataire judiciaire et, en l’absence d’acquiescement, saisir le juge-commissaire dans les délais prévus. Il bénéficie du recueil des observations des parties avant la décision, et sa demande vaut automatiquement demande en restitution — **Article R. 624-13 du Code de commerce [Source 4]**.\n\nLa procédure visée n’étant pas précisée, il n’est pas possible d’identifier un seul ensemble de droits.",
+    "sources": [
+      {
+        "corpusId": "code-civil",
+        "articleNumber": "61-6"
+      },
+      {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "R621-41-4"
+      },
+      {
+        "corpusId": "code-du-travail",
+        "articleNumber": "R1454-21"
+      },
+      {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "R624-13"
+      }
+    ],
+    "profiling": {
+      "routingMs": 0,
+      "routingCalls": 0,
+      "embeddingMs": 219.32597600109875,
+      "vectorSearchMs": 696.7008979991078,
+      "jinaRerankingMs": 520.2352990005165,
+      "mappingMs": 0.019929001107811928,
+      "totalMs": 1436.3061359990388,
+      "embeddingCalls": 1,
+      "rerankingCalls": 1,
+      "retrievedCandidates": 20,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0.010077999904751778,
+      "contextBuilderMs": 0.021581999957561493,
+      "generationMs": 4994.526978999376,
+      "generationCalls": 1,
+      "answerPipelineTotalMs": 6430.876754000783
+    },
+    "judge": {
+      "questionId": "q430",
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 3,
+      "abstentionCorrect": false,
+      "explanation": "La question ne précise pas la procédure concernée, ce qui justifiait une abstention claire. La réponse identifie correctement cette ambiguïté mais répond néanmoins en énumérant des droits relevant de quatre procédures différentes, sans pouvoir déterminer laquelle est visée. Les éléments exposés sont majoritairement issus du contexte, mais l'affirmation selon laquelle le demandeur prud'homal « doit comparaître » simplifie le texte, qui prévoit seulement les conséquences d'une absence sans motif légitime."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 3,
+      "explanation": "Les quatre sources portent sur des procédures distinctes et permettent de constater qu’aucune procédure unique n’est identifiable à partir du contexte. Elles sont donc globalement pertinentes pour expliquer l’ambiguïté, même si elles ne permettent pas de répondre de façon univoque à la question. Les droits et modalités énumérés sont pour l’essentiel directement repris des sources. Toutefois, la formulation selon laquelle le demandeur prud’homal « doit comparaître » dépasse légèrement le texte, qui ne prévoit que les conséquences d’une non-comparution sans motif légitime."
+    }
+  },
+  "routing": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "sources": [],
+    "profiling": {
+      "routingMs": 1228.5026769991964,
+      "routingCalls": 1,
+      "embeddingMs": 0,
+      "vectorSearchMs": 0,
+      "jinaRerankingMs": 0,
+      "mappingMs": 0,
+      "totalMs": 1228.503720998764,
+      "embeddingCalls": 0,
+      "rerankingCalls": 0,
+      "retrievedCandidates": 0,
+      "rerankStatus": "success",
+      "contextFilteringMs": 0,
+      "contextBuilderMs": 0,
+      "generationMs": 0,
+      "generationCalls": 0,
+      "answerPipelineTotalMs": 1228.5123689994216
+    },
+    "judge": {
+      "questionId": "q430",
+      "correctness": 4,
+      "completeness": 4,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "Le contexte est vide et aucune procédure n'est précisée. La réponse reconnaît explicitement l'impossibilité de répondre de manière fiable, ce qui correspond à l'abstention attendue."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 4,
+      "sourceCoverage": 4,
+      "explanation": "Aucune source n’est fournie, ce qui est cohérent avec le contexte vide et l’absence de procédure identifiée. L’abstention ne formule aucun droit juridique substantiel et constate seulement l’impossibilité de répondre de manière fiable ; ce constat est entièrement compatible avec l’absence de corpus disponible."
+    }
+  },
+  "failureStage": "none"
+}
