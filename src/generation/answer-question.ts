@@ -84,8 +84,13 @@ export async function answerQuestion(
   }
 
   const filteringStart = performance.now();
+  const routedCorpusIds =
+    routing?.decision === 'routed' && routing.corpusIds.length > 1
+      ? routing.corpusIds
+      : undefined;
   const contextChunks = dynamicContextFilter(reranked, {
     relativeScoreThreshold,
+    routedCorpusIds,
   });
   profiling.contextFilteringMs = performance.now() - filteringStart;
 

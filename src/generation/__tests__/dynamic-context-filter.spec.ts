@@ -10,10 +10,12 @@ import type { RerankedChunk } from '../../reranking/types.js';
 function makeChunk(
   chunkId: string,
   rerankScore: number,
+  corpusId = 'code-penal',
 ): RerankedChunk {
   const articleNumber = chunkId.split('#')[0] ?? chunkId;
 
   return {
+    corpusId,
     chunkId,
     articleNumber,
     content: `Content for ${chunkId}`,
@@ -130,6 +132,124 @@ describe('dynamicContextFilter', () => {
 
   it('uses the default threshold constant', () => {
     expect(DEFAULT_RELATIVE_SCORE_THRESHOLD).toBe(0.4);
+  });
+});
+
+describe('dynamicContextFilter multicorpus min1/corpus', () => {
+  const routedCorpora = ['code-civil', 'code-du-travail'] as const;
+
+  it('keeps monocorpus threshold behavior without fallback', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('L1224-2#0', 0.5, 'code-du-travail'),
+      makeChunk('10#0', 0.1, 'code-civil'),
+    ];
+
+    expect(
+      dynamicContextFilter(input, {
+        routedCorpusIds: ['code-du-travail'],
+      }).map((chunk) => chunk.chunkId),
+    ).toEqual(['L1237-3#0', 'L1224-2#0']);
+  });
+
+  it('does not add chunks when every routed corpus already survives threshold', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('10#0', 0.5, 'code-civil'),
+      makeChunk('L1224-2#0', 0.1, 'code-du-travail'),
+    ];
+
+    expect(
+      dynamicContextFilter(input, { routedCorpusIds: [...routedCorpora] }).map(
+        (chunk) => chunk.chunkId,
+      ),
+    ).toEqual(['L1237-3#0', '10#0']);
+  });
+
+  it('reintroduces the best chunk for a routed corpus lost at threshold', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('L1224-2#0', 0.5, 'code-du-travail'),
+      makeChunk('10#0', 0.15, 'code-civil'),
+      makeChunk('1797#0', 0.05, 'code-civil'),
+    ];
+
+    expect(
+      dynamicContextFilter(input, { routedCorpusIds: [...routedCorpora] }).map(
+        (chunk) => chunk.chunkId,
+      ),
+    ).toEqual(['L1237-3#0', 'L1224-2#0', '10#0']);
+  });
+
+  it('adds only one fallback chunk for the missing corpus', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('L1224-2#0', 0.5, 'code-du-travail'),
+      makeChunk('L1237-2#0', 0.45, 'code-du-travail'),
+      makeChunk('10#0', 0.15, 'code-civil'),
+      makeChunk('1797#0', 0.05, 'code-civil'),
+    ];
+
+    const filtered = dynamicContextFilter(input, {
+      routedCorpusIds: [...routedCorpora],
+    });
+
+    expect(filtered.map((chunk) => chunk.chunkId)).toEqual([
+      'L1237-3#0',
+      'L1224-2#0',
+      'L1237-2#0',
+      '10#0',
+    ]);
+    expect(filtered.filter((chunk) => chunk.corpusId === 'code-civil')).toHaveLength(
+      1,
+    );
+  });
+
+  it('does not invent a chunk when a routed corpus has no Jina candidate', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('L1224-2#0', 0.5, 'code-du-travail'),
+    ];
+
+    expect(
+      dynamicContextFilter(input, { routedCorpusIds: [...routedCorpora] }).map(
+        (chunk) => chunk.chunkId,
+      ),
+    ).toEqual(['L1237-3#0', 'L1224-2#0']);
+  });
+
+  it('preserves global fallback behavior when routedCorpusIds is absent', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('L1224-2#0', 0.5, 'code-du-travail'),
+      makeChunk('10#0', 0.15, 'code-civil'),
+    ];
+
+    expect(
+      dynamicContextFilter(input).map((chunk) => chunk.chunkId),
+    ).toEqual(['L1237-3#0', 'L1224-2#0']);
+  });
+
+  it('adds at most one fallback chunk per missing routed corpus for three corpora', () => {
+    const input = [
+      makeChunk('L1237-3#0', 1.0, 'code-du-travail'),
+      makeChunk('10#0', 0.05, 'code-civil'),
+      makeChunk('122-6#0', 0.04, 'code-penal'),
+      makeChunk('122-5#0', 0.03, 'code-penal'),
+    ];
+
+    const filtered = dynamicContextFilter(input, {
+      routedCorpusIds: ['code-civil', 'code-du-travail', 'code-penal'],
+    });
+
+    expect(filtered.map((chunk) => chunk.corpusId)).toEqual([
+      'code-du-travail',
+      'code-civil',
+      'code-penal',
+    ]);
+    expect(filtered.filter((chunk) => chunk.corpusId === 'code-penal')).toHaveLength(
+      1,
+    );
   });
 });
 

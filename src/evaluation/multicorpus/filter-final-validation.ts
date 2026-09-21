@@ -13,7 +13,6 @@ import {
 } from '../gold-article.js';
 import {
   goldArticlesPresent,
-  simulateMinOneChunkPerRoutedCorpus,
   type QuestionQuotaAuditRecord,
 } from './rerank-filter-quota-audit.js';
 import type {
@@ -170,17 +169,11 @@ export function applyFinalValidationFilter(
     });
   }
 
-  if (routedCorpusIds.length <= 1) {
-    return dynamicContextFilter(reranked, {
-      relativeScoreThreshold: DEFAULT_RELATIVE_SCORE_THRESHOLD,
-    });
-  }
-
-  return simulateMinOneChunkPerRoutedCorpus(
-    reranked,
-    routedCorpusIds,
-    DEFAULT_RELATIVE_SCORE_THRESHOLD,
-  );
+  return dynamicContextFilter(reranked, {
+    relativeScoreThreshold: DEFAULT_RELATIVE_SCORE_THRESHOLD,
+    routedCorpusIds:
+      routedCorpusIds.length > 1 ? routedCorpusIds : undefined,
+  });
 }
 
 export function buildFilterStageDiagnostics(

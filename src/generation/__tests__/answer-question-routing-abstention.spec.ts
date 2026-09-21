@@ -61,6 +61,51 @@ describe('answerQuestion routing abstention', () => {
     });
   });
 
+  it('does not call dynamic filtering when routing abstains', async () => {
+    searchAndRerankQuestionMock.mockResolvedValue({
+      candidates: [],
+      reranked: [
+        {
+          corpusId: 'code-civil',
+          chunkId: '10#0',
+          articleNumber: '10',
+          content: 'civil',
+          distance: 0.1,
+          rerankScore: 0.2,
+          metadata: {
+            articleNumber: '10',
+            pageStart: 1,
+            pageEnd: 1,
+            source: 'data/code-civil.pdf',
+            sourceType: 'pdf',
+            chunkIndex: 0,
+            chunkCount: 1,
+            unitStart: 0,
+            unitEnd: 0,
+            unitCount: 1,
+          },
+        },
+      ],
+      rerankStatus: 'success',
+      routing: {
+        corpusIds: [],
+        decision: 'abstain',
+        fallbackToGlobal: false,
+      },
+    });
+
+    const result = await answerQuestion(
+      prisma,
+      openAIService,
+      rerankerService,
+      generationService,
+      'Question abstention',
+    );
+
+    expect(generateAnswer).not.toHaveBeenCalled();
+    expect(result.contextFiltering.contextResults).toBe(0);
+  });
+
   it('returns an abstention answer without calling generation for out-of-scope routing', async () => {
     searchAndRerankQuestionMock.mockResolvedValue({
       candidates: [],

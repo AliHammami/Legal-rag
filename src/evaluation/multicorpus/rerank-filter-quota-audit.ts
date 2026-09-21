@@ -210,38 +210,10 @@ export function simulateMinOneChunkPerRoutedCorpus(
   routedCorpusIds: string[],
   threshold: number,
 ): RerankedChunk[] {
-  const filtered = dynamicContextFilter(reranked, {
+  return dynamicContextFilter(reranked, {
     relativeScoreThreshold: threshold,
+    routedCorpusIds,
   });
-  const cappedInput = reranked.slice(0, MAX_CONTEXT_CHUNKS);
-  const rankIndex = new Map(cappedInput.map((chunk, index) => [chunk.chunkId, index]));
-  const resultById = new Map(filtered.map((chunk) => [chunk.chunkId, chunk]));
-
-  for (const corpusId of routedCorpusIds) {
-    const corpusChunks = cappedInput.filter((chunk) => chunk.corpusId === corpusId);
-    if (corpusChunks.length === 0) {
-      continue;
-    }
-
-    const hasCorpus = [...resultById.values()].some(
-      (chunk) => chunk.corpusId === corpusId,
-    );
-    if (hasCorpus) {
-      continue;
-    }
-
-    const best = [...corpusChunks].sort(
-      (left, right) => (right.rerankScore ?? 0) - (left.rerankScore ?? 0),
-    )[0]!;
-    resultById.set(best.chunkId, best);
-  }
-
-  return [...resultById.values()]
-    .sort(
-      (left, right) =>
-        (rankIndex.get(left.chunkId) ?? 99) - (rankIndex.get(right.chunkId) ?? 99),
-    )
-    .slice(0, MAX_CONTEXT_CHUNKS);
 }
 
 function average(values: number[]): number {
