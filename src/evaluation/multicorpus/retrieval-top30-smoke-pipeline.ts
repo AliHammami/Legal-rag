@@ -18,6 +18,10 @@ import {
 import type { RerankedChunk } from '../../reranking/types.js';
 import { ROUTING_ABSTENTION_ANSWER } from '../../generation/constants.js';
 import {
+  resolveRoutingForRetrieval,
+} from '../../routing/resolve-routing-for-retrieval.js';
+import { isRoutingAbstain } from '../../routing/types.js';
+import {
   searchSimilarChunksWithCorpusQuota,
   shouldUseCorpusQuotaRetrieval,
 } from '../../retrieval/corpus-quota-retrieval.js';
@@ -216,18 +220,45 @@ export async function runRetrievalTop30SmokeQuestion(input: {
   sourceJudgeService: E2ESourceJudgeService;
   question: LegalMulticorpusEvaluationQuestion;
   config: SmokePipelineConfig;
-  routedCorpusIds: string[];
+  /** When true, calls routing V3.1 (production). Otherwise uses routedCorpusIds replay. */
+  liveRouting?: boolean;
+  routedCorpusIds?: string[];
   cachedEmbedding?: number[];
 }): Promise<RetrievalTop30SmokeQuestionResult> {
   const profiling = createPipelineProfiling();
   const pipelineStart = performance.now();
-  const { question, config, routedCorpusIds } = input;
+  const { question, config } = input;
 
-  const routing = {
-    decision: routedCorpusIds.length > 0 ? 'routed' : 'abstain',
-    corpusIds: routedCorpusIds,
-    abstain: routedCorpusIds.length === 0,
+  let routedCorpusIds: string[];
+  let routing: {
+    decision: string;
+    corpusIds: string[];
+    abstain?: boolean;
   };
+
+  if (input.liveRouting) {
+    const routingStart = performance.now();
+    const resolved = await resolveRoutingForRetrieval(
+      input.openAIService,
+      question.question,
+      { model: config.routingModel },
+    );
+    profiling.routingMs = performance.now() - routingStart;
+    profiling.routingCalls = 1;
+    routedCorpusIds = resolved.retrievalCorpusIds ?? [];
+    routing = {
+      decision: resolved.routing.decision,
+      corpusIds: resolved.routing.corpusIds,
+      abstain: isRoutingAbstain(resolved.routing),
+    };
+  } else {
+    routedCorpusIds = input.routedCorpusIds ?? [];
+    routing = {
+      decision: routedCorpusIds.length > 0 ? 'routed' : 'abstain',
+      corpusIds: routedCorpusIds,
+      abstain: routedCorpusIds.length === 0,
+    };
+  }
 
   let embedding = input.cachedEmbedding;
   let embeddingFromCache = Boolean(embedding);
@@ -311,21 +342,26 @@ export async function runRetrievalTop30SmokeQuestion(input: {
     profiling.answerPipelineTotalMs = performance.now() - pipelineStart;
   }
 
+  const expectedAbstention =
+    question.questionType === 'ambiguous' ||
+    question.questionType === 'out-of-scope' ||
+    Boolean(routing.abstain);
+
   const judge = await input.judgeService.judgeQuestion({
     questionId: question.id,
     question: question.question,
-    referenceAnswer: question.referenceAnswer,
+    referenceAnswer: expectedAbstention ? null : question.referenceAnswer,
     generatedAnswer: answer,
     context,
-    expectedAbstention: false,
+    expectedAbstention,
   });
 
   const sourceJudge = await input.sourceJudgeService.judgeSources({
     questionId: question.id,
     question: question.question,
-    referenceAnswer: question.referenceAnswer,
+    referenceAnswer: expectedAbstention ? null : question.referenceAnswer,
     generatedAnswer: answer,
-    expectedAbstention: false,
+    expectedAbstention,
     sources: sources.map((source) => ({
       sourceId: source.sourceId,
       chunkId: source.chunkId,

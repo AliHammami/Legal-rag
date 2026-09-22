@@ -4,6 +4,7 @@ import type { OpenAIService } from '../../openai/openai.service.js';
 import type { PrismaService } from '../../prisma/prisma.service.js';
 import { RoutingError } from '../../routing/routing.error.js';
 import type { SimilarChunk } from '../../retrieval/types.js';
+import { DEFAULT_RETRIEVAL_TOP_K } from '../constants.js';
 import { searchAndRerankQuestion } from '../search-and-rerank-question.js';
 import type { RerankerService } from '../reranker.service.js';
 
@@ -81,7 +82,7 @@ describe('searchAndRerankQuestion routing integration', () => {
       prisma,
       openAIService,
       QUESTION,
-      20,
+      DEFAULT_RETRIEVAL_TOP_K,
       expect.objectContaining({ corpusIds: ['code-penal'] }),
     );
     expect(result.routing).toEqual({
@@ -108,7 +109,7 @@ describe('searchAndRerankQuestion routing integration', () => {
       prisma,
       openAIService,
       QUESTION,
-      20,
+      DEFAULT_RETRIEVAL_TOP_K,
       expect.objectContaining({
         corpusIds: ['code-penal', 'code-civil'],
       }),
@@ -150,7 +151,7 @@ describe('searchAndRerankQuestion routing integration', () => {
       prisma,
       openAIService,
       'Quelle est la loi en France ?',
-      20,
+      DEFAULT_RETRIEVAL_TOP_K,
       expect.not.objectContaining({ corpusIds: [] }),
     );
     expect(searchQuestionMock.mock.calls[0]?.[4]?.corpusIds).toBeUndefined();
@@ -193,7 +194,7 @@ describe('searchAndRerankQuestion routing integration', () => {
       prisma,
       openAIService,
       QUESTION,
-      20,
+      DEFAULT_RETRIEVAL_TOP_K,
       expect.objectContaining({ corpusIds: ['code-civil'] }),
     );
   });
@@ -212,7 +213,7 @@ describe('searchAndRerankQuestion routing integration', () => {
       prisma,
       openAIService,
       QUESTION,
-      20,
+      DEFAULT_RETRIEVAL_TOP_K,
       expect.objectContaining({ corpusIds: undefined }),
     );
   });

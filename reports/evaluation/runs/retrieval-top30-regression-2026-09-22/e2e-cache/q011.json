@@ -1,0 +1,75 @@
+{
+  "questionId": "q011",
+  "question": "Quelles sont les peines accessoires encourues par les personnes physiques coupables des infractions prévues dans ce sous-titre et quelles sont leurs durées maximales ?",
+  "questionType": "single-corpus",
+  "goldArticles": [
+    {
+      "corpusId": "code-penal",
+      "articleNumber": "213-1"
+    }
+  ],
+  "config": {
+    "retrievalTopK": 30,
+    "rerankTopK": 5,
+    "relativeScoreThreshold": 0.4,
+    "routingModel": "gpt-5.6-luna",
+    "liveRouting": true
+  },
+  "routing": {
+    "decision": "abstain",
+    "corpusIds": [],
+    "abstain": true
+  },
+  "retrieval": [],
+  "reranking": [],
+  "filter": {
+    "threshold": 0.4,
+    "rows": [],
+    "finalChunkIds": []
+  },
+  "finalContext": {
+    "chunkIds": [],
+    "sources": [],
+    "contextPreview": ""
+  },
+  "generation": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "rerankStatus": "success"
+  },
+  "judge": {
+    "correctness": 4,
+    "completeness": 4,
+    "groundedness": 4,
+    "abstentionCorrect": true,
+    "explanation": "Le contexte est vide et aucune réponse de référence n’est disponible. La réponse générée s’abstient explicitement de répondre faute de contexte fiable, ce qui est conforme à l’abstention attendue."
+  },
+  "sourceJudge": {
+    "sourceRelevance": 0,
+    "sourceCoverage": 4,
+    "explanation": "Aucune source n’est fournie : il n’existe donc pas de source directement pertinente pour répondre au fond. Toutefois, l’absence de sources et de contexte permet de soutenir le constat central de la réponse générée, qui s’abstient précisément faute de corpus ou de contexte disponible."
+  },
+  "metrics": {
+    "retrievalGoldRecallAt20": 0,
+    "retrievalGoldRecallAt30": 0,
+    "retrievalFullCoverageAt20": false,
+    "retrievalFullCoverageAt30": false,
+    "retrievalCorpusCoverageAt30": 0,
+    "goldNewInRanks21To30": [],
+    "finalContextGoldHits": [],
+    "finalContextFullCoverage": false
+  },
+  "profiling": {
+    "routingMs": 9605.096615000002,
+    "embeddingMs": 0,
+    "vectorSearchMs": 0,
+    "jinaRerankingMs": 0,
+    "contextFilteringMs": 0,
+    "generationMs": 0,
+    "answerPipelineTotalMs": 9605.106671000001,
+    "embeddingCalls": 0,
+    "rerankingCalls": 0,
+    "generationCalls": 0,
+    "routingCalls": 1
+  },
+  "embeddingFromCache": true
+}

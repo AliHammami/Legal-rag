@@ -54,7 +54,7 @@ describe('searchAndRerankQuestion', () => {
   const prisma = {} as PrismaService;
   const openAIService = {} as OpenAIService;
   const rerankerService = {} as RerankerService;
-  const candidates = Array.from({ length: 20 }, (_, index) =>
+  const candidates = Array.from({ length: 30 }, (_, index) =>
     makeChunk(`${100 + index}-1#0`),
   );
   const reranked = [{ ...makeChunk('122-6#0'), rerankScore: 0.98 }];
@@ -68,7 +68,7 @@ describe('searchAndRerankQuestion', () => {
     rerankChunksMock.mockResolvedValue(reranked);
   });
 
-  it('retrieves 20 candidates and reranks all of them', async () => {
+  it('retrieves default topK candidates and reranks all of them', async () => {
     const profiling = createPipelineProfiling();
 
     const result = await searchAndRerankQuestion(
@@ -79,7 +79,7 @@ describe('searchAndRerankQuestion', () => {
       { profiling, enableRouting: false },
     );
 
-    expect(result.candidates).toHaveLength(20);
+    expect(result.candidates).toHaveLength(30);
     expect(result.reranked).toEqual(reranked);
     expect(result.rerankStatus).toBe('success');
     expect(rerankChunksMock).toHaveBeenCalledWith(
@@ -89,7 +89,7 @@ describe('searchAndRerankQuestion', () => {
       5,
       { profiling },
     );
-    expect(profiling.retrievedCandidates).toBe(20);
+    expect(profiling.retrievedCandidates).toBe(30);
     expect(profiling.rerankStatus).toBe('success');
     expect(profiling.totalMs).toBeGreaterThanOrEqual(0);
   });

@@ -1,0 +1,70 @@
+{
+  "questionId": "q467",
+  "question": "Quel est le taux de l imp?t sur le revenu pour une tranche ? 30 % ?",
+  "questionType": "out-of-scope",
+  "goldArticles": [],
+  "config": {
+    "retrievalTopK": 30,
+    "rerankTopK": 5,
+    "relativeScoreThreshold": 0.4,
+    "routingModel": "gpt-5.6-luna",
+    "liveRouting": true
+  },
+  "routing": {
+    "decision": "abstain",
+    "corpusIds": [],
+    "abstain": true
+  },
+  "retrieval": [],
+  "reranking": [],
+  "filter": {
+    "threshold": 0.4,
+    "rows": [],
+    "finalChunkIds": []
+  },
+  "finalContext": {
+    "chunkIds": [],
+    "sources": [],
+    "contextPreview": ""
+  },
+  "generation": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "rerankStatus": "success"
+  },
+  "judge": {
+    "correctness": 4,
+    "completeness": 4,
+    "groundedness": 4,
+    "abstentionCorrect": true,
+    "explanation": "La réponse s'abstient clairement, conformément à l'attente. Le contexte est vide et ne permet pas de déterminer un taux d'impôt sur le revenu ; l'indication que la question est hors périmètre ou insuffisamment documentée est donc justifiée."
+  },
+  "sourceJudge": {
+    "sourceRelevance": 0,
+    "sourceCoverage": 4,
+    "explanation": "Aucune source n’est fournie : il n’existe donc aucune source pertinente pour répondre directement au taux d’impôt. Toutefois, l’absence de corpus source couvre le constat central de l’abstention, à savoir que le contexte disponible ne permet pas de répondre."
+  },
+  "metrics": {
+    "retrievalGoldRecallAt20": 0,
+    "retrievalGoldRecallAt30": 0,
+    "retrievalFullCoverageAt20": true,
+    "retrievalFullCoverageAt30": true,
+    "retrievalCorpusCoverageAt30": 0,
+    "goldNewInRanks21To30": [],
+    "finalContextGoldHits": [],
+    "finalContextFullCoverage": true
+  },
+  "profiling": {
+    "routingMs": 3706.9694000000018,
+    "embeddingMs": 240.14641200000187,
+    "vectorSearchMs": 0,
+    "jinaRerankingMs": 0,
+    "contextFilteringMs": 0,
+    "generationMs": 0,
+    "answerPipelineTotalMs": 3947.123237999971,
+    "embeddingCalls": 1,
+    "rerankingCalls": 0,
+    "generationCalls": 0,
+    "routingCalls": 1
+  },
+  "embeddingFromCache": false
+}

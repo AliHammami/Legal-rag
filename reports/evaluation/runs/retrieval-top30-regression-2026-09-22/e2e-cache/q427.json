@@ -1,0 +1,70 @@
+{
+  "questionId": "q427",
+  "question": "Quels sont les d?lais de prescription applicables ?",
+  "questionType": "ambiguous",
+  "goldArticles": [],
+  "config": {
+    "retrievalTopK": 30,
+    "rerankTopK": 5,
+    "relativeScoreThreshold": 0.4,
+    "routingModel": "gpt-5.6-luna",
+    "liveRouting": true
+  },
+  "routing": {
+    "decision": "abstain",
+    "corpusIds": [],
+    "abstain": true
+  },
+  "retrieval": [],
+  "reranking": [],
+  "filter": {
+    "threshold": 0.4,
+    "rows": [],
+    "finalChunkIds": []
+  },
+  "finalContext": {
+    "chunkIds": [],
+    "sources": [],
+    "contextPreview": ""
+  },
+  "generation": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "rerankStatus": "success"
+  },
+  "judge": {
+    "correctness": 4,
+    "completeness": 4,
+    "groundedness": 4,
+    "abstentionCorrect": true,
+    "explanation": "Le contexte est vide et la question ne précise ni l'infraction ni le type de prescription concerné. La réponse s'abstient explicitement, en indiquant qu'une réponse fiable est impossible faute de contexte pertinent. Cette abstention est appropriée et entièrement cohérente avec le contexte fourni."
+  },
+  "sourceJudge": {
+    "sourceRelevance": 4,
+    "sourceCoverage": 4,
+    "explanation": "Aucune source n'est fournie, ce qui permet de constater directement l'absence de corpus permettant de répondre. Pour cette abstention, la réponse se limite à signaler l'insuffisance du contexte et l'absence de recherche, constats entièrement cohérents avec les sources absentes."
+  },
+  "metrics": {
+    "retrievalGoldRecallAt20": 0,
+    "retrievalGoldRecallAt30": 0,
+    "retrievalFullCoverageAt20": true,
+    "retrievalFullCoverageAt30": true,
+    "retrievalCorpusCoverageAt30": 0,
+    "goldNewInRanks21To30": [],
+    "finalContextGoldHits": [],
+    "finalContextFullCoverage": true
+  },
+  "profiling": {
+    "routingMs": 1830.5032340000034,
+    "embeddingMs": 383.46002099994803,
+    "vectorSearchMs": 0,
+    "jinaRerankingMs": 0,
+    "contextFilteringMs": 0,
+    "generationMs": 0,
+    "answerPipelineTotalMs": 2213.9712790000485,
+    "embeddingCalls": 1,
+    "rerankingCalls": 0,
+    "generationCalls": 0,
+    "routingCalls": 1
+  },
+  "embeddingFromCache": false
+}

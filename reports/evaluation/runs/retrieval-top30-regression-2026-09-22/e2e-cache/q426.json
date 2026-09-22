@@ -1,0 +1,70 @@
+{
+  "questionId": "q426",
+  "question": "Quelles sont les r?gles applicables en cas de responsabilit? ?",
+  "questionType": "ambiguous",
+  "goldArticles": [],
+  "config": {
+    "retrievalTopK": 30,
+    "rerankTopK": 5,
+    "relativeScoreThreshold": 0.4,
+    "routingModel": "gpt-5.6-luna",
+    "liveRouting": true
+  },
+  "routing": {
+    "decision": "abstain",
+    "corpusIds": [],
+    "abstain": true
+  },
+  "retrieval": [],
+  "reranking": [],
+  "filter": {
+    "threshold": 0.4,
+    "rows": [],
+    "finalChunkIds": []
+  },
+  "finalContext": {
+    "chunkIds": [],
+    "sources": [],
+    "contextPreview": ""
+  },
+  "generation": {
+    "answer": "Le contexte disponible ne permet pas de répondre à cette question. La question est ambiguë, hors du périmètre des codes juridiques disponibles, ou aucun corpus pertinent n'a pu être identifié de manière fiable. Aucune recherche juridique n'a été effectuée.",
+    "rerankStatus": "success"
+  },
+  "judge": {
+    "correctness": 4,
+    "completeness": 4,
+    "groundedness": 4,
+    "abstentionCorrect": true,
+    "explanation": "Le contexte est vide et la question est trop générale pour permettre une réponse juridique fiable. La réponse indique clairement cette impossibilité et s'abstient conformément à l'attendu."
+  },
+  "sourceJudge": {
+    "sourceRelevance": 4,
+    "sourceCoverage": 4,
+    "explanation": "Aucune source n’est fournie, ce qui est cohérent avec une abstention : l’absence de corpus permet de constater qu’aucune réponse juridique fondée ne peut être apportée. La réponse se limite à signaler l’insuffisance du contexte et l’absence de recherche, sans affirmation juridique non couverte."
+  },
+  "metrics": {
+    "retrievalGoldRecallAt20": 0,
+    "retrievalGoldRecallAt30": 0,
+    "retrievalFullCoverageAt20": true,
+    "retrievalFullCoverageAt30": true,
+    "retrievalCorpusCoverageAt30": 0,
+    "goldNewInRanks21To30": [],
+    "finalContextGoldHits": [],
+    "finalContextFullCoverage": true
+  },
+  "profiling": {
+    "routingMs": 1391.939963999961,
+    "embeddingMs": 2018.4415479999734,
+    "vectorSearchMs": 0,
+    "jinaRerankingMs": 0,
+    "contextFilteringMs": 0,
+    "generationMs": 0,
+    "answerPipelineTotalMs": 3410.400491999986,
+    "embeddingCalls": 1,
+    "rerankingCalls": 0,
+    "generationCalls": 0,
+    "routingCalls": 1
+  },
+  "embeddingFromCache": false
+}
