@@ -1,0 +1,4430 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-22T14:37:17.541Z",
+    "apiCalls": 0,
+    "productionModified": false,
+    "cohortDefinition": "goldRankDetailsQuota with absentAt20=true and depthBand=absent_at_50",
+    "sources": [
+      "reports/evaluation/runs/retrieval-depth-benchmark-2026-09-22/benchmark.json",
+      "reports/evaluation/runs/retrieval-depth-benchmark-2026-09-22/per-question.json",
+      "data/processed/*.chunks.json"
+    ],
+    "cohortSize": 29
+  },
+  "bm25": {
+    "vectorAbsentCount": 29,
+    "bm25RecoveredAt50": 13,
+    "unionRecoveredAt50": 13
+  },
+  "perCaseLexical": [
+    {
+      "questionId": "q002",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "223-1"
+      },
+      "lexical": {
+        "questionTokenCount": 14,
+        "goldCharLength": 342,
+        "jaccardQuestionGold": 0.15789473684210525,
+        "sharedTokensQuestionGold": [
+          "000",
+          "15",
+          "amende",
+          "an",
+          "emprisonnement",
+          "euros"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-penal",
+            "articleNumber": "223-11",
+            "jaccardWithQuestion": 0.1,
+            "sharedTokens": [
+              "article",
+              "punie"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "322-3",
+            "jaccardWithQuestion": 0.03773584905660377,
+            "sharedTokens": [
+              "000",
+              "15",
+              "amende",
+              "article",
+              "emprisonnement",
+              "euros",
+              "infraction",
+              "punie"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-penal",
+            "articleNumber": "222-40",
+            "jaccardWithQuestion": 0.041666666666666664,
+            "sharedTokens": [
+              "punie"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-penal",
+            "articleNumber": "432-2",
+            "jaccardWithQuestion": 0.2916666666666667,
+            "sharedTokens": [
+              "000",
+              "amende",
+              "article",
+              "emprisonnement",
+              "euros",
+              "infraction",
+              "punie"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-penal",
+            "articleNumber": "433-16",
+            "jaccardWithQuestion": 0.125,
+            "sharedTokens": [
+              "000",
+              "amende",
+              "emprisonnement",
+              "euros"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 24,
+        "goldBestChunkScore": 11.702184883872713,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-penal",
+            "articleNumber": "521-1-3",
+            "score": 21.298216490506533
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "225-17",
+            "score": 16.677807340889572
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-penal",
+            "articleNumber": "225-16-2",
+            "score": 16.43807440753298
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-penal",
+            "articleNumber": "226-13",
+            "score": 15.385765172633565
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-penal",
+            "articleNumber": "432-16",
+            "score": 14.820984588074474
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-penal",
+            "articleNumber": "226-25",
+            "score": 14.541011637375313
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-penal",
+            "articleNumber": "322-13",
+            "score": 14.503714882191465
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-penal",
+            "articleNumber": "431-6",
+            "score": 14.30120378841578
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-penal",
+            "articleNumber": "431-4",
+            "score": 13.961625904825631
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-penal",
+            "articleNumber": "431-1",
+            "score": 13.607056409046868
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.158; bestCompetitorJaccard=0.292; neighborsTop10=1; bm25Rank=24"
+      }
+    },
+    {
+      "questionId": "q048",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "713-3"
+      },
+      "lexical": {
+        "questionTokenCount": 12,
+        "goldCharLength": 694,
+        "jaccardQuestionGold": 0.14583333333333334,
+        "sharedTokensQuestionGold": [
+          "article",
+          "discriminations",
+          "embauche",
+          "etat",
+          "handicap",
+          "licenciement",
+          "sante"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1133-3",
+            "jaccardWithQuestion": 0.10344827586206896,
+            "sharedTokens": [
+              "etat",
+              "handicap",
+              "sante"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1132-1",
+            "jaccardWithQuestion": 0.034722222222222224,
+            "sharedTokens": [
+              "article",
+              "discriminations",
+              "etat",
+              "handicap",
+              "sante"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L5213-6",
+            "jaccardWithQuestion": 0.00847457627118644,
+            "sharedTokens": [
+              "article"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1133-2",
+            "jaccardWithQuestion": 0.013513513513513514,
+            "sharedTokens": [
+              "sante"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1133-4",
+            "jaccardWithQuestion": 0.037037037037037035,
+            "sharedTokens": [
+              "article"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R5313-1",
+            "score": 15.804191624857786
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L7122-23",
+            "score": 13.097533900766688
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1133-3",
+            "score": 12.63020330188315
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L5134-68",
+            "score": 12.457750684269698
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L5213-19",
+            "score": 11.710781764281574
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1134-3",
+            "score": 11.522761485897808
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R6113-25-1",
+            "score": 11.377791319075513
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R1262-13",
+            "score": 11.015179856650208
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L5134-21-2",
+            "score": 10.994408654715597
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L321-13",
+            "score": 10.991173593504094
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.146; bestCompetitorJaccard=0.103; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q102",
+      "gold": {
+        "corpusId": "code-civil",
+        "articleNumber": "1871"
+      },
+      "lexical": {
+        "questionTokenCount": 12,
+        "goldCharLength": 557,
+        "jaccardQuestionGold": 0.13725490196078433,
+        "sharedTokensQuestionGold": [
+          "associes",
+          "deroger",
+          "imperatives",
+          "ne",
+          "participation",
+          "pas",
+          "societe"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R821-155",
+            "jaccardWithQuestion": 0.09375,
+            "sharedTokens": [
+              "associes",
+              "participation",
+              "societe"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-138",
+            "jaccardWithQuestion": 0.09090909090909091,
+            "sharedTokens": [
+              "participation",
+              "societe"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L228-36",
+            "jaccardWithQuestion": 0.01904761904761905,
+            "sharedTokens": [
+              "ne",
+              "societe"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R814-158-1",
+            "jaccardWithQuestion": 0.046153846153846156,
+            "sharedTokens": [
+              "participation",
+              "regles",
+              "societe"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-139",
+            "jaccardWithQuestion": 0.06976744186046512,
+            "sharedTokens": [
+              "associes",
+              "participation",
+              "societe"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R663-40-2",
+            "score": 21.23299825942619
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L225-258",
+            "score": 17.198648253267912
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "26",
+            "score": 15.749702653194369
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R223-20-1",
+            "score": 14.158471691085184
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R814-156",
+            "score": 14.070246800864897
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-135",
+            "score": 13.85582045775891
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L223-18",
+            "score": 13.785584813816772
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L247-1",
+            "score": 13.11387336703794
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-137",
+            "score": 12.963849672104619
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A821-54",
+            "score": 12.888289498242143
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.137; bestCompetitorJaccard=0.094; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q132",
+      "gold": {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L5221-1"
+      },
+      "lexical": {
+        "questionTokenCount": 10,
+        "goldCharLength": 325,
+        "jaccardQuestionGold": 0.0625,
+        "sharedTokensQuestionGold": [
+          "dispositions",
+          "titre"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L7211-3",
+            "jaccardWithQuestion": 0.046153846153846156,
+            "sharedTokens": [
+              "article",
+              "dispositions",
+              "titre"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L7221-2",
+            "jaccardWithQuestion": 0.046153846153846156,
+            "sharedTokens": [
+              "article",
+              "dispositions",
+              "titre"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1225-11",
+            "jaccardWithQuestion": 0.03333333333333333,
+            "sharedTokens": [
+              "dispositions",
+              "travail"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1321-5",
+            "jaccardWithQuestion": 0.04918032786885246,
+            "sharedTokens": [
+              "dispositions",
+              "titre",
+              "travail"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3221-1",
+            "jaccardWithQuestion": 0.15384615384615385,
+            "sharedTokens": [
+              "article",
+              "code",
+              "dispositions",
+              "travail"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 4.573327274076202,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L4311-6",
+            "score": 14.38737074892776
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R4641-1",
+            "score": 14.300152549867061
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3252-1",
+            "score": 13.303296040767993
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3243-1",
+            "score": 12.855171397144407
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R4412-14",
+            "score": 12.831907847433559
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R4462-35",
+            "score": 12.324679040013473
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D5212-4",
+            "score": 12.171601703018126
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R6342-2",
+            "score": 11.371079445148535
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R6341-38",
+            "score": 10.858239022187178
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L4732-1",
+            "score": 10.801347560296882
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.063; bestCompetitorJaccard=0.154; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q170",
+      "gold": {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2262-1"
+      },
+      "lexical": {
+        "questionTokenCount": 8,
+        "goldCharLength": 210,
+        "jaccardQuestionGold": 0.15,
+        "sharedTokensQuestionGold": [
+          "accords",
+          "application",
+          "conventions"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3221-1",
+            "jaccardWithQuestion": 0.037037037037037035,
+            "sharedTokens": [
+              "article"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3321-1",
+            "jaccardWithQuestion": 0.023809523809523808,
+            "sharedTokens": [
+              "article",
+              "selon"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L4111-1",
+            "jaccardWithQuestion": 0.01818181818181818,
+            "sharedTokens": [
+              "article"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3311-1",
+            "jaccardWithQuestion": 0.04918032786885246,
+            "sharedTokens": [
+              "application",
+              "article",
+              "selon"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3231-1",
+            "jaccardWithQuestion": 0.038461538461538464,
+            "sharedTokens": [
+              "article"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 11,
+        "goldBestChunkScore": 13.22491478402106,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R3124-8",
+            "score": 16.603803159575744
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D2232-1-2",
+            "score": 14.994031483345319
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2222-1",
+            "score": 14.800474821172184
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2232-5",
+            "score": 14.148613068285204
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2233-2",
+            "score": 13.768984594723385
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D3171-9",
+            "score": 13.64939365518811
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2253-4",
+            "score": 13.436459576658939
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2261-2",
+            "score": 13.370301095421013
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2524-5",
+            "score": 13.326595639784928
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2232-5-2",
+            "score": 13.285444881415634
+          }
+        ]
+      },
+      "classification": {
+        "primary": "query_formulation",
+        "tags": [
+          "query_formulation"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.150; bestCompetitorJaccard=0.049; neighborsTop10=0; bm25Rank=11"
+      }
+    },
+    {
+      "questionId": "q238",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L231-10"
+      },
+      "lexical": {
+        "questionTokenCount": 10,
+        "goldCharLength": 837,
+        "jaccardQuestionGold": 0.04411764705882353,
+        "sharedTokensQuestionGold": [
+          "fictives",
+          "personne",
+          "souscriptions"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L123-38",
+            "jaccardWithQuestion": 0.058823529411764705,
+            "sharedTokens": [
+              "article",
+              "personne"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L123-5",
+            "jaccardWithQuestion": 0,
+            "sharedTokens": []
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L242-2",
+            "jaccardWithQuestion": 0.034482758620689655,
+            "sharedTokens": [
+              "personne"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R247-3",
+            "jaccardWithQuestion": 0.05714285714285714,
+            "sharedTokens": [
+              "article",
+              "prevues"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L241-3",
+            "jaccardWithQuestion": 0.02142857142857143,
+            "sharedTokens": [
+              "article",
+              "personne",
+              "prevues"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A134-1",
+            "score": 16.299954211300605
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L821-82",
+            "score": 14.031257395400706
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R663-40-2",
+            "score": 13.871639372702052
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R225-129",
+            "score": 13.322248415561758
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L821-78",
+            "score": 13.258124889003334
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L225-146",
+            "score": 11.850990269216009
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R321-47",
+            "score": 11.233326778055872
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L822-36",
+            "score": 10.906930301531826
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L321-23-2",
+            "score": 10.62950520543503
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R22-10-8",
+            "score": 10.532445801306825
+          }
+        ]
+      },
+      "classification": {
+        "primary": "gold_intrinsically_difficult",
+        "tags": [
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.044; bestCompetitorJaccard=0.059; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q249",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L343-1"
+      },
+      "lexical": {
+        "questionTokenCount": 11,
+        "goldCharLength": 164,
+        "jaccardQuestionGold": 0.3333333333333333,
+        "sharedTokensQuestionGold": [
+          "articles",
+          "consommateur",
+          "distance",
+          "financiers",
+          "fourniture",
+          "services"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L222-16",
+            "jaccardWithQuestion": 0.1282051282051282,
+            "sharedTokens": [
+              "article",
+              "consommateur",
+              "distance",
+              "financiers",
+              "services"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R222-1",
+            "jaccardWithQuestion": 0.02681992337164751,
+            "sharedTokens": [
+              "article",
+              "articles",
+              "consommateur",
+              "distance",
+              "financiers",
+              "selon",
+              "services"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L314-31",
+            "jaccardWithQuestion": 0.11764705882352941,
+            "sharedTokens": [
+              "distance",
+              "financiers",
+              "fourniture",
+              "services"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R222-1",
+            "jaccardWithQuestion": 0.02681992337164751,
+            "sharedTokens": [
+              "article",
+              "articles",
+              "consommateur",
+              "distance",
+              "financiers",
+              "selon",
+              "services"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L222-5-1",
+            "jaccardWithQuestion": 0.05102040816326531,
+            "sharedTokens": [
+              "article",
+              "consommateur",
+              "financiers",
+              "fourniture",
+              "services"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L314-31",
+            "score": 19.021314606125188
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L222-16",
+            "score": 17.157690576950856
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L253-2",
+            "score": 13.944359558902534
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L222-12",
+            "score": 12.54114423256038
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R222-1",
+            "score": 12.282186019273421
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L221-1",
+            "score": 12.051188439621718
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L222-9",
+            "score": 11.4188955223069
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L221-28",
+            "score": 11.061461799857666
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D217-5",
+            "score": 10.753650632556472
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L312-62",
+            "score": 10.709796184427013
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.333; bestCompetitorJaccard=0.128; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q352",
+      "gold": {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L123-8"
+      },
+      "lexical": {
+        "questionTokenCount": 16,
+        "goldCharLength": 912,
+        "jaccardQuestionGold": 0.024691358024691357,
+        "sharedTokensQuestionGold": [
+          "commercant",
+          "obligations"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "9-1",
+            "jaccardWithQuestion": 0.12962962962962962,
+            "sharedTokens": [
+              "atteinte",
+              "cesser",
+              "faire",
+              "innocence",
+              "juge",
+              "presomption",
+              "refere"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L123-3",
+            "jaccardWithQuestion": 0.03529411764705882,
+            "sharedTokens": [
+              "commercant",
+              "faire",
+              "juge"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L470-1",
+            "jaccardWithQuestion": 0.02843601895734597,
+            "sharedTokens": [
+              "cesser",
+              "faire",
+              "juge",
+              "obligations",
+              "ordonner",
+              "recours"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L123-5-1",
+            "jaccardWithQuestion": 0.01818181818181818,
+            "sharedTokens": [
+              "refere"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L442-4",
+            "jaccardWithQuestion": 0.018292682926829267,
+            "sharedTokens": [
+              "faire",
+              "juge",
+              "ordonner"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 41,
+        "goldBestChunkScore": 10.83190233325035,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "9-1",
+            "score": 44.773054147746166
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L152-4",
+            "score": 31.804380785043758
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "16-2",
+            "score": 21.668667421951127
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "9",
+            "score": 21.586711222208006
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L144-2",
+            "score": 19.643695572221578
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L642-16",
+            "score": 18.0878936343331
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L152-3",
+            "score": 17.340858029632663
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L123-7",
+            "score": 16.98079332866798
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R152-1",
+            "score": 16.86490624228425
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R123-41",
+            "score": 15.930508435231472
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch",
+          "query_formulation"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.025; bestCompetitorJaccard=0.130; neighborsTop10=1; bm25Rank=41"
+      }
+    },
+    {
+      "questionId": "q360",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "132-15"
+      },
+      "lexical": {
+        "questionTokenCount": 19,
+        "goldCharLength": 502,
+        "jaccardQuestionGold": 0.09433962264150944,
+        "sharedTokensQuestionGold": [
+          "cas",
+          "morale",
+          "penale",
+          "personne",
+          "responsabilite"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-penal",
+            "articleNumber": "314-12",
+            "jaccardWithQuestion": 0.02,
+            "sharedTokens": [
+              "conditions"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "717-3",
+            "jaccardWithQuestion": 0.0196078431372549,
+            "sharedTokens": [
+              "conditions"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-penal",
+            "articleNumber": "422-5",
+            "jaccardWithQuestion": 0.02040816326530612,
+            "sharedTokens": [
+              "conditions"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-penal",
+            "articleNumber": "414-7",
+            "jaccardWithQuestion": 0.02040816326530612,
+            "sharedTokens": [
+              "conditions"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-penal",
+            "articleNumber": "313-9",
+            "jaccardWithQuestion": 0.019230769230769232,
+            "sharedTokens": [
+              "conditions"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 28,
+        "goldBestChunkScore": 15.761272623203883,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L125-8",
+            "score": 32.857626300651944
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L125-10",
+            "score": 22.11900438503667
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L125-12",
+            "score": 21.193997707619566
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L221-3",
+            "score": 21.19240622575274
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-penal",
+            "articleNumber": "132-14",
+            "score": 21.128944221933594
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L125-4",
+            "score": 21.057565140853217
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L227-7",
+            "score": 19.275882339980743
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L239-2",
+            "score": 18.829883534108347
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L134-14",
+            "score": 18.691377642370796
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L125-14",
+            "score": 18.39227454817378
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.094; bestCompetitorJaccard=0.020; neighborsTop10=0; bm25Rank=28"
+      }
+    },
+    {
+      "questionId": "q361",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L213-19"
+      },
+      "lexical": {
+        "questionTokenCount": 15,
+        "goldCharLength": 490,
+        "jaccardQuestionGold": 0.1111111111111111,
+        "sharedTokensQuestionGold": [
+          "associations",
+          "direction",
+          "membres",
+          "organes",
+          "responsabilite"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2145-2",
+            "jaccardWithQuestion": 0.0967741935483871,
+            "sharedTokens": [
+              "appeles",
+              "exercer",
+              "formation",
+              "responsabilites",
+              "salaries",
+              "syndicales"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2315-17",
+            "jaccardWithQuestion": 0.02040816326530612,
+            "sharedTokens": [
+              "formation"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R7343-72",
+            "jaccardWithQuestion": 0.02040816326530612,
+            "sharedTokens": [
+              "formation"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2315-18",
+            "jaccardWithQuestion": 0.0547945205479452,
+            "sharedTokens": [
+              "formation",
+              "membres",
+              "quelle",
+              "salaries"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2145-1",
+            "jaccardWithQuestion": 0.13513513513513514,
+            "sharedTokens": [
+              "appeles",
+              "exercer",
+              "formation",
+              "salaries",
+              "syndicales"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2145-2",
+            "score": 30.09981177444799
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L6122-4",
+            "score": 23.391409740386482
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2144-2",
+            "score": 23.20218988050402
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2145-8",
+            "score": 23.04562409245533
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2145-1",
+            "score": 21.09831232997099
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L6332-1-3",
+            "score": 18.709904447260357
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-civil",
+            "articleNumber": "1840",
+            "score": 17.028569007796715
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2135-17",
+            "score": 16.515350742097482
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L6323-17-5-2",
+            "score": 16.12278638109193
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2135-11",
+            "score": 15.692163308380273
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.111; bestCompetitorJaccard=0.135; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q374",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L133-25-2"
+      },
+      "lexical": {
+        "questionTokenCount": 19,
+        "goldCharLength": 602,
+        "jaccardQuestionGold": 0.037037037037037035,
+        "sharedTokensQuestionGold": [
+          "paiement",
+          "remboursement"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R127-1",
+            "jaccardWithQuestion": 0.05128205128205128,
+            "sharedTokens": [
+              "appui",
+              "conditions",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-5",
+            "jaccardWithQuestion": 0.11904761904761904,
+            "sharedTokens": [
+              "appui",
+              "articles",
+              "code",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L511-4",
+            "jaccardWithQuestion": 0.06976744186046512,
+            "sharedTokens": [
+              "articles",
+              "code",
+              "commerce",
+              "conditions",
+              "operations",
+              "paiement"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-6",
+            "jaccardWithQuestion": 0.09090909090909091,
+            "sharedTokens": [
+              "appui",
+              "articles",
+              "code",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-7",
+            "jaccardWithQuestion": 0.12121212121212122,
+            "sharedTokens": [
+              "appui",
+              "contrats",
+              "entreprise",
+              "projet"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 9.899273227335465,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A123-68-1",
+            "score": 25.402580130231403
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-165",
+            "score": 25.206896472048015
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L775-14",
+            "score": 23.59629727037289
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L233-9",
+            "score": 23.339518239234124
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-6",
+            "score": 22.706179102880416
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-5",
+            "score": 22.356245976022848
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-164",
+            "score": 21.99575218016201
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L253-1",
+            "score": 21.895492988036466
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-7",
+            "score": 21.8301094500412
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "D441-3-1",
+            "score": 21.144461391464787
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch",
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.037; bestCompetitorJaccard=0.121; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q375",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "132-70-3"
+      },
+      "lexical": {
+        "questionTokenCount": 22,
+        "goldCharLength": 652,
+        "jaccardQuestionGold": 0.07692307692307693,
+        "sharedTokensQuestionGold": [
+          "ajournement",
+          "consignation",
+          "juridiction",
+          "prononce",
+          "selon"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-6",
+            "jaccardWithQuestion": 0.08771929824561403,
+            "sharedTokens": [
+              "appui",
+              "code",
+              "contrat",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R127-1",
+            "jaccardWithQuestion": 0.06329113924050633,
+            "sharedTokens": [
+              "appui",
+              "cas",
+              "contrat",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-2",
+            "jaccardWithQuestion": 0.07017543859649122,
+            "sharedTokens": [
+              "appui",
+              "contrat",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-5",
+            "jaccardWithQuestion": 0.11363636363636363,
+            "sharedTokens": [
+              "appui",
+              "code",
+              "contrat",
+              "entreprise",
+              "projet"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-1",
+            "jaccardWithQuestion": 0.07272727272727272,
+            "sharedTokens": [
+              "appui",
+              "contrat",
+              "entreprise",
+              "projet"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 1,
+        "goldBestChunkScore": 26.792315990347358,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-penal",
+            "articleNumber": "132-70-3",
+            "score": 26.792315990347358
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "132-70-2",
+            "score": 26.555955562641795
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-6",
+            "score": 25.2000865704747
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-5",
+            "score": 24.2678249945813
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-penal",
+            "articleNumber": "132-65",
+            "score": 23.408682133485833
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R127-3",
+            "score": 23.05511390982688
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R330-2",
+            "score": 21.714125713030022
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-penal",
+            "articleNumber": "132-69",
+            "score": 21.290558436800456
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-penal",
+            "articleNumber": "132-70-1",
+            "score": 20.913374110617315
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L127-2",
+            "score": 20.45223934682244
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.077; bestCompetitorJaccard=0.114; neighborsTop10=0; bm25Rank=1"
+      }
+    },
+    {
+      "questionId": "q379",
+      "gold": {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "liminaire"
+      },
+      "lexical": {
+        "questionTokenCount": 17,
+        "goldCharLength": 4571,
+        "jaccardQuestionGold": 0.01276595744680851,
+        "sharedTokensQuestionGold": [
+          "article",
+          "code",
+          "consommateur"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "1898",
+            "jaccardWithQuestion": 0.2631578947368421,
+            "sharedTokens": [
+              "article",
+              "consommation",
+              "pret",
+              "preteur",
+              "responsabilite"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L312-27",
+            "jaccardWithQuestion": 0.05263157894736842,
+            "sharedTokens": [
+              "emprunteur",
+              "preteur"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L313-29",
+            "jaccardWithQuestion": 0.04819277108433735,
+            "sharedTokens": [
+              "emprunteur",
+              "lorsque",
+              "pret",
+              "preteur"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L341-26-1",
+            "jaccardWithQuestion": 0.058823529411764705,
+            "sharedTokens": [
+              "article",
+              "emprunteur",
+              "preteur"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L341-27",
+            "jaccardWithQuestion": 0.036585365853658534,
+            "sharedTokens": [
+              "article",
+              "emprunteur",
+              "preteur"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 4.975289903568193,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "1898",
+            "score": 28.11716057012803
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D224-63",
+            "score": 24.777369626200837
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D224-71",
+            "score": 24.777369626200837
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D111-8",
+            "score": 19.818199544983212
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L312-39",
+            "score": 19.788890924340016
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L315-23",
+            "score": 19.720194161421706
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L313-51",
+            "score": 19.57229369917707
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R313-23",
+            "score": 18.358605501039207
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D120-1",
+            "score": 18.324083192793154
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L315-17",
+            "score": 17.386389635051017
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch",
+          "query_formulation",
+          "chunk_representation",
+          "chunking_data",
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.013; bestCompetitorJaccard=0.263; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q381",
+      "gold": {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L2132-5"
+      },
+      "lexical": {
+        "questionTokenCount": 20,
+        "goldCharLength": 581,
+        "jaccardQuestionGold": 0.03508771929824561,
+        "sharedTokensQuestionGold": [
+          "professionnels",
+          "syndicats"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2422",
+            "jaccardWithQuestion": 0.05813953488372093,
+            "sharedTokens": [
+              "cas",
+              "code",
+              "effets",
+              "hypothecaires",
+              "procedures"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3253-1",
+            "jaccardWithQuestion": 0.10869565217391304,
+            "sharedTokens": [
+              "articles",
+              "cas",
+              "civil",
+              "code",
+              "travail"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1253-8-2",
+            "jaccardWithQuestion": 0.056338028169014086,
+            "sharedTokens": [
+              "articles",
+              "civil",
+              "code",
+              "travail"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3253-23",
+            "jaccardWithQuestion": 0.03333333333333333,
+            "sharedTokens": [
+              "articles",
+              "civil",
+              "code"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3253-12",
+            "jaccardWithQuestion": 0.03773584905660377,
+            "sharedTokens": [
+              "articles",
+              "travail"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 9.647398508410745,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2450",
+            "score": 22.782732151305296
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "2422",
+            "score": 21.422629087779903
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "2454",
+            "score": 18.356412167865475
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2134-1",
+            "score": 17.48698130221917
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2135-2",
+            "score": 17.054240789353674
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3253-1",
+            "score": 16.872382002586043
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-civil",
+            "articleNumber": "99-2",
+            "score": 16.642618313974495
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3152-4",
+            "score": 16.48837999233863
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-civil",
+            "articleNumber": "2442",
+            "score": 16.458880986303168
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D2135-8",
+            "score": 16.204073959061553
+          }
+        ]
+      },
+      "classification": {
+        "primary": "gold_intrinsically_difficult",
+        "tags": [
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.035; bestCompetitorJaccard=0.109; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q382",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L171-3"
+      },
+      "lexical": {
+        "questionTokenCount": 34,
+        "goldCharLength": 175,
+        "jaccardQuestionGold": 0.10256410256410256,
+        "sharedTokensQuestionGold": [
+          "amendes",
+          "autorite",
+          "code",
+          "consommation"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2427",
+            "jaccardWithQuestion": 0.20967741935483872,
+            "sharedTokens": [
+              "arrerages",
+              "colloque",
+              "creancier",
+              "hypothecaire",
+              "interets",
+              "pret",
+              "principal",
+              "viager"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L341-54",
+            "jaccardWithQuestion": 0.06578947368421052,
+            "sharedTokens": [
+              "article",
+              "hypothecaire",
+              "interets",
+              "pret",
+              "viager"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L513-11",
+            "jaccardWithQuestion": 0.041916167664670656,
+            "sharedTokens": [
+              "article",
+              "code",
+              "creancier",
+              "droits",
+              "financier",
+              "interets",
+              "principal"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L315-21",
+            "jaccardWithQuestion": 0.03409090909090909,
+            "sharedTokens": [
+              "article",
+              "creancier",
+              "hypothecaire"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L315-20",
+            "jaccardWithQuestion": 0.021052631578947368,
+            "sharedTokens": [
+              "creancier",
+              "hypothecaire"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 13,
+        "goldBestChunkScore": 25.044519976222777,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2427",
+            "score": 80.4360424424529
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L315-8",
+            "score": 45.13136625889914
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L341-61",
+            "score": 36.502689621186775
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R519-4",
+            "score": 30.59192894332535
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L361-2",
+            "score": 29.739452553338477
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L362-2",
+            "score": 29.739452553338477
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L341-53",
+            "score": 28.77932868310922
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R312-10",
+            "score": 28.58515627241672
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "annexe-R312-14",
+            "score": 28.345643516186097
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L315-8-1",
+            "score": 26.01492649661899
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.103; bestCompetitorJaccard=0.210; neighborsTop10=0; bm25Rank=13"
+      }
+    },
+    {
+      "questionId": "q383",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "131-5-1"
+      },
+      "lexical": {
+        "questionTokenCount": 26,
+        "goldCharLength": 1719,
+        "jaccardQuestionGold": 0.023809523809523808,
+        "sharedTokensQuestionGold": [
+          "delit",
+          "emprisonnement",
+          "puni"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2429",
+            "jaccardWithQuestion": 0.0673076923076923,
+            "sharedTokens": [
+              "article",
+              "code",
+              "differentes",
+              "echeances",
+              "etre",
+              "hypotheque",
+              "inscription"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "2400",
+            "jaccardWithQuestion": 0.16666666666666666,
+            "sharedTokens": [
+              "2429",
+              "article",
+              "civil",
+              "code",
+              "etre",
+              "hypotheque",
+              "inscription"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-penal",
+            "articleNumber": "132-78-1",
+            "jaccardWithQuestion": 0.05063291139240506,
+            "sharedTokens": [
+              "article",
+              "code",
+              "delit",
+              "emprisonnement"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "2432",
+            "jaccardWithQuestion": 0.075,
+            "sharedTokens": [
+              "2429",
+              "hypotheque",
+              "inscription"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "2404",
+            "jaccardWithQuestion": 0.04395604395604396,
+            "sharedTokens": [
+              "article",
+              "code",
+              "hypotheque",
+              "inscription"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 7.292535107041136,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2400",
+            "score": 32.082054153468206
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "2429",
+            "score": 25.461657976361572
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "395",
+            "score": 24.38731221508649
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "2396",
+            "score": 23.950274186683195
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-penal",
+            "articleNumber": "433-18-1",
+            "score": 22.263510606480548
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-penal",
+            "articleNumber": "226-28",
+            "score": 21.196382859240202
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-civil",
+            "articleNumber": "52",
+            "score": 21.18424777910073
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-penal",
+            "articleNumber": "723-6",
+            "score": 20.89052650455443
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-civil",
+            "articleNumber": "61-3-2",
+            "score": 20.487760719726417
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-penal",
+            "articleNumber": "521-1",
+            "score": 20.321688019228027
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch",
+          "query_formulation",
+          "chunk_representation",
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.024; bestCompetitorJaccard=0.167; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q386",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L312-1-1"
+      },
+      "lexical": {
+        "questionTokenCount": 20,
+        "goldCharLength": 5567,
+        "jaccardQuestionGold": 0.029197080291970802,
+        "sharedTokensQuestionGold": [
+          "avis",
+          "credit",
+          "depot",
+          "etablissements",
+          "gestion",
+          "information",
+          "obligations",
+          "personnes"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L111-7-2",
+            "jaccardWithQuestion": 0.03508771929824561,
+            "sharedTokens": [
+              "avis",
+              "information",
+              "ligne",
+              "obligations"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D111-10",
+            "jaccardWithQuestion": 0.03333333333333333,
+            "sharedTokens": [
+              "avis",
+              "depot"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D111-11",
+            "jaccardWithQuestion": 0.0136986301369863,
+            "sharedTokens": [
+              "avis"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L121-3",
+            "jaccardWithQuestion": 0.02185792349726776,
+            "sharedTokens": [
+              "avis",
+              "comment",
+              "information",
+              "ligne"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L522-18",
+            "jaccardWithQuestion": 0.07142857142857142,
+            "sharedTokens": [
+              "clients",
+              "etablissements",
+              "information"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 6,
+        "goldBestChunkScore": 17.391309453188732,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L152-3",
+            "score": 19.214465465415767
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L721-3",
+            "score": 18.804956971145987
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L522-1",
+            "score": 18.783553821909976
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L632-7",
+            "score": 18.54385063682047
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L614-1",
+            "score": 17.546688179294577
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L312-1-1",
+            "score": 17.391309453188732
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L111-7-2",
+            "score": 17.202213834103528
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L774-15",
+            "score": 16.9112294070583
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L773-15",
+            "score": 16.866794316589743
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L312-23",
+            "score": 16.802968408398687
+          }
+        ]
+      },
+      "classification": {
+        "primary": "query_formulation",
+        "tags": [
+          "query_formulation",
+          "chunk_representation",
+          "chunking_data"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.029; bestCompetitorJaccard=0.071; neighborsTop10=0; bm25Rank=6"
+      }
+    },
+    {
+      "questionId": "q394",
+      "gold": {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L771-3"
+      },
+      "lexical": {
+        "questionTokenCount": 23,
+        "goldCharLength": 789,
+        "jaccardQuestionGold": 0.09836065573770492,
+        "sharedTokensQuestionGold": [
+          "action",
+          "article",
+          "code",
+          "references",
+          "sociale",
+          "travail"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2332",
+            "jaccardWithQuestion": 0.09523809523809523,
+            "sharedTokens": [
+              "article",
+              "code",
+              "creances",
+              "meubles",
+              "privilegiees",
+              "travail"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "2331",
+            "jaccardWithQuestion": 0.046052631578947366,
+            "sharedTokens": [
+              "article",
+              "code",
+              "creances",
+              "generalite",
+              "meubles",
+              "privilegiees",
+              "travail"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "2377",
+            "jaccardWithQuestion": 0.04477611940298507,
+            "sharedTokens": [
+              "article",
+              "code",
+              "creances",
+              "generalite",
+              "privilegiees",
+              "travail"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "2329",
+            "jaccardWithQuestion": 0.029411764705882353,
+            "sharedTokens": [
+              "meubles"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "2332-3",
+            "jaccardWithQuestion": 0,
+            "sharedTokens": []
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 4,
+        "goldBestChunkScore": 26.096561328574314,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2332",
+            "score": 27.332343298165462
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "2331",
+            "score": 27.322696158181518
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R771-2",
+            "score": 26.15034289067838
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L771-3",
+            "score": 26.096561328574314
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "2377",
+            "score": 25.327689340683335
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R542-2",
+            "score": 21.107130979771632
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L351-2",
+            "score": 20.297991693481933
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-civil",
+            "articleNumber": "2324",
+            "score": 18.533606204765924
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R731-1",
+            "score": 18.063549321524384
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L742-5",
+            "score": 16.66531097261891
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.098; bestCompetitorJaccard=0.095; neighborsTop10=0; bm25Rank=4"
+      }
+    },
+    {
+      "questionId": "q395",
+      "gold": {
+        "corpusId": "code-du-commerce",
+        "articleNumber": "L135-2"
+      },
+      "lexical": {
+        "questionTokenCount": 19,
+        "goldCharLength": 903,
+        "jaccardQuestionGold": 0.04225352112676056,
+        "sharedTokensQuestionGold": [
+          "domicile",
+          "independants",
+          "vendeurs"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2332",
+            "jaccardWithQuestion": 0.1016949152542373,
+            "sharedTokens": [
+              "certains",
+              "code",
+              "creances",
+              "domicile",
+              "meubles",
+              "privilegiees"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "2331",
+            "jaccardWithQuestion": 0.026490066225165563,
+            "sharedTokens": [
+              "code",
+              "creances",
+              "meubles",
+              "privilegiees"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L624-11",
+            "jaccardWithQuestion": 0.08108108108108109,
+            "sharedTokens": [
+              "civil",
+              "code",
+              "meubles"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L526-1",
+            "jaccardWithQuestion": 0.017699115044247787,
+            "sharedTokens": [
+              "civil",
+              "code"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "2329",
+            "jaccardWithQuestion": 0.03333333333333333,
+            "sharedTokens": [
+              "meubles"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 3,
+        "goldBestChunkScore": 20.54941797175351,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2332",
+            "score": 29.1715735943579
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L135-3",
+            "score": 21.863541557660476
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L135-2",
+            "score": 20.54941797175351
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A743-11",
+            "score": 19.556277888894954
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "Annexe 4-9",
+            "score": 19.261532124601572
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A444-3",
+            "score": 19.12292330436635
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R123-208-1",
+            "score": 17.884431828454645
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L643-8",
+            "score": 17.485746197159884
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L624-11",
+            "score": 16.93031229584451
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L822-29",
+            "score": 16.729306739543627
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.042; bestCompetitorJaccard=0.102; neighborsTop10=0; bm25Rank=3"
+      }
+    },
+    {
+      "questionId": "q397",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L214-163"
+      },
+      "lexical": {
+        "questionTokenCount": 24,
+        "goldCharLength": 414,
+        "jaccardQuestionGold": 0.1276595744680851,
+        "sharedTokensQuestionGold": [
+          "applicables",
+          "communs",
+          "conditions",
+          "entreprise",
+          "fonds",
+          "placement"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2332-3",
+            "jaccardWithQuestion": 0.16,
+            "sharedTokens": [
+              "bailleur",
+              "conservateur",
+              "exercent",
+              "immeuble",
+              "meuble",
+              "privileges",
+              "speciaux",
+              "vendeur"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-61-1",
+            "jaccardWithQuestion": 0.021897810218978103,
+            "sharedTokens": [
+              "conditions",
+              "fonds",
+              "placement"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "2376",
+            "jaccardWithQuestion": 0.01694915254237288,
+            "sharedTokens": [
+              "privileges"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L513-30",
+            "jaccardWithQuestion": 0.015384615384615385,
+            "sharedTokens": [
+              "conditions",
+              "selon"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R214-129",
+            "jaccardWithQuestion": 0.0425531914893617,
+            "sharedTokens": [
+              "fonds",
+              "placement"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 5,
+        "goldBestChunkScore": 24.2968666047975,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "2332-3",
+            "score": 68.06959494669111
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-24-34",
+            "score": 25.244773880134318
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-8",
+            "score": 25.1478638881123
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L224-26",
+            "score": 24.607977401685897
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-163",
+            "score": 24.2968666047975
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-civil",
+            "articleNumber": "2517",
+            "score": 23.266462859732396
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R214-208",
+            "score": 23.130970988476044
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-71",
+            "score": 23.130080480040014
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-162-14",
+            "score": 21.872112374409102
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R621-10",
+            "score": 21.716640687597707
+          }
+        ]
+      },
+      "classification": {
+        "primary": "semantic_competition",
+        "tags": [
+          "semantic_competition"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.128; bestCompetitorJaccard=0.160; neighborsTop10=2; bm25Rank=5"
+      }
+    },
+    {
+      "questionId": "q401",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L221-32"
+      },
+      "lexical": {
+        "questionTokenCount": 24,
+        "goldCharLength": 3250,
+        "jaccardQuestionGold": 0.031746031746031744,
+        "sharedTokensQuestionGold": [
+          "actions",
+          "code",
+          "conditions",
+          "epargne",
+          "plan",
+          "retraits"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D314-23",
+            "jaccardWithQuestion": 0.05063291139240506,
+            "sharedTokens": [
+              "articles",
+              "code",
+              "competence",
+              "conditions",
+              "financier",
+              "monetaire",
+              "personnels",
+              "professionnelle"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D314-22",
+            "jaccardWithQuestion": 0.08641975308641975,
+            "sharedTokens": [
+              "articles",
+              "code",
+              "competence",
+              "financier",
+              "monetaire",
+              "personnels",
+              "professionnelle"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L314-24",
+            "jaccardWithQuestion": 0.0273972602739726,
+            "sharedTokens": [
+              "articles",
+              "competence"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R519-10",
+            "jaccardWithQuestion": 0.043859649122807015,
+            "sharedTokens": [
+              "articles",
+              "code",
+              "conditions",
+              "consommation",
+              "professionnelle"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R519-7",
+            "jaccardWithQuestion": 0.10606060606060606,
+            "sharedTokens": [
+              "appliquent",
+              "articles",
+              "code",
+              "competence",
+              "conditions",
+              "consommation",
+              "professionnelle"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 16,
+        "goldBestChunkScore": 20.533871862844745,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D314-22",
+            "score": 31.348218802030082
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R519-7",
+            "score": 28.688595912623796
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D314-23",
+            "score": 28.572431227925904
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L214-98",
+            "score": 26.445052625413563
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "L111-3",
+            "score": 23.76637514621586
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D314-25",
+            "score": 22.78313263681446
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R519-15",
+            "score": 22.474565041152005
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "D314-23",
+            "score": 22.319780297735903
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "D221-109",
+            "score": 21.916454697021816
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-de-la-consommation",
+            "articleNumber": "R222-1",
+            "score": 21.74330322725087
+          }
+        ]
+      },
+      "classification": {
+        "primary": "chunk_representation",
+        "tags": [
+          "chunk_representation",
+          "chunking_data"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.032; bestCompetitorJaccard=0.106; neighborsTop10=0; bm25Rank=16"
+      }
+    },
+    {
+      "questionId": "q408",
+      "gold": {
+        "corpusId": "code-monetaire-et-financier",
+        "articleNumber": "L224-13"
+      },
+      "lexical": {
+        "questionTokenCount": 28,
+        "goldCharLength": 379,
+        "jaccardQuestionGold": 0.1956521739130435,
+        "sharedTokensQuestionGold": [
+          "applicables",
+          "code",
+          "dispositions",
+          "entreprise",
+          "epargne",
+          "plan",
+          "retraite",
+          "travail"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R3334-1",
+            "jaccardWithQuestion": 0.1276595744680851,
+            "sharedTokens": [
+              "collectif",
+              "dispositions",
+              "entreprise",
+              "epargne",
+              "plan",
+              "retraite"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3334-8",
+            "jaccardWithQuestion": 0.06,
+            "sharedTokens": [
+              "code",
+              "collectif",
+              "entreprise",
+              "epargne",
+              "plan",
+              "retraite"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L4162-4",
+            "jaccardWithQuestion": 0.05434782608695652,
+            "sharedTokens": [
+              "applicables",
+              "code",
+              "entreprise",
+              "plan",
+              "travail"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3332-10",
+            "jaccardWithQuestion": 0.058823529411764705,
+            "sharedTokens": [
+              "code",
+              "collectif",
+              "entreprise",
+              "epargne",
+              "plan",
+              "retraite",
+              "travail"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3334-1",
+            "jaccardWithQuestion": 0.19444444444444445,
+            "sharedTokens": [
+              "applicables",
+              "collectif",
+              "dispositions",
+              "entreprise",
+              "epargne",
+              "plan",
+              "retraite"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-penal",
+            "articleNumber": "222-20-1",
+            "score": 58.450573254837586
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "222-19-1",
+            "score": 51.030840189598365
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-penal",
+            "articleNumber": "221-6-1",
+            "score": 40.05764590518793
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-penal",
+            "articleNumber": "221-20",
+            "score": 37.935023638641674
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3334-1",
+            "score": 33.551639874184765
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R3334-1-1",
+            "score": 33.22143388827049
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R3341-5",
+            "score": 32.494683498865236
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L3334-3",
+            "score": 31.100278967132535
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-penal",
+            "articleNumber": "221-19",
+            "score": 31.059930869389067
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-penal",
+            "articleNumber": "R625-2",
+            "score": 29.961781365886416
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.196; bestCompetitorJaccard=0.194; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q409",
+      "gold": {
+        "corpusId": "code-de-la-consommation",
+        "articleNumber": "L112-5"
+      },
+      "lexical": {
+        "questionTokenCount": 23,
+        "goldCharLength": 978,
+        "jaccardQuestionGold": 0,
+        "sharedTokensQuestionGold": [],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "10",
+            "jaccardWithQuestion": 0.10204081632653061,
+            "sharedTokens": [
+              "justice",
+              "legitime",
+              "motif",
+              "sans",
+              "verite"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "457-1",
+            "jaccardWithQuestion": 0.08,
+            "sharedTokens": [
+              "consequences",
+              "personne",
+              "refus",
+              "sans"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "434",
+            "jaccardWithQuestion": 0.05555555555555555,
+            "sharedTokens": [
+              "conditions",
+              "justice"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "387-6",
+            "jaccardWithQuestion": 0,
+            "sharedTokens": []
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "4",
+            "jaccardWithQuestion": 0.02702702702702703,
+            "sharedTokens": [
+              "justice"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "10",
+            "score": 25.60290270830542
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "1342-1",
+            "score": 23.56657573700011
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "513-1",
+            "score": 19.318431088097146
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "217",
+            "score": 17.119047060865157
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "281",
+            "score": 15.531483434988276
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-civil",
+            "articleNumber": "1931",
+            "score": 15.328501795962431
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-civil",
+            "articleNumber": "930-1",
+            "score": 14.750189185450433
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-civil",
+            "articleNumber": "457-1",
+            "score": 14.570313823405225
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-civil",
+            "articleNumber": "419",
+            "score": 13.680602821798068
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-civil",
+            "articleNumber": "495-7",
+            "score": 12.49469205906733
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch",
+          "query_formulation",
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.000; bestCompetitorJaccard=0.102; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q411",
+      "gold": {
+        "corpusId": "code-du-travail",
+        "articleNumber": "L1132-2"
+      },
+      "lexical": {
+        "questionTokenCount": 18,
+        "goldCharLength": 176,
+        "jaccardQuestionGold": 0.08823529411764706,
+        "sharedTokensQuestionGold": [
+          "droit",
+          "exercice",
+          "greve"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2421-3",
+            "jaccardWithQuestion": 0.030927835051546393,
+            "sharedTokens": [
+              "droit",
+              "lieu",
+              "motif"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D5424-45",
+            "jaccardWithQuestion": 0.015384615384615385,
+            "sharedTokens": [
+              "salaries"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "26-1",
+            "jaccardWithQuestion": 0.03333333333333333,
+            "sharedTokens": [
+              "declarations",
+              "nationalite"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2422-1",
+            "jaccardWithQuestion": 0.018867924528301886,
+            "sharedTokens": [
+              "droit",
+              "salaries"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R2352-18",
+            "jaccardWithQuestion": 0.05084745762711865,
+            "sharedTokens": [
+              "leur",
+              "salaries",
+              "selon"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 9,
+        "goldBestChunkScore": 16.126344708685682,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2342-11",
+            "score": 18.489884467557538
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "1050",
+            "score": 18.323506517891303
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D1253-9",
+            "score": 18.15017084689659
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "D6235-7",
+            "score": 18.1269424045699
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2281-1",
+            "score": 18.120248710303475
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2511-1",
+            "score": 18.113984507573022
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R3243-4",
+            "score": 16.69198705961877
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-civil",
+            "articleNumber": "71",
+            "score": 16.4709085613732
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1132-2",
+            "score": 16.126344708685682
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-travail",
+            "articleNumber": "R5132-1-19",
+            "score": 15.784570489779119
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.088; bestCompetitorJaccard=0.051; neighborsTop10=0; bm25Rank=9"
+      }
+    },
+    {
+      "questionId": "q412",
+      "gold": {
+        "corpusId": "code-civil",
+        "articleNumber": "33"
+      },
+      "lexical": {
+        "questionTokenCount": 15,
+        "goldCharLength": 539,
+        "jaccardQuestionGold": 0,
+        "sharedTokensQuestionGold": [],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-49",
+            "jaccardWithQuestion": 0.04065040650406504,
+            "sharedTokens": [
+              "avis",
+              "cheque",
+              "defaut",
+              "ete",
+              "paiement"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R131-49",
+            "jaccardWithQuestion": 0.012658227848101266,
+            "sharedTokens": [
+              "cheque"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R131-37",
+            "jaccardWithQuestion": 0.10638297872340426,
+            "sharedTokens": [
+              "avis",
+              "cheque",
+              "defaut",
+              "ete",
+              "paiement"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-73",
+            "jaccardWithQuestion": 0.029411764705882353,
+            "sharedTokens": [
+              "cheque",
+              "defaut",
+              "ete",
+              "paiement"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-65",
+            "jaccardWithQuestion": 0.08,
+            "sharedTokens": [
+              "cheque",
+              "paiement"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R131-37",
+            "score": 20.831288363527978
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "D131-25",
+            "score": 19.564084842541785
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-72",
+            "score": 17.87494384891469
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R131-26",
+            "score": 17.81587608580608
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-84",
+            "score": 17.309105815753316
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-39",
+            "score": 16.86060404805906
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-49",
+            "score": 16.593235390893245
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "D133-6",
+            "score": 16.384894789504468
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R131-46",
+            "score": 16.285372943434815
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-73",
+            "score": 15.922010724314202
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch",
+          "query_formulation",
+          "gold_intrinsically_difficult"
+        ],
+        "confidence": "medium",
+        "rationale": "jaccard(question,gold)=0.000; bestCompetitorJaccard=0.106; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q413",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "112-4"
+      },
+      "lexical": {
+        "questionTokenCount": 18,
+        "goldCharLength": 309,
+        "jaccardQuestionGold": 0.1,
+        "sharedTokensQuestionGold": [
+          "actes",
+          "application",
+          "immediate",
+          "validite"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "46",
+            "jaccardWithQuestion": 0.05952380952380952,
+            "sharedTokens": [
+              "actes",
+              "ces",
+              "civil",
+              "etat",
+              "registres"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "98-4",
+            "jaccardWithQuestion": 0.09433962264150944,
+            "sharedTokens": [
+              "actes",
+              "application",
+              "ces",
+              "civil",
+              "etat"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "197",
+            "jaccardWithQuestion": 0.017857142857142856,
+            "sharedTokens": [
+              "etat"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "79-1",
+            "jaccardWithQuestion": 0.0297029702970297,
+            "sharedTokens": [
+              "civil",
+              "etat",
+              "registres"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "71",
+            "jaccardWithQuestion": 0,
+            "sharedTokens": []
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": null,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-civil",
+            "articleNumber": "52",
+            "score": 22.04793093395857
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-civil",
+            "articleNumber": "40",
+            "score": 20.34593360210273
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-civil",
+            "articleNumber": "46",
+            "score": 19.416726015451964
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-civil",
+            "articleNumber": "17-1",
+            "score": 19.170387980076995
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-civil",
+            "articleNumber": "34-1",
+            "score": 19.156110999352297
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-civil",
+            "articleNumber": "114",
+            "score": 18.705345712895234
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-civil",
+            "articleNumber": "99-1",
+            "score": 18.176744429960383
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-civil",
+            "articleNumber": "39",
+            "score": 17.160242953577697
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-civil",
+            "articleNumber": "38",
+            "score": 17.022471731692097
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-civil",
+            "articleNumber": "1",
+            "score": 16.83033493031882
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.100; bestCompetitorJaccard=0.094; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q420",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "131-1"
+      },
+      "lexical": {
+        "questionTokenCount": 16,
+        "goldCharLength": 467,
+        "jaccardQuestionGold": 0.1724137931034483,
+        "sharedTokensQuestionGold": [
+          "criminelles",
+          "encourues",
+          "peines",
+          "personnes",
+          "physiques"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L741-2",
+            "jaccardWithQuestion": 0.03125,
+            "sharedTokens": [
+              "commerce",
+              "conseil",
+              "greffiers",
+              "national",
+              "tribunaux"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-139-28",
+            "jaccardWithQuestion": 0.09090909090909091,
+            "sharedTokens": [
+              "commerce",
+              "greffiers",
+              "personnes",
+              "tribunaux"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L128-1",
+            "jaccardWithQuestion": 0.06862745098039216,
+            "sharedTokens": [
+              "commerce",
+              "conseil",
+              "contre",
+              "fraudes",
+              "greffiers",
+              "national",
+              "tribunaux"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R741-10",
+            "jaccardWithQuestion": 0.06944444444444445,
+            "sharedTokens": [
+              "commerce",
+              "conseil",
+              "greffiers",
+              "national",
+              "tribunaux"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L835-5",
+            "jaccardWithQuestion": 0.015384615384615385,
+            "sharedTokens": [
+              "peines",
+              "tribunaux"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": 2,
+        "goldBestChunkScore": 25.262465387484248,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L128-2",
+            "score": 27.47613297412896
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "131-1",
+            "score": 25.262465387484248
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-penal",
+            "articleNumber": "131-37",
+            "score": 24.903664173567766
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-139-1",
+            "score": 23.795202769494477
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A742-13",
+            "score": 23.541396846287494
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R741-10",
+            "score": 23.319994296704415
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "L128-1",
+            "score": 23.241111293804995
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "A742-15",
+            "score": 22.734015565399694
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R743-139-17",
+            "score": 22.581077501209855
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-du-commerce",
+            "articleNumber": "R742-40",
+            "score": 22.204373354118598
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.172; bestCompetitorJaccard=0.091; neighborsTop10=0; bm25Rank=2"
+      }
+    },
+    {
+      "questionId": "q422",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "131-3"
+      },
+      "lexical": {
+        "questionTokenCount": 14,
+        "goldCharLength": 600,
+        "jaccardQuestionGold": 0.05660377358490566,
+        "sharedTokensQuestionGold": [
+          "peines",
+          "titre",
+          "travail"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1155-1",
+            "jaccardWithQuestion": 0.2,
+            "sharedTokens": [
+              "atteinte",
+              "exercice",
+              "fonctions",
+              "mediateur",
+              "regulier"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1238-1",
+            "jaccardWithQuestion": 0.13333333333333333,
+            "sharedTokens": [
+              "atteinte",
+              "exercice",
+              "fonctions",
+              "regulier"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2434-1",
+            "jaccardWithQuestion": 0.04,
+            "sharedTokens": [
+              "peines",
+              "travail"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L2438-1",
+            "jaccardWithQuestion": 0.02702702702702703,
+            "sharedTokens": [
+              "travail"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1255-14",
+            "jaccardWithQuestion": 0.01639344262295082,
+            "sharedTokens": [
+              "exercice",
+              "travail"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 9.054549804946994,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1155-1",
+            "score": 31.878992779993602
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1238-1",
+            "score": 22.909048005445506
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1443-1",
+            "score": 21.827701872076343
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L7313-11",
+            "score": 18.572850625132205
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1131-1",
+            "score": 16.694884974807355
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1141-1",
+            "score": 16.694884974807355
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L1151-1",
+            "score": 16.694884974807355
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L5221-6",
+            "score": 16.426680593505118
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-du-travail",
+            "articleNumber": "L8113-11",
+            "score": 15.605785815512856
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-penal",
+            "articleNumber": "713-3",
+            "score": 15.604308950197556
+          }
+        ]
+      },
+      "classification": {
+        "primary": "lexical_mismatch",
+        "tags": [
+          "lexical_mismatch"
+        ],
+        "confidence": "high",
+        "rationale": "jaccard(question,gold)=0.057; bestCompetitorJaccard=0.200; neighborsTop10=0; bm25Rank>50"
+      }
+    },
+    {
+      "questionId": "q423",
+      "gold": {
+        "corpusId": "code-penal",
+        "articleNumber": "131-4"
+      },
+      "lexical": {
+        "questionTokenCount": 16,
+        "goldCharLength": 228,
+        "jaccardQuestionGold": 0.07142857142857142,
+        "sharedTokensQuestionGold": [
+          "emprisonnement",
+          "peines"
+        ],
+        "topCompetitors": [
+          {
+            "rank": 1,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L163-2",
+            "jaccardWithQuestion": 0.031578947368421054,
+            "sharedTokens": [
+              "cheque",
+              "emprisonnement",
+              "peines"
+            ]
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L163-7",
+            "jaccardWithQuestion": 0.046153846153846156,
+            "sharedTokens": [
+              "cheque",
+              "emprisonnement",
+              "peines"
+            ]
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-69",
+            "jaccardWithQuestion": 0.023255813953488372,
+            "sharedTokens": [
+              "cheque"
+            ]
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R163-2",
+            "jaccardWithQuestion": 0.03773584905660377,
+            "sharedTokens": [
+              "applicable",
+              "cheque"
+            ]
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L163-10",
+            "jaccardWithQuestion": 0.05970149253731343,
+            "sharedTokens": [
+              "cas",
+              "cheque",
+              "paiement",
+              "prevues"
+            ]
+          }
+        ]
+      },
+      "bm25": {
+        "goldBestChunkRank": null,
+        "goldBestChunkScore": 7.309350979932762,
+        "topBm25Articles": [
+          {
+            "rank": 1,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L561-36-1",
+            "score": 21.074101907167282
+          },
+          {
+            "rank": 2,
+            "corpusId": "code-penal",
+            "articleNumber": "511-2",
+            "score": 19.945900805202776
+          },
+          {
+            "rank": 3,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L151-3-2",
+            "score": 18.920637450197574
+          },
+          {
+            "rank": 4,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R131-12",
+            "score": 18.572539226490235
+          },
+          {
+            "rank": 5,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "L131-62",
+            "score": 18.53072671521193
+          },
+          {
+            "rank": 6,
+            "corpusId": "code-penal",
+            "articleNumber": "511-15",
+            "score": 18.100453797529212
+          },
+          {
+            "rank": 7,
+            "corpusId": "code-penal",
+            "articleNumber": "511-9",
+            "score": 17.702774772668292
+          },
+          {
+            "rank": 8,
+            "corpusId": "code-monetaire-et-financier",
+            "articleNumber": "R621-41-1",
+            "score": 17.51625803457431
+          },
+          {
+            "rank": 9,
+            "corpusId": "code-penal",
+            "articleNumber": "511-4",
+            "score": 17.390529838059884
+          },
+          {
+            "rank": 10,
+            "corpusId": "code-penal",
+            "articleNumber": "131-11",
+            "score": 17.102689435936693
+          }
+        ]
+      },
+      "classification": {
+        "primary": "indeterminate",
+        "tags": [
+          "indeterminate"
+        ],
+        "confidence": "low",
+        "rationale": "jaccard(question,gold)=0.071; bestCompetitorJaccard=0.060; neighborsTop10=1; bm25Rank>50"
+      }
+    }
+  ]
+}
