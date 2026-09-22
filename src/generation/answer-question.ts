@@ -19,6 +19,7 @@ import type { RoutingResult } from '../routing/types.js';
 import { isRoutingAbstain } from '../routing/types.js';
 import { dynamicContextFilter } from './dynamic-context-filter.js';
 import type { RagGenerationService } from './rag-generation.service.js';
+import type { RetrievalStrategy } from '../retrieval/retrieval-strategy.js';
 import type { AnswerQuestionResult } from './types.js';
 
 export interface AnswerQuestionOptions {
@@ -29,6 +30,7 @@ export interface AnswerQuestionOptions {
   enableRouting?: boolean;
   corpusIds?: string[];
   routingResultOverride?: Pick<RoutingResult, 'corpusIds'>;
+  retrievalStrategy?: RetrievalStrategy;
 }
 
 export async function answerQuestion(
@@ -59,6 +61,7 @@ export async function answerQuestion(
         enableRouting: options.enableRouting,
         corpusIds: options.corpusIds,
         routingResultOverride: options.routingResultOverride,
+        retrievalStrategy: options.retrievalStrategy,
       },
     );
 

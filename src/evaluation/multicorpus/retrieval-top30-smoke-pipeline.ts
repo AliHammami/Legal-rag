@@ -25,6 +25,8 @@ import {
   searchSimilarChunksWithCorpusQuota,
   shouldUseCorpusQuotaRetrieval,
 } from '../../retrieval/corpus-quota-retrieval.js';
+import { retrieveHybridUnionWithEmbedding } from '../../retrieval/hybrid-union-retrieval.js';
+import type { RetrievalStrategy } from '../../retrieval/retrieval-strategy.js';
 import { searchSimilarChunks } from '../../retrieval/search-similar-chunks.js';
 import type { SimilarChunk } from '../../retrieval/types.js';
 import {
@@ -48,6 +50,7 @@ export interface SmokePipelineConfig {
   rerankTopK: number;
   relativeScoreThreshold: number;
   routingModel: string;
+  retrievalStrategy?: RetrievalStrategy;
 }
 
 export interface PersistedRetrievalRow {
@@ -290,13 +293,25 @@ export async function runRetrievalTop30SmokeQuestion(input: {
     answer = ROUTING_ABSTENTION_ANSWER;
     profiling.answerPipelineTotalMs = performance.now() - pipelineStart;
   } else {
-    candidates = await retrieveWithCachedEmbedding(
-      input.prisma,
-      embedding,
-      config.retrievalTopK,
-      routedCorpusIds,
-      profiling,
-    );
+    if ((config.retrievalStrategy ?? 'vector') === 'hybrid-union') {
+      candidates = await retrieveHybridUnionWithEmbedding(
+        input.prisma,
+        embedding,
+        question.question,
+        {
+          corpusIds: routedCorpusIds,
+          profiling,
+        },
+      );
+    } else {
+      candidates = await retrieveWithCachedEmbedding(
+        input.prisma,
+        embedding,
+        config.retrievalTopK,
+        routedCorpusIds,
+        profiling,
+      );
+    }
 
     try {
       reranked = await rerankChunks(

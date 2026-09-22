@@ -10,6 +10,11 @@ import {
 } from '../routing/resolve-routing-for-retrieval.js';
 import type { RoutingMetadata, RoutingResult } from '../routing/types.js';
 import type { SearchSimilarChunksOptions } from '../retrieval/types.js';
+import { retrieveHybridUnionCandidates } from '../retrieval/hybrid-union-retrieval.js';
+import {
+  resolveRetrievalStrategy,
+  type RetrievalStrategy,
+} from '../retrieval/retrieval-strategy.js';
 import { searchQuestion } from '../retrieval/search-question.js';
 import {
   DEFAULT_RERANK_TOP_K,
@@ -31,6 +36,8 @@ export interface SearchAndRerankQuestionOptions extends SearchSimilarChunksOptio
   enableRouting?: boolean;
   /** Replays a prior router decision without calling the routing LLM. */
   routingResultOverride?: Pick<RoutingResult, 'corpusIds'>;
+  /** Defaults to env RETRIEVAL_STRATEGY (vector). */
+  retrievalStrategy?: RetrievalStrategy;
 }
 
 export interface SearchAndRerankQuestionResult {
@@ -54,6 +61,7 @@ export async function searchAndRerankQuestion(
     enableRouting = true,
     corpusIds: explicitCorpusIds,
     routingResultOverride,
+    retrievalStrategy = resolveRetrievalStrategy(),
     ...searchOptions
   } = options;
   const totalStart = profiling ? performance.now() : 0;
@@ -99,17 +107,29 @@ export async function searchAndRerankQuestion(
     retrievalCorpusIds = resolved.retrievalCorpusIds;
   }
 
-  const candidates = await searchQuestion(
-    prisma,
-    openAIService,
-    question,
-    retrievalTopK,
-    {
-      profiling,
-      ...searchOptions,
-      corpusIds: retrievalCorpusIds,
-    },
-  );
+  const candidates =
+    retrievalStrategy === 'hybrid-union'
+      ? await retrieveHybridUnionCandidates(
+          prisma,
+          openAIService,
+          question,
+          {
+            profiling,
+            ...searchOptions,
+            corpusIds: retrievalCorpusIds,
+          },
+        )
+      : await searchQuestion(
+          prisma,
+          openAIService,
+          question,
+          retrievalTopK,
+          {
+            profiling,
+            ...searchOptions,
+            corpusIds: retrievalCorpusIds,
+          },
+        );
 
   if (profiling) {
     profiling.retrievedCandidates = candidates.length;
