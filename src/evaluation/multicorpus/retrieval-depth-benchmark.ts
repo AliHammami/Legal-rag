@@ -517,3 +517,205 @@ export function inferPatternsForQuestion(
 
   return [...new Set(patterns)];
 }
+
+export interface MarginalGoldBandSummary {
+  band: '21-30' | '31-40' | '41-50';
+  newGoldArticles: number;
+}
+
+export interface GoldRankDetail {
+  questionId: string;
+  gold: GoldArticle;
+  strategy: RetrievalDepthStrategy;
+  rank20: number | null;
+  rank30: number | null;
+  rank40: number | null;
+  rank50: number | null;
+  distanceAtFirstHit: number | null;
+  absentAt20: boolean;
+  depthBand: 'present_at_20' | '21-30' | '31-40' | '41-50' | 'absent_at_50';
+}
+
+export type DepthDecisionCategory =
+  | 'DEPTH_IS_MATERIAL'
+  | 'SEMANTIC_CEILING'
+  | 'MIXED';
+
+export function goldRankDetailForStrategy(input: {
+  questionId: string;
+  gold: GoldArticle;
+  strategy: RetrievalDepthStrategy;
+  rankedAt50: RankedRetrievalChunk[];
+}): GoldRankDetail {
+  const ranks: Partial<Record<RetrievalDepthK, number | null>> = {};
+  for (const k of RETRIEVAL_DEPTH_K_VALUES) {
+    ranks[k] = firstRankForGold(
+      input.gold,
+      sliceRankedChunksAtK(input.rankedAt50, k),
+    );
+  }
+
+  const rank20 = ranks[20] ?? null;
+  const rank50 = ranks[50] ?? null;
+  let depthBand: GoldRankDetail['depthBand'] = 'absent_at_50';
+  if (rank20 !== null) {
+    depthBand = 'present_at_20';
+  } else if (ranks[30] !== null && ranks[30] !== undefined) {
+    depthBand = '21-30';
+  } else if (ranks[40] !== null && ranks[40] !== undefined) {
+    depthBand = '31-40';
+  } else if (rank50 !== null) {
+    depthBand = '41-50';
+  }
+
+  const firstHitRank =
+    rank20 ?? ranks[30] ?? ranks[40] ?? rank50 ?? null;
+  const hitChunk =
+    firstHitRank === null
+      ? undefined
+      : input.rankedAt50.find(
+          (chunk) =>
+            goldArticlesMatch(input.gold, chunk) && chunk.rank === firstHitRank,
+        );
+
+  return {
+    questionId: input.questionId,
+    gold: input.gold,
+    strategy: input.strategy,
+    rank20,
+    rank30: ranks[30] ?? null,
+    rank40: ranks[40] ?? null,
+    rank50,
+    distanceAtFirstHit: hitChunk?.distance ?? null,
+    absentAt20: rank20 === null,
+    depthBand,
+  };
+}
+
+export function summarizeMarginalGoldBands(
+  details: GoldRankDetail[],
+  onlyAbsentAt20 = true,
+): MarginalGoldBandSummary[] {
+  const scoped = onlyAbsentAt20
+    ? details.filter((detail) => detail.absentAt20)
+    : details;
+
+  return [
+    {
+      band: '21-30',
+      newGoldArticles: scoped.filter((detail) => detail.depthBand === '21-30')
+        .length,
+    },
+    {
+      band: '31-40',
+      newGoldArticles: scoped.filter((detail) => detail.depthBand === '31-40')
+        .length,
+    },
+    {
+      band: '41-50',
+      newGoldArticles: scoped.filter((detail) => detail.depthBand === '41-50')
+        .length,
+    },
+  ];
+}
+
+export function classifyDepthDecision(input: {
+  absentAt20Details: GoldRankDetail[];
+  recallAt20: number;
+  recallAt50: number;
+}): {
+  category: DepthDecisionCategory;
+  rationale: string;
+  recovered21to50: number;
+  stillAbsentAt50: number;
+} {
+  const recovered21to50 = input.absentAt20Details.filter(
+    (detail) =>
+      detail.depthBand === '21-30' ||
+      detail.depthBand === '31-40' ||
+      detail.depthBand === '41-50',
+  ).length;
+  const stillAbsentAt50 = input.absentAt20Details.filter(
+    (detail) => detail.depthBand === 'absent_at_50',
+  ).length;
+  const totalAbsentAt20 = input.absentAt20Details.length;
+
+  const recallGain = input.recallAt50 - input.recallAt20;
+  const recoveredShare =
+    totalAbsentAt20 === 0 ? 0 : recovered21to50 / totalAbsentAt20;
+
+  if (
+    totalAbsentAt20 > 0 &&
+    recoveredShare >= 0.35 &&
+    recallGain >= 0.08
+  ) {
+    return {
+      category: 'MIXED',
+      rationale:
+        'Part significative recuperee entre 21-50 mais une fraction reste absente a 50.',
+      recovered21to50,
+      stillAbsentAt50,
+    };
+  }
+
+  if (
+    recoveredShare >= 0.5 ||
+    (recallGain >= 0.12 && recovered21to50 >= 3)
+  ) {
+    return {
+      category: 'DEPTH_IS_MATERIAL',
+      rationale:
+        'Une proportion notable des gold absents @20 apparait entre 21 et 50 avec gain de recall mesurable.',
+      recovered21to50,
+      stillAbsentAt50,
+    };
+  }
+
+  if (stillAbsentAt50 >= totalAbsentAt20 * 0.6 || recallGain < 0.05) {
+    return {
+      category: 'SEMANTIC_CEILING',
+      rationale:
+        'La majorite des gold absents @20 reste absente a 50; le recall plafonne.',
+      recovered21to50,
+      stillAbsentAt50,
+    };
+  }
+
+  return {
+    category: 'MIXED',
+    rationale:
+      'Signal mixte: gains partiels 21-50 sans domination claire profondeur vs plafond.',
+    recovered21to50,
+    stillAbsentAt50,
+  };
+}
+
+export function buildCorpusNeighborWindow(input: {
+  questionId: string;
+  gold: GoldArticle;
+  corpusLocalList: RankedRetrievalChunk[];
+  windowStart?: number;
+  windowEnd?: number;
+}): Array<{
+  rank: number;
+  corpusId: string;
+  articleNumber: string;
+  distance: number | undefined;
+  isGold: boolean;
+}> {
+  const goldRank =
+    firstRankForGold(input.gold, input.corpusLocalList) ??
+    input.corpusLocalList.length + 1;
+  const start = input.windowStart ?? Math.max(1, goldRank - 5);
+  const end = input.windowEnd ?? goldRank + 5;
+
+  return input.corpusLocalList
+    .filter((chunk) => chunk.rank >= start && chunk.rank <= end)
+    .map((chunk) => ({
+      rank: chunk.rank,
+      corpusId: chunk.corpusId,
+      articleNumber: chunk.articleNumber,
+      distance: chunk.distance,
+      isGold: goldArticlesMatch(input.gold, chunk),
+    }));
+}

@@ -4,6 +4,7 @@ import {
   analyzeGoldDepth,
   buildGlobalRetrievalAtK,
   buildQuotaRetrievalAtK,
+  classifyDepthDecision,
   classifyGoldDepthBucket,
   firstRankForGold,
   fullQuestionCoverageAtK,
@@ -11,6 +12,7 @@ import {
   rankRetrievalChunks,
   sliceRankedChunksAtK,
   summarizeDepthBuckets,
+  summarizeMarginalGoldBands,
   type RankedRetrievalChunk,
 } from '../multicorpus/retrieval-depth-benchmark.js';
 
@@ -144,6 +146,59 @@ describe('retrieval-depth-benchmark', () => {
     );
     expect(global).toHaveLength(2);
     expect(sliceRankedChunksAtK(global, 1)).toHaveLength(1);
+  });
+
+  it('summarizes marginal gold bands for absent @20', () => {
+    const details = [
+      {
+        questionId: 'q1',
+        gold: { corpusId: 'c', articleNumber: '1' },
+        strategy: 'quota' as const,
+        rank20: null,
+        rank30: 25,
+        rank40: 25,
+        rank50: 25,
+        distanceAtFirstHit: 0.5,
+        absentAt20: true,
+        depthBand: '21-30' as const,
+      },
+      {
+        questionId: 'q2',
+        gold: { corpusId: 'c', articleNumber: '2' },
+        strategy: 'quota' as const,
+        rank20: null,
+        rank30: null,
+        rank40: null,
+        rank50: null,
+        distanceAtFirstHit: null,
+        absentAt20: true,
+        depthBand: 'absent_at_50' as const,
+      },
+    ];
+    const bands = summarizeMarginalGoldBands(details, true);
+    expect(bands.find((band) => band.band === '21-30')?.newGoldArticles).toBe(1);
+  });
+
+  it('classifies depth decision categories', () => {
+    const ceiling = classifyDepthDecision({
+      absentAt20Details: [
+        {
+          questionId: 'q',
+          gold: { corpusId: 'c', articleNumber: '1' },
+          strategy: 'quota',
+          rank20: null,
+          rank30: null,
+          rank40: null,
+          rank50: null,
+          distanceAtFirstHit: null,
+          absentAt20: true,
+          depthBand: 'absent_at_50',
+        },
+      ],
+      recallAt20: 0.5,
+      recallAt50: 0.52,
+    });
+    expect(ceiling.category).toBe('SEMANTIC_CEILING');
   });
 
   it('ranks persisted retrieval chunks by retrievalRank', () => {
