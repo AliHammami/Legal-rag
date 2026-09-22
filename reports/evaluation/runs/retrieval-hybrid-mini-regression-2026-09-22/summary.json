@@ -1,0 +1,80 @@
+{
+  "vector": {
+    "correctness": 2.1333333333333333,
+    "completeness": 2.1333333333333333,
+    "groundedness": 3.8666666666666667,
+    "sourceRelevance": 2.6,
+    "sourceCoverage": 3.9,
+    "abstentionCorrectRate": 0.6666666666666666
+  },
+  "union": {
+    "correctness": 2.466666666666667,
+    "completeness": 2.533333333333333,
+    "groundedness": 3.8666666666666667,
+    "sourceRelevance": 3.066666666666667,
+    "sourceCoverage": 3.9,
+    "abstentionCorrectRate": 0.7333333333333333
+  },
+  "delta": {
+    "correctness": 0.3333333333333335,
+    "completeness": 0.3999999999999999,
+    "groundedness": 0,
+    "sourceRelevance": 0.4666666666666668,
+    "sourceCoverage": 0
+  },
+  "retrieval": {
+    "vectorGoldRecall": 0.6136363636363636,
+    "unionGoldRecall": 0.8636363636363636,
+    "vectorFinalGoldRecall": 0.5,
+    "unionFinalGoldRecall": 0.5909090909090909,
+    "vectorFullCoverageRate": 0.26666666666666666,
+    "unionFullCoverageRate": 0.4
+  },
+  "comparisonCounts": {
+    "unionImproves": 9,
+    "unionDegrades": 3,
+    "equivalent": 18,
+    "identicalAnswers": 0
+  },
+  "decision": {
+    "category": "HYBRID_NON_REGRESSION_PASS",
+    "rationale": "Union maintient ou ameliore correctness/completeness sans regression majeure.",
+    "nextStep": "Integrer Union hybrid retrieval en evaluation/staging puis smoke prod restreint avant merge production."
+  },
+  "improves": [
+    "q170",
+    "q375",
+    "q382",
+    "q386",
+    "q401",
+    "q420",
+    "q102",
+    "q411",
+    "q424"
+  ],
+  "degrades": [
+    "q362",
+    "q399",
+    "q400"
+  ],
+  "equivalent": [
+    "q003",
+    "q011",
+    "q132",
+    "q157",
+    "q196",
+    "q238",
+    "q294",
+    "q360",
+    "q381",
+    "q001",
+    "q002",
+    "q007",
+    "q040",
+    "q048",
+    "q101",
+    "q223",
+    "q416",
+    "q423"
+  ]
+}
