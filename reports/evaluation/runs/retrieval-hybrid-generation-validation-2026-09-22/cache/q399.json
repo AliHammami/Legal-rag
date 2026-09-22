@@ -1,0 +1,61 @@
+{
+  "questionId": "q399",
+  "tier": "context_diff_only",
+  "goldAddedByUnion": [],
+  "vectorContextChunkIds": [
+    "D223-9#0",
+    "L223-1#0"
+  ],
+  "unionContextChunkIds": [
+    "D223-9#0",
+    "L223-1#0",
+    "R2312-5#0"
+  ],
+  "vector": {
+    "contextPreview": "[Source 1 — Code de la consommation — Article D223-9 — chunk 0]\nLa sollicitation d'un consommateur par voie téléphonique à des fins de prospection commerciale, y compris\ncelle visée à l'article L. 223-5, n'est autorisée d'une part que du lundi au vendredi, sauf lorsque ces jours sont\nfériés en application de l'article L. 3133-1 du code du travail, et d'autre part seulement de 10 heures à 13\nheures",
+    "answer": "D’après les éléments fournis, un professionnel ne peut téléphoner à un consommateur à des fins de prospection commerciale que dans les conditions suivantes :\n\n- **Consentement préalable** : le consommateur doit avoir exprimé son consentement préalable à la prospection téléphonique. Le professionnel doit être en mesure d’en apporter la preuve. Cette règle ne s’applique toutefois pas à certaines sollicitations liées à l’exécution d’un contrat en cours, lorsqu’elles présentent un rapport avec l’objet de ce contrat. [Source 2 — Article L223-1 du Code de la consommation]\n- **Jours autorisés** : les appels ne peuvent avoir lieu que **du lundi au vendredi**, à l’exclusion des jours fériés. [Source 1 — Article D223-9 du Code de la consommation]\n- **Horaires autorisés** : les appels sont possibles uniquement de **10 heures à 13 heures** et de **14 heures à 20 heures**, selon le fuseau horaire du consommateur. [Source 1 — Article D223-9 du Code de la consommation]\n- **Fréquence maximale** : un même professionnel ne peut pas démarcher, ou tenter de démarcher, un même consommateur plus de **quatre fois sur une période de trente jours calendaires**. [Source 1 — Article D223-9 du Code de la consommation]\n\nEn revanche, **l’article L141-28 du Code de commerce n’est pas fourni dans le contexte**. Il n’est donc pas possible de déterminer, à partir des seules sources disponibles, si une consultation préalable du comité social et économique est exigée, ni dans quelles conditions elle devrait intervenir.",
+    "judge": {
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse énonce correctement les conditions issues des articles fournis : consentement préalable et exception liée au contrat en cours (L223-1), jours, plages horaires selon le fuseau du consommateur et limite de quatre sollicitations sur trente jours (D223-9). Elle ne donne toutefois pas la règle attendue sur l’information-consultation du CSE lors d’un projet de vente de fonds de commerce, prévue par L141-28 du code de commerce dans la référence. Cette omission est explicitement justifiée par l’absence de cet article du contexte. Toutes les affirmations positives importantes sont bien étayées par les deux sources effectivement fournies."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 2,
+      "sourceCoverage": 4,
+      "explanation": "Les sources sont directement pertinentes pour les conditions de prospection téléphonique : D223-9 couvre les jours, horaires et fréquence, et L223-1 couvre le consentement préalable, sa preuve et l’exception liée au contrat en cours. En revanche, aucune source ne contient l’article L141-28 du code de commerce ni la règle relative à l’information-consultation du CSE : une source importante manque donc pour répondre intégralement à la question. Les affirmations effectivement formulées dans la réponse sont toutefois toutes étayées par les deux sources fournies, y compris le constat justifié qu’il est impossible de déterminer les conditions de consultation du CSE à partir de ce seul contexte."
+    },
+    "metrics": {
+      "correctness": 3,
+      "completeness": 2,
+      "groundedness": 4,
+      "sourceRelevance": 2,
+      "sourceCoverage": 4
+    }
+  },
+  "union": {
+    "contextPreview": "[Source 1 — Code de la consommation — Article D223-9 — chunk 0]\nLa sollicitation d'un consommateur par voie téléphonique à des fins de prospection commerciale, y compris\ncelle visée à l'article L. 223-5, n'est autorisée d'une part que du lundi au vendredi, sauf lorsque ces jours sont\nfériés en application de l'article L. 3133-1 du code du travail, et d'autre part seulement de 10 heures à 13\nheures",
+    "answer": "D’après les sources fournies, un professionnel ne peut téléphoner à un consommateur à des fins de prospection commerciale que dans les conditions suivantes :\n\n- **Consentement préalable** : le consommateur doit avoir expressément consenti à recevoir des prospections commerciales par téléphone. Le professionnel doit pouvoir prouver ce consentement. Cette règle figure à l’**article L223-1 du Code de la consommation** [Source 2].\n- **Jours autorisés** : les appels sont autorisés uniquement **du lundi au vendredi**, à l’exclusion des jours fériés [Source 1].\n- **Horaires autorisés** : les appels peuvent être effectués uniquement de **10 h à 13 h** et de **14 h à 20 h**, selon le fuseau horaire du consommateur [Source 1].\n- **Fréquence maximale** : un même professionnel ne peut démarcher ou tenter de démarcher le même consommateur plus de **quatre fois sur une période de trente jours calendaires** [Source 1].\n- **Contrat en cours** : l’interdiction de démarchage sans consentement ne s’applique pas lorsque l’appel intervient dans le cadre de l’exécution d’un contrat en cours et présente un rapport avec son objet, sous les conditions prévues par l’article L223-1 [Source 2].\n\nEn revanche, **l’article L141-28 du Code du commerce n’est pas fourni dans le contexte**. Il n’est donc pas possible de déterminer, sur la base des seules sources disponibles, si cet article impose une consultation préalable du comité social et économique, ni d’en préciser les modalités.\n\nLa seule disposition fournie concernant le comité social et économique est l’**article R2312-5 du Code du travail**, qui indique que le délai de consultation court, en l’absence de délai légal spécifique, à compter de la communication des informations par l’employeur [Source 3]. Elle ne permet toutefois pas d’établir une obligation de consultation préalable applicable à la prospection téléphonique.",
+    "judge": {
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "abstentionCorrect": true,
+      "explanation": "La réponse décrit correctement les règles de consentement, jours, horaires et fréquence au regard des sources fournies. Elle ne répond toutefois pas au point essentiel relatif à l’article L141-28 du code de commerce et à la consultation du CSE, alors que la référence indique qu’il concerne l’information et la consultation du CSE lors d’un projet de vente d’un fonds de commerce. Son refus de conclure sur ce point est pleinement justifié par le contexte, qui ne contient pas cet article. Elle répond néanmoins effectivement à une part substantielle de la question, sans s’abstenir globalement."
+    },
+    "sourceJudge": {
+      "sourceRelevance": 3,
+      "sourceCoverage": 4,
+      "explanation": "La source D223-9 est directement pertinente pour les jours, horaires et la fréquence des appels. La source L223-1 est pertinente pour les conditions de consentement et l’exception liée à un contrat en cours. L’article L141-28 du code de commerce, expressément visé par la question, est absent : la source R2312-5 est seulement générale sur les délais de consultation du CSE et ne permet pas d’établir l’obligation spécifique évoquée. Néanmoins, la réponse générée n’affirme pas cette obligation et constate correctement l’absence de la disposition pertinente. Toutes ses affirmations substantielles sont ainsi étayées par les sources fournies ou par le constat vérifiable de cette absence."
+    },
+    "metrics": {
+      "correctness": 2,
+      "completeness": 2,
+      "groundedness": 4,
+      "sourceRelevance": 3,
+      "sourceCoverage": 4
+    }
+  },
+  "goldAddedImpact": "neutral"
+}

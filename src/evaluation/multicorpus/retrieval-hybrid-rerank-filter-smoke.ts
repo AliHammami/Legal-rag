@@ -2,7 +2,9 @@ import {
   goldArticlesMatch,
   type GoldArticle,
 } from '../gold-article.js';
+import { buildRagContext } from '../../generation/build-rag-context.js';
 import { dynamicContextFilter } from '../../generation/dynamic-context-filter.js';
+import type { RerankedChunk } from '../../reranking/types.js';
 import { DEFAULT_RELATIVE_SCORE_THRESHOLD } from '../../generation/constants.js';
 import { rerankChunks } from '../../reranking/rerank-chunks.js';
 import type { RerankerService } from '../../reranking/reranker.service.js';
@@ -332,6 +334,50 @@ function goldInChunks(
   chunks: Array<{ corpusId: string; articleNumber: string }>,
 ): boolean {
   return chunks.some((chunk) => goldArticlesMatch(gold, chunk));
+}
+
+/** Rebuild final RAG context from cached Jina top-5 + production dynamic filter (no Jina call). */
+export async function rebuildFilteredContextFromSmokeVariant(input: {
+  variant: HybridRerankFilterVariantResult;
+  routedCorpusIds: string[];
+}): Promise<{
+  chunks: RerankedChunk[];
+  context: string;
+  sources: ReturnType<typeof buildRagContext>['sources'];
+}> {
+  const rows: RankedRetrievalChunk[] = input.variant.jinaTop5.map((row) => ({
+    chunkId: row.chunkId,
+    corpusId: row.corpusId,
+    articleNumber: row.articleNumber,
+    distance: 0,
+    rank: row.rank,
+  }));
+  const similar = await hydrateRankedAsSimilar(rows);
+  const reranked: RerankedChunk[] = similar.map((chunk, index) => ({
+    ...chunk,
+    rerankScore: input.variant.jinaTop5[index]!.score,
+  }));
+  const filterCorpusIds =
+    input.routedCorpusIds.length > 1 ? input.routedCorpusIds : undefined;
+  const filtered = dynamicContextFilter(reranked, {
+    relativeScoreThreshold: DEFAULT_RELATIVE_SCORE_THRESHOLD,
+    routedCorpusIds: filterCorpusIds,
+  });
+  const built = buildRagContext(filtered);
+  return {
+    chunks: filtered,
+    context: built.context,
+    sources: built.sources,
+  };
+}
+
+export function finalContextChunkIdsEqual(left: string[], right: string[]): boolean {
+  if (left.length !== right.length) {
+    return false;
+  }
+  const sortedLeft = [...left].sort();
+  const sortedRight = [...right].sort();
+  return sortedLeft.every((id, index) => id === sortedRight[index]);
 }
 
 export function goldStageFlags(

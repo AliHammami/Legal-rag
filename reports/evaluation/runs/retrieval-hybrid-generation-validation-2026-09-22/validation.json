@@ -1,0 +1,1521 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-22T21:36:55.068Z",
+    "sources": [
+      "reports/evaluation/runs/retrieval-hybrid-rerank-filter-smoke-2026-09-22",
+      "reports/evaluation/runs/retrieval-hybrid-benchmark-2026-09-22/per-question.json"
+    ],
+    "cohort": {
+      "size": 20,
+      "skippedSameContext": 38,
+      "questionIds": [
+        "q170",
+        "q375",
+        "q382",
+        "q386",
+        "q401",
+        "q420",
+        "q003",
+        "q011",
+        "q102",
+        "q132",
+        "q157",
+        "q196",
+        "q238",
+        "q294",
+        "q360",
+        "q362",
+        "q381",
+        "q399",
+        "q400",
+        "q411"
+      ],
+      "tiers": {
+        "union_adds_gold": 6,
+        "context_diff_only": 14
+      }
+    },
+    "config": {
+      "embeddingModel": "text-embedding-3-large",
+      "rerankerModel": "jina-reranker-v3.5",
+      "generationModel": "gpt-5.6-luna",
+      "routingModel": "gpt-5.6-luna",
+      "judgeModel": "gpt-5.6-terra",
+      "retrievalTopK": 30,
+      "rerankTopK": 5,
+      "relativeScoreThreshold": 0.4,
+      "routingEnabled": true
+    },
+    "models": {
+      "generation": "gpt-5.6-luna",
+      "judge": "gpt-5.6-terra"
+    },
+    "apiCalls": {
+      "openai": 120,
+      "embedding": 0,
+      "llm": 0,
+      "generation": 40,
+      "judge": 40,
+      "sourceJudge": 40,
+      "jina": 0,
+      "productionModified": "NO"
+    }
+  },
+  "summary": {
+    "vector": {
+      "correctness": 2.15,
+      "completeness": 2.05,
+      "groundedness": 3.95,
+      "sourceRelevance": 2.5,
+      "sourceCoverage": 4
+    },
+    "union": {
+      "correctness": 2.7,
+      "completeness": 2.75,
+      "groundedness": 3.85,
+      "sourceRelevance": 3.2,
+      "sourceCoverage": 3.85
+    },
+    "delta": {
+      "correctness": 0.5500000000000003,
+      "completeness": 0.7000000000000002,
+      "groundedness": -0.10000000000000009,
+      "sourceRelevance": 0.7000000000000002,
+      "sourceCoverage": -0.1499999999999999
+    }
+  },
+  "goldAddedAnalysis": [
+    {
+      "questionId": "q170",
+      "goldAddedByUnion": [
+        "code-du-travail:L2262-1"
+      ],
+      "impact": "improves_answer",
+      "vectorJudge": {
+        "correctness": 1,
+        "completeness": 1,
+        "groundedness": 4,
+        "abstentionCorrect": false,
+        "explanation": "La réponse ne fournit pas la règle demandée à l'article L2262-1, selon laquelle l'application des conventions et accords est obligatoire pour les signataires ou les membres des organisations ou groupements signataires. Elle indique à la place qu'il manque au contexte et cite l'article L2262-4, qui porte sur l'exécution loyale et constitue une information connexe mais différente. Cette citation est fidèlement soutenue par le contexte, tout comme le constat que L2262-1 n'y figure pas. Toutefois, alors qu'une réponse était attendue, le modèle ne répond pas réellement à la question."
+      },
+      "unionJudge": {
+        "correctness": 4,
+        "completeness": 4,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse identifie exactement les personnes tenues : tous les signataires et les membres des organisations ou groupements signataires. La précision relative à l’extension ou à l’élargissement reprend fidèlement le texte du contexte. Elle répond directement à la question et est entièrement fondée sur la source 1."
+      },
+      "vectorAnswer": "L’article **L2262-1 du Code du travail** n’est pas fourni dans le contexte. Il n’est donc pas possible d’en restituer précisément le contenu.\n\nD’après les sources disponibles, les organisations syndicales et d’employeurs, ainsi que les employeurs individuellement, lorsqu’ils sont liés par une convention ou un accord, doivent en assurer une exécution loyale (**article L2262-4 du Code du travail [Source 1]**).",
+      "unionAnswer": "Selon l’article **L2262-1 du Code du travail**, l’application des conventions et accords est obligatoire pour :\n\n- **tous les signataires** ;\n- **les membres des organisations ou groupements signataires**.\n\nCette obligation s’applique sans préjudice des effets liés à l’extension ou à l’élargissement de ces conventions et accords. [Source 1]",
+      "vectorContext": "[Source 1 — Code du travail — Article L2262-4 — chunk 0]\nLes organisations de salariés et les organisations ou groupements d'employeurs, ou les employeurs pris\nindividuellement, liés par une convention ou un accord, sont tenus de ne rien faire qui soit de nature à en\ncompromettre l'exécution loyale. Ils ne sont garants de cette exécution que dans la mesure déterminée par la\nconvention ou l'accord.",
+      "unionContext": "[Source 1 — Code du travail — Article L2262-1 — chunk 0]\nSans préjudice des effets attachés à l'extension ou à l'élargissement, l'application des conventions et accords\nest obligatoire pour tous les signataires ou membres des organisations ou groupements signataires.\n\n[Source 2 — Code du travail — Article L2262-4 — chunk 0]\nLes organisations de salariés et les organisations ou groupements d'employ"
+    },
+    {
+      "questionId": "q375",
+      "goldAddedByUnion": [
+        "code-penal:132-70-3"
+      ],
+      "impact": "improves_answer",
+      "vectorJudge": {
+        "correctness": 2,
+        "completeness": 2,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse restitue correctement les obligations de contenu du contrat (R. 127-1) et le régime de responsabilité avant/après immatriculation prévu par L. 127-6. Elle ne répond toutefois pas au fond à la seconde partie : la référence attend la faculté pour la juridiction d'ajourner en imposant une consignation, avec fixation du montant, du délai et de la date de renvoi. Cette omission est justifiée au regard du contexte, qui ne contient aucune disposition pénale. Toutes les affirmations positives sont directement étayées par les deux sources fournies."
+      },
+      "unionJudge": {
+        "correctness": 4,
+        "completeness": 4,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse restitue correctement le régime de responsabilité prévu par l'article L. 127-6 (responsabilité envers les tiers avant immatriculation, garantie après immatriculation sous réserve du respect des clauses) ainsi que les pouvoirs de la juridiction au titre de l'article 132-70-3 (consignation, montant, délai maximal d'un an, échéancier possible et date de décision sur la peine). Les précisions sur le contenu du contrat (R. 127-1) et les dommages-intérêts à la victime (132-70-2) sont exactes, pertinentes et explicitement supportées par le contexte. La réponse répond effectivement à la question."
+      },
+      "vectorAnswer": "### Contrat d’appui au projet d’entreprise\n\nLe contrat doit définir :\n\n- les engagements respectifs des parties, en distinguant la période antérieure et postérieure au début de l’activité économique ;\n- les moyens mis à disposition du bénéficiaire et leurs conditions d’utilisation ;\n- les engagements du bénéficiaire envers les tiers, ainsi que la partie qui en assume la charge financière.\n\nCes éléments sont prévus par l’**article R. 127-1 du Code de commerce** [Source 2].\n\nLa responsabilité de la personne morale responsable de l’appui est ensuite répartie selon le moment où le dommage survient :\n\n- **avant l’immatriculation** : elle est responsable envers les tiers des dommages causés par le bénéficiaire à l’occasion du programme d’appui et de préparation ;\n- **après l’immatriculation** : elle garantit la responsabilité liée au contrat d’appui, à condition que le bénéficiaire ait respecté les clauses contractuelles jusqu’à la fin du contrat.\n\nCette règle résulte de l’**article L. 127-6 du Code de commerce** [Source 1].\n\n### Compétence de la juridiction en cas d’ajournement du prononcé et de consignation\n\nLe contexte fourni ne contient aucune disposition du **Code pénal** relative à l’ajournement du prononcé, à la consignation ou à la compétence de la juridiction compétente. Il ne permet donc pas de répondre à cette seconde partie.",
+      "unionAnswer": "### 1. Contrat d’appui au projet d’entreprise — Code de commerce\n\nLe contrat définit les engagements respectifs de la personne morale responsable de l’appui et du bénéficiaire. Il doit notamment préciser les moyens mis à disposition, la rétribution éventuelle de la personne morale ainsi que les engagements que le bénéficiaire peut prendre envers les tiers et la partie qui en assume la charge financière [Source 4].\n\nLa responsabilité de la personne morale varie selon la période :\n\n- **Avant l’immatriculation du bénéficiaire**, elle est responsable envers les tiers des dommages causés par celui-ci à l’occasion du programme d’appui et de préparation.\n- **Après l’immatriculation**, elle garantit la responsabilité liée au contrat d’appui, à condition que le bénéficiaire ait respecté les clauses contractuelles jusqu’au terme du contrat.\n\nCes règles résultent de l’**article L. 127-6 du Code de commerce** [Source 1].\n\n### 2. Ajournement du prononcé de la peine — Code pénal\n\nEn matière pénale, la juridiction dispose de la compétence pour ajourner le prononcé de la peine et soumettre la personne concernée à l’obligation de **consigner une somme d’argent** destinée à garantir le paiement éventuel d’une amende.\n\nElle :\n\n- fixe le montant de la consignation ;\n- détermine le délai de dépôt au greffe, qui ne peut dépasser **un an** ;\n- peut prévoir un paiement échelonné ;\n- fixe la date à laquelle la peine sera prononcée.\n\nLa décision sur la peine doit intervenir au plus tard dans l’année suivant la décision d’ajournement. Ces règles relèvent de l’**article 132-70-3 du Code pénal** [Source 2].\n\nPar ailleurs, lorsqu’elle ajourne le prononcé de la peine, la juridiction peut accorder immédiatement à la victime des dommages et intérêts, à titre provisionnel ou définitif, conformément à l’**article 132-70-2 du Code pénal** [Source 3].\n\nAinsi, le Code de commerce organise principalement la répartition contractuelle et la garantie des responsabilités envers les tiers, tandis que le Code pénal confie à la juridiction le pouvoir d’encadrer la consignation et de fixer les modalités et le calendrier de l’ajournement.",
+      "vectorContext": "[Source 1 — Code de commerce — Article L127-6 — chunk 0]\nLa situation professionnelle et sociale du bénéficiaire du contrat d'appui au projet d'entreprise est déterminée\npar les articles L. 783-1 et L. 783-2 du code du travail. La personne morale responsable de l'appui est\nresponsable à l'égard des tiers des dommages causés par le bénéficiaire à l'occasion du programme d'appui et\nde préparation me",
+      "unionContext": "[Source 1 — Code de commerce — Article L127-6 — chunk 0]\nLa situation professionnelle et sociale du bénéficiaire du contrat d'appui au projet d'entreprise est déterminée\npar les articles L. 783-1 et L. 783-2 du code du travail. La personne morale responsable de l'appui est\nresponsable à l'égard des tiers des dommages causés par le bénéficiaire à l'occasion du programme d'appui et\nde préparation me"
+    },
+    {
+      "questionId": "q382",
+      "goldAddedByUnion": [
+        "code-monetaire-et-financier:L171-3"
+      ],
+      "impact": "improves_answer",
+      "vectorJudge": {
+        "correctness": 3,
+        "completeness": 2,
+        "groundedness": 4,
+        "abstentionCorrect": false,
+        "explanation": "La réponse restitue correctement le régime de l’article 2427 : trois années d’intérêts et arrérages au rang du principal, nécessité d’inscriptions particulières prenant rang à leur date pour le surplus, et exception du prêt viager pour la totalité des intérêts. Elle ne répond toutefois pas au volet demandé sur les compétences prévues par l’article L. 171-3 du code monétaire et financier, alors que la référence indique que les amendes sont prononcées par l’autorité compétente selon les conditions du code de la consommation. Toutes les affirmations juridiques effectivement formulées sont étayées par le contexte, y compris la mention, quoique non pertinente, de la nullité tirée de la source 2."
+      },
+      "unionJudge": {
+        "correctness": 4,
+        "completeness": 4,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse restitue correctement le régime de l’article 2427 : colloque au rang du principal limité à trois années pour les intérêts et arrérages, nécessité d’inscriptions particulières pour le surplus prenant rang à leur date, et exception du prêt viager hypothécaire permettant le colloque de la totalité des intérêts au même rang que le principal. Elle décrit fidèlement les éléments pertinents de la définition du prêt viager de l’article L. 315-1 et indique exactement que les amendes de l’article L. 171-3 sont prononcées par l’autorité compétente selon les conditions du code de la consommation. Toutes les affirmations importantes sont étayées par le contexte."
+      },
+      "vectorAnswer": "L’article 2427 du Code civil prévoit une répartition des droits de colloque comme suit :\n\n- **Principal** : le créancier hypothécaire est colloqué au rang de son inscription pour le capital garanti.\n- **Intérêts et arrérages** : ils bénéficient du même rang que le principal, mais seulement **pendant trois années**.\n- **Au-delà de ces trois années** : des inscriptions hypothécaires particulières doivent être prises ; elles prennent rang **à compter de leur propre date**, et non à compter de l’inscription initiale.\n- **Exception — prêt viager hypothécaire** : lorsque l’hypothèque garantit un prêt viager hypothécaire défini à l’article L. 315-1 du Code de la consommation, le créancier peut être colloqué **pour la totalité des intérêts au même rang que le principal**. [Source 1 — Article 2427 du Code civil]\n\nPar ailleurs, l’article L. 341-53 du Code de la consommation prévoit que le non-respect des dispositions de l’article L. 315-3 est sanctionné par la **nullité du prêt viager hypothécaire**. [Source 2 — Article L. 341-53 du Code de la consommation]\n\nEn revanche, le contexte fourni ne contient pas l’article L. 171-3 du Code monétaire et financier. Il ne permet donc pas de déterminer les compétences de l’autorité saisie des amendes prévues par cet article.",
+      "unionAnswer": "### Droits de colloque du créancier hypothécaire\n\nL’article 2427 du Code civil distingue le **principal** des **intérêts et arrérages** :\n\n- En principe, le créancier hypothécaire inscrit pour un capital productif d’intérêts ou d’arrérages est colloqué **au même rang que le principal pour trois années seulement** d’intérêts et d’arrérages. [Source 1]\n- Pour les intérêts et arrérages excédant ces trois années, le créancier doit prendre des **inscriptions hypothécaires particulières**. Ces inscriptions ne prennent rang qu’à compter de leur propre date. [Source 1]\n- Par exception, lorsque l’hypothèque garantit un **prêt viager hypothécaire**, le créancier peut être colloqué **pour la totalité des intérêts au même rang que le principal**. [Source 1]\n\nCette exception concerne le contrat défini à l’article L. 315-1 du Code de la consommation : il s’agit d’un prêt accordé à une personne physique, garanti par une hypothèque sur un bien immobilier à usage exclusif d’habitation, dont le remboursement du principal et des intérêts capitalisés ne peut en principe être exigé qu’au décès de l’emprunteur ou en cas d’aliénation ou de démembrement du bien avant ce décès. [Source 3]\n\n### Compétence de l’autorité en matière d’amendes\n\nL’article L. 171-3 du Code monétaire et financier prévoit que les amendes mentionnées dans le chapitre concerné sont **prononcées par l’autorité compétente**, selon les conditions prévues au chapitre II du titre II du livre V du Code de la consommation. [Source 2]\n\nLe contexte fourni ne précise toutefois ni l’identité exacte de cette autorité ni l’étendue détaillée de ses pouvoirs ; il indique seulement la procédure et le renvoi applicables.",
+      "vectorContext": "[Source 1 — Code civil — Article 2427 — chunk 0]\nLe créancier hypothécaire inscrit pour un capital produisant intérêt et arrérages, a le droit d'être colloqué,\npour trois années seulement, au même rang que le principal, sans préjudice des inscriptions particulières à\nprendre, portant hypothèque à compter de leur date, pour les intérêts et arrérages autres que ceux conservés\npar l'inscription primi",
+      "unionContext": "[Source 1 — Code civil — Article 2427 — chunk 0]\nLe créancier hypothécaire inscrit pour un capital produisant intérêt et arrérages, a le droit d'être colloqué,\npour trois années seulement, au même rang que le principal, sans préjudice des inscriptions particulières à\nprendre, portant hypothèque à compter de leur date, pour les intérêts et arrérages autres que ceux conservés\npar l'inscription primi"
+    },
+    {
+      "questionId": "q386",
+      "goldAddedByUnion": [
+        "code-monetaire-et-financier:L312-1-1"
+      ],
+      "impact": "improves_answer",
+      "vectorJudge": {
+        "correctness": 3,
+        "completeness": 2,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse restitue correctement et de façon détaillée les obligations prévues pour les avis en ligne. Pour les comptes de dépôt, elle mentionne à juste titre, sur la base du contexte, la fourniture sur support papier ou durable des conditions de signature de la convention. Elle n’explicite toutefois pas l’élément central attendu relatif à la convention écrite précisant les conditions générales et tarifaires de gestion du compte, et présente assez vaguement le rôle complémentaire de ces règles. Toutes les affirmations substantielles sont néanmoins étayées par les deux sources fournies."
+      },
+      "unionJudge": {
+        "correctness": 4,
+        "completeness": 4,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse restitue correctement et de façon complète les obligations de l’article L. 111-7-2 (information loyale, claire et transparente, contrôle, date et mises à jour, motifs de rejet, signalement gratuit d’un doute sur l’authenticité) ainsi que celles de l’article L. 312-1-1 (mise à disposition des conditions générales et tarifaires sur support durable, convention écrite pour les particuliers, remise préalable, exception de la conclusion à distance et signature). Toutes les affirmations substantielles sont explicitement étayées par les deux sources fournies. Elle répond directement à la question et explique justement que les régimes sont distincts tout en poursuivant une logique de transparence."
+      },
+      "vectorAnswer": "Les personnes physiques ou morales qui collectent, modèrent ou diffusent des avis en ligne doivent fournir aux utilisateurs une information **loyale, claire et transparente** sur les modalités de publication et de traitement des avis. Elles doivent notamment :\n\n- préciser si les avis font l’objet d’un contrôle et, le cas échéant, en présenter les principales caractéristiques ;\n- afficher la date de chaque avis et de ses éventuelles mises à jour ;\n- indiquer aux consommateurs les raisons du rejet d’un avis non publié ;\n- proposer gratuitement aux responsables des produits ou services concernés une fonctionnalité permettant de signaler, de manière motivée, un doute sur l’authenticité d’un avis ;\n- respecter, en outre, les obligations d’information prévues par l’article 19 de la loi du 21 juin 2004 et par l’article L. 111-7 du Code de la consommation.\n\nCes obligations résultent de l’**article L. 111-7-2 du Code de la consommation** [Source 1]. Les modalités et le contenu des informations doivent être précisés par décret, après avis de la CNIL.\n\nS’agissant des établissements de crédit, les règles mentionnées sont d’une nature différente : l’**article L. 317-3 du Code monétaire et financier** rend applicables certaines dispositions relatives aux services de paiement et aux institutions ou services concernés, lesquelles sont d’ordre public. Il prévoit également que leurs modalités d’application sont précisées par décret en Conseil d’État [Source 2].\n\nPlus particulièrement, les établissements de crédit doivent fournir à leurs clients, **sur support papier ou sur tout autre support durable**, les conditions dans lesquelles la convention de compte de dépôt peut être signée [Source 2]. Ainsi, ces règles complètent le dispositif général par une exigence de mise à disposition durable des informations contractuelles relatives au compte de dépôt, mais elles ne portent pas sur la publication ou l’authenticité des avis en ligne.",
+      "unionAnswer": "Les obligations d’information sont de deux ordres.\n\n### 1. Personnes collectant, modérant ou diffusant des avis en ligne\n\nToute personne physique ou morale exerçant principalement ou accessoirement cette activité doit fournir aux utilisateurs une information **loyale, claire et transparente** sur les modalités de publication et de traitement des avis [Source 1].\n\nElle doit notamment :\n\n- préciser si les avis font l’objet d’un contrôle et, dans l’affirmative, présenter les principales caractéristiques de ce contrôle ;\n- afficher la date de publication de chaque avis ainsi que ses éventuelles mises à jour ;\n- expliquer aux consommateurs les raisons pour lesquelles un avis n’a pas été publié ;\n- mettre gratuitement à la disposition des responsables des produits ou services concernés une fonctionnalité permettant de signaler, de manière motivée, un doute sur l’authenticité d’un avis.\n\nCes obligations s’appliquent sans préjudice des autres obligations d’information prévues par l’article 19 de la loi du 21 juin 2004 et par l’article L. 111-7 du Code de la consommation. Les modalités et le contenu précis de l’information doivent être fixés par décret, après avis de la CNIL — **Article L. 111-7-2 du Code de la consommation [Source 1]**.\n\n### 2. Gestion des comptes de dépôt dans les établissements de crédit\n\nLes règles relatives aux comptes de dépôt imposent, dans un autre domaine, une information préalable et formalisée :\n\n- les établissements de crédit doivent mettre à disposition de leur clientèle et du public, sur papier ou sur un autre support durable, les conditions générales et tarifaires applicables à la gestion d’un compte de dépôt ;\n- pour les personnes physiques n’agissant pas à des fins professionnelles, la gestion du compte doit être encadrée par une convention écrite ;\n- cette convention doit notamment préciser les conditions générales et tarifaires d’ouverture, de fonctionnement et de clôture du compte ;\n- avant que le client ne soit engagé, l’établissement doit lui fournir ces conditions sur papier ou sur un support durable, éventuellement sous la forme d’un projet de convention ;\n- si la convention est conclue à distance à la demande du client dans des conditions empêchant cette remise préalable, l’établissement doit satisfaire à cette obligation immédiatement après la conclusion ;\n- l’acceptation est formalisée par la signature du ou des titulaires.\n\nCes exigences résultent de l’**article L. 312-1-1 du Code monétaire et financier [Source 2]**.\n\nAinsi, les règles sur les comptes de dépôt ne complètent pas directement le régime des avis en ligne : elles instituent un régime distinct d’information, centré sur la transparence des conditions bancaires, la remise préalable des documents et la formalisation contractuelle.",
+      "vectorContext": "[Source 1 — Code de la consommation — Article L111-7-2 — chunk 0]\nSans préjudice des obligations d'information prévues à l'article 19 de la loi n° 2004-575 du 21 juin 2004 pour\nla confiance dans l'économie numérique et à l'article L. 111-7 du présent code, toute personne physique ou\nmorale dont l'activité consiste, à titre principal ou accessoire, à collecter, à modérer ou à diffuser des avis\nen l",
+      "unionContext": "[Source 1 — Code de la consommation — Article L111-7-2 — chunk 0]\nSans préjudice des obligations d'information prévues à l'article 19 de la loi n° 2004-575 du 21 juin 2004 pour\nla confiance dans l'économie numérique et à l'article L. 111-7 du présent code, toute personne physique ou\nmorale dont l'activité consiste, à titre principal ou accessoire, à collecter, à modérer ou à diffuser des avis\nen l"
+    },
+    {
+      "questionId": "q401",
+      "goldAddedByUnion": [
+        "code-monetaire-et-financier:L221-32"
+      ],
+      "impact": "improves_answer",
+      "vectorJudge": {
+        "correctness": 2,
+        "completeness": 2,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La partie sur D. 314-23 est globalement correcte et détaille fidèlement les voies du diplôme et de la formation adaptée. L'ajout sur le délai de six mois est également exact, bien qu'il relève de D. 314-24. Pour L. 221-32, la réponse n'énonce pas les règles de retrait demandées (clôture avant cinq ans et exceptions) : elle indique à juste titre que le texte n'est pas présent dans le contexte, ce qui rend cette partie incomplète au regard de la référence, mais pleinement fondée au regard des sources réellement fournies. Il ne s'agit pas d'une abstention globale puisque la première partie répond à la question et la limite documentaire est explicitée pour la seconde."
+      },
+      "unionJudge": {
+        "correctness": 4,
+        "completeness": 4,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse expose correctement les deux voies de compétence prévues par l'article D. 314-23 (diplôme qualifié ou formation adaptée), avec les précisions pertinentes sur les diplômes français et étrangers. Elle restitue aussi fidèlement le régime des retraits du PEA : absence de clôture après cinq ans, clôture de principe avant cinq ans et exceptions liées à la création/reprise d'entreprise ainsi qu'au licenciement, à l'invalidité ou à la retraite anticipée. Les précisions supplémentaires sur le délai de six mois et le PEA-PME sont explicitement soutenues par le contexte."
+      },
+      "vectorAnswer": "### 1. Compétence professionnelle des personnels des prêteurs\n\nSelon l’**article D. 314-23 du Code de la consommation**, les prêteurs et intermédiaires de crédit doivent s’assurer que les personnels concernés remplissent l’une des conditions suivantes :\n\n- **Être titulaires d’un diplôme approprié**, notamment dans les domaines de la finance, de la banque, de la gestion, de l’économie, du droit ou de l’assurance, correspondant au niveau requis.  \n  - Un diplôme obtenu en France doit notamment être enregistré au répertoire national des certifications professionnelles ou être délivré au nom de l’État.\n  - Un diplôme obtenu à l’étranger doit être reconnu par le Centre ENIC-NARIC France au moyen d’une attestation de comparabilité [Source 3].\n\n- **Avoir suivi une formation professionnelle adaptée** à la réalisation d’opérations de crédit :\n  - auprès d’un établissement de crédit ou d’une société de financement ;\n  - ou auprès d’un organisme de formation choisi dans les conditions prévues par le texte [Source 3].\n\nEn outre, les personnels doivent en principe satisfaire à cette obligation dès leur prise de fonction. Un délai de six mois est toutefois prévu lorsqu’ils occupent un poste adapté sous la responsabilité d’une personne remplissant elle-même les conditions requises (**article D. 314-24 du Code de la consommation**) [Source 2].\n\n### 2. Retraits sur un plan d’épargne en actions\n\nLe contenu de l’**article L. 221-32 du Code monétaire et financier** n’est pas reproduit dans les sources fournies. Il n’est donc pas possible de préciser les règles applicables aux retraits — notamment leurs effets ou leurs éventuelles exceptions — à partir du seul contexte disponible.\n\nLa seule règle fournie est que l’article L. 221-32 est également applicable au **plan d’épargne en actions destiné au financement des petites et moyennes entreprises et des entreprises de taille intermédiaire**, en vertu de l’**article L. 221-32-3 du Code monétaire et financier** [Source 1].",
+      "unionAnswer": "### 1. Compétence professionnelle des personnels des prêteurs et intermédiaires\n\nSelon l’**article D. 314-23 du Code de la consommation**, les prêteurs et intermédiaires de crédit doivent veiller à ce que leurs personnels disposent de compétences professionnelles résultant de l’une des voies suivantes :\n\n- **un diplôme approprié**, notamment :\n  - un diplôme prévu par l’accord de formation professionnelle applicable au secteur bancaire, à l’exception du BP banque ;\n  - un diplôme d’études supérieures de niveau 5 portant notamment sur la finance, la banque, la gestion, l’économie, le droit ou l’assurance ;\n  - un diplôme de commerce de niveau I ;\n- ou **une formation professionnelle adaptée aux opérations de crédit**, suivie auprès :\n  - d’un établissement de crédit ou d’une société de financement ;\n  - ou d’un organisme de formation répondant aux conditions prévues par le texte.\n\nLes diplômes français doivent notamment être enregistrés au répertoire national des certifications professionnelles ou être délivrés au nom de l’État. Les diplômes étrangers doivent être reconnus par le Centre ENIC-NARIC France au moyen d’une attestation de comparabilité. **Article D. 314-23 du Code de la consommation [Source 4].**\n\nEn outre, cette obligation de formation doit en principe être satisfaite dès la prise de fonction. Un délai de six mois est toutefois prévu si le salarié occupe un poste adapté et exerce sous la responsabilité d’une personne compétente. **Article D. 314-24 du Code de la consommation [Source 3].**\n\n### 2. Règles applicables aux retraits sur un plan d’épargne en actions\n\n- **Après la cinquième année**, les retraits partiels de sommes ou de valeurs n’entraînent pas la clôture du plan.\n- **Avant l’expiration de la cinquième année**, tout retrait entraîne en principe la clôture du plan.\n\nDeux principales exceptions sont prévues avant l’expiration de ce délai :\n\n1. **Création ou reprise d’une entreprise** : le retrait peut ne pas entraîner la clôture si les sommes sont affectées, dans les trois mois, au financement de cette création ou reprise, dans les conditions prévues par l’article. Toutefois, aucun versement ne peut être effectué après le premier retrait ou rachat.\n\n2. **Événements affectant le titulaire ou son conjoint ou partenaire de PACS** : les retraits peuvent également être réalisés sans clôture lorsqu’ils résultent du licenciement, de l’invalidité mentionnée par le texte ou de la mise à la retraite anticipée.\n\nCes règles figurent à l’**article L. 221-32 du Code monétaire et financier [Source 1]**. Elles sont également applicables au PEA destiné au financement des PME et des entreprises de taille intermédiaire en vertu de l’**article L. 221-32-3 du Code monétaire et financier [Source 2]**.",
+      "vectorContext": "[Source 1 — Code monétaire et financier — Article L221-32-3 — chunk 0]\nLes II et III de l'article L. 221-31 et l'article L. 221-32 sont applicables au plan d'épargne en actions destiné\nau financement des petites et moyennes entreprises et des entreprises de taille intermédiaire.\n\n[Source 2 — Code de la consommation — Article D314-24 — chunk 0]\nLes prêteurs et les intermédiaires veillent à ce que l",
+      "unionContext": "[Source 1 — Code monétaire et financier — Article L221-32 — chunk 0]\nI. - Au-delà de la cinquième année, les retraits partiels de sommes ou de valeurs et, s'agissant des contrats de capitalisation, les rachats partiels n'entraînent pas la clôture du plan d'épargne en actions.\n\nII. - Avant l'expiration de la cinquième année, tout retrait de sommes ou de valeurs figurant sur le plan ou tout rachat e"
+    },
+    {
+      "questionId": "q420",
+      "goldAddedByUnion": [
+        "code-penal:131-1"
+      ],
+      "impact": "improves_answer",
+      "vectorJudge": {
+        "correctness": 2,
+        "completeness": 2,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse décrit correctement le rôle du Conseil national : mise en œuvre et tenue, comme mission de service public, du fichier national automatisé des interdits de gérer afin notamment de lutter contre les fraudes et d’assurer l’exécution des interdictions. En revanche, elle ne répond pas à la question sur les peines criminelles applicables aux personnes physiques : elle cite des peines correctionnelles spécifiques de l’article 717-2 (emprisonnement et amende pour manipulation de prix), au lieu des durées de réclusion ou de détention criminelle attendues. Les affirmations produites sont néanmoins intégralement étayées par les sources fournies."
+      },
+      "unionJudge": {
+        "correctness": 4,
+        "completeness": 4,
+        "groundedness": 4,
+        "abstentionCorrect": true,
+        "explanation": "La réponse décrit exactement le rôle du Conseil national via le fichier national automatisé des interdits de gérer, sa finalité antifraude et d'exécution des interdictions, ainsi que les catégories de mesures inscrites. Elle énumère exhaustivement les quatre peines criminelles prévues pour les personnes physiques et la durée minimale de dix ans pour les peines à temps. Toutes ces affirmations sont explicitement étayées par les sources 1 et 2 du contexte."
+      },
+      "vectorAnswer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre un **fichier national automatisé des interdits de gérer**. Ce fichier vise notamment à prévenir certaines infractions, à favoriser l’exécution des interdictions de gérer et à lutter contre les fraudes. Sa tenue constitue une mission de service public assurée par le Conseil national, à ses frais et sous sa responsabilité. [Source 1]\n\nLe fichier recense les faillites personnelles ainsi que les interdictions de diriger, gérer, administrer ou contrôler une entreprise ou une personne morale, lorsqu’elles résultent de décisions juridictionnelles passées en force de chose jugée. Il mentionne également le jugement ou l’arrêt ayant prononcé la mesure. Les sanctions disciplinaires n’y sont pas inscrites. [Source 1]\n\nConcernant les personnes physiques, l’**Article 717-2 du Code pénal [Source 3]** prévoit, pour les manœuvres frauduleuses destinées à provoquer artificiellement la hausse ou la baisse des prix :\n\n- **deux ans d’emprisonnement et 30 000 euros d’amende** ;\n- lorsque les produits concernés sont alimentaires : **trois ans d’emprisonnement et 45 000 euros d’amende**.\n\nDes peines complémentaires sont également encourues : l’interdiction des droits civiques, civils et de famille, ainsi que l’affichage ou la diffusion de la décision prononcée. [Source 3]",
+      "unionAnswer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre, sous sa responsabilité et à ses frais, un **fichier national automatisé des interdits de gérer**. Ce fichier vise notamment à prévenir certaines infractions et à favoriser l’exécution des interdictions de gérer prononcées par les juridictions. Il recense les faillites personnelles et les interdictions judiciaires de diriger, gérer, administrer ou contrôler certaines entreprises, lorsqu’elles résultent de décisions passées en force de chose jugée. **Article L. 128-1 du Code de commerce [Source 1].**\n\nLes peines criminelles encourues par les personnes physiques sont :\n\n1. la réclusion ou la détention criminelle à perpétuité ;\n2. la réclusion ou la détention criminelle de trente ans au plus ;\n3. la réclusion ou la détention criminelle de vingt ans au plus ;\n4. la réclusion ou la détention criminelle de quinze ans au plus.\n\nLa réclusion ou la détention criminelle à temps ne peut être inférieure à dix ans. **Article 131-1 du Code pénal [Source 2].**",
+      "vectorContext": "[Source 1 — Code de commerce — Article L128-1 — chunk 0]\nAfin de lutter contre les fraudes, de prévenir la commission des infractions prévues aux articles 434-40-1\ndu code pénal et L. 654-15 du présent code et de favoriser l'exécution des mesures d'interdiction de gérer\nprononcées par les juridictions judiciaires, le Conseil national des greffiers des tribunaux de commerce est\nautorisé à mettre en",
+      "unionContext": "[Source 1 — Code de commerce — Article L128-1 — chunk 0]\nAfin de lutter contre les fraudes, de prévenir la commission des infractions prévues aux articles 434-40-1\ndu code pénal et L. 654-15 du présent code et de favoriser l'exécution des mesures d'interdiction de gérer\nprononcées par les juridictions judiciaires, le Conseil national des greffiers des tribunaux de commerce est\nautorisé à mettre en"
+    }
+  ],
+  "decision": {
+    "category": "HYBRID_IMPROVES_ANSWERS",
+    "rationale": "Union bat Vector en moyenne (correctness 0.55, completeness 0.70).",
+    "recommendation": "? mini test de non-regression production\n? puis eventuelle integration hybrid"
+  },
+  "perQuestion": [
+    {
+      "questionId": "q170",
+      "tier": "union_adds_gold",
+      "goldAddedByUnion": [
+        "code-du-travail:L2262-1"
+      ],
+      "vectorContextChunkIds": [
+        "L2262-4#0",
+        "L2261-3#0"
+      ],
+      "unionContextChunkIds": [
+        "L2262-1#0",
+        "L2262-4#0",
+        "R2262-1#0",
+        "L2261-3#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2262-4 — chunk 0]\nLes organisations de salariés et les organisations ou groupements d'employeurs, ou les employeurs pris\nindividuellement, liés par une convention ou un accord, sont tenus de ne rien faire qui soit de nature à en\ncompromettre l'exécution loyale. Ils ne sont garants de cette exécution que dans la mesure déterminée par la\nconvention ou l'accord.",
+        "answer": "L’article **L2262-1 du Code du travail** n’est pas fourni dans le contexte. Il n’est donc pas possible d’en restituer précisément le contenu.\n\nD’après les sources disponibles, les organisations syndicales et d’employeurs, ainsi que les employeurs individuellement, lorsqu’ils sont liés par une convention ou un accord, doivent en assurer une exécution loyale (**article L2262-4 du Code du travail [Source 1]**).",
+        "judge": {
+          "correctness": 1,
+          "completeness": 1,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne fournit pas la règle demandée à l'article L2262-1, selon laquelle l'application des conventions et accords est obligatoire pour les signataires ou les membres des organisations ou groupements signataires. Elle indique à la place qu'il manque au contexte et cite l'article L2262-4, qui porte sur l'exécution loyale et constitue une information connexe mais différente. Cette citation est fidèlement soutenue par le contexte, tout comme le constat que L2262-1 n'y figure pas. Toutefois, alors qu'une réponse était attendue, le modèle ne répond pas réellement à la question."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente pour l'affirmation effectivement formulée sur l'obligation de ne pas compromettre l'exécution loyale d'une convention ou d'un accord. Toutefois, elle ne contient pas l'article L2262-1 ni la règle précise demandée sur les signataires et les membres des organisations ou groupements signataires ; les sources sont donc insuffisantes pour répondre directement à la question. La réponse générée est néanmoins presque entièrement couverte par les sources : l'absence de L2262-1 dans le contexte justifie le constat d'impossibilité de le restituer précisément, et l'énoncé relatif à L2262-4 est fidèlement repris de la source 1."
+        },
+        "metrics": {
+          "correctness": 1,
+          "completeness": 1,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2262-1 — chunk 0]\nSans préjudice des effets attachés à l'extension ou à l'élargissement, l'application des conventions et accords\nest obligatoire pour tous les signataires ou membres des organisations ou groupements signataires.\n\n[Source 2 — Code du travail — Article L2262-4 — chunk 0]\nLes organisations de salariés et les organisations ou groupements d'employ",
+        "answer": "Selon l’article **L2262-1 du Code du travail**, l’application des conventions et accords est obligatoire pour :\n\n- **tous les signataires** ;\n- **les membres des organisations ou groupements signataires**.\n\nCette obligation s’applique sans préjudice des effets liés à l’extension ou à l’élargissement de ces conventions et accords. [Source 1]",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse identifie exactement les personnes tenues : tous les signataires et les membres des organisations ou groupements signataires. La précision relative à l’extension ou à l’élargissement reprend fidèlement le texte du contexte. Elle répond directement à la question et est entièrement fondée sur la source 1."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 reproduit directement l’article L2262-1 et répond exactement à la question. Elle couvre l’ensemble des affirmations importantes de la réponse générée : l’obligation pour tous les signataires et pour les membres des organisations ou groupements signataires, ainsi que la réserve relative aux effets de l’extension ou de l’élargissement."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "improves_answer"
+    },
+    {
+      "questionId": "q375",
+      "tier": "union_adds_gold",
+      "goldAddedByUnion": [
+        "code-penal:132-70-3"
+      ],
+      "vectorContextChunkIds": [
+        "L127-6#0",
+        "R127-1#0"
+      ],
+      "unionContextChunkIds": [
+        "L127-6#0",
+        "132-70-3#0",
+        "132-70-2#0",
+        "R127-1#0",
+        "132-60#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L127-6 — chunk 0]\nLa situation professionnelle et sociale du bénéficiaire du contrat d'appui au projet d'entreprise est déterminée\npar les articles L. 783-1 et L. 783-2 du code du travail. La personne morale responsable de l'appui est\nresponsable à l'égard des tiers des dommages causés par le bénéficiaire à l'occasion du programme d'appui et\nde préparation me",
+        "answer": "### Contrat d’appui au projet d’entreprise\n\nLe contrat doit définir :\n\n- les engagements respectifs des parties, en distinguant la période antérieure et postérieure au début de l’activité économique ;\n- les moyens mis à disposition du bénéficiaire et leurs conditions d’utilisation ;\n- les engagements du bénéficiaire envers les tiers, ainsi que la partie qui en assume la charge financière.\n\nCes éléments sont prévus par l’**article R. 127-1 du Code de commerce** [Source 2].\n\nLa responsabilité de la personne morale responsable de l’appui est ensuite répartie selon le moment où le dommage survient :\n\n- **avant l’immatriculation** : elle est responsable envers les tiers des dommages causés par le bénéficiaire à l’occasion du programme d’appui et de préparation ;\n- **après l’immatriculation** : elle garantit la responsabilité liée au contrat d’appui, à condition que le bénéficiaire ait respecté les clauses contractuelles jusqu’à la fin du contrat.\n\nCette règle résulte de l’**article L. 127-6 du Code de commerce** [Source 1].\n\n### Compétence de la juridiction en cas d’ajournement du prononcé et de consignation\n\nLe contexte fourni ne contient aucune disposition du **Code pénal** relative à l’ajournement du prononcé, à la consignation ou à la compétence de la juridiction compétente. Il ne permet donc pas de répondre à cette seconde partie.",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement les obligations de contenu du contrat (R. 127-1) et le régime de responsabilité avant/après immatriculation prévu par L. 127-6. Elle ne répond toutefois pas au fond à la seconde partie : la référence attend la faculté pour la juridiction d'ajourner en imposant une consignation, avec fixation du montant, du délai et de la date de renvoi. Cette omission est justifiée au regard du contexte, qui ne contient aucune disposition pénale. Toutes les affirmations positives sont directement étayées par les deux sources fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les deux sources sont directement pertinentes pour la partie relative au contrat d’appui : R. 127-1 couvre le contenu et les engagements du contrat, et L. 127-6 couvre le régime de responsabilité avant et après immatriculation. En revanche, aucune source ne porte sur le Code pénal, l’ajournement du prononcé ou la consignation, ce qui laisse une partie importante de la question sans source de fond. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : les développements commerciaux sont étayés par les sources et le constat d’absence de disposition pénale dans le contexte fourni est cohérent avec les sources disponibles."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L127-6 — chunk 0]\nLa situation professionnelle et sociale du bénéficiaire du contrat d'appui au projet d'entreprise est déterminée\npar les articles L. 783-1 et L. 783-2 du code du travail. La personne morale responsable de l'appui est\nresponsable à l'égard des tiers des dommages causés par le bénéficiaire à l'occasion du programme d'appui et\nde préparation me",
+        "answer": "### 1. Contrat d’appui au projet d’entreprise — Code de commerce\n\nLe contrat définit les engagements respectifs de la personne morale responsable de l’appui et du bénéficiaire. Il doit notamment préciser les moyens mis à disposition, la rétribution éventuelle de la personne morale ainsi que les engagements que le bénéficiaire peut prendre envers les tiers et la partie qui en assume la charge financière [Source 4].\n\nLa responsabilité de la personne morale varie selon la période :\n\n- **Avant l’immatriculation du bénéficiaire**, elle est responsable envers les tiers des dommages causés par celui-ci à l’occasion du programme d’appui et de préparation.\n- **Après l’immatriculation**, elle garantit la responsabilité liée au contrat d’appui, à condition que le bénéficiaire ait respecté les clauses contractuelles jusqu’au terme du contrat.\n\nCes règles résultent de l’**article L. 127-6 du Code de commerce** [Source 1].\n\n### 2. Ajournement du prononcé de la peine — Code pénal\n\nEn matière pénale, la juridiction dispose de la compétence pour ajourner le prononcé de la peine et soumettre la personne concernée à l’obligation de **consigner une somme d’argent** destinée à garantir le paiement éventuel d’une amende.\n\nElle :\n\n- fixe le montant de la consignation ;\n- détermine le délai de dépôt au greffe, qui ne peut dépasser **un an** ;\n- peut prévoir un paiement échelonné ;\n- fixe la date à laquelle la peine sera prononcée.\n\nLa décision sur la peine doit intervenir au plus tard dans l’année suivant la décision d’ajournement. Ces règles relèvent de l’**article 132-70-3 du Code pénal** [Source 2].\n\nPar ailleurs, lorsqu’elle ajourne le prononcé de la peine, la juridiction peut accorder immédiatement à la victime des dommages et intérêts, à titre provisionnel ou définitif, conformément à l’**article 132-70-2 du Code pénal** [Source 3].\n\nAinsi, le Code de commerce organise principalement la répartition contractuelle et la garantie des responsabilités envers les tiers, tandis que le Code pénal confie à la juridiction le pouvoir d’encadrer la consignation et de fixer les modalités et le calendrier de l’ajournement.",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement le régime de responsabilité prévu par l'article L. 127-6 (responsabilité envers les tiers avant immatriculation, garantie après immatriculation sous réserve du respect des clauses) ainsi que les pouvoirs de la juridiction au titre de l'article 132-70-3 (consignation, montant, délai maximal d'un an, échéancier possible et date de décision sur la peine). Les précisions sur le contenu du contrat (R. 127-1) et les dommages-intérêts à la victime (132-70-2) sont exactes, pertinentes et explicitement supportées par le contexte. La réponse répond effectivement à la question."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les sources 1 et 2 sont directement centrales pour les deux volets de la question et étayent les règles de responsabilité avant/après immatriculation ainsi que les pouvoirs de consignation de la juridiction. La source 4 soutient les précisions sur le contenu du contrat, et la source 3 couvre l'affirmation complémentaire sur les dommages-intérêts à la victime. Toutes les affirmations juridiques importantes de la réponse sont ainsi couvertes."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "improves_answer"
+    },
+    {
+      "questionId": "q382",
+      "tier": "union_adds_gold",
+      "goldAddedByUnion": [
+        "code-monetaire-et-financier:L171-3"
+      ],
+      "vectorContextChunkIds": [
+        "2427#0",
+        "L341-53#0"
+      ],
+      "unionContextChunkIds": [
+        "2427#0",
+        "L171-3#0",
+        "L315-1#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code civil — Article 2427 — chunk 0]\nLe créancier hypothécaire inscrit pour un capital produisant intérêt et arrérages, a le droit d'être colloqué,\npour trois années seulement, au même rang que le principal, sans préjudice des inscriptions particulières à\nprendre, portant hypothèque à compter de leur date, pour les intérêts et arrérages autres que ceux conservés\npar l'inscription primi",
+        "answer": "L’article 2427 du Code civil prévoit une répartition des droits de colloque comme suit :\n\n- **Principal** : le créancier hypothécaire est colloqué au rang de son inscription pour le capital garanti.\n- **Intérêts et arrérages** : ils bénéficient du même rang que le principal, mais seulement **pendant trois années**.\n- **Au-delà de ces trois années** : des inscriptions hypothécaires particulières doivent être prises ; elles prennent rang **à compter de leur propre date**, et non à compter de l’inscription initiale.\n- **Exception — prêt viager hypothécaire** : lorsque l’hypothèque garantit un prêt viager hypothécaire défini à l’article L. 315-1 du Code de la consommation, le créancier peut être colloqué **pour la totalité des intérêts au même rang que le principal**. [Source 1 — Article 2427 du Code civil]\n\nPar ailleurs, l’article L. 341-53 du Code de la consommation prévoit que le non-respect des dispositions de l’article L. 315-3 est sanctionné par la **nullité du prêt viager hypothécaire**. [Source 2 — Article L. 341-53 du Code de la consommation]\n\nEn revanche, le contexte fourni ne contient pas l’article L. 171-3 du Code monétaire et financier. Il ne permet donc pas de déterminer les compétences de l’autorité saisie des amendes prévues par cet article.",
+        "judge": {
+          "correctness": 3,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse restitue correctement le régime de l’article 2427 : trois années d’intérêts et arrérages au rang du principal, nécessité d’inscriptions particulières prenant rang à leur date pour le surplus, et exception du prêt viager pour la totalité des intérêts. Elle ne répond toutefois pas au volet demandé sur les compétences prévues par l’article L. 171-3 du code monétaire et financier, alors que la référence indique que les amendes sont prononcées par l’autorité compétente selon les conditions du code de la consommation. Toutes les affirmations juridiques effectivement formulées sont étayées par le contexte, y compris la mention, quoique non pertinente, de la nullité tirée de la source 2."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente et couvre le régime de colloque prévu à l'article 2427, y compris l'exception du prêt viager. La source 2 étaye bien l'affirmation ajoutée sur la nullité, mais elle est sans lien avec les compétences de l'autorité prononçant les amendes. Aucune source ne fournit le contenu de l'article L. 171-3 du code monétaire et financier, ce qui constitue une lacune importante au regard de la question. En revanche, les affirmations effectivement formulées dans la réponse générée sont toutes étayées par les sources ou par l'absence constatée de l'article L. 171-3 dans le contexte."
+        },
+        "metrics": {
+          "correctness": 3,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code civil — Article 2427 — chunk 0]\nLe créancier hypothécaire inscrit pour un capital produisant intérêt et arrérages, a le droit d'être colloqué,\npour trois années seulement, au même rang que le principal, sans préjudice des inscriptions particulières à\nprendre, portant hypothèque à compter de leur date, pour les intérêts et arrérages autres que ceux conservés\npar l'inscription primi",
+        "answer": "### Droits de colloque du créancier hypothécaire\n\nL’article 2427 du Code civil distingue le **principal** des **intérêts et arrérages** :\n\n- En principe, le créancier hypothécaire inscrit pour un capital productif d’intérêts ou d’arrérages est colloqué **au même rang que le principal pour trois années seulement** d’intérêts et d’arrérages. [Source 1]\n- Pour les intérêts et arrérages excédant ces trois années, le créancier doit prendre des **inscriptions hypothécaires particulières**. Ces inscriptions ne prennent rang qu’à compter de leur propre date. [Source 1]\n- Par exception, lorsque l’hypothèque garantit un **prêt viager hypothécaire**, le créancier peut être colloqué **pour la totalité des intérêts au même rang que le principal**. [Source 1]\n\nCette exception concerne le contrat défini à l’article L. 315-1 du Code de la consommation : il s’agit d’un prêt accordé à une personne physique, garanti par une hypothèque sur un bien immobilier à usage exclusif d’habitation, dont le remboursement du principal et des intérêts capitalisés ne peut en principe être exigé qu’au décès de l’emprunteur ou en cas d’aliénation ou de démembrement du bien avant ce décès. [Source 3]\n\n### Compétence de l’autorité en matière d’amendes\n\nL’article L. 171-3 du Code monétaire et financier prévoit que les amendes mentionnées dans le chapitre concerné sont **prononcées par l’autorité compétente**, selon les conditions prévues au chapitre II du titre II du livre V du Code de la consommation. [Source 2]\n\nLe contexte fourni ne précise toutefois ni l’identité exacte de cette autorité ni l’étendue détaillée de ses pouvoirs ; il indique seulement la procédure et le renvoi applicables.",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement le régime de l’article 2427 : colloque au rang du principal limité à trois années pour les intérêts et arrérages, nécessité d’inscriptions particulières pour le surplus prenant rang à leur date, et exception du prêt viager hypothécaire permettant le colloque de la totalité des intérêts au même rang que le principal. Elle décrit fidèlement les éléments pertinents de la définition du prêt viager de l’article L. 315-1 et indique exactement que les amendes de l’article L. 171-3 sont prononcées par l’autorité compétente selon les conditions du code de la consommation. Toutes les affirmations importantes sont étayées par le contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les trois sources sont directement pertinentes : l'article 2427 couvre la règle des trois années, les inscriptions particulières et l'exception du prêt viager ; l'article L. 315-1 définit ce prêt ; l'article L. 171-3 établit la compétence de l'autorité et le renvoi procédural. Elles étayent toutes les affirmations importantes de la réponse, y compris la réserve selon laquelle l'identité et les pouvoirs détaillés de l'autorité ne sont pas précisés par l'extrait."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "improves_answer"
+    },
+    {
+      "questionId": "q386",
+      "tier": "union_adds_gold",
+      "goldAddedByUnion": [
+        "code-monetaire-et-financier:L312-1-1"
+      ],
+      "vectorContextChunkIds": [
+        "L111-7-2#0",
+        "L317-3#0"
+      ],
+      "unionContextChunkIds": [
+        "L111-7-2#0",
+        "L312-1-1#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article L111-7-2 — chunk 0]\nSans préjudice des obligations d'information prévues à l'article 19 de la loi n° 2004-575 du 21 juin 2004 pour\nla confiance dans l'économie numérique et à l'article L. 111-7 du présent code, toute personne physique ou\nmorale dont l'activité consiste, à titre principal ou accessoire, à collecter, à modérer ou à diffuser des avis\nen l",
+        "answer": "Les personnes physiques ou morales qui collectent, modèrent ou diffusent des avis en ligne doivent fournir aux utilisateurs une information **loyale, claire et transparente** sur les modalités de publication et de traitement des avis. Elles doivent notamment :\n\n- préciser si les avis font l’objet d’un contrôle et, le cas échéant, en présenter les principales caractéristiques ;\n- afficher la date de chaque avis et de ses éventuelles mises à jour ;\n- indiquer aux consommateurs les raisons du rejet d’un avis non publié ;\n- proposer gratuitement aux responsables des produits ou services concernés une fonctionnalité permettant de signaler, de manière motivée, un doute sur l’authenticité d’un avis ;\n- respecter, en outre, les obligations d’information prévues par l’article 19 de la loi du 21 juin 2004 et par l’article L. 111-7 du Code de la consommation.\n\nCes obligations résultent de l’**article L. 111-7-2 du Code de la consommation** [Source 1]. Les modalités et le contenu des informations doivent être précisés par décret, après avis de la CNIL.\n\nS’agissant des établissements de crédit, les règles mentionnées sont d’une nature différente : l’**article L. 317-3 du Code monétaire et financier** rend applicables certaines dispositions relatives aux services de paiement et aux institutions ou services concernés, lesquelles sont d’ordre public. Il prévoit également que leurs modalités d’application sont précisées par décret en Conseil d’État [Source 2].\n\nPlus particulièrement, les établissements de crédit doivent fournir à leurs clients, **sur support papier ou sur tout autre support durable**, les conditions dans lesquelles la convention de compte de dépôt peut être signée [Source 2]. Ainsi, ces règles complètent le dispositif général par une exigence de mise à disposition durable des informations contractuelles relatives au compte de dépôt, mais elles ne portent pas sur la publication ou l’authenticité des avis en ligne.",
+        "judge": {
+          "correctness": 3,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement et de façon détaillée les obligations prévues pour les avis en ligne. Pour les comptes de dépôt, elle mentionne à juste titre, sur la base du contexte, la fourniture sur support papier ou durable des conditions de signature de la convention. Elle n’explicite toutefois pas l’élément central attendu relatif à la convention écrite précisant les conditions générales et tarifaires de gestion du compte, et présente assez vaguement le rôle complémentaire de ces règles. Toutes les affirmations substantielles sont néanmoins étayées par les deux sources fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente et couvre précisément les obligations applicables à la collecte, modération et diffusion d’avis en ligne. La source 2 est pertinente pour l’exigence de fourniture sur support papier ou durable des conditions de signature de la convention de compte et pour le caractère d’ordre public de certaines règles. Toutefois, elle ne reproduit pas le contenu du I de l’article L. 312-1-1, notamment les conditions générales et tarifaires de gestion du compte de dépôt évoquées par la question : la pertinence d’ensemble est donc partielle. Les affirmations substantielles effectivement formulées dans la réponse générée sont néanmoins étayées par les deux extraits fournis."
+        },
+        "metrics": {
+          "correctness": 3,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article L111-7-2 — chunk 0]\nSans préjudice des obligations d'information prévues à l'article 19 de la loi n° 2004-575 du 21 juin 2004 pour\nla confiance dans l'économie numérique et à l'article L. 111-7 du présent code, toute personne physique ou\nmorale dont l'activité consiste, à titre principal ou accessoire, à collecter, à modérer ou à diffuser des avis\nen l",
+        "answer": "Les obligations d’information sont de deux ordres.\n\n### 1. Personnes collectant, modérant ou diffusant des avis en ligne\n\nToute personne physique ou morale exerçant principalement ou accessoirement cette activité doit fournir aux utilisateurs une information **loyale, claire et transparente** sur les modalités de publication et de traitement des avis [Source 1].\n\nElle doit notamment :\n\n- préciser si les avis font l’objet d’un contrôle et, dans l’affirmative, présenter les principales caractéristiques de ce contrôle ;\n- afficher la date de publication de chaque avis ainsi que ses éventuelles mises à jour ;\n- expliquer aux consommateurs les raisons pour lesquelles un avis n’a pas été publié ;\n- mettre gratuitement à la disposition des responsables des produits ou services concernés une fonctionnalité permettant de signaler, de manière motivée, un doute sur l’authenticité d’un avis.\n\nCes obligations s’appliquent sans préjudice des autres obligations d’information prévues par l’article 19 de la loi du 21 juin 2004 et par l’article L. 111-7 du Code de la consommation. Les modalités et le contenu précis de l’information doivent être fixés par décret, après avis de la CNIL — **Article L. 111-7-2 du Code de la consommation [Source 1]**.\n\n### 2. Gestion des comptes de dépôt dans les établissements de crédit\n\nLes règles relatives aux comptes de dépôt imposent, dans un autre domaine, une information préalable et formalisée :\n\n- les établissements de crédit doivent mettre à disposition de leur clientèle et du public, sur papier ou sur un autre support durable, les conditions générales et tarifaires applicables à la gestion d’un compte de dépôt ;\n- pour les personnes physiques n’agissant pas à des fins professionnelles, la gestion du compte doit être encadrée par une convention écrite ;\n- cette convention doit notamment préciser les conditions générales et tarifaires d’ouverture, de fonctionnement et de clôture du compte ;\n- avant que le client ne soit engagé, l’établissement doit lui fournir ces conditions sur papier ou sur un support durable, éventuellement sous la forme d’un projet de convention ;\n- si la convention est conclue à distance à la demande du client dans des conditions empêchant cette remise préalable, l’établissement doit satisfaire à cette obligation immédiatement après la conclusion ;\n- l’acceptation est formalisée par la signature du ou des titulaires.\n\nCes exigences résultent de l’**article L. 312-1-1 du Code monétaire et financier [Source 2]**.\n\nAinsi, les règles sur les comptes de dépôt ne complètent pas directement le régime des avis en ligne : elles instituent un régime distinct d’information, centré sur la transparence des conditions bancaires, la remise préalable des documents et la formalisation contractuelle.",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement et de façon complète les obligations de l’article L. 111-7-2 (information loyale, claire et transparente, contrôle, date et mises à jour, motifs de rejet, signalement gratuit d’un doute sur l’authenticité) ainsi que celles de l’article L. 312-1-1 (mise à disposition des conditions générales et tarifaires sur support durable, convention écrite pour les particuliers, remise préalable, exception de la conclusion à distance et signature). Toutes les affirmations substantielles sont explicitement étayées par les deux sources fournies. Elle répond directement à la question et explique justement que les régimes sont distincts tout en poursuivant une logique de transparence."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les deux sources sont directement pertinentes : l’article L. 111-7-2 couvre précisément les obligations d’information des collecteurs, modérateurs ou diffuseurs d’avis en ligne, et l’article L. 312-1-1 couvre les conditions d’information, de convention et de remise préalable applicables à la gestion des comptes de dépôt. Toutes les affirmations substantielles de la réponse sont explicitement supportées par ces textes, y compris les précisions sur le contrôle des avis, les dates, le rejet, le signalement d’authenticité, les supports durables, la convention écrite, la conclusion à distance et la signature. La qualification finale de régimes distincts relève fidèlement de leurs champs respectifs."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "improves_answer"
+    },
+    {
+      "questionId": "q401",
+      "tier": "union_adds_gold",
+      "goldAddedByUnion": [
+        "code-monetaire-et-financier:L221-32"
+      ],
+      "vectorContextChunkIds": [
+        "L221-32-3#0",
+        "D314-24#0",
+        "D314-23#0",
+        "D221-109#0",
+        "R519-9#1"
+      ],
+      "unionContextChunkIds": [
+        "L221-32#0",
+        "L221-32-3#0",
+        "D314-24#0",
+        "D314-23#0",
+        "D221-109#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code monétaire et financier — Article L221-32-3 — chunk 0]\nLes II et III de l'article L. 221-31 et l'article L. 221-32 sont applicables au plan d'épargne en actions destiné\nau financement des petites et moyennes entreprises et des entreprises de taille intermédiaire.\n\n[Source 2 — Code de la consommation — Article D314-24 — chunk 0]\nLes prêteurs et les intermédiaires veillent à ce que l",
+        "answer": "### 1. Compétence professionnelle des personnels des prêteurs\n\nSelon l’**article D. 314-23 du Code de la consommation**, les prêteurs et intermédiaires de crédit doivent s’assurer que les personnels concernés remplissent l’une des conditions suivantes :\n\n- **Être titulaires d’un diplôme approprié**, notamment dans les domaines de la finance, de la banque, de la gestion, de l’économie, du droit ou de l’assurance, correspondant au niveau requis.  \n  - Un diplôme obtenu en France doit notamment être enregistré au répertoire national des certifications professionnelles ou être délivré au nom de l’État.\n  - Un diplôme obtenu à l’étranger doit être reconnu par le Centre ENIC-NARIC France au moyen d’une attestation de comparabilité [Source 3].\n\n- **Avoir suivi une formation professionnelle adaptée** à la réalisation d’opérations de crédit :\n  - auprès d’un établissement de crédit ou d’une société de financement ;\n  - ou auprès d’un organisme de formation choisi dans les conditions prévues par le texte [Source 3].\n\nEn outre, les personnels doivent en principe satisfaire à cette obligation dès leur prise de fonction. Un délai de six mois est toutefois prévu lorsqu’ils occupent un poste adapté sous la responsabilité d’une personne remplissant elle-même les conditions requises (**article D. 314-24 du Code de la consommation**) [Source 2].\n\n### 2. Retraits sur un plan d’épargne en actions\n\nLe contenu de l’**article L. 221-32 du Code monétaire et financier** n’est pas reproduit dans les sources fournies. Il n’est donc pas possible de préciser les règles applicables aux retraits — notamment leurs effets ou leurs éventuelles exceptions — à partir du seul contexte disponible.\n\nLa seule règle fournie est que l’article L. 221-32 est également applicable au **plan d’épargne en actions destiné au financement des petites et moyennes entreprises et des entreprises de taille intermédiaire**, en vertu de l’**article L. 221-32-3 du Code monétaire et financier** [Source 1].",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La partie sur D. 314-23 est globalement correcte et détaille fidèlement les voies du diplôme et de la formation adaptée. L'ajout sur le délai de six mois est également exact, bien qu'il relève de D. 314-24. Pour L. 221-32, la réponse n'énonce pas les règles de retrait demandées (clôture avant cinq ans et exceptions) : elle indique à juste titre que le texte n'est pas présent dans le contexte, ce qui rend cette partie incomplète au regard de la référence, mais pleinement fondée au regard des sources réellement fournies. Il ne s'agit pas d'une abstention globale puisque la première partie répond à la question et la limite documentaire est explicitée pour la seconde."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 3 est directement pertinente et couvre les deux voies de compétence prévues par D. 314-23 (diplôme ou formation adaptée). La source 2 couvre le délai de six mois, avec la nuance qu’il vise explicitement l’obligation de formation professionnelle. En revanche, le texte de L. 221-32, indispensable pour exposer les règles de retrait demandées, est absent : la source 1 indique seulement son applicabilité au PEA-PME. Les sources sont donc seulement partiellement suffisantes pour la question, mais elles couvrent les affirmations effectivement formulées par la réponse, y compris le constat d’absence du contenu de L. 221-32 dans le contexte."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code monétaire et financier — Article L221-32 — chunk 0]\nI. - Au-delà de la cinquième année, les retraits partiels de sommes ou de valeurs et, s'agissant des contrats de capitalisation, les rachats partiels n'entraînent pas la clôture du plan d'épargne en actions.\n\nII. - Avant l'expiration de la cinquième année, tout retrait de sommes ou de valeurs figurant sur le plan ou tout rachat e",
+        "answer": "### 1. Compétence professionnelle des personnels des prêteurs et intermédiaires\n\nSelon l’**article D. 314-23 du Code de la consommation**, les prêteurs et intermédiaires de crédit doivent veiller à ce que leurs personnels disposent de compétences professionnelles résultant de l’une des voies suivantes :\n\n- **un diplôme approprié**, notamment :\n  - un diplôme prévu par l’accord de formation professionnelle applicable au secteur bancaire, à l’exception du BP banque ;\n  - un diplôme d’études supérieures de niveau 5 portant notamment sur la finance, la banque, la gestion, l’économie, le droit ou l’assurance ;\n  - un diplôme de commerce de niveau I ;\n- ou **une formation professionnelle adaptée aux opérations de crédit**, suivie auprès :\n  - d’un établissement de crédit ou d’une société de financement ;\n  - ou d’un organisme de formation répondant aux conditions prévues par le texte.\n\nLes diplômes français doivent notamment être enregistrés au répertoire national des certifications professionnelles ou être délivrés au nom de l’État. Les diplômes étrangers doivent être reconnus par le Centre ENIC-NARIC France au moyen d’une attestation de comparabilité. **Article D. 314-23 du Code de la consommation [Source 4].**\n\nEn outre, cette obligation de formation doit en principe être satisfaite dès la prise de fonction. Un délai de six mois est toutefois prévu si le salarié occupe un poste adapté et exerce sous la responsabilité d’une personne compétente. **Article D. 314-24 du Code de la consommation [Source 3].**\n\n### 2. Règles applicables aux retraits sur un plan d’épargne en actions\n\n- **Après la cinquième année**, les retraits partiels de sommes ou de valeurs n’entraînent pas la clôture du plan.\n- **Avant l’expiration de la cinquième année**, tout retrait entraîne en principe la clôture du plan.\n\nDeux principales exceptions sont prévues avant l’expiration de ce délai :\n\n1. **Création ou reprise d’une entreprise** : le retrait peut ne pas entraîner la clôture si les sommes sont affectées, dans les trois mois, au financement de cette création ou reprise, dans les conditions prévues par l’article. Toutefois, aucun versement ne peut être effectué après le premier retrait ou rachat.\n\n2. **Événements affectant le titulaire ou son conjoint ou partenaire de PACS** : les retraits peuvent également être réalisés sans clôture lorsqu’ils résultent du licenciement, de l’invalidité mentionnée par le texte ou de la mise à la retraite anticipée.\n\nCes règles figurent à l’**article L. 221-32 du Code monétaire et financier [Source 1]**. Elles sont également applicables au PEA destiné au financement des PME et des entreprises de taille intermédiaire en vertu de l’**article L. 221-32-3 du Code monétaire et financier [Source 2]**.",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse expose correctement les deux voies de compétence prévues par l'article D. 314-23 (diplôme qualifié ou formation adaptée), avec les précisions pertinentes sur les diplômes français et étrangers. Elle restitue aussi fidèlement le régime des retraits du PEA : absence de clôture après cinq ans, clôture de principe avant cinq ans et exceptions liées à la création/reprise d'entreprise ainsi qu'au licenciement, à l'invalidité ou à la retraite anticipée. Les précisions supplémentaires sur le délai de six mois et le PEA-PME sont explicitement soutenues par le contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les sources 4 et 1 sont directement pertinentes aux deux volets de la question et étayent les conditions de compétence ainsi que le régime des retraits de PEA. Les précisions additionnelles de la réponse sont également couvertes : le délai de six mois par la source 3 et l'application au PEA-PME par la source 2. Toutes les affirmations importantes sont ainsi explicitement supportées."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "improves_answer"
+    },
+    {
+      "questionId": "q420",
+      "tier": "union_adds_gold",
+      "goldAddedByUnion": [
+        "code-penal:131-1"
+      ],
+      "vectorContextChunkIds": [
+        "L128-1#0",
+        "L741-2#0",
+        "717-2#0"
+      ],
+      "unionContextChunkIds": [
+        "L128-1#0",
+        "131-1#0",
+        "L741-2#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L128-1 — chunk 0]\nAfin de lutter contre les fraudes, de prévenir la commission des infractions prévues aux articles 434-40-1\ndu code pénal et L. 654-15 du présent code et de favoriser l'exécution des mesures d'interdiction de gérer\nprononcées par les juridictions judiciaires, le Conseil national des greffiers des tribunaux de commerce est\nautorisé à mettre en",
+        "answer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre un **fichier national automatisé des interdits de gérer**. Ce fichier vise notamment à prévenir certaines infractions, à favoriser l’exécution des interdictions de gérer et à lutter contre les fraudes. Sa tenue constitue une mission de service public assurée par le Conseil national, à ses frais et sous sa responsabilité. [Source 1]\n\nLe fichier recense les faillites personnelles ainsi que les interdictions de diriger, gérer, administrer ou contrôler une entreprise ou une personne morale, lorsqu’elles résultent de décisions juridictionnelles passées en force de chose jugée. Il mentionne également le jugement ou l’arrêt ayant prononcé la mesure. Les sanctions disciplinaires n’y sont pas inscrites. [Source 1]\n\nConcernant les personnes physiques, l’**Article 717-2 du Code pénal [Source 3]** prévoit, pour les manœuvres frauduleuses destinées à provoquer artificiellement la hausse ou la baisse des prix :\n\n- **deux ans d’emprisonnement et 30 000 euros d’amende** ;\n- lorsque les produits concernés sont alimentaires : **trois ans d’emprisonnement et 45 000 euros d’amende**.\n\nDes peines complémentaires sont également encourues : l’interdiction des droits civiques, civils et de famille, ainsi que l’affichage ou la diffusion de la décision prononcée. [Source 3]",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse décrit correctement le rôle du Conseil national : mise en œuvre et tenue, comme mission de service public, du fichier national automatisé des interdits de gérer afin notamment de lutter contre les fraudes et d’assurer l’exécution des interdictions. En revanche, elle ne répond pas à la question sur les peines criminelles applicables aux personnes physiques : elle cite des peines correctionnelles spécifiques de l’article 717-2 (emprisonnement et amende pour manipulation de prix), au lieu des durées de réclusion ou de détention criminelle attendues. Les affirmations produites sont néanmoins intégralement étayées par les sources fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente pour le rôle du Conseil national des greffiers : elle établit la mise en œuvre et la tenue, comme mission de service public, du fichier national des interdits de gérer afin notamment de lutter contre les fraudes. La source 3 est pertinente pour une infraction frauduleuse spécifique et ses peines correctionnelles, mais elle ne répond pas à la demande portant sur les peines criminelles encourues par les personnes physiques ; les sources relatives aux durées de réclusion ou détention criminelle font donc défaut. En revanche, les affirmations effectivement formulées dans la réponse générée (contenu et objet du fichier, ainsi que peines et peines complémentaires de l'article 717-2) sont étayées par les sources 1 et 3."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L128-1 — chunk 0]\nAfin de lutter contre les fraudes, de prévenir la commission des infractions prévues aux articles 434-40-1\ndu code pénal et L. 654-15 du présent code et de favoriser l'exécution des mesures d'interdiction de gérer\nprononcées par les juridictions judiciaires, le Conseil national des greffiers des tribunaux de commerce est\nautorisé à mettre en",
+        "answer": "Le Conseil national des greffiers des tribunaux de commerce contribue à la lutte contre les fraudes en mettant en œuvre, sous sa responsabilité et à ses frais, un **fichier national automatisé des interdits de gérer**. Ce fichier vise notamment à prévenir certaines infractions et à favoriser l’exécution des interdictions de gérer prononcées par les juridictions. Il recense les faillites personnelles et les interdictions judiciaires de diriger, gérer, administrer ou contrôler certaines entreprises, lorsqu’elles résultent de décisions passées en force de chose jugée. **Article L. 128-1 du Code de commerce [Source 1].**\n\nLes peines criminelles encourues par les personnes physiques sont :\n\n1. la réclusion ou la détention criminelle à perpétuité ;\n2. la réclusion ou la détention criminelle de trente ans au plus ;\n3. la réclusion ou la détention criminelle de vingt ans au plus ;\n4. la réclusion ou la détention criminelle de quinze ans au plus.\n\nLa réclusion ou la détention criminelle à temps ne peut être inférieure à dix ans. **Article 131-1 du Code pénal [Source 2].**",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse décrit exactement le rôle du Conseil national via le fichier national automatisé des interdits de gérer, sa finalité antifraude et d'exécution des interdictions, ainsi que les catégories de mesures inscrites. Elle énumère exhaustivement les quatre peines criminelles prévues pour les personnes physiques et la durée minimale de dix ans pour les peines à temps. Toutes ces affirmations sont explicitement étayées par les sources 1 et 2 du contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 répond directement au premier volet : elle autorise le Conseil national des greffiers des tribunaux de commerce à mettre en œuvre le fichier national automatisé des interdits de gérer afin de lutter contre les fraudes, prévenir certaines infractions et favoriser l’exécution des interdictions, tout en précisant son contenu et les conditions de tenue. La source 2 répond directement et exhaustivement au second volet en énumérant les quatre catégories de peines criminelles applicables aux personnes physiques et en fixant le minimum de dix ans pour les peines à temps. Toutes les affirmations importantes de la réponse générée sont couvertes."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "improves_answer"
+    },
+    {
+      "questionId": "q003",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "224-3#0"
+      ],
+      "unionContextChunkIds": [
+        "224-3#0",
+        "224-5-2#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code pénal — Article 224-3 — chunk 0]\nL'infraction prévue par l'article 224-1 est punie de trente ans de réclusion criminelle lorsqu'elle est commise\nà l'égard de plusieurs personnes.\nLes deux premiers alinéas de l'article 132-23 relatif à la période de sûreté sont applicables à cette infraction.\nToutefois, si la personne détenue ou séquestrée ou toutes les personnes détenues ou séques",
+        "answer": "Le contexte fourni ne reproduit pas le contenu de l’article 224-1 du Code pénal. Il ne permet donc pas d’indiquer les différentes peines selon la durée de la séquestration ni de préciser le délai de libération volontaire visé par son troisième alinéa.\n\nIl permet seulement de constater que, pour plusieurs personnes, l’infraction est punie de **trente ans de réclusion criminelle**. Cette peine est ramenée à **dix ans d’emprisonnement** si toutes les personnes détenues ou séquestrées sont libérées volontairement dans le délai prévu par l’article 224-1, sauf atteinte à leur intégrité physique visée par l’article 224-2 du Code pénal [Source 1].",
+        "judge": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne fournit pas les peines prévues par l’article 224-1 selon la durée de la séquestration, alors que la réponse attendue distingue vingt ans de réclusion criminelle et, en cas de libération volontaire avant sept jours, cinq ans d’emprisonnement et 75 000 euros d’amende. Elle décrit seulement le régime aggravé de l’article 224-3 pour plusieurs victimes. En revanche, ses affirmations sur ce régime et sur l’absence du texte de l’article 224-1 dans le contexte sont fidèlement supportées par le contexte fourni. Comme une réponse était attendue, l’absence de réponse au fond constitue une abstention incorrecte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source est seulement partiellement pertinente : elle traite de l'article 224-3, relatif au cas où l'infraction de l'article 224-1 est commise contre plusieurs personnes, et renvoie au délai du troisième alinéa de l'article 224-1 sans le reproduire. Elle ne permet donc pas de répondre directement aux peines générales prévues par l'article 224-1 selon la durée de la séquestration. En revanche, elle couvre les affirmations effectivement formulées dans la réponse générée : absence du texte de l'article 224-1 dans le contexte, peine de trente ans pour plusieurs personnes, réduction à dix ans en cas de libération volontaire dans le délai visé, et exception liée aux atteintes prévues à l'article 224-2."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code pénal — Article 224-3 — chunk 0]\nL'infraction prévue par l'article 224-1 est punie de trente ans de réclusion criminelle lorsqu'elle est commise\nà l'égard de plusieurs personnes.\nLes deux premiers alinéas de l'article 132-23 relatif à la période de sûreté sont applicables à cette infraction.\nToutefois, si la personne détenue ou séquestrée ou toutes les personnes détenues ou séques",
+        "answer": "Le contexte fourni ne reproduit pas l’article 224-1 du Code pénal : il ne permet donc pas d’identifier les différentes durées de séquestration ni les peines correspondantes.\n\nIl permet seulement d’établir que :\n\n- lorsque l’infraction concerne plusieurs personnes, elle est punie de **trente ans de réclusion criminelle** ;\n- si la ou les personnes sont **libérées volontairement dans le délai prévu par le troisième alinéa de l’article 224-1**, la peine est ramenée à **dix ans d’emprisonnement**, sauf atteinte à l’intégrité physique de la victime [Source 1 — Article 224-3 du Code pénal] ;\n- en cas de **bande organisée**, les peines peuvent être aggravées jusqu’à la **réclusion criminelle à perpétuité** lorsque l’infraction est normalement punie de trente ans de réclusion criminelle [Source 2 — Article 224-5-2 du Code pénal].\n\nLes seuils de durée de séquestration prévus directement par l’article 224-1 ne figurant pas dans les sources, il n’est pas possible de détailler davantage les différences de peine.",
+        "judge": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne donne pas les différences de peine prévues par l’article 224-1 selon la durée : elle omet la réclusion criminelle de vingt ans et la réduction à cinq ans d’emprisonnement et 75 000 euros d’amende en cas de libération volontaire avant sept jours. Les informations fournies sur les articles 224-3 et 224-5-2 sont fidèles au contexte, mais elles sont périphériques et ne répondent pas à la question. Elle constitue donc une abstention alors qu’une réponse était attendue."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les deux sources sont juridiquement liées à l’article 224-1, mais elles ne reproduisent pas ses dispositions déterminant directement les peines selon la durée de la séquestration. La source 1 établit le régime applicable à plusieurs victimes et renvoie seulement au délai du troisième alinéa de l’article 224-1, sans le préciser. La source 2 établit une aggravation en bande organisée, également périphérique à la question. Elles sont donc partiellement pertinentes, mais insuffisantes pour répondre directement à la question. En revanche, elles couvrent les affirmations effectivement formulées dans la réponse générée : peines de trente ans et de dix ans dans le cadre de l’article 224-3, aggravation jusqu’à la perpétuité en bande organisée, et absence dans les extraits du seuil temporel prévu par l’article 224-1."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q011",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "213-1#0",
+        "215-1#0",
+        "422-3#0",
+        "222-62#0",
+        "435-14#0"
+      ],
+      "unionContextChunkIds": [
+        "213-1#0",
+        "215-1#0",
+        "422-3#0",
+        "222-62#0",
+        "227-29#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code pénal — Article 213-1 — chunk 0]\nLes personnes physiques coupables des infractions prévues par le présent sous-titre encourent également les\npeines suivantes :\n1° L'interdiction des droits civiques, civils et de famille, selon les modalités prévues par l'article 131-26.\nToutefois, le maximum de l'interdiction est porté à quinze ans ;\n2° L'interdiction, suivant les modalités prévue",
+        "answer": "Selon l’**article 213-1 du Code pénal [Source 1]**, les personnes physiques coupables des infractions prévues par ce sous-titre encourent les peines complémentaires suivantes :\n\n- **Interdiction des droits civiques, civils et de famille** : durée maximale de **15 ans** ;\n- **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale à l’occasion de laquelle l’infraction a été commise** : interdiction temporaire d’une durée maximale de **10 ans** ;\n- **Interdiction de séjour** : durée maximale de **15 ans** ;\n- **Confiscation** de tout ou partie des biens appartenant au condamné ou dont il a la libre disposition, sous réserve des droits du propriétaire de bonne foi : **aucune durée maximale n’est indiquée**, puisqu’il s’agit d’une confiscation ;\n- **Interdiction d’exercer une fonction publique ou certaines activités commerciales ou de direction, d’administration, de gestion ou de contrôle d’une entreprise ou société commerciale** : l’extrait ne précise **aucune durée maximale**.\n\nLes deux interdictions d’exercice prévues aux 2° et 5° peuvent être **prononcées cumulativement**.",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend exactement les peines énumérées à l’article 213-1 applicable : interdiction des droits civiques (15 ans), interdiction professionnelle/fonction publique (10 ans), interdiction de séjour (15 ans), confiscation et interdiction d’exercer certaines activités commerciales ou de direction. Elle indique correctement l’absence de durée maximale explicite pour la confiscation et le 5°, et mentionne le cumul possible des interdictions d’exercice. Toutes les affirmations importantes sont directement appuyées par la source 1."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement applicable : elle vise les personnes physiques coupables des infractions du présent sous-titre et énumère précisément toutes les peines évoquées. Elle établit les maxima de 15 ans pour l'interdiction des droits civiques et l'interdiction de séjour, de 10 ans pour l'interdiction temporaire d'exercice visée au 2°, la confiscation, l'interdiction professionnelle ou commerciale du 5°, ainsi que le caractère cumulatif des interdictions d'exercice. Elle ne fixe pas de durée explicite pour la confiscation ni pour le 5°, ce qui couvre également les constats d'absence de maximum explicite formulés dans la réponse."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code pénal — Article 213-1 — chunk 0]\nLes personnes physiques coupables des infractions prévues par le présent sous-titre encourent également les\npeines suivantes :\n1° L'interdiction des droits civiques, civils et de famille, selon les modalités prévues par l'article 131-26.\nToutefois, le maximum de l'interdiction est porté à quinze ans ;\n2° L'interdiction, suivant les modalités prévue",
+        "answer": "Pour les personnes physiques coupables des infractions prévues par le **sous-titre visé à l’article 213-1 du Code pénal**, les peines complémentaires encourues sont les suivantes :\n\n1. **Interdiction des droits civiques, civils et de famille** : durée maximale de **quinze ans**.  \n2. **Interdiction d’exercer une fonction publique ou l’activité professionnelle ou sociale liée à l’infraction** : l’interdiction temporaire peut aller jusqu’à **dix ans**.  \n3. **Interdiction de séjour** : durée maximale de **quinze ans**.  \n4. **Confiscation** de tout ou partie des biens appartenant au condamné ou dont il a la libre disposition, sous réserve des droits du propriétaire de bonne foi : **aucune durée maximale n’est indiquée**, puisqu’il s’agit d’une mesure de confiscation.  \n5. **Interdiction d’exercer une profession commerciale ou industrielle**, ou de diriger, administrer, gérer ou contrôler une entreprise ou une société commerciale : la disposition fournie **ne précise pas de durée maximale propre**.  \n\nLes interdictions d’exercice mentionnées aux 2° et 5° peuvent être **prononcées cumulativement**.  \n**Article 213-1 du Code pénal [Source 1]**.",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse énumère fidèlement les cinq peines prévues à l’article 213-1, donne correctement les maxima de quinze ans, dix ans et quinze ans pour les interdictions visées aux 1° à 3°, décrit la confiscation, précise à juste titre qu’aucune durée propre n’est énoncée pour elle ni pour l’interdiction commerciale du 5°, et mentionne le cumul des interdictions d’exercice. Toutes ces affirmations sont directement étayées par la source 1."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 (article 213-1) est directement applicable au sous-titre visé et énonce exhaustivement les cinq peines complémentaires, les maxima de quinze ans, dix ans et quinze ans pour les trois premières interdictions, la confiscation, l'interdiction d'exercer une activité commerciale ou industrielle et la possibilité de cumul. Elle couvre toutes les affirmations importantes de la réponse générée, y compris l'absence de durée maximale explicitement énoncée pour la confiscation et le 5°."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q102",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L223-28#0",
+        "R821-155#0",
+        "R814-155#0",
+        "R814-86#0",
+        "R814-156#0"
+      ],
+      "unionContextChunkIds": [
+        "L22-10-76#2",
+        "R821-155#0",
+        "L223-28#0",
+        "R814-155#0",
+        "R814-86#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L223-28 — chunk 0]\nChaque associé a droit de participer aux décisions et dispose d'un nombre de voix égal à celui des parts\nsociales qu'il possède.\nUn associé peut se faire représenter par son conjoint à moins que la société ne comprenne que les deux\népoux. Sauf si les associés sont au nombre de deux, un associé peut se faire représenter par un autre associé.",
+        "answer": "## Caractéristiques de la société en participation\n\nD’après les sources fournies, la société en participation se caractérise notamment par :\n\n- une **constitution matérialisée par un avis** publié dans un support habilité à recevoir les annonces légales, au siège de la société lorsqu’il en existe un, ou au lieu d’exercice de chacun des associés ; cet avis doit mentionner la dénomination, l’objet et, le cas échéant, l’adresse du siège — **Article R821-155 du Code de commerce [Source 2]** ;\n- pour les sociétés en participation d’administrateurs judiciaires ou de mandataires judiciaires, une appellation spécifique et une publication au **Bulletin officiel des annonces civiles et commerciales** ; l’avis doit alors indiquer la dénomination sociale et la liste des associés — **Article R814-155 du Code de commerce [Source 3]** ;\n- l’existence d’une **convention fondant la société**, dont un exemplaire doit être transmis à la Commission nationale d’inscription et de discipline dans les quinze jours de la publication — **Article R814-156 du Code de commerce [Source 5]** ;\n- pour les associés exerçant au sein d’une société relevant de la réglementation professionnelle mentionnée par les sources, l’obligation de consacrer à la société toute leur activité professionnelle et de s’informer mutuellement de cette activité — **Article R814-86 du Code de commerce [Source 4]**.\n\n## Règles auxquelles les associés ne peuvent pas déroger\n\nLes sources permettent d’identifier, pour les sociétés professionnelles concernées, une exigence de conformité de la convention aux **règles applicables à la profession**. La Commission nationale peut mettre les associés en demeure de modifier leur convention lorsqu’elle n’est pas conforme — **Article R814-156 du Code de commerce [Source 5]**.\n\nAinsi, les associés ne peuvent pas maintenir une convention contraire à ces règles professionnelles, notamment aux obligations d’activité et d’information prévues par **l’article R814-86 du Code de commerce [Source 4]**.\n\nEn revanche, les extraits fournis ne permettent pas de dresser une liste complète des règles impératives propres à toute société en participation ni de déterminer précisément le régime général de responsabilité, de gestion ou de partage des bénéfices. L’**article L223-28 du Code de commerce [Source 1]** concerne les droits de vote des associés et la représentation dans une société relevant de cet article ; les sources ne permettent pas d’établir qu’il serait applicable aux sociétés en participation.",
+        "judge": {
+          "correctness": 0,
+          "completeness": 1,
+          "groundedness": 3,
+          "abstentionCorrect": true,
+          "explanation": "La réponse ne donne pas le régime général de la société en participation attendu : elle affirme même, à tort comme caractéristique générale, une publicité de constitution, alors que ce régime général repose notamment sur l'absence d'immatriculation, de personnalité morale et de publicité. Elle ne fournit pas la liste des dispositions impératives visées par la question et se limite à des règles professionnelles particulières d'administrateurs ou mandataires judiciaires. Les affirmations relatives à ces régimes professionnels sont globalement appuyées par les extraits fournis, mais l'extension de certaines règles de publication à toute société en participation est trop large. La réponse tente néanmoins de répondre et ne s'abstient pas."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les extraits portent pour l’essentiel sur des sociétés en participation relevant de régimes professionnels particuliers (administrateurs ou mandataires judiciaires, et probablement autres professions réglementées), ainsi que sur une règle de vote manifestement étrangère au régime général. Ils sont donc seulement partiellement pertinents pour la question générale : ils ne fournissent pas les articles du Code civil établissant l’absence d’immatriculation, de personnalité morale et de publicité, ni la liste des dispositions impératives auxquelles les associés ne peuvent déroger. En revanche, les affirmations effectivement développées dans la réponse sont presque toutes directement étayées par les sources : modalités de publication mentionnées aux articles R821-155 et R814-155, transmission de la convention et mise en conformité professionnelle selon R814-156, et obligation professionnelle prévue à R814-86. La réserve finale sur l’impossibilité de dresser le régime général est cohérente avec l’insuffisance des extraits."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 1,
+          "groundedness": 3,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L22-10-76 — chunk 2]\nIII.-Aucun élément de rémunération des mandataires sociaux, de quelque nature que ce soit, ne peut être déterminé, attribué ou versé par la société, ni aucun engagement correspondant à des éléments de rémunération, des indemnités ou des avantages dus ou susceptibles d'être dus à raison de la prise, de la cessation ou du changement de leur",
+        "answer": "Les sources fournies ne permettent pas de dresser une présentation complète du régime général de la société en participation ni d’identifier l’ensemble des règles impératives auxquelles ses associés ne pourraient pas déroger.\n\nElles permettent toutefois de relever les caractéristiques suivantes :\n\n- La constitution d’une société en participation donne lieu à l’insertion d’un avis dans un support habilité à recevoir les annonces légales. Cet avis indique notamment la dénomination, l’objet et, le cas échéant, l’adresse du siège ou le lieu d’exercice des associés [Source 2 — Article R821-155 du Code de commerce].\n- Pour les sociétés en participation d’administrateurs judiciaires ou de mandataires judiciaires, la constitution fait l’objet d’un avis au Bulletin officiel des annonces civiles et commerciales. L’avis contient la dénomination sociale et la liste des associés [Source 4 — Article R814-155 du Code de commerce].\n- Dans ce cadre professionnel, les associés exerçant au sein de la société doivent lui consacrer toute leur activité professionnelle et s’informer mutuellement de cette activité [Source 5 — Article R814-86 du Code de commerce].\n\nS’agissant des règles impératives, la seule obligation clairement identifiable dans les sources est donc celle prévue par l’Article R814-86 du Code de commerce : consacrer toute son activité professionnelle à la société et assurer une information réciproque entre associés. En revanche, le contexte ne précise pas expressément si cette disposition est déclarée d’ordre public ni quelles autres stipulations statutaires seraient interdites.\n\nLes dispositions relatives à la représentation des associés et aux droits de vote de l’Article L223-28 du Code de commerce concernent les sociétés à responsabilité limitée et ne peuvent pas être transposées, sur la seule base des sources fournies, aux sociétés en participation [Source 3].",
+        "judge": {
+          "correctness": 1,
+          "completeness": 1,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse ne donne pas le régime général attendu : elle affirme notamment une publicité de constitution, alors que la société en participation n’est en principe pas soumise à publicité, et elle omet l’absence d’immatriculation et de personnalité morale, la preuve par tous moyens, la liberté contractuelle ainsi que la liste des dispositions impératives du code civil et du code monétaire et financier. Elle se limite à des règles sectorielles concernant notamment les administrateurs ou mandataires judiciaires. En revanche, les affirmations effectivement formulées sont étayées par les sources fournies, et la réponse tente bien de répondre, même de façon très insuffisante."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 3,
+          "explanation": "Les sources 2, 4 et 5 concernent bien des sociétés en participation, mais dans des cadres spécifiques, notamment professionnels, et ne permettent pas de répondre au régime général demandé ni d’identifier la liste des dispositions impératives applicables. Elles sont donc seulement partiellement pertinentes. Elles étayent les affirmations factuelles de la réponse relatives aux avis de constitution et aux obligations professionnelles des associés. En revanche, elles ne couvrent pas réellement la qualification de l’article L223-28 comme propre aux SARL, ni les constats généraux sur l’absence de caractère d’ordre public ou l’exhaustivité des règles impératives ; ces éléments reposent surtout sur l’insuffisance du corpus."
+        },
+        "metrics": {
+          "correctness": 1,
+          "completeness": 1,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 3
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q132",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L5221-11#0",
+        "L3331-1#0",
+        "L1231-2#0",
+        "L3321-1#0"
+      ],
+      "unionContextChunkIds": [
+        "L5221-11#0",
+        "L3331-1#0",
+        "L1231-2#0",
+        "L3321-1#0",
+        "L4311-6#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code du travail — Article L5221-11 — chunk 0]\nUn décret en Conseil d'Etat détermine les modalités d'application des articles L. 5221-3 et L. 5221-5 à L.\n5221-8.\n\n[Source 2 — Code du travail — Article L3331-1 — chunk 0]\nLes dispositions du présent titre sont applicables aux employeurs de droit privé ainsi qu'à leurs salariés.\nLorsque, dans le présent titre, il est fait référence à l'eff",
+        "answer": "Le texte de l’article **L5221-1 du Code du travail** n’est pas fourni. Il n’est donc pas possible d’identifier précisément les textes qui priment sur les dispositions du titre concerné.\n\nLa seule règle comparable disponible indique que les dispositions d’un titre ne dérogent pas aux **dispositions légales assurant une protection particulière à certains salariés** — Article L1231-2 du Code du travail [Source 3]. Toutefois, cette disposition concerne le titre auquel appartient l’article L1231-2 et ne peut pas être transposée, sur la seule base du contexte fourni, à l’article L5221-1.",
+        "judge": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne fournit pas les textes qui priment, à savoir les traités, conventions ou accords régulièrement ratifiés ou approuvés et publiés, notamment les traités instituant les communautés européennes et leurs actes d'application. Elle s'abstient au lieu de répondre alors qu'une réponse était attendue. Cette abstention est toutefois correctement justifiée par l'absence de l'article L5221-1 dans le contexte, et la distinction avec l'article L1231-2 est bien fondée sur le contexte fourni."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "L’article L. 5221-1, qui aurait été directement pertinent pour répondre, n’est pas fourni. La source 1 relève du même ensemble d’articles mais ne traite pas de la primauté des textes, tandis que la source 3 est hors du titre concerné. Elles sont donc insuffisantes pour répondre au fond, mais le contexte fourni permet d’étayer l’abstention et la distinction opérée avec l’article L. 1231-2. Les affirmations importantes de la réponse générée sont ainsi couvertes par les sources disponibles et par l’absence constatée de L. 5221-1 dans ce contexte."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code du travail — Article L5221-11 — chunk 0]\nUn décret en Conseil d'Etat détermine les modalités d'application des articles L. 5221-3 et L. 5221-5 à L.\n5221-8.\n\n[Source 2 — Code du travail — Article L3331-1 — chunk 0]\nLes dispositions du présent titre sont applicables aux employeurs de droit privé ainsi qu'à leurs salariés.\nLorsque, dans le présent titre, il est fait référence à l'eff",
+        "answer": "Le contexte fourni ne contient pas le texte de l’**article L. 5221-1 du Code du travail**.\n\nLa seule règle pertinente indique que les dispositions d’un titre **ne dérogent pas aux dispositions légales assurant une protection particulière à certains salariés** — **article L. 1231-2 du Code du travail** [Source 3].  \n\nAinsi, sous cette réserve, ce sont ces dispositions légales protectrices qui priment.",
+        "judge": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 1,
+          "abstentionCorrect": true,
+          "explanation": "La réponse identifie à juste titre l'absence du texte de l'article L. 5221-1 dans le contexte, mais elle répond ensuite par une règle tirée de l'article L. 1231-2, qui concerne un autre titre et ne permet pas de déterminer les textes primant sur les dispositions visées à l'article L. 5221-1. Elle ne fournit donc pas les traités, conventions ou accords régulièrement ratifiés ou approuvés et publiés attendus. L'affirmation relative à L. 1231-2 est citée dans le contexte, mais son application à L. 5221-1 est non fondée."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 1,
+          "sourceCoverage": 2,
+          "explanation": "Aucune source ne contient l'article L. 5221-1 ni les textes qui y priment. La source 3 porte sur l'article L. 1231-2, relatif à un autre titre du Code du travail, et n'est donc pas pertinente pour identifier les règles primant sur le titre visé à l'article L. 5221-1. Elle couvre littéralement la citation selon laquelle son propre titre ne déroge pas à certaines protections légales, mais ne couvre pas l'application de cette règle au titre concerné par la question ni la conclusion selon laquelle ces protections priment en l'espèce."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 1,
+          "sourceRelevance": 1,
+          "sourceCoverage": 2
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q157",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L2221-1#0",
+        "L3111-3#0",
+        "R3111-1#0",
+        "L5213-21#0"
+      ],
+      "unionContextChunkIds": [
+        "L2221-1#0",
+        "L3111-3#0",
+        "R3111-1#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2221-1 — chunk 0]\nLe présent livre est relatif à la détermination des relations collectives entre employeurs et salariés. Il définit\nles règles suivant lesquelles s'exerce le droit des salariés à la négociation collective de l'ensemble de leurs\nconditions d'emploi, de formation professionnelle et de travail ainsi que de leurs garanties sociales.\n\n[Source 2 — ",
+        "answer": "L’objet principal du livre défini à l’article L2221-1 du Code du travail est de déterminer les relations collectives entre employeurs et salariés. Il fixe notamment les règles d’exercice du droit des salariés à la négociation collective concernant leurs conditions d’emploi, de formation professionnelle, de travail et leurs garanties sociales. [Source 1]",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend fidèlement l’objet du livre et les domaines couverts par le droit à la négociation collective. Toutes les affirmations sont explicitement soutenues par l’article L2221-1 fourni dans le contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est l’article L2221-1 directement visé par la question. Elle énonce explicitement que le livre concerne la détermination des relations collectives entre employeurs et salariés et définit les règles d’exercice du droit à la négociation collective pour les conditions d’emploi, la formation professionnelle, le travail et les garanties sociales. Elle couvre donc l’ensemble des affirmations importantes de la réponse générée."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2221-1 — chunk 0]\nLe présent livre est relatif à la détermination des relations collectives entre employeurs et salariés. Il définit\nles règles suivant lesquelles s'exerce le droit des salariés à la négociation collective de l'ensemble de leurs\nconditions d'emploi, de formation professionnelle et de travail ainsi que de leurs garanties sociales.\n\n[Source 2 — ",
+        "answer": "L’objet principal de ce livre est de déterminer les relations collectives entre employeurs et salariés. Il fixe notamment les règles d’exercice du droit des salariés à la négociation collective concernant leurs conditions d’emploi, de formation professionnelle, de travail et leurs garanties sociales.\n\n**Article L2221-1 du Code du travail [Source 1].**",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend fidèlement l'objet du livre et les éléments relatifs au droit à la négociation collective (conditions d'emploi, formation professionnelle, travail et garanties sociales). Toutes les affirmations sont explicitement étayées par l'article L2221-1 fourni dans le contexte."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente : elle reproduit l'article L2221-1 visé par la question et énonce précisément l'objet du livre. Elle couvre l'ensemble des affirmations de la réponse générée, notamment les relations collectives entre employeurs et salariés ainsi que la négociation collective des conditions d'emploi, de formation professionnelle, de travail et des garanties sociales. Les sources 2 et 3 ne sont pas nécessaires."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q196",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L23-11-1#0",
+        "L23-11-2#0",
+        "L3346-1#0"
+      ],
+      "unionContextChunkIds": [
+        "L23-11-1#0",
+        "L23-11-2#0",
+        "L3324-8#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L23-11-1 — chunk 0]\nTout détenteur de titres d'une société peut prendre, vis-à-vis de l'ensemble des salariés de celle-ci,\nl'engagement de partager avec eux une partie de la plus-value de cession ou de rachat de ses titres au jour où\nil en cédera ou rachètera tout ou partie.\nL'engagement de partage des plus-values peut également être pris par une pluralité de",
+        "answer": "Un propriétaire de titres peut organiser ce partage selon les étapes suivantes :\n\n1. **Prendre un engagement de partage**  \n   Tout détenteur de titres peut s’engager à reverser aux salariés une partie de la plus-value réalisée lors de la cession ou du rachat de tout ou partie de ses titres. L’engagement peut être pris au bénéfice de l’ensemble des salariés de la société. Il ne peut toutefois porter que sur les plus-values de cession de titres des sociétés visées par le texte applicable.  \n   **Article L. 23-11-1 du Code de commerce [Source 1].**\n\n2. **Formaliser l’engagement par un contrat avec la société**  \n   L’engagement doit être constaté dans un contrat conclu entre le détenteur des titres et la société concernée. La société s’engage ensuite à transférer aux salariés la somme due, après déduction des charges fiscales et sociales liées à ce transfert.  \n   **Article L. 23-11-2 du Code de commerce [Source 2].**\n\n3. **Vérifier l’existence d’un plan d’épargne entreprise**  \n   La signature du contrat est subordonnée à l’existence préalable, dans chaque entreprise concernée, d’un plan d’épargne entreprise défini par le Code du travail.  \n   **Article L. 23-11-2 du Code de commerce [Source 2].**\n\n4. **Prévoir les clauses obligatoires du contrat**  \n   Le contrat doit notamment fixer :\n   - une durée minimale de **cinq ans** ;\n   - son champ d’application ;\n   - les modalités de calcul et de répartition entre les salariés ;\n   - les conditions d’information des salariés ;\n   - les procédures de règlement des différends ;\n   - un délai minimal de **trois ans entre la conclusion du contrat et la cession des titres**.  \n   **Article L. 23-11-2 du Code de commerce [Source 2].**\n\n5. **Déterminer le montant partageable**  \n   Le montant versé aux salariés doit tenir compte de l’évolution de la valeur des titres entre leur acquisition et leur cession. Il ne peut pas dépasser **10 % de la plus-value**, calculée selon les modalités prévues par le texte, y compris, le cas échéant, les compléments de prix liés à la même cession.  \n   **Article L. 23-11-2 du Code de commerce [Source 2].**\n\nLorsque la société est liée à d’autres sociétés par un contrôle direct ou indirect dans les conditions prévues par le Code de commerce, l’engagement peut devoir bénéficier également aux salariés des sociétés concernées par ce périmètre de contrôle. **Article L. 23-11-1 du Code de commerce [Source 1].**\n\nEnfin, cet engagement ne crée ni solidarité entre le détenteur signataire et la société, ni obligation pour les détenteurs de titres qui n’ont pas signé un tel engagement. **Article L. 23-11-1 du Code de commerce [Source 1].**",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse décrit correctement le mécanisme : engagement du ou des détenteurs envers les salariés, formalisation par contrat avec la société, condition de PEE, clauses requises, plafonnement à 10 % de la plus-value, délai minimal avant cession et absence d'obligation pour les non-signataires. Ces éléments sont explicitement étayés par les sources 1 et 2. Elle répond directement à la question sans s'abstenir."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les sources 1 et 2 sont directement pertinentes : elles régissent précisément l’engagement de partage de plus-value par un détenteur de titres, sa contractualisation avec la société et ses conditions. Elles couvrent l’ensemble des affirmations importantes de la réponse : engagement individuel ou pluralité de détenteurs, bénéficiaires et périmètre, contrat, rôle de la société et déduction des charges, PEE préalable, clauses obligatoires, durée de cinq ans, délai de trois ans, plafond de 10 %, compléments de prix, ainsi que l’absence de solidarité ou d’obligation pour les non-signataires."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L23-11-1 — chunk 0]\nTout détenteur de titres d'une société peut prendre, vis-à-vis de l'ensemble des salariés de celle-ci,\nl'engagement de partager avec eux une partie de la plus-value de cession ou de rachat de ses titres au jour où\nil en cédera ou rachètera tout ou partie.\nL'engagement de partage des plus-values peut également être pris par une pluralité de",
+        "answer": "Un propriétaire de titres peut mettre en place un partage de plus-value avec les salariés selon le mécanisme suivant :\n\n1. **Prendre un engagement de partage**  \n   Tout détenteur de titres peut s’engager, à l’égard de l’ensemble des salariés de la société, à leur reverser une partie de la plus-value réalisée lors de la cession ou du rachat de tout ou partie de ses titres. Plusieurs détenteurs peuvent également prendre un engagement commun ou des engagements distincts. Cet engagement ne crée ni solidarité avec la société, ni obligation pour les détenteurs qui ne l’ont pas signé.  \n   **Article L. 23-11-1 du Code de commerce [Source 1]**\n\n2. **Conclure un contrat avec la société**  \n   L’engagement doit être constaté dans un contrat conclu entre le détenteur des titres et la société. La société s’engage à transférer aux salariés les sommes dues, après déduction des charges fiscales et sociales liées à ce transfert.  \n   **Article L. 23-11-2 du Code de commerce [Source 2]**\n\n3. **Vérifier l’existence d’un plan d’épargne entreprise**  \n   La signature du contrat suppose qu’un plan d’épargne entreprise existe préalablement dans chaque entreprise concernée.  \n   **Article L. 23-11-2 du Code de commerce [Source 2]**\n\n4. **Définir les modalités dans le contrat**  \n   Le contrat doit notamment prévoir :\n   - une durée d’au moins **cinq ans** ;\n   - les entreprises et salariés concernés ;\n   - la méthode de calcul et de répartition ;\n   - l’information des salariés ;\n   - la procédure de règlement des différends ;\n   - un délai d’au moins **trois ans entre la conclusion du contrat et la cession des titres**.  \n   **Article L. 23-11-2 du Code de commerce [Source 2]**\n\n5. **Respecter le plafond de partage**  \n   La somme attribuée aux salariés doit tenir compte de l’évolution de la valeur des titres entre leur acquisition et leur cession. Elle ne peut pas dépasser **10 % de la plus-value concernée**, laquelle inclut, le cas échéant, les compléments de prix liés à la cession.  \n   **Article L. 23-11-2, 3° du Code de commerce [Source 2]**\n\nLorsque la société appartient à un groupe dans les conditions de contrôle prévues par l’article L. 23-11-1, l’engagement peut devoir bénéficier aux salariés des sociétés contrôlées ou contrôlantes concernées, et non aux seuls salariés de la société dont les titres sont cédés.  \n**Article L. 23-11-1 du Code de commerce [Source 1]**\n\nLe dispositif ne peut toutefois porter que sur les plus-values de cession de titres des sociétés visées par le texte renvoyant à l’article 150-0 B ter du Code général des impôts. **Les sources fournies ne permettent pas de préciser davantage cette catégorie de sociétés.**",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse décrit correctement le mécanisme prévu : engagement du détenteur envers les salariés, possibilité de pluralité de détenteurs, absence de solidarité ou d'obligation pour les non-signataires, contractualisation avec la société, condition de PEE, contenu obligatoire du contrat, durée minimale de cinq ans, délai minimal de trois ans avant cession et plafond de 10 %. Ces éléments sont tous expressément supportés par les sources 1 et 2. La précision sur les sociétés éligibles et le périmètre de groupe est également conforme au contexte. Elle répond pleinement à la question sans abstention."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les sources 1 et 2 sont directement pertinentes : elles régissent précisément l’engagement de partage de plus-value lors de la cession ou du rachat de titres, sa contractualisation avec la société, le prérequis de plan d’épargne entreprise, le contenu et les durées du contrat, ainsi que le plafond de 10 %. Elles couvrent l’ensemble des affirmations substantielles de la réponse, y compris la pluralité de détenteurs, l’absence de solidarité ou d’obligation des non-signataires, le périmètre de groupe et la limitation aux sociétés visées par le renvoi fiscal. La source 3 est hors sujet mais n’est pas nécessaire aux affirmations formulées."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q238",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L242-2#0",
+        "L241-3#0",
+        "L242-20#0",
+        "L443-3#1",
+        "L441-19#1"
+      ],
+      "unionContextChunkIds": [
+        "L242-2#0",
+        "L241-3#0",
+        "L242-20#0",
+        "L443-3#1",
+        "L822-31#1"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L242-2 — chunk 0]\nEst puni d'un emprisonnement de cinq ans et d'une amende de 9000 euros le fait, pour toute personne :\n1°, 2° et 3° (supprimés) ;\n4° De faire attribuer frauduleusement à un apport en nature une évaluation supérieure à sa valeur réelle.\n\n[Source 2 — Code de commerce — Article L241-3 — chunk 0]\nEst puni d'un emprisonnement de cinq ans et d'une ",
+        "answer": "Les sources fournies ne contiennent pas le contenu de l’article **L231-10 du Code de commerce**. Il n’est donc pas possible de déterminer, à partir du seul contexte, les sanctions applicables à une personne qui affirme des souscriptions fictives.\n\nLes articles communiqués prévoient d’autres infractions, notamment l’évaluation frauduleuse d’un apport en nature [Sources 1 et 2], mais ils ne permettent pas de répondre à la question relative à l’article L231-10.",
+        "judge": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne fournit pas les sanctions attendues (cinq ans d’emprisonnement et 9 000 euros d’amende) et ne répond donc pas à la question. Elle est toutefois fidèle au contexte fourni : celui-ci ne contient pas l’article L231-10 ni l’incrimination précise d’affirmation de souscriptions fictives, et les dispositions citées concernent d’autres infractions."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 1,
+          "sourceCoverage": 4,
+          "explanation": "Aucune source ne reproduit l’article L231-10 ni l’incrimination d’affirmation de souscriptions fictives. Les sources 1 et 2 portent sur la surévaluation frauduleuse d’apports en nature, et les autres sur des infractions ou sanctions distinctes. Elles sont donc insuffisantes pour répondre directement à la question, même si la source 1 mentionne fortuitement les mêmes quantum de peines. En revanche, elles couvrent les constats de la réponse générée : l’article L231-10 est absent du corpus fourni et les articles cités concernent notamment une évaluation frauduleuse d’apport en nature."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "sourceRelevance": 1,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L242-2 — chunk 0]\nEst puni d'un emprisonnement de cinq ans et d'une amende de 9000 euros le fait, pour toute personne :\n1°, 2° et 3° (supprimés) ;\n4° De faire attribuer frauduleusement à un apport en nature une évaluation supérieure à sa valeur réelle.\n\n[Source 2 — Code de commerce — Article L241-3 — chunk 0]\nEst puni d'un emprisonnement de cinq ans et d'une ",
+        "answer": "Les sources fournies ne contiennent pas l’article **L. 231-10 du Code de commerce** et ne précisent donc pas les sanctions applicables au fait d’affirmer des souscriptions fictives.\n\nIl n’est pas possible de déterminer ces sanctions à partir des seuls extraits communiqués.",
+        "judge": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse ne fournit pas les sanctions attendues (cinq ans d’emprisonnement et 9 000 euros d’amende), alors qu’une réponse était attendue sans abstention. En revanche, son constat selon lequel l’article L. 231-10 et l’incrimination précise ne figurent pas dans le contexte est exact et sa réserve est donc entièrement fondée sur les extraits fournis."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les extraits ne reproduisent pas l’article L. 231-10 et aucun ne vise explicitement l’affirmation de souscriptions fictives. La source L. 242-2 mentionne bien une peine de cinq ans d’emprisonnement et 9 000 euros d’amende, mais pour une évaluation frauduleuse d’apport en nature, sans permettre de rattacher cette peine à l’incrimination demandée. Les sources sont donc seulement partiellement pertinentes pour la question, mais elles étayent les constats de la réponse générée sur l’absence de l’article et de l’incrimination précise dans le contexte."
+        },
+        "metrics": {
+          "correctness": 0,
+          "completeness": 0,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q294",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L212-2#0",
+        "R212-3#0",
+        "R212-5#0",
+        "L211-4#0",
+        "L216-8#0"
+      ],
+      "unionContextChunkIds": [
+        "L212-2#0",
+        "R212-4#0",
+        "R212-3#0",
+        "R212-5#0",
+        "L211-4#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article L212-2 — chunk 0]\nLes dispositions de l'article L. 212-1 sont également applicables aux contrats conclus entre des\nprofessionnels et des non-professionnels.\n\n[Source 2 — Code de la consommation — Article R212-3 — chunk 0]\nLe 3° de l'article R. 212-1 et les 4° et 6° de l'article R. 212-2 ne sont pas applicables :\n1° Aux transactions concernant les valeu",
+        "answer": "Selon l’**article L. 212-2 du Code de la consommation**, les dispositions de l’**article L. 212-1** sont étendues aux **contrats conclus entre des professionnels et des non-professionnels**. [Source 1]",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend exactement le champ d’extension prévu par l’article L. 212-2 : les contrats conclus entre professionnels et non-professionnels. Cette affirmation est explicitement soutenue par la source 1 du contexte et répond directement à la question."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente : elle reproduit l'article L. 212-2 et énonce explicitement que les dispositions de l'article L. 212-1 sont applicables aux contrats conclus entre professionnels et non-professionnels. Elle couvre intégralement l'affirmation de la réponse générée."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article L212-2 — chunk 0]\nLes dispositions de l'article L. 212-1 sont également applicables aux contrats conclus entre des\nprofessionnels et des non-professionnels.\n\n[Source 2 — Code de la consommation — Article R212-4 — chunk 0]\nLe 3° de l'article R. 212-1 et le 6° de l'article R. 212-2 ne font pas obstacle à l'existence de clauses par\nlesquelles le fournisse",
+        "answer": "Selon l’article **L. 212-2 du Code de la consommation**, les dispositions de l’article **L. 212-1** sont étendues aux **contrats conclus entre des professionnels et des non-professionnels**. [Source 1]",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse reprend exactement l’extension prévue par l’article L. 212-2 : les contrats conclus entre des professionnels et des non-professionnels. Cette affirmation est explicitement étayée par la source 1 du contexte et répond directement à la question."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 reproduit directement l'article L. 212-2 et énonce explicitement que les dispositions de l'article L. 212-1 sont applicables aux contrats conclus entre des professionnels et des non-professionnels. Elle est parfaitement pertinente et couvre intégralement l'unique affirmation importante de la réponse générée."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q360",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L125-8#0",
+        "434-43#0"
+      ],
+      "unionContextChunkIds": [
+        "L125-8#0",
+        "132-14#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L125-8 — chunk 0]\nLe contrat constitutif ou les statuts, selon le cas, doivent, à peine de nullité, et sous la responsabilité\nsolidaire des signataires, contenir la mention expresse, soit qu'aucun fonds n'est grevé du privilège ou d'un\nnantissement prévu aux chapitres Ier à III du titre IV du présent livre, soit, dans le cas contraire, qu'il n'a pas\nété formé",
+        "answer": "Le contrat constitutif ou les statuts doivent contenir, **à peine de nullité** et sous la **responsabilité solidaire des signataires**, une mention expresse indiquant l’une des deux situations suivantes :\n\n- soit **aucun fonds n’est grevé** d’un privilège ou d’un nantissement prévu par les chapitres concernés du Code de commerce ;\n- soit, lorsqu’un fonds est grevé, **aucune opposition n’a été formée avant l’adhésion d’un membre**, ou une **mainlevée a été ordonnée par justice**.\n\nCes exigences résultent de l’**article L125-8 du Code de commerce** [Source 1].\n\nLa question pénale relève d’un régime distinct. Lorsqu’une personne morale a fait l’objet d’une peine prévue à l’**article 131-39 du Code pénal**, la violation, par une personne physique, des obligations qui en découlent est punie de **deux ans d’emprisonnement et 30 000 euros d’amende**. Le maintien ou la reconstitution, ouverte ou déguisée, d’une personne morale dissoute est puni de **trois ans d’emprisonnement et 45 000 euros d’amende** [Source 2].\n\nEn cas de dissolution prononcée **pour une infraction commise en récidive**, la peine prévue pour le maintien ou la reconstitution est portée à **cinq ans d’emprisonnement et 75 000 euros d’amende** [Source 2].\n\nAinsi, la nullité concerne le contenu obligatoire du contrat constitutif ou des statuts, tandis que les sanctions pénales concernent la violation des obligations liées à une peine prononcée contre une personne morale, notamment sa dissolution. Les sources fournies ne précisent pas davantage les conditions de responsabilité pénale propres de la personne morale elle-même.",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement et précisément les conditions de l’article L125-8 du Code de commerce : mention expresse de l’absence de privilège/nantissement ou, à défaut, de l’absence d’opposition préalable ou d’une mainlevée judiciaire, à peine de nullité et sous responsabilité solidaire des signataires. En revanche, elle ne répond pas au volet attendu sur la récidive de la personne morale au titre de l’article 132-15 du Code pénal, soit la multiplication par dix du maximum de l’amende pour une nouvelle contravention de 5e classe dans le délai d’un an. Elle substitue à cette règle un régime distinct, celui de l’article 434-43 relatif à la violation d’obligations découlant de peines prononcées contre une personne morale et à sa dissolution. Ces développements sont néanmoins fidèlement fondés sur le contexte fourni."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 3,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente et couvre intégralement les conditions statutaires, la nullité et la responsabilité solidaire. La source 2 est pertinente pour le régime pénal effectivement exposé dans la réponse générée : violation des obligations consécutives à une peine contre une personne morale, maintien/reconstitution après dissolution, et aggravation en cas de récidive. Elle couvre les sanctions chiffrées et leurs conditions. Les sources ne couvrent toutefois pas le régime de récidive des contraventions de 5e classe visé par l’article 132-15, qui aurait été nécessaire pour répondre au volet pénal dans le sens de la réponse de référence, mais la réponse générée ne formule pas cette affirmation et indique expressément la limite du contexte."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 3,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de commerce — Article L125-8 — chunk 0]\nLe contrat constitutif ou les statuts, selon le cas, doivent, à peine de nullité, et sous la responsabilité\nsolidaire des signataires, contenir la mention expresse, soit qu'aucun fonds n'est grevé du privilège ou d'un\nnantissement prévu aux chapitres Ier à III du titre IV du présent livre, soit, dans le cas contraire, qu'il n'a pas\nété formé",
+        "answer": "Pour éviter la nullité, le contrat constitutif ou les statuts doivent contenir, **sous la responsabilité solidaire des signataires**, une mention expresse indiquant :\n\n- soit qu’**aucun fonds n’est grevé** du privilège ou du nantissement prévu par les chapitres concernés ;\n- soit, si un fonds est grevé, qu’**aucune opposition n’a été formée avant l’adhésion** d’un membre, ou qu’une **mainlevée a été ordonnée par la justice**.\n\nCette exigence résulte de l’**article L125-8 du Code de commerce** et est prescrite **à peine de nullité** [Source 1].\n\nLa responsabilité pénale en cas de récidive relève d’un régime distinct. Selon l’**article 132-14 du Code pénal**, lorsque la personne morale :\n\n1. a déjà été condamnée définitivement pour un délit ;\n2. commet, dans les cinq ans suivant l’expiration ou la prescription de la précédente peine, le même délit ou un délit assimilé au regard des règles de la récidive,\n\nle **maximum de l’amende encourue par la personne morale est doublé** [Source 2].\n\nLes sources fournies ne prévoient **aucune articulation directe** entre la nullité du contrat ou des statuts et le doublement de l’amende en cas de récidive. Ce sont deux mécanismes distincts : le premier concerne la validité de l’acte constitutif, le second la sanction pénale de la personne morale.",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement les conditions de l’article L125-8 et explique justement qu’il n’existe pas, dans les textes cités, de lien direct entre la nullité statutaire et la récidive pénale. Toutefois, elle traite la récidive délictuelle de l’article 132-14 (doublement de l’amende dans les cinq ans), alors que la référence attend la règle propre aux personnes morales pour une contravention de 5e classe de l’article 132-15 (amende maximale multipliée par dix dans l’année). Elle est donc incomplète et partiellement divergente au regard de la réponse attendue. En revanche, toutes ses affirmations importantes sont directement étayées par le contexte effectivement fourni."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente et couvre intégralement les mentions exigées à peine de nullité ainsi que la responsabilité solidaire des signataires. La source 2 est directement pertinente pour les affirmations effectivement formulées sur la récidive délictuelle des personnes morales (condamnation définitive, délai de cinq ans, même délit ou délit assimilé, doublement du maximum de l’amende). Elle permet aussi d’étayer le constat qu’aucune articulation directe avec la nullité statutaire n’est prévue par les deux extraits fournis. L’absence de l’article 132-15 affecte l’adéquation à la réponse de référence, mais non la couverture des affirmations de la réponse générée, qui s’appuie bien sur l’article 132-14 fourni."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q362",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "L2145-8#0",
+        "L1146-2#0",
+        "L3222-1#0",
+        "132-63#0",
+        "L2145-1#0"
+      ],
+      "unionContextChunkIds": [
+        "L2145-8#0",
+        "L1146-2#0",
+        "L3222-1#0",
+        "132-61#0",
+        "132-63#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2145-8 — chunk 0]\nLe nombre total de jours de congés susceptibles d'être pris chaque année par l'ensemble des salariés de\nl'établissement au titre des formations prévues à la présente sous-section ainsi qu'aux articles L. 2325-44\net L. 4614-14 relatifs à la formation des membres de la délégation du comité social et économique, ne peut\ndépasser un maximum fixé",
+        "answer": "### 1. Limites des congés pour formation syndicale\n\nLes congés des salariés exerçant des responsabilités syndicales sont encadrés par plusieurs plafonds :\n\n- **Pour chaque salarié**, la durée totale des congés pris au titre de la formation syndicale ne peut pas dépasser **18 jours par an** — Article L2145-1 du Code du travail [Source 5].\n- **Pour l’ensemble de l’établissement**, le nombre total annuel de jours de congé pris par tous les salariés au titre des formations est plafonné par voie réglementaire, en fonction de l’effectif de l’établissement — Article L2145-8 du Code du travail [Source 1].\n- Le texte réglementaire fixe également :\n  - le nombre maximal de jours pouvant être utilisés par les salariés exerçant des responsabilités syndicales ;\n  - le pourcentage maximal de salariés pouvant être simultanément absents au titre de ces congés — Article L2145-8 du Code du travail [Source 1].\n\n### 2. Conditions de l’ajournement du prononcé de la peine\n\nPour certaines infractions relatives à l’égalité professionnelle entre les femmes et les hommes, les règles du Code pénal sur l’ajournement du prononcé de la peine sont applicables :\n\n- en cas de poursuites fondées sur les articles **L1142-1 et L1142-2 du Code du travail**, l’ajournement doit comporter une injonction faite à l’employeur de définir, **après consultation du comité social et économique**, des mesures propres à rétablir l’égalité professionnelle, dans un délai fixé par la juridiction. Le juge peut aussi lui enjoindre d’exécuter ces mesures et ordonner l’exécution provisoire de sa décision — Article L1146-2 du Code du travail [Source 2] ;\n- les mêmes règles s’appliquent aux infractions relatives à l’égalité de rémunération prévues aux articles **L3221-2 à L3221-7 du Code du travail** — Article L3222-1 du Code du travail [Source 3].\n\nLorsque le prévenu est une **personne physique présente à l’audience**, la juridiction peut ajourner le prononcé de la peine en le plaçant sous probation pour une durée maximale d’un an ; la décision est alors exécutoire par provision — Article 132-63 du Code pénal [Source 4].",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse expose correctement les plafonds applicables aux congés de formation syndicale, y compris le plafond individuel de 18 jours et les plafonds collectifs/règles d’absences simultanées. En revanche, elle ne répond pas aux conditions générales déterminantes de l’article 132-60 pour l’ajournement (reclassement en voie d’acquisition, dommage en cours de réparation, cessation du trouble). Elle les remplace par des régimes particuliers du Code du travail et par l’ajournement avec probation de l’article 132-63. Les affirmations formulées sont néanmoins toutes étayées par le contexte fourni."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les sources couvrent directement les plafonds des congés syndicaux (L2145-1 et L2145-8) et étayent les régimes particuliers d’ajournement en matière d’égalité professionnelle ainsi que l’ajournement avec probation (L1146-2, L3222-1, 132-63). Elles ne reproduisent toutefois pas le contenu de l’article 132-60, pourtant central pour répondre aux conditions générales d’ajournement demandées. En revanche, les affirmations effectivement formulées dans la réponse générée sont toutes ou presque toutes expressément soutenues par les sources citées."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2145-8 — chunk 0]\nLe nombre total de jours de congés susceptibles d'être pris chaque année par l'ensemble des salariés de\nl'établissement au titre des formations prévues à la présente sous-section ainsi qu'aux articles L. 2325-44\net L. 4614-14 relatifs à la formation des membres de la délégation du comité social et économique, ne peut\ndépasser un maximum fixé",
+        "answer": "### 1. Limites réglementaires des congés de formation syndicale\n\nLe nombre total de jours de congés pouvant être pris chaque année par l’ensemble des salariés de l’établissement au titre des formations concernées est plafonné par voie réglementaire, en fonction de l’effectif de l’établissement. [Source 1]\n\nLa réglementation fixe également, toujours selon l’effectif :\n\n- le nombre maximal de jours pouvant être utilisés par les salariés exerçant des responsabilités syndicales ;\n- le nombre maximal de jours pouvant être utilisés par les animateurs ;\n- le pourcentage maximal de salariés pouvant être simultanément absents au titre de ces congés.\n\nL’extrait fourni ne précise toutefois pas les seuils chiffrés applicables.\n\n### 2. Conditions de l’ajournement du prononcé de la peine\n\nPour les infractions relatives à l’égalité professionnelle ou à l’égalité de rémunération entre les femmes et les hommes, la juridiction peut appliquer les règles d’ajournement du prononcé de la peine prévues par le Code pénal. [Source 2 ; Source 3]\n\nL’ajournement doit notamment comporter une injonction faite à l’employeur :\n\n- de définir, après consultation du comité social et économique, les mesures nécessaires au rétablissement de l’égalité professionnelle ;\n- de les définir dans un délai fixé par la juridiction.\n\nLa juridiction peut également enjoindre à l’employeur d’exécuter ces mesures dans le même délai et ordonner l’exécution provisoire de sa décision. [Source 2 ; Source 3]\n\nÀ l’audience de renvoi, elle peut ensuite dispenser le prévenu de peine, prononcer la peine prévue ou ajourner une nouvelle fois le prononcé dans les conditions applicables. [Source 4] Lorsque le prévenu, personne physique, est présent, l’ajournement peut aussi être assorti d’un placement sous probation pour une durée maximale d’un an ; la décision est alors exécutoire par provision. [Source 5]",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement les plafonds réglementaires des congés de formation syndicale : plafond global annuel lié à l'effectif, plafonds pour animateurs et salariés appelés à exercer des responsabilités syndicales, et limite d'absences simultanées. En revanche, elle ne donne pas les conditions générales essentielles de l'article 132-60 (reclassement en voie d'acquisition, dommage en cours de réparation, cessation prochaine du trouble, présence de l'intéressé). Elle développe plutôt les règles spéciales applicables à certaines infractions d'égalité professionnelle ou de rémunération, qui ne répondent que marginalement à la question générale. Toutes les affirmations importantes sont néanmoins étayées par les sources fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 1 est directement pertinente et couvre précisément les plafonds réglementaires liés à l'effectif, les plafonds propres aux animateurs et salariés exerçant des responsabilités syndicales, ainsi que les absences simultanées. En revanche, pour la seconde partie, les sources ne fournissent pas l'article 132-60 ni ses conditions générales essentielles d'ajournement ; les sources 2 et 3 ne traitent que de régimes particuliers relatifs à l'égalité professionnelle ou salariale, tandis que les sources 4 et 5 renvoient aux conditions de l'article 132-60 sans les reproduire. La pertinence globale est donc partielle pour répondre à la question générale. Toutefois, les affirmations effectivement formulées dans la réponse générée sur ces régimes spéciaux, l'audience de renvoi et la probation sont toutes étayées par les sources citées."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q381",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "2422#0"
+      ],
+      "unionContextChunkIds": [
+        "L2132-1#0",
+        "2422#0",
+        "L2133-3#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code civil — Article 2422 — chunk 0]\nLes créanciers hypothécaires ne peuvent prendre utilement inscription sur le précédent propriétaire, à partir\nde la publication de la mutation opérée au profit d'un tiers.\nL'inscription ne produit aucun effet entre les créanciers d'une succession si elle n'a été faite par l'un d'eux\nque depuis le décès, dans le cas où la succession n'est acceptée qu",
+        "answer": "Selon **l’article 2422 du Code civil [Source 1]**, en cas de :\n\n- saisie immobilière ;\n- procédure de sauvegarde, redressement ou liquidation judiciaire ;\n- procédure de traitement du surendettement des particuliers,\n\nles inscriptions hypothécaires produisent les effets prévus par les textes spéciaux applicables : le **livre III du Code des procédures civiles d’exécution**, le **livre VII du Code de la consommation** et les **titres II, III ou IV du livre VI du Code de commerce**. En Alsace-Moselle, en cas d’exécution forcée immobilière, leurs effets sont régis par la loi du 1er juin 1924. [Source 1]\n\nEn revanche, le contexte ne contient pas **l’article L2132-5 du Code du travail**. Il ne permet donc pas de préciser les effets des inscriptions hypothécaires au regard de cet article ni d’exposer les fonctions des syndicats professionnels. Il faudrait disposer du texte de cette disposition pour répondre complètement.",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse restitue correctement et précisément les effets prévus par l'article 2422 du code civil, y compris la règle propre à l'Alsace-Moselle. Elle ne répond toutefois pas à la partie relative aux fonctions des syndicats professionnels prévues par l'article L2132-5 du code du travail, alors que cette partie est essentielle à la question. Cette omission est justifiée au regard du contexte effectivement fourni, qui ne contient que l'article 2422 : l'affirmation selon laquelle il est impossible de préciser L2132-5 à partir du contexte est donc entièrement fondée. La réponse apporte néanmoins une réponse réelle et utile à la partie documentée de la question, sans inventer le contenu manquant."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source fournie est directement pertinente pour l’article 2422 du code civil et permet d’étayer précisément les effets des inscriptions hypothécaires, y compris la règle applicable en Alsace-Moselle. En revanche, aucune source ne concerne l’article L2132-5 du code du travail ni les fonctions des syndicats professionnels, qui constituent une partie importante de la question. Les affirmations effectivement formulées dans la réponse sont toutefois couvertes : la restitution de l’article 2422 correspond à la source, et le constat d’absence de l’article L2132-5 dans le contexte est vérifiable au regard des sources fournies."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code du travail — Article L2132-1 — chunk 0]\nLes syndicats professionnels sont dotés de la personnalité civile.\n\n[Source 2 — Code civil — Article 2422 — chunk 0]\nLes créanciers hypothécaires ne peuvent prendre utilement inscription sur le précédent propriétaire, à partir\nde la publication de la mutation opérée au profit d'un tiers.\nL'inscription ne produit aucun effet entre les créanci",
+        "answer": "### Inscriptions hypothécaires\n\nSelon l’**article 2422 du Code civil** :\n\n- en cas de saisie immobilière, de sauvegarde, de redressement judiciaire, de liquidation judiciaire ou de procédure de surendettement des particuliers, les inscriptions hypothécaires produisent les effets prévus par :\n  - le livre III du Code des procédures civiles d’exécution ;\n  - le livre VII du Code de la consommation ;\n  - les titres II, III ou IV du livre VI du Code de commerce.  \n  **[Source 2]**\n\nLe texte fourni ne détaille toutefois pas concrètement ces effets ; il renvoie aux dispositions de ces différents codes.\n\n### Syndicats professionnels\n\nLes éléments fournis permettent d’indiquer que :\n\n- les syndicats professionnels disposent de la personnalité civile, conformément à l’**article L2132-1 du Code du travail** [Source 1] ;\n- les unions de syndicats bénéficient de tous les droits conférés aux syndicats professionnels, conformément à l’**article L2133-3 du Code du travail** [Source 3].\n\nEn revanche, l’**article L2132-5 du Code du travail**, mentionné dans la question, n’est pas reproduit dans le contexte. Il n’est donc pas possible de préciser, sur la seule base des sources fournies, les fonctions particulières des syndicats professionnels.",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse restitue correctement l’effet de renvoi prévu à l’article 2422 du code civil et précise à juste titre que le contexte ne détaille pas les effets substantiels. Elle ne répond toutefois pas aux fonctions des syndicats prévues par l’article L2132-5, qui constituent une partie essentielle de la question, et évoque à la place des dispositions L2132-1 et L2133-3 moins pertinentes. Toutes ses affirmations sont néanmoins fidèlement supportées par le contexte fourni, lequel ne contient effectivement pas L2132-5. L’abstention partielle sur une composante essentielle rend l’abstention incorrecte alors qu’une réponse complète était attendue."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "La source 2 est directement pertinente et couvre précisément le renvoi opéré par l’article 2422 du code civil en cas de saisie immobilière, procédures collectives ou surendettement. En revanche, aucune source ne reproduit ni ne documente l’article L2132-5 du code du travail, pourtant indispensable pour répondre aux fonctions demandées des syndicats professionnels. Les sources 1 et 3, relatives respectivement à la personnalité civile des syndicats et aux droits des unions de syndicats, sont seulement périphériques. Les affirmations effectivement formulées dans la réponse sont néanmoins couvertes : elles correspondent aux textes fournis et le constat d’absence de L2132-5 dans le contexte est exact."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q399",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "D223-9#0",
+        "L223-1#0"
+      ],
+      "unionContextChunkIds": [
+        "D223-9#0",
+        "L223-1#0",
+        "R2312-5#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article D223-9 — chunk 0]\nLa sollicitation d'un consommateur par voie téléphonique à des fins de prospection commerciale, y compris\ncelle visée à l'article L. 223-5, n'est autorisée d'une part que du lundi au vendredi, sauf lorsque ces jours sont\nfériés en application de l'article L. 3133-1 du code du travail, et d'autre part seulement de 10 heures à 13\nheures",
+        "answer": "D’après les éléments fournis, un professionnel ne peut téléphoner à un consommateur à des fins de prospection commerciale que dans les conditions suivantes :\n\n- **Consentement préalable** : le consommateur doit avoir exprimé son consentement préalable à la prospection téléphonique. Le professionnel doit être en mesure d’en apporter la preuve. Cette règle ne s’applique toutefois pas à certaines sollicitations liées à l’exécution d’un contrat en cours, lorsqu’elles présentent un rapport avec l’objet de ce contrat. [Source 2 — Article L223-1 du Code de la consommation]\n- **Jours autorisés** : les appels ne peuvent avoir lieu que **du lundi au vendredi**, à l’exclusion des jours fériés. [Source 1 — Article D223-9 du Code de la consommation]\n- **Horaires autorisés** : les appels sont possibles uniquement de **10 heures à 13 heures** et de **14 heures à 20 heures**, selon le fuseau horaire du consommateur. [Source 1 — Article D223-9 du Code de la consommation]\n- **Fréquence maximale** : un même professionnel ne peut pas démarcher, ou tenter de démarcher, un même consommateur plus de **quatre fois sur une période de trente jours calendaires**. [Source 1 — Article D223-9 du Code de la consommation]\n\nEn revanche, **l’article L141-28 du Code de commerce n’est pas fourni dans le contexte**. Il n’est donc pas possible de déterminer, à partir des seules sources disponibles, si une consultation préalable du comité social et économique est exigée, ni dans quelles conditions elle devrait intervenir.",
+        "judge": {
+          "correctness": 3,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse énonce correctement les conditions issues des articles fournis : consentement préalable et exception liée au contrat en cours (L223-1), jours, plages horaires selon le fuseau du consommateur et limite de quatre sollicitations sur trente jours (D223-9). Elle ne donne toutefois pas la règle attendue sur l’information-consultation du CSE lors d’un projet de vente de fonds de commerce, prévue par L141-28 du code de commerce dans la référence. Cette omission est explicitement justifiée par l’absence de cet article du contexte. Toutes les affirmations positives importantes sont bien étayées par les deux sources effectivement fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les sources sont directement pertinentes pour les conditions de prospection téléphonique : D223-9 couvre les jours, horaires et fréquence, et L223-1 couvre le consentement préalable, sa preuve et l’exception liée au contrat en cours. En revanche, aucune source ne contient l’article L141-28 du code de commerce ni la règle relative à l’information-consultation du CSE : une source importante manque donc pour répondre intégralement à la question. Les affirmations effectivement formulées dans la réponse sont toutefois toutes étayées par les deux sources fournies, y compris le constat justifié qu’il est impossible de déterminer les conditions de consultation du CSE à partir de ce seul contexte."
+        },
+        "metrics": {
+          "correctness": 3,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article D223-9 — chunk 0]\nLa sollicitation d'un consommateur par voie téléphonique à des fins de prospection commerciale, y compris\ncelle visée à l'article L. 223-5, n'est autorisée d'une part que du lundi au vendredi, sauf lorsque ces jours sont\nfériés en application de l'article L. 3133-1 du code du travail, et d'autre part seulement de 10 heures à 13\nheures",
+        "answer": "D’après les sources fournies, un professionnel ne peut téléphoner à un consommateur à des fins de prospection commerciale que dans les conditions suivantes :\n\n- **Consentement préalable** : le consommateur doit avoir expressément consenti à recevoir des prospections commerciales par téléphone. Le professionnel doit pouvoir prouver ce consentement. Cette règle figure à l’**article L223-1 du Code de la consommation** [Source 2].\n- **Jours autorisés** : les appels sont autorisés uniquement **du lundi au vendredi**, à l’exclusion des jours fériés [Source 1].\n- **Horaires autorisés** : les appels peuvent être effectués uniquement de **10 h à 13 h** et de **14 h à 20 h**, selon le fuseau horaire du consommateur [Source 1].\n- **Fréquence maximale** : un même professionnel ne peut démarcher ou tenter de démarcher le même consommateur plus de **quatre fois sur une période de trente jours calendaires** [Source 1].\n- **Contrat en cours** : l’interdiction de démarchage sans consentement ne s’applique pas lorsque l’appel intervient dans le cadre de l’exécution d’un contrat en cours et présente un rapport avec son objet, sous les conditions prévues par l’article L223-1 [Source 2].\n\nEn revanche, **l’article L141-28 du Code du commerce n’est pas fourni dans le contexte**. Il n’est donc pas possible de déterminer, sur la base des seules sources disponibles, si cet article impose une consultation préalable du comité social et économique, ni d’en préciser les modalités.\n\nLa seule disposition fournie concernant le comité social et économique est l’**article R2312-5 du Code du travail**, qui indique que le délai de consultation court, en l’absence de délai légal spécifique, à compter de la communication des informations par l’employeur [Source 3]. Elle ne permet toutefois pas d’établir une obligation de consultation préalable applicable à la prospection téléphonique.",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse décrit correctement les règles de consentement, jours, horaires et fréquence au regard des sources fournies. Elle ne répond toutefois pas au point essentiel relatif à l’article L141-28 du code de commerce et à la consultation du CSE, alors que la référence indique qu’il concerne l’information et la consultation du CSE lors d’un projet de vente d’un fonds de commerce. Son refus de conclure sur ce point est pleinement justifié par le contexte, qui ne contient pas cet article. Elle répond néanmoins effectivement à une part substantielle de la question, sans s’abstenir globalement."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 3,
+          "sourceCoverage": 4,
+          "explanation": "La source D223-9 est directement pertinente pour les jours, horaires et la fréquence des appels. La source L223-1 est pertinente pour les conditions de consentement et l’exception liée à un contrat en cours. L’article L141-28 du code de commerce, expressément visé par la question, est absent : la source R2312-5 est seulement générale sur les délais de consultation du CSE et ne permet pas d’établir l’obligation spécifique évoquée. Néanmoins, la réponse générée n’affirme pas cette obligation et constate correctement l’absence de la disposition pertinente. Toutes ses affirmations substantielles sont ainsi étayées par les sources fournies ou par le constat vérifiable de cette absence."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 3,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q400",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "D314-22#0",
+        "D314-23#0",
+        "L314-23#0",
+        "L1142-2#0"
+      ],
+      "unionContextChunkIds": [
+        "D314-22#0",
+        "D314-23#0",
+        "L314-23#0",
+        "L314-24#0",
+        "L1142-2#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article D314-22 — chunk 0]\nLes personnels concernés par l'obligation de compétence professionnelle mentionnée aux articles L. 314-24\net L. 314-25 sont les personnes physiques qui travaillent pour le prêteur et qui exercent directement des\nactivités d'élaboration, de proposition, d'octroi ou de conseil en matière de contrats de crédit mentionnés aux\narticles L.",
+        "answer": "Les sources permettent de dégager les règles suivantes :\n\n- **Profils concernés par l’obligation de compétence** : il s’agit des personnes physiques travaillant pour le prêteur qui exercent directement des activités d’élaboration, de proposition, d’octroi ou de conseil concernant des contrats de crédit, ainsi que des personnes qui les dirigent ou les encadrent directement. [Source 1]  \n- **Restriction liée à la compétence** : ces personnels doivent satisfaire aux conditions de compétence professionnelle prévues par un diplôme approprié ou par une formation professionnelle adaptée aux opérations de crédit. [Source 2]  \n- **Personnel en alternance** : l’obligation de compétence ne s’applique pas pendant la durée du contrat d’alternance, à condition que l’intéressé n’exerce ces activités qu’en présence et sous la direction d’un salarié disposant de la formation ou de l’expérience requise. [Source 1]  \n- **Critère du sexe** : la seule source fournie relative au Code du travail prévoit qu’une distinction fondée sur l’appartenance à l’un ou l’autre sexe n’est admissible que si elle répond à une exigence professionnelle essentielle et déterminante, poursuit un objectif légitime et demeure proportionnée. [Source 4 — Article L1142-2 du Code du travail]\n\nAinsi, la sélection des personnels ne peut pas être fondée librement sur le sexe ; elle doit reposer sur des exigences professionnelles objectivement justifiées et proportionnées. Pour les fonctions d’octroi ou de conseil en matière de crédit, les profils doivent surtout répondre aux exigences de compétence prévues par le Code de la consommation.\n\nToutefois, **le texte de l’article L1142-1 du Code du travail n’est pas fourni** : il n’est donc pas possible d’en exposer précisément les interdictions ni de le citer directement.",
+        "judge": {
+          "correctness": 3,
+          "completeness": 3,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse identifie correctement les personnels directement impliqués ou encadrants et les exigences de compétence, ainsi que l’exception très encadrée fondée sur le sexe prévue par l’article L1142-2. Elle ne restitue toutefois pas les interdictions précises de L1142-1 relatives notamment à la situation de famille et à la grossesse, ce qui limite sa complétude vis-à-vis de la question et de la référence. Cette omission est explicitement justifiée par l’absence de L1142-1 dans le contexte. Les affirmations formulées sont supportées par les sources effectivement fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 3,
+          "sourceCoverage": 4,
+          "explanation": "Les sources D314-22 et D314-23 sont directement pertinentes pour identifier les personnels concernés, l'encadrement des alternants et les conditions de compétence. L1142-2 est pertinent pour l'exception strictement encadrée relative au sexe, mais L1142-1, qui contient les interdictions précises demandées (notamment celles relatives à la situation familiale et à la grossesse), n'est pas fourni : les sources restent donc insuffisantes pour répondre intégralement à ce volet. Les affirmations effectivement formulées dans la réponse sont toutefois couvertes par D314-22, D314-23 et L1142-2, y compris le constat explicite de l'absence du texte L1142-1."
+        },
+        "metrics": {
+          "correctness": 3,
+          "completeness": 3,
+          "groundedness": 4,
+          "sourceRelevance": 3,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code de la consommation — Article D314-22 — chunk 0]\nLes personnels concernés par l'obligation de compétence professionnelle mentionnée aux articles L. 314-24\net L. 314-25 sont les personnes physiques qui travaillent pour le prêteur et qui exercent directement des\nactivités d'élaboration, de proposition, d'octroi ou de conseil en matière de contrats de crédit mentionnés aux\narticles L.",
+        "answer": "Les sources fournies ne contiennent pas le texte de l’article **L. 1142-1 du Code du travail**. Il n’est donc pas possible d’en préciser les interdictions générales ni de déterminer exactement les restrictions applicables aux critères de sélection à l’emploi.\n\nEn revanche, les règles suivantes peuvent être déduites :\n\n- Les personnels concernés par les activités de crédit sont les personnes physiques qui travaillent pour le prêteur et participent directement à l’élaboration, la proposition, l’octroi ou le conseil en matière de contrats de crédit. Sont également concernés leurs responsables directs. **Article D. 314-22 du Code de la consommation [Source 1]**\n- Le recrutement ou le maintien dans ces fonctions doit reposer sur des compétences professionnelles appropriées : diplôme pertinent ou formation professionnelle adaptée aux opérations de crédit. **Article D. 314-23 du Code de la consommation [Source 2]**\n- Les salariés en contrat de formation en alternance peuvent être exemptés temporairement de l’obligation de compétence, à condition d’exercer ces activités en présence et sous la direction d’un salarié qualifié ou expérimenté. **Article D. 314-22 du Code de la consommation [Source 1]**\n- S’agissant du critère du sexe, la seule règle fournie indique qu’une différence fondée sur le sexe n’est admissible que si l’appartenance à un sexe constitue une exigence professionnelle essentielle et déterminante, poursuivant un objectif légitime et proportionnée ; les emplois concernés doivent être déterminés par décret. **Article L. 1142-2 du Code du travail [Source 5]**\n\nAinsi, les profils peuvent être sélectionnés en fonction de leur compétence, de leur formation et de leur rôle effectif dans les opérations de crédit, mais les sources fournies ne permettent pas de détailler les interdictions résultant spécifiquement de l’article **L. 1142-1 du Code du travail**.",
+        "judge": {
+          "correctness": 1,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse restitue correctement le champ des personnels soumis à l’obligation de compétence et les exigences de diplôme ou de formation, ainsi que l’exception d’alternance, à partir du contexte. Elle identifie aussi correctement que la source L. 1142-2 prévoit une exception limitée aux interdictions de L. 1142-1. Toutefois, elle ne répond pas à l’élément central attendu : l’interdiction des discriminations fondées sur le sexe, la situation de famille ou la grossesse dans le recrutement et les conditions de travail. Elle choisit au contraire de ne pas formuler cette règle, malgré l’absence d’abstention attendue. Toutes ses affirmations significatives sont néanmoins globalement étayées par les sources fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 2,
+          "sourceCoverage": 4,
+          "explanation": "Les sources couvrent bien le volet relatif aux personnels du crédit, à leur compétence et à l'exception applicable aux salariés en alternance (D. 314-22 et D. 314-23). La source L. 1142-2 est également pertinente pour exposer l'exception limitée liée au sexe et renvoie expressément aux interdictions de L. 1142-1. Toutefois, le texte même de L. 1142-1, central pour répondre aux restrictions de sélection à l'emploi, manque : les sources sont donc seulement partiellement suffisantes pour la question. En revanche, les affirmations effectivement formulées par la réponse générée, y compris le constat d'absence du texte de L. 1142-1 et l'impossibilité d'en détailler les interdictions, sont étayées par les sources fournies."
+        },
+        "metrics": {
+          "correctness": 1,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 2,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    },
+    {
+      "questionId": "q411",
+      "tier": "context_diff_only",
+      "goldAddedByUnion": [],
+      "vectorContextChunkIds": [
+        "26-1#0",
+        "26-2#0",
+        "26#0",
+        "R5221-28#0"
+      ],
+      "unionContextChunkIds": [
+        "26-1#0",
+        "26-2#0",
+        "26#0",
+        "L2511-1#0"
+      ],
+      "vector": {
+        "contextPreview": "[Source 1 — Code civil — Article 26-1 — chunk 0]\nToute déclaration de nationalité doit, à peine de nullité, être enregistrée soit par le directeur des services\nde greffe judiciaires du tribunal judiciaire, pour les déclarations souscrites en France, soit par le ministre\nde la justice, pour les déclarations souscrites à l'étranger, à l'exception des déclarations suivantes, qui sont\nenregistrées par",
+        "answer": "## Autorités compétentes pour les déclarations de nationalité\n\nLes autorités varient selon le **motif** et le **lieu** de la déclaration :\n\n- **Déclaration souscrite en France** : elle est enregistrée par le **directeur des services de greffe judiciaires du tribunal judiciaire** compétent. Le siège et le ressort des tribunaux ou chambres de proximité compétents sont fixés par décret.  \n  *Articles 26-1 et 26-2 du Code civil* [Sources 1 et 2].\n\n- **Déclaration souscrite à l’étranger** : elle est enregistrée par le **ministre de la justice**.  \n  *Article 26-1 du Code civil* [Source 1].\n\n- **Déclarations fondées sur un motif particulier** — mariage avec un conjoint français, qualité d’ascendant de Français, ou qualité de frère ou sœur de Français : elles sont enregistrées par l’**autorité administrative désignée par décret en Conseil d’État**.  \n  *Article 26-1 du Code civil* [Source 1].\n\nPour la **réception** des déclarations, l’article 26 du Code civil précise que ces trois catégories sont reçues par l’autorité administrative ; les autres sont reçues par le directeur des services de greffe judiciaires du tribunal judiciaire ou par le consul. Un récépissé est délivré après remise des pièces nécessaires à la preuve de leur recevabilité [Source 3].\n\n## Protection des salariés dans l’exercice du droit de grève\n\nLes sources fournies ne contiennent aucune disposition relative au droit de grève ni aux garanties protégeant les salariés lors de son exercice. L’article R. 5221-28 du Code du travail concerne seulement les modalités d’une déclaration prévue par l’article L. 5221-9 et ne permet pas de répondre à cette partie de la question [Source 4].",
+        "judge": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "abstentionCorrect": false,
+          "explanation": "La réponse restitue correctement et précisément les règles d’enregistrement des déclarations de nationalité, y compris les exceptions liées au mariage, à l’ascendance et à la fratrie. En revanche, elle ne répond pas au volet relatif à la protection des salariés dans l’exercice du droit de grève, alors que la réponse attendue mentionne l’interdiction des sanctions, licenciements ou discriminations liée à l’exercice normal de ce droit. Son constat selon lequel cette information ne figure pas dans le contexte est toutefois entièrement fondé : aucun extrait fourni ne porte sur l’article L. 1132-2 ou le droit de grève. L’abstention sur cette partie rend la réponse incomplète malgré une réponse effective sur le premier volet."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 3,
+          "sourceCoverage": 4,
+          "explanation": "Les sources 1 à 3 sont directement pertinentes et couvrent précisément les autorités d’enregistrement et de réception des déclarations de nationalité, y compris les exceptions selon le motif. La source 4 est sans rapport avec le droit de grève, mais permet de constater qu’elle ne répond pas à ce volet. Il manque toutefois une source directement pertinente sur la protection des salariés dans l’exercice du droit de grève, telle que l’article L. 1132-2 du Code du travail, ce qui limite la pertinence globale pour l’ensemble de la question. Les affirmations effectivement formulées dans la réponse, y compris le constat d’absence de disposition sur le droit de grève dans les extraits fournis, sont couvertes par les sources."
+        },
+        "metrics": {
+          "correctness": 2,
+          "completeness": 2,
+          "groundedness": 4,
+          "sourceRelevance": 3,
+          "sourceCoverage": 4
+        }
+      },
+      "union": {
+        "contextPreview": "[Source 1 — Code civil — Article 26-1 — chunk 0]\nToute déclaration de nationalité doit, à peine de nullité, être enregistrée soit par le directeur des services\nde greffe judiciaires du tribunal judiciaire, pour les déclarations souscrites en France, soit par le ministre\nde la justice, pour les déclarations souscrites à l'étranger, à l'exception des déclarations suivantes, qui sont\nenregistrées par",
+        "answer": "### Déclarations de nationalité\n\nLes autorités compétentes dépendent du **lieu de souscription** et du **motif** de la déclaration :\n\n- **En France**, les déclarations sont en principe enregistrées par le **directeur des services de greffe judiciaires du tribunal judiciaire**.\n- **À l’étranger**, elles sont en principe enregistrées par le **ministre de la Justice**.\n- Exceptionnellement, les déclarations fondées sur :\n  - le **mariage avec un conjoint français** ;\n  - la qualité d’**ascendant de Français** ;\n  - la qualité de **frère ou sœur de Français** ;  \n  sont enregistrées par l’**autorité administrative désignée par décret en Conseil d’État**.  \n  **Article 26-1 du Code civil [Source 1]**\n\nS’agissant de la réception des déclarations, ces trois catégories sont reçues par l’autorité administrative. Les autres sont reçues par le directeur des services de greffe judiciaires du tribunal judiciaire ou par le consul. Un récépissé est délivré après remise des pièces nécessaires à la preuve de leur recevabilité.  \n**Article 26 du Code civil [Source 3]**\n\nLe siège et le ressort des tribunaux judiciaires ou chambres de proximité compétents sont fixés par décret.  \n**Article 26-2 du Code civil [Source 2]**\n\n### Protection des salariés grévistes\n\nL’exercice du droit de grève :\n\n- ne peut pas justifier la rupture du contrat de travail, sauf en cas de **faute lourde imputable au salarié** ;\n- ne peut entraîner aucune **mesure discriminatoire**, notamment concernant la rémunération ou les avantages sociaux ;\n- tout licenciement prononcé en l’absence de faute lourde est **nul de plein droit**.\n\n**Article L2511-1 du Code du travail [Source 4]**",
+        "judge": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "abstentionCorrect": true,
+          "explanation": "La réponse identifie correctement les autorités d’enregistrement selon le lieu de souscription et les trois motifs dérogatoires prévus par l’article 26-1 du code civil. Elle expose également, de façon exacte et plus détaillée que la référence, la protection des grévistes : interdiction de rupture sauf faute lourde, absence de discrimination et nullité du licenciement. Ces éléments sont tous explicitement étayés par les sources fournies."
+        },
+        "sourceJudge": {
+          "sourceRelevance": 4,
+          "sourceCoverage": 4,
+          "explanation": "Les quatre sources sont directement pertinentes. Les articles 26, 26-1 et 26-2 du code civil couvrent les autorités de réception et d’enregistrement selon le lieu et les motifs, ainsi que le ressort compétent. L’article L2511-1 du code du travail couvre explicitement la protection des salariés grévistes, l’exception de faute lourde, l’interdiction des discriminations et la nullité du licenciement. Toutes les affirmations importantes de la réponse sont ainsi étayées."
+        },
+        "metrics": {
+          "correctness": 4,
+          "completeness": 4,
+          "groundedness": 4,
+          "sourceRelevance": 4,
+          "sourceCoverage": 4
+        }
+      },
+      "goldAddedImpact": "neutral"
+    }
+  ]
+}
