@@ -60,10 +60,10 @@ function buildReport(input: {
             `${row.rank}. ${row.corpusId}:${row.articleNumber} (d=${row.distance?.toFixed(3) ?? '-'})`,
         )
         .join('; ');
-      return `### ${item.questionId} ÿ ${item.goldCorpus}:${item.goldArticle.articleNumber}
+      return `### ${item.questionId} ï¿½ ${item.goldCorpus}:${item.goldArticle.articleNumber}
 
-- **Question:** ${item.question.slice(0, 200)}${item.question.length > 200 ? 'ÿ' : ''}
-- **Gold (extrait):** ${item.goldTextPreview.slice(0, 180)}ÿ
+- **Question:** ${item.question.slice(0, 200)}${item.question.length > 200 ? 'ï¿½' : ''}
+- **Gold (extrait):** ${item.goldTextPreview.slice(0, 180)}ï¿½
 - **Top vector @10:** ${top}
 - **Jaccard Q/G:** ${item.lexical.jaccardQuestionGold.toFixed(3)} ; tokens communs: ${item.lexical.sharedTokensQuestionGold.join(', ') || '(aucun)'}
 - **Voisins top10:** ${item.neighborAnalysis.neighborArticlesTop10.join(', ') || '(aucun)'}
@@ -74,7 +74,7 @@ function buildReport(input: {
     })
     .join('\n');
 
-  return `# Diagnostic semantique ÿ golds absents a topK=50
+  return `# Diagnostic semantique ï¿½ golds absents a topK=50
 
 ## 1. Resume
 
@@ -199,13 +199,13 @@ async function main(): Promise<void> {
   }
 
   let nextExperiment =
-    '**Hybrid BM25 + vector (offline puis mini-benchmark 61q)** ÿ seulement si BM25 recupere des golds vector-absents; sinon **query transformation offline** sur les cas faible jaccard.';
+    '**Hybrid BM25 + vector (offline puis mini-benchmark 61q)** ï¿½ seulement si BM25 recupere des golds vector-absents; sinon **query transformation offline** sur les cas faible jaccard.';
   if (bm25.bm25RecoveredAt50 >= 5) {
     nextExperiment =
-      '**Hybrid retrieval BM25 + vector (union/RRF)** sur la cohorte 61q ÿ BM25 recupere plusieurs golds absents du vector @50.';
+      '**Hybrid retrieval BM25 + vector (union/RRF)** sur la cohorte 61q ï¿½ BM25 recupere plusieurs golds absents du vector @50.';
   } else if (neighborHeavy >= 10) {
     nextExperiment =
-      '**Query expansion / reformulation offline** puis re-benchmark vector sur 10-15 cas voisins ÿ competition semantique inter-articles dominante.';
+      '**Query expansion / reformulation offline** puis re-benchmark vector sur 10-15 cas voisins ï¿½ competition semantique inter-articles dominante.';
   }
 
   const representatives = pickRepresentativeCases(cases, 8);

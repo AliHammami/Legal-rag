@@ -448,7 +448,7 @@ async function main(): Promise<void> {
     };
 
     const readme = buildMiniRegressionReadme({
-      cohortRules: `${cohort.questionIds.length} questions ÿ voir selection.json`,
+      cohortRules: `${cohort.questionIds.length} questions ï¿½ voir selection.json`,
       parameters: {
         retrievalTopKVector: 30,
         hybridUnion: 'Vector@50+BM25@50 union (benchmark)',

@@ -129,7 +129,7 @@ export function buildRetrievalTop30RegressionCohort(input: {
     add(
       'abstention_ambiguous',
       questionId,
-      'Question ambigue — abstention attendue.',
+      'Question ambigue ï¿½ abstention attendue.',
     );
   }
 
@@ -141,7 +141,7 @@ export function buildRetrievalTop30RegressionCohort(input: {
     add(
       'abstention_out_of_scope',
       questionId,
-      'Question hors perimetre — abstention attendue.',
+      'Question hors perimetre ï¿½ abstention attendue.',
     );
   }
 
