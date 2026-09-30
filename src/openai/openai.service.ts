@@ -1,16 +1,17 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import OpenAI from 'openai';
 import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
-import {
-  DEFAULT_EMBEDDING_MODEL,
-  EMBEDDING_DIMENSIONS,
-} from '../embeddings/constants.js';
 
-export interface CreateEmbeddingsResult {
-  index: number;
-  embedding: number[];
-}
+import { DEFAULT_EMBEDDING_MODEL } from '../embeddings/constants.js';
+import { createOpenAIEmbeddings } from '../langchain/create-openai-embeddings.js';
+import { embedDocumentsIndexed } from '../langchain/embed-documents-indexed.js';
+import { invokeStructuredJsonChat } from '../langchain/invoke-structured-json-chat.js';
+import { streamChatTextDeltas } from '../langchain/stream-chat-text-deltas.js';
+import type { CreateEmbeddingsResult } from '../langchain/types.js';
+
+export type {
+  CreateEmbeddingsResult,
+} from '../langchain/types.js';
 
 export interface CreateChatCompletionOptions {
   model: string;
@@ -26,18 +27,22 @@ export interface CreateStructuredChatCompletionOptions {
   signal?: AbortSignal;
 }
 
+/**
+ * Façade NestJS : expose les mêmes méthodes qu'avant, implémentées via LangChain Models.
+ */
 @Injectable()
 export class OpenAIService {
-  private readonly client: OpenAI;
-  private readonly model: string;
+  private readonly apiKey: string;
+  private readonly defaultChatModel: string;
   private readonly embeddingModel: string;
 
   constructor(@Inject(ConfigService) configService: ConfigService) {
-    const apiKey = configService.getOrThrow<string>('OPENAI_API_KEY');
-    this.client = new OpenAI({ apiKey });
-    this.model = configService.get<string>('OPENAI_MODEL') ?? 'gpt-5.6-luna';
+    this.apiKey = configService.getOrThrow<string>('OPENAI_API_KEY');
+    this.defaultChatModel =
+      configService.get<string>('OPENAI_MODEL') ?? 'gpt-5.6-luna';
     this.embeddingModel =
-      configService.get<string>('OPENAI_EMBEDDING_MODEL') ?? DEFAULT_EMBEDDING_MODEL;
+      configService.get<string>('OPENAI_EMBEDDING_MODEL') ??
+      DEFAULT_EMBEDDING_MODEL;
   }
 
   getEmbeddingModel(): string {
@@ -46,88 +51,39 @@ export class OpenAIService {
 
   async createEmbeddings(
     inputs: string[],
-    options?: { signal?: AbortSignal },
+    _options?: { signal?: AbortSignal },
   ): Promise<CreateEmbeddingsResult[]> {
-    const response = await this.client.embeddings.create(
-      {
-        model: this.embeddingModel,
-        input: inputs,
-        dimensions: EMBEDDING_DIMENSIONS,
-        encoding_format: 'float',
-      },
-      { signal: options?.signal },
-    );
-
-    return response.data.map((item) => ({
-      index: item.index,
-      embedding: item.embedding,
-    }));
-  }
-
-  async createChatCompletion(
-    options: CreateChatCompletionOptions,
-  ): Promise<string> {
-    const response = await this.client.chat.completions.create(
-      {
-        model: options.model,
-        messages: options.messages,
-      },
-      { signal: options.signal },
-    );
-
-    const content = response.choices[0]?.message?.content;
-    if (!content?.trim()) {
-      throw new Error('OpenAI returned empty chat completion');
-    }
-
-    return content;
+    const embeddings = createOpenAIEmbeddings({
+      apiKey: this.apiKey,
+      model: this.embeddingModel,
+    });
+    // LangChain OpenAIEmbeddings n'expose pas encore signal par appel comme le SDK ;
+    // les appels existants du projet n'utilisent presque jamais signal sur embeddings.
+    return embedDocumentsIndexed(embeddings, inputs);
   }
 
   async createStructuredChatCompletion<T>(
     options: CreateStructuredChatCompletionOptions,
   ): Promise<T> {
-    const response = await this.client.chat.completions.create(
-      {
-        model: options.model,
-        messages: options.messages,
-        response_format: {
-          type: 'json_schema',
-          json_schema: {
-            name: options.schemaName,
-            strict: true,
-            schema: options.schema,
-          },
-        },
-      },
-      { signal: options.signal },
-    );
-
-    const content = response.choices[0]?.message?.content;
-    if (!content) {
-      throw new Error('OpenAI returned empty structured response');
-    }
-
-    return JSON.parse(content) as T;
+    return invokeStructuredJsonChat<T>({
+      apiKey: this.apiKey,
+      model: options.model,
+      messages: options.messages,
+      schemaName: options.schemaName,
+      schema: options.schema,
+      signal: options.signal,
+    });
   }
 
   async *streamChatCompletion(
     messages: ChatCompletionMessageParam[],
     signal?: AbortSignal,
   ): AsyncGenerator<string> {
-    const stream = await this.client.chat.completions.create(
-      {
-        model: this.model,
-        messages,
-        stream: true,
-      },
-      { signal },
-    );
-
-    for await (const chunk of stream) {
-      const content = chunk.choices[0]?.delta?.content;
-      if (content) {
-        yield content;
-      }
-    }
+    yield* streamChatTextDeltas({
+      apiKey: this.apiKey,
+      model: this.defaultChatModel,
+      messages,
+      signal,
+    });
   }
 }

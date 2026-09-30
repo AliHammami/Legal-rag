@@ -1,8 +1,9 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { OpenAIService } from '../openai/openai.service.js';
-import { buildRagMessages } from './build-rag-messages.js';
+import { extractMessageContent } from '../langchain/extract-message-content.js';
+import { buildRagLangChainMessages } from './langchain/build-rag-langchain-messages.js';
+import { createRagChatModel } from './langchain/create-rag-chat-model.js';
 import {
   DEFAULT_RAG_GENERATION_MODEL,
   RAG_GENERATION_MODEL_ENV,
@@ -19,7 +20,6 @@ export interface GenerateAnswerInput {
 export class RagGenerationService {
   constructor(
     @Inject(ConfigService) private readonly configService: ConfigService,
-    @Inject(OpenAIService) private readonly openAIService: OpenAIService,
   ) {}
 
   getGenerationModel(): string {
@@ -38,14 +38,22 @@ export class RagGenerationService {
       );
     }
 
-    const messages = buildRagMessages(input.question, input.context);
+    const apiKey = this.configService.getOrThrow<string>('OPENAI_API_KEY');
+    const chatModel = createRagChatModel({ apiKey, model });
+    const messages = buildRagLangChainMessages(input.question, input.context);
 
     try {
-      return await this.openAIService.createChatCompletion({
-        model,
-        messages,
+      const response = await chatModel.invoke(messages, {
         signal: input.signal,
       });
+      const content = extractMessageContent(response).trim();
+      if (!content) {
+        throw new GenerationError(
+          'OpenAI returned an empty generation response',
+          'RESPONSE_EMPTY',
+        );
+      }
+      return content;
     } catch (error) {
       if (error instanceof GenerationError) {
         throw error;
