@@ -11,6 +11,10 @@ import type {
   MulticorpusDifficulty,
   MulticorpusQuestionType,
 } from './multicorpus-dataset.types.js';
+import {
+  MULTICORPUS_MULTI_CORPUS_CHAT_PROMPT,
+  MULTICORPUS_SINGLE_CORPUS_CHAT_PROMPT,
+} from './langchain/multicorpus-question-chat-prompts.js';
 import { reconcileQuestionGoldArticles } from './reconcile-multicorpus-gold-articles.js';
 import type { MultiCorpusArticleBundle } from './select-diverse-articles.js';
 
@@ -145,23 +149,17 @@ export async function generateSingleCorpusQuestions(
   difficultyMix: MulticorpusDifficulty[],
   model = DEFAULT_MULTICORPUS_GENERATION_MODEL,
 ): Promise<GeneratedQuestionCandidate[]> {
+  const promptValue = await MULTICORPUS_SINGLE_CORPUS_CHAT_PROMPT.invoke({
+    userContent: buildSingleCorpusPrompt(corpusId, articles, difficultyMix),
+  });
+
   const response = await openAIService.createStructuredChatCompletion<{
     questions: GeneratedQuestionCandidate[];
   }>({
     model,
     schemaName: 'multicorpus_single_corpus_questions',
     schema: GENERATED_QUESTION_SCHEMA,
-    messages: [
-      {
-        role: 'system',
-        content:
-          'Tu es un juriste expert qui construit des datasets d ?valuation RAG strictement ancr?s dans les textes fournis.',
-      },
-      {
-        role: 'user',
-        content: buildSingleCorpusPrompt(corpusId, articles, difficultyMix),
-      },
-    ],
+    promptValue,
   });
 
   return response.questions ?? [];
@@ -173,23 +171,17 @@ export async function generateMultiCorpusQuestions(
   difficultyMix: MulticorpusDifficulty[],
   model = DEFAULT_MULTICORPUS_GENERATION_MODEL,
 ): Promise<GeneratedQuestionCandidate[]> {
+  const promptValue = await MULTICORPUS_MULTI_CORPUS_CHAT_PROMPT.invoke({
+    userContent: buildMultiCorpusPrompt(bundles, difficultyMix),
+  });
+
   const response = await openAIService.createStructuredChatCompletion<{
     questions: GeneratedQuestionCandidate[];
   }>({
     model,
     schemaName: 'multicorpus_multi_corpus_questions',
     schema: GENERATED_QUESTION_SCHEMA,
-    messages: [
-      {
-        role: 'system',
-        content:
-          'Tu es un juriste expert qui construit des datasets d ?valuation RAG multi-corpus strictement ancr?s dans les textes fournis.',
-      },
-      {
-        role: 'user',
-        content: buildMultiCorpusPrompt(bundles, difficultyMix),
-      },
-    ],
+    promptValue,
   });
 
   return response.questions ?? [];

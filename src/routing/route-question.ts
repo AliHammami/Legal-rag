@@ -7,7 +7,10 @@ import {
   DEFAULT_ROUTING_MODEL,
   ROUTING_RESPONSE_SCHEMA,
 } from './constants.js';
-import { buildRouterMessages } from './router-prompt.js';
+import {
+  buildRouterPromptInput,
+  ROUTER_CHAT_PROMPT,
+} from './langchain/router-chat-prompt.js';
 import { RoutingError } from './routing.error.js';
 import type { RouteQuestionOptions, RoutingResult } from './types.js';
 import { validateRoutingResult } from './validate-routing-result.js';
@@ -32,16 +35,15 @@ export async function routeQuestion(
     throw new RoutingError('Routing model is not configured', 'CONFIG_MISSING');
   }
 
-  const messages = buildRouterMessages(
-    normalizedQuestion,
-    CORPUS_ROUTING_DESCRIPTIONS,
+  const promptValue = await ROUTER_CHAT_PROMPT.invoke(
+    buildRouterPromptInput(normalizedQuestion, CORPUS_ROUTING_DESCRIPTIONS),
   );
 
   let rawResponse: unknown;
   try {
     rawResponse = await openAIService.createStructuredChatCompletion<unknown>({
       model,
-      messages,
+      promptValue,
       schemaName: 'corpus_routing_result',
       schema: ROUTING_RESPONSE_SCHEMA,
       signal: options.signal,

@@ -40,6 +40,9 @@ IMPORTANT :
 
 Retourne UNIQUEMENT le JSON demandé, sans texte additionnel.`;
 
+export const E2E_SOURCE_JUDGE_USER_MESSAGE_TEMPLATE =
+  'QUESTION:\n{question}\n\nREFERENCE ANSWER:\n{referenceAnswer}\n\nGENERATED ANSWER:\n{generatedAnswer}\n\nEXPECTED ABSTENTION: {expectedAbstention}\n\nSOURCES:\n{sources}\n\nJUDGE RESULT:\n{judgeResult}';
+
 function formatReferenceAnswer(referenceAnswer: string | null): string {
   if (referenceAnswer === null) {
     return '(aucune — question d\'abstention)';
@@ -77,6 +80,30 @@ function formatJudgeResult(
   return JSON.stringify(judgeResult, null, 2);
 }
 
+export function formatE2ESourceJudgeUserMessageContent(
+  input: E2ESourceJudgeInput,
+): string {
+  return [
+    `QUESTION:\n${input.question}`,
+    `REFERENCE ANSWER:\n${formatReferenceAnswer(input.referenceAnswer)}`,
+    `GENERATED ANSWER:\n${input.generatedAnswer}`,
+    `EXPECTED ABSTENTION: ${input.expectedAbstention}`,
+    `SOURCES:\n${formatSources(input.sources)}`,
+    `JUDGE RESULT:\n${formatJudgeResult(input.judgeResult)}`,
+  ].join('\n\n');
+}
+
+export function buildE2ESourceJudgePromptInput(input: E2ESourceJudgeInput) {
+  return {
+    question: input.question,
+    referenceAnswer: formatReferenceAnswer(input.referenceAnswer),
+    generatedAnswer: input.generatedAnswer,
+    expectedAbstention: String(input.expectedAbstention),
+    sources: formatSources(input.sources),
+    judgeResult: formatJudgeResult(input.judgeResult),
+  };
+}
+
 export function buildE2ESourceJudgeMessages(
   input: E2ESourceJudgeInput,
 ): ChatCompletionMessageParam[] {
@@ -84,14 +111,7 @@ export function buildE2ESourceJudgeMessages(
     { role: 'system', content: E2E_SOURCE_JUDGE_SYSTEM_PROMPT },
     {
       role: 'user',
-      content: [
-        `QUESTION:\n${input.question}`,
-        `REFERENCE ANSWER:\n${formatReferenceAnswer(input.referenceAnswer)}`,
-        `GENERATED ANSWER:\n${input.generatedAnswer}`,
-        `EXPECTED ABSTENTION: ${input.expectedAbstention}`,
-        `SOURCES:\n${formatSources(input.sources)}`,
-        `JUDGE RESULT:\n${formatJudgeResult(input.judgeResult)}`,
-      ].join('\n\n'),
+      content: formatE2ESourceJudgeUserMessageContent(input),
     },
   ];
 }

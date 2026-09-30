@@ -61,12 +61,35 @@ Correctness ≠ Groundedness.
 
 Retourne UNIQUEMENT le JSON demandé, sans texte additionnel.`;
 
+export const E2E_JUDGE_USER_MESSAGE_TEMPLATE =
+  'QUESTION:\n{question}\n\nREFERENCE ANSWER:\n{referenceAnswer}\n\nGENERATED ANSWER:\n{generatedAnswer}\n\nCONTEXT:\n{context}\n\nEXPECTED ABSTENTION: {expectedAbstention}';
+
 function formatReferenceAnswer(referenceAnswer: string | null): string {
   if (referenceAnswer === null) {
     return '(aucune — question d\'abstention)';
   }
 
   return referenceAnswer;
+}
+
+export function formatE2EJudgeUserMessageContent(input: E2EJudgeInput): string {
+  return [
+    `QUESTION:\n${input.question}`,
+    `REFERENCE ANSWER:\n${formatReferenceAnswer(input.referenceAnswer)}`,
+    `GENERATED ANSWER:\n${input.generatedAnswer}`,
+    `CONTEXT:\n${input.context}`,
+    `EXPECTED ABSTENTION: ${input.expectedAbstention}`,
+  ].join('\n\n');
+}
+
+export function buildE2EJudgePromptInput(input: E2EJudgeInput) {
+  return {
+    question: input.question,
+    referenceAnswer: formatReferenceAnswer(input.referenceAnswer),
+    generatedAnswer: input.generatedAnswer,
+    context: input.context,
+    expectedAbstention: String(input.expectedAbstention),
+  };
 }
 
 export function buildE2EJudgeMessages(
@@ -76,13 +99,7 @@ export function buildE2EJudgeMessages(
     { role: 'system', content: E2E_JUDGE_SYSTEM_PROMPT },
     {
       role: 'user',
-      content: [
-        `QUESTION:\n${input.question}`,
-        `REFERENCE ANSWER:\n${formatReferenceAnswer(input.referenceAnswer)}`,
-        `GENERATED ANSWER:\n${input.generatedAnswer}`,
-        `CONTEXT:\n${input.context}`,
-        `EXPECTED ABSTENTION: ${input.expectedAbstention}`,
-      ].join('\n\n'),
+      content: formatE2EJudgeUserMessageContent(input),
     },
   ];
 }

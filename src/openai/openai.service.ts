@@ -7,6 +7,7 @@ import { createOpenAIEmbeddings } from '../langchain/create-openai-embeddings.js
 import { embedDocumentsIndexed } from '../langchain/embed-documents-indexed.js';
 import { invokeStructuredJsonChat } from '../langchain/invoke-structured-json-chat.js';
 import { streamChatTextDeltas } from '../langchain/stream-chat-text-deltas.js';
+import type { BasePromptValueInterface } from '@langchain/core/prompt_values';
 import type { CreateEmbeddingsResult } from '../langchain/types.js';
 
 export type {
@@ -19,13 +20,15 @@ export interface CreateChatCompletionOptions {
   signal?: AbortSignal;
 }
 
-export interface CreateStructuredChatCompletionOptions {
+export type CreateStructuredChatCompletionOptions = {
   model: string;
-  messages: ChatCompletionMessageParam[];
   schemaName: string;
   schema: Record<string, unknown>;
   signal?: AbortSignal;
-}
+} & (
+  | { messages: ChatCompletionMessageParam[]; promptValue?: never }
+  | { promptValue: BasePromptValueInterface; messages?: never }
+);
 
 /**
  * Façade NestJS : expose les mêmes méthodes qu'avant, implémentées via LangChain Models.
@@ -68,10 +71,11 @@ export class OpenAIService {
     return invokeStructuredJsonChat<T>({
       apiKey: this.apiKey,
       model: options.model,
-      messages: options.messages,
       schemaName: options.schemaName,
       schema: options.schema,
       signal: options.signal,
+      messages: options.messages,
+      promptValue: options.promptValue,
     });
   }
 

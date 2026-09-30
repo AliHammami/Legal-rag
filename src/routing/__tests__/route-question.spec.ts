@@ -138,7 +138,9 @@ describe('routeQuestion', () => {
     expect(createStructuredChatCompletion).toHaveBeenCalledOnce();
     const call = createStructuredChatCompletion.mock.calls[0]?.[0];
     expect(call.schemaName).toBe('corpus_routing_result');
-    expect(call.messages[0]?.content).toContain('code-penal');
-    expect(call.messages[1]?.content).toBe('Question p?nale');
+    expect(call.promptValue).toBeDefined();
+    const messages = call.promptValue.toChatMessages();
+    expect(String(messages[0]?.content)).toContain('code-penal');
+    expect(messages[1]?.content).toBe('Question p?nale');
   });
 });

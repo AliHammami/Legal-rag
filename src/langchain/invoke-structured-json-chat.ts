@@ -5,7 +5,7 @@ import type { StructuredJsonChatInvokeOptions } from './types.js';
 
 /**
  * JSON schema strict via ChatOpenAI.invoke (?quivalent ? response_format OpenAI).
- * Pas de ChatPromptTemplate / withStructuredOutput LCEL — m?me contrat m?tier qu'avant.
+ * Pas de ChatPromptTemplate / withStructuredOutput LCEL ÿ m?me contrat m?tier qu'avant.
  */
 export async function invokeStructuredJsonChat<T>(
   options: StructuredJsonChatInvokeOptions,
@@ -14,9 +14,19 @@ export async function invokeStructuredJsonChat<T>(
     apiKey: options.apiKey,
     model: options.model,
   });
-  const messages = openAiChatMessagesToLangChain(options.messages);
 
-  const response = await model.invoke(messages, {
+  const invokeInput =
+    options.promptValue ??
+    (options.messages
+      ? openAiChatMessagesToLangChain(options.messages)
+      : null);
+  if (!invokeInput) {
+    throw new Error(
+      'invokeStructuredJsonChat requires messages or promptValue',
+    );
+  }
+
+  const response = await model.invoke(invokeInput, {
     signal: options.signal,
     response_format: {
       type: 'json_schema',

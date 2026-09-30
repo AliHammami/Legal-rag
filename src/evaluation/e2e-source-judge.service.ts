@@ -2,7 +2,8 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
 import { OpenAIService } from '../openai/openai.service.js';
-import { buildE2ESourceJudgeMessages } from './build-e2e-source-judge-messages.js';
+import { buildE2ESourceJudgePromptInput } from './build-e2e-source-judge-messages.js';
+import { E2E_SOURCE_JUDGE_CHAT_PROMPT } from './langchain/e2e-source-judge-chat-prompt.js';
 import {
   DEFAULT_RAG_EVALUATION_JUDGE_MODEL,
   RAG_EVALUATION_JUDGE_MODEL_ENV,
@@ -38,13 +39,15 @@ export class E2ESourceJudgeService {
       );
     }
 
-    const messages = buildE2ESourceJudgeMessages(input);
+    const promptValue = await E2E_SOURCE_JUDGE_CHAT_PROMPT.invoke(
+      buildE2ESourceJudgePromptInput(input),
+    );
 
     try {
       const rawResponse =
         await this.openAIService.createStructuredChatCompletion<unknown>({
           model,
-          messages,
+          promptValue,
           schemaName: 'e2e_source_judge_result',
           schema: E2E_SOURCE_JUDGE_RESPONSE_SCHEMA,
         });
