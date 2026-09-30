@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ConfigService } from '@nestjs/config';
 
 import * as embedModule from '../../langchain/embed-documents-indexed.js';
-import * as structuredModule from '../../langchain/invoke-structured-json-chat.js';
+import * as chatModelModule from '../../langchain/create-chat-openai.js';
 import * as streamModule from '../../langchain/stream-chat-text-deltas.js';
 import { OpenAIService } from '../openai.service.js';
 
@@ -33,28 +33,17 @@ describe('OpenAIService (LangChain-backed)', () => {
     expect(result).toEqual([{ index: 0, embedding: [0.1, 0.2] }]);
   });
 
-  it('createStructuredChatCompletion delegates to invokeStructuredJsonChat', async () => {
-    vi.spyOn(structuredModule, 'invokeStructuredJsonChat').mockResolvedValue({
-      corpusIds: ['code-penal'],
-    });
-
-    const result = await service.createStructuredChatCompletion<{
-      corpusIds: string[];
-    }>({
-      model: 'gpt-router',
-      messages: [{ role: 'user', content: 'Q' }],
-      schemaName: 'test',
-      schema: { type: 'object' },
-    });
-
-    expect(structuredModule.invokeStructuredJsonChat).toHaveBeenCalledWith(
-      expect.objectContaining({
-        apiKey: 'test-key',
-        model: 'gpt-router',
-        schemaName: 'test',
-      }),
+  it('createChatModel delegates to createChatOpenAI with api key and model', () => {
+    vi.spyOn(chatModelModule, 'createChatOpenAI').mockReturnValue(
+      {} as ReturnType<typeof chatModelModule.createChatOpenAI>,
     );
-    expect(result.corpusIds).toEqual(['code-penal']);
+
+    service.createChatModel('gpt-router');
+
+    expect(chatModelModule.createChatOpenAI).toHaveBeenCalledWith({
+      apiKey: 'test-key',
+      model: 'gpt-router',
+    });
   });
 
   it('streamChatCompletion yields deltas from streamChatTextDeltas', async () => {

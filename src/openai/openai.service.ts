@@ -3,35 +3,18 @@ import { ConfigService } from '@nestjs/config';
 import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 
 import { DEFAULT_EMBEDDING_MODEL } from '../embeddings/constants.js';
+import { createChatOpenAI } from '../langchain/create-chat-openai.js';
 import { createOpenAIEmbeddings } from '../langchain/create-openai-embeddings.js';
 import { embedDocumentsIndexed } from '../langchain/embed-documents-indexed.js';
-import { invokeStructuredJsonChat } from '../langchain/invoke-structured-json-chat.js';
 import { streamChatTextDeltas } from '../langchain/stream-chat-text-deltas.js';
-import type { BasePromptValueInterface } from '@langchain/core/prompt_values';
 import type { CreateEmbeddingsResult } from '../langchain/types.js';
 
 export type {
   CreateEmbeddingsResult,
 } from '../langchain/types.js';
 
-export interface CreateChatCompletionOptions {
-  model: string;
-  messages: ChatCompletionMessageParam[];
-  signal?: AbortSignal;
-}
-
-export type CreateStructuredChatCompletionOptions = {
-  model: string;
-  schemaName: string;
-  schema: Record<string, unknown>;
-  signal?: AbortSignal;
-} & (
-  | { messages: ChatCompletionMessageParam[]; promptValue?: never }
-  | { promptValue: BasePromptValueInterface; messages?: never }
-);
-
 /**
- * Façade NestJS : expose les mêmes méthodes qu'avant, implémentées via LangChain Models.
+ * Façade NestJS : embeddings, streaming, factory ChatOpenAI (structured output via withStructuredOutput côté appelant).
  */
 @Injectable()
 export class OpenAIService {
@@ -65,17 +48,10 @@ export class OpenAIService {
     return embedDocumentsIndexed(embeddings, inputs);
   }
 
-  async createStructuredChatCompletion<T>(
-    options: CreateStructuredChatCompletionOptions,
-  ): Promise<T> {
-    return invokeStructuredJsonChat<T>({
+  createChatModel(model: string) {
+    return createChatOpenAI({
       apiKey: this.apiKey,
-      model: options.model,
-      schemaName: options.schemaName,
-      schema: options.schema,
-      signal: options.signal,
-      messages: options.messages,
-      promptValue: options.promptValue,
+      model,
     });
   }
 

@@ -5,8 +5,11 @@ import { RoutingError } from '../routing.error.js';
 import { routeQuestion } from '../route-question.js';
 
 function mockOpenAI(response: unknown): OpenAIService {
+  const invoke = vi.fn().mockResolvedValue(response);
   return {
-    createStructuredChatCompletion: vi.fn().mockResolvedValue(response),
+    createChatModel: vi.fn().mockReturnValue({
+      withStructuredOutput: vi.fn().mockReturnValue({ invoke }),
+    }),
   } as unknown as OpenAIService;
 }
 
@@ -111,35 +114,32 @@ describe('routeQuestion', () => {
   });
 
   it('maps OpenAI API errors to RoutingError', async () => {
+    const invoke = vi.fn().mockRejectedValue(new Error('OpenAI rate limit'));
     const openAIService = {
-      createStructuredChatCompletion: vi
-        .fn()
-        .mockRejectedValue(new Error('OpenAI returned empty structured response')),
+      createChatModel: vi.fn().mockReturnValue({
+        withStructuredOutput: vi.fn().mockReturnValue({ invoke }),
+      }),
     } as unknown as OpenAIService;
 
     await expect(routeQuestion(openAIService, 'Question test')).rejects.toBeInstanceOf(
       RoutingError,
     );
-    await expect(routeQuestion(openAIService, 'Question test')).rejects.toMatchObject({
-      code: 'ROUTING_RESPONSE_EMPTY',
-    });
   });
 
-  it('calls structured completion with router messages and schema', async () => {
-    const createStructuredChatCompletion = vi
-      .fn()
-      .mockResolvedValue({ corpusIds: ['code-penal'] });
-    const openAIService = {
-      createStructuredChatCompletion,
-    } as unknown as OpenAIService;
+  it('invokes structured model with router prompt value', async () => {
+    const invoke = vi.fn().mockResolvedValue({ corpusIds: ['code-penal'] });
+    const withStructuredOutput = vi.fn().mockReturnValue({ invoke });
+    const createChatModel = vi.fn().mockReturnValue({ withStructuredOutput });
+    const openAIService = { createChatModel } as unknown as OpenAIService;
 
     await routeQuestion(openAIService, 'Question p?nale');
 
-    expect(createStructuredChatCompletion).toHaveBeenCalledOnce();
-    const call = createStructuredChatCompletion.mock.calls[0]?.[0];
-    expect(call.schemaName).toBe('corpus_routing_result');
-    expect(call.promptValue).toBeDefined();
-    const messages = call.promptValue.toChatMessages();
+    expect(createChatModel).toHaveBeenCalledOnce();
+    expect(withStructuredOutput).toHaveBeenCalledOnce();
+    expect(invoke).toHaveBeenCalledOnce();
+    const promptArg = invoke.mock.calls[0]?.[0];
+    expect(promptArg).toBeDefined();
+    const messages = promptArg.toChatMessages();
     expect(String(messages[0]?.content)).toContain('code-penal');
     expect(messages[1]?.content).toBe('Question p?nale');
   });

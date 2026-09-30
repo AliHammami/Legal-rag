@@ -6,9 +6,9 @@ import { buildE2EJudgePromptInput } from './build-e2e-judge-messages.js';
 import { E2E_JUDGE_CHAT_PROMPT } from './langchain/e2e-judge-chat-prompt.js';
 import {
   DEFAULT_RAG_EVALUATION_JUDGE_MODEL,
-  E2E_JUDGE_RESPONSE_SCHEMA,
   RAG_EVALUATION_JUDGE_MODEL_ENV,
 } from './e2e-judge.constants.js';
+import { E2EJudgeLlmResponseSchema } from './e2e-judge-llm-response.schema.js';
 import { EvaluationError } from './evaluation.error.js';
 import type { E2EJudgeInput, E2EJudgeResult } from './e2e-judge.types.js';
 import {
@@ -44,13 +44,11 @@ export class E2EJudgeService {
     );
 
     try {
-      const rawResponse =
-        await this.openAIService.createStructuredChatCompletion<unknown>({
-          model,
-          promptValue,
-          schemaName: 'e2e_judge_result',
-          schema: E2E_JUDGE_RESPONSE_SCHEMA,
-        });
+      const chatModel = this.openAIService.createChatModel(model);
+      const structuredModel = chatModel.withStructuredOutput(
+        E2EJudgeLlmResponseSchema,
+      );
+      const rawResponse = await structuredModel.invoke(promptValue);
 
       const snapshot = parseE2EJudgeScoreSnapshot(
         rawResponse,

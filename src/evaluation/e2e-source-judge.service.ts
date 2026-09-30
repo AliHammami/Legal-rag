@@ -8,7 +8,7 @@ import {
   DEFAULT_RAG_EVALUATION_JUDGE_MODEL,
   RAG_EVALUATION_JUDGE_MODEL_ENV,
 } from './e2e-judge.constants.js';
-import { E2E_SOURCE_JUDGE_RESPONSE_SCHEMA } from './e2e-source-judge.constants.js';
+import { E2ESourceJudgeLlmResponseSchema } from './e2e-source-judge-llm-response.schema.js';
 import { EvaluationError } from './evaluation.error.js';
 import type {
   E2ESourceJudgeInput,
@@ -44,13 +44,11 @@ export class E2ESourceJudgeService {
     );
 
     try {
-      const rawResponse =
-        await this.openAIService.createStructuredChatCompletion<unknown>({
-          model,
-          promptValue,
-          schemaName: 'e2e_source_judge_result',
-          schema: E2E_SOURCE_JUDGE_RESPONSE_SCHEMA,
-        });
+      const chatModel = this.openAIService.createChatModel(model);
+      const structuredModel = chatModel.withStructuredOutput(
+        E2ESourceJudgeLlmResponseSchema,
+      );
+      const rawResponse = await structuredModel.invoke(promptValue);
 
       return parseE2ESourceJudgeResult(rawResponse, input.questionId);
     } catch (error) {

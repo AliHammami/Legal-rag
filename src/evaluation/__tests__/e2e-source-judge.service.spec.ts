@@ -4,11 +4,14 @@ import { E2ESourceJudgeService } from '../e2e-source-judge.service.js';
 
 describe('E2ESourceJudgeService', () => {
   it('calls structured completion and returns parsed source judge result', async () => {
+    const invoke = vi.fn().mockResolvedValue({
+      sourceRelevance: 3,
+      sourceCoverage: 2,
+      explanation: 'Sources partiellement couvrantes.',
+    });
     const openAIService = {
-      createStructuredChatCompletion: vi.fn().mockResolvedValue({
-        sourceRelevance: 3,
-        sourceCoverage: 2,
-        explanation: 'Sources partiellement couvrantes.',
+      createChatModel: vi.fn().mockReturnValue({
+        withStructuredOutput: vi.fn().mockReturnValue({ invoke }),
       }),
     };
 
@@ -49,6 +52,7 @@ describe('E2ESourceJudgeService', () => {
       sourceCoverage: 2,
       explanation: 'Sources partiellement couvrantes.',
     });
-    expect(openAIService.createStructuredChatCompletion).toHaveBeenCalledOnce();
+    expect(openAIService.createChatModel).toHaveBeenCalledOnce();
+    expect(invoke).toHaveBeenCalledOnce();
   });
 });

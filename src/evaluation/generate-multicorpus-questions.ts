@@ -15,6 +15,7 @@ import {
   MULTICORPUS_MULTI_CORPUS_CHAT_PROMPT,
   MULTICORPUS_SINGLE_CORPUS_CHAT_PROMPT,
 } from './langchain/multicorpus-question-chat-prompts.js';
+import { MulticorpusGeneratedQuestionsSchema } from './multicorpus-generated-questions.schema.js';
 import { reconcileQuestionGoldArticles } from './reconcile-multicorpus-gold-articles.js';
 import type { MultiCorpusArticleBundle } from './select-diverse-articles.js';
 
@@ -27,54 +28,6 @@ export interface GeneratedQuestionCandidate {
   questionType: MulticorpusQuestionType;
   sourceArticles?: string[];
 }
-
-const GENERATED_QUESTION_SCHEMA = {
-  type: 'object',
-  additionalProperties: false,
-  required: ['questions'],
-  properties: {
-    questions: {
-      type: 'array',
-      items: {
-        type: 'object',
-        additionalProperties: false,
-        required: [
-          'question',
-          'goldCorpusIds',
-          'goldArticles',
-          'referenceAnswer',
-          'difficulty',
-          'questionType',
-          'sourceArticles',
-        ],
-        properties: {
-          question: { type: 'string' },
-          goldCorpusIds: {
-            type: 'array',
-            items: { type: 'string' },
-          },
-          goldArticles: {
-            type: 'array',
-            items: { type: 'string' },
-          },
-          referenceAnswer: { type: 'string' },
-          difficulty: {
-            type: 'string',
-            enum: ['easy', 'medium', 'hard'],
-          },
-          questionType: {
-            type: 'string',
-            enum: ['single-corpus', 'multi-corpus'],
-          },
-          sourceArticles: {
-            type: 'array',
-            items: { type: 'string' },
-          },
-        },
-      },
-    },
-  },
-} as const;
 
 function buildSingleCorpusPrompt(
   corpusId: string,
@@ -153,14 +106,11 @@ export async function generateSingleCorpusQuestions(
     userContent: buildSingleCorpusPrompt(corpusId, articles, difficultyMix),
   });
 
-  const response = await openAIService.createStructuredChatCompletion<{
-    questions: GeneratedQuestionCandidate[];
-  }>({
-    model,
-    schemaName: 'multicorpus_single_corpus_questions',
-    schema: GENERATED_QUESTION_SCHEMA,
-    promptValue,
-  });
+  const chatModel = openAIService.createChatModel(model);
+  const structuredModel = chatModel.withStructuredOutput(
+    MulticorpusGeneratedQuestionsSchema,
+  );
+  const response = await structuredModel.invoke(promptValue);
 
   return response.questions ?? [];
 }
@@ -175,14 +125,11 @@ export async function generateMultiCorpusQuestions(
     userContent: buildMultiCorpusPrompt(bundles, difficultyMix),
   });
 
-  const response = await openAIService.createStructuredChatCompletion<{
-    questions: GeneratedQuestionCandidate[];
-  }>({
-    model,
-    schemaName: 'multicorpus_multi_corpus_questions',
-    schema: GENERATED_QUESTION_SCHEMA,
-    promptValue,
-  });
+  const chatModel = openAIService.createChatModel(model);
+  const structuredModel = chatModel.withStructuredOutput(
+    MulticorpusGeneratedQuestionsSchema,
+  );
+  const response = await structuredModel.invoke(promptValue);
 
   return response.questions ?? [];
 }

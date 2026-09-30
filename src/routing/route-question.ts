@@ -3,14 +3,12 @@ import { OpenAIErrorMapper } from '../openai/openai-error.mapper.js';
 import { RetrievalError } from '../retrieval/retrieval.error.js';
 import { validateQuestion } from '../retrieval/validate-search-input.js';
 import { CORPUS_ROUTING_DESCRIPTIONS } from './corpus-descriptions.js';
-import {
-  DEFAULT_ROUTING_MODEL,
-  ROUTING_RESPONSE_SCHEMA,
-} from './constants.js';
+import { DEFAULT_ROUTING_MODEL } from './constants.js';
 import {
   buildRouterPromptInput,
   ROUTER_CHAT_PROMPT,
 } from './langchain/router-chat-prompt.js';
+import { RoutingLlmResponseSchema } from './routing-llm-response.schema.js';
 import { RoutingError } from './routing.error.js';
 import type { RouteQuestionOptions, RoutingResult } from './types.js';
 import { validateRoutingResult } from './validate-routing-result.js';
@@ -41,11 +39,11 @@ export async function routeQuestion(
 
   let rawResponse: unknown;
   try {
-    rawResponse = await openAIService.createStructuredChatCompletion<unknown>({
-      model,
-      promptValue,
-      schemaName: 'corpus_routing_result',
-      schema: ROUTING_RESPONSE_SCHEMA,
+    const chatModel = openAIService.createChatModel(model);
+    const structuredModel = chatModel.withStructuredOutput(
+      RoutingLlmResponseSchema,
+    );
+    rawResponse = await structuredModel.invoke(promptValue, {
       signal: options.signal,
     });
   } catch (error) {
@@ -54,14 +52,6 @@ export async function routeQuestion(
     }
 
     if (error instanceof Error) {
-      if (error.message.includes('empty structured response')) {
-        throw new RoutingError(
-          'OpenAI returned an empty routing response',
-          'ROUTING_RESPONSE_EMPTY',
-          error,
-        );
-      }
-
       const mapper = new OpenAIErrorMapper();
       const mapped = mapper.map(error);
       throw new RoutingError(mapped.message, mapped.code, error);
