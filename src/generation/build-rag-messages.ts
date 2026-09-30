@@ -23,6 +23,17 @@ export const RAG_SYSTEM_PROMPT = `Tu es un assistant juridique français. Les ex
 
 Réponds de manière claire et concise.`;
 
+/** Template human (f-string) — même texte que l'ancienne construction manuelle. */
+export const RAG_USER_MESSAGE_TEMPLATE =
+  'CONTEXTE:\n{context}\n\nQUESTION:\n{question}';
+
+export function formatRagUserMessageContent(
+  question: string,
+  context: string,
+): string {
+  return `CONTEXTE:\n${context}\n\nQUESTION:\n${question}`;
+}
+
 export function buildRagMessages(
   question: string,
   context: string,
@@ -31,7 +42,7 @@ export function buildRagMessages(
     { role: 'system', content: RAG_SYSTEM_PROMPT },
     {
       role: 'user',
-      content: `CONTEXTE:\n${context}\n\nQUESTION:\n${question}`,
+      content: formatRagUserMessageContent(question, context),
     },
   ];
 }

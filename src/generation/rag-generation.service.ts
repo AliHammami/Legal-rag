@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
 import { extractMessageContent } from '../langchain/extract-message-content.js';
-import { buildRagLangChainMessages } from './langchain/build-rag-langchain-messages.js';
+import { RAG_GENERATION_CHAT_PROMPT } from './langchain/rag-generation-chat-prompt.js';
 import { createRagChatModel } from './langchain/create-rag-chat-model.js';
 import {
   DEFAULT_RAG_GENERATION_MODEL,
@@ -40,10 +40,14 @@ export class RagGenerationService {
 
     const apiKey = this.configService.getOrThrow<string>('OPENAI_API_KEY');
     const chatModel = createRagChatModel({ apiKey, model });
-    const messages = buildRagLangChainMessages(input.question, input.context);
+
+    const promptValue = await RAG_GENERATION_CHAT_PROMPT.invoke({
+      question: input.question,
+      context: input.context,
+    });
 
     try {
-      const response = await chatModel.invoke(messages, {
+      const response = await chatModel.invoke(promptValue, {
         signal: input.signal,
       });
       const content = extractMessageContent(response).trim();

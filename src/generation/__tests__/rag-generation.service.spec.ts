@@ -6,6 +6,7 @@ import { DEFAULT_RAG_GENERATION_MODEL } from '../constants.js';
 import { GenerationError } from '../generation.error.js';
 import { RagGenerationService } from '../rag-generation.service.js';
 import * as ragChatModelModule from '../langchain/create-rag-chat-model.js';
+import { RAG_GENERATION_CHAT_PROMPT } from '../langchain/rag-generation-chat-prompt.js';
 
 describe('RagGenerationService', () => {
   let configService: ConfigService;
@@ -48,16 +49,32 @@ describe('RagGenerationService', () => {
     );
   });
 
-  it('passes system prompt, context, and question via LangChain messages', async () => {
+  it('passes ChatPromptTemplate output to ChatOpenAI.invoke', async () => {
     await service.generateAnswer({
       question: 'Question ?',
       context: 'Contexte juridique',
     });
 
-    const messages = invoke.mock.calls[0]?.[0];
+    const promptArg = invoke.mock.calls[0]?.[0];
+    expect(promptArg).toBeDefined();
+    const messages = promptArg.toChatMessages();
     expect(messages[0]?.content).toBe(RAG_SYSTEM_PROMPT);
     expect(messages[1]?.content).toContain('Contexte juridique');
     expect(messages[1]?.content).toContain('Question ?');
+  });
+
+  it('builds messages via prompt.invoke with question and context', async () => {
+    const promptSpy = vi.spyOn(RAG_GENERATION_CHAT_PROMPT, 'invoke');
+
+    await service.generateAnswer({
+      question: 'Ma question',
+      context: 'Mon contexte',
+    });
+
+    expect(promptSpy).toHaveBeenCalledWith({
+      question: 'Ma question',
+      context: 'Mon contexte',
+    });
   });
 
   it('returns the generated answer', async () => {
@@ -69,7 +86,7 @@ describe('RagGenerationService', () => {
     expect(answer).toBe('Réponse générée.');
   });
 
-  it('forwards abort signal to invoke', async () => {
+  it('forwards abort signal to model.invoke', async () => {
     const controller = new AbortController();
     await service.generateAnswer({
       question: 'Question ?',
@@ -78,7 +95,7 @@ describe('RagGenerationService', () => {
     });
 
     expect(invoke).toHaveBeenCalledWith(
-      expect.any(Array),
+      expect.anything(),
       expect.objectContaining({ signal: controller.signal }),
     );
   });
