@@ -1,8 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { extractMessageContent } from '../langchain/extract-message-content.js';
-import { RAG_GENERATION_CHAT_PROMPT } from './langchain/rag-generation-chat-prompt.js';
+import { createRagGenerationChain } from './langchain/create-rag-generation-chain.js';
 import { createRagChatModel } from './langchain/create-rag-chat-model.js';
 import {
   DEFAULT_RAG_GENERATION_MODEL,
@@ -40,24 +39,16 @@ export class RagGenerationService {
 
     const apiKey = this.configService.getOrThrow<string>('OPENAI_API_KEY');
     const chatModel = createRagChatModel({ apiKey, model });
-
-    const promptValue = await RAG_GENERATION_CHAT_PROMPT.invoke({
-      question: input.question,
-      context: input.context,
-    });
+    const chain = createRagGenerationChain(chatModel);
 
     try {
-      const response = await chatModel.invoke(promptValue, {
-        signal: input.signal,
-      });
-      const content = extractMessageContent(response).trim();
-      if (!content) {
-        throw new GenerationError(
-          'OpenAI returned an empty generation response',
-          'RESPONSE_EMPTY',
-        );
-      }
-      return content;
+      return await chain.invoke(
+        {
+          question: input.question,
+          context: input.context,
+        },
+        { signal: input.signal },
+      );
     } catch (error) {
       if (error instanceof GenerationError) {
         throw error;

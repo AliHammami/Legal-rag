@@ -1,4 +1,5 @@
 import { AIMessage } from '@langchain/core/messages';
+import { RunnableLambda } from '@langchain/core/runnables';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ConfigService } from '@nestjs/config';
 import { RAG_SYSTEM_PROMPT } from '../build-rag-messages.js';
@@ -19,9 +20,11 @@ describe('RagGenerationService', () => {
       getOrThrow: vi.fn().mockReturnValue('test-api-key'),
     } as unknown as ConfigService;
     invoke = vi.fn().mockResolvedValue(new AIMessage('Réponse générée.'));
-    vi.spyOn(ragChatModelModule, 'createRagChatModel').mockReturnValue({
-      invoke,
-    } as unknown as ReturnType<typeof ragChatModelModule.createRagChatModel>);
+    vi.spyOn(ragChatModelModule, 'createRagChatModel').mockReturnValue(
+      RunnableLambda.from(invoke) as unknown as ReturnType<
+        typeof ragChatModelModule.createRagChatModel
+      >,
+    );
     service = new RagGenerationService(configService);
   });
 
@@ -63,18 +66,17 @@ describe('RagGenerationService', () => {
     expect(messages[1]?.content).toContain('Question ?');
   });
 
-  it('builds messages via prompt.invoke with question and context', async () => {
-    const promptSpy = vi.spyOn(RAG_GENERATION_CHAT_PROMPT, 'invoke');
-
+  it('runs the generation LCEL chain end-to-end via chain.invoke input', async () => {
     await service.generateAnswer({
       question: 'Ma question',
       context: 'Mon contexte',
     });
 
-    expect(promptSpy).toHaveBeenCalledWith({
-      question: 'Ma question',
-      context: 'Mon contexte',
-    });
+    expect(invoke).toHaveBeenCalledOnce();
+    const promptArg = invoke.mock.calls[0]?.[0];
+    const messages = promptArg.toChatMessages();
+    expect(messages[1]?.content).toContain('Ma question');
+    expect(messages[1]?.content).toContain('Mon contexte');
   });
 
   it('returns the generated answer', async () => {
