@@ -8,7 +8,7 @@ const e2eJudgeScoreSchema = z.union([
   z.literal(4),
 ]);
 
-/** Sortie LLM judge E2E — align?e sur l'ancien `E2E_JUDGE_RESPONSE_SCHEMA`. */
+/** Sortie LLM judge E2E ï¿½ align?e sur l'ancien `E2E_JUDGE_RESPONSE_SCHEMA`. */
 export const E2EJudgeLlmResponseSchema = z.object({
   correctness: e2eJudgeScoreSchema,
   completeness: e2eJudgeScoreSchema,

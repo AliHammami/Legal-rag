@@ -1,14 +1,20 @@
+import { RunnableLambda } from '@langchain/core/runnables';
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 
 import type { OpenAIService } from '../../openai/openai.service.js';
 import { RoutingError } from '../routing.error.js';
 import { routeQuestion } from '../route-question.js';
 
-function mockOpenAI(response: unknown): OpenAIService {
+function mockStructuredRoutingModel(response: unknown) {
   const invoke = vi.fn().mockResolvedValue(response);
+  return RunnableLambda.from(invoke);
+}
+
+function mockOpenAI(response: unknown): OpenAIService {
+  const structuredModel = mockStructuredRoutingModel(response);
   return {
     createChatModel: vi.fn().mockReturnValue({
-      withStructuredOutput: vi.fn().mockReturnValue({ invoke }),
+      withStructuredOutput: vi.fn().mockReturnValue(structuredModel),
     }),
   } as unknown as OpenAIService;
 }
@@ -115,9 +121,10 @@ describe('routeQuestion', () => {
 
   it('maps OpenAI API errors to RoutingError', async () => {
     const invoke = vi.fn().mockRejectedValue(new Error('OpenAI rate limit'));
+    const structuredModel = RunnableLambda.from(invoke);
     const openAIService = {
       createChatModel: vi.fn().mockReturnValue({
-        withStructuredOutput: vi.fn().mockReturnValue({ invoke }),
+        withStructuredOutput: vi.fn().mockReturnValue(structuredModel),
       }),
     } as unknown as OpenAIService;
 
@@ -126,9 +133,10 @@ describe('routeQuestion', () => {
     );
   });
 
-  it('invokes structured model with router prompt value', async () => {
+  it('invokes routing LCEL chain with router prompt variables', async () => {
     const invoke = vi.fn().mockResolvedValue({ corpusIds: ['code-penal'] });
-    const withStructuredOutput = vi.fn().mockReturnValue({ invoke });
+    const structuredModel = RunnableLambda.from(invoke);
+    const withStructuredOutput = vi.fn().mockReturnValue(structuredModel);
     const createChatModel = vi.fn().mockReturnValue({ withStructuredOutput });
     const openAIService = { createChatModel } as unknown as OpenAIService;
 

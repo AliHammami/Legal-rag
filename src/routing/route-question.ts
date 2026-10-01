@@ -4,10 +4,8 @@ import { RetrievalError } from '../retrieval/retrieval.error.js';
 import { validateQuestion } from '../retrieval/validate-search-input.js';
 import { CORPUS_ROUTING_DESCRIPTIONS } from './corpus-descriptions.js';
 import { DEFAULT_ROUTING_MODEL } from './constants.js';
-import {
-  buildRouterPromptInput,
-  ROUTER_CHAT_PROMPT,
-} from './langchain/router-chat-prompt.js';
+import { createRouterRoutingChain } from './langchain/create-router-routing-chain.js';
+import { buildRouterPromptInput } from './langchain/router-chat-prompt.js';
 import { RoutingLlmResponseSchema } from './routing-llm-response.schema.js';
 import { RoutingError } from './routing.error.js';
 import type { RouteQuestionOptions, RoutingResult } from './types.js';
@@ -33,19 +31,17 @@ export async function routeQuestion(
     throw new RoutingError('Routing model is not configured', 'CONFIG_MISSING');
   }
 
-  const promptValue = await ROUTER_CHAT_PROMPT.invoke(
-    buildRouterPromptInput(normalizedQuestion, CORPUS_ROUTING_DESCRIPTIONS),
-  );
-
   let rawResponse: unknown;
   try {
     const chatModel = openAIService.createChatModel(model);
     const structuredModel = chatModel.withStructuredOutput(
       RoutingLlmResponseSchema,
     );
-    rawResponse = await structuredModel.invoke(promptValue, {
-      signal: options.signal,
-    });
+    const routingChain = createRouterRoutingChain(structuredModel);
+    rawResponse = await routingChain.invoke(
+      buildRouterPromptInput(normalizedQuestion, CORPUS_ROUTING_DESCRIPTIONS),
+      { signal: options.signal },
+    );
   } catch (error) {
     if (error instanceof RoutingError) {
       throw error;

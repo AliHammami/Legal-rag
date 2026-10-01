@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-/** Sortie LLM g?n?ration dataset — align?e sur l'ancien `GENERATED_QUESTION_SCHEMA`. */
+/** Sortie LLM g?n?ration dataset ï¿½ align?e sur l'ancien `GENERATED_QUESTION_SCHEMA`. */
 export const MulticorpusGeneratedQuestionItemSchema = z.object({
   question: z.string(),
   goldCorpusIds: z.array(z.string()),
