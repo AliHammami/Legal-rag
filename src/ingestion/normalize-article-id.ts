@@ -6,7 +6,7 @@ export interface NormalizedArticleId {
   rawArticleNumber: string;
 }
 
-/** Index ?ditorial L?gifrance : ÿ Article L. 410-1 l'ordonnance nÿÿ ÿ */
+/** Index Ã©ditorial LÃ©gifrance : â€” Article L. 410-1 l'ordonnance nâ€”â€” â€” */
 export function isEditorialArticleLine(line: string): boolean {
   const trimmed = line.trim();
   if (!/^Article /.test(trimmed)) {
@@ -33,8 +33,8 @@ export function isEditorialArticleLine(line: string): boolean {
 }
 
 /**
- * Normalisation ?tendue pour les corpus hors Code p?nal.
- * D?terministe ; les suffixes alphab?tiques ÿ  A ÿ deviennent ÿ -A ÿ.
+ * Normalisation Ã©tendue pour les corpus hors Code pÃ©nal.
+ * DÃ©terministe ; les suffixes alphabÃ©tiques â€” A â€” deviennent â€” -A â€”.
  */
 export function normalizeExtendedArticleId(
   rawId: string,
@@ -89,7 +89,7 @@ function normalizeAnnexeId(raw: string): string {
     .replace(/-+$/, '');
 }
 
-/** Normalisation legacy Code p?nal : identique au parser historique (trim seulement). */
+/** Normalisation legacy Code pÃ©nal : identique au parser historique (trim seulement). */
 export function normalizePenalArticleId(rawId: string): string {
   return rawId.trim();
 }

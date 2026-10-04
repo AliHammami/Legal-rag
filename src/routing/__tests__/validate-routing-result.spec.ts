@@ -30,11 +30,11 @@ describe('validateRoutingResult', () => {
     expect(
       validateRoutingResult({
         corpusIds: ['code-penal'],
-        reason: 'Question clairement p?nale.',
+        reason: 'Question clairement pénale.',
       }),
     ).toEqual({
       corpusIds: ['code-penal'],
-      reason: 'Question clairement p?nale.',
+      reason: 'Question clairement pénale.',
     });
   });
 

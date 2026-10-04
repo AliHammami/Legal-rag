@@ -9,7 +9,7 @@ import {
 
 describe('ROUTER_CHAT_PROMPT', () => {
   it('produces the same messages as buildRouterMessages', async () => {
-    const question = 'Question p?nale ?';
+    const question = 'Question pénale ?';
 
     const expected = buildRouterMessages(question, CORPUS_ROUTING_DESCRIPTIONS);
     const promptValue = await ROUTER_CHAT_PROMPT.invoke(

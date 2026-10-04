@@ -85,13 +85,13 @@ export function buildMultiCorpusBundles(
   maxCorpora = 3,
 ): MultiCorpusArticleBundle[][] {
   const keywordGroups: Array<{ label: string; keywords: string[] }> = [
-    { label: 'responsabilite', keywords: ['responsabilit', 'dommage', 'r?paration', 'reparation'] },
+    { label: 'responsabilite', keywords: ['responsabilit', 'dommage', 'réparation', 'reparation'] },
     { label: 'contrat', keywords: ['contrat', 'obligation', 'consentement'] },
-    { label: 'consommation', keywords: ['consommateur', 'consommation', 'cr?dit', 'credit'] },
+    { label: 'consommation', keywords: ['consommateur', 'consommation', 'crédit', 'credit'] },
     { label: 'travail', keywords: ['salari', 'employeur', 'licenciement', 'travail'] },
-    { label: 'sanction', keywords: ['sanction', 'peine', 'amende', 'p?nal', 'penal'] },
-    { label: 'entreprise', keywords: ['soci?t?', 'societe', 'entreprise', 'commercial'] },
-    { label: 'financier', keywords: ['banque', 'cr?dit', 'credit', 'financier', 'mon?taire', 'monetaire'] },
+    { label: 'sanction', keywords: ['sanction', 'peine', 'amende', 'pénal', 'penal'] },
+    { label: 'entreprise', keywords: ['société', 'societe', 'entreprise', 'commercial'] },
+    { label: 'financier', keywords: ['banque', 'crédit', 'credit', 'financier', 'monétaire', 'monetaire'] },
     { label: 'fraude', keywords: ['fraude', 'escroquerie', 'abus', ' tromperie'] },
   ];
 

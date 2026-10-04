@@ -5,7 +5,7 @@ export interface CreateRagChatModelOptions {
   model: string;
 }
 
-/** G?n?ration RAG : ChatOpenAI d?di? (mod?le RAG_GENERATION_MODEL). */
+/** Génération RAG : ChatOpenAI dédié (modèle RAG_GENERATION_MODEL). */
 export function createRagChatModel(options: CreateRagChatModelOptions) {
   return createChatOpenAI(options);
 }

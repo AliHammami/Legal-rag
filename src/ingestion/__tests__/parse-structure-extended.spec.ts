@@ -30,7 +30,7 @@ describe('parseStructure (corpus ?tendu)', () => {
     expect(articles[0]!.metadata.partie).toBe('Partie l\u00E9gislative');
   });
 
-  it('hi?rarchie insensible ? la casse (LIVRE)', () => {
+  it('hiérarchie insensible à la casse (LIVRE)', () => {
     const lines: PageLine[] = [
       { line: 'LIVRE Ier : Du commerce', pageNumber: 1 },
       { line: 'Article L110-1', pageNumber: 1 },
@@ -43,7 +43,7 @@ describe('parseStructure (corpus ?tendu)', () => {
     expect(articles[0]!.metadata.livre).toBe('LIVRE Ier : Du commerce');
   });
 
-  it('Partie l?gislative nouvelle', () => {
+  it('Partie législative nouvelle', () => {
     const lines: PageLine[] = [
       { line: 'Partie l\u00E9gislative nouvelle', pageNumber: 1 },
       { line: 'Article liminaire', pageNumber: 1 },
@@ -57,7 +57,7 @@ describe('parseStructure (corpus ?tendu)', () => {
     expect(articles[0]!.metadata.partie).toBe('Partie l\u00E9gislative nouvelle');
   });
 
-  it('d?tecte les collisions d\'identifiants', () => {
+  it('détecte les collisions d\'identifiants', () => {
     const lines: PageLine[] = [
       { line: 'Article L1234-5', pageNumber: 1 },
       { line: 'Premier texte.', pageNumber: 1 },
@@ -73,7 +73,7 @@ describe('parseStructure (corpus ?tendu)', () => {
     expect(articles[1]!.articleNumber).toBe('L1234-5@p2');
   });
 
-  it('ignore une section absorb?e comme article', () => {
+  it('ignore une section absorbée comme article', () => {
     const lines: PageLine[] = [
       { line: 'Article D314-17', pageNumber: 1 },
       { line: 'Section 2 : Regroupement de cr\u00E9dits', pageNumber: 1 },

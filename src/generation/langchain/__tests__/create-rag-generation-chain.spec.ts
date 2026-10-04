@@ -6,7 +6,7 @@ import { createRagGenerationChain } from '../create-rag-generation-chain.js';
 
 describe('createRagGenerationChain', () => {
   it('chain.invoke({ question, context }) returns trimmed answer text', async () => {
-    const invoke = vi.fn().mockResolvedValue(new AIMessage('  R?ponse RAG.  '));
+    const invoke = vi.fn().mockResolvedValue(new AIMessage('  Réponse RAG.  '));
     const chain = createRagGenerationChain(
       RunnableLambda.from(invoke) as never,
     );
@@ -16,7 +16,7 @@ describe('createRagGenerationChain', () => {
       context: 'Contexte article',
     });
 
-    expect(answer).toBe('R?ponse RAG.');
+    expect(answer).toBe('Réponse RAG.');
     expect(invoke).toHaveBeenCalledOnce();
   });
 

@@ -7,7 +7,7 @@ import type { PenalCodeIngestionResult } from '../types.js';
 const BASELINE_PATH = resolve('data/processed/code-penal.articles.json');
 const PDF_PATH = resolve('data/code-penal-13-09-2026.pdf');
 
-describe('Code p?nal � r?gression ingestion', () => {
+describe('Code pénal — régression ingestion', () => {
   it('produit exactement 1301 articles identiques au baseline', async () => {
     const baseline = JSON.parse(
       readFileSync(BASELINE_PATH, 'utf-8'),

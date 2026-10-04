@@ -198,7 +198,7 @@ export function formatMulticorpusDatasetReport(report: MulticorpusDatasetReport)
   } else {
     for (const group of report.duplicateGroups) {
       lines.push(
-        `  ${group.questionIds.join(', ')} � ${group.reason} (similarity ${group.similarity.toFixed(2)})`,
+        `  ${group.questionIds.join(', ')} — ${group.reason} (similarity ${group.similarity.toFixed(2)})`,
       );
     }
   }

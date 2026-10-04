@@ -2,11 +2,11 @@ import { cleanPageText } from '../src/ingestion/clean-text.js';
 import { extractPdfPages } from '../src/ingestion/extract-pdf.js';
 
 const pdfs = [
-  ['code-penal', 'data/code-penal-13-09-2026.pdf', 'Code p?nal'],
+  ['code-penal', 'data/code-penal-13-09-2026.pdf', 'Code pénal'],
   ['code-civil', 'data/code-civil-19-06-2026.pdf', 'Code civil'],
   ['code-travail', 'data/code-du-travail-16-09-2026.pdf', 'Code du travail'],
   ['code-commerce', 'data/code-du-commerce-16-09-2026.pdf', 'Code de commerce'],
-  ['code-monetaire', 'data/code-monetaire-et-financier-16-09-2026.pdf', 'Code mon?taire et financier'],
+  ['code-monetaire', 'data/code-monetaire-et-financier-16-09-2026.pdf', 'Code monétaire et financier'],
   ['code-consommation', 'data/code-de-la-consommation-16-09-2026.pdf', 'Code de la consommation'],
 ];
 

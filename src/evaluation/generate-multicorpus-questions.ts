@@ -41,24 +41,24 @@ function buildSingleCorpusPrompt(
     )
     .join('\n\n');
 
-  return `Tu construis des questions d'?valuation pour un syst?me RAG juridique fran?ais.
+  return `Tu construis des questions d'évaluation pour un système RAG juridique français.
 
-R?GLES ABSOLUES:
-- Ne jamais inventer un num?ro d'article, une disposition ou une r?gle absente des textes fournis.
-- Chaque question doit ?tre answerable uniquement ? partir des articles fournis ci-dessous.
-- goldArticles doit lister uniquement les articles r?ellement n?cessaires pour r?pondre.
-- goldCorpusIds doit ?tre ["${corpusId}"] pour chaque question.
-- questionType doit ?tre "single-corpus".
-- referenceAnswer: concise, correcte, d?riv?e uniquement des textes fournis.
+RÈGLES ABSOLUES:
+- Ne jamais inventer un numéro d'article, une disposition ou une règle absente des textes fournis.
+- Chaque question doit être answerable uniquement à partir des articles fournis ci-dessous.
+- goldArticles doit lister uniquement les articles réellement nécessaires pour répondre.
+- goldCorpusIds doit être ["${corpusId}"] pour chaque question.
+- questionType doit être "single-corpus".
+- referenceAnswer: concise, correcte, dérivée uniquement des textes fournis.
 - Varier les formulations (cas pratiques, comparaisons, conditions, effets, distinctions).
-- Ne pas produire plusieurs variantes lexicales d'une m?me question.
+- Ne pas produire plusieurs variantes lexicales d'une même question.
 - sourceArticles doit contenir au minimum tous les goldArticles.
 
 ARTICLES FOURNIS:
 ${articleBlocks}
 
-G?n?re exactement ${articles.length} questions, une par article fourni.
-R?partition de difficult? demand?e: ${difficultyMix.join(', ')}.`;
+Génère exactement ${articles.length} questions, une par article fourni.
+Répartition de difficult? demandée: ${difficultyMix.join(', ')}.`;
 }
 
 function buildMultiCorpusPrompt(
@@ -77,22 +77,22 @@ function buildMultiCorpusPrompt(
     })
     .join('\n\n');
 
-  return `Tu construis des questions d'?valuation multi-corpus pour un syst?me RAG juridique fran?ais.
+  return `Tu construis des questions d'évaluation multi-corpus pour un système RAG juridique français.
 
-R?GLES ABSOLUES:
-- Ne jamais inventer un article ou une r?gle absente des textes fournis.
-- Chaque question doit r?ellement n?cessiter des informations de TOUS les corpus list?s dans le sc?nario.
-- goldCorpusIds doit contenir au moins 2 corpus distincts et correspondre aux corpus r?ellement n?cessaires.
-- goldArticles doit lister uniquement les articles r?ellement n?cessaires.
+RÈGLES ABSOLUES:
+- Ne jamais inventer un article ou une règle absente des textes fournis.
+- Chaque question doit réellement nécessiter des informations de TOUS les corpus listés dans le scénario.
+- goldCorpusIds doit contenir au moins 2 corpus distincts et correspondre aux corpus réellement nécessaires.
+- goldArticles doit lister uniquement les articles réellement nécessaires.
 - questionType = "multi-corpus".
-- referenceAnswer d?riv?e uniquement des textes fournis.
+- referenceAnswer dérivée uniquement des textes fournis.
 - Ne pas ajouter artificiellement un second corpus si la question est essentiellement mono-corpus.
 
-SC?NARIOS:
+SCÉNARIOS:
 ${bundleBlocks}
 
-G?n?re exactement ${bundles.length} questions, une par sc?nario.
-R?partition de difficult? demand?e: ${difficultyMix.join(', ')}.`;
+Génère exactement ${bundles.length} questions, une par scénario.
+Répartition de difficult? demandée: ${difficultyMix.join(', ')}.`;
 }
 
 export async function generateSingleCorpusQuestions(

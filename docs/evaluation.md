@@ -2,7 +2,7 @@
 
 Ce document décrit **comment** le pipeline RAG juridique multi-corpus a été évalué, **pourquoi** chaque type de test a été choisi, et **pourquoi** un E2E complet (500 questions) n'a pas été relancé à chaque modification.
 
-Pour le schéma du dataset (500 questions, `goldArticlés`, types), voir aussi [`evaluation-multicorpus.md`](./evaluation-multicorpus.md).
+Pour le schéma du dataset (500 questions, `goldArticles`, types), voir aussi [`evaluation-multicorpus.md`](./evaluation-multicorpus.md).
 
 ---
 
@@ -12,7 +12,7 @@ Pour le schéma du dataset (500 questions, `goldArticlés`, types), voir aussi [
 Question
    |
    v
-Routing (LLM) --> ABSTAIN ? --> réponse d'abstention (sans embed / retrieval / Jina / gen)
+Routing (LLM) --> ABSTAIN → --> réponse d'abstention (sans embed / retrieval / Jina / gen)
    |
    v
 Retrieval (vector et/ou BM25 -> Union)

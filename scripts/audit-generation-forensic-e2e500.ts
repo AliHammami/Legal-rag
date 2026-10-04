@@ -182,7 +182,7 @@ function buildReportMarkdown(input: {
 
   lines.push(
     '',
-    '### Cas B ÿ type de question',
+    '### Cas B â€” type de question',
     '',
     '| type | count B |',
     '|------|--------:|',
@@ -227,7 +227,7 @@ function buildReportMarkdown(input: {
         '',
         `**Attendu:** ${example.referenceAnswer}`,
         '',
-        `**Reponse (extrait):** ${example.generatedAnswer.slice(0, 400).replace(/\n/g, ' ')}ÿ`,
+        `**Reponse (extrait):** ${example.generatedAnswer.slice(0, 400).replace(/\n/g, ' ')}â€”`,
         '',
         `**Contexte (sources):** ${example.contextSources.map((source) => `${source.corpusId}:${source.articleNumber}`).join(', ') || 'none'}`,
         '',
@@ -235,7 +235,7 @@ function buildReportMarkdown(input: {
         '',
         `**Judge (${failedJudgeAxesLabel(example.judge)}):** ${example.judge.explanation}`,
         '',
-        `**Diagnostic:** ${example.forensicCategory}${example.forensicSubCause ? ` / ${example.forensicSubCause}` : ''} ÿ ${example.forensicRationale}`,
+        `**Diagnostic:** ${example.forensicCategory}${example.forensicSubCause ? ` / ${example.forensicSubCause}` : ''} â€” ${example.forensicRationale}`,
         '',
       );
     }

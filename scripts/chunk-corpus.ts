@@ -14,7 +14,7 @@ async function chunkOne(id: string) {
   console.log(
     `${id}: ${result.stats.chunkCount} chunks (${result.stats.articleCount} articles, ${result.stats.multiChunkArticles} multi-chunks, ${result.stats.chunksOverMax} > max)`,
   );
-  console.log(`  Dur?e : ${Date.now() - startedAt} ms`);
+  console.log(`  Durée : ${Date.now() - startedAt} ms`);
   return result;
 }
 

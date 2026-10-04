@@ -10,14 +10,14 @@ import {
 import type { LegalMulticorpusEvaluationQuestion } from './multicorpus-dataset.types.js';
 
 const CORPUS_KEYWORDS: Record<string, string[]> = {
-  'code-penal': ['code p?nal', 'code penal', 'p?nal', 'penal'],
+  'code-penal': ['code pénal', 'code penal', 'pénal', 'penal'],
   'code-civil': ['code civil', 'civil'],
   'code-du-travail': ['code du travail', 'travail'],
   'code-du-commerce': ['code de commerce', 'code du commerce', 'commerce'],
   'code-monetaire-et-financier': [
-    'code mon?taire',
+    'code monétaire',
     'code monetaire',
-    'mon?taire',
+    'monétaire',
     'monetaire',
     'financier',
   ],

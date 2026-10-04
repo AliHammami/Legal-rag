@@ -15,7 +15,7 @@ describe('chunk-token-stats', () => {
     expect(mean([10, 20, 30])).toBe(20);
   });
 
-  it('calcule la m?diane / P50', () => {
+  it('calcule la médiane / P50', () => {
     expect(percentile([1, 2, 3, 4, 5], 50)).toBe(3);
     expect(percentile([1, 2, 3, 4], 50)).toBe(2.5);
   });
@@ -26,7 +26,7 @@ describe('chunk-token-stats', () => {
     expect(percentile(values, 99)).toBe(99);
   });
 
-  it('r?sume un jeu de valeurs', () => {
+  it('résumé un jeu de valeurs', () => {
     const summary = summarize([100, 200, 300, 400, 500]);
     expect(summary.min).toBe(100);
     expect(summary.max).toBe(500);
@@ -34,7 +34,7 @@ describe('chunk-token-stats', () => {
     expect(summary.p50).toBe(300);
   });
 
-  it('r?partit les tokens dans les buckets', () => {
+  it('répartition les tokens dans les buckets', () => {
     const buckets = buildBucketCounts([100, 600, 1300, 3100], TOKEN_BUCKETS);
     expect(buckets.find((bucket) => bucket.label === '0-249')?.count).toBe(1);
     expect(buckets.find((bucket) => bucket.label === '500-749')?.count).toBe(1);
@@ -50,7 +50,7 @@ describe('chunk-token-stats', () => {
     expect(thresholds.find((entry) => entry.threshold === 2000)?.count).toBe(1);
   });
 
-  it('calcule le ratio caract?res/token', () => {
+  it('calcule le ratio caractères/token', () => {
     expect(charsPerToken(2000, 500)).toBe(4);
     expect(globalCharsPerToken(8000, 2000)).toBe(4);
   });

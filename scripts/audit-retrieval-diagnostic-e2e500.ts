@@ -40,7 +40,7 @@ function buildReport(input: {
   const r0 = input.diagnostics.filter((d) => d.pipelineStage === 'R0').length;
 
   const lines = [
-    '# Diagnostic retrieval � preparation prochaine amelioration RAG',
+    '# Diagnostic retrieval — preparation prochaine amelioration RAG',
     '',
     '## 1. Executive summary',
     '',
@@ -91,9 +91,9 @@ function buildReport(input: {
     '',
     '## 4. Analyse des cas',
     '',
-    `- **R0 retrieval (top20):** ${r0} articles � voir patterns concurrents ci-dessous.`,
-    `- **R1 reranking:** ${rerank} articles � gold present dans retrieval top20 mais absent du top5 Jina.`,
-    `- **R2 filter:** ${filter} articles � present top5, elimine par seuil 0.40 (replay min1/corpus).`,
+    `- **R0 retrieval (top20):** ${r0} articles — voir patterns concurrents ci-dessous.`,
+    `- **R1 reranking:** ${rerank} articles — gold present dans retrieval top20 mais absent du top5 Jina.`,
+    `- **R2 filter:** ${filter} articles — present top5, elimine par seuil 0.40 (replay min1/corpus).`,
     '',
     'Patterns concurrents (R0 uniquement):',
     '',
@@ -159,11 +159,11 @@ function buildReport(input: {
 
   for (const example of pickRepresentativeExamples(input.diagnostics, 10)) {
     lines.push(
-      `### ${example.questionId} � ${example.gold.corpusId}:${example.gold.articleNumber}`,
+      `### ${example.questionId} — ${example.gold.corpusId}:${example.gold.articleNumber}`,
       '',
       `**Stage:** ${example.pipelineStage} | **Cause:** ${example.causeCategory}`,
       '',
-      `**Question (extrait):** ${example.question.slice(0, 200)}�`,
+      `**Question (extrait):** ${example.question.slice(0, 200)}—`,
       '',
       `**Top retrieval:** ${example.competitor.retrievalTopArticles.join(', ') || 'n/a'}`,
       '',

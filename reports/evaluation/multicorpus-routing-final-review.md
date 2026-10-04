@@ -8,14 +8,14 @@
 
 ### Question (inchangee)
 
-ÿ Quelles sont les obligations imposees a une personne en ce qui concerne son concours a la justice, et dans quelles conditions un nouvel employeur est-il solidairement responsable du dommage cause par la rupture abusive d'un contrat de travail? ÿ
+â€” Quelles sont les obligations imposees a une personne en ce qui concerne son concours a la justice, et dans quelles conditions un nouvel employeur est-il solidairement responsable du dommage cause par la rupture abusive d'un contrat de travail? â€”
 
 ### Dimensions identifiables dans la formulation
 
-1. **Concours a la justice** ÿ obligations d'une personne vis-a-vis de la justice.
+1. **Concours a la justice** â€” obligations d'une personne vis-a-vis de la justice.
 2. **Solidarite du nouvel employeur** en cas de rupture abusive d'un contrat de travail.
 
-Deux sous-questions explicites jointes par ÿ et ÿ, chacune ancrant un regime juridique distinct.
+Deux sous-questions explicites jointes par â€” et â€”, chacune ancrant un regime juridique distinct.
 
 ### Golds avant
 
@@ -29,9 +29,9 @@ Deux sous-questions explicites jointes par ÿ et ÿ, chacune ancrant un regime jur
 
 | Corpus | Article | Contenu (resume) | Identifiable depuis la question ? | Decision |
 | ------ | ------- | ---------------- | --------------------------------- | -------- |
-| **civil** | 10 | Obligation de concours a la justice (astreinte / amende civile) | **Oui** ÿ ÿ concours a la justice ÿ est la premiere branche explicite | **KEEP** |
-| **travail** | L1237-3 | Solidarite du nouvel employeur en cas de rupture abusive | **Oui** ÿ ÿ nouvel employeur ÿ, ÿ rupture abusive ÿ, ÿ contrat de travail ÿ | **KEEP** |
-| **monetaire** | L131-62 | Mentions obligatoires sur les protets de cheque (refus de paiement) | **Non** ÿ aucune mention de cheque, paiement, protet ou finance dans la question | **REMOVE** |
+| **civil** | 10 | Obligation de concours a la justice (astreinte / amende civile) | **Oui** â€” â€” concours a la justice â€” est la premiere branche explicite | **KEEP** |
+| **travail** | L1237-3 | Solidarite du nouvel employeur en cas de rupture abusive | **Oui** â€” â€” nouvel employeur â€”, â€” rupture abusive â€”, â€” contrat de travail â€” | **KEEP** |
+| **monetaire** | L131-62 | Mentions obligatoires sur les protets de cheque (refus de paiement) | **Non** â€” aucune mention de cheque, paiement, protet ou finance dans la question | **REMOVE** |
 
 Le gold CMF est une relique du generateur initial : l'article L131-62 traite de formalites sur les protets, sans lien semantique avec le concours a la justice ou la solidarite employeur.
 
@@ -51,12 +51,12 @@ Apres suppression, les deux corpus gold correspondent exactement aux deux dimens
 
 ### Question (inchangee)
 
-ÿ Dans le cadre d'une activite commerciale, comment l'immatriculation au registre du commerce influence-t-elle le respect de la presomption d'innocence lorsqu'une personne est publiquement presentee comme coupable avant toute condamnation ? ÿ
+â€” Dans le cadre d'une activite commerciale, comment l'immatriculation au registre du commerce influence-t-elle le respect de la presomption d'innocence lorsqu'une personne est publiquement presentee comme coupable avant toute condamnation ? â€”
 
 ### Dimensions identifiables dans la formulation
 
-1. **Presomption d'innocence / atteinte publique** ÿ ÿ respect de la presomption d'innocence ÿ, ÿ publiquement presentee comme coupable avant toute condamnation ÿ.
-2. **Immatriculation au registre du commerce** ÿ ÿ activite commerciale ÿ, ÿ immatriculation au registre du commerce ÿ.
+1. **Presomption d'innocence / atteinte publique** â€” â€” respect de la presomption d'innocence â€”, â€” publiquement presentee comme coupable avant toute condamnation â€”.
+2. **Immatriculation au registre du commerce** â€” â€” activite commerciale â€”, â€” immatriculation au registre du commerce â€”.
 
 Contrairement a une simple juxtaposition de deux questions independantes (pattern q352), q364 pose **une seule interrogation integrative** : l'influence de l'immatriculation sur le respect de la presomption d'innocence dans un contexte commercial.
 
@@ -73,8 +73,8 @@ Contrairement a une simple juxtaposition de deux questions independantes (patter
 
 | Corpus | Article | Contenu (resume) | Identifiable depuis la question ? | Decision |
 | ------ | ------- | ---------------- | --------------------------------- | -------- |
-| **civil** | 9-1 | Mesures en refere (rectification, communiqu?) pour faire cesser une atteinte a la presomption d'innocence | **Oui** ÿ presomption d'innocence et presentation publique comme coupable | **KEEP** |
-| **commerce** | L123-8 | Non-immatriculation : pas de qualite de commercant vis-a-vis des tiers, mais responsabilites subsistant | **Oui** ÿ immatriculation registre du commerce, activite commerciale | **KEEP** |
+| **civil** | 9-1 | Mesures en refere (rectification, communiqu?) pour faire cesser une atteinte a la presomption d'innocence | **Oui** â€” presomption d'innocence et presentation publique comme coupable | **KEEP** |
+| **commerce** | L123-8 | Non-immatriculation : pas de qualite de commercant vis-a-vis des tiers, mais responsabilites subsistant | **Oui** â€” immatriculation registre du commerce, activite commerciale | **KEEP** |
 
 ### Decision finale (option A)
 
@@ -121,8 +121,8 @@ Aucune question multi restante ne comporte de corpus gold manifestement non dedu
 
 | Commande | Resultat |
 | -------- | -------- |
-| `pnpm validate:evaluation:multicorpus` | **OK** — Valid: yes, Distribution issues: 0 |
-| `pnpm test` | **OK** — 419 tests passes (13 skipped) |
-| `pnpm build` | **OK** — `nest build` sans erreur |
+| `pnpm validate:evaluation:multicorpus` | **OK** â€” Valid: yes, Distribution issues: 0 |
+| `pnpm test` | **OK** â€” 419 tests passes (13 skipped) |
+| `pnpm build` | **OK** â€” `nest build` sans erreur |
 
 Benchmark routing **non relance**.

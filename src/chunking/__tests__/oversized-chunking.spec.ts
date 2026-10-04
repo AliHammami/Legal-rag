@@ -20,9 +20,9 @@ function makeArticle(content: string, articleNumber: string): PenalCodeArticle {
 }
 
 describe('chunking articles oversized', () => {
-  it('d?coupe un article simul? de 156k caract?res sans d?passer MAX_SIZE', () => {
+  it('découpe un article simul? de 156k caractères sans dépasser MAX_SIZE', () => {
     const paragraph = 'I.-Les dispositions applicables. '.repeat(20);
-    const content = Array.from({ length: 8000 }, (_, i) => `${i + 1}� ${paragraph}`).join('\n\n');
+    const content = Array.from({ length: 8000 }, (_, i) => `${i + 1}— ${paragraph}`).join('\n\n');
     expect(content.length).toBeGreaterThan(100_000);
 
     const article = makeArticle(content, 'R4314-17-sim');

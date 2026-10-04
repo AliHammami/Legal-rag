@@ -21,7 +21,7 @@ const ragGenerationAnswerExtractor = RunnableLambda.from(
   extractRagGenerationAnswer,
 );
 
-/** Prompt ? ChatOpenAI ? extraction texte (LCEL). */
+/** Prompt → ChatOpenAI → extraction texte (LCEL). */
 export function createRagGenerationChain(
   chatModel: ReturnType<typeof createRagChatModel>,
 ) {

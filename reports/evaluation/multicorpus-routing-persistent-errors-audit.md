@@ -784,7 +784,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Un contrat peut-il ?tre annul? pour vice du consentement ?
+**Question :** Un contrat peut-il être annulé pour vice du consentement ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -828,7 +828,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Quelles garanties l?gales s appliquent au bien achet? ?
+**Question :** Quelles garanties légales s appliquent au bien acheté ?
 
 **Gold :** []  
 **V2 :** civil, consommation  
@@ -850,7 +850,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Un acte peut-il ?tre nul pour ill?galit? de l objet ?
+**Question :** Un acte peut-il être nul pour illégalité de l objet ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -872,7 +872,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Quelles sont les r?gles de publicit? des prix ?
+**Question :** Quelles sont les règles de publicité des prix ?
 
 **Gold :** []  
 **V2 :** consommation  
@@ -894,7 +894,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Quelle est la r?gle applicable aux clauses limitatives de responsabilit? ?
+**Question :** Quelle est la règle applicable aux clauses limitatives de responsabilité ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -916,7 +916,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Quels sont les droits en cas de rupture brutale de relations ?tablies ?
+**Question :** Quels sont les droits en cas de rupture brutale de relations établies ?
 
 **Gold :** []  
 **V2 :** commerce  
@@ -938,7 +938,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Une personne peut-elle ?tre tenue de r?parer un pr?judice ?
+**Question :** Une personne peut-elle être tenue de réparer un préjudice ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -982,7 +982,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** ambiguous | **Difficulty :** medium
 
-**Question :** Quels sont les droits attach?s ? la propri?t? ?
+**Question :** Quels sont les droits attachés ? la propriété ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -1004,7 +1004,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** out-of-scope | **Difficulty :** medium
 
-**Question :** Quelles sont les conditions d ouverture d une proc?dure de divorce ?
+**Question :** Quelles sont les conditions d ouverture d une procédure de divorce ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -1026,7 +1026,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** out-of-scope | **Difficulty :** hard
 
-**Question :** Quelles sont les conditions de l adoption pl?ni?re ?
+**Question :** Quelles sont les conditions de l adoption plénière ?
 
 **Gold :** []  
 **V2 :** civil  
@@ -1048,7 +1048,7 @@ Question centrale : *« Un routeur ne voyant que la question pouvait-il raisonna
 
 **Type :** out-of-scope | **Difficulty :** hard
 
-**Question :** Quelles sont les conditions de la tutelle d un majeur prot?g? ?
+**Question :** Quelles sont les conditions de la tutelle d un majeur protégé ?
 
 **Gold :** []  
 **V2 :** civil  

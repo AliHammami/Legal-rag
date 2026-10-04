@@ -201,7 +201,7 @@ function buildReport(input: {
     '- Aucun Jina / rerank / filter / generation / judge LLM',
     `- Appels embedding API cette execution: **${input.apiEmbeddingCalls}**`,
     '',
-    '## 4. Resultats � variante quota (production multicorpus)',
+    '## 4. Resultats — variante quota (production multicorpus)',
     '',
     '| Metrique | @20 | @30 | @40 | @50 |',
     '|----------|----:|----:|----:|----:|',
@@ -209,7 +209,7 @@ function buildReport(input: {
     `| Full gold coverage (questions) | ${input.quotaRows.find((r) => r.k === 20)!.fullQuestionCoverageCount}/${input.questionCount} | ${input.quotaRows.find((r) => r.k === 30)!.fullQuestionCoverageCount}/${input.questionCount} | ${input.quotaRows.find((r) => r.k === 40)!.fullQuestionCoverageCount}/${input.questionCount} | ${input.quotaRows.find((r) => r.k === 50)!.fullQuestionCoverageCount}/${input.questionCount} |`,
     `| Corpus coverage (multi) | ${pct(input.quotaRows.find((r) => r.k === 20)!.goldCorpusCoverageRate)} | ${pct(input.quotaRows.find((r) => r.k === 30)!.goldCorpusCoverageRate)} | ${pct(input.quotaRows.find((r) => r.k === 40)!.goldCorpusCoverageRate)} | ${pct(input.quotaRows.find((r) => r.k === 50)!.goldCorpusCoverageRate)} |`,
     '',
-    '## 5. Resultats � variante global',
+    '## 5. Resultats — variante global',
     '',
     '| Metrique | @20 | @30 | @40 | @50 |',
     '|----------|----:|----:|----:|----:|',
@@ -242,7 +242,7 @@ function buildReport(input: {
 
   for (const example of input.sameCorpusExamples) {
     lines.push(
-      `### ${example.questionId} � gold ${example.gold}`,
+      `### ${example.questionId} — gold ${example.gold}`,
       '',
       `Rang gold dans quota @50: ${example.quotaRank50 ?? 'absent'}`,
       '',

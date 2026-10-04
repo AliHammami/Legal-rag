@@ -358,7 +358,7 @@ async function main(): Promise<void> {
   }
 
   let nextExperiment =
-    'Mini-benchmark hybrid en pipeline (vector+BM25 RRF @50) avec rerank Jina sur 61q � uniquement si RRF ou Union bat vector de facon nette.';
+    'Mini-benchmark hybrid en pipeline (vector+BM25 RRF @50) avec rerank Jina sur 61q — uniquement si RRF ou Union bat vector de facon nette.';
   if (rrfSummary.goldRecall >= unionSummary.goldRecall) {
     nextExperiment =
       'Experimenter RRF @50 (k=60) dans un smoke rerank+filter 61q sans changer prod retrieval.';

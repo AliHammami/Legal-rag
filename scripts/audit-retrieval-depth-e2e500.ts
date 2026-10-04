@@ -87,11 +87,11 @@ function buildReportMarkdown(input: {
   const execAnswer = canAnswerDepth
     ? `Sur ${input.benchmarked.localQuota50} questions rejouees en local (SQL, embeddings en cache, sans appel embedding API), voir gains marginaux @20?@50 ci-dessous.`
     : artifact20
-      ? `Avec les seuls artefacts top20 (${input.benchmarked.quotaArtifact20} questions), le recall @20 quota est ${pct(artifact20.goldRecall)}. Les profondeurs 21ÿ50 ne sont **pas mesurables** sans replay vectoriel local (cache embeddings).`
+      ? `Avec les seuls artefacts top20 (${input.benchmarked.quotaArtifact20} questions), le recall @20 quota est ${pct(artifact20.goldRecall)}. Les profondeurs 21 â€” 50 ne sont **pas mesurables** sans replay vectoriel local (cache embeddings).`
       : 'Donnees insuffisantes.';
 
   const lines = [
-    '# Benchmark retrieval depth ÿ cohorte A (61 erreurs contexte)',
+    '# Benchmark retrieval depth â€” cohorte A (61 erreurs contexte)',
     '',
     '## 1. Executive summary',
     '',
@@ -116,7 +116,7 @@ function buildReportMarkdown(input: {
     '- Routing `2026-09-19T22-46-46-088Z/routing.json` (corpus routes pour replay local)',
     '- Embeddings: fichier cache optionnel (pas de recalcul API dans ce script)',
     '',
-    '## 3. Results ÿ quota @20 (artefact persiste)',
+    '## 3. Results â€” quota @20 (artefact persiste)',
     '',
     '| K | Gold recall | Questions full coverage | Gold absents |',
     '|-:|------------:|------------------------:|-------------:|',
@@ -131,7 +131,7 @@ function buildReportMarkdown(input: {
   if (input.localQuotaRows.length > 0) {
     lines.push(
       '',
-      '## 3b. Results ÿ quota (local replay @50, derive @20/@30/@40/@50)',
+      '## 3b. Results â€” quota (local replay @50, derive @20/@30/@40/@50)',
       '',
       '| K | Gold recall | Questions full coverage | Gold absents |',
       '|-:|------------:|------------------------:|-------------:|',
@@ -144,7 +144,7 @@ function buildReportMarkdown(input: {
 
     lines.push(
       '',
-      '## 3c. Results ÿ global retrieval (local replay)',
+      '## 3c. Results â€” global retrieval (local replay)',
       '',
       '| K | Gold recall | Questions full coverage | Gold absents |',
       '|-:|------------:|------------------------:|-------------:|',
@@ -187,7 +187,7 @@ function buildReportMarkdown(input: {
     '| Categorie | Articles |',
     '|-----------|--------:|',
     `| present @20 | ${input.depthBucketsArtifact.presentAt20} |`,
-    `| profondeur 21ÿ50 non observee | ${input.depthBucketsArtifact.notObservedBeyond20} |`,
+    `| profondeur 21 â€” 50 non observee | ${input.depthBucketsArtifact.notObservedBeyond20} |`,
     `| P20-30 | ${input.depthBucketsArtifact.P20_30} |`,
     `| P30-40 | ${input.depthBucketsArtifact.P30_40} |`,
     `| P40-50 | ${input.depthBucketsArtifact.P40_50} |`,
@@ -202,9 +202,9 @@ function buildReportMarkdown(input: {
       '| Categorie | Articles |',
       '|-----------|--------:|',
       `| present @20 | ${input.depthBucketsLocalQuota.presentAt20} |`,
-      `| recuperable 21ÿ30 | ${input.depthBucketsLocalQuota.P20_30} |`,
-      `| recuperable 31ÿ40 | ${input.depthBucketsLocalQuota.P30_40} |`,
-      `| recuperable 41ÿ50 | ${input.depthBucketsLocalQuota.P40_50} |`,
+      `| recuperable 21 â€” 30 | ${input.depthBucketsLocalQuota.P20_30} |`,
+      `| recuperable 31 â€” 40 | ${input.depthBucketsLocalQuota.P30_40} |`,
+      `| recuperable 41 â€” 50 | ${input.depthBucketsLocalQuota.P40_50} |`,
       `| absent @50 | ${input.depthBucketsLocalQuota.P50_plus} |`,
     );
   }
@@ -238,7 +238,7 @@ function buildReportMarkdown(input: {
     '## 8. Interpretation',
     '',
     '- Artefact @20: mesure fidele du pipeline quota production sur le sous-ensemble instrumente.',
-    '- Sans replay @50, les articles absents @20 ne peuvent pas etre classes entre 21ÿ50 et P50+.',
+    '- Sans replay @50, les articles absents @20 ne peuvent pas etre classes entre 21 â€” 50 et P50+.',
     '- Replay local (cache embeddings + Postgres) distingue profondeur insuffisante vs absence vectorielle.',
     '',
     '## 9. Recommendation',

@@ -49,7 +49,7 @@ export function mergeCorpusQuotaCandidates(
  * Multi-corpus retrieval: one vector search per routed corpus with an equal quota,
  * then merge/deduplicate and cap globally to `globalTopK` by ascending distance.
  *
- * For n=3 with topK=20: quota=7 ? up to 21 merged candidates ? capped to 20 best distances.
+ * For n=3 with topK=20: quota=7 → up to 21 merged candidates → capped to 20 best distances.
  */
 export async function searchSimilarChunksWithCorpusQuota(
   prisma: PrismaService,

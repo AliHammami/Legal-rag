@@ -189,7 +189,7 @@ function buildReport(input: {
   const row = (label: keyof JudgeMetricSnapshot) =>
     `| ${label} | ${pct(input.vectorAvg[label])} | ${pct(input.unionAvg[label])} | ${delta(input.unionAvg[label], input.vectorAvg[label])} |`;
 
-  return `# Validation generation + judge � hybrid Union vs Vector
+  return `# Validation generation + judge — hybrid Union vs Vector
 
 ## Validation
 

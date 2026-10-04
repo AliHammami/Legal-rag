@@ -86,7 +86,7 @@ export interface RetrievalArchitectureFacts {
 
 export const RETRIEVAL_ARCHITECTURE_FACTS: RetrievalArchitectureFacts = {
   embeddingInput:
-    'Exact string passed to searchQuestion: validateQuestion(question) => question.trim() � no prefix/suffix, no routing context, no corpus hint in the embedding text.',
+    'Exact string passed to searchQuestion: validateQuestion(question) => question.trim() — no prefix/suffix, no routing context, no corpus hint in the embedding text.',
   embeddingModelConfigKey: 'OPENAI_EMBEDDING_MODEL',
   embeddingDimensions: 3072,
   distanceMetric: 'cosine (<=> pgvector on legal_code_chunks.embedding)',
@@ -334,13 +334,13 @@ export function summarizeCauseMatrix(
   diagnostics: GoldLossDiagnostic[],
 ): CauseMatrixRow[] {
   const labels: Record<DiagnosticCauseCategory, string> = {
-    depth_topk_unproven: 'Profondeur topK (non d?montr?e sans top>20)',
-    semantic_mismatch: 'Mauvais matching s?mantique / mauvais article m?me corpus',
+    depth_topk_unproven: 'Profondeur topK (non démontrée sans top>20)',
+    semantic_mismatch: 'Mauvais matching sémantique / mauvais article même corpus',
     chunking_signal: 'Signal chunking (multi-chunk / split)',
-    multicorpus_competition: 'Comp?tition multicorpus (corpus gold absent top20)',
+    multicorpus_competition: 'Compétition multicorpus (corpus gold absent top20)',
     reranking: 'Reranking Jina (gold top20, absent top5)',
-    filter: 'Dynamic filter (gold top5, supprim?)',
-    indeterminate: 'Ind?termin? (pas de trace pipeline)',
+    filter: 'Dynamic filter (gold top5, supprimé)',
+    indeterminate: 'Indéterminé (pas de trace pipeline)',
   };
 
   const counts = new Map<DiagnosticCauseCategory, number>();

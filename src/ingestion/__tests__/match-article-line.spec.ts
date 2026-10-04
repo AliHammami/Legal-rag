@@ -45,13 +45,13 @@ describe('matchExtendedArticleLine', () => {
     );
   });
 
-  it('accepte suffixe -A mon?taire', () => {
+  it('accepte suffixe -A monétaire', () => {
     expect(matchExtendedArticleLine('Article L312-1-1-A')?.rawArticleNumber).toBe(
       'L312-1-1-A',
     );
   });
 
-  it('accepte suffixe espace -B mon?taire', () => {
+  it('accepte suffixe espace -B monétaire', () => {
     expect(matchExtendedArticleLine('Article L312-1-1 B')?.rawArticleNumber).toBe(
       'L312-1-1 B',
     );
@@ -63,10 +63,10 @@ describe('matchExtendedArticleLine', () => {
     );
   });
 
-  it('rejette index ?ditorial', () => {
+  it('rejette index éditorial', () => {
     expect(
       matchExtendedArticleLine(
-        "Article L. 410-1 l'ordonnance n� 2021-649 du 26 mai 2021",
+        "Article L. 410-1 l'ordonnance n — 2021-649 du 26 mai 2021",
       ),
     ).toBeNull();
   });

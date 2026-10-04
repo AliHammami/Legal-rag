@@ -196,7 +196,7 @@ export function classifyTop30SmokeDecision(input: {
   if (retrievalGain >= 0.05 && deltaCompleteness >= 0.05) {
     return {
       category: 'TOPK_30_JUSTIFIED',
-      rationale: 'Gain retrieval @30 corr?l? ? un gain completeness sur la cohorte.',
+      rationale: 'Gain retrieval @30 corrélé ? un gain completeness sur la cohorte.',
       nextStep: 'Smoke de regression cible puis passage retrievalTopK=30.',
     };
   }

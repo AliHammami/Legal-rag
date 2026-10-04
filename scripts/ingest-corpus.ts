@@ -18,7 +18,7 @@ if (corpusId === 'all') {
   }
 } else {
   const result = await ingestCorpus(corpusId);
-  console.log(`Ingestion termin?e : ${result.stats.articleCount} articles`);
+  console.log(`Ingestion terminée : ${result.stats.articleCount} articles`);
   console.log(`Uniques : ${result.stats.uniqueArticleCount}`);
-  console.log(`Dur?e : ${result.report?.durationMs} ms`);
+  console.log(`Durée : ${result.report?.durationMs} ms`);
 }

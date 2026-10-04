@@ -11,7 +11,7 @@ describe('detectMulticorpusDuplicates', () => {
     const duplicate = {
       ...FIXTURE_MULTICORPUS_QUESTIONS[0]!,
       id: 'q999',
-      question: '  Quelles sont les conditions de la l?gitime d?fense ? ',
+      question: '  Quelles sont les conditions de la légitime défense ? ',
     };
 
     const groups = detectMulticorpusDuplicates([

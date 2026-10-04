@@ -28,7 +28,7 @@ vi.mock('../rerank-chunks.js', () => ({
   rerankChunks: rerankChunksMock,
 }));
 
-const QUESTION = 'Quelles sont les conditions de la l?gitime d?fense ?';
+const QUESTION = 'Quelles sont les conditions de la légitime défense ?';
 
 function makeChunk(chunkId: string, corpusId = 'code-penal'): SimilarChunk {
   return {

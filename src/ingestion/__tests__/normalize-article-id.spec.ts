@@ -52,7 +52,7 @@ describe('normalizeExtendedArticleId', () => {
 });
 
 describe('isEditorialArticleLine', () => {
-  it('rejette un index ?ditorial commerce', () => {
+  it('rejette un index éditorial commerce', () => {
     expect(
       isEditorialArticleLine(
         "Article L. 410-1 l'ordonnance n\u00B0 2021-649 du 26 mai 2021",

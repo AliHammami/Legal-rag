@@ -4,7 +4,7 @@ export interface CorpusConfig {
   pdfPath: string;
   outputPath: string;
   chunksOutputPath: string;
-  /** Utilise uniquement le regex historique du Code p?nal (r?gression stricte). */
+  /** Utilise uniquement le regex historique du Code pénal (régression stricte). */
   usePenalArticleMatcher: boolean;
 }
 
@@ -69,5 +69,5 @@ export function getCorpusConfig(corpusId: string): CorpusConfig {
   return config;
 }
 
-/** Seuil au-del? duquel un article est signal? comme oversized (contenu extr?mement long). */
+/** Seuil au-delà duquel un article est signalé comme oversized (contenu extrêmement long). */
 export const OVERSIZED_ARTICLE_THRESHOLD = 10_000;

@@ -355,7 +355,7 @@ Règle centrale : une erreur de métrique n'est une **vraie erreur router** que 
 
 **Classification :** **UNDERPREDICTION** (pénal manquant)
 
-**Analyse :** Branche 1 = état civil explicite. Branche 2 = — application immédiate des lois nouvelles — — formulation **g?n?rique** ; l'article gold est au **code pénal** (principe général d'application de la loi pénale dans le temps, applicable au-delà du pénal). Un juriste peut inf?rer pénal ; un routeur lexical voit surtout — validité actes état civil — à civil seul.
+**Analyse :** Branche 1 = état civil explicite. Branche 2 = — application immédiate des lois nouvelles — — formulation **générique** ; l'article gold est au **code pénal** (principe général d'application de la loi pénale dans le temps, applicable au-delà du pénal). Un juriste peut inférer pénal ; un routeur lexical voit surtout — validité actes état civil — à civil seul.
 
 **Dimension pénal identifiable ?** **PARTIALLY** — formulation transversale, pas — code pénal — ni infraction.
 
@@ -400,7 +400,7 @@ Attribution **principale** (une par question) :
 | **Ambiguous legal interpretation** | **3** | q361, q399, q412 |
 | **Corpus boundary issue** | **0** (secondaire sur plusieurs cas) | — |
 
-\* q413 comptà true router error pour métrique stricte (branche 2 explicite) mais d?cision router **debatable**.
+\* q413 comptà true router error pour métrique stricte (branche 2 explicite) mais décision router **debatable**.
 
 **Comptage alternatif (erreurs métrique vs erreurs router réelles) :**
 
@@ -426,7 +426,7 @@ Attribution **principale** (une par question) :
 
 **Bilan :** 1 vraie under-prediction claire (q387) ; 1 gold discutable (q369) ; 2 partielles (q412, q413).
 
-### Pattern 2 — corpus ajouté par mot-cl?
+### Pattern 2 — corpus ajouté par mot-clé
 
 | ID | Mot-clà | Corpus ajouté | Justifià à |
 | -- | ------- | ------------- | ---------- |
@@ -447,9 +447,9 @@ Attribution **principale** (une par question) :
 
 **q387** : deux branches nommées, une seule retenue — signal fort pour prompt V3.
 
-### Pattern 5 — gold d?pendant de l'article / conflit question-gold
+### Pattern 5 — gold dépendant de l'article / conflit question-gold
 
-| ID | Probl?me |
+| ID | Problème |
 | -- | -------- |
 | q369 | commerce gold (L125-19 GIE) invisible dans la question |
 | q382 | consommation citée dans Q, absente du gold |
@@ -465,32 +465,32 @@ Attribution **principale** (une par question) :
 
 3. **~3 cas zone grise** (q361, q412, q413) oà le second corpus est implicite ou transversal.
 
-4. **Le nettoyage du dataset a fonctionn?** : plus de golds manifestement artificiels dans ces 15 (contrairement aux 18 under-pred V2 pr?-nettoyage). Les erreurs restantes sont mixtes router + formulation + frontières lexicales.
+4. **Le nettoyage du dataset a fonctionné** : plus de golds manifestement artificiels dans ces 15 (contrairement aux 18 under-pred V2 pré-nettoyage). Les erreurs restantes sont mixtes router + formulation + frontières lexicales.
 
-5. **Exact multi 76,2 % sur-estime légèrement les faiblesses router** ; exact multi — router-only défendable — serait plut?t **~85—87 %** (48+4 à 5 à 52—53/63).
+5. **Exact multi 76,2 % sur-estime légèrement les faiblesses router** ; exact multi — router-only défendable — serait plutôt **~85—87 %** (48+4 à 5 à 52—53/63).
 
 ---
 
 ## 7. Implications pour le routing V3
 
 1. **Les erreurs restantes semblent-elles principalement liées au prompt ?**  
-   **Oui, en majorit?.** Under-prediction sur questions à deux — et — explicites (q387), pièges lexicaux (IPC/consommation, sanctions/pénal), et swaps notaires/commerce suggèrent des règles prompt plus qu'un changement d'architecture.
+   **Oui, en majorité.** Under-prediction sur questions à deux — et — explicites (q387), pièges lexicaux (IPC/consommation, sanctions/pénal), et swaps notaires/commerce suggèrent des règles prompt plus qu'un changement d'architecture.
 
 2. **Nécessitent-elles une modification architecturale ?**  
-   **Non**, d'apr?s ces 15 cas. Aucun ne requiert une seconde passe, un score de confiance ou un fallback pour être résolu — ce sont des probl?mes de lecture de dimensions et de désambiguisation lexicale.
+   **Non**, d'après ces 15 cas. Aucun ne requiert une seconde passe, un score de confiance ou un fallback pour être résolu — ce sont des problèmes de lecture de dimensions et de désambiguisation lexicale.
 
 3. **Combien de vraies erreurs router ?**  
    **~8—9 / 15** (53—60 % des erreurs métrique).
 
 4. **Quels types d'erreurs un prompt V3 devrait cibler ?**  
-   - Forcer l'extraction de **chaque branche** apr?s — et — / — ainsi que —.  
+   - Forcer l'extraction de **chaque branche** après — et — / — ainsi que —.
    - Règle anti-homonyme : — indice des prix à la consommation — à code consommation.  
    - Règle : — sanctions disciplinaires travail — à code pénal automatique.  
    - Notaires/protêts/chèque à CMF, pas commerce.  
    - Ne pas ajouter un corpus **nommà dans la question** si l'article visà est dans un autre code (SICAV à CMF malgrà mention commerce) — ou corriger le gold.
 
 5. **Un changement architectural est-il justifià par ces 15 cas ?**  
-   **Non.** Les patterns ne montrent pas d'échec syst?mique qu'une seconde passe résoudrait mieux qu'un prompt affinà + gold/question align?s (q369, q382, q363, q408).
+   **Non.** Les patterns ne montrent pas d'échec systémique qu'une seconde passe résoudrait mieux qu'un prompt affinà + gold/question alignés (q369, q382, q363, q408).
 
 ---
 

@@ -26,7 +26,7 @@ describe('routeQuestion', () => {
 
   it.each([
     [
-      'Quelles sont les conditions de la l?gitime d?fense ?',
+      'Quelles sont les conditions de la légitime défense ?',
       { corpusIds: ['code-penal'] },
       ['code-penal'],
     ],
@@ -41,12 +41,12 @@ describe('routeQuestion', () => {
       ['code-du-travail'],
     ],
     [
-      'Quelles r?gles encadrent les actes de commerce ?',
+      'Quelles règles encadrent les actes de commerce ?',
       { corpusIds: ['code-du-commerce'] },
       ['code-du-commerce'],
     ],
     [
-      'Quelles r?gles concernent le cr?dit ? la consommation ?',
+      'Quelles règles concernent le crédit à la consommation ?',
       { corpusIds: ['code-de-la-consommation'] },
       ['code-de-la-consommation'],
     ],
@@ -64,24 +64,24 @@ describe('routeQuestion', () => {
   it('accepts multiple corpora when the LLM selects several', async () => {
     const openAIService = mockOpenAI({
       corpusIds: ['code-penal', 'code-civil'],
-      reason: 'Question m?lant responsabilit? p?nale et civile.',
+      reason: 'Question mêlant responsabilité pénale et civile.',
     });
 
     const result = await routeQuestion(
       openAIService,
-      'Quelles cons?quences p?nales et civiles en cas de violences conjugales ?',
+      'Quelles conséquences pénales et civiles en cas de violences conjugales ?',
     );
 
     expect(result).toEqual({
       corpusIds: ['code-penal', 'code-civil'],
-      reason: 'Question m?lant responsabilit? p?nale et civile.',
+      reason: 'Question mêlant responsabilité pénale et civile.',
     });
   });
 
   it('accepts an empty corpusIds array for ambiguous questions', async () => {
     const openAIService = mockOpenAI({
       corpusIds: [],
-      reason: 'Question trop g?n?rale.',
+      reason: 'Question trop générale.',
     });
 
     const result = await routeQuestion(
@@ -90,7 +90,7 @@ describe('routeQuestion', () => {
     );
 
     expect(result.corpusIds).toEqual([]);
-    expect(result.reason).toBe('Question trop g?n?rale.');
+    expect(result.reason).toBe('Question trop générale.');
   });
 
   it('rejects unknown corpus IDs returned by the LLM', async () => {
@@ -140,7 +140,7 @@ describe('routeQuestion', () => {
     const createChatModel = vi.fn().mockReturnValue({ withStructuredOutput });
     const openAIService = { createChatModel } as unknown as OpenAIService;
 
-    await routeQuestion(openAIService, 'Question p?nale');
+    await routeQuestion(openAIService, 'Question pénale');
 
     expect(createChatModel).toHaveBeenCalledOnce();
     expect(withStructuredOutput).toHaveBeenCalledOnce();
@@ -149,6 +149,6 @@ describe('routeQuestion', () => {
     expect(promptArg).toBeDefined();
     const messages = promptArg.toChatMessages();
     expect(String(messages[0]?.content)).toContain('code-penal');
-    expect(messages[1]?.content).toBe('Question p?nale');
+    expect(messages[1]?.content).toBe('Question pénale');
   });
 });

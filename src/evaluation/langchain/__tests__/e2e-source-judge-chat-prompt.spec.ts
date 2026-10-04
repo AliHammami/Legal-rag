@@ -12,7 +12,7 @@ describe('E2E_SOURCE_JUDGE_CHAT_PROMPT', () => {
       questionId: 'q1',
       question: 'Question test',
       referenceAnswer: null,
-      generatedAnswer: 'R?ponse g?n?r?e',
+      generatedAnswer: 'Réponse générée',
       expectedAbstention: true,
       sources: [
         {

@@ -85,7 +85,7 @@ function buildReportMarkdown(input: {
     .slice(0, 8);
 
   const lines = [
-    '# Audit forensic ÿ pertes de contexte (E2E 500)',
+    '# Audit forensic â€” pertes de contexte (E2E 500)',
     '',
     '## Resume executif',
     '',
@@ -93,7 +93,7 @@ function buildReportMarkdown(input: {
     ...execLines,
     '```',
     '',
-    'Cohorte: **61** erreurs categorie **A ÿ contexte insuffisant** (generation forensic), **hors q372** (vraie generation).',
+    'Cohorte: **61** erreurs categorie **A â€” contexte insuffisant** (generation forensic), **hors q372** (vraie generation).',
     '',
     `- Run E2E: \`${input.e2eRunId}\``,
     `- Trace pipeline complete (proxy): **${summary.stageTraceCoverage.fullPipelineProxy}** questions`,
@@ -102,7 +102,7 @@ function buildReportMarkdown(input: {
     '## 1. Methodologie',
     '',
     '- Cohorte importee depuis `generation-forensic-audit-2026-09-21/per-question.json` (forensicCategory A).',
-    '- Sources finales: variante **routing** du run E2E (`e2e.json` / e2e-cache) ÿ `corpusId` + `articleNumber`.',
+    '- Sources finales: variante **routing** du run E2E (`e2e.json` / e2e-cache) â€” `corpusId` + `articleNumber`.',
     '- Run E2E 500 **ne persiste pas** retrieval top20, rerank top5 ni chunks filtres.',
     `- Pour **${summary.stageTraceCoverage.fullPipelineProxy}** questions multicorpus bi-routees: retrieval + rerank depuis \`multicorpus-rerank-filter-audit-quota-2026-09-21T15-22-47-287Z/audit.json\` (proxy offline, meme hyperparametres top20/top5/seuil 0.40).`,
     '- Filter **rejoue** localement via `dynamicContextFilter` production (min1/corpus conditionnel si plusieurs corpus routes).',
@@ -165,7 +165,7 @@ function buildReportMarkdown(input: {
     '',
     '## 5. Patterns',
     '',
-    '- **single-corpus-sans-artefacts-pipeline**: 30 questions ÿ zero gold en contexte final, etape amont non mesurable sur E2E 500.',
+    '- **single-corpus-sans-artefacts-pipeline**: 30 questions â€” zero gold en contexte final, etape amont non mesurable sur E2E 500.',
     '- **multicorpus-gold-absent-retrieval-top20**: articles gold jamais dans le top20 (proxy).',
     '- **multicorpus-gold-perdu-au-rerank-top5**: present en retrieval, absent du top5 Jina (proxy).',
     '- **multicorpus-gold-perdu-au-filter-0.40**: present top5, elimine par seuil relatif 0.40 (replay production min1/corpus).',

@@ -5,8 +5,8 @@ import { extractMessageContent } from '../extract-message-content.js';
 
 describe('extractMessageContent', () => {
   it('returns string content from AIMessage', () => {
-    const message = new AIMessage('R?ponse du mod?le.');
-    expect(extractMessageContent(message)).toBe('R?ponse du mod?le.');
+    const message = new AIMessage('Réponse du modèle.');
+    expect(extractMessageContent(message)).toBe('Réponse du modèle.');
   });
 
   it('joins array content parts', () => {

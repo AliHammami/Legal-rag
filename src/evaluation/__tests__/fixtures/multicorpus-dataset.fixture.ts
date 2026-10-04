@@ -3,10 +3,10 @@ import type { LegalMulticorpusEvaluationQuestion } from '../../multicorpus-datas
 export const FIXTURE_MULTICORPUS_QUESTIONS: LegalMulticorpusEvaluationQuestion[] = [
   {
     id: 'q001',
-    question: 'Quelles sont les conditions de la l?gitime d?fense ?',
+    question: 'Quelles sont les conditions de la légitime défense ?',
     goldCorpusIds: ['code-penal'],
     goldArticles: [{ corpusId: 'code-penal', articleNumber: '122-5' }],
-    referenceAnswer: 'La l?gitime d?fense suppose une riposte n?cessaire et proportionn?e.',
+    referenceAnswer: 'La légitime défense suppose une riposte nécessaire et proportionnée.',
     difficulty: 'medium',
     questionType: 'single-corpus',
     sourceArticles: [{ corpusId: 'code-penal', articleNumber: '122-5' }],
@@ -23,13 +23,13 @@ export const FIXTURE_MULTICORPUS_QUESTIONS: LegalMulticorpusEvaluationQuestion[]
   },
   {
     id: 'q003',
-    question: 'Quelles cons?quences civiles et p?nales peuvent d?couler d une escroquerie commerciale ?',
+    question: 'Quelles conséquences civiles et pénales peuvent découler d une escroquerie commerciale ?',
     goldCorpusIds: ['code-penal', 'code-civil'],
     goldArticles: [
       { corpusId: 'code-penal', articleNumber: '313-1' },
       { corpusId: 'code-civil', articleNumber: '1240' },
     ],
-    referenceAnswer: 'R?ponse combinant responsabilit? civile et qualification p?nale.',
+    referenceAnswer: 'Réponse combinant responsabilité civile et qualification pénale.',
     difficulty: 'hard',
     questionType: 'multi-corpus',
     sourceArticles: [
@@ -39,19 +39,19 @@ export const FIXTURE_MULTICORPUS_QUESTIONS: LegalMulticorpusEvaluationQuestion[]
   },
   {
     id: 'q004',
-    question: 'Quelles sont les r?gles applicables en cas de responsabilit? ?',
+    question: 'Quelles sont les règles applicables en cas de responsabilité ?',
     goldCorpusIds: [],
     goldArticles: [],
-    referenceAnswer: 'Question ambigu? sans corpus identifiable.',
+    referenceAnswer: 'Question ambiguë sans corpus identifiable.',
     difficulty: 'medium',
     questionType: 'ambiguous',
   },
   {
     id: 'q005',
-    question: 'Quelles sont les conditions de la naturalisation fran?aise ?',
+    question: 'Quelles sont les conditions de la naturalisation française ?',
     goldCorpusIds: [],
     goldArticles: [],
-    referenceAnswer: 'Hors p?rim?tre des corpus disponibles.',
+    referenceAnswer: 'Hors périmètre des corpus disponibles.',
     difficulty: 'medium',
     questionType: 'out-of-scope',
   },

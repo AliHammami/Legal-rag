@@ -35,7 +35,7 @@ describe('chunk-token-analyzer', () => {
   const tokenizer = createEmbeddingTokenizer();
 
   it('tokenise un contenu non vide', () => {
-    const tokenCount = countTokens(tokenizer, 'Les infractions p?nales sont class?es.');
+    const tokenCount = countTokens(tokenizer, 'Les infractions pénales sont classées.');
     expect(tokenCount).toBeGreaterThan(0);
   });
 
@@ -43,17 +43,17 @@ describe('chunk-token-analyzer', () => {
     const chunks = [
       makeChunk({
         chunkId: '111-1#0',
-        content: 'Les infractions p?nales sont class?es.',
+        content: 'Les infractions pénales sont classées.',
       }),
       makeChunk({
         chunkId: '111-2#0',
-        content: 'La loi d?termine les crimes et d?lits.',
+        content: 'La loi détermine les crimes et délits.',
         charCount: 999,
       }),
     ];
 
     const analysis = analyzeCorpusChunks(
-      { id: 'code-penal', codeName: 'Code p?nal', path: 'test.json' },
+      { id: 'code-penal', codeName: 'Code pénal', path: 'test.json' },
       chunks,
       tokenizer,
     );
@@ -89,7 +89,7 @@ describe('chunk-token-analyzer', () => {
 
     expect(() =>
       analyzeCorpusChunks(
-        { id: 'code-penal', codeName: 'Code p?nal', path: 'test.json' },
+        { id: 'code-penal', codeName: 'Code pénal', path: 'test.json' },
         chunks,
         tokenizer,
       ),

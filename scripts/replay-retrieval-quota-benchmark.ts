@@ -402,7 +402,7 @@ function printComparisonTable(
 ): void {
   console.log(`\n${title}`);
   console.log(
-    '| Strat?gie | Candidats | Article recall | 2 corpus pr?sents | Monopole |',
+    '| Stratégie | Candidats | Article recall | 2 corpus présents | Monopole |',
   );
   console.log(
     '| --------- | --------: | -------------: | ----------------: | -------: |',
@@ -418,7 +418,7 @@ function printComparisonTable(
   for (const strategy of STRATEGIES) {
     const row = aggregates[strategy.id];
     console.log(
-      `\n${strategy.label} � rang gold (1-based, hits only): min=${row.goldRankMin ?? 'n/a'}, m?diane=${row.goldRankMedian ?? 'n/a'}, p90=${row.goldRankP90 ?? 'n/a'}`,
+      `\n${strategy.label} — rang gold (1-based, hits only): min=${row.goldRankMin ?? 'n/a'}, médiane=${row.goldRankMedian ?? 'n/a'}, p90=${row.goldRankP90 ?? 'n/a'}`,
     );
   }
 }
@@ -492,7 +492,7 @@ async function main(): Promise<void> {
     });
 
     const fullAggregates = await evaluateCohort({
-      label: '63 multicorpus (57 rout?es ? 2 corpus)',
+      label: '63 multicorpus (57 routées ? 2 corpus)',
       questions: fullMultiQuestions,
       routingById,
       prisma,
@@ -500,9 +500,9 @@ async function main(): Promise<void> {
       useForensicBaseline: false,
     });
 
-    printComparisonTable('Cohorte : 45 erreurs multicorpus (2 corpus rout?s)', errorAggregates);
+    printComparisonTable('Cohorte : 45 erreurs multicorpus (2 corpus routés)', errorAggregates);
     printComparisonTable(
-      `Cohorte : multicorpus complet (${fullMultiQuestions.length} questions ? 2 corpus rout?s)`,
+      `Cohorte : multicorpus complet (${fullMultiQuestions.length} questions ? 2 corpus routés)`,
       fullAggregates,
     );
 
@@ -520,10 +520,10 @@ async function main(): Promise<void> {
       `- Recall articles baseline ? quota10 ? quota15 : ${baseline45.goldHits}/${baseline45.goldTotal} ? ${quota10_45.goldHits}/${quota10_45.goldTotal} ? ${quota15_45.goldHits}/${quota15_45.goldTotal}`,
     );
     console.log(
-      `- Gold suppl?mentaires quota15 vs quota10 : ${extraGoldFrom15vs10}`,
+      `- Gold supplémentaires quota15 vs quota10 : ${extraGoldFrom15vs10}`,
     );
     console.log(
-      `- 2 corpus pr?sents baseline ? quota10 ? quota15 : ${formatPct(baseline45.bothCorporaPresentPct)} ? ${formatPct(quota10_45.bothCorporaPresentPct)} ? ${formatPct(quota15_45.bothCorporaPresentPct)}`,
+      `- 2 corpus présents baseline ? quota10 ? quota15 : ${formatPct(baseline45.bothCorporaPresentPct)} ? ${formatPct(quota10_45.bothCorporaPresentPct)} ? ${formatPct(quota15_45.bothCorporaPresentPct)}`,
     );
 
     await mkdir(outputDir, { recursive: true });

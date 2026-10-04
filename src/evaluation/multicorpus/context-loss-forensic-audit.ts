@@ -165,7 +165,7 @@ export function classifyMissingGoldArticle(input: {
       reason: 'R3',
       stage: 'mapping',
       notes:
-        'Article gold present dans les sources finales E2E mais absent de goldArticlesMissing / categorie A ÿ verifier matching ou judge.',
+        'Article gold present dans les sources finales E2E mais absent de goldArticlesMissing / categorie A â€” verifier matching ou judge.',
     };
   }
 
@@ -223,7 +223,7 @@ export function classifyMissingGoldArticle(input: {
     rerankRank,
     inFilteredContext: true,
     notes:
-      'Gold present apres filter (replay production) mais absent des sources finales E2E ÿ perte mapping/context builder ou divergence proxy vs run E2E.',
+      'Gold present apres filter (replay production) mais absent des sources finales E2E â€” perte mapping/context builder ou divergence proxy vs run E2E.',
   };
 }
 
@@ -313,14 +313,14 @@ export function buildContextLossRecord(input: {
       threshold,
     );
     limitations.push(
-      'Retrieval/rerank proviennent du quota audit 2026-09-21 (meme config top20/top5/0.40) ÿ pas une re-execution du pipeline E2E 500 question par question.',
+      'Retrieval/rerank proviennent du quota audit 2026-09-21 (meme config top20/top5/0.40) â€” pas une re-execution du pipeline E2E 500 question par question.',
     );
     limitations.push(
       'Filter rejoue offline via dynamicContextFilter production (min1/corpus si multicorpus route).',
     );
   } else {
     limitations.push(
-      'Run E2E 500 ne persiste pas retrieval top20 ni rerank top5 ÿ localisation pipeline impossible pour cette question.',
+      'Run E2E 500 ne persiste pas retrieval top20 ni rerank top5 â€” localisation pipeline impossible pour cette question.',
     );
   }
 

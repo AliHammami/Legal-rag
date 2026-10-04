@@ -13,7 +13,7 @@ describe('loadMulticorpusEvaluationDataset', () => {
         question: 'Question test',
         goldCorpusIds: ['code-penal'],
         goldArticles: [{ corpusId: 'code-penal', articleNumber: '122-5' }],
-        referenceAnswer: 'R?ponse',
+        referenceAnswer: 'Réponse',
         difficulty: 'easy',
         questionType: 'single-corpus',
         sourceArticles: [{ corpusId: 'code-penal', articleNumber: '122-5' }],

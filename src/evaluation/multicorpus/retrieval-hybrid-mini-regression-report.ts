@@ -395,8 +395,8 @@ export function buildMiniRegressionReadme(input: {
 
 ## Pipelines
 
-- **A (Vector)** : routing replay ? vector retrieval topK=30 ? Jina top5 ? dynamic filter 0.40 ? generation ? judge
-- **B (Union)** : routing replay ? hybrid Union (Vector@50+BM25@50) ? Jina top5 ? dynamic filter 0.40 ? generation ? judge
+- **A (Vector)** : routing replay → vector retrieval topK=30 → Jina top5 → dynamic filter 0.40 → generation → judge
+- **B (Union)** : routing replay → hybrid Union (Vector@50+BM25@50) → Jina top5 → dynamic filter 0.40 → generation → judge
 
 ## Selection (${input.cohortRules})
 

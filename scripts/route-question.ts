@@ -58,7 +58,7 @@ async function main(): Promise<void> {
     }
 
     console.log('');
-    console.log(`Dur?e : ${Date.now() - startedAt} ms`);
+    console.log(`Durée : ${Date.now() - startedAt} ms`);
   } finally {
     await app.close();
   }

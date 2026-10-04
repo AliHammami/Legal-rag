@@ -10,13 +10,13 @@ import {
 } from '../src/ingestion/parse-structure.js';
 
 const PDFS = [
-  { id: 'code-penal', name: 'Code p?nal', path: 'data/code-penal-13-09-2026.pdf' },
+  { id: 'code-penal', name: 'Code pénal', path: 'data/code-penal-13-09-2026.pdf' },
   { id: 'code-civil', name: 'Code civil', path: 'data/code-civil-19-06-2026.pdf' },
   { id: 'code-travail', name: 'Code du travail', path: 'data/code-du-travail-16-09-2026.pdf' },
   { id: 'code-commerce', name: 'Code de commerce', path: 'data/code-du-commerce-16-09-2026.pdf' },
   {
     id: 'code-monetaire',
-    name: 'Code mon?taire et financier',
+    name: 'Code monétaire et financier',
     path: 'data/code-monetaire-et-financier-16-09-2026.pdf',
   },
   {
@@ -211,7 +211,7 @@ async function analyzePdf(entry: (typeof PDFS)[number]) {
   };
   for (const { line } of pageLines) {
     const t = line.trim();
-    if (/^Partie (?:l?gislative|r?glementaire)/.test(t)) structuralLines.partie++;
+    if (/^Partie (?:législative|réglementaire)/.test(t)) structuralLines.partie++;
     if (/^Livre /.test(t)) structuralLines.livre++;
     if (/^Titre /.test(t)) structuralLines.titre++;
     if (/^Chapitre /.test(t)) structuralLines.chapitre++;
@@ -250,7 +250,7 @@ async function analyzePdf(entry: (typeof PDFS)[number]) {
 
   const footerInCleaned = cleanedPages
     .slice(0, 10)
-    .some((p) => /Derni?re modification/.test(p.text));
+    .some((p) => /Dernière modification/.test(p.text));
 
   return {
     id: entry.id,

@@ -108,7 +108,7 @@ function resolveRunDirectory(resultsDir: string, runId: string): string {
 
 function previewAnswer(answer: string, maxLength = 120): string {
   const compact = answer.replace(/\s+/g, ' ').trim();
-  return compact.length <= maxLength ? compact : `${compact.slice(0, maxLength)}ÿ`;
+  return compact.length <= maxLength ? compact : `${compact.slice(0, maxLength)}â€”`;
 }
 
 function evaluateSmokeResult(input: {

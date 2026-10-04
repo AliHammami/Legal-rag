@@ -6,7 +6,7 @@ import {
 } from '../clean-text.js';
 import { ALL_CORPUS_IDS, getCorpusConfig } from '../corpus-config.js';
 
-describe('footer L?gifrance par corpus', () => {
+describe('footer Légifrance par corpus', () => {
   for (const corpusId of ALL_CORPUS_IDS) {
     const config = getCorpusConfig(corpusId);
 

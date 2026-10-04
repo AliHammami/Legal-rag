@@ -18,9 +18,9 @@ async function main() {
     let cleanedFooterPages = 0;
     const cleaned: Array<{ pageNumber: number; text: string }> = [];
     for (const p of raw) {
-      if (/Derni?re modification/.test(p.text)) footerPages++;
+      if (/Dernière modification/.test(p.text)) footerPages++;
       const { text } = cleanPageText(p.text);
-      if (/Derni?re modification/.test(text)) cleanedFooterPages++;
+      if (/Dernière modification/.test(text)) cleanedFooterPages++;
       cleaned.push({ pageNumber: p.pageNumber, text });
     }
     const lines = pageLinesFromCleanedPages(cleaned);

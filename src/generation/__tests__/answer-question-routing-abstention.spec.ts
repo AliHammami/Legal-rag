@@ -46,7 +46,7 @@ describe('answerQuestion routing abstention', () => {
       openAIService,
       rerankerService,
       generationService,
-      'Quelles sont les r?gles applicables en cas de force majeure ?',
+      'Quelles sont les règles applicables en cas de force majeure ?',
     );
 
     expect(generateAnswer).not.toHaveBeenCalled();
@@ -123,7 +123,7 @@ describe('answerQuestion routing abstention', () => {
       openAIService,
       rerankerService,
       generationService,
-      'Quelles sont les conditions de la naturalisation fran?aise par mariage ?',
+      'Quelles sont les conditions de la naturalisation française par mariage ?',
     );
 
     expect(generateAnswer).not.toHaveBeenCalled();

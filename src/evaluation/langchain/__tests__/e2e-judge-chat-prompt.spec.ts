@@ -11,8 +11,8 @@ describe('E2E_JUDGE_CHAT_PROMPT', () => {
     const input = {
       questionId: 'q1',
       question: 'Question test',
-      referenceAnswer: 'R?f?rence',
-      generatedAnswer: 'R?ponse g?n?r?e',
+      referenceAnswer: 'Référence',
+      generatedAnswer: 'Réponse générée',
       context: 'Contexte RAG',
       expectedAbstention: false,
     };
