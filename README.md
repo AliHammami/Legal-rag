@@ -38,9 +38,16 @@ Ingestion flow: PDF → articles JSON → chunking → embeddings → import int
 ```mermaid
 flowchart TD
   Q[User question] --> R[Routing LLM]
-  R -->|corpusIds empty abstain| A1[Fixed abstention answer]
-  R -->|corpusIds non-empty| E[Embed question]
-  R -->|global_fallback eval only| E
+
+  R --> D_AB[corpusIds empty]
+  D_AB --> A1[Fixed abstention answer]
+
+  R --> D_RT[corpusIds non-empty]
+  D_RT --> E[Embed question]
+
+  R --> D_GF["Global fallback<br/>(eval only)"]
+  D_GF --> E
+
   E --> RET{RETRIEVAL_STRATEGY}
   RET -->|vector| V[pgvector top-K]
   RET -->|hybrid-union| HU[Vector top-50 then BM25 top-50 union dedup]
