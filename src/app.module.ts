@@ -4,6 +4,7 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { ConversationsModule } from './conversations/conversations.module.js';
 import { HealthModule } from './health/health.module.js';
+import { RagModule } from './rag/rag.module.js';
 import { OpenAIModule } from './openai/openai.module.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 
@@ -14,6 +15,7 @@ import { PrismaModule } from './prisma/prisma.module.js';
     HealthModule,
     OpenAIModule,
     ConversationsModule,
+    RagModule,
   ],
   controllers: [AppController],
   providers: [AppService],

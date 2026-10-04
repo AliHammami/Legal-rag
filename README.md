@@ -4,7 +4,7 @@ A **Retrieval-Augmented Generation (RAG)** system for querying **six French lega
 
 The project is built as a **TypeScript / NestJS** application with a **deterministic RAG pipeline** (not an agent), extensive **offline and staged evaluation** on a **500-question multi-corpus dataset**, and **LangChain** for chat models, embeddings, prompts, structured outputs, and selective **LCEL** composition.
 
-> **Scope note:** The full RAG pipeline is exercised primarily via **CLI scripts** (e.g. `pnpm search:answer`). The HTTP API exposes **health** and a **conversational chat** endpoint that does **not** use the legal chunk store (see [Limitations](#limitations--future-work)).
+> **Scope note:** The full RAG pipeline is available via **`POST /rag/answer`** and the **CLI** (`pnpm search:answer`). The **conversational chat** endpoint (`POST /conversations/:id/messages`) still does **not** use the legal chunk store (see [Limitations](#limitations--future-work)).
 
 ## Corpora and data
 
@@ -192,6 +192,7 @@ src/
   generation/         Context filter, RAG prompts, answerQuestion
   evaluation/         Multicorpus + E2E metrics, judges, harness
   conversations/      SSE chat (no legal RAG store)
+  rag/                HTTP entrypoint for answerQuestion()
   langchain/          Shared ChatOpenAI / embeddings helpers
   openai/             Nest façade (embeddings, stream, createChatModel)
 scripts/              CLI: ingest, chunk, embed, search, evaluate
@@ -247,7 +248,17 @@ docs/                 evaluation strategy, multicorpus dataset docs
    pnpm start:dev
    ```
 
-6. **Run full RAG from CLI:**
+6. **Ask a legal question over HTTP (full RAG pipeline):**
+
+   ```bash
+   curl -X POST http://localhost:3000/rag/answer \
+     -H "Content-Type: application/json" \
+     -d '{"question":"Que prévoit l'\''article 1240 du Code civil ?"}'
+   ```
+
+   Response shape (200 OK): `question`, `answer`, `routing` (`decision`, `corpusIds`, `fallbackToGlobal`), `rerankStatus` (`success` \| `fallback`), and `sources` (citation metadata: `sourceId`, `codeName`, `articleNumber`, `chunkIndex`). Chunk text and internal profiling are not exposed.
+
+7. **Run full RAG from CLI:**
 
    ```bash
    pnpm search:answer "Votre question juridique"
@@ -270,17 +281,19 @@ Tests cover routing validation, hybrid union dedup, dynamic context filter, Lang
 **Implemented today**
 
 - Multi-corpus RAG pipeline with routing, retrieval (vector + optional hybrid-union), Jina rerank, context filter, cited generation.
+- HTTP **`POST /rag/answer`** on the same `answerQuestion()` pipeline as the CLI.
 - Offline/multicorpus evaluation harness and archived run reports.
 - LangChain models, prompts, structured output, partial LCEL.
 
 **Not implemented / known limits**
 
-- HTTP API does **not** expose the full RAG pipeline; chat endpoint explicitly states **no legal document store** yet (`ChatService` system prompt).
+- **`POST /conversations/.../messages`** remains a generic chat stream **without** the legal corpus (`ChatService` system prompt).
+- **`POST /rag/answer`** is synchronous JSON only (no SSE/streaming yet).
 - No LangGraph, agents, MCP, or Langfuse in this repo.
 - Hybrid vector/BM25 branches are sequential; eval concurrency uses custom worker pools, not LangChain `.batch()`.
 - LLM judges are evaluation proxies, not legal ground truth.
 
-**Potential extensions:** LangGraph orchestration, tool use, jurisprudence corpora, production observability (e.g. Langfuse), streaming RAG answers over SSE.
+**Potential extensions:** LangGraph orchestration, tool use, jurisprudence corpora, production observability (e.g. Langfuse), streaming RAG over SSE for `/rag/answer`.
 
 ---
 

@@ -426,7 +426,7 @@ Garder retrieval/rerank déterministes ; n'agentifier que la planification si be
     Code default `vector` ; hybrid activé par env explicite (doc eval : `.env` travail).
 
 19. **API REST RAG ?**  
-    Non — CLI `search:answer` ; HTTP = chat sans corpus.
+    Oui — `POST /rag/answer` (JSON, pipeline `answerQuestion()`). Le chat HTTP `conversations` reste sans corpus ; CLI `search:answer` inchangé.
 
 20. **Dimensions embedding 3072 ?**  
     Choix `text-embedding-3-large` config ; table Prisma fixe vector(3072).
